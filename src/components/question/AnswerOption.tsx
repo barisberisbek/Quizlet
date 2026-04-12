@@ -25,21 +25,21 @@ export function AnswerOption({
   const getStateClasses = () => {
     if (!isAnswered) {
       return isSelected
-        ? 'border-indigo-500/50 bg-indigo-500/10 text-slate-200'
-        : 'border-white/5 bg-white/[0.02] text-slate-300 hover:border-white/10 hover:bg-white/5';
+        ? 'border-indigo-400 bg-indigo-500/15 text-slate-100 shadow-[0_0_15px_rgba(99,102,241,0.15)] scale-[1.01]'
+        : 'border-white/[0.08] bg-white/[0.03] text-slate-300 hover:border-indigo-500/30 hover:bg-white/[0.06]';
     }
 
     // Answered state
     if (isCorrectOption && isSelected) {
-      return 'border-emerald-500/40 bg-emerald-500/10 text-emerald-300';
+      return 'border-emerald-500 bg-emerald-500/15 text-emerald-300 shadow-[0_0_20px_rgba(16,185,129,0.15)] ring-1 ring-emerald-500/50 z-10 scale-[1.02]';
     }
     if (isCorrectOption) {
-      return 'border-emerald-500/20 bg-emerald-500/5 text-emerald-400';
+      return 'border-emerald-500/50 bg-emerald-500/10 text-emerald-400 font-medium z-10';
     }
     if (isSelected && !isCorrectOption) {
-      return 'border-rose-500/40 bg-rose-500/10 text-rose-300';
+      return 'border-rose-500/60 bg-rose-500/15 text-rose-300 opacity-90 scale-[0.99]';
     }
-    return 'border-white/5 bg-white/[0.01] text-slate-500 opacity-60';
+    return 'border-white/5 bg-transparent text-slate-500 opacity-40';
   };
 
   const renderIcon = () => {

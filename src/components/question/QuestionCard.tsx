@@ -115,22 +115,24 @@ export function QuestionCard({
       </div>
 
       {/* Question body */}
-      <div className="px-5 py-4 space-y-4">
-        {/* Question stem */}
-        <div className="markdown-content text-sm text-slate-200 leading-relaxed">
+      <div className="px-6 py-5 space-y-6">
+        {/* Question stem, visually reinforced for memorability */}
+        <div className="markdown-content text-base font-medium text-slate-100 leading-relaxed">
           <QuestionMarkdown content={question.questionMd} />
         </div>
 
         {/* Code block */}
         {question.codeBlock && (
-          <CodeBlock
-            code={question.codeBlock}
-            language={question.codeLanguage || 'javascript'}
-          />
+          <div className="pt-2 pb-1">
+            <CodeBlock
+              code={question.codeBlock}
+              language={question.codeLanguage || 'javascript'}
+            />
+          </div>
         )}
 
         {/* Answer options */}
-        <div className="space-y-2">
+        <div className="space-y-3 pt-2 border-t border-white/5">
           {question.options.map((option) => (
             <AnswerOption
               key={option.id}
