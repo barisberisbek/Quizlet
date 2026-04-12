@@ -1,0 +1,238 @@
+{
+  "quizId": "Quiz-2",
+  "title": "Dynamic Web Programming - Quiz 2",
+  "course": "Dynamic Web Programming",
+  "language": "en",
+  "semester": "2023-2024 Spring",
+  "source": "Past Exam",
+  "durationMinutes": 30,
+  "shuffleQuestions": false,
+  "shuffleOptions": false,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "topic": "Architecture",
+      "subtopic": "Callbacks",
+      "difficulty": "medium",
+      "questionMd": "In the discography page example, how does the `SortButton` class communicate a sort action back to the `App` class?",
+      "options": [
+        { "id": "A", "text": "It directly modifies the albumInfo property of the App instance" },
+        { "id": "B", "text": "It dispatches a custom keyboard event that triggers the App's event listener" },
+        { "id": "C", "text": "It fires a built-in DOM click event that the App class listens for on the document" },
+        { "id": "D", "text": "It calls an onClickCallback function passed to it during construction, supplying the sort function as an argument" }
+      ],
+      "correctAnswer": ["D"]
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Returns",
+      "difficulty": "easy",
+      "questionMd": "What does the `fetch()` function return?",
+      "options": [
+        { "id": "A", "text": "An XMLHttpRequest object" },
+        { "id": "B", "text": "The raw text content of the requested resource" },
+        { "id": "C", "text": "A JSON-parsed JavaScript object" },
+        { "id": "D", "text": "A Promise" }
+      ],
+      "correctAnswer": ["D"]
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "topic": "Data Formats",
+      "subtopic": "JSON",
+      "difficulty": "easy",
+      "questionMd": "Compared to a custom plain-text format, what is a primary advantage of storing data in JSON format when using `fetch()`?",
+      "options": [
+        { "id": "A", "text": "JSON is the only format supported by the fetch() API" },
+        { "id": "B", "text": "JSON files are always smaller in size than plain-text files" },
+        { "id": "C", "text": "JSON files do not require a server to be accessed" },
+        { "id": "D", "text": "JavaScript has built-in support to automatically convert a JSON string into an object, eliminating manual parsing" }
+      ],
+      "correctAnswer": ["D"]
+    },
+    {
+      "id": "q4",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Classes",
+      "difficulty": "easy",
+      "questionMd": "When defining methods inside an ES6 class body, which keyword must you omit?",
+      "options": [
+        { "id": "A", "text": "class" },
+        { "id": "B", "text": "function" },
+        { "id": "C", "text": "const" },
+        { "id": "D", "text": "return" }
+      ],
+      "correctAnswer": ["B"]
+    },
+    {
+      "id": "q5",
+      "type": "single_choice",
+      "topic": "Events",
+      "subtopic": "CustomEvent",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture, what is an important limitation of the CustomEvent API in JavaScript?",
+      "options": [
+        { "id": "A", "text": "CustomEvents are not supported in any browser that uses the V8 engine" },
+        { "id": "B", "text": "CustomEvents can only be dispatched and listened to on HTML elements, not on arbitrary class instances" },
+        { "id": "C", "text": "CustomEvents can only be created inside ES6 class constructors" },
+        { "id": "D", "text": "CustomEvents cannot carry any additional data in their event object" }
+      ],
+      "correctAnswer": ["B"]
+    },
+    {
+      "id": "q6",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Context (this)",
+      "difficulty": "medium",
+      "questionMd": "What problem does calling `this.methodName = this.methodName.bind(this)` in a constructor solve?",
+      "options": [
+        { "id": "A", "text": "It prevents the method from being called more than once per event" },
+        { "id": "B", "text": "It ensures this always refers to the class instance when the method is used as an event handler" },
+        { "id": "C", "text": "It registers the method as a global function accessible from any scope" },
+        { "id": "D", "text": "It copies the method's code into the HTML element for faster execution" }
+      ],
+      "correctAnswer": ["B"]
+    },
+    {
+      "id": "q7",
+      "type": "single_choice",
+      "topic": "Data Formats",
+      "subtopic": "Serialization",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, what does it mean to \"serialize\" an object?",
+      "options": [
+        { "id": "A", "text": "To convert a string into a JavaScript object" },
+        { "id": "B", "text": "To load an object from an external file using fetch" },
+        { "id": "C", "text": "To turn an object into a string that can later be deserialized" },
+        { "id": "D", "text": "To send an object directly to a server over HTTP" }
+      ],
+      "correctAnswer": ["C"]
+    },
+    {
+      "id": "q8",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "Chaining",
+      "difficulty": "medium",
+      "questionMd": "In a chained Promise pattern, what must `onResponse` return for the next `then()` in the chain to receive the text data?",
+      "options": [
+        { "id": "A", "text": "A resolved string from response.status" },
+        { "id": "B", "text": "The Promise returned by response.text()" },
+        { "id": "C", "text": "The response object itself" },
+        { "id": "D", "text": "A JSON object created with JSON.parse()" }
+      ],
+      "correctAnswer": ["B"]
+    },
+    {
+      "id": "q9",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Functions",
+      "difficulty": "easy",
+      "questionMd": "Which of the following is a characteristic of first-class functions in JavaScript?",
+      "options": [
+        { "id": "A", "text": "Functions must always be declared before the class definition" },
+        { "id": "B", "text": "Functions cannot be stored in variables or object properties" },
+        { "id": "C", "text": "Functions require the function keyword and cannot use arrow syntax" },
+        { "id": "D", "text": "Functions can be passed as parameters to other functions" }
+      ],
+      "correctAnswer": ["D"]
+    },
+    {
+      "id": "q10",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Context (this)",
+      "difficulty": "hard",
+      "questionMd": "In the discography example, when a method is used as both a fetch callback and an event handler, what must be done in the constructor for `this` to work correctly in both cases?",
+      "options": [
+        { "id": "A", "text": "Each method must be rebound to the instance using bind(this) and the result stored back on the object" },
+        { "id": "B", "text": "The methods must be declared as arrow functions inside the constructor" },
+        { "id": "C", "text": "Each method must be wrapped in a separate anonymous function before being passed as a callback" },
+        { "id": "D", "text": "The methods must be made static so they do not rely on this" }
+      ],
+      "correctAnswer": ["A"]
+    },
+    {
+      "id": "q11",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Syntax",
+      "difficulty": "medium",
+      "questionMd": "What is the correct syntax for using the real Fetch API with success and error handlers?",
+      "options": [
+        { "id": "A", "text": "fetch('file.txt').catch(onSuccess).then(onError);" },
+        { "id": "B", "text": "fetch('file.txt', onSuccess, onError);" },
+        { "id": "C", "text": "fetch('file.txt').then(onSuccess, onError);" },
+        { "id": "D", "text": "fetch('file.txt', { success: onSuccess, error: onError });" }
+      ],
+      "correctAnswer": ["C"]
+    },
+    {
+      "id": "q12",
+      "type": "single_choice",
+      "topic": "JSON",
+      "subtopic": "Data Access",
+      "difficulty": "medium",
+      "questionMd": "Given the JSON object `{ \"albums\": [ { \"name\": \"Daydream\", \"year\": 1995 } ] }` parsed into a variable called `data`, how would you access the year of the first album?",
+      "options": [
+        { "id": "A", "text": "data[\"year\"][\"albums\"][0]" },
+        { "id": "B", "text": "data[0].albums.year" },
+        { "id": "C", "text": "data.albums[0].year" },
+        { "id": "D", "text": "data.albums.year[0]" }
+      ],
+      "correctAnswer": ["C"]
+    },
+    {
+      "id": "q13",
+      "type": "single_choice",
+      "topic": "Web History",
+      "subtopic": "SGML",
+      "difficulty": "medium",
+      "questionMd": "What is the role of SGML (Standard Generalized Markup Language) in relation to HTML?",
+      "options": [
+        { "id": "A", "text": "SGML is a standard for specifying markup languages and was used by Tim Berners-Lee to create the HTML specification" },
+        { "id": "B", "text": "SGML is a stylesheet language used to define the visual presentation of XML documents" },
+        { "id": "C", "text": "SGML is a transport protocol that HTTP was built upon" },
+        { "id": "D", "text": "SGML is a scripting language that adds interactivity to static HTML pages" }
+      ],
+      "correctAnswer": ["A"]
+    },
+    {
+      "id": "q14",
+      "type": "single_choice",
+      "topic": "Development Environment",
+      "subtopic": "Servers",
+      "difficulty": "medium",
+      "questionMd": "Which command is used to serve local files over HTTP so that `fetch()` can access them during development?",
+      "options": [
+        { "id": "A", "text": "python3 -m http.server" },
+        { "id": "B", "text": "python3 -m fetch server" },
+        { "id": "C", "text": "npm start http" },
+        { "id": "D", "text": "node server.js" }
+      ],
+      "correctAnswer": ["A"]
+    },
+    {
+      "id": "q15",
+      "type": "single_choice",
+      "topic": "Architecture",
+      "subtopic": "Frameworks",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, why are web frameworks so commonly used in web development?",
+      "options": [
+        { "id": "A", "text": "They make software architecture decisions ahead of time and provide starter code, reducing the number of decisions a developer must make" },
+        { "id": "B", "text": "They automatically generate HTML and CSS from back-end database schemas" },
+        { "id": "C", "text": "They compile JavaScript into machine code for faster execution in the browser" },
+        { "id": "D", "text": "They replace the need to learn HTML, CSS, and JavaScript entirely" }
+      ],
+      "correctAnswer": ["A"]
+    }
+  ]
+}

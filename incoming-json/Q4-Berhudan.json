@@ -1,0 +1,313 @@
+{
+  "quizId": "Q4",
+  "title": "Dynamic Web Programming - Quiz 4",
+  "course": "Dynamic Web Programming",
+  "language": "en",
+  "semester": "2023-2024 Spring",
+  "source": "Past Exam",
+  "durationMinutes": 30,
+  "shuffleQuestions": false,
+  "shuffleOptions": false,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "topic": "URLs",
+      "subtopic": "Query Parameters",
+      "difficulty": "easy",
+      "questionMd": "In the URL `https://www.example.com/api/users?id=123`, what does the `?id=123` portion represent?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "The file path" },
+        { "id": "B", "text": "The protocol" },
+        { "id": "C", "text": "The domain extension" },
+        { "id": "D", "text": "The query string/parameters" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "The portion of a URL following the question mark (`?`) is the query string, which assigns values to specified parameters.",
+      "tags": ["url", "http", "api"]
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "topic": "Architecture",
+      "subtopic": "SPA vs MPA",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture, what is the fundamental difference between a single-page application (SPA) and a multi-page application (MPA)?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "An SPA is much slower than an MPA due to heavy JavaScript use." },
+        { "id": "B", "text": "An SPA updates portions of the page dynamically using JavaScript, while an MPA requires a full page reload for every interaction." },
+        { "id": "C", "text": "An SPA can only have one HTML file, and no server backend." },
+        { "id": "D", "text": "MPAs are highly secure, while SPAs cannot utilize HTTPS." }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "SPAs load a single HTML page and dynamically update content as the user interacts, whereas MPAs navigate to completely new HTML pages from the server.",
+      "tags": ["architecture", "spa", "mpa"]
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "topic": "HTTP",
+      "subtopic": "Headers",
+      "difficulty": "easy",
+      "questionMd": "Which of the following HTTP headers is used to indicate the media type of the resource?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "User-Agent" },
+        { "id": "B", "text": "Accept" },
+        { "id": "C", "text": "Host" },
+        { "id": "D", "text": "Content-Type" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "The `Content-Type` header tells the client what the content type of the returned content actually is (e.g., text/html, application/json).",
+      "tags": ["http", "headers"]
+    },
+    {
+      "id": "q4",
+      "type": "single_choice",
+      "topic": "DOM Manipulation",
+      "subtopic": "Forms",
+      "difficulty": "easy",
+      "questionMd": "How is an HTML input element's current value typically retrieved in JavaScript?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "By calling `input.getValue()` method" },
+        { "id": "B", "text": "By parsing the `innerHTML` of the element" },
+        { "id": "C", "text": "By accessing the `value` property of the input element's DOM object." },
+        { "id": "D", "text": "By reading the `data-val` attribute" }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "Form inputs expose a `.value` property on their DOM node representation that contains the user's input.",
+      "tags": ["javascript", "dom", "forms"]
+    },
+    {
+      "id": "q5",
+      "type": "single_choice",
+      "topic": "JSON",
+      "subtopic": "Advantages",
+      "difficulty": "easy",
+      "questionMd": "Which of the following is a primary advantage of storing data in JSON format when using `fetch()`?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "JSON files compress perfectly without algorithms" },
+        { "id": "B", "text": "JavaScript has built-in support to automatically convert a JSON string into an object..." },
+        { "id": "C", "text": "JSON does not require a web server to be fetched" },
+        { "id": "D", "text": "JSON inherently blocks Cross-Site Scripting attacks" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "Since JSON syntax is derived from JavaScript object notation, native functions like `JSON.parse()` make it extremely easy to deserialize.",
+      "tags": ["json", "javascript", "fetch"]
+    },
+    {
+      "id": "q6",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Array Methods",
+      "difficulty": "medium",
+      "questionMd": "To sort an array of album objects by year in ascending order, which comparator function should be passed to `.sort()`?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "function(a, b) { return b.year - a.year; }" },
+        { "id": "B", "text": "function(a, b) { return a.year - b.year; }" },
+        { "id": "C", "text": "function(a, b) { return a.year < b.year; }" },
+        { "id": "D", "text": "function(a, b) { return a.year; }" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "Array `.sort()` determines order based on whether the return value is negative, zero, or positive. `a.year - b.year` sorts numerically in ascending order.",
+      "tags": ["javascript", "arrays", "sorting"]
+    },
+    {
+      "id": "q7",
+      "type": "single_choice",
+      "topic": "REST API",
+      "subtopic": "Static vs Dynamic",
+      "difficulty": "medium",
+      "questionMd": "What is the fundamental difference between a URL that points to a static file and a URL that represents a REST API endpoint?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "A static file URL always downloads a file, API endpoints render in the browser." },
+        { "id": "B", "text": "REST APIs require a VPN." },
+        { "id": "C", "text": "A static file requires authentication." },
+        { "id": "D", "text": "A REST API endpoint causes the server to dynamically generate a response..." }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "REST APIs are applications running on a server that process requests and generate responses on-the-fly, as opposed to a web server simply serving a flat file off a disk.",
+      "tags": ["rest", "api", "architecture"]
+    },
+    {
+      "id": "q8",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Objects",
+      "difficulty": "easy",
+      "questionMd": "Given the object `let album = { title: \"Daydream\", year: 1995 };`, how would you access the year of the album?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "album[1]" },
+        { "id": "B", "text": "album.get('year')" },
+        { "id": "C", "text": "album.year" },
+        { "id": "D", "text": "album->year" }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "In JavaScript, object properties are accessed using dot notation (e.g., `object.property`) or bracket notation.",
+      "tags": ["javascript", "objects"]
+    },
+    {
+      "id": "q9",
+      "type": "single_choice",
+      "topic": "DOM Events",
+      "subtopic": "Inputs",
+      "difficulty": "medium",
+      "questionMd": "What is the event fired when an input field's value changes and it loses focus?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "click" },
+        { "id": "B", "text": "submit" },
+        { "id": "C", "text": "keyPress" },
+        { "id": "D", "text": "change" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "The `change` event is fired for `<input>`, `<select>`, and `<textarea>` elements when the user modifies the element's value and then blurs (loses focus) from it.",
+      "tags": ["javascript", "dom", "events"]
+    },
+    {
+      "id": "q10",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "Chaining",
+      "difficulty": "medium",
+      "questionMd": "In a Promise chain like `fetch(url).then(a).then(b)`, what value does function `b` receive as its argument?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "The original URL string" },
+        { "id": "B", "text": "The HTTP response status code" },
+        { "id": "C", "text": "The value returned by function `a`" },
+        { "id": "D", "text": "The Promise object itself" }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "In a Promise chain, the return value of a `.then()` callback is passed as the argument to the next `.then()` callback in the chain.",
+      "tags": ["javascript", "promise"]
+    },
+    {
+      "id": "q11",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Classes",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, a variable that belongs to a class instance is called a:",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Method" },
+        { "id": "B", "text": "Function" },
+        { "id": "C", "text": "Closure" },
+        { "id": "D", "text": "Property or field" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "In object-oriented programming, variables attached to class instances are referred to as properties or fields.",
+      "tags": ["javascript", "oop", "classes"]
+    },
+    {
+      "id": "q12",
+      "type": "single_choice",
+      "topic": "Development Environment",
+      "subtopic": "Servers",
+      "difficulty": "medium",
+      "questionMd": "Which command is used to serve local files over HTTP so that `fetch()` can access them during development?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "node start fetch" },
+        { "id": "B", "text": "python3 -m http.server" },
+        { "id": "C", "text": "npm run build" },
+        { "id": "D", "text": "git serve local" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "Python 3 has a built-in HTTP server module (`http.server`) that easily spins up a local web server to serve static files.",
+      "tags": ["development", "cli", "server"]
+    },
+    {
+      "id": "q13",
+      "type": "single_choice",
+      "topic": "DOM Events",
+      "subtopic": "Methods",
+      "difficulty": "medium",
+      "questionMd": "What is the primary purpose of the `.preventDefault()` method on an event object?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "To stop the browser from performing the default action associated with the event (like submitting a form)." },
+        { "id": "B", "text": "To pause JavaScript execution until the user clicks" },
+        { "id": "C", "text": "To prevent other elements from overlapping" },
+        { "id": "D", "text": "To block cross-site scripting attacks" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "Calling `event.preventDefault()` tells the browser not to execute its default behavior for that event, such as navigating to a new page on form submission or link click.",
+      "tags": ["javascript", "dom", "events"]
+    },
+    {
+      "id": "q14",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Return Values",
+      "difficulty": "medium",
+      "questionMd": "The `fetch()` API returns a Promise that resolves to what kind of object?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "A JSON parsed string" },
+        { "id": "B", "text": "An XML Document" },
+        { "id": "C", "text": "A standard Array" },
+        { "id": "D", "text": "A `Response` object representing the response to the request." }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "The Promise returned from `fetch()` won't reject on HTTP error status even if the response is an HTTP 404 or 500. It resolves normally with a `Response` object.",
+      "tags": ["fetch", "promise", "http"]
+    },
+    {
+      "id": "q15",
+      "type": "single_choice",
+      "topic": "Asynchronous Programming",
+      "subtopic": "Concepts",
+      "difficulty": "medium",
+      "questionMd": "Why is the `fetch()` API described as asynchronous in the context of web programming?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Because it runs only on multi-core processors" },
+        { "id": "B", "text": "Because it blocks the UI thread until the network responds" },
+        { "id": "C", "text": "It allows the browser to continue executing other code while waiting for the network response." },
+        { "id": "D", "text": "Because it forces the server to respond immediately" }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "Asynchronous operations operate independently of the main program flow, ensuring the user interface remains responsive while network requests process in the background.",
+      "tags": ["javascript", "async", "fetch"]
+    }
+  ]
+}

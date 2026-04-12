@@ -1,0 +1,238 @@
+{
+  "quizId": "Q4-Emir",
+  "title": "Dynamic Web Programming - Emir Quiz 4",
+  "course": "Dynamic Web Programming",
+  "language": "en",
+  "semester": "2023-2024 Spring",
+  "source": "Past Exam",
+  "durationMinutes": 30,
+  "shuffleQuestions": false,
+  "shuffleOptions": false,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "HTTP Methods",
+      "difficulty": "easy",
+      "questionMd": "By default, without any additional options, which HTTP method does the `fetch()` API use when making a request?",
+      "options": [
+        { "id": "A", "text": "POST" },
+        { "id": "B", "text": "GET" },
+        { "id": "C", "text": "DELETE" },
+        { "id": "D", "text": "PUT" }
+      ],
+      "correctAnswer": ["B"]
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "topic": "JSON",
+      "subtopic": "Parsing",
+      "difficulty": "easy",
+      "questionMd": "A developer receives the string `'{\"name\":\"Ice Bear\"}'` from a server. Which function should they use to turn it into a usable JavaScript object?",
+      "options": [
+        { "id": "A", "text": "JSON.objectify()" },
+        { "id": "B", "text": "JSON.decode()" },
+        { "id": "C", "text": "JSON.parse()" },
+        { "id": "D", "text": "JSON.stringify()" }
+      ],
+      "correctAnswer": ["C"]
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "topic": "REST API",
+      "subtopic": "Terminology",
+      "difficulty": "easy",
+      "questionMd": "In REST API terminology, what is the \"base URL\"?",
+      "options": [
+        { "id": "A", "text": "The full URL including all query parameters for a specific request" },
+        { "id": "B", "text": "The URL of the web page that consumes the API" },
+        { "id": "C", "text": "The fallback URL used when the primary endpoint is unavailable" },
+        { "id": "D", "text": "The root address of the API server to which all endpoint paths are appended" }
+      ],
+      "correctAnswer": ["D"]
+    },
+    {
+      "id": "q4",
+      "type": "single_choice",
+      "topic": "Web History",
+      "subtopic": "GraphQL",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, which company originally developed and used GraphQL before open-sourcing it?",
+      "options": [
+        { "id": "A", "text": "GitHub" },
+        { "id": "B", "text": "Netflix" },
+        { "id": "C", "text": "Facebook" },
+        { "id": "D", "text": "Spotify" }
+      ],
+      "correctAnswer": ["C"]
+    },
+    {
+      "id": "q5",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Array Methods",
+      "difficulty": "medium",
+      "questionMd": "Which built-in JavaScript array method is used in the lecture to reorder album objects by year?",
+      "options": [
+        { "id": "A", "text": ".filter()" },
+        { "id": "B", "text": ".sort()" },
+        { "id": "C", "text": ".map()" },
+        { "id": "D", "text": ".reduce()" }
+      ],
+      "correctAnswer": ["B"]
+    },
+    {
+      "id": "q6",
+      "type": "single_choice",
+      "topic": "URLs",
+      "subtopic": "Encoding",
+      "difficulty": "medium",
+      "questionMd": "Why is `encodeURIComponent()` used on a user's search query before appending it to a fetch URL?",
+      "options": [
+        { "id": "A", "text": "To ensure special characters in the query string are properly percent-encoded and do not break the URL" },
+        { "id": "B", "text": "To encrypt the user's input before sending it to the server" },
+        { "id": "C", "text": "To trim whitespace from the beginning and end of the search text" },
+        { "id": "D", "text": "To convert the query string into a JSON-compatible format" }
+      ],
+      "correctAnswer": ["A"]
+    },
+    {
+      "id": "q7",
+      "type": "single_choice",
+      "topic": "REST API",
+      "subtopic": "MIME Types",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture, what does MIME type (content type) specify in the context of a RESTful API request?",
+      "options": [
+        { "id": "A", "text": "The maximum size of the response body allowed" },
+        { "id": "B", "text": "The HTTP method that must be used for the request" },
+        { "id": "C", "text": "The authentication scheme required to access the endpoint" },
+        { "id": "D", "text": "The format of the data being sent or returned, such as JSON, HTML, or plain text" }
+      ],
+      "correctAnswer": ["D"]
+    },
+    {
+      "id": "q8",
+      "type": "single_choice",
+      "topic": "REST API",
+      "subtopic": "Static vs Dynamic",
+      "difficulty": "medium",
+      "questionMd": "What is the fundamental difference between a URL that points to a static file and a URL that represents a REST API endpoint?",
+      "options": [
+        { "id": "A", "text": "A static file URL must include query parameters, while a REST API endpoint never does" },
+        { "id": "B", "text": "A REST API endpoint always requires POST, while static file URLs always use GET" },
+        { "id": "C", "text": "A REST API endpoint causes the server to dynamically generate a response, whereas a static file URL causes the server to return a stored file" },
+        { "id": "D", "text": "A REST API endpoint returns HTML, while a static file URL always returns JSON" }
+      ],
+      "correctAnswer": ["C"]
+    },
+    {
+      "id": "q9",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Purpose",
+      "difficulty": "easy",
+      "questionMd": "What is the primary purpose of the `fetch()` function in JavaScript?",
+      "options": [
+        { "id": "A", "text": "To serialize JavaScript objects into JSON strings" },
+        { "id": "B", "text": "To parse HTML documents and manipulate the DOM" },
+        { "id": "C", "text": "To load resources asynchronously over a network using a Promise-based approach" },
+        { "id": "D", "text": "To synchronously read files from the local file system" }
+      ],
+      "correctAnswer": ["C"]
+    },
+    {
+      "id": "q10",
+      "type": "single_choice",
+      "topic": "Architecture",
+      "subtopic": "Dependencies",
+      "difficulty": "medium",
+      "questionMd": "The lecture recommends implementing the `Album` class before the `App` class. What is the stated reason for this order?",
+      "options": [
+        { "id": "A", "text": "The fetch() call can only be tested after the Album class exists" },
+        { "id": "B", "text": "The Album class is simpler and requires fewer lines of code" },
+        { "id": "C", "text": "JavaScript requires dependent classes to be declared first in the file" },
+        { "id": "D", "text": "The App class depends on the Album class, whereas the Album class has no dependencies" }
+      ],
+      "correctAnswer": ["D"]
+    },
+    {
+      "id": "q11",
+      "type": "single_choice",
+      "topic": "Web History",
+      "subtopic": "REST Alternatives",
+      "difficulty": "medium",
+      "questionMd": "How does the lecture characterize Netflix's Falcor compared to GraphQL as an alternative to REST?",
+      "options": [
+        { "id": "A", "text": "Falcor is described as the most widely adopted REST alternative in the industry" },
+        { "id": "B", "text": "Falcor is described as a synchronous alternative to REST that avoids HTTP entirely" },
+        { "id": "C", "text": "Falcor is described as likely interesting but rarely used in practice and lacking a Wikipedia page" },
+        { "id": "D", "text": "Falcor is described as the predecessor to GraphQL that Facebook later adopted" }
+      ],
+      "correctAnswer": ["C"]
+    },
+    {
+      "id": "q12",
+      "type": "single_choice",
+      "topic": "DOM Manipulation",
+      "subtopic": "Images",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture's completed fetch example, which JavaScript expression creates a new image element equivalent to `document.createElement('img')`?",
+      "options": [
+        { "id": "A", "text": "new Image()" },
+        { "id": "B", "text": "document.newImage()" },
+        { "id": "C", "text": "new Img()" },
+        { "id": "D", "text": "Image.create()" }
+      ],
+      "correctAnswer": ["A"]
+    },
+    {
+      "id": "q13",
+      "type": "single_choice",
+      "topic": "DOM Events",
+      "subtopic": "Forms",
+      "difficulty": "easy",
+      "questionMd": "To allow a form to submit when a user presses the Enter key, which event should be listened for on the `<form>` element?",
+      "options": [
+        { "id": "A", "text": "click" },
+        { "id": "B", "text": "submit" },
+        { "id": "C", "text": "change" },
+        { "id": "D", "text": "keydown" }
+      ],
+      "correctAnswer": ["B"]
+    },
+    {
+      "id": "q14",
+      "type": "single_choice",
+      "topic": "Architecture",
+      "subtopic": "Callbacks",
+      "difficulty": "medium",
+      "questionMd": "In the discography page example, how does the `SortButton` class communicate a sort action back to the `App` class?",
+      "options": [
+        { "id": "A", "text": "It dispatches a custom keyboard event that triggers the App's event listener" },
+        { "id": "B", "text": "It calls an onClickCallback function passed to it during construction, supplying the sort function as an argument" },
+        { "id": "C", "text": "It fires a built-in DOM click event that the App class listens for on the document" },
+        { "id": "D", "text": "It directly modifies the albumInfo property of the App instance" }
+      ],
+      "correctAnswer": ["B"]
+    },
+    {
+      "id": "q15",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Array Methods",
+      "difficulty": "medium",
+      "questionMd": "To sort an array of album objects by year in ascending order, which comparator function should be passed to `.sort()`?",
+      "options": [
+        { "id": "A", "text": "function(a, b) { return b.year - a.year; }" },
+        { "id": "B", "text": "function(a, b) { return a.year; }" },
+        { "id": "C", "text": "function(a, b) { return a.year - b.year; }" },
+        { "id": "D", "text": "function(a, b) { return a.year + b.year; }" }
+      ],
+      "correctAnswer": ["C"]
+    }
+  ]
+}

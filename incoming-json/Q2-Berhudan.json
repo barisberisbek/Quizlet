@@ -1,0 +1,313 @@
+{
+  "quizId": "Q2",
+  "title": "Dynamic Web Programming - Quiz 2",
+  "course": "Dynamic Web Programming",
+  "language": "en",
+  "semester": "2023-2024 Spring",
+  "source": "Past Exam",
+  "durationMinutes": 30,
+  "shuffleQuestions": false,
+  "shuffleOptions": false,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Response Handling",
+      "difficulty": "easy",
+      "questionMd": "Which method of a fetch `response` object provides built-in support for parsing JSON objects?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "response.json()" },
+        { "id": "B", "text": "response.parse()" },
+        { "id": "C", "text": "response.text()" },
+        { "id": "D", "text": "response.string()" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "The `response.json()` method takes a Response stream and reads it to completion. It returns a promise that resolves with the result of parsing the body text as JSON.",
+      "tags": ["fetch", "json", "javascript"]
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Variables",
+      "difficulty": "easy",
+      "questionMd": "Which of the following statements about `const` is correct according to the lecture?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Variables declared with `const` cannot be reassigned a new value." },
+        { "id": "B", "text": "`const` must be used for objects, while `let` is used for arrays." },
+        { "id": "C", "text": "`const` makes an object entirely immutable, preventing any property changes." },
+        { "id": "D", "text": "`const` variables are hoisted and accessible before declaration." }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "`const` prevents reassignment of the variable identifier itself, though if it points to an object, properties of that object can still be modified.",
+      "tags": ["javascript", "variables", "const"]
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "topic": "Networking",
+      "subtopic": "Protocols",
+      "difficulty": "medium",
+      "questionMd": "The Internet protocol suite is often referred to by which acronym, and what do the letters stand for?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "HTTP (HyperText Transfer Protocol)" },
+        { "id": "B", "text": "UDP/IP (User Datagram Protocol / Internet Protocol)" },
+        { "id": "C", "text": "TCP/IP (Transmission Control Protocol / Internet Protocol)" },
+        { "id": "D", "text": "WWW (World Wide Web)" }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "TCP/IP is the foundational suite of communication protocols used to interconnect network devices on the internet.",
+      "tags": ["networking", "tcp-ip", "protocols"]
+    },
+    {
+      "id": "q4",
+      "type": "single_choice",
+      "topic": "Architecture",
+      "subtopic": "Dependencies",
+      "difficulty": "medium",
+      "questionMd": "Why does the lecture recommend implementing the `Album` class before the `App` class?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Because `Album` class testing requires the front-end to be completed first" },
+        { "id": "B", "text": "To avoid exceeding the maximum allowed memory size in the application" },
+        { "id": "C", "text": "To prevent DOM manipulation from breaking the running backend services" },
+        { "id": "D", "text": "Because the `App` class depends on the `Album` class, whereas the `Album` class has no dependencies." }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "Building independent foundational models (`Album`) first ensures they are ready to be utilized by higher-level coordinating layers (`App`).",
+      "tags": ["architecture", "classes", "oop"]
+    },
+    {
+      "id": "q5",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "States",
+      "difficulty": "easy",
+      "questionMd": "A `Promise` object in JavaScript is always in one of three states. What are they?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Waiting, Succeeded, Failed" },
+        { "id": "B", "text": "Declared, Initialized, Resolved" },
+        { "id": "C", "text": "Pending, Fulfilled, Rejected" },
+        { "id": "D", "text": "Loading, Running, Finished" }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "These are the three official terminology states of a JavaScript Promise.",
+      "tags": ["javascript", "promise"]
+    },
+    {
+      "id": "q6",
+      "type": "single_choice",
+      "topic": "Node.js",
+      "subtopic": "Core Modules",
+      "difficulty": "easy",
+      "questionMd": "In the provided Node example, which module is imported to create a local web server handling HTTP?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "http" },
+        { "id": "B", "text": "fs" },
+        { "id": "C", "text": "server" },
+        { "id": "D", "text": "express" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "Node.js has a built-in module called `http`, which allows Node.js to transfer data over the Hyper Text Transfer Protocol (HTTP).",
+      "tags": ["nodejs", "http", "server"]
+    },
+    {
+      "id": "q7",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Structure",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, the `fetch` API is made up of how many functions?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "One" },
+        { "id": "B", "text": "Two" },
+        { "id": "C", "text": "Three" },
+        { "id": "D", "text": "Many" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "The core of the Fetch API relies on a single global function: `fetch()`. The rest of the API consists of objects like `Response`, `Request`, and `Headers`.",
+      "tags": ["fetch", "javascript"]
+    },
+    {
+      "id": "q8",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Classes",
+      "difficulty": "medium",
+      "questionMd": "How is a static variable defined on a class in JS?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "By using the `static` keyword before the variable name inside the class body" },
+        { "id": "B", "text": "By declaring it outside of the class and referencing it inside" },
+        { "id": "C", "text": "By prepending the `const` keyword before the property" },
+        { "id": "D", "text": "By assigning it to `window` inside the constructor" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "In modern ES6 JavaScript classes, the `static` keyword defines static methods or properties for a class.",
+      "tags": ["javascript", "classes", "static"]
+    },
+    {
+      "id": "q9",
+      "type": "single_choice",
+      "topic": "Web APIs",
+      "subtopic": "Fetch vs XHR",
+      "difficulty": "easy",
+      "questionMd": "Which of the following correctly describes the old API that `fetch()` replaced?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "JSON.parse()" },
+        { "id": "B", "text": "jQuery.ajax()" },
+        { "id": "C", "text": "XMLHttpRequest (XHR)" },
+        { "id": "D", "text": "ActiveXObject" }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "Before `fetch()`, web developers primarily used the `XMLHttpRequest` object to request data from servers asynchronously.",
+      "tags": ["javascript", "fetch", "history"]
+    },
+    {
+      "id": "q10",
+      "type": "single_choice",
+      "topic": "HTTP",
+      "subtopic": "Methods",
+      "difficulty": "medium",
+      "questionMd": "Which HTTP method is considered \"safe\" by default?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "PUT" },
+        { "id": "B", "text": "POST" },
+        { "id": "C", "text": "DELETE" },
+        { "id": "D", "text": "GET" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "An HTTP method is safe if it doesn't alter the state of the server. GET is used strictly to read data, making it safe.",
+      "tags": ["http", "methods", "safe"]
+    },
+    {
+      "id": "q11",
+      "type": "single_choice",
+      "topic": "DOM Manipulation",
+      "subtopic": "Images",
+      "difficulty": "medium",
+      "questionMd": "In the provided fetch example, how is an image added to the web page after its URL is requested?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "By using innerHTML to inject an <img> tag directly" },
+        { "id": "B", "text": "A CSS background image property is applied to an existing element" },
+        { "id": "C", "text": "The URL is passed to a separate flash API to load the image data" },
+        { "id": "D", "text": "A new <img> element is created, its src property is set, and it is appended to the document body." }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "The standard DOM manipulation way to add an image is using `document.createElement('img')`, assigning its `src`, and using `appendChild()`.",
+      "tags": ["javascript", "dom"]
+    },
+    {
+      "id": "q12",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Methods",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, a method is a function that belongs to what?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "The global window object" },
+        { "id": "B", "text": "The DOM, which optimizes the function for performance" },
+        { "id": "C", "text": "An object or a class instance." },
+        { "id": "D", "text": "The fetch API block execution sequence" }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "A method is simply a function that is bound to an object as one of its properties.",
+      "tags": ["javascript", "oop", "methods"]
+    },
+    {
+      "id": "q13",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Context (this)",
+      "difficulty": "medium",
+      "questionMd": "When a method is used as a DOM event handler without binding, what does `this` refer to?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "The global window object" },
+        { "id": "B", "text": "The class instance that owns the method" },
+        { "id": "C", "text": "The HTML element that the event handler was attached to." },
+        { "id": "D", "text": "The event object passed to the handler" }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "By default in the DOM, `this` inside an event listener callback refers to the element that triggered the event, not the enclosing class.",
+      "tags": ["javascript", "dom", "events", "this"]
+    },
+    {
+      "id": "q14",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Arrow Functions",
+      "difficulty": "medium",
+      "questionMd": "Why does the lecture recommend using arrow functions for callbacks instead of standard `function` expressions?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Arrow functions run faster in the V8 engine." },
+        { "id": "B", "text": "Arrow functions are the only way to return values." },
+        { "id": "C", "text": "They prevent the method from being called more than once per event." },
+        { "id": "D", "text": "Because arrow functions do not create their own `this` context, retaining the `this` value of the enclosing scope." }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "Arrow functions use lexical scoping for `this`, making them ideal for callbacks inside classes where you want `this` to refer to the class instance.",
+      "tags": ["javascript", "arrow-functions", "this"]
+    },
+    {
+      "id": "q15",
+      "type": "single_choice",
+      "topic": "Web History",
+      "subtopic": "W3C",
+      "difficulty": "easy",
+      "questionMd": "What is the primary purpose of the World Wide Web Consortium (W3C)?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "To sell hosting packages to web companies" },
+        { "id": "B", "text": "To create new web browsers" },
+        { "id": "C", "text": "To police the internet against malware" },
+        { "id": "D", "text": "To develop protocols and guidelines that ensure long-term growth for the Web" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "The W3C is the main international standards organization for the World Wide Web.",
+      "tags": ["web-history", "w3c", "standards"]
+    }
+  ]
+}

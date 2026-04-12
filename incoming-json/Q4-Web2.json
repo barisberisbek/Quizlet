@@ -1,0 +1,313 @@
+{
+  "quizId": "Q4-Web2",
+  "title": "Dynamic Web Programming - Quiz 4",
+  "course": "Dynamic Web Programming",
+  "language": "en",
+  "semester": "2023-2024 Spring",
+  "source": "Past Exam",
+  "durationMinutes": 30,
+  "shuffleQuestions": false,
+  "shuffleOptions": false,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "Chaining",
+      "difficulty": "medium",
+      "questionMd": "In a Promise chain such as `fetch(url).then(a).then(b)`, what value does function `b` receive as its argument?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "The original URL string passed to fetch()" },
+        { "id": "B", "text": "The value returned by function a" },
+        { "id": "C", "text": "The HTTP status code of the response" },
+        { "id": "D", "text": "The raw HTTP response object" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "The return value of a preceding `.then()` block is passed as the argument to the subsequent `.then()` block.",
+      "tags": ["promise", "javascript"]
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "topic": "REST API",
+      "subtopic": "Terminology",
+      "difficulty": "easy",
+      "questionMd": "In REST API terminology, what is the \"base URL\"?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "The full URL including all query parameters for a specific request" },
+        { "id": "B", "text": "The fallback URL used when the primary endpoint is unavailable" },
+        { "id": "C", "text": "The root address of the API server to which all endpoint paths are appended" },
+        { "id": "D", "text": "The URL of the web page that consumes the API" }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "The base URL is the common prefix for the routing system of a REST application.",
+      "tags": ["rest", "api"]
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Array Methods",
+      "difficulty": "medium",
+      "questionMd": "To sort an array of album objects by year in ascending order, which comparator function should be passed to `.sort()`?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "function(a, b) { return b.year - a.year; }" },
+        { "id": "B", "text": "function(a, b) { return a.year + b.year; }" },
+        { "id": "C", "text": "function(a, b) { return a.year; }" },
+        { "id": "D", "text": "function(a, b) { return a.year - b.year; }" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "Subtracting `b.year` from `a.year` yields a negative number if `a` comes before `b`, correctly sorting the array ascendingly.",
+      "tags": ["javascript", "array", "sorting"]
+    },
+    {
+      "id": "q4",
+      "type": "single_choice",
+      "topic": "JSON",
+      "subtopic": "Parsing",
+      "difficulty": "easy",
+      "questionMd": "A developer receives the string `'{\"name\": \"Ice Bear\"}'` from a server. Which function should they use to turn it into a usable JavaScript object?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "JSON.objectify()" },
+        { "id": "B", "text": "JSON.parse()" },
+        { "id": "C", "text": "JSON.decode()" },
+        { "id": "D", "text": "JSON.stringify()" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "`JSON.parse()` reads a JSON string and translates it directly to standard JS properties and objects.",
+      "tags": ["json", "javascript"]
+    },
+    {
+      "id": "q5",
+      "type": "single_choice",
+      "topic": "JSON",
+      "subtopic": "Advantages",
+      "difficulty": "easy",
+      "questionMd": "Compared to a custom plain-text format, what is a primary advantage of storing data in JSON format when using `fetch()`?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "JSON files are always smaller in size than plain-text files" },
+        { "id": "B", "text": "JavaScript has built-in support to automatically convert a JSON string into an object, eliminating manual parsing" },
+        { "id": "C", "text": "JSON files do not require a server to be accessed" },
+        { "id": "D", "text": "JSON is the only format supported by the fetch() API" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "Data mapping and typecasting (like Strings vs Numbers) handle themselves implicitly through `JSON.parse()`.",
+      "tags": ["json", "javascript"]
+    },
+    {
+      "id": "q6",
+      "type": "single_choice",
+      "topic": "Data Formats",
+      "subtopic": "Plain Text",
+      "difficulty": "easy",
+      "questionMd": "When loading album data from a custom plain-text file, which of the following is a disadvantage mentioned in the lecture?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Text files do not support arrays of items" },
+        { "id": "B", "text": "Numbers must be manually converted from strings using functions like parseInt()" },
+        { "id": "C", "text": "Plain-text files cannot be served over HTTP" },
+        { "id": "D", "text": "The file cannot be loaded using the fetch() API" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "Since all content in a plain text file is read as purely textual string data, manual casting functions are needed to parse numbers accurately.",
+      "tags": ["parsing", "javascript"]
+    },
+    {
+      "id": "q7",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Asynchronous",
+      "difficulty": "medium",
+      "questionMd": "Why is the `fetch()` API described as asynchronous in the context of web programming?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "It guarantees that the response arrives faster than synchronous requests" },
+        { "id": "B", "text": "It blocks script execution until the full response is received" },
+        { "id": "C", "text": "It automatically retries failed requests without any extra code" },
+        { "id": "D", "text": "It allows the browser to continue executing other code while waiting for the network response" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "Asynchronous APIs like fetch are non-blocking, so user interfaces don't freeze while data is traveling back and forth.",
+      "tags": ["async", "fetch", "javascript"]
+    },
+    {
+      "id": "q8",
+      "type": "single_choice",
+      "topic": "Architecture",
+      "subtopic": "Classes",
+      "difficulty": "medium",
+      "questionMd": "The lecture recommends implementing the `Album` class before the `App` class. What is the stated reason for this order?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "The fetch() call can only be tested after the Album class exists" },
+        { "id": "B", "text": "The App class depends on the Album class, whereas the Album class has no dependencies" },
+        { "id": "C", "text": "JavaScript requires dependent classes to be declared first in the file" },
+        { "id": "D", "text": "The Album class is simpler and requires fewer lines of code" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "Good architectural practice typically implements self-contained, dependency-free models (`Album`) before wiring up higher-level coordination logic (`App`).",
+      "tags": ["architecture", "classes"]
+    },
+    {
+      "id": "q9",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "Definition",
+      "difficulty": "easy",
+      "questionMd": "Which of the following best describes a JavaScript Promise?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "An object representing the eventual completion or failure of an asynchronous operation" },
+        { "id": "B", "text": "A synchronous function that immediately returns a value" },
+        { "id": "C", "text": "A built-in timer that delays code execution by a specified amount" },
+        { "id": "D", "text": "A special array type used to store multiple fetch results" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "This is the classic Mozilla Developer Network definition of a Promise.",
+      "tags": ["promise", "javascript"]
+    },
+    {
+      "id": "q10",
+      "type": "single_choice",
+      "topic": "Architecture",
+      "subtopic": "Methods",
+      "difficulty": "medium",
+      "questionMd": "Why does the lecture suggest extracting the album rendering logic into a separate `_renderAlbums()` helper method?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "To avoid exceeding the maximum allowed number of lines in a single method" },
+        { "id": "B", "text": "So the same rendering code can be reused both after the initial fetch and after each sort operation" },
+        { "id": "C", "text": "To prevent the browser from caching the album images between renders" },
+        { "id": "D", "text": "Because the fetch() API requires a dedicated render callback" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "Extracting rendering logic allows you to re-call it anytime state changes without rewriting code (DRY - Don't Repeat Yourself).",
+      "tags": ["architecture", "dry", "javascript"]
+    },
+    {
+      "id": "q11",
+      "type": "single_choice",
+      "topic": "HTTP",
+      "subtopic": "Query Parameters",
+      "difficulty": "easy",
+      "questionMd": "When constructing a URL with multiple query parameters, which character is used to separate each parameter after the first one?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "&" },
+        { "id": "B", "text": "?" },
+        { "id": "C", "text": "/" },
+        { "id": "D", "text": ":" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "The `?` starts the query string and `&` separates additional parameter key-value pairings.",
+      "tags": ["url", "http"]
+    },
+    {
+      "id": "q12",
+      "type": "single_choice",
+      "topic": "HTTP",
+      "subtopic": "Methods",
+      "difficulty": "easy",
+      "questionMd": "Which HTTP method does a browser send automatically whenever you navigate to a URL in the address bar?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "PUT" },
+        { "id": "B", "text": "GET" },
+        { "id": "C", "text": "DELETE" },
+        { "id": "D", "text": "POST" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "Browser address bar navigation always performs an HTTP GET request to fetch page contents.",
+      "tags": ["http", "browser"]
+    },
+    {
+      "id": "q13",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Callbacks",
+      "difficulty": "medium",
+      "questionMd": "In the discography page example, how does the `SortButton` class communicate a sort action back to the `App` class?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "It dispatches a custom keyboard event that triggers the App's event listener" },
+        { "id": "B", "text": "It calls an onClickCallback function passed to it during construction, supplying the sort function as an argument" },
+        { "id": "C", "text": "It directly modifies the albumInfo property of the App instance" },
+        { "id": "D", "text": "It fires a built-in DOM click event that the App class listens for on the document" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "Passing callbacks as constructors props enables decoupled classes to communicate events back up to their parents.",
+      "tags": ["javascript", "callbacks", "architecture"]
+    },
+    {
+      "id": "q14",
+      "type": "single_choice",
+      "topic": "Development",
+      "subtopic": "Servers",
+      "difficulty": "easy",
+      "questionMd": "Which command is used to serve local files over HTTP so that `fetch()` can access them during development?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "npm start http" },
+        { "id": "B", "text": "node server.js" },
+        { "id": "C", "text": "python3 -m fetch server" },
+        { "id": "D", "text": "python3 -m http.server" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "Python 3 has a built-in lightweight HTTP server module useful for quick local development testing without CORS/File protocol issues.",
+      "tags": ["server", "development"]
+    },
+    {
+      "id": "q15",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Array Methods",
+      "difficulty": "easy",
+      "questionMd": "Which built-in JavaScript array method is used in the lecture to reorder album objects by year?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": ".reduce()" },
+        { "id": "B", "text": ".map()" },
+        { "id": "C", "text": ".filter()" },
+        { "id": "D", "text": ".sort()" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "The `.sort()` method directly handles repositioning array items via a comparator function.",
+      "tags": ["javascript", "array", "sorting"]
+    }
+  ]
+}

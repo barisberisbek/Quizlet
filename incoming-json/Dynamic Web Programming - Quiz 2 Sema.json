@@ -1,0 +1,240 @@
+{
+  "quizId": "Q2-Web2",
+  "title": "Dynamic Web Programming - Quiz 2",
+  "course": "Dynamic Web Programming",
+  "language": "en",
+  "semester": "2023-2024 Spring",
+  "source": "Past Exam",
+  "durationMinutes": 30,
+  "shuffleQuestions": false,
+  "shuffleOptions": false,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Response Handling",
+      "difficulty": "medium",
+      "questionMd": "What does `response.text()` return?",
+      "options": [
+        { "id": "A", "text": "A JSON object parsed from the response body" },
+        { "id": "B", "text": "The raw bytes of the response body as a string immediately" },
+        { "id": "C", "text": "A Promise that resolves with the response body as a string" },
+        { "id": "D", "text": "The HTTP status code as a text string" }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "`response.text()` returns a Promise that resolves with a string representation of the response body."
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "topic": "Data Formats",
+      "subtopic": "Plain Text vs JSON",
+      "difficulty": "easy",
+      "questionMd": "When loading album data from a custom plain-text file, which of the following is a disadvantage mentioned in the lecture?",
+      "options": [
+        { "id": "A", "text": "Numbers must be manually converted from strings using functions like parseInt()" },
+        { "id": "B", "text": "The file cannot be loaded using the fetch() API" },
+        { "id": "C", "text": "Plain-text files cannot be served over HTTP" },
+        { "id": "D", "text": "Text files do not support arrays of items" }
+      ],
+      "correctAnswer": ["A"]
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Response Object",
+      "difficulty": "easy",
+      "questionMd": "What does `response.status` contain when used inside a fetch success handler?",
+      "options": [
+        { "id": "A", "text": "The HTTP status code of the request, such as 200" },
+        { "id": "B", "text": "The text content of the fetched resource" },
+        { "id": "C", "text": "A boolean indicating whether the request succeeded" },
+        { "id": "D", "text": "The name of the file that was fetched" }
+      ],
+      "correctAnswer": ["A"]
+    },
+    {
+      "id": "q4",
+      "type": "single_choice",
+      "topic": "JSON",
+      "subtopic": "Parsing",
+      "difficulty": "easy",
+      "questionMd": "What does `JSON.parse()` accept as its argument?",
+      "options": [
+        { "id": "A", "text": "A JavaScript object to be serialized" },
+        { "id": "B", "text": "A Promise returned by fetch()" },
+        { "id": "C", "text": "A fetch response object" },
+        { "id": "D", "text": "A JSON-formatted string" }
+      ],
+      "correctAnswer": ["D"]
+    },
+    {
+      "id": "q5",
+      "type": "single_choice",
+      "topic": "Data Formats",
+      "subtopic": "JSON",
+      "difficulty": "easy",
+      "questionMd": "Compared to a custom plain-text format, what is a primary advantage of storing data in JSON format when using `fetch()`?",
+      "options": [
+        { "id": "A", "text": "JavaScript has built-in support to automatically convert a JSON string into an object, eliminating manual parsing" },
+        { "id": "B", "text": "JSON files are always smaller in size than plain-text files" },
+        { "id": "C", "text": "JSON is the only format supported by the fetch() API" },
+        { "id": "D", "text": "JSON files do not require a server to be accessed" }
+      ],
+      "correctAnswer": ["A"]
+    },
+    {
+      "id": "q6",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "Syntax",
+      "difficulty": "medium",
+      "questionMd": "Which of the following correctly rewrites `fetch('f.txt').then(onResponse)` using an intermediate variable?",
+      "options": [
+        { "id": "A", "text": "let p = onResponse; p.fetch('f.txt');" },
+        { "id": "B", "text": "const p = fetch('f.txt'); p.resolve(onResponse);" },
+        { "id": "C", "text": "const p = new Promise('f.txt'); p.then(onResponse);" },
+        { "id": "D", "text": "const p = fetch('f.txt'); p.then(onResponse);" }
+      ],
+      "correctAnswer": ["D"]
+    },
+    {
+      "id": "q7",
+      "type": "single_choice",
+      "topic": "REST API",
+      "subtopic": "Terminology",
+      "difficulty": "easy",
+      "questionMd": "In REST API terminology, what is the \"base URL\"?",
+      "options": [
+        { "id": "A", "text": "The fallback URL used when the primary endpoint is unavailable" },
+        { "id": "B", "text": "The root address of the API server to which all endpoint paths are appended" },
+        { "id": "C", "text": "The full URL including all query parameters for a specific request" },
+        { "id": "D", "text": "The URL of the web page that consumes the API" }
+      ],
+      "correctAnswer": ["B"]
+    },
+    {
+      "id": "q8",
+      "type": "single_choice",
+      "topic": "Networking",
+      "subtopic": "LAN/WAN",
+      "difficulty": "medium",
+      "questionMd": "How do LANs and WANs relate to the concepts of Intranet and Internet respectively?",
+      "options": [
+        { "id": "A", "text": "LANs form private internal networks (Intranet), while WANs connect these networks together to form the Internet" },
+        { "id": "B", "text": "LANs use wireless connections only, while WANs use wired connections only" },
+        { "id": "C", "text": "LANs are always public networks, while WANs are always private networks" },
+        { "id": "D", "text": "LANs operate at the application layer, while WANs operate at the physical layer" }
+      ],
+      "correctAnswer": ["A"]
+    },
+    {
+      "id": "q9",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Returns",
+      "difficulty": "easy",
+      "questionMd": "What does the `fetch()` function return?",
+      "options": [
+        { "id": "A", "text": "A Promise" },
+        { "id": "B", "text": "The raw text content of the requested resource" },
+        { "id": "C", "text": "An XMLHttpRequest object" },
+        { "id": "D", "text": "A JSON-parsed JavaScript object" }
+      ],
+      "correctAnswer": ["A"]
+    },
+    {
+      "id": "q10",
+      "type": "single_choice",
+      "topic": "REST API",
+      "subtopic": "Static vs Dynamic",
+      "difficulty": "medium",
+      "questionMd": "What is the fundamental difference between a URL that points to a static file and a URL that represents a REST API endpoint?",
+      "options": [
+        { "id": "A", "text": "A REST API endpoint returns HTML, while a static file URL always returns JSON" },
+        { "id": "B", "text": "A REST API endpoint causes the server to dynamically generate a response, whereas a static file URL causes the server to return a stored file" },
+        { "id": "C", "text": "A static file URL must include query parameters, while a REST API endpoint never does" },
+        { "id": "D", "text": "A REST API endpoint always requires POST, while static file URLs always use GET" }
+      ],
+      "correctAnswer": ["B"]
+    },
+    {
+      "id": "q11",
+      "type": "single_choice",
+      "topic": "Networking",
+      "subtopic": "Intranet vs Internet",
+      "difficulty": "easy",
+      "questionMd": "Which statement correctly distinguishes the Internet from an Intranet?",
+      "options": [
+        { "id": "A", "text": "The Internet uses IPv6 only, while an Intranet uses IPv4 only" },
+        { "id": "B", "text": "The Internet is limited to universities, while an Intranet is open to the public" },
+        { "id": "C", "text": "The Internet uses UDP, while an Intranet uses TCP exclusively" },
+        { "id": "D", "text": "The Internet is the global interconnected network, while an Intranet is a private network for a limited group of users" }
+      ],
+      "correctAnswer": ["D"]
+    },
+    {
+      "id": "q12",
+      "type": "single_choice",
+      "topic": "Data Serialization",
+      "subtopic": "Terminology",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, what does it mean to \"deserialize\" a string?",
+      "options": [
+        { "id": "A", "text": "To split a string into an array using a separator" },
+        { "id": "B", "text": "To turn a serialized string back into a JavaScript object" },
+        { "id": "C", "text": "To encode a string using HTML entities" },
+        { "id": "D", "text": "To convert a JavaScript object into a JSON string" }
+      ],
+      "correctAnswer": ["B"]
+    },
+    {
+      "id": "q13",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "States",
+      "difficulty": "medium",
+      "questionMd": "A Promise object can be in one of three states. Which of the following is NOT one of those states?",
+      "options": [
+        { "id": "A", "text": "Fulfilled" },
+        { "id": "B", "text": "Resolved" },
+        { "id": "C", "text": "Pending" },
+        { "id": "D", "text": "Rejected" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "The correct states are Pending, Fulfilled, and Rejected. 'Resolved' is commonly used in conversation, but the official state name is Fulfilled."
+    },
+    {
+      "id": "q14",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Context (this)",
+      "difficulty": "medium",
+      "questionMd": "When a method is used as a DOM event handler without binding, what does `this` refer to inside that method?",
+      "options": [
+        { "id": "A", "text": "The global window object" },
+        { "id": "B", "text": "The class instance that owns the method" },
+        { "id": "C", "text": "The HTML element that the event handler was attached to" },
+        { "id": "D", "text": "The event object passed to the handler" }
+      ],
+      "correctAnswer": ["C"]
+    },
+    {
+      "id": "q15",
+      "type": "single_choice",
+      "topic": "Web APIs",
+      "subtopic": "Media Devices",
+      "difficulty": "medium",
+      "questionMd": "What is the key difference between `navigator.getUserMedia` and `navigator.mediaDevices.getUserMedia`?",
+      "options": [
+        { "id": "A", "text": "The deprecated version uses Promises; the newer version uses callbacks" },
+        { "id": "B", "text": "Only the deprecated version supports video streaming" },
+        { "id": "C", "text": "The newer version requires HTTPS while the deprecated version does not" },
+        { "id": "D", "text": "The newer version returns a Promise, the deprecated version uses callbacks" }
+      ],
+      "correctAnswer": ["D"]
+    }
+  ]
+}

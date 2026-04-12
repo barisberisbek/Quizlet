@@ -1,0 +1,240 @@
+{
+  "quizId": "Quiz-3",
+  "title": "Dynamic Web Programming - Quiz 3",
+  "course": "Dynamic Web Programming",
+  "language": "en",
+  "semester": "2023-2024 Spring",
+  "source": "Past Exam",
+  "durationMinutes": 30,
+  "shuffleQuestions": false,
+  "shuffleOptions": false,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "topic": "Web APIs",
+      "subtopic": "Media Devices",
+      "difficulty": "medium",
+      "questionMd": "What is the key difference between `navigator.getUserMedia` and `navigator.mediaDevices.getUserMedia`?",
+      "options": [
+        { "id": "A", "text": "The newer version returns a Promise; the deprecated version uses callbacks" },
+        { "id": "B", "text": "Only the deprecated version supports video streaming" },
+        { "id": "C", "text": "The deprecated version uses Promises; the newer version uses callbacks" },
+        { "id": "D", "text": "The newer version requires HTTPS while the deprecated version does not" }
+      ],
+      "correctAnswer": ["A"]
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "topic": "JSON",
+      "subtopic": "Acronym",
+      "difficulty": "easy",
+      "questionMd": "What does JSON stand for?",
+      "options": [
+        { "id": "A", "text": "JavaScript Ordered Node" },
+        { "id": "B", "text": "Java Serialized Object Network" },
+        { "id": "C", "text": "JavaScript Object Notation" },
+        { "id": "D", "text": "JavaScript Syntax Object Notation" }
+      ],
+      "correctAnswer": ["C"]
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Response Methods",
+      "difficulty": "medium",
+      "questionMd": "What does `response.text()` return?",
+      "options": [
+        { "id": "A", "text": "The raw bytes of the response body as a string immediately" },
+        { "id": "B", "text": "A Promise that resolves with the response body as a string" },
+        { "id": "C", "text": "A JSON object parsed from the response body" },
+        { "id": "D", "text": "The HTTP status code as a text string" }
+      ],
+      "correctAnswer": ["B"]
+    },
+    {
+      "id": "q4",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Returns",
+      "difficulty": "easy",
+      "questionMd": "What does the `fetch()` function return?",
+      "options": [
+        { "id": "A", "text": "A JSON-parsed JavaScript object" },
+        { "id": "B", "text": "A Promise" },
+        { "id": "C", "text": "An XMLHttpRequest object" },
+        { "id": "D", "text": "The raw text content of the requested resource" }
+      ],
+      "correctAnswer": ["B"]
+    },
+    {
+      "id": "q5",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Structure",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, the Fetch API is made up of how many functions?",
+      "options": [
+        { "id": "A", "text": "Four" },
+        { "id": "B", "text": "Two" },
+        { "id": "C", "text": "Three" },
+        { "id": "D", "text": "One" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "The core of the Fetch API relies on a single global function: `fetch()`."
+    },
+    {
+      "id": "q6",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "States",
+      "difficulty": "medium",
+      "questionMd": "A Promise object can be in one of three states. Which of the following is NOT one of those states?",
+      "options": [
+        { "id": "A", "text": "Pending" },
+        { "id": "B", "text": "Resolved" },
+        { "id": "C", "text": "Rejected" },
+        { "id": "D", "text": "Fulfilled" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "The states are Pending, Fulfilled, and Rejected. 'Resolved' describes the outcome, but the strict state name is Fulfilled."
+    },
+    {
+      "id": "q7",
+      "type": "single_choice",
+      "topic": "JSON",
+      "subtopic": "Parsing",
+      "difficulty": "easy",
+      "questionMd": "What does `JSON.parse()` accept as its argument?",
+      "options": [
+        { "id": "A", "text": "A JavaScript object to be serialized" },
+        { "id": "B", "text": "A fetch response object" },
+        { "id": "C", "text": "A Promise returned by fetch()" },
+        { "id": "D", "text": "A JSON-formatted string" }
+      ],
+      "correctAnswer": ["D"]
+    },
+    {
+      "id": "q8",
+      "type": "single_choice",
+      "topic": "Web APIs",
+      "subtopic": "XHR",
+      "difficulty": "easy",
+      "questionMd": "Which of the following correctly describes the old API that `fetch()` replaced for loading browser resources?",
+      "options": [
+        { "id": "A", "text": "navigator.mediaDevices" },
+        { "id": "B", "text": "XMLHttpRequest (XHR)" },
+        { "id": "C", "text": "JSON.parse()" },
+        { "id": "D", "text": "loadFromFile()" }
+      ],
+      "correctAnswer": ["B"]
+    },
+    {
+      "id": "q9",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "States",
+      "difficulty": "easy",
+      "questionMd": "Which of the following best describes the \"pending\" state of a Promise?",
+      "options": [
+        { "id": "A", "text": "The state where then() has been called but not yet attached" },
+        { "id": "B", "text": "The initial state where the operation has not yet fulfilled or rejected" },
+        { "id": "C", "text": "The state where the error handler has been triggered" },
+        { "id": "D", "text": "The state where the operation completed but returned no data" }
+      ],
+      "correctAnswer": ["B"]
+    },
+    {
+      "id": "q10",
+      "type": "single_choice",
+      "topic": "DOM Manipulation",
+      "subtopic": "Images",
+      "difficulty": "medium",
+      "questionMd": "In the completed fetch example, how is each image added to the web page after its URL is extracted?",
+      "options": [
+        { "id": "A", "text": "A new <img> element is created and appended to document.body" },
+        { "id": "B", "text": "The image URL is written directly into the HTML using innerHTML" },
+        { "id": "C", "text": "The URL is passed to a separate fetch call to load the image data" },
+        { "id": "D", "text": "A CSS background property is applied to an existing element" }
+      ],
+      "correctAnswer": ["A"]
+    },
+    {
+      "id": "q11",
+      "type": "single_choice",
+      "topic": "JSON",
+      "subtopic": "Serialization",
+      "difficulty": "easy",
+      "questionMd": "What type of value does `JSON.stringify(object)` return?",
+      "options": [
+        { "id": "A", "text": "A boolean indicating whether serialization succeeded" },
+        { "id": "B", "text": "A Promise that resolves with the serialized data" },
+        { "id": "C", "text": "A new JavaScript object with the same properties" },
+        { "id": "D", "text": "A string representing the object in JSON format" }
+      ],
+      "correctAnswer": ["D"]
+    },
+    {
+      "id": "q12",
+      "type": "single_choice",
+      "topic": "JSON",
+      "subtopic": "Serialization",
+      "difficulty": "easy",
+      "questionMd": "Which function would you use to convert a JavaScript object into a JSON-formatted string?",
+      "options": [
+        { "id": "A", "text": "JSON.parse()" },
+        { "id": "B", "text": "JSON.deserialize()" },
+        { "id": "C", "text": "JSON.stringify()" },
+        { "id": "D", "text": "JSON.encode()" }
+      ],
+      "correctAnswer": ["C"]
+    },
+    {
+      "id": "q13",
+      "type": "single_choice",
+      "topic": "History",
+      "subtopic": "JSON",
+      "difficulty": "easy",
+      "questionMd": "Who created JSON according to the lecture?",
+      "options": [
+        { "id": "A", "text": "Tim Berners-Lee" },
+        { "id": "B", "text": "Brendan Eich" },
+        { "id": "C", "text": "Ryan Dahl" },
+        { "id": "D", "text": "Douglas Crockford" }
+      ],
+      "correctAnswer": ["D"]
+    },
+    {
+      "id": "q14",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "Chaining",
+      "difficulty": "medium",
+      "questionMd": "In a chained Promise pattern, what must `onResponse` return for the next `then()` in the chain to receive the text data?",
+      "options": [
+        { "id": "A", "text": "The response object itself" },
+        { "id": "B", "text": "The Promise returned by response.text()" },
+        { "id": "C", "text": "A resolved string from response.status" },
+        { "id": "D", "text": "A JSON object created with JSON.parse()" }
+      ],
+      "correctAnswer": ["B"]
+    },
+    {
+      "id": "q15",
+      "type": "single_choice",
+      "topic": "Development Environment",
+      "subtopic": "Local Server",
+      "difficulty": "medium",
+      "questionMd": "How can a developer serve local files over HTTP so that `fetch()` works correctly?",
+      "options": [
+        { "id": "A", "text": "Use the file:// protocol with a special fetch configuration option" },
+        { "id": "B", "text": "Run a local HTTP server, such as with python -m http.server" },
+        { "id": "C", "text": "Enable CORS headers directly in the HTML file" },
+        { "id": "D", "text": "Switch from fetch() to XMLHttpRequest for local files" }
+      ],
+      "correctAnswer": ["B"]
+    }
+  ]
+}

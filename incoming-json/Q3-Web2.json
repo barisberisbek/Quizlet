@@ -1,0 +1,313 @@
+{
+  "quizId": "Q3-Web2",
+  "title": "Dynamic Web Programming - Quiz 3",
+  "course": "Dynamic Web Programming",
+  "language": "en",
+  "semester": "2023-2024 Spring",
+  "source": "Past Exam",
+  "durationMinutes": 30,
+  "shuffleQuestions": false,
+  "shuffleOptions": false,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "topic": "Data Formats",
+      "subtopic": "JSON vs Plain Text",
+      "difficulty": "easy",
+      "questionMd": "Why is storing data as JSON preferable to storing it as plain text when using `fetch()`?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "JSON is the only format the Fetch API is able to read" },
+        { "id": "B", "text": "JSON files load faster because they are compressed by the browser" },
+        { "id": "C", "text": "JSON eliminates the need to manually parse field separators when deserializing structured data" },
+        { "id": "D", "text": "Plain text requires XMLHttpRequest while JSON works with fetch" }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "JSON provides structured key-value pairs inherently, saving developers from manually splitting plain text strings.",
+      "tags": ["json", "fetch"]
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "States",
+      "difficulty": "easy",
+      "questionMd": "Which of the following best describes the \"fulfilled\" state of a Promise?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "The Promise is waiting for a .then() handler to be attached" },
+        { "id": "B", "text": "The operation encountered a network error" },
+        { "id": "C", "text": "The Promise has been created but not yet started" },
+        { "id": "D", "text": "The asynchronous operation completed successfully" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "A 'fulfilled' promise means the underlying asynchronous operation was successful and a value was returned.",
+      "tags": ["javascript", "promise"]
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Purpose",
+      "difficulty": "easy",
+      "questionMd": "What is the primary purpose of the Fetch API in a web browser?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "To serialize JavaScript objects into strings" },
+        { "id": "B", "text": "To define callback functions for user interface events" },
+        { "id": "C", "text": "To manipulate the DOM after a page has loaded" },
+        { "id": "D", "text": "To load external resources such as text and JSON asynchronously" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "Fetch is the modern API for making HTTP requests in browsers, allowing for network resource retrieval.",
+      "tags": ["fetch", "web-api"]
+    },
+    {
+      "id": "q4",
+      "type": "single_choice",
+      "topic": "JSON",
+      "subtopic": "Serialization",
+      "difficulty": "easy",
+      "questionMd": "Which function would you use to convert a JavaScript object into a JSON-formatted string?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "JSON.parse()" },
+        { "id": "B", "text": "JSON.stringify()" },
+        { "id": "C", "text": "JSON.encode()" },
+        { "id": "D", "text": "JSON.deserialize()" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "`JSON.stringify()` converts an object to a string format suitable for transmission.",
+      "tags": ["json", "javascript"]
+    },
+    {
+      "id": "q5",
+      "type": "single_choice",
+      "topic": "Web APIs",
+      "subtopic": "Media Devices",
+      "difficulty": "medium",
+      "questionMd": "What is the key difference between `navigator.getUserMedia` and `navigator.mediaDevices.getUserMedia`?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "The newer version requires HTTPS while the deprecated version does not" },
+        { "id": "B", "text": "The deprecated version uses Promises; the newer version uses callbacks" },
+        { "id": "C", "text": "Only the deprecated version supports video streaming" },
+        { "id": "D", "text": "The newer version returns a Promise, the deprecated version uses callbacks" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "Modern web standard APIs frequently utilize Promises for cleaner async flows compared to older callback methods.",
+      "tags": ["javascript", "web-api"]
+    },
+    {
+      "id": "q6",
+      "type": "single_choice",
+      "topic": "Data Serialization",
+      "subtopic": "Terminology",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, what does it mean to \"deserialize\" a string?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "To encode a string using HTML entities" },
+        { "id": "B", "text": "To split a string into an array using a separator" },
+        { "id": "C", "text": "To turn a serialized string back into a JavaScript object" },
+        { "id": "D", "text": "To convert a JavaScript object into a JSON string" }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "Deserialization is rebuilding a native object structure from a serialized format.",
+      "tags": ["json", "serialization"]
+    },
+    {
+      "id": "q7",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "Chaining",
+      "difficulty": "medium",
+      "questionMd": "In a chained Promise pattern, what must `onResponse` return for the next `.then()` in the chain to receive the text data?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "The response object itself" },
+        { "id": "B", "text": "The Promise returned by response.text()" },
+        { "id": "C", "text": "A JSON object created with JSON.parse()" },
+        { "id": "D", "text": "A resolved string from response.status" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "To chain asynchronous operations, returning the promise generated by `response.text()` ensures the next `.then()` waits for the text payload.",
+      "tags": ["promise", "fetch", "javascript"]
+    },
+    {
+      "id": "q8",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "Handlers",
+      "difficulty": "medium",
+      "questionMd": "What is the correct syntax for using the real Fetch API with success and error handlers?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "fetch('file.txt', onSuccess, onError);" },
+        { "id": "B", "text": "fetch('file.txt').catch(onSuccess).then(onError);" },
+        { "id": "C", "text": "fetch('file.txt').then(onSuccess, onError);" },
+        { "id": "D", "text": "fetch('file.txt', { success: onSuccess, error: onError });" }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "A standard Promise `.then()` method accepts up to two arguments: a fulfillment handler and a rejection handler.",
+      "tags": ["fetch", "promise"]
+    },
+    {
+      "id": "q9",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "Chaining",
+      "difficulty": "medium",
+      "questionMd": "When chaining `.then()` calls on a fetch Promise, what does the second `.then()` receive as its argument?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "The value returned or resolved by the first .then() handler" },
+        { "id": "B", "text": "The HTTP status code from the first .then()" },
+        { "id": "C", "text": "The original fetch response object" },
+        { "id": "D", "text": "A new fetch Promise targeting the same resource" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "Promises pipe their resolution values forward; the return value of one `.then()` becomes the input argument to the next.",
+      "tags": ["promise", "javascript"]
+    },
+    {
+      "id": "q10",
+      "type": "single_choice",
+      "topic": "JSON",
+      "subtopic": "Parsing",
+      "difficulty": "easy",
+      "questionMd": "What does `JSON.parse()` accept as its argument?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "A JavaScript object to be serialized" },
+        { "id": "B", "text": "A JSON-formatted string" },
+        { "id": "C", "text": "A Promise returned by fetch()" },
+        { "id": "D", "text": "A fetch response object" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "`JSON.parse()` parses a string that conforms to the JSON specification, producing a JavaScript value or object described by the string.",
+      "tags": ["json", "javascript"]
+    },
+    {
+      "id": "q11",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "Variables",
+      "difficulty": "medium",
+      "questionMd": "Which of the following correctly rewrites `fetch('f.txt').then(onResponse)` using an intermediate variable?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "let p = onResponse; p = fetch('f.txt');" },
+        { "id": "B", "text": "const p = fetch('f.txt'); p.resolve(onResponse);" },
+        { "id": "C", "text": "const p = new Promise('f.txt'); p.then(onResponse);" },
+        { "id": "D", "text": "const p = fetch('f.txt'); p.then(onResponse);" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "Storing the promise returned by `fetch()` into a variable `p` allows you to attach handlers to it later using `p.then()`.",
+      "tags": ["promise", "javascript"]
+    },
+    {
+      "id": "q12",
+      "type": "single_choice",
+      "topic": "JSON",
+      "subtopic": "Acronym",
+      "difficulty": "easy",
+      "questionMd": "What does JSON stand for?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Java Serialized Object Network" },
+        { "id": "B", "text": "JavaScript Syntax Object Notation" },
+        { "id": "C", "text": "JavaScript Object Notation" },
+        { "id": "D", "text": "JavaScript Ordered Node" }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "JSON stands for JavaScript Object Notation.",
+      "tags": ["json", "trivia"]
+    },
+    {
+      "id": "q13",
+      "type": "single_choice",
+      "topic": "Web APIs",
+      "subtopic": "Fetch vs XHR",
+      "difficulty": "easy",
+      "questionMd": "Which of the following correctly describes the old API that `fetch()` replaced for loading browser resources?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "XMLHttpRequest (XHR)" },
+        { "id": "B", "text": "JSON.parse()" },
+        { "id": "C", "text": "loadFromFile()" },
+        { "id": "D", "text": "navigator.mediaDevices" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "Fetch is a modern, Promise-based improvement over the older, callback-based XMLHttpRequest (XHR) API.",
+      "tags": ["fetch", "history"]
+    },
+    {
+      "id": "q14",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Security",
+      "difficulty": "medium",
+      "questionMd": "Why does calling `fetch()` on a local file opened via `file://` protocol result in an error?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Loading files via the file:// protocol is disallowed by the browser" },
+        { "id": "B", "text": "Local files must be fetched using XMLHttpRequest instead" },
+        { "id": "C", "text": "The fetch API only supports JSON files, not text files" },
+        { "id": "D", "text": "JavaScript blocks all file I/O on the main thread" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "Due to CORS and security policies, browsers restrict scripts from fetching files loaded directly from the local file system using the `file://` scheme.",
+      "tags": ["fetch", "security", "cors"]
+    },
+    {
+      "id": "q15",
+      "type": "single_choice",
+      "topic": "History",
+      "subtopic": "JSON",
+      "difficulty": "easy",
+      "questionMd": "Who created JSON according to the lecture?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Ryan Dahl" },
+        { "id": "B", "text": "Douglas Crockford" },
+        { "id": "C", "text": "Brendan Eich" },
+        { "id": "D", "text": "Tim Berners-Lee" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "Douglas Crockford popularized and specified the JSON data format.",
+      "tags": ["json", "history"]
+    }
+  ]
+}

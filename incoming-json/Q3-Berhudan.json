@@ -1,0 +1,313 @@
+{
+  "quizId": "Q3",
+  "title": "Dynamic Web Programming - Quiz 3",
+  "course": "Dynamic Web Programming",
+  "language": "en",
+  "semester": "2023-2024 Spring",
+  "source": "Past Exam",
+  "durationMinutes": 30,
+  "shuffleQuestions": false,
+  "shuffleOptions": false,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "topic": "JSON",
+      "subtopic": "Parsing",
+      "difficulty": "easy",
+      "questionMd": "What does `JSON.parse()` accept as its argument?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "A JavaScript object to be serialized" },
+        { "id": "B", "text": "A Promise returned by fetch" },
+        { "id": "C", "text": "A fetch response object" },
+        { "id": "D", "text": "A JSON-formatted string" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "`JSON.parse()` reads a valid JSON string and constructs the JavaScript value or object described by the string.",
+      "tags": ["json", "javascript"]
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Structure",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, the Fetch API is made up of how many functions?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "One" },
+        { "id": "B", "text": "Two" },
+        { "id": "C", "text": "Four" },
+        { "id": "D", "text": "Three" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "The primary interaction surface of the Fetch API is a single function: `fetch()`.",
+      "tags": ["fetch", "javascript"]
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "topic": "REST API",
+      "subtopic": "Static vs Dynamic",
+      "difficulty": "medium",
+      "questionMd": "What is the primary difference between a URL that points to a static file and a URL that represents a REST API endpoint?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "A static file URL always uses HTTPS, while a REST API does not." },
+        { "id": "B", "text": "A REST API endpoint causes the server to dynamically generate a response, whereas a static file URL causes the server to return a stored file." },
+        { "id": "C", "text": "A REST API returns HTML files only." },
+        { "id": "D", "text": "A static file requires form submission." }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "Static files are merely retrieved from the server's disk, while REST endpoints trigger code execution to build dynamic responses (often in JSON).",
+      "tags": ["rest", "api", "architecture"]
+    },
+    {
+      "id": "q4",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "Async/Await",
+      "difficulty": "medium",
+      "questionMd": "What happens when the `await` keyword is used before a Promise?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "It resolves instantly." },
+        { "id": "B", "text": "It throws a syntax error." },
+        { "id": "C", "text": "It pauses the execution of the async function until the Promise resolves." },
+        { "id": "D", "text": "It bypasses the `.catch` block." }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "`await` is a mechanism inside `async` functions to wait for a Promise to settle (resolve or reject) before moving to the next line of code.",
+      "tags": ["javascript", "promise", "async-await"]
+    },
+    {
+      "id": "q5",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Response Object",
+      "difficulty": "easy",
+      "questionMd": "Which of the following is TRUE about the `status` property of a `Response` object?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "It contains the routing configuration." },
+        { "id": "B", "text": "It contains the numeric HTTP status code (e.g., 200, 404)." },
+        { "id": "C", "text": "It tells the user the state of their internet connection." },
+        { "id": "D", "text": "It logs script errors inside the browser console." }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "The `Response.status` read-only property contains the status code of the response (e.g., 200 for a success).",
+      "tags": ["fetch", "http"]
+    },
+    {
+      "id": "q6",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "Error Handling",
+      "difficulty": "medium",
+      "questionMd": "When is the `.catch()` block executed in a Promise chain?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Always as the final step." },
+        { "id": "B", "text": "Only when specifically invoked." },
+        { "id": "C", "text": "When any Promise in the chain is rejected or an error is thrown." },
+        { "id": "D", "text": "If a user cancels the HTTP request." }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "`.catch()` handles rejections that bubble up from anywhere in the preceding `.then()` chain.",
+      "tags": ["javascript", "promise", "error-handling"]
+    },
+    {
+      "id": "q7",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Response Methods",
+      "difficulty": "medium",
+      "questionMd": "What does the `Response.text()` method return when called inside a fetch success handler?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "The raw bytes of the response body" },
+        { "id": "B", "text": "A Promise that resolves with the response body as a string." },
+        { "id": "C", "text": "The HTML source code of the requesting page" },
+        { "id": "D", "text": "The text representation of the loaded header" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "Like `.json()`, `.text()` returns a Promise because parsing the body stream is an asynchronous operation.",
+      "tags": ["fetch", "promise", "javascript"]
+    },
+    {
+      "id": "q8",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Security",
+      "difficulty": "medium",
+      "questionMd": "Why does calling `fetch()` on a local file opened via `file://` protocol result in an error?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Loading files via the `file://` protocol is disallowed by the browser (CORS)." },
+        { "id": "B", "text": "JavaScript blocks file IO on the main thread." },
+        { "id": "C", "text": "The API only supports HTML files, not raw files." },
+        { "id": "D", "text": "The OS blocks file reading from HTML index pages." }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "Browsers consider local files to be separate origins. Accessing them via fetch triggers Cross-Origin Resource Sharing (CORS) errors to protect local file systems.",
+      "tags": ["fetch", "security", "cors"]
+    },
+    {
+      "id": "q9",
+      "type": "single_choice",
+      "topic": "HTTP",
+      "subtopic": "Headers",
+      "difficulty": "medium",
+      "questionMd": "How does the browser know what kind of data is in an HTTP response body?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "By analyzing the body content with an algorithm" },
+        { "id": "B", "text": "By checking the response body using a regular expression" },
+        { "id": "C", "text": "By reading the file extension of the URL" },
+        { "id": "D", "text": "By reading the `Content-Type` header in the response." }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "The `Content-Type` HTTP header indicates the media type (MIME type) of the resource, such as `application/json` or `text/html`.",
+      "tags": ["http", "headers"]
+    },
+    {
+      "id": "q10",
+      "type": "single_choice",
+      "topic": "JSON",
+      "subtopic": "Acronym",
+      "difficulty": "easy",
+      "questionMd": "What does JSON stand for?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Java Serialized Object Node" },
+        { "id": "B", "text": "JavaScript Standard Notation" },
+        { "id": "C", "text": "JavaScript Sync Network" },
+        { "id": "D", "text": "JavaScript Object Notation" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "JSON stands for JavaScript Object Notation.",
+      "tags": ["json", "trivia"]
+    },
+    {
+      "id": "q11",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Response Methods",
+      "difficulty": "easy",
+      "questionMd": "Which method of the Fetch API `Response` object is used to parse a JSON body?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": ".text()" },
+        { "id": "B", "text": ".decode()" },
+        { "id": "C", "text": ".json()" },
+        { "id": "D", "text": ".parse()" }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "The `.json()` method of the Response interface reads the body stream and parses it as JSON.",
+      "tags": ["fetch", "json"]
+    },
+    {
+      "id": "q12",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Console",
+      "difficulty": "easy",
+      "questionMd": "What does `console.log()` return?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "A string of the printed values" },
+        { "id": "B", "text": "A Boolean value" },
+        { "id": "C", "text": "undefined" },
+        { "id": "D", "text": "The DOM node where the console output appears" }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "`console.log()` is a side-effect function that outputs text to the console, and inherently returns `undefined`.",
+      "tags": ["javascript", "console", "functions"]
+    },
+    {
+      "id": "q13",
+      "type": "single_choice",
+      "topic": "Software Engineering",
+      "subtopic": "API",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, an API is a set of functions that allows what?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "The OS to run multiple GUI apps" },
+        { "id": "B", "text": "Servers to bypass security walls" },
+        { "id": "C", "text": "Software applications to communicate with each other." },
+        { "id": "D", "text": "System synthesizers to access network memory" }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "An Application Programming Interface (API) provides a defined set of rules and protocols for building and interacting with software applications.",
+      "tags": ["api", "architecture"]
+    },
+    {
+      "id": "q14",
+      "type": "single_choice",
+      "topic": "HTTP",
+      "subtopic": "Status Codes",
+      "difficulty": "easy",
+      "questionMd": "In the context of HTTP status codes, which of the following signifies \"Not Found\"?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "200" },
+        { "id": "B", "text": "500" },
+        { "id": "C", "text": "404" },
+        { "id": "D", "text": "403" }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "The HTTP 404 Not Found response code indicates that the server cannot find the requested resource.",
+      "tags": ["http", "status-codes"]
+    },
+    {
+      "id": "q15",
+      "type": "single_choice",
+      "topic": "Development Environment",
+      "subtopic": "Local Server",
+      "difficulty": "medium",
+      "questionMd": "Why are local files typically served over HTTP during development?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "To bypass CORS restrictions that prevent local file access." },
+        { "id": "B", "text": "Because JSON parsing only works via HTTP" },
+        { "id": "C", "text": "To make the application available globally on the web" },
+        { "id": "D", "text": "Because the browser engine requires an active proxy" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "Running a local HTTP server emulates a real web server environment, circumventing the browser's strict security protocols around `file://` URLs.",
+      "tags": ["development", "cors", "server"]
+    }
+  ]
+}

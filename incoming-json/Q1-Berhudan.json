@@ -1,0 +1,313 @@
+{
+  "quizId": "Q1",
+  "title": "Dynamic Web Programming - Quiz 1",
+  "course": "Dynamic Web Programming",
+  "language": "en",
+  "semester": "2023-2024 Spring",
+  "source": "Past Exam",
+  "durationMinutes": 30,
+  "shuffleQuestions": false,
+  "shuffleOptions": false,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "topic": "Web History",
+      "subtopic": "W3C",
+      "difficulty": "easy",
+      "questionMd": "What is the primary purpose of the World Wide Web Consortium (W3C)?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "To develop web browsers and operating systems" },
+        { "id": "B", "text": "To act as a central governing body for the Internet" },
+        { "id": "C", "text": "To provide internet connection services globally" },
+        { "id": "D", "text": "To develop protocols and guidelines that ensure long-term growth for the Web" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "The W3C is an international community where member organizations, a full-time staff, and the public work together to develop Web standards.",
+      "tags": ["web-history", "w3c", "standards"]
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "topic": "Web Concepts",
+      "subtopic": "Hypertext",
+      "difficulty": "easy",
+      "questionMd": "In the context of the WWW, what is hypertext?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "A protocol for securely transferring files between computers" },
+        { "id": "B", "text": "A database format used to store website settings" },
+        { "id": "C", "text": "A programming language used to style web page layouts" },
+        { "id": "D", "text": "Text that contains links to other texts or documents" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "Hypertext is text displayed on a computer display or other electronic devices with references (hyperlinks) to other text that the reader can immediately access.",
+      "tags": ["hypertext", "www", "basics"]
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "topic": "Markup Languages",
+      "subtopic": "SGML",
+      "difficulty": "medium",
+      "questionMd": "What is the role of SGML (Standard Generalized Markup Language) in relation to HTML?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "SGML is a style sheet language used to format HTML documents." },
+        { "id": "B", "text": "HTML was completely replaced by SGML in modern web development." },
+        { "id": "C", "text": "SGML is a standard for creating markup languages, and early versions of HTML were based on it." },
+        { "id": "D", "text": "SGML is a scripting language that runs in the browser." }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "SGML is the standard from which early versions of HTML were derived. It defines the rules for creating markup languages.",
+      "tags": ["html", "sgml", "history"]
+    },
+    {
+      "id": "q4",
+      "type": "single_choice",
+      "topic": "HTML",
+      "subtopic": "Structure",
+      "difficulty": "easy",
+      "questionMd": "Which tag must be used as the root element of an HTML document?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "<head>" },
+        { "id": "B", "text": "<body>" },
+        { "id": "C", "text": "<!DOCTYPE html>" },
+        { "id": "D", "text": "<html>" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "The `<html>` element is the root element of an HTML page, containing all other elements.",
+      "tags": ["html", "structure"]
+    },
+    {
+      "id": "q5",
+      "type": "single_choice",
+      "topic": "Networking",
+      "subtopic": "LAN vs WAN",
+      "difficulty": "medium",
+      "questionMd": "How do LANs and WANs relate to the concepts of Intranet and Internet, respectively?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "LANs form private internal networks (Intranets), while WANs connect these networks together to form the Internet" },
+        { "id": "B", "text": "LANs are strictly used for the Internet, while WANs are strictly used for Intranets" },
+        { "id": "C", "text": "LANs operate over wireless networks, while WANs operate over wired networks" },
+        { "id": "D", "text": "Both LANs and WANs are entirely isolated from the global internet" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "Local Area Networks (LANs) typically make up private corporate Intranets, while Wide Area Networks (WANs) connect these smaller networks globally to form the Internet.",
+      "tags": ["networking", "lan", "wan"]
+    },
+    {
+      "id": "q6",
+      "type": "single_choice",
+      "topic": "HTTP",
+      "subtopic": "History",
+      "difficulty": "medium",
+      "questionMd": "Which statement is TRUE regarding the history of HTTP/2?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "HTTP/2 requires encrypted connections by default." },
+        { "id": "B", "text": "HTTP/2 removed all headers used in HTTP/1.1." },
+        { "id": "C", "text": "HTTP/2 was designed to overcome performance limitations of HTTP/1.1 without changing its semantics." },
+        { "id": "D", "text": "HTTP/2 only supports text-based communication, not binary." }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "HTTP/2 introduced features like multiplexing to speed up page loads without altering the core semantics (methods, status codes, URIs) of HTTP.",
+      "tags": ["http", "protocols", "history"]
+    },
+    {
+      "id": "q7",
+      "type": "single_choice",
+      "topic": "Web History",
+      "subtopic": "ARPANET",
+      "difficulty": "medium",
+      "questionMd": "The Internet was initially created by which organization, under what name, and for what primary purpose?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "European Organization for Nuclear Research (CERN)" },
+        { "id": "B", "text": "World Wide Web Consortium (W3C)" },
+        { "id": "C", "text": "Department of Defense's Advanced Research Projects Agency (ARPA); ARPANET; military communication and research" },
+        { "id": "D", "text": "The Internet Engineering Task Force (IETF)" }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "The Internet began as ARPANET, funded by the US Department of Defense's ARPA, to build a robust, fault-tolerant communication network.",
+      "tags": ["web-history", "internet"]
+    },
+    {
+      "id": "q8",
+      "type": "single_choice",
+      "topic": "Web History",
+      "subtopic": "Inventors",
+      "difficulty": "easy",
+      "questionMd": "Who invented the World Wide Web in 1989 while working at CERN?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Steve Jobs" },
+        { "id": "B", "text": "Tim Berners-Lee" },
+        { "id": "C", "text": "Bill Gates" },
+        { "id": "D", "text": "Alan Turing" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "Sir Tim Berners-Lee is credited with inventing the World Wide Web while working at CERN in 1989.",
+      "tags": ["web-history", "inventors"]
+    },
+    {
+      "id": "q9",
+      "type": "single_choice",
+      "topic": "CSS",
+      "subtopic": "Purpose",
+      "difficulty": "easy",
+      "questionMd": "Which of the following is a primary goal of CSS?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "To add interactive logic to web pages" },
+        { "id": "B", "text": "To query databases for web data" },
+        { "id": "C", "text": "To separate the presentation of a document from its structure and content" },
+        { "id": "D", "text": "To define the HTML tags on a page" }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "CSS (Cascading Style Sheets) was designed to separate document content (HTML) from document presentation (layout, colors, fonts).",
+      "tags": ["css", "design", "separation-of-concerns"]
+    },
+    {
+      "id": "q10",
+      "type": "single_choice",
+      "topic": "HTTP",
+      "subtopic": "Methods",
+      "difficulty": "medium",
+      "questionMd": "Which HTTP method is considered \"idempotent\" by default?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "POST" },
+        { "id": "B", "text": "PATCH" },
+        { "id": "C", "text": "GET" },
+        { "id": "D", "text": "CONNECT" }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "An idempotent HTTP method is one that can be called many times without producing different outcomes. GET is idempotent; it simply retrieves data.",
+      "tags": ["http", "methods", "idempotent"]
+    },
+    {
+      "id": "q11",
+      "type": "single_choice",
+      "topic": "Networking",
+      "subtopic": "Ports",
+      "difficulty": "medium",
+      "questionMd": "In web development, what is a \"port\"?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "A physical connection defining hardware interfaces" },
+        { "id": "B", "text": "A function that holds an IP address" },
+        { "id": "C", "text": "A communication endpoint mapped to a specific process or network service" },
+        { "id": "D", "text": "A standard URL parameter" }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "A port is a virtual point where network connections start and end. It is managed by the OS and helps direct traffic to the correct application.",
+      "tags": ["networking", "ports", "infrastructure"]
+    },
+    {
+      "id": "q12",
+      "type": "single_choice",
+      "topic": "URLs",
+      "subtopic": "Structure",
+      "difficulty": "easy",
+      "questionMd": "In the URL `https://www.example.com:8080`, what does the `8080` represent?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "The TCP port number the server is listening on" },
+        { "id": "B", "text": "The subnet mask of the server IP address" },
+        { "id": "C", "text": "The file size allocated for the document request" },
+        { "id": "D", "text": "The maximum payload size of the HTTP request" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "The number following the colon after the hostname in a URL specifies the port number on which the server is listening for traffic.",
+      "tags": ["url", "networking", "ports"]
+    },
+    {
+      "id": "q13",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Classes",
+      "difficulty": "medium",
+      "questionMd": "How is a static method defined on a class in modern JS?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "By using the `static` keyword before the method name inside the class body" },
+        { "id": "B", "text": "By using the `@static` decorator before the class definition" },
+        { "id": "C", "text": "By placing the method outside of the class block" },
+        { "id": "D", "text": "By listing them as parameters in the class constructor line" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "In JavaScript, you define static methods by prepending the `static` keyword to the method name within a class definition.",
+      "tags": ["javascript", "classes", "oop"]
+    },
+    {
+      "id": "q14",
+      "type": "single_choice",
+      "topic": "HTML5",
+      "subtopic": "Canvas",
+      "difficulty": "medium",
+      "questionMd": "What is the primary benefit of the `<canvas>` element in HTML5?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "It acts as a layout container for multiple HTML components at the same time" },
+        { "id": "B", "text": "It provides a responsive iframe to embed other websites easily" },
+        { "id": "C", "text": "It handles complex form submissions securely without a server" },
+        { "id": "D", "text": "It provides a drawing surface that is manipulated via JavaScript for rendering 2D and 3D graphics" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "The `<canvas>` element acts as a container for graphics, requiring a script (usually JavaScript) to draw the graphics programmatically.",
+      "tags": ["html5", "canvas", "graphics"]
+    },
+    {
+      "id": "q15",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Memory Management",
+      "difficulty": "medium",
+      "questionMd": "What happens to the variables declared inside a function when the function finishes executing (assuming no closures)?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "They are immediately garbage collected after the outer function has finished" },
+        { "id": "B", "text": "They are kept alive forever just in case the function is called again" },
+        { "id": "C", "text": "They are saved to LocalStorage by the browser" },
+        { "id": "D", "text": "They become global variables accessible anywhere in the program" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "Local variables within a function scope are generally cleared from memory (garbage collected) once the function's execution context ends, unless a closure keeps a reference to them.",
+      "tags": ["javascript", "memory", "scope"]
+    }
+  ]
+}

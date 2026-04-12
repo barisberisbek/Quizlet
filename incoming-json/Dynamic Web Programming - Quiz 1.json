@@ -1,0 +1,241 @@
+{
+  "quizId": "Quiz-1",
+  "title": "Dynamic Web Programming - Quiz 1",
+  "course": "Dynamic Web Programming",
+  "language": "en",
+  "semester": "2023-2024 Spring",
+  "source": "Past Exam",
+  "durationMinutes": 30,
+  "shuffleQuestions": false,
+  "shuffleOptions": false,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Functional Programming",
+      "difficulty": "medium",
+      "questionMd": "What is the concept of currying in the context of functional JavaScript?",
+      "options": [
+        { "id": "A", "text": "Converting a synchronous function into an asynchronous Promise-based function" },
+        { "id": "B", "text": "Defining a class method that can accept a variable number of parameters" },
+        { "id": "C", "text": "Constructing a new function that is partially pre-filled with arguments from an outer function" },
+        { "id": "D", "text": "Binding an event listener to multiple HTML elements at the same time" }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "Currying is the process of taking a function with multiple arguments and turning it into a sequence of functions each with a single argument."
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "topic": "Networking",
+      "subtopic": "HTTP",
+      "difficulty": "easy",
+      "questionMd": "What is the primary role of the Hypertext Transfer Protocol (HTTP)?",
+      "options": [
+        { "id": "A", "text": "To assign unique IP addresses to devices on the Internet" },
+        { "id": "B", "text": "To convert domain names into numerical IP addresses" },
+        { "id": "C", "text": "To encrypt data transmitted between two computers" },
+        { "id": "D", "text": "To transport hypertext documents from web servers to client computers" }
+      ],
+      "correctAnswer": ["D"]
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "topic": "Networking",
+      "subtopic": "Ports",
+      "difficulty": "easy",
+      "questionMd": "On which TCP port does an HTTP server listen by default?",
+      "options": [
+        { "id": "A", "text": "53" },
+        { "id": "B", "text": "25" },
+        { "id": "C", "text": "80" },
+        { "id": "D", "text": "161" }
+      ],
+      "correctAnswer": ["C"]
+    },
+    {
+      "id": "q4",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Classes",
+      "difficulty": "easy",
+      "questionMd": "Which keyword is used to create a new instance of an ES6 class?",
+      "options": [
+        { "id": "A", "text": "new" },
+        { "id": "B", "text": "create" },
+        { "id": "C", "text": "instantiate" },
+        { "id": "D", "text": "init" }
+      ],
+      "correctAnswer": ["A"]
+    },
+    {
+      "id": "q5",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Classes",
+      "difficulty": "easy",
+      "questionMd": "When defining methods inside an ES6 class body, which keyword must you omit?",
+      "options": [
+        { "id": "A", "text": "class" },
+        { "id": "B", "text": "const" },
+        { "id": "C", "text": "return" },
+        { "id": "D", "text": "function" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "In ES6 classes, method definitions do not use the `function` keyword."
+    },
+    {
+      "id": "q6",
+      "type": "single_choice",
+      "topic": "Networking",
+      "subtopic": "HTTP/2",
+      "difficulty": "medium",
+      "questionMd": "Compared to HTTP/1.1, what is a key advantage of HTTP/2.0?",
+      "options": [
+        { "id": "A", "text": "HTTP/2.0 eliminates the need for DNS lookups before connecting to a server" },
+        { "id": "B", "text": "HTTP/2.0 keeps the connection open and allows multiple resources to be fetched simultaneously" },
+        { "id": "C", "text": "HTTP/2.0 only supports text-based content and not binary data" },
+        { "id": "D", "text": "HTTP/2.0 encrypts all data by default using SSL certificates" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "HTTP/2 introduces multiplexing, allowing multiple requests and responses to be sent concurrently over a single TCP connection."
+    },
+    {
+      "id": "q7",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Events",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture, what is an important limitation of the CustomEvent API in JavaScript?",
+      "options": [
+        { "id": "A", "text": "CustomEvents can only be created inside ES6 class constructors" },
+        { "id": "B", "text": "CustomEvents can only be dispatched and listened to on HTML elements, not on arbitrary class instances" },
+        { "id": "C", "text": "CustomEvents cannot carry any additional data in their event object" },
+        { "id": "D", "text": "CustomEvents are not supported in any browser that uses the V8 engine" }
+      ],
+      "correctAnswer": ["B"]
+    },
+    {
+      "id": "q8",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Functions",
+      "difficulty": "easy",
+      "questionMd": "Which of the following is a characteristic of first-class functions in JavaScript?",
+      "options": [
+        { "id": "A", "text": "Functions cannot be stored in variables or object properties" },
+        { "id": "B", "text": "Functions can be passed as parameters to other functions" },
+        { "id": "C", "text": "Functions must always be declared before the class definition" },
+        { "id": "D", "text": "Functions require the function keyword and cannot use arrow syntax" }
+      ],
+      "correctAnswer": ["B"]
+    },
+    {
+      "id": "q9",
+      "type": "single_choice",
+      "topic": "Networking",
+      "subtopic": "TCP",
+      "difficulty": "medium",
+      "questionMd": "What is the primary purpose of the Transmission Control Protocol (TCP) in Internet communication?",
+      "options": [
+        { "id": "A", "text": "To ensure the integrity of network communication" },
+        { "id": "B", "text": "To define the visual layout of web pages" },
+        { "id": "C", "text": "To translate domain names into IP addresses" },
+        { "id": "D", "text": "To assign unique MAC addresses to network devices" }
+      ],
+      "correctAnswer": ["A"]
+    },
+    {
+      "id": "q10",
+      "type": "single_choice",
+      "topic": "Web History",
+      "subtopic": "SGML",
+      "difficulty": "medium",
+      "questionMd": "What is the role of SGML (Standard Generalized Markup Language) in relation to HTML?",
+      "options": [
+        { "id": "A", "text": "SGML is a transport protocol that HTTP was built upon" },
+        { "id": "B", "text": "SGML is a standard for specifying markup languages and was used by Tim Berners-Lee to create the HTML specification" },
+        { "id": "C", "text": "SGML is a scripting language that adds interactivity to static HTML pages" },
+        { "id": "D", "text": "SGML is a stylesheet language used to define the visual presentation of XML documents" }
+      ],
+      "correctAnswer": ["B"]
+    },
+    {
+      "id": "q11",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Conventions",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, what is the JavaScript coding convention for indicating that a method is intended to be private?",
+      "options": [
+        { "id": "A", "text": "Wrapping the method body inside a closure immediately" },
+        { "id": "B", "text": "Declaring the method with const instead of inside the class body" },
+        { "id": "C", "text": "Prefixing the method name with an underscore, e.g. _methodName()" },
+        { "id": "D", "text": "Using the private keyword before the method definition" }
+      ],
+      "correctAnswer": ["C"]
+    },
+    {
+      "id": "q12",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Arrow Functions",
+      "difficulty": "easy",
+      "questionMd": "When using the concise arrow function syntax, under what conditions can you omit the curly braces and the return keyword?",
+      "options": [
+        { "id": "A", "text": "When the function takes more than two parameters" },
+        { "id": "B", "text": "When the function body contains only a single return statement" },
+        { "id": "C", "text": "When the function is assigned to a variable declared with var" },
+        { "id": "D", "text": "When the function is defined inside a class constructor" }
+      ],
+      "correctAnswer": ["B"]
+    },
+    {
+      "id": "q13",
+      "type": "single_choice",
+      "topic": "Networking",
+      "subtopic": "URLs",
+      "difficulty": "easy",
+      "questionMd": "In the URL `http://www.example.com:8088`, what does the value `8088` represent?",
+      "options": [
+        { "id": "A", "text": "The version number of the HTTP protocol being used" },
+        { "id": "B", "text": "The number of packets sent in the HTTP request" },
+        { "id": "C", "text": "The TCP port on which the HTTP server is listening" },
+        { "id": "D", "text": "The subnet mask of the server's IP address" }
+      ],
+      "correctAnswer": ["C"]
+    },
+    {
+      "id": "q14",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Context (this)",
+      "difficulty": "medium",
+      "questionMd": "What problem does calling `this.methodName = this.methodName.bind(this)` in a constructor solve?",
+      "options": [
+        { "id": "A", "text": "It copies the method's code into the HTML element for faster execution" },
+        { "id": "B", "text": "It ensures `this` always refers to the class instance when the method is used as an event handler" },
+        { "id": "C", "text": "It registers the method as a global function accessible from any scope" },
+        { "id": "D", "text": "It prevents the method from being called more than once per event" }
+      ],
+      "correctAnswer": ["B"]
+    },
+    {
+      "id": "q15",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "History",
+      "difficulty": "easy",
+      "questionMd": "ES6 classes were introduced in which version of the ECMAScript standard?",
+      "options": [
+        { "id": "A", "text": "ECMAScript 3 (ES1999)" },
+        { "id": "B", "text": "ECMAScript 5 (ES2009)" },
+        { "id": "C", "text": "ECMAScript 8 (ES2017)" },
+        { "id": "D", "text": "ECMAScript 6 (ES2015)" }
+      ],
+      "correctAnswer": ["D"]
+    }
+  ]
+}

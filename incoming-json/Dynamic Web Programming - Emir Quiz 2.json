@@ -1,0 +1,239 @@
+{
+  "quizId": "Q2-Emir",
+  "title": "Dynamic Web Programming - Emir Quiz 2",
+  "course": "Dynamic Web Programming",
+  "language": "en",
+  "semester": "2023-2024 Spring",
+  "source": "Past Exam",
+  "durationMinutes": 30,
+  "shuffleQuestions": false,
+  "shuffleOptions": false,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "topic": "Web History",
+      "subtopic": "W3C",
+      "difficulty": "easy",
+      "questionMd": "What is the primary purpose of the World Wide Web Consortium (W3C)?",
+      "options": [
+        { "id": "A", "text": "It is a company that develops and maintains the Chrome and Firefox web browsers" },
+        { "id": "B", "text": "It is the main international standards organization for the World Wide Web" },
+        { "id": "C", "text": "It is a university consortium that funds research into network security protocols" },
+        { "id": "D", "text": "It is a government agency that registers and manages all domain names globally" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "The W3C is an international community where member organizations, a full-time staff, and the public work together to develop Web standards."
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Purpose",
+      "difficulty": "easy",
+      "questionMd": "What is the primary purpose of the `fetch()` function in JavaScript?",
+      "options": [
+        { "id": "A", "text": "To serialize JavaScript objects into JSON strings" },
+        { "id": "B", "text": "To load resources asynchronously over a network using a Promise-based approach" },
+        { "id": "C", "text": "To synchronously read files from the local file system" },
+        { "id": "D", "text": "To parse HTML documents and manipulate the DOM" }
+      ],
+      "correctAnswer": ["B"]
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "topic": "Web History",
+      "subtopic": "GraphQL",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, which company originally developed and used GraphQL before open-sourcing it?",
+      "options": [
+        { "id": "A", "text": "Netflix" },
+        { "id": "B", "text": "Facebook" },
+        { "id": "C", "text": "GitHub" },
+        { "id": "D", "text": "Spotify" }
+      ],
+      "correctAnswer": ["B"]
+    },
+    {
+      "id": "q4",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Fetch vs XHR",
+      "difficulty": "medium",
+      "questionMd": "How does the lecture describe XMLHttpRequest (XHR) compared to the Fetch API?",
+      "options": [
+        { "id": "A", "text": "Simpler but less flexible" },
+        { "id": "B", "text": "More secure and widely supported" },
+        { "id": "C", "text": "Faster and more reliable" },
+        { "id": "D", "text": "Clunky and harder to use" }
+      ],
+      "correctAnswer": ["D"]
+    },
+    {
+      "id": "q5",
+      "type": "single_choice",
+      "topic": "Course Structure",
+      "subtopic": "Evaluation",
+      "difficulty": "easy",
+      "questionMd": "According to the course evaluation structure, what percentage of the final grade is determined by the midterm component?",
+      "options": [
+        { "id": "A", "text": "50%" },
+        { "id": "B", "text": "40%" },
+        { "id": "C", "text": "30%" },
+        { "id": "D", "text": "60%" }
+      ],
+      "correctAnswer": ["B"]
+    },
+    {
+      "id": "q6",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Context (this)",
+      "difficulty": "medium",
+      "questionMd": "Inside an ES6 class constructor, what does the `this` keyword refer to?",
+      "options": [
+        { "id": "A", "text": "The global window object of the browser" },
+        { "id": "B", "text": "The new object instance being created" },
+        { "id": "C", "text": "The parent class from which the current class inherits" },
+        { "id": "D", "text": "The HTML element that triggered the event" }
+      ],
+      "correctAnswer": ["B"]
+    },
+    {
+      "id": "q7",
+      "type": "single_choice",
+      "topic": "History",
+      "subtopic": "JSON",
+      "difficulty": "easy",
+      "questionMd": "Who created JSON according to the lecture?",
+      "options": [
+        { "id": "A", "text": "Douglas Crockford" },
+        { "id": "B", "text": "Ryan Dahl" },
+        { "id": "C", "text": "Tim Berners-Lee" },
+        { "id": "D", "text": "Brendan Eich" }
+      ],
+      "correctAnswer": ["A"]
+    },
+    {
+      "id": "q8",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "HTTP Methods",
+      "difficulty": "easy",
+      "questionMd": "By default, without any additional options, which HTTP method does the `fetch()` API use when making a request?",
+      "options": [
+        { "id": "A", "text": "PUT" },
+        { "id": "B", "text": "POST" },
+        { "id": "C", "text": "DELETE" },
+        { "id": "D", "text": "GET" }
+      ],
+      "correctAnswer": ["D"]
+    },
+    {
+      "id": "q9",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Purpose",
+      "difficulty": "easy",
+      "questionMd": "What is the primary purpose of the Fetch API in a web browser?",
+      "options": [
+        { "id": "A", "text": "To manipulate the DOM after a page has loaded" },
+        { "id": "B", "text": "To serialize JavaScript objects into strings" },
+        { "id": "C", "text": "To load external resources such as text and JSON asynchronously" },
+        { "id": "D", "text": "To define callback functions for user interface events" }
+      ],
+      "correctAnswer": ["C"]
+    },
+    {
+      "id": "q10",
+      "type": "single_choice",
+      "topic": "Web Concepts",
+      "subtopic": "Frontend",
+      "difficulty": "easy",
+      "questionMd": "Which set of programming languages is associated with front-end web development?",
+      "options": [
+        { "id": "A", "text": "Node.js, PHP, and Go" },
+        { "id": "B", "text": "SQL, XML, and SGML" },
+        { "id": "C", "text": "Python, Java, and Ruby" },
+        { "id": "D", "text": "HTML, CSS, and JavaScript" }
+      ],
+      "correctAnswer": ["D"]
+    },
+    {
+      "id": "q11",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "Chaining",
+      "difficulty": "medium",
+      "questionMd": "In a Promise chain such as `fetch(url).then(a).then(b)`, what value does function `b` receive as its argument?",
+      "options": [
+        { "id": "A", "text": "The original URL string passed to fetch()" },
+        { "id": "B", "text": "The value returned by function a" },
+        { "id": "C", "text": "The raw HTTP response object" },
+        { "id": "D", "text": "The HTTP status code of the response" }
+      ],
+      "correctAnswer": ["B"]
+    },
+    {
+      "id": "q12",
+      "type": "single_choice",
+      "topic": "Web APIs",
+      "subtopic": "Fetch vs XHR",
+      "difficulty": "easy",
+      "questionMd": "Which of the following correctly describes the old API that `fetch()` replaced for loading browser resources?",
+      "options": [
+        { "id": "A", "text": "JSON.parse()" },
+        { "id": "B", "text": "loadFromFile()" },
+        { "id": "C", "text": "navigator.mediaDevices" },
+        { "id": "D", "text": "XMLHttpRequest (XHR)" }
+      ],
+      "correctAnswer": ["D"]
+    },
+    {
+      "id": "q13",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "Handlers",
+      "difficulty": "easy",
+      "questionMd": "Which of the following statements about `.then()` is correct according to the lecture?",
+      "options": [
+        { "id": "A", "text": "It can only be called once per Promise object" },
+        { "id": "B", "text": "It replaces the need for the fetch() function" },
+        { "id": "C", "text": "It immediately executes the fetch request synchronously" },
+        { "id": "D", "text": "It lets you attach functions to execute when a Promise succeeds or fails" }
+      ],
+      "correctAnswer": ["D"]
+    },
+    {
+      "id": "q14",
+      "type": "single_choice",
+      "topic": "HTTP",
+      "subtopic": "Status Codes",
+      "difficulty": "easy",
+      "questionMd": "In HTTP communication, what does a status code in the 200 range generally indicate?",
+      "options": [
+        { "id": "A", "text": "The request was successful" },
+        { "id": "B", "text": "The client must authenticate before proceeding" },
+        { "id": "C", "text": "The server encountered an internal error" },
+        { "id": "D", "text": "The resource was not found" }
+      ],
+      "correctAnswer": ["A"]
+    },
+    {
+      "id": "q15",
+      "type": "single_choice",
+      "topic": "Data Formats",
+      "subtopic": "JSON",
+      "difficulty": "easy",
+      "questionMd": "Why is storing data as JSON preferable to storing it as plain text when using `fetch()`?",
+      "options": [
+        { "id": "A", "text": "JSON files load faster because they are compressed by the browser" },
+        { "id": "B", "text": "JSON eliminates the need to manually parse field separators when deserializing structured data" },
+        { "id": "C", "text": "Plain text requires XMLHttpRequest while JSON works with fetch" },
+        { "id": "D", "text": "JSON is the only format the Fetch API is able to read" }
+      ],
+      "correctAnswer": ["B"]
+    }
+  ]
+}

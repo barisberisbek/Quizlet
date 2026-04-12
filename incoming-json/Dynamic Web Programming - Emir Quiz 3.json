@@ -1,0 +1,240 @@
+{
+  "quizId": "Q3-Emir",
+  "title": "Dynamic Web Programming - Emir Quiz 3",
+  "course": "Dynamic Web Programming",
+  "language": "en",
+  "semester": "2023-2024 Spring",
+  "source": "Past Exam",
+  "durationMinutes": 30,
+  "shuffleQuestions": false,
+  "shuffleOptions": false,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "topic": "Web APIs",
+      "subtopic": "Media Devices",
+      "difficulty": "medium",
+      "questionMd": "When using `navigator.mediaDevices.getUserMedia()` with a Promise, how is the camera stream accessed?",
+      "options": [
+        { "id": "A", "text": "By reading the return value of the function directly" },
+        { "id": "B", "text": "By listening for a DOM event fired when the camera opens" },
+        { "id": "C", "text": "By passing an onSuccess callback as the second argument" },
+        { "id": "D", "text": "By attaching a .then() handler that receives the stream as its argument" }
+      ],
+      "correctAnswer": ["D"]
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "topic": "Data Serialization",
+      "subtopic": "Terminology",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, what does it mean to \"deserialize\" a string?",
+      "options": [
+        { "id": "A", "text": "To convert a JavaScript object into a JSON string" },
+        { "id": "B", "text": "To turn a serialized string back into a JavaScript object" },
+        { "id": "C", "text": "To split a string into an array using a separator" },
+        { "id": "D", "text": "To encode a string using HTML entities" }
+      ],
+      "correctAnswer": ["B"]
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Security",
+      "difficulty": "medium",
+      "questionMd": "Why does calling `fetch()` on a local file opened via `file://` protocol result in an error?",
+      "options": [
+        { "id": "A", "text": "JavaScript blocks all file I/O on the main thread" },
+        { "id": "B", "text": "Local files must be fetched using XMLHttpRequest instead" },
+        { "id": "C", "text": "The fetch API only supports JSON files, not text files" },
+        { "id": "D", "text": "Loading files via the file:// protocol is disallowed by the browser" }
+      ],
+      "correctAnswer": ["D"]
+    },
+    {
+      "id": "q4",
+      "type": "single_choice",
+      "topic": "Data Formats",
+      "subtopic": "JSON",
+      "difficulty": "easy",
+      "questionMd": "Why is storing data as JSON preferable to storing it as plain text when using `fetch()`?",
+      "options": [
+        { "id": "A", "text": "JSON files load faster because they are compressed by the browser" },
+        { "id": "B", "text": "Plain text requires XMLHttpRequest while JSON works with fetch" },
+        { "id": "C", "text": "JSON is the only format the Fetch API is able to read" },
+        { "id": "D", "text": "JSON eliminates the need to manually parse field separators when deserializing structured data" }
+      ],
+      "correctAnswer": ["D"]
+    },
+    {
+      "id": "q5",
+      "type": "single_choice",
+      "topic": "JSON",
+      "subtopic": "Serialization",
+      "difficulty": "easy",
+      "questionMd": "Which function would you use to convert a JavaScript object into a JSON-formatted string?",
+      "options": [
+        { "id": "A", "text": "JSON.parse()" },
+        { "id": "B", "text": "JSON.deserialize()" },
+        { "id": "C", "text": "JSON.stringify()" },
+        { "id": "D", "text": "JSON.encode()" }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "`JSON.stringify()` takes a JavaScript object and transforms it into a string format."
+    },
+    {
+      "id": "q6",
+      "type": "single_choice",
+      "topic": "Web APIs",
+      "subtopic": "Media Devices",
+      "difficulty": "medium",
+      "questionMd": "What is the key difference between `navigator.getUserMedia` and `navigator.mediaDevices.getUserMedia`?",
+      "options": [
+        { "id": "A", "text": "The deprecated version uses Promises; the newer version uses callbacks" },
+        { "id": "B", "text": "The newer version returns a Promise; the deprecated version uses callbacks" },
+        { "id": "C", "text": "The newer version requires HTTPS while the deprecated version does not" },
+        { "id": "D", "text": "Only the deprecated version supports video streaming" }
+      ],
+      "correctAnswer": ["B"]
+    },
+    {
+      "id": "q7",
+      "type": "single_choice",
+      "topic": "JSON",
+      "subtopic": "Acronym",
+      "difficulty": "easy",
+      "questionMd": "What does JSON stand for?",
+      "options": [
+        { "id": "A", "text": "JavaScript Object Notation" },
+        { "id": "B", "text": "JavaScript Syntax Object Notation" },
+        { "id": "C", "text": "JavaScript Ordered Node" },
+        { "id": "D", "text": "Java Serialized Object Network" }
+      ],
+      "correctAnswer": ["A"]
+    },
+    {
+      "id": "q8",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Response Handling",
+      "difficulty": "easy",
+      "questionMd": "Which method on a fetch `response` object provides built-in support for parsing JSON directly?",
+      "options": [
+        { "id": "A", "text": "response.text()" },
+        { "id": "B", "text": "response.json()" },
+        { "id": "C", "text": "response.parse()" },
+        { "id": "D", "text": "response.decode()" }
+      ],
+      "correctAnswer": ["B"]
+    },
+    {
+      "id": "q9",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "Syntax",
+      "difficulty": "medium",
+      "questionMd": "Which of the following correctly rewrites `fetch('f.txt').then(onResponse)` using an intermediate variable?",
+      "options": [
+        { "id": "A", "text": "const p = fetch('f.txt'); p.resolve(onResponse);" },
+        { "id": "B", "text": "let p = onResponse; p.fetch('f.txt');" },
+        { "id": "C", "text": "const p = new Promise('f.txt'); p.then(onResponse);" },
+        { "id": "D", "text": "const p = fetch('f.txt'); p.then(onResponse);" }
+      ],
+      "correctAnswer": ["D"]
+    },
+    {
+      "id": "q10",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Strings",
+      "difficulty": "easy",
+      "questionMd": "In the completed fetch example, which JavaScript method is used to break the fetched text into individual image URLs?",
+      "options": [
+        { "id": "A", "text": "text.join(' ')" },
+        { "id": "B", "text": "text.replace(' ', ',')" },
+        { "id": "C", "text": "text.slice(' ')" },
+        { "id": "D", "text": "text.split(' ')" }
+      ],
+      "correctAnswer": ["D"]
+    },
+    {
+      "id": "q11",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "Chaining",
+      "difficulty": "medium",
+      "questionMd": "When chaining `.then()` calls on a fetch Promise, what does the second `.then()` receive as its argument?",
+      "options": [
+        { "id": "A", "text": "The value returned or resolved by the first .then() handler" },
+        { "id": "B", "text": "The HTTP status code from the first .then()" },
+        { "id": "C", "text": "The original fetch response object" },
+        { "id": "D", "text": "A new fetch Promise targeting the same resource" }
+      ],
+      "correctAnswer": ["A"]
+    },
+    {
+      "id": "q12",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Response Object",
+      "difficulty": "easy",
+      "questionMd": "What does `response.status` contain when used inside a fetch success handler?",
+      "options": [
+        { "id": "A", "text": "A boolean indicating whether the request succeeded" },
+        { "id": "B", "text": "The HTTP status code of the request, such as 200" },
+        { "id": "C", "text": "The text content of the fetched resource" },
+        { "id": "D", "text": "The name of the file that was fetched" }
+      ],
+      "correctAnswer": ["B"]
+    },
+    {
+      "id": "q13",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Response Methods",
+      "difficulty": "medium",
+      "questionMd": "How does `response.text()` read the response data according to the lecture?",
+      "options": [
+        { "id": "A", "text": "Synchronously, by returning the string directly" },
+        { "id": "B", "text": "Asynchronously, by returning a Promise that resolves with the response string" },
+        { "id": "C", "text": "By dispatching a DOM event when reading is complete" },
+        { "id": "D", "text": "By writing the result into a global variable" }
+      ],
+      "correctAnswer": ["B"]
+    },
+    {
+      "id": "q14",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "Concepts",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, which statement best captures the relationship between using and defining Promises?",
+      "options": [
+        { "id": "A", "text": "Promises are easier to define than to use" },
+        { "id": "B", "text": "Promises must be fully understood internally before they can be used" },
+        { "id": "C", "text": "Promises are easier to use than to define" },
+        { "id": "D", "text": "Promises are equally straightforward to both define and use" }
+      ],
+      "correctAnswer": ["C"]
+    },
+    {
+      "id": "q15",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Structure",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, the Fetch API is made up of how many functions?",
+      "options": [
+        { "id": "A", "text": "Two" },
+        { "id": "B", "text": "Three" },
+        { "id": "C", "text": "One" },
+        { "id": "D", "text": "Four" }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "The core API consists of a single global `fetch()` function."
+    }
+  ]
+}
