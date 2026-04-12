@@ -1,0 +1,47 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-04-12",
+  "quizzes": [
+    {
+      "id": "dwp-2024-midterm",
+      "title": "DWP 2024 Midterm",
+      "description": "Midterm exam covering HTTP, HTML forms, DOM manipulation, events, and cookies.",
+      "source": "2024 Midterm Exam",
+      "year": 2024,
+      "topic": "Web Fundamentals",
+      "topics": ["HTTP", "HTML Forms", "DOM", "Events", "Cookies"],
+      "questionCount": 15,
+      "difficulty": "medium",
+      "estimatedMinutes": 30,
+      "tags": ["exam", "midterm", "2024"],
+      "fileName": "dwp-2024-midterm.json"
+    },
+    {
+      "id": "dwp-2024-final",
+      "title": "DWP 2024 Final",
+      "description": "Final exam covering Fetch API, REST, Node.js, Express, templating, and validation.",
+      "source": "2024 Final Exam",
+      "year": 2024,
+      "topic": "Backend & APIs",
+      "topics": ["Fetch API", "REST", "Node.js", "Express", "Templating", "Validation"],
+      "questionCount": 15,
+      "difficulty": "hard",
+      "estimatedMinutes": 35,
+      "tags": ["exam", "final", "2024"],
+      "fileName": "dwp-2024-final.json"
+    },
+    {
+      "id": "dwp-dom-events-practice",
+      "title": "DOM & Events Practice",
+      "description": "Practice set focusing on DOM manipulation, event handling, and localStorage.",
+      "source": "Practice Set",
+      "topic": "DOM & Events",
+      "topics": ["DOM", "Events", "localStorage", "sessionStorage"],
+      "questionCount": 10,
+      "difficulty": "easy",
+      "estimatedMinutes": 20,
+      "tags": ["practice", "dom", "events"],
+      "fileName": "dwp-dom-events-practice.json"
+    }
+  ]
+}
