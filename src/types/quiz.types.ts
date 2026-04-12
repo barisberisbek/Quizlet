@@ -28,6 +28,9 @@ export interface Question {
   correctAnswer: string[];     // Array of correct option IDs
   explanationMd: string;       // Explanation in markdown
   tags: string[];
+  sourceRefs?: string[];
+  mergedFromCount?: number;
+  needs_review?: boolean;
 }
 
 // ── Quiz Metadata ─────────────────────────────────────────────
@@ -91,6 +94,9 @@ export const QuestionSchema = z.object({
   correctAnswer: z.array(z.string()),
   explanationMd: z.string(),
   tags: z.array(z.string()),
+  sourceRefs: z.array(z.string()).optional(),
+  mergedFromCount: z.number().optional(),
+  needs_review: z.boolean().optional(),
 });
 
 export const QuizMetaSchema = z.object({

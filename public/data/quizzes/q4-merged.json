@@ -1,0 +1,2258 @@
+{
+  "meta": {
+    "id": "q4-merged",
+    "title": "Quiz 4 — REST, Databases & Security",
+    "description": "REST API design, database concepts, authentication, cookies, sessions, and security.",
+    "source": "DWP Past Exams",
+    "topic": "REST & Security",
+    "topics": [
+      "Fetch API",
+      "JSON",
+      "REST API",
+      "Web History",
+      "JavaScript",
+      "URLs",
+      "Architecture",
+      "DOM Manipulation",
+      "DOM Events",
+      "Promises",
+      "Data Formats",
+      "Asynchronous Programming",
+      "HTTP",
+      "Development",
+      "Web Concepts",
+      "Markup Languages",
+      "HTML",
+      "Networking",
+      "CSS",
+      "HTML5"
+    ],
+    "questionCount": 51,
+    "difficulty": "hard",
+    "estimatedMinutes": 77,
+    "tags": [
+      "quiz-4",
+      "merged",
+      "past-exam"
+    ],
+    "fileName": "q4-merged.json"
+  },
+  "questions": [
+    {
+      "id": "q4-01",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "HTTP Methods",
+      "difficulty": "easy",
+      "questionMd": "By default, without any additional options, which HTTP method does the `fetch()` API use when making a request?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "POST"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "GET"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "DELETE"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "PUT"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "No explanation provided.",
+      "tags": [],
+      "sourceRefs": [
+        "Dynamic Web Programming - Emir Quiz 4.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q4-02",
+      "type": "single_choice",
+      "topic": "JSON",
+      "subtopic": "Parsing",
+      "difficulty": "easy",
+      "questionMd": "A developer receives the string `'{\"name\":\"Ice Bear\"}'` from a server. Which function should they use to turn it into a usable JavaScript object?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "JSON.objectify()"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "JSON.decode()"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "JSON.parse()"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "JSON.stringify()"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "No explanation provided.",
+      "tags": [],
+      "sourceRefs": [
+        "Dynamic Web Programming - Emir Quiz 4.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q4-03",
+      "type": "single_choice",
+      "topic": "REST API",
+      "subtopic": "Terminology",
+      "difficulty": "easy",
+      "questionMd": "In REST API terminology, what is the \"base URL\"?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The full URL including all query parameters for a specific request"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The fallback URL used when the primary endpoint is unavailable"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The root address of the API server to which all endpoint paths are appended"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The URL of the web page that consumes the API"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "The base URL is the common prefix for the routing system of a REST application.",
+      "tags": [
+        "rest",
+        "api"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming - Emir Quiz 4.json",
+        "Dynamic Web Programming - Quiz 4 Sema.json",
+        "Q4-Web2.json"
+      ],
+      "mergedFromCount": 3,
+      "needs_review": true
+    },
+    {
+      "id": "q4-04",
+      "type": "single_choice",
+      "topic": "Web History",
+      "subtopic": "GraphQL",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, which company originally developed and used GraphQL before open-sourcing it?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "GitHub"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Netflix"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Facebook"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Spotify"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "No explanation provided.",
+      "tags": [],
+      "sourceRefs": [
+        "Dynamic Web Programming - Emir Quiz 4.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q4-05",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Array Methods",
+      "difficulty": "easy",
+      "questionMd": "Which built-in JavaScript array method is used in the lecture to reorder album objects by year?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": ".reduce()"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": ".map()"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": ".filter()"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": ".sort()"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "The `.sort()` method directly handles repositioning array items via a comparator function.",
+      "tags": [
+        "javascript",
+        "array",
+        "sorting"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming - Emir Quiz 4.json",
+        "Dynamic Web Programming - Quiz 4 Sema.json",
+        "Q4-Web2.json"
+      ],
+      "mergedFromCount": 3,
+      "needs_review": true
+    },
+    {
+      "id": "q4-06",
+      "type": "single_choice",
+      "topic": "URLs",
+      "subtopic": "Encoding",
+      "difficulty": "medium",
+      "questionMd": "Why is `encodeURIComponent()` used on a user's search query before appending it to a fetch URL?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "To ensure special characters in the query string are properly percent-encoded and do not break the URL"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "To encrypt the user's input before sending it to the server"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "To trim whitespace from the beginning and end of the search text"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "To convert the query string into a JSON-compatible format"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "No explanation provided.",
+      "tags": [],
+      "sourceRefs": [
+        "Dynamic Web Programming - Emir Quiz 4.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q4-07",
+      "type": "single_choice",
+      "topic": "REST API",
+      "subtopic": "MIME Types",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture, what does MIME type (content type) specify in the context of a RESTful API request?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The maximum size of the response body allowed"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The HTTP method that must be used for the request"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The authentication scheme required to access the endpoint"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The format of the data being sent or returned, such as JSON, HTML, or plain text"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "No explanation provided.",
+      "tags": [],
+      "sourceRefs": [
+        "Dynamic Web Programming - Emir Quiz 4.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q4-08",
+      "type": "single_choice",
+      "topic": "REST API",
+      "subtopic": "Static vs Dynamic",
+      "difficulty": "medium",
+      "questionMd": "What is the fundamental difference between a URL that points to a static file and a URL that represents a REST API endpoint?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A static file URL always downloads a file, API endpoints render in the browser."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "REST APIs require a VPN."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "A static file requires authentication."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "A REST API endpoint causes the server to dynamically generate a response..."
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "REST APIs are applications running on a server that process requests and generate responses on-the-fly, as opposed to a web server simply serving a flat file off a disk.",
+      "tags": [
+        "rest",
+        "api",
+        "architecture"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming - Emir Quiz 4.json",
+        "Q4-Berhudan.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "q4-09",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Purpose",
+      "difficulty": "easy",
+      "questionMd": "What is the primary purpose of the `fetch()` function in JavaScript?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "To serialize JavaScript objects into JSON strings"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "To parse HTML documents and manipulate the DOM"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "To load resources asynchronously over a network using a Promise-based approach"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "To synchronously read files from the local file system"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "No explanation provided.",
+      "tags": [],
+      "sourceRefs": [
+        "Dynamic Web Programming - Emir Quiz 4.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q4-10",
+      "type": "single_choice",
+      "topic": "Architecture",
+      "subtopic": "Classes",
+      "difficulty": "medium",
+      "questionMd": "The lecture recommends implementing the `Album` class before the `App` class. What is the stated reason for this order?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The fetch() call can only be tested after the Album class exists"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The App class depends on the Album class, whereas the Album class has no dependencies"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "JavaScript requires dependent classes to be declared first in the file"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The Album class is simpler and requires fewer lines of code"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Good architectural practice typically implements self-contained, dependency-free models (`Album`) before wiring up higher-level coordination logic (`App`).",
+      "tags": [
+        "architecture",
+        "classes"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming - Emir Quiz 4.json",
+        "Dynamic Web Programming - Quiz 4 Sema.json",
+        "Q4-Web2.json"
+      ],
+      "mergedFromCount": 3,
+      "needs_review": true
+    },
+    {
+      "id": "q4-11",
+      "type": "single_choice",
+      "topic": "Web History",
+      "subtopic": "REST Alternatives",
+      "difficulty": "medium",
+      "questionMd": "How does the lecture characterize Netflix's Falcor compared to GraphQL as an alternative to REST?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Falcor is described as the most widely adopted REST alternative in the industry"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Falcor is described as a synchronous alternative to REST that avoids HTTP entirely"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Falcor is described as likely interesting but rarely used in practice and lacking a Wikipedia page"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Falcor is described as the predecessor to GraphQL that Facebook later adopted"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "No explanation provided.",
+      "tags": [],
+      "sourceRefs": [
+        "Dynamic Web Programming - Emir Quiz 4.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q4-12",
+      "type": "single_choice",
+      "topic": "DOM Manipulation",
+      "subtopic": "Images",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture's completed fetch example, which JavaScript expression creates a new image element equivalent to `document.createElement('img')`?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "new Image()"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "document.newImage()"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "new Img()"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Image.create()"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "No explanation provided.",
+      "tags": [],
+      "sourceRefs": [
+        "Dynamic Web Programming - Emir Quiz 4.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q4-13",
+      "type": "single_choice",
+      "topic": "DOM Events",
+      "subtopic": "Forms",
+      "difficulty": "easy",
+      "questionMd": "To allow a form to submit when a user presses the Enter key, which event should be listened for on the `<form>` element?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "click"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "submit"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "change"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "keydown"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "No explanation provided.",
+      "tags": [],
+      "sourceRefs": [
+        "Dynamic Web Programming - Emir Quiz 4.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q4-14",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Callbacks",
+      "difficulty": "medium",
+      "questionMd": "In the discography page example, how does the `SortButton` class communicate a sort action back to the `App` class?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "It dispatches a custom keyboard event that triggers the App's event listener"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "It calls an onClickCallback function passed to it during construction, supplying the sort function as an argument"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "It directly modifies the albumInfo property of the App instance"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "It fires a built-in DOM click event that the App class listens for on the document"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Passing callbacks as constructors props enables decoupled classes to communicate events back up to their parents.",
+      "tags": [
+        "javascript",
+        "callbacks",
+        "architecture"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming - Emir Quiz 4.json",
+        "Dynamic Web Programming - Quiz 4 Sema.json",
+        "Q4-Web2.json"
+      ],
+      "mergedFromCount": 3,
+      "needs_review": false
+    },
+    {
+      "id": "q4-15",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Array Methods",
+      "difficulty": "medium",
+      "questionMd": "To sort an array of album objects by year in ascending order, which comparator function should be passed to `.sort()`?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "function(a, b) { return b.year - a.year; }"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "function(a, b) { return a.year - b.year; }"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "function(a, b) { return a.year < b.year; }"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "function(a, b) { return a.year; }"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Array `.sort()` determines order based on whether the return value is negative, zero, or positive. `a.year - b.year` sorts numerically in ascending order.",
+      "tags": [
+        "javascript",
+        "arrays",
+        "sorting"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming - Emir Quiz 4.json",
+        "Dynamic Web Programming - Quiz 4 Sema.json",
+        "Q4-Berhudan.json",
+        "Q4-Web2.json"
+      ],
+      "mergedFromCount": 4,
+      "needs_review": true
+    },
+    {
+      "id": "q4-16",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "Chaining",
+      "difficulty": "medium",
+      "questionMd": "In a Promise chain such as `fetch(url).then(a).then(b)`, what value does function `b` receive as its argument?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The original URL string passed to fetch()"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The value returned by function a"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The HTTP status code of the response"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The raw HTTP response object"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "The return value of a preceding `.then()` block is passed as the argument to the subsequent `.then()` block.",
+      "tags": [
+        "promise",
+        "javascript"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming - Quiz 4 Sema.json",
+        "Q4-Web2.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "q4-17",
+      "type": "single_choice",
+      "topic": "JSON",
+      "subtopic": "Parsing",
+      "difficulty": "easy",
+      "questionMd": "A developer receives the string `'{\"name\": \"Ice Bear\"}'` from a server. Which function should they use to turn it into a usable JavaScript object?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "JSON.objectify()"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "JSON.parse()"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "JSON.decode()"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "JSON.stringify()"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "`JSON.parse()` reads a JSON string and translates it directly to standard JS properties and objects.",
+      "tags": [
+        "json",
+        "javascript"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming - Quiz 4 Sema.json",
+        "Q4-Web2.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "q4-18",
+      "type": "single_choice",
+      "topic": "JSON",
+      "subtopic": "Advantages",
+      "difficulty": "easy",
+      "questionMd": "Compared to a custom plain-text format, what is a primary advantage of storing data in JSON format when using `fetch()`?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "JSON files are always smaller in size than plain-text files"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "JavaScript has built-in support to automatically convert a JSON string into an object, eliminating manual parsing"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "JSON files do not require a server to be accessed"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "JSON is the only format supported by the fetch() API"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Data mapping and typecasting (like Strings vs Numbers) handle themselves implicitly through `JSON.parse()`.",
+      "tags": [
+        "json",
+        "javascript"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming - Quiz 4 Sema.json",
+        "Q4-Web2.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "q4-19",
+      "type": "single_choice",
+      "topic": "Data Formats",
+      "subtopic": "Plain Text",
+      "difficulty": "easy",
+      "questionMd": "When loading album data from a custom plain-text file, which of the following is a disadvantage mentioned in the lecture?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Text files do not support arrays of items"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Numbers must be manually converted from strings using functions like parseInt()"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Plain-text files cannot be served over HTTP"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The file cannot be loaded using the fetch() API"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Since all content in a plain text file is read as purely textual string data, manual casting functions are needed to parse numbers accurately.",
+      "tags": [
+        "parsing",
+        "javascript"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming - Quiz 4 Sema.json",
+        "Q4-Web2.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "q4-20",
+      "type": "single_choice",
+      "topic": "Asynchronous Programming",
+      "subtopic": "Concepts",
+      "difficulty": "medium",
+      "questionMd": "Why is the `fetch()` API described as asynchronous in the context of web programming?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Because it runs only on multi-core processors"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Because it blocks the UI thread until the network responds"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "It allows the browser to continue executing other code while waiting for the network response."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Because it forces the server to respond immediately"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Asynchronous operations operate independently of the main program flow, ensuring the user interface remains responsive while network requests process in the background.",
+      "tags": [
+        "javascript",
+        "async",
+        "fetch"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming - Quiz 4 Sema.json",
+        "Q4-Web2.json",
+        "Q4-Berhudan.json"
+      ],
+      "mergedFromCount": 3,
+      "needs_review": true
+    },
+    {
+      "id": "q4-21",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "Definition",
+      "difficulty": "easy",
+      "questionMd": "Which of the following best describes a JavaScript Promise?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "An object representing the eventual completion or failure of an asynchronous operation"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "A synchronous function that immediately returns a value"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "A built-in timer that delays code execution by a specified amount"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "A special array type used to store multiple fetch results"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "This is the classic Mozilla Developer Network definition of a Promise.",
+      "tags": [
+        "promise",
+        "javascript"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming - Quiz 4 Sema.json",
+        "Q4-Web2.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "q4-22",
+      "type": "single_choice",
+      "topic": "Architecture",
+      "subtopic": "Methods",
+      "difficulty": "medium",
+      "questionMd": "Why does the lecture suggest extracting the album rendering logic into a separate `_renderAlbums()` helper method?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "To avoid exceeding the maximum allowed number of lines in a single method"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "So the same rendering code can be reused both after the initial fetch and after each sort operation"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "To prevent the browser from caching the album images between renders"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Because the fetch() API requires a dedicated render callback"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Extracting rendering logic allows you to re-call it anytime state changes without rewriting code (DRY - Don't Repeat Yourself).",
+      "tags": [
+        "architecture",
+        "dry",
+        "javascript"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming - Quiz 4 Sema.json",
+        "Q4-Web2.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "q4-23",
+      "type": "single_choice",
+      "topic": "HTTP",
+      "subtopic": "Query Parameters",
+      "difficulty": "easy",
+      "questionMd": "When constructing a URL with multiple query parameters, which character is used to separate each parameter after the first one?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "&"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "?"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "/"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": ":"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "The `?` starts the query string and `&` separates additional parameter key-value pairings.",
+      "tags": [
+        "url",
+        "http"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming - Quiz 4 Sema.json",
+        "Q4-Web2.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "q4-24",
+      "type": "single_choice",
+      "topic": "HTTP",
+      "subtopic": "Methods",
+      "difficulty": "easy",
+      "questionMd": "Which HTTP method does a browser send automatically whenever you navigate to a URL in the address bar?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "PUT"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "GET"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "DELETE"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "POST"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Browser address bar navigation always performs an HTTP GET request to fetch page contents.",
+      "tags": [
+        "http",
+        "browser"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming - Quiz 4 Sema.json",
+        "Q4-Web2.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "q4-25",
+      "type": "single_choice",
+      "topic": "Development",
+      "subtopic": "Servers",
+      "difficulty": "easy",
+      "questionMd": "Which command is used to serve local files over HTTP so that `fetch()` can access them during development?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "npm start http"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "node server.js"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "python3 -m fetch server"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "python3 -m http.server"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Python 3 has a built-in lightweight HTTP server module useful for quick local development testing without CORS/File protocol issues.",
+      "tags": [
+        "server",
+        "development"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming - Quiz 4 Sema.json",
+        "Q4-Web2.json",
+        "Q4-Berhudan.json"
+      ],
+      "mergedFromCount": 3,
+      "needs_review": true
+    },
+    {
+      "id": "q4-26",
+      "type": "single_choice",
+      "topic": "Web History",
+      "subtopic": "W3C",
+      "difficulty": "easy",
+      "questionMd": "What is the primary purpose of the World Wide Web Consortium (W3C)?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "To develop web browsers and operating systems"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "To act as a central governing body for the Internet"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "To provide internet connection services globally"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "To develop protocols and guidelines that ensure long-term growth for the Web"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "The W3C is an international community where member organizations, a full-time staff, and the public work together to develop Web standards.",
+      "tags": [
+        "web-history",
+        "w3c",
+        "standards"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming - Quiz 4.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q4-27",
+      "type": "single_choice",
+      "topic": "Web Concepts",
+      "subtopic": "Hypertext",
+      "difficulty": "easy",
+      "questionMd": "In the context of the WWW, what is hypertext?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A protocol for securely transferring files between computers"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "A database format used to store website settings"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "A programming language used to style web page layouts"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Text that contains links to other texts or documents"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Hypertext is text displayed on a computer display or other electronic devices with references (hyperlinks) to other text that the reader can immediately access.",
+      "tags": [
+        "hypertext",
+        "www",
+        "basics"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming - Quiz 4.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q4-28",
+      "type": "single_choice",
+      "topic": "Markup Languages",
+      "subtopic": "SGML",
+      "difficulty": "medium",
+      "questionMd": "What is the role of SGML (Standard Generalized Markup Language) in relation to HTML?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "SGML is a style sheet language used to format HTML documents."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "HTML was completely replaced by SGML in modern web development."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "SGML is a standard for creating markup languages, and early versions of HTML were based on it."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "SGML is a scripting language that runs in the browser."
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "SGML is the standard from which early versions of HTML were derived. It defines the rules for creating markup languages.",
+      "tags": [
+        "html",
+        "sgml",
+        "history"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming - Quiz 4.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q4-29",
+      "type": "single_choice",
+      "topic": "HTML",
+      "subtopic": "Structure",
+      "difficulty": "easy",
+      "questionMd": "Which tag must be used as the root element of an HTML document?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "<head>"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "<body>"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "<!DOCTYPE html>"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "<html>"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "The `<html>` element is the root element of an HTML page, containing all other elements.",
+      "tags": [
+        "html",
+        "structure"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming - Quiz 4.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q4-30",
+      "type": "single_choice",
+      "topic": "Networking",
+      "subtopic": "LAN vs WAN",
+      "difficulty": "medium",
+      "questionMd": "How do LANs and WANs relate to the concepts of Intranet and Internet, respectively?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "LANs form private internal networks (Intranets), while WANs connect these networks together to form the Internet"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "LANs are strictly used for the Internet, while WANs are strictly used for Intranets"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "LANs operate over wireless networks, while WANs operate over wired networks"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Both LANs and WANs are entirely isolated from the global internet"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Local Area Networks (LANs) typically make up private corporate Intranets, while Wide Area Networks (WANs) connect these smaller networks globally to form the Internet.",
+      "tags": [
+        "networking",
+        "lan",
+        "wan"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming - Quiz 4.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q4-31",
+      "type": "single_choice",
+      "topic": "HTTP",
+      "subtopic": "History",
+      "difficulty": "medium",
+      "questionMd": "Which statement is TRUE regarding the history of HTTP/2?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "HTTP/2 requires encrypted connections by default."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "HTTP/2 removed all headers used in HTTP/1.1."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "HTTP/2 was designed to overcome performance limitations of HTTP/1.1 without changing its semantics."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "HTTP/2 only supports text-based communication, not binary."
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "HTTP/2 introduced features like multiplexing to speed up page loads without altering the core semantics (methods, status codes, URIs) of HTTP.",
+      "tags": [
+        "http",
+        "protocols",
+        "history"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming - Quiz 4.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q4-32",
+      "type": "single_choice",
+      "topic": "Web History",
+      "subtopic": "ARPANET",
+      "difficulty": "medium",
+      "questionMd": "The Internet was initially created by which organization, under what name, and for what primary purpose?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "European Organization for Nuclear Research (CERN)"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "World Wide Web Consortium (W3C)"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Department of Defense's Advanced Research Projects Agency (ARPA); ARPANET; military communication and research"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The Internet Engineering Task Force (IETF)"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "The Internet began as ARPANET, funded by the US Department of Defense's ARPA, to build a robust, fault-tolerant communication network.",
+      "tags": [
+        "web-history",
+        "internet"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming - Quiz 4.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q4-33",
+      "type": "single_choice",
+      "topic": "Web History",
+      "subtopic": "Inventors",
+      "difficulty": "easy",
+      "questionMd": "Who invented the World Wide Web in 1989 while working at CERN?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Steve Jobs"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Tim Berners-Lee"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Bill Gates"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Alan Turing"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Sir Tim Berners-Lee is credited with inventing the World Wide Web while working at CERN in 1989.",
+      "tags": [
+        "web-history",
+        "inventors"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming - Quiz 4.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q4-34",
+      "type": "single_choice",
+      "topic": "CSS",
+      "subtopic": "Purpose",
+      "difficulty": "easy",
+      "questionMd": "Which of the following is a primary goal of CSS?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "To add interactive logic to web pages"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "To query databases for web data"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "To separate the presentation of a document from its structure and content"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "To define the HTML tags on a page"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "CSS (Cascading Style Sheets) was designed to separate document content (HTML) from document presentation (layout, colors, fonts).",
+      "tags": [
+        "css",
+        "design",
+        "separation-of-concerns"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming - Quiz 4.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q4-35",
+      "type": "single_choice",
+      "topic": "HTTP",
+      "subtopic": "Methods",
+      "difficulty": "medium",
+      "questionMd": "Which HTTP method is considered \"idempotent\" by default?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "POST"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "PATCH"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "GET"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "CONNECT"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "An idempotent HTTP method is one that can be called many times without producing different outcomes. GET is idempotent; it simply retrieves data.",
+      "tags": [
+        "http",
+        "methods",
+        "idempotent"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming - Quiz 4.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q4-36",
+      "type": "single_choice",
+      "topic": "Networking",
+      "subtopic": "Ports",
+      "difficulty": "medium",
+      "questionMd": "In web development, what is a \"port\"?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A physical connection defining hardware interfaces"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "A function that holds an IP address"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "A communication endpoint mapped to a specific process or network service"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "A standard URL parameter"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "A port is a virtual point where network connections start and end. It is managed by the OS and helps direct traffic to the correct application.",
+      "tags": [
+        "networking",
+        "ports",
+        "infrastructure"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming - Quiz 4.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q4-37",
+      "type": "single_choice",
+      "topic": "URLs",
+      "subtopic": "Structure",
+      "difficulty": "easy",
+      "questionMd": "In the URL `https://www.example.com:8080`, what does the `8080` represent?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The TCP port number the server is listening on"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The subnet mask of the server IP address"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The file size allocated for the document request"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The maximum payload size of the HTTP request"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "The number following the colon after the hostname in a URL specifies the port number on which the server is listening for traffic.",
+      "tags": [
+        "url",
+        "networking",
+        "ports"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming - Quiz 4.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q4-38",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Classes",
+      "difficulty": "medium",
+      "questionMd": "How is a static method defined on a class in modern JS?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "By using the `static` keyword before the method name inside the class body"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "By using the `@static` decorator before the class definition"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "By placing the method outside of the class block"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "By listing them as parameters in the class constructor line"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "In JavaScript, you define static methods by prepending the `static` keyword to the method name within a class definition.",
+      "tags": [
+        "javascript",
+        "classes",
+        "oop"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming - Quiz 4.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q4-39",
+      "type": "single_choice",
+      "topic": "HTML5",
+      "subtopic": "Canvas",
+      "difficulty": "medium",
+      "questionMd": "What is the primary benefit of the `<canvas>` element in HTML5?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "It acts as a layout container for multiple HTML components at the same time"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "It provides a responsive iframe to embed other websites easily"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "It handles complex form submissions securely without a server"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "It provides a drawing surface that is manipulated via JavaScript for rendering 2D and 3D graphics"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "The `<canvas>` element acts as a container for graphics, requiring a script (usually JavaScript) to draw the graphics programmatically.",
+      "tags": [
+        "html5",
+        "canvas",
+        "graphics"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming - Quiz 4.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q4-40",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Memory Management",
+      "difficulty": "medium",
+      "questionMd": "What happens to the variables declared inside a function when the function finishes executing (assuming no closures)?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "They are immediately garbage collected after the outer function has finished"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "They are kept alive forever just in case the function is called again"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "They are saved to LocalStorage by the browser"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "They become global variables accessible anywhere in the program"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Local variables within a function scope are generally cleared from memory (garbage collected) once the function's execution context ends, unless a closure keeps a reference to them.",
+      "tags": [
+        "javascript",
+        "memory",
+        "scope"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming - Quiz 4.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q4-41",
+      "type": "single_choice",
+      "topic": "URLs",
+      "subtopic": "Query Parameters",
+      "difficulty": "easy",
+      "questionMd": "In the URL `https://www.example.com/api/users?id=123`, what does the `?id=123` portion represent?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The file path"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The protocol"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The domain extension"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The query string/parameters"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "The portion of a URL following the question mark (`?`) is the query string, which assigns values to specified parameters.",
+      "tags": [
+        "url",
+        "http",
+        "api"
+      ],
+      "sourceRefs": [
+        "Q4-Berhudan.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q4-42",
+      "type": "single_choice",
+      "topic": "Architecture",
+      "subtopic": "SPA vs MPA",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture, what is the fundamental difference between a single-page application (SPA) and a multi-page application (MPA)?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "An SPA is much slower than an MPA due to heavy JavaScript use."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "An SPA updates portions of the page dynamically using JavaScript, while an MPA requires a full page reload for every interaction."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "An SPA can only have one HTML file, and no server backend."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "MPAs are highly secure, while SPAs cannot utilize HTTPS."
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "SPAs load a single HTML page and dynamically update content as the user interacts, whereas MPAs navigate to completely new HTML pages from the server.",
+      "tags": [
+        "architecture",
+        "spa",
+        "mpa"
+      ],
+      "sourceRefs": [
+        "Q4-Berhudan.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q4-43",
+      "type": "single_choice",
+      "topic": "HTTP",
+      "subtopic": "Headers",
+      "difficulty": "easy",
+      "questionMd": "Which of the following HTTP headers is used to indicate the media type of the resource?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "User-Agent"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Accept"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Host"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Content-Type"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "The `Content-Type` header tells the client what the content type of the returned content actually is (e.g., text/html, application/json).",
+      "tags": [
+        "http",
+        "headers"
+      ],
+      "sourceRefs": [
+        "Q4-Berhudan.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q4-44",
+      "type": "single_choice",
+      "topic": "DOM Manipulation",
+      "subtopic": "Forms",
+      "difficulty": "easy",
+      "questionMd": "How is an HTML input element's current value typically retrieved in JavaScript?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "By calling `input.getValue()` method"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "By parsing the `innerHTML` of the element"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "By accessing the `value` property of the input element's DOM object."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "By reading the `data-val` attribute"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Form inputs expose a `.value` property on their DOM node representation that contains the user's input.",
+      "tags": [
+        "javascript",
+        "dom",
+        "forms"
+      ],
+      "sourceRefs": [
+        "Q4-Berhudan.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q4-45",
+      "type": "single_choice",
+      "topic": "JSON",
+      "subtopic": "Advantages",
+      "difficulty": "easy",
+      "questionMd": "Which of the following is a primary advantage of storing data in JSON format when using `fetch()`?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "JSON files compress perfectly without algorithms"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "JavaScript has built-in support to automatically convert a JSON string into an object..."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "JSON does not require a web server to be fetched"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "JSON inherently blocks Cross-Site Scripting attacks"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Since JSON syntax is derived from JavaScript object notation, native functions like `JSON.parse()` make it extremely easy to deserialize.",
+      "tags": [
+        "json",
+        "javascript",
+        "fetch"
+      ],
+      "sourceRefs": [
+        "Q4-Berhudan.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q4-46",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Objects",
+      "difficulty": "easy",
+      "questionMd": "Given the object `let album = { title: \"Daydream\", year: 1995 };`, how would you access the year of the album?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "album[1]"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "album.get('year')"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "album.year"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "album->year"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "In JavaScript, object properties are accessed using dot notation (e.g., `object.property`) or bracket notation.",
+      "tags": [
+        "javascript",
+        "objects"
+      ],
+      "sourceRefs": [
+        "Q4-Berhudan.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q4-47",
+      "type": "single_choice",
+      "topic": "DOM Events",
+      "subtopic": "Inputs",
+      "difficulty": "medium",
+      "questionMd": "What is the event fired when an input field's value changes and it loses focus?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "click"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "submit"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "keyPress"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "change"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "The `change` event is fired for `<input>`, `<select>`, and `<textarea>` elements when the user modifies the element's value and then blurs (loses focus) from it.",
+      "tags": [
+        "javascript",
+        "dom",
+        "events"
+      ],
+      "sourceRefs": [
+        "Q4-Berhudan.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q4-48",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "Chaining",
+      "difficulty": "medium",
+      "questionMd": "In a Promise chain like `fetch(url).then(a).then(b)`, what value does function `b` receive as its argument?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The original URL string"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The HTTP response status code"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The value returned by function `a`"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The Promise object itself"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "In a Promise chain, the return value of a `.then()` callback is passed as the argument to the next `.then()` callback in the chain.",
+      "tags": [
+        "javascript",
+        "promise"
+      ],
+      "sourceRefs": [
+        "Q4-Berhudan.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q4-49",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Classes",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, a variable that belongs to a class instance is called a:",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Method"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Function"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Closure"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Property or field"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "In object-oriented programming, variables attached to class instances are referred to as properties or fields.",
+      "tags": [
+        "javascript",
+        "oop",
+        "classes"
+      ],
+      "sourceRefs": [
+        "Q4-Berhudan.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q4-50",
+      "type": "single_choice",
+      "topic": "DOM Events",
+      "subtopic": "Methods",
+      "difficulty": "medium",
+      "questionMd": "What is the primary purpose of the `.preventDefault()` method on an event object?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "To stop the browser from performing the default action associated with the event (like submitting a form)."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "To pause JavaScript execution until the user clicks"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "To prevent other elements from overlapping"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "To block cross-site scripting attacks"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Calling `event.preventDefault()` tells the browser not to execute its default behavior for that event, such as navigating to a new page on form submission or link click.",
+      "tags": [
+        "javascript",
+        "dom",
+        "events"
+      ],
+      "sourceRefs": [
+        "Q4-Berhudan.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q4-51",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Return Values",
+      "difficulty": "medium",
+      "questionMd": "The `fetch()` API returns a Promise that resolves to what kind of object?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A JSON parsed string"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "An XML Document"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "A standard Array"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "A `Response` object representing the response to the request."
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "The Promise returned from `fetch()` won't reject on HTTP error status even if the response is an HTTP 404 or 500. It resolves normally with a `Response` object.",
+      "tags": [
+        "fetch",
+        "promise",
+        "http"
+      ],
+      "sourceRefs": [
+        "Q4-Berhudan.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    }
+  ]
+}
