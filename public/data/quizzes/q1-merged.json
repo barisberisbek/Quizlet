@@ -3,25 +3,26 @@
     "id": "q1-merged",
     "title": "Quiz 1 — Web Fundamentals & JavaScript Basics",
     "description": "Web history, HTML, HTTP, networking, CSS basics, and JavaScript fundamentals.",
-    "source": "DWP Past Exams",
+    "source": "DWP Past Exams (Merged)",
     "topic": "Web Fundamentals",
     "topics": [
-      "JavaScript",
-      "Networking",
-      "Markup Languages",
-      "Web History",
-      "Web Concepts",
-      "HTML",
-      "HTTP",
       "CSS",
+      "HTML",
+      "HTML5",
+      "HTTP",
+      "JavaScript",
+      "Markup Languages",
+      "Networking",
       "URLs",
-      "HTML5"
+      "Web Concepts",
+      "Web Development",
+      "Web History"
     ],
-    "questionCount": 29,
+    "questionCount": 37,
     "difficulty": "medium",
-    "estimatedMinutes": 44,
+    "estimatedMinutes": 56,
     "tags": [
-      "quiz-1",
+      "q1",
       "merged",
       "past-exam"
     ],
@@ -29,7 +30,608 @@
   },
   "questions": [
     {
-      "id": "q1-01",
+      "id": "q1-001",
+      "type": "single_choice",
+      "topic": "Web History",
+      "subtopic": "W3C",
+      "difficulty": "easy",
+      "questionMd": "What is the primary purpose of the World Wide Web Consortium (W3C)?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "It is a government agency that registers and manages all domain names globally"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "It is a company that develops and maintains the Chrome and Firefox web browsers"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "It is a university consortium that funds research into network security protocols"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "It is the main international standards organization for the World Wide Web"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "W3C develops web standards and specifications so that the Web remains interoperable across platforms and browsers.",
+      "tags": [
+        "web-history",
+        "standards",
+        "w3c"
+      ],
+      "sourceRefs": [
+        "dwp_quiz1_merged.json",
+        "dwp_quiz2_merged.json",
+        "Dynamic Web Programming - Emir Quiz 2.json",
+        "Q1-Berhudan.json",
+        "Dynamic Web Programming - Quiz 4.json",
+        "Q2-Berhudan.json"
+      ],
+      "mergedFromCount": 6,
+      "needs_review": true
+    },
+    {
+      "id": "q1-002",
+      "type": "single_choice",
+      "topic": "Web Concepts",
+      "subtopic": "Hypertext",
+      "difficulty": "easy",
+      "questionMd": "In the context of the WWW, what is hypertext?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A protocol for securely transferring files between computers"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "A database format used to store web server logs"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "A programming language used to style web page layouts"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "A text document that contains links (hyper-links) to other text documents"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Hypertext is text containing hyperlinks that let users navigate to related documents or sections.",
+      "tags": [
+        "www",
+        "hypertext"
+      ],
+      "sourceRefs": [
+        "dwp_quiz1_merged.json",
+        "Q1-Berhudan.json",
+        "Dynamic Web Programming - Quiz 4.json"
+      ],
+      "mergedFromCount": 3,
+      "needs_review": true
+    },
+    {
+      "id": "q1-003",
+      "type": "single_choice",
+      "topic": "Markup Languages",
+      "subtopic": "SGML and HTML",
+      "difficulty": "medium",
+      "questionMd": "What is the role of SGML (Standard Generalized Markup Language) in relation to HTML?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "SGML is a stylesheet language used to define the visual presentation of XML documents"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "SGML is a scripting language that adds interactivity to static HTML pages"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "SGML is a standard for specifying markup languages and was used by Tim Berners-Lee to create the HTML specification"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "SGML is a transport protocol that HTTP was built upon"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "HTML was originally defined as an SGML application; SGML itself is a meta-language for defining markup languages.",
+      "tags": [
+        "sgml",
+        "html",
+        "markup"
+      ],
+      "sourceRefs": [
+        "dwp_quiz1_merged.json",
+        "dwp_quiz2_merged.json",
+        "dwp_quiz3_merged.json",
+        "Dynamic Web Programming - Quiz 1.json",
+        "Dynamic Web Programming - Quiz 2.json",
+        "Q1-Berhudan.json",
+        "Dynamic Web Programming - Quiz 4.json"
+      ],
+      "mergedFromCount": 7,
+      "needs_review": true
+    },
+    {
+      "id": "q1-004",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Classes",
+      "difficulty": "easy",
+      "questionMd": "Which keyword is used to create a new instance of an ES6 class?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "init"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "create"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "instantiate"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "new"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "JavaScript uses the `new` keyword to create an instance from a class or constructor function.",
+      "tags": [
+        "javascript",
+        "classes",
+        "es6"
+      ],
+      "sourceRefs": [
+        "dwp_quiz1_merged.json",
+        "Dynamic Web Programming - Quiz 1.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "q1-005",
+      "type": "single_choice",
+      "topic": "Networking",
+      "subtopic": "LAN/WAN",
+      "difficulty": "medium",
+      "questionMd": "How do LANs and WANs relate to the concepts of Intranet and Internet respectively?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "LANs form private internal networks (Intranet), while WANs connect these networks together to form the Internet"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "LANs use wireless connections only, while WANs use wired connections only"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "LANs are always public networks, while WANs are always private networks"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "LANs operate at the application layer, while WANs operate at the physical layer"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "A LAN typically represents a local private network, while WAN connections link many networks over large geographic areas, enabling the broader Internet.",
+      "tags": [
+        "networking",
+        "lan",
+        "wan",
+        "internet"
+      ],
+      "sourceRefs": [
+        "dwp_quiz1_merged.json",
+        "dwp_quiz2_merged.json",
+        "Q2-Web2.json",
+        "Dynamic Web Programming - Quiz 2 Sema.json"
+      ],
+      "mergedFromCount": 4,
+      "needs_review": false
+    },
+    {
+      "id": "q1-006",
+      "type": "single_choice",
+      "topic": "HTTP",
+      "subtopic": "HTTP/2",
+      "difficulty": "medium",
+      "questionMd": "Compared to HTTP/1.1, what is a key advantage of HTTP/2.0?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "HTTP/2.0 encrypts all data by default using SSL certificates"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "HTTP/2.0 eliminates the need for DNS lookups before connecting to a server"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "HTTP/2.0 keeps the connection open and allows multiple resources to be fetched simultaneously"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "HTTP/2.0 only supports text based content and not binary data"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "HTTP/2 supports multiplexing, allowing multiple streams over a single connection, which improves loading efficiency.",
+      "tags": [
+        "http",
+        "http2",
+        "networking"
+      ],
+      "sourceRefs": [
+        "dwp_quiz1_merged.json",
+        "Dynamic Web Programming - Quiz 1.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "q1-007",
+      "type": "single_choice",
+      "topic": "Web History",
+      "subtopic": "Internet Origins",
+      "difficulty": "easy",
+      "questionMd": "The Internet was originally developed in 1969 by which organization to connect computers at research facilities and universities?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "European Organization for Nuclear Research (CERN)"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "World Wide Web Consortium (W3C)"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Defense Advanced Research Projects Agency (DARPA)"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Transmission Control Protocol Institute (TCPI)"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "ARPANET, funded by DARPA, is commonly cited as the origin of the modern Internet.",
+      "tags": [
+        "internet",
+        "history",
+        "darpa"
+      ],
+      "sourceRefs": [
+        "dwp_quiz1_merged.json",
+        "dwp_quiz2_merged.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "q1-008",
+      "type": "single_choice",
+      "topic": "Web History",
+      "subtopic": "World Wide Web",
+      "difficulty": "easy",
+      "questionMd": "Who invented the World Wide Web in 1991 as a way to link research papers using hyperlinks?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Steve Jobs"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Bill Gates"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Tim Berners-Lee"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Vint Cerf"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Tim Berners-Lee created the World Wide Web while working at CERN.",
+      "tags": [
+        "www",
+        "history",
+        "tim-berners-lee"
+      ],
+      "sourceRefs": [
+        "dwp_quiz1_merged.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q1-009",
+      "type": "single_choice",
+      "topic": "Web Development",
+      "subtopic": "Frontend",
+      "difficulty": "easy",
+      "questionMd": "Which set of programming languages is associated with front-end web development?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Python, Java, and Ruby"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "SQL, XML, and SGML"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "HTML, CSS, and JavaScript"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Node.js, PHP, and Go"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "The traditional front-end stack is HTML for structure, CSS for styling, and JavaScript for behavior.",
+      "tags": [
+        "frontend",
+        "html",
+        "css",
+        "javascript"
+      ],
+      "sourceRefs": [
+        "dwp_quiz1_merged.json",
+        "dwp_quiz2_merged.json",
+        "dwp_quiz3_merged.json",
+        "Dynamic Web Programming - Emir Quiz 2.json"
+      ],
+      "mergedFromCount": 4,
+      "needs_review": true
+    },
+    {
+      "id": "q1-010",
+      "type": "single_choice",
+      "topic": "Networking",
+      "subtopic": "Ports",
+      "difficulty": "easy",
+      "questionMd": "On which TCP port does an HTTP server listen by default?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "25"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "53"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "80"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "161"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Port 80 is the standard default port for HTTP traffic.",
+      "tags": [
+        "http",
+        "tcp",
+        "ports"
+      ],
+      "sourceRefs": [
+        "dwp_quiz1_merged.json",
+        "Dynamic Web Programming - Quiz 1.json",
+        "dwp_quiz2_merged.json"
+      ],
+      "mergedFromCount": 3,
+      "needs_review": true
+    },
+    {
+      "id": "q1-011",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Closures",
+      "difficulty": "medium",
+      "questionMd": "In JavaScript, what is a closure?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A special syntax for defining private class fields in ES6"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "A function declared inside another function that retains access to the outer function's variables"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "A technique for combining multiple event listeners into a single handler"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "A method that prevents other code from modifying an object's properties"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "A closure occurs when a function remembers variables from its lexical scope even after the outer function has returned.",
+      "tags": [
+        "javascript",
+        "closures",
+        "functions"
+      ],
+      "sourceRefs": [
+        "dwp_quiz1_merged.json",
+        "dwp_quiz2_merged.json",
+        "dwp_quiz3_merged.json"
+      ],
+      "mergedFromCount": 3,
+      "needs_review": true
+    },
+    {
+      "id": "q1-012",
+      "type": "single_choice",
+      "topic": "Networking",
+      "subtopic": "URLs and Ports",
+      "difficulty": "easy",
+      "questionMd": "In the URL `http://www.example.com:8080`, what does the value `8080` represent?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The TCP port on which the HTTP server is listening"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The subnet mask of the server's IP address"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The version number of the HTTP protocol being used"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The number of packets sent in the HTTP request"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "The number after the colon in a URL indicates the server port.",
+      "tags": [
+        "url",
+        "ports",
+        "tcp"
+      ],
+      "sourceRefs": [
+        "dwp_quiz1_merged.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": true
+    },
+    {
+      "id": "q1-013",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Classes and Fields",
+      "difficulty": "medium",
+      "questionMd": "How are public fields defined on a class instance in ES6?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "By assigning `this.fieldName = value` inside the constructor or a method"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "By using the `var` keyword at the top of the class body"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "By declaring them with the `public` keyword before the constructor"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "By listing them as parameters in the class declaration line"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "A common ES6 class pattern is to assign instance properties through `this` in the constructor or methods.",
+      "tags": [
+        "javascript",
+        "classes",
+        "fields",
+        "this"
+      ],
+      "sourceRefs": [
+        "dwp_quiz1_merged.json",
+        "dwp_quiz2_merged.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "q1-014",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Functional Programming",
@@ -39,40 +641,89 @@
         {
           "id": "a",
           "label": "A",
-          "text": "Converting a synchronous function into an asynchronous Promise-based function"
+          "text": "Binding an event listener to multiple HTML elements at the same time"
         },
         {
           "id": "b",
           "label": "B",
-          "text": "Defining a class method that can accept a variable number of parameters"
+          "text": "Converting a synchronous function into an asynchronous Promise-based function"
         },
         {
           "id": "c",
           "label": "C",
-          "text": "Constructing a new function that is partially pre-filled with arguments from an outer function"
+          "text": "Defining a class method that can accept a variable number of parameters"
         },
         {
           "id": "d",
           "label": "D",
-          "text": "Binding an event listener to multiple HTML elements at the same time"
+          "text": "Constructing a new function that is partially pre-filled with arguments from an outer function"
         }
       ],
       "correctAnswer": [
-        "c"
+        "d"
       ],
-      "explanationMd": "Currying is the process of taking a function with multiple arguments and turning it into a sequence of functions each with a single argument.",
-      "tags": [],
+      "explanationMd": "Currying transforms a function into a sequence of functions that capture arguments step by step.",
+      "tags": [
+        "javascript",
+        "functional-programming",
+        "currying"
+      ],
       "sourceRefs": [
+        "dwp_quiz1_merged.json",
         "Dynamic Web Programming - Quiz 1.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "q1-015",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Closures",
+      "difficulty": "medium",
+      "questionMd": "What happens to the variables declared in an outer function when a closure references them, even after the outer function has returned?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "They are kept alive because the closure holds a reference to them"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "They are immediately garbage-collected since the outer function has finished"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "They are reset to their default values on the next function call"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "They become global variables accessible from anywhere in the program"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Referenced outer variables stay alive as long as a closure can still access them.",
+      "tags": [
+        "javascript",
+        "closures",
+        "scope"
+      ],
+      "sourceRefs": [
+        "dwp_quiz1_merged.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q1-02",
+      "id": "q1-016",
       "type": "single_choice",
-      "topic": "Networking",
-      "subtopic": "HTTP",
+      "topic": "HTTP",
+      "subtopic": "Basics",
       "difficulty": "easy",
       "questionMd": "What is the primary role of the Hypertext Transfer Protocol (HTTP)?",
       "options": [
@@ -100,96 +751,21 @@
       "correctAnswer": [
         "d"
       ],
-      "explanationMd": "No explanation provided.",
-      "tags": [],
+      "explanationMd": "HTTP is the protocol used to transfer web resources such as HTML from servers to clients.",
+      "tags": [
+        "http",
+        "networking",
+        "web"
+      ],
       "sourceRefs": [
+        "dwp_quiz1_merged.json",
         "Dynamic Web Programming - Quiz 1.json"
       ],
-      "mergedFromCount": 1,
+      "mergedFromCount": 2,
       "needs_review": false
     },
     {
-      "id": "q1-03",
-      "type": "single_choice",
-      "topic": "Networking",
-      "subtopic": "Ports",
-      "difficulty": "easy",
-      "questionMd": "On which TCP port does an HTTP server listen by default?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "53"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "25"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "80"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "161"
-        }
-      ],
-      "correctAnswer": [
-        "c"
-      ],
-      "explanationMd": "No explanation provided.",
-      "tags": [],
-      "sourceRefs": [
-        "Dynamic Web Programming - Quiz 1.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "q1-04",
-      "type": "single_choice",
-      "topic": "JavaScript",
-      "subtopic": "Classes",
-      "difficulty": "easy",
-      "questionMd": "Which keyword is used to create a new instance of an ES6 class?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "new"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "create"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "instantiate"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "init"
-        }
-      ],
-      "correctAnswer": [
-        "a"
-      ],
-      "explanationMd": "No explanation provided.",
-      "tags": [],
-      "sourceRefs": [
-        "Dynamic Web Programming - Quiz 1.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "q1-05",
+      "id": "q1-017",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Classes",
@@ -220,59 +796,27 @@
       "correctAnswer": [
         "d"
       ],
-      "explanationMd": "In ES6 classes, method definitions do not use the `function` keyword.",
-      "tags": [],
-      "sourceRefs": [
-        "Dynamic Web Programming - Quiz 1.json"
+      "explanationMd": "Class methods are declared without the `function` keyword inside a class body.",
+      "tags": [
+        "javascript",
+        "classes",
+        "syntax"
       ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      "sourceRefs": [
+        "dwp_quiz1_merged.json",
+        "Dynamic Web Programming - Quiz 1.json",
+        "dwp_quiz2_merged.json",
+        "dwp_quiz3_merged.json",
+        "Dynamic Web Programming - Quiz 2.json"
+      ],
+      "mergedFromCount": 5,
+      "needs_review": true
     },
     {
-      "id": "q1-06",
-      "type": "single_choice",
-      "topic": "Networking",
-      "subtopic": "HTTP/2",
-      "difficulty": "medium",
-      "questionMd": "Compared to HTTP/1.1, what is a key advantage of HTTP/2.0?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "HTTP/2.0 eliminates the need for DNS lookups before connecting to a server"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "HTTP/2.0 keeps the connection open and allows multiple resources to be fetched simultaneously"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "HTTP/2.0 only supports text-based content and not binary data"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "HTTP/2.0 encrypts all data by default using SSL certificates"
-        }
-      ],
-      "correctAnswer": [
-        "b"
-      ],
-      "explanationMd": "HTTP/2 introduces multiplexing, allowing multiple requests and responses to be sent concurrently over a single TCP connection.",
-      "tags": [],
-      "sourceRefs": [
-        "Dynamic Web Programming - Quiz 1.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "q1-07",
+      "id": "q1-018",
       "type": "single_choice",
       "topic": "JavaScript",
-      "subtopic": "Events",
+      "subtopic": "CustomEvent API",
       "difficulty": "medium",
       "questionMd": "According to the lecture, what is an important limitation of the CustomEvent API in JavaScript?",
       "options": [
@@ -300,16 +844,23 @@
       "correctAnswer": [
         "b"
       ],
-      "explanationMd": "No explanation provided.",
-      "tags": [],
-      "sourceRefs": [
-        "Dynamic Web Programming - Quiz 1.json"
+      "explanationMd": "The lecture frames CustomEvent as DOM-event oriented rather than a general arbitrary-instance event system.",
+      "tags": [
+        "javascript",
+        "customevent",
+        "events"
       ],
-      "mergedFromCount": 1,
+      "sourceRefs": [
+        "dwp_quiz1_merged.json",
+        "dwp_quiz2_merged.json",
+        "Dynamic Web Programming - Quiz 1.json",
+        "Dynamic Web Programming - Quiz 2.json"
+      ],
+      "mergedFromCount": 4,
       "needs_review": false
     },
     {
-      "id": "q1-08",
+      "id": "q1-019",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Functions",
@@ -334,22 +885,30 @@
         {
           "id": "d",
           "label": "D",
-          "text": "Functions require the function keyword and cannot use arrow syntax"
+          "text": "Functions require the `function` keyword and cannot use arrow syntax"
         }
       ],
       "correctAnswer": [
         "b"
       ],
-      "explanationMd": "No explanation provided.",
-      "tags": [],
-      "sourceRefs": [
-        "Dynamic Web Programming - Quiz 1.json"
+      "explanationMd": "Because functions are first-class values, they can be stored, passed around, and returned.",
+      "tags": [
+        "javascript",
+        "functions",
+        "first-class-functions"
       ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      "sourceRefs": [
+        "dwp_quiz1_merged.json",
+        "dwp_quiz2_merged.json",
+        "dwp_quiz3_merged.json",
+        "Dynamic Web Programming - Quiz 1.json",
+        "Dynamic Web Programming - Quiz 2.json"
+      ],
+      "mergedFromCount": 5,
+      "needs_review": true
     },
     {
-      "id": "q1-09",
+      "id": "q1-020",
       "type": "single_choice",
       "topic": "Networking",
       "subtopic": "TCP",
@@ -380,64 +939,23 @@
       "correctAnswer": [
         "a"
       ],
-      "explanationMd": "No explanation provided.",
-      "tags": [],
+      "explanationMd": "TCP is responsible for reliable, ordered delivery of data between hosts.",
+      "tags": [
+        "tcp",
+        "networking"
+      ],
       "sourceRefs": [
+        "dwp_quiz1_merged.json",
         "Dynamic Web Programming - Quiz 1.json"
       ],
-      "mergedFromCount": 1,
+      "mergedFromCount": 2,
       "needs_review": false
     },
     {
-      "id": "q1-10",
-      "type": "single_choice",
-      "topic": "Markup Languages",
-      "subtopic": "SGML",
-      "difficulty": "medium",
-      "questionMd": "What is the role of SGML (Standard Generalized Markup Language) in relation to HTML?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "SGML is a style sheet language used to format HTML documents."
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "HTML was completely replaced by SGML in modern web development."
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "SGML is a standard for creating markup languages, and early versions of HTML were based on it."
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "SGML is a scripting language that runs in the browser."
-        }
-      ],
-      "correctAnswer": [
-        "c"
-      ],
-      "explanationMd": "SGML is the standard from which early versions of HTML were derived. It defines the rules for creating markup languages.",
-      "tags": [
-        "html",
-        "sgml",
-        "history"
-      ],
-      "sourceRefs": [
-        "Dynamic Web Programming - Quiz 1.json",
-        "Q1-Berhudan.json"
-      ],
-      "mergedFromCount": 2,
-      "needs_review": true
-    },
-    {
-      "id": "q1-11",
+      "id": "q1-021",
       "type": "single_choice",
       "topic": "JavaScript",
-      "subtopic": "Conventions",
+      "subtopic": "Naming Conventions",
       "difficulty": "easy",
       "questionMd": "According to the lecture, what is the JavaScript coding convention for indicating that a method is intended to be private?",
       "options": [
@@ -449,37 +967,42 @@
         {
           "id": "b",
           "label": "B",
-          "text": "Declaring the method with const instead of inside the class body"
+          "text": "Declaring the method with `const` instead of inside the class body"
         },
         {
           "id": "c",
           "label": "C",
-          "text": "Prefixing the method name with an underscore, e.g. _methodName()"
+          "text": "Prefixing the method name with an underscore, e.g. `_methodName()`"
         },
         {
           "id": "d",
           "label": "D",
-          "text": "Using the private keyword before the method definition"
+          "text": "Using the `private` keyword before the method definition"
         }
       ],
       "correctAnswer": [
         "c"
       ],
-      "explanationMd": "No explanation provided.",
-      "tags": [],
+      "explanationMd": "A leading underscore is a common convention to signal intended privacy, even though it is not enforced by classic syntax.",
+      "tags": [
+        "javascript",
+        "conventions",
+        "private"
+      ],
       "sourceRefs": [
+        "dwp_quiz1_merged.json",
         "Dynamic Web Programming - Quiz 1.json"
       ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      "mergedFromCount": 2,
+      "needs_review": true
     },
     {
-      "id": "q1-12",
+      "id": "q1-022",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Arrow Functions",
       "difficulty": "easy",
-      "questionMd": "When using the concise arrow function syntax, under what conditions can you omit the curly braces and the return keyword?",
+      "questionMd": "When using the concise arrow function syntax, under what conditions can you omit the curly braces and the `return` keyword?",
       "options": [
         {
           "id": "a",
@@ -494,7 +1017,7 @@
         {
           "id": "c",
           "label": "C",
-          "text": "When the function is assigned to a variable declared with var"
+          "text": "When the function is assigned to a variable declared with `var`"
         },
         {
           "id": "d",
@@ -505,16 +1028,115 @@
       "correctAnswer": [
         "b"
       ],
-      "explanationMd": "No explanation provided.",
-      "tags": [],
+      "explanationMd": "Arrow functions allow an implicit return only for a single expression body.",
+      "tags": [
+        "javascript",
+        "arrow-functions",
+        "syntax"
+      ],
       "sourceRefs": [
+        "dwp_quiz1_merged.json",
         "Dynamic Web Programming - Quiz 1.json"
       ],
-      "mergedFromCount": 1,
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "q1-023",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Context (`this`)",
+      "difficulty": "medium",
+      "questionMd": "What problem does calling `this.methodName = this.methodName.bind(this)` in a constructor solve?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "It copies the method's code into the HTML element for faster execution"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "It ensures `this` always refers to the class instance when the method is used as an event handler"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "It registers the method as a global function accessible from any scope"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "It prevents the method from being called more than once per event"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Binding fixes the `this` value so callbacks still refer to the class instance.",
+      "tags": [
+        "javascript",
+        "this",
+        "bind",
+        "events"
+      ],
+      "sourceRefs": [
+        "dwp_quiz1_merged.json",
+        "dwp_quiz2_merged.json",
+        "dwp_quiz3_merged.json",
+        "Dynamic Web Programming - Quiz 1.json",
+        "Dynamic Web Programming - Quiz 2.json"
+      ],
+      "mergedFromCount": 5,
+      "needs_review": true
+    },
+    {
+      "id": "q1-024",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "ECMAScript Versions",
+      "difficulty": "easy",
+      "questionMd": "ES6 classes were introduced in which version of the ECMAScript standard?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "ECMAScript 3 (ES1999)"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "ECMAScript 5 (ES2009)"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "ECMAScript 8 (ES2017)"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "ECMAScript 6 (ES2015)"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Class syntax was introduced with ES2015, commonly called ES6.",
+      "tags": [
+        "javascript",
+        "es6",
+        "ecmascript"
+      ],
+      "sourceRefs": [
+        "dwp_quiz1_merged.json",
+        "Dynamic Web Programming - Quiz 1.json"
+      ],
+      "mergedFromCount": 2,
       "needs_review": false
     },
     {
-      "id": "q1-13",
+      "id": "q1-025",
       "type": "single_choice",
       "topic": "Networking",
       "subtopic": "URLs",
@@ -554,175 +1176,7 @@
       "needs_review": false
     },
     {
-      "id": "q1-14",
-      "type": "single_choice",
-      "topic": "JavaScript",
-      "subtopic": "Context (this)",
-      "difficulty": "medium",
-      "questionMd": "What problem does calling `this.methodName = this.methodName.bind(this)` in a constructor solve?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "It copies the method's code into the HTML element for faster execution"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "It ensures `this` always refers to the class instance when the method is used as an event handler"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "It registers the method as a global function accessible from any scope"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "It prevents the method from being called more than once per event"
-        }
-      ],
-      "correctAnswer": [
-        "b"
-      ],
-      "explanationMd": "No explanation provided.",
-      "tags": [],
-      "sourceRefs": [
-        "Dynamic Web Programming - Quiz 1.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "q1-15",
-      "type": "single_choice",
-      "topic": "JavaScript",
-      "subtopic": "History",
-      "difficulty": "easy",
-      "questionMd": "ES6 classes were introduced in which version of the ECMAScript standard?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "ECMAScript 3 (ES1999)"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "ECMAScript 5 (ES2009)"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "ECMAScript 8 (ES2017)"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "ECMAScript 6 (ES2015)"
-        }
-      ],
-      "correctAnswer": [
-        "d"
-      ],
-      "explanationMd": "No explanation provided.",
-      "tags": [],
-      "sourceRefs": [
-        "Dynamic Web Programming - Quiz 1.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "q1-16",
-      "type": "single_choice",
-      "topic": "Web History",
-      "subtopic": "W3C",
-      "difficulty": "easy",
-      "questionMd": "What is the primary purpose of the World Wide Web Consortium (W3C)?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "To develop web browsers and operating systems"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "To act as a central governing body for the Internet"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "To provide internet connection services globally"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "To develop protocols and guidelines that ensure long-term growth for the Web"
-        }
-      ],
-      "correctAnswer": [
-        "d"
-      ],
-      "explanationMd": "The W3C is an international community where member organizations, a full-time staff, and the public work together to develop Web standards.",
-      "tags": [
-        "web-history",
-        "w3c",
-        "standards"
-      ],
-      "sourceRefs": [
-        "Q1-Berhudan.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "q1-17",
-      "type": "single_choice",
-      "topic": "Web Concepts",
-      "subtopic": "Hypertext",
-      "difficulty": "easy",
-      "questionMd": "In the context of the WWW, what is hypertext?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "A protocol for securely transferring files between computers"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "A database format used to store website settings"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "A programming language used to style web page layouts"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "Text that contains links to other texts or documents"
-        }
-      ],
-      "correctAnswer": [
-        "d"
-      ],
-      "explanationMd": "Hypertext is text displayed on a computer display or other electronic devices with references (hyperlinks) to other text that the reader can immediately access.",
-      "tags": [
-        "hypertext",
-        "www",
-        "basics"
-      ],
-      "sourceRefs": [
-        "Q1-Berhudan.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "q1-18",
+      "id": "q1-026",
       "type": "single_choice",
       "topic": "HTML",
       "subtopic": "Structure",
@@ -759,13 +1213,14 @@
         "structure"
       ],
       "sourceRefs": [
-        "Q1-Berhudan.json"
+        "Q1-Berhudan.json",
+        "Dynamic Web Programming - Quiz 4.json"
       ],
-      "mergedFromCount": 1,
+      "mergedFromCount": 2,
       "needs_review": false
     },
     {
-      "id": "q1-19",
+      "id": "q1-027",
       "type": "single_choice",
       "topic": "Networking",
       "subtopic": "LAN vs WAN",
@@ -803,13 +1258,14 @@
         "wan"
       ],
       "sourceRefs": [
-        "Q1-Berhudan.json"
+        "Q1-Berhudan.json",
+        "Dynamic Web Programming - Quiz 4.json"
       ],
-      "mergedFromCount": 1,
+      "mergedFromCount": 2,
       "needs_review": false
     },
     {
-      "id": "q1-20",
+      "id": "q1-028",
       "type": "single_choice",
       "topic": "HTTP",
       "subtopic": "History",
@@ -847,13 +1303,14 @@
         "history"
       ],
       "sourceRefs": [
-        "Q1-Berhudan.json"
+        "Q1-Berhudan.json",
+        "Dynamic Web Programming - Quiz 4.json"
       ],
-      "mergedFromCount": 1,
+      "mergedFromCount": 2,
       "needs_review": false
     },
     {
-      "id": "q1-21",
+      "id": "q1-029",
       "type": "single_choice",
       "topic": "Web History",
       "subtopic": "ARPANET",
@@ -890,13 +1347,14 @@
         "internet"
       ],
       "sourceRefs": [
-        "Q1-Berhudan.json"
+        "Q1-Berhudan.json",
+        "Dynamic Web Programming - Quiz 4.json"
       ],
-      "mergedFromCount": 1,
+      "mergedFromCount": 2,
       "needs_review": false
     },
     {
-      "id": "q1-22",
+      "id": "q1-030",
       "type": "single_choice",
       "topic": "Web History",
       "subtopic": "Inventors",
@@ -933,13 +1391,14 @@
         "inventors"
       ],
       "sourceRefs": [
-        "Q1-Berhudan.json"
+        "Q1-Berhudan.json",
+        "Dynamic Web Programming - Quiz 4.json"
       ],
-      "mergedFromCount": 1,
+      "mergedFromCount": 2,
       "needs_review": false
     },
     {
-      "id": "q1-23",
+      "id": "q1-031",
       "type": "single_choice",
       "topic": "CSS",
       "subtopic": "Purpose",
@@ -977,13 +1436,14 @@
         "separation-of-concerns"
       ],
       "sourceRefs": [
-        "Q1-Berhudan.json"
+        "Q1-Berhudan.json",
+        "Dynamic Web Programming - Quiz 4.json"
       ],
-      "mergedFromCount": 1,
+      "mergedFromCount": 2,
       "needs_review": false
     },
     {
-      "id": "q1-24",
+      "id": "q1-032",
       "type": "single_choice",
       "topic": "HTTP",
       "subtopic": "Methods",
@@ -1021,13 +1481,14 @@
         "idempotent"
       ],
       "sourceRefs": [
-        "Q1-Berhudan.json"
+        "Q1-Berhudan.json",
+        "Dynamic Web Programming - Quiz 4.json"
       ],
-      "mergedFromCount": 1,
+      "mergedFromCount": 2,
       "needs_review": false
     },
     {
-      "id": "q1-25",
+      "id": "q1-033",
       "type": "single_choice",
       "topic": "Networking",
       "subtopic": "Ports",
@@ -1065,13 +1526,14 @@
         "infrastructure"
       ],
       "sourceRefs": [
-        "Q1-Berhudan.json"
+        "Q1-Berhudan.json",
+        "Dynamic Web Programming - Quiz 4.json"
       ],
-      "mergedFromCount": 1,
+      "mergedFromCount": 2,
       "needs_review": false
     },
     {
-      "id": "q1-26",
+      "id": "q1-034",
       "type": "single_choice",
       "topic": "URLs",
       "subtopic": "Structure",
@@ -1109,13 +1571,14 @@
         "ports"
       ],
       "sourceRefs": [
-        "Q1-Berhudan.json"
+        "Q1-Berhudan.json",
+        "Dynamic Web Programming - Quiz 4.json"
       ],
-      "mergedFromCount": 1,
+      "mergedFromCount": 2,
       "needs_review": false
     },
     {
-      "id": "q1-27",
+      "id": "q1-035",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Classes",
@@ -1153,13 +1616,14 @@
         "oop"
       ],
       "sourceRefs": [
-        "Q1-Berhudan.json"
+        "Q1-Berhudan.json",
+        "Dynamic Web Programming - Quiz 4.json"
       ],
-      "mergedFromCount": 1,
+      "mergedFromCount": 2,
       "needs_review": false
     },
     {
-      "id": "q1-28",
+      "id": "q1-036",
       "type": "single_choice",
       "topic": "HTML5",
       "subtopic": "Canvas",
@@ -1197,13 +1661,14 @@
         "graphics"
       ],
       "sourceRefs": [
-        "Q1-Berhudan.json"
+        "Q1-Berhudan.json",
+        "Dynamic Web Programming - Quiz 4.json"
       ],
-      "mergedFromCount": 1,
+      "mergedFromCount": 2,
       "needs_review": false
     },
     {
-      "id": "q1-29",
+      "id": "q1-037",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Memory Management",
@@ -1241,9 +1706,10 @@
         "scope"
       ],
       "sourceRefs": [
-        "Q1-Berhudan.json"
+        "Q1-Berhudan.json",
+        "Dynamic Web Programming - Quiz 4.json"
       ],
-      "mergedFromCount": 1,
+      "mergedFromCount": 2,
       "needs_review": false
     }
   ]

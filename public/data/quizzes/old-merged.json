@@ -1,0 +1,2808 @@
+{
+  "meta": {
+    "id": "old-merged",
+    "title": "Old Exam Examples",
+    "description": "Mixed questions from past DWP exams including true/false, Express, Fetch API, and more.",
+    "source": "DWP Past Exams (Merged)",
+    "topic": "Mixed",
+    "topics": [
+      "APIs",
+      "Express",
+      "Fetch API",
+      "JavaScript",
+      "Node.js",
+      "REST API",
+      "Server-side",
+      "Software",
+      "Web"
+    ],
+    "questionCount": 74,
+    "difficulty": "medium",
+    "estimatedMinutes": 111,
+    "tags": [
+      "old",
+      "merged",
+      "past-exam"
+    ],
+    "fileName": "old-merged.json"
+  },
+  "questions": [
+    {
+      "id": "old-001",
+      "type": "true_false",
+      "topic": "JavaScript",
+      "subtopic": "Event Loop",
+      "difficulty": "easy",
+      "questionMd": "The order in which callbacks are added to the event queue determines the order in which they are executed.",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "True"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "False"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Correct answer according to the source material: True",
+      "tags": [
+        "javascript",
+        "event-loop"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-002",
+      "type": "true_false",
+      "topic": "Express",
+      "subtopic": "Basics",
+      "difficulty": "easy",
+      "questionMd": "Express.js is a server-side JavaScript framework.",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "True"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "False"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Correct answer according to the source material: True",
+      "tags": [
+        "express",
+        "basics"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-003",
+      "type": "single_choice",
+      "topic": "Server-side",
+      "subtopic": "Basics",
+      "difficulty": "easy",
+      "questionMd": "What is a server-side programming language?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A programming language that can run on both the client-side and server-side"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "A programming language that runs on the server-side"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "A programming language that runs on the client-side"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Correct answer according to the source material: A programming language that runs on the server-side",
+      "tags": [
+        "server-side",
+        "basics"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-004",
+      "type": "true_false",
+      "topic": "Node.js",
+      "subtopic": "Modules",
+      "difficulty": "easy",
+      "questionMd": "In Node.js, the `require` function is used to import external modules and libraries.",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "True"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "False"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Correct answer according to the source material: True",
+      "tags": [
+        "node.js",
+        "modules"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-005",
+      "type": "single_choice",
+      "topic": "REST API",
+      "subtopic": "HTTP Methods",
+      "difficulty": "easy",
+      "questionMd": "What does the HTTP method PUT do in RESTful API?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Retrieve a resource"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Update an existing resource"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Delete a resource"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Correct answer according to the source material: Update an existing resource",
+      "tags": [
+        "rest-api",
+        "http-methods"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-006",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Asynchronous Programming",
+      "difficulty": "easy",
+      "questionMd": "When an asynchronous function is called, where does it get executed?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The callback queue"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The call stack"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The event queue"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Correct answer according to the source material: The callback queue",
+      "tags": [
+        "javascript",
+        "asynchronous-programming"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-007",
+      "type": "single_choice",
+      "topic": "Express",
+      "subtopic": "Code Completion",
+      "difficulty": "easy",
+      "questionMd": "Which of the following correctly completes the code to create an Express app?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "server()"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "router()"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "express()"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "app()"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Correct answer according to the source material: express()",
+      "tags": [
+        "express",
+        "code-completion"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-008",
+      "type": "single_choice",
+      "topic": "Express",
+      "subtopic": "Routing",
+      "difficulty": "easy",
+      "questionMd": "Which of the following methods is used to specify the URL path and HTTP method for a route in Express.js?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "app.put()"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "app.use()"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "app.get()"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "app.post()"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Correct answer according to the source material: app.get()",
+      "tags": [
+        "express",
+        "routing"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-009",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Response Parsing",
+      "difficulty": "easy",
+      "questionMd": "Which method is used to parse the response body as JSON?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "json()"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "text()"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "blob()"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Correct answer according to the source material: json()",
+      "tags": [
+        "fetch-api",
+        "response-parsing"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-010",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Request Options",
+      "difficulty": "easy",
+      "questionMd": "What is the purpose of the `headers` property in a Fetch API request?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "To specify the URL of the server to send the request to"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "To specify the content type of the request body"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "To specify the type of HTTP method to use"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Correct answer according to the source material: To specify the content type of the request body. This source answer is preserved as shown in the PDF.",
+      "tags": [
+        "fetch-api",
+        "request-options"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-011",
+      "type": "true_false",
+      "topic": "JavaScript",
+      "subtopic": "Event Loop",
+      "difficulty": "easy",
+      "questionMd": "The event loop is a feature of the V8 engine used by Google Chrome and Node.js.",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "True"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "False"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Correct answer according to the source material: True",
+      "tags": [
+        "javascript",
+        "event-loop"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-012",
+      "type": "single_choice",
+      "topic": "Web",
+      "subtopic": "Servers",
+      "difficulty": "easy",
+      "questionMd": "What is a server?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A computer program that processes requests and delivers data over the internet"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "A programming language used for creating web applications"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "A type of database used for storing user information"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Correct answer according to the source material: A computer program that processes requests and delivers data over the internet",
+      "tags": [
+        "web",
+        "servers"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-013",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "HTTP Methods",
+      "difficulty": "easy",
+      "questionMd": "What is the syntax for making a GET request with the Fetch API?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "fetch(url, {method: 'POST'})"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "fetch(url, {method: 'GET'})"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "fetch(url, {method: 'PUT'})"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Correct answer according to the source material: fetch(url, {method: 'GET'})",
+      "tags": [
+        "fetch-api",
+        "http-methods"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-014",
+      "type": "true_false",
+      "topic": "Express",
+      "subtopic": "Response Methods",
+      "difficulty": "easy",
+      "questionMd": "In Express.js, the `res.sendFile()` method is used to send a file as a response.",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "True"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "False"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Correct answer according to the source material: True",
+      "tags": [
+        "express",
+        "response-methods"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-015",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Promises and Async/Await",
+      "difficulty": "easy",
+      "questionMd": "What is the difference between `fetch` and `fetch with async/await`?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "`fetch` with async/await is a deprecated method of handling responses"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "`fetch` with async/await is a more concise and readable way to handle responses"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "There is no difference, they are the same thing"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Correct answer according to the source material: `fetch` with async/await is a more concise and readable way to handle responses",
+      "tags": [
+        "fetch-api",
+        "promises-and-async/await"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-016",
+      "type": "true_false",
+      "topic": "Express",
+      "subtopic": "Basics",
+      "difficulty": "easy",
+      "questionMd": "Express is a Node.js web framework for building web applications and APIs.",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "True"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "False"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Correct answer according to the source material: True",
+      "tags": [
+        "express",
+        "basics"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-017",
+      "type": "true_false",
+      "topic": "JavaScript",
+      "subtopic": "Event Loop",
+      "difficulty": "easy",
+      "questionMd": "The event loop can block the execution of synchronous code in JavaScript.",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "True"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "False"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Correct answer according to the source material: False",
+      "tags": [
+        "javascript",
+        "event-loop"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-018",
+      "type": "single_choice",
+      "topic": "Express",
+      "subtopic": "Basics",
+      "difficulty": "easy",
+      "questionMd": "Which of the following statements is true about Express.js?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "It is a programming language for Node.js"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "It is a web application framework for Node.js"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "It is a package manager for Node.js"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "It is a database management system for Node.js"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Correct answer according to the source material: It is a web application framework for Node.js",
+      "tags": [
+        "express",
+        "basics"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-019",
+      "type": "true_false",
+      "topic": "Express",
+      "subtopic": "Server Startup",
+      "difficulty": "easy",
+      "questionMd": "The `app.listen` method is used to start a Node.js server with Express.",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "True"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "False"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Correct answer according to the source material: True",
+      "tags": [
+        "express",
+        "server-startup"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-020",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Event Loop",
+      "difficulty": "easy",
+      "questionMd": "What is the event loop in JavaScript?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A system that handles asynchronous operations in JavaScript"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "A function that synchronously executes JavaScript code"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "A loop that executes JavaScript code repeatedly"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Correct answer according to the source material: A system that handles asynchronous operations in JavaScript",
+      "tags": [
+        "javascript",
+        "event-loop"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-021",
+      "type": "single_choice",
+      "topic": "Express",
+      "subtopic": "Request Object",
+      "difficulty": "easy",
+      "questionMd": "What is the purpose of the `req` object in Express.js?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "To receive data from the client"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "To store data in the client's browser"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "To execute a middleware function"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "To send a response to the client"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Correct answer according to the source material: To receive data from the client",
+      "tags": [
+        "express",
+        "request-object"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-022",
+      "type": "true_false",
+      "topic": "Express",
+      "subtopic": "API Design",
+      "difficulty": "easy",
+      "questionMd": "Express.js can be used to create both RESTful and non-RESTful APIs.",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "True"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "False"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Correct answer according to the source material: True",
+      "tags": [
+        "express",
+        "api-design"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-023",
+      "type": "true_false",
+      "topic": "JavaScript",
+      "subtopic": "Call Stack",
+      "difficulty": "easy",
+      "questionMd": "The call stack is a first-in, last-out data structure that stores function calls.",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "True"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "False"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Correct answer according to the source material: True",
+      "tags": [
+        "javascript",
+        "call-stack"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-024",
+      "type": "single_choice",
+      "topic": "REST API",
+      "subtopic": "Status Codes",
+      "difficulty": "easy",
+      "questionMd": "Which status code indicates a successful response in RESTful API?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "500 Internal Server Error"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "404 Not Found"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "200 OK"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Correct answer according to the source material: 200 OK",
+      "tags": [
+        "rest-api",
+        "status-codes"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-025",
+      "type": "single_choice",
+      "topic": "Web",
+      "subtopic": "Architecture",
+      "difficulty": "easy",
+      "questionMd": "What is the back-end of a web application?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The part of the application the user interacts with"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The part of the application responsible for processing and storing data"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The part of the application responsible for designing the user interface"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Correct answer according to the source material: The part of the application responsible for processing and storing data",
+      "tags": [
+        "web",
+        "architecture"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-026",
+      "type": "single_choice",
+      "topic": "Node.js",
+      "subtopic": "Express vs Node",
+      "difficulty": "easy",
+      "questionMd": "Which of the following is a difference between Node.js and Express.js?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Node.js is a package manager, while Express.js is a web application framework"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Node.js is a runtime environment for executing JavaScript, while Express.js is a web application framework built on top of Node.js"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Node.js is used for server-side scripting, while Express.js is used for client-side scripting"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Node.js is a programming language, while Express.js is a database management system"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Correct answer according to the source material: Node.js is a runtime environment for executing JavaScript, while Express.js is a web application framework built on top of Node.js",
+      "tags": [
+        "node.js",
+        "express-vs-node"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-027",
+      "type": "single_choice",
+      "topic": "Express",
+      "subtopic": "Response Methods",
+      "difficulty": "easy",
+      "questionMd": "What is the purpose of the `res.send()` method in an Express.js application?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "To send a response back to the client"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "To define the routes for the application"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "To handle errors in the application"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Correct answer according to the source material: To send a response back to the client",
+      "tags": [
+        "express",
+        "response-methods"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-028",
+      "type": "single_choice",
+      "topic": "Node.js",
+      "subtopic": "Event Loop",
+      "difficulty": "easy",
+      "questionMd": "What is the purpose of the event loop in Node.js?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "To handle file I/O operations"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "To handle HTTP requests"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "To handle asynchronous operations"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Correct answer according to the source material: To handle asynchronous operations",
+      "tags": [
+        "node.js",
+        "event-loop"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-029",
+      "type": "single_choice",
+      "topic": "Express",
+      "subtopic": "Middleware",
+      "difficulty": "easy",
+      "questionMd": "What is the purpose of the `app.use()` middleware function in Express.js?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "To handle HTTP requests"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "To define route handlers"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "To serve static files"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "To execute a middleware function"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Correct answer according to the source material: To execute a middleware function. Some other source screenshots in this PDF specifically mention static-file serving via express.static(), but this question's displayed source answer is preserved.",
+      "tags": [
+        "express",
+        "middleware"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-030",
+      "type": "single_choice",
+      "topic": "Node.js",
+      "subtopic": "npm",
+      "difficulty": "easy",
+      "questionMd": "What is the purpose of the `npm` command in Node.js?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "To start a Node.js server"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "To install and manage packages and dependencies"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "To create a new Node.js application"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Correct answer according to the source material: To install and manage packages and dependencies",
+      "tags": [
+        "node.js",
+        "npm"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-031",
+      "type": "true_false",
+      "topic": "JavaScript",
+      "subtopic": "Event Loop",
+      "difficulty": "easy",
+      "questionMd": "The event loop is only used in web browsers and is not present in server-side JavaScript environments like Node.js.",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "True"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "False"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Correct answer according to the source material: False",
+      "tags": [
+        "javascript",
+        "event-loop"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-032",
+      "type": "true_false",
+      "topic": "Node.js",
+      "subtopic": "Basics",
+      "difficulty": "easy",
+      "questionMd": "Node.js is a server-side runtime environment for executing JavaScript code.",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "True"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "False"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Correct answer according to the source material: True",
+      "tags": [
+        "node.js",
+        "basics"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-033",
+      "type": "single_choice",
+      "topic": "Express",
+      "subtopic": "Static Files",
+      "difficulty": "easy",
+      "questionMd": "What is the purpose of the `express.static()` middleware in Express.js?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "To handle HTTP requests"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "To define route handlers"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "To serve static files"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "To execute a middleware function"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Correct answer according to the source material: To serve static files",
+      "tags": [
+        "express",
+        "static-files"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-034",
+      "type": "true_false",
+      "topic": "Node.js",
+      "subtopic": "Asynchronous Programming",
+      "difficulty": "easy",
+      "questionMd": "In Node.js, asynchronous operations can be handled using callbacks, promises, or async/await.",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "True"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "False"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Correct answer according to the source material: True",
+      "tags": [
+        "node.js",
+        "asynchronous-programming"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-035",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Basics",
+      "difficulty": "easy",
+      "questionMd": "Which of the following is used on the client-side to make HTTP requests?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "None of them"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Express.js"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Both of them"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Fetch API"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Correct answer according to the source material: Fetch API",
+      "tags": [
+        "fetch-api",
+        "basics"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-036",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Basics",
+      "difficulty": "easy",
+      "questionMd": "What is the Fetch API used for?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "To create and manipulate HTML elements"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "To make HTTP requests and receive responses from servers"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "To perform complex mathematical calculations"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Correct answer according to the source material: To make HTTP requests and receive responses from servers",
+      "tags": [
+        "fetch-api",
+        "basics"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-037",
+      "type": "true_false",
+      "topic": "Express",
+      "subtopic": "Basics",
+      "difficulty": "easy",
+      "questionMd": "Express.js can only handle HTTP requests and responses.",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "True"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "False"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Correct answer according to the source material: True. This source answer is preserved from the PDF.",
+      "tags": [
+        "express",
+        "basics"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-038",
+      "type": "true_false",
+      "topic": "JavaScript",
+      "subtopic": "Event Loop",
+      "difficulty": "easy",
+      "questionMd": "The event loop in JavaScript is a single-threaded system.",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "True"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "False"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Correct answer according to the source material: True",
+      "tags": [
+        "javascript",
+        "event-loop"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-039",
+      "type": "true_false",
+      "topic": "JavaScript",
+      "subtopic": "Event Loop",
+      "difficulty": "easy",
+      "questionMd": "The event loop is responsible for handling both synchronous and asynchronous operations in JavaScript.",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "True"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "False"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Correct answer according to the source material: True",
+      "tags": [
+        "javascript",
+        "event-loop"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-040",
+      "type": "true_false",
+      "topic": "Express",
+      "subtopic": "Static Files",
+      "difficulty": "easy",
+      "questionMd": "Express.js allows you to serve static files, such as HTML, CSS, and JavaScript, using the `express.static()` middleware.",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "True"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "False"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Correct answer according to the source material: True",
+      "tags": [
+        "express",
+        "static-files"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-041",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Promises",
+      "difficulty": "easy",
+      "questionMd": "What is a Promise in the context of the Fetch API?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A way to handle errors that occur during a Fetch request"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "A way to handle synchronous operations in JavaScript"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "A way to handle asynchronous operations in JavaScript"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Correct answer according to the source material: A way to handle asynchronous operations in JavaScript",
+      "tags": [
+        "javascript",
+        "promises"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-042",
+      "type": "single_choice",
+      "topic": "Express",
+      "subtopic": "Basics",
+      "difficulty": "easy",
+      "questionMd": "What is the purpose of the `express()` function in Express.js?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "It sends a response to the client"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "It creates a new Express application"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "It defines a new route"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "It connects to a database"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Correct answer according to the source material: It creates a new Express application",
+      "tags": [
+        "express",
+        "basics"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-043",
+      "type": "single_choice",
+      "topic": "REST API",
+      "subtopic": "Basics",
+      "difficulty": "easy",
+      "questionMd": "What is a RESTful API?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "An API that uses the REST architectural style for building web services"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "An API that is easy to use and understand"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "An API that is designed specifically for mobile applications"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Correct answer according to the source material: An API that uses the REST architectural style for building web services",
+      "tags": [
+        "rest-api",
+        "basics"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-044",
+      "type": "true_false",
+      "topic": "Express",
+      "subtopic": "Express vs Node",
+      "difficulty": "easy",
+      "questionMd": "Express.js can be used as a substitute for Node.js.",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "True"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "False"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Correct answer according to the source material: False",
+      "tags": [
+        "express",
+        "express-vs-node"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-045",
+      "type": "single_choice",
+      "topic": "Express",
+      "subtopic": "Server Startup",
+      "difficulty": "easy",
+      "questionMd": "What is the purpose of the `app.listen()` method in an Express.js application?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "To start the server and listen for incoming requests"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "To define the routes for the application"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "To handle errors in the application"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Correct answer according to the source material: To start the server and listen for incoming requests",
+      "tags": [
+        "express",
+        "server-startup"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-046",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Response Object",
+      "difficulty": "easy",
+      "questionMd": "What is the purpose of the `response` object in a Fetch API request?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "To represent the request to the server"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "To represent the response from the server"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "To represent the data sent to the server"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Correct answer according to the source material: To represent the response from the server",
+      "tags": [
+        "fetch-api",
+        "response-object"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-047",
+      "type": "single_choice",
+      "topic": "Node.js",
+      "subtopic": "npm",
+      "difficulty": "easy",
+      "questionMd": "What is npm?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A package manager for Node.js"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "A programming language"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "A framework for building web applications"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "A database management system"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Correct answer according to the source material: A package manager for Node.js",
+      "tags": [
+        "node.js",
+        "npm"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-048",
+      "type": "single_choice",
+      "topic": "Web",
+      "subtopic": "Servers",
+      "difficulty": "easy",
+      "questionMd": "What is a web server?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A computer program that delivers web pages and other resources to clients"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "A type of database used for storing user information"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "A programming language used for creating web applications"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Correct answer according to the source material: A computer program that delivers web pages and other resources to clients",
+      "tags": [
+        "web",
+        "servers"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-049",
+      "type": "single_choice",
+      "topic": "Node.js",
+      "subtopic": "Basics",
+      "difficulty": "easy",
+      "questionMd": "What is Node.js?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A server-side runtime environment for executing JavaScript code"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "A client-side runtime environment for executing JavaScript code"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "A programming language"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Correct answer according to the source material: A server-side runtime environment for executing JavaScript code",
+      "tags": [
+        "node.js",
+        "basics"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-050",
+      "type": "single_choice",
+      "topic": "APIs",
+      "subtopic": "Basics",
+      "difficulty": "easy",
+      "questionMd": "What is an API?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A type of database used for storing user information"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "A programming language used for creating web applications"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "A set of protocols and tools used for building software applications"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Correct answer according to the source material: A set of protocols and tools used for building software applications",
+      "tags": [
+        "apis",
+        "basics"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-051",
+      "type": "single_choice",
+      "topic": "Express",
+      "subtopic": "Response Methods",
+      "difficulty": "easy",
+      "questionMd": "Which of the following correctly completes the code to send a response with JSON data in Express?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "sendFile"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "send"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "json"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "render"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Correct answer according to the source material: json",
+      "tags": [
+        "express",
+        "response-methods"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-052",
+      "type": "single_choice",
+      "topic": "REST API",
+      "subtopic": "HTTP Methods",
+      "difficulty": "easy",
+      "questionMd": "What does the HTTP method GET do in RESTful API?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Update an existing resource"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Create a new resource"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Retrieve a resource"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Correct answer according to the source material: Retrieve a resource",
+      "tags": [
+        "rest-api",
+        "http-methods"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-053",
+      "type": "single_choice",
+      "topic": "Express",
+      "subtopic": "Server-side",
+      "difficulty": "easy",
+      "questionMd": "Which of the following is used on the server-side to handle HTTP requests?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Both of them"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Express.js"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Fetch API"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "None of them"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Correct answer according to the source material: Express.js",
+      "tags": [
+        "express",
+        "server-side"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-054",
+      "type": "single_choice",
+      "topic": "Express",
+      "subtopic": "Request Parameters",
+      "difficulty": "easy",
+      "questionMd": "Which of the following is a way to access request parameters in Express.js?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "req.params"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "req.query"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "req.body"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Correct answer according to the source material: req.params",
+      "tags": [
+        "express",
+        "request-parameters"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-055",
+      "type": "true_false",
+      "topic": "Express",
+      "subtopic": "Response Methods",
+      "difficulty": "easy",
+      "questionMd": "In Express.js, the `res.json()` method is used to send a JSON response to the client.",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "True"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "False"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Correct answer according to the source material: True",
+      "tags": [
+        "express",
+        "response-methods"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-056",
+      "type": "single_choice",
+      "topic": "Node.js",
+      "subtopic": "HTTP Server Code",
+      "difficulty": "easy",
+      "questionMd": "Which of the following correctly completes the missing code in this Node.js example that creates an HTTP server?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "console.log('Hello World!');"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "res.write('Hello World!');"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "res.send('Hello World!');"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "res.end('Hello World!');"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Correct answer according to the source material: res.end('Hello World!');",
+      "tags": [
+        "node.js",
+        "http-server-code"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-057",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Request Options",
+      "difficulty": "easy",
+      "questionMd": "What is the default value for the `mode` property in a Fetch API request?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "\"same-origin\""
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "\"cors\""
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "\"no-cors\""
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Correct answer according to the source material: \"no-cors\". This answer is preserved exactly as shown in the PDF source.",
+      "tags": [
+        "fetch-api",
+        "request-options"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-058",
+      "type": "true_false",
+      "topic": "Express",
+      "subtopic": "Routing",
+      "difficulty": "easy",
+      "questionMd": "Express.js routes can only handle GET requests.",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "True"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "False"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Correct answer according to the source material: False",
+      "tags": [
+        "express",
+        "routing"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-059",
+      "type": "single_choice",
+      "topic": "Node.js",
+      "subtopic": "HTTP Module",
+      "difficulty": "easy",
+      "questionMd": "What is the purpose of the `http` module in Node.js?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "To perform file system operations"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "To perform network operations"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "To perform database operations"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Correct answer according to the source material: To perform network operations",
+      "tags": [
+        "node.js",
+        "http-module"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-060",
+      "type": "single_choice",
+      "topic": "Express",
+      "subtopic": "Route Parameters",
+      "difficulty": "easy",
+      "questionMd": "Which of the following correctly completes the code to define a route parameter in Express?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "age"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "email"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "id"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "name"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Correct answer according to the source material: id",
+      "tags": [
+        "express",
+        "route-parameters"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-061",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Event Loop Concepts",
+      "difficulty": "easy",
+      "questionMd": "Which of the following is NOT a key concept in understanding the event loop?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Event queue"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Call stack"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "V8 JavaScript Engine"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Correct answer according to the source material: V8 JavaScript Engine",
+      "tags": [
+        "javascript",
+        "event-loop-concepts"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-062",
+      "type": "single_choice",
+      "topic": "Software",
+      "subtopic": "Frameworks",
+      "difficulty": "easy",
+      "questionMd": "What is a framework?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A collection of pre-written code and tools used for building applications"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "A type of database used for storing user information"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "A programming language used for creating web applications"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Correct answer according to the source material: A collection of pre-written code and tools used for building applications",
+      "tags": [
+        "software",
+        "frameworks"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-063",
+      "type": "single_choice",
+      "topic": "Web",
+      "subtopic": "HTTP",
+      "difficulty": "easy",
+      "questionMd": "What is HTTP?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A protocol used for transmitting data over the internet"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "A type of database used for storing user information"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "A programming language used for creating web applications"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Correct answer according to the source material: A protocol used for transmitting data over the internet",
+      "tags": [
+        "web",
+        "http"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-064",
+      "type": "single_choice",
+      "topic": "REST API",
+      "subtopic": "HTTP Methods",
+      "difficulty": "easy",
+      "questionMd": "What does the HTTP method POST do in RESTful API?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Retrieve a resource"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Delete a resource"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Create a new resource"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Correct answer according to the source material: Create a new resource",
+      "tags": [
+        "rest-api",
+        "http-methods"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-065",
+      "type": "single_choice",
+      "topic": "REST API",
+      "subtopic": "HTTP Methods",
+      "difficulty": "easy",
+      "questionMd": "What does the HTTP method DELETE do in RESTful API?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Create a new resource"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Update an existing resource"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Delete a resource"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Correct answer according to the source material: Delete a resource",
+      "tags": [
+        "rest-api",
+        "http-methods"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-066",
+      "type": "single_choice",
+      "topic": "REST API",
+      "subtopic": "Responses",
+      "difficulty": "easy",
+      "questionMd": "What does a RESTful API return by default?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "HTML pages"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "JSON data"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "XML documents"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Correct answer according to the source material: JSON data",
+      "tags": [
+        "rest-api",
+        "responses"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-067",
+      "type": "single_choice",
+      "topic": "REST API",
+      "subtopic": "HTTP Methods",
+      "difficulty": "easy",
+      "questionMd": "Which HTTP methods are commonly used in RESTful API?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "GET, ADD, REMOVE, MODIFY"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "GET, POST, UPDATE, PUSH"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "GET, POST, DELETE, PUT"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Correct answer according to the source material: GET, POST, DELETE, PUT",
+      "tags": [
+        "rest-api",
+        "http-methods"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-068",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Events",
+      "difficulty": "easy",
+      "questionMd": "Which of the following is an example of an event in JavaScript?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A variable declaration"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "A function call"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "A mouse click"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Correct answer according to the source material: A mouse click",
+      "tags": [
+        "javascript",
+        "events"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-069",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Promises",
+      "difficulty": "easy",
+      "questionMd": "What does the Fetch API return?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A string representing the response body"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "A JSON object"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "A Promise that resolves to a Response object"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Correct answer according to the source material: A Promise that resolves to a Response object",
+      "tags": [
+        "fetch-api",
+        "promises"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-070",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Headers",
+      "difficulty": "easy",
+      "questionMd": "What is the purpose of the `Headers` object in a Fetch API request?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "To represent the headers of the response"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "To represent the headers of the request"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "To represent the data sent to the server"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Correct answer according to the source material: To represent the headers of the request",
+      "tags": [
+        "fetch-api",
+        "headers"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-071",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Promises",
+      "difficulty": "easy",
+      "questionMd": "What is the purpose of the `then` method in a Fetch API request?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "To handle the response data asynchronously"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "To handle errors that occur during the request"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "To convert the response to JSON format"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Correct answer according to the source material: To handle the response data asynchronously",
+      "tags": [
+        "fetch-api",
+        "promises"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-072",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Promises",
+      "difficulty": "easy",
+      "questionMd": "What is a Promise object?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A way to handle errors that occur during a Fetch request"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "A way to handle synchronous operations in JavaScript"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "A way to handle asynchronous operations in JavaScript"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Correct answer according to the source material: A way to handle asynchronous operations in JavaScript",
+      "tags": [
+        "javascript",
+        "promises"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-073",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Request Body",
+      "difficulty": "easy",
+      "questionMd": "What is the purpose of the `body` property in a Fetch API request?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "To specify the type of HTTP method to use"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "To specify the content of the request"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "To specify the URL of the server to send the request to"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Correct answer according to the source material: To specify the content of the request",
+      "tags": [
+        "fetch-api",
+        "request-body"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "old-074",
+      "type": "true_false",
+      "topic": "JavaScript",
+      "subtopic": "Event Loop",
+      "difficulty": "easy",
+      "questionMd": "The event loop is responsible for managing the order in which code is executed in JavaScript.",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "True"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "False"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Correct answer according to the source material: True",
+      "tags": [
+        "javascript",
+        "event-loop"
+      ],
+      "sourceRefs": [
+        "dwp_old_examples.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    }
+  ]
+}

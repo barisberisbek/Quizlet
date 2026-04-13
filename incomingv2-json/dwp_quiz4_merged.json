@@ -1,0 +1,2246 @@
+{
+  "quizId": "q4-merged",
+  "title": "Dynamic Web Programming - Quiz 4 (Merged)",
+  "course": "Dynamic Web Programming",
+  "language": "en",
+  "semester": "2023-2024 Spring",
+  "source": "Merged from PDF and screenshot quiz sources",
+  "durationMinutes": 30,
+  "shuffleQuestions": false,
+  "shuffleOptions": false,
+  "questions": [
+    {
+      "id": "q4m_q1",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "Chaining",
+      "difficulty": "easy",
+      "questionMd": "In a Promise chain such as `fetch(url).then(a).then(b)`, what value does function **b** receive as its argument?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "The original URL string passed to `fetch()`"
+        },
+        {
+          "id": "B",
+          "text": "The value returned by function **a**"
+        },
+        {
+          "id": "C",
+          "text": "The HTTP status code of the response"
+        },
+        {
+          "id": "D",
+          "text": "The raw HTTP response object"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "The correct answer is \"The value returned by function **a**\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "promises"
+      ],
+      "sourceRefs": [
+        "Q4-Web2.pdf#q1",
+        "Q4-supplementary-screenshots-set-A#q10"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q2",
+      "type": "single_choice",
+      "topic": "REST API",
+      "subtopic": "Terminology",
+      "difficulty": "easy",
+      "questionMd": "In REST API terminology, what is the \"base URL\"?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "The full URL including all query parameters for a specific request"
+        },
+        {
+          "id": "B",
+          "text": "The fallback URL used when the primary endpoint is unavailable"
+        },
+        {
+          "id": "C",
+          "text": "The root address of the API server to which all endpoint paths are appended"
+        },
+        {
+          "id": "D",
+          "text": "The URL of the web page that consumes the API"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "The correct answer is \"The root address of the API server to which all endpoint paths are appended\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "rest-api"
+      ],
+      "sourceRefs": [
+        "Q4-Web2.pdf#q2"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q3",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Array Sort",
+      "difficulty": "medium",
+      "questionMd": "To sort an array of album objects by year in ascending order, which comparator function should be passed to `.sort()`?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "`function(a, b) { return b.year - a.year; }`"
+        },
+        {
+          "id": "B",
+          "text": "`function(a, b) { return a.year + b.year; }`"
+        },
+        {
+          "id": "C",
+          "text": "`function(a, b) { return a.year; }`"
+        },
+        {
+          "id": "D",
+          "text": "`function(a, b) { return a.year - b.year; }`"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "The correct answer is \"`function(a, b) { return a.year - b.year; }`\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "javascript"
+      ],
+      "sourceRefs": [
+        "Q4-Web2.pdf#q3"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q4",
+      "type": "single_choice",
+      "topic": "JSON",
+      "subtopic": "Parsing",
+      "difficulty": "easy",
+      "questionMd": "A developer receives the string `{\"name\":\"Ice Bear\"}` from a server. Which function should they use to turn it into a usable JavaScript object?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "`JSON.objectify()`"
+        },
+        {
+          "id": "B",
+          "text": "`JSON.parse()`"
+        },
+        {
+          "id": "C",
+          "text": "`JSON.decode()`"
+        },
+        {
+          "id": "D",
+          "text": "`JSON.stringify()`"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "The correct answer is \"`JSON.parse()`\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "json"
+      ],
+      "sourceRefs": [
+        "Q4-Web2.pdf#q4"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q5",
+      "type": "single_choice",
+      "topic": "JSON",
+      "subtopic": "Advantages",
+      "difficulty": "easy",
+      "questionMd": "Compared to a custom plain-text format, what is a primary advantage of storing data in JSON format when using `fetch()`?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "JSON files are always smaller in size than plain-text files"
+        },
+        {
+          "id": "B",
+          "text": "JavaScript has built-in support to automatically convert a JSON string into an object, eliminating manual parsing"
+        },
+        {
+          "id": "C",
+          "text": "JSON files do not require a server to be accessed"
+        },
+        {
+          "id": "D",
+          "text": "JSON is the only format supported by the `fetch()` API"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "The correct answer is \"JavaScript has built-in support to automatically convert a JSON string into an object, eliminating manual parsing\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "json"
+      ],
+      "sourceRefs": [
+        "Q4-Web2.pdf#q5"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q6",
+      "type": "single_choice",
+      "topic": "Data Formats",
+      "subtopic": "Plain Text vs JSON",
+      "difficulty": "easy",
+      "questionMd": "When loading album data from a custom plain-text file, which of the following is a disadvantage mentioned in the lecture?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Text files do not support arrays of items"
+        },
+        {
+          "id": "B",
+          "text": "Numbers must be manually converted from strings using functions like `parseInt()`"
+        },
+        {
+          "id": "C",
+          "text": "Plain-text files cannot be served over HTTP"
+        },
+        {
+          "id": "D",
+          "text": "The file cannot be loaded using the `fetch()` API"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "The correct answer is \"Numbers must be manually converted from strings using functions like `parseInt()`\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "data-formats"
+      ],
+      "sourceRefs": [
+        "Q4-Web2.pdf#q6"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q7",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Async Behavior",
+      "difficulty": "easy",
+      "questionMd": "Why is the `fetch()` API described as asynchronous in the context of web programming?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "It guarantees that the response arrives faster than synchronous requests"
+        },
+        {
+          "id": "B",
+          "text": "It blocks script execution until the full response is received"
+        },
+        {
+          "id": "C",
+          "text": "It automatically retries failed requests without any extra code"
+        },
+        {
+          "id": "D",
+          "text": "It allows the browser to continue executing other code while waiting for the network response"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "The correct answer is \"It allows the browser to continue executing other code while waiting for the network response\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "fetch-api"
+      ],
+      "sourceRefs": [
+        "Q4-Web2.pdf#q7"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q8",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Classes",
+      "difficulty": "medium",
+      "questionMd": "The lecture recommends implementing the **Album** class before the **App** class. What is the stated reason for this order?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "The `fetch()` call can only be tested after the `Album` class exists"
+        },
+        {
+          "id": "B",
+          "text": "The `App` class depends on the `Album` class, whereas the `Album` class has no dependencies"
+        },
+        {
+          "id": "C",
+          "text": "JavaScript requires dependent classes to be declared first in the file"
+        },
+        {
+          "id": "D",
+          "text": "The `Album` class is simpler and requires fewer lines of code"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "The correct answer is \"The `App` class depends on the `Album` class, whereas the `Album` class has no dependencies\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "javascript"
+      ],
+      "sourceRefs": [
+        "Q4-Web2.pdf#q8"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q9",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "Basics",
+      "difficulty": "easy",
+      "questionMd": "Which of the following best describes a JavaScript Promise?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "An object representing the eventual completion or failure of an asynchronous operation"
+        },
+        {
+          "id": "B",
+          "text": "A synchronous function that immediately returns a value"
+        },
+        {
+          "id": "C",
+          "text": "A built-in timer that delays code execution by a specified amount"
+        },
+        {
+          "id": "D",
+          "text": "A special array type used to store multiple fetch results"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "The correct answer is \"An object representing the eventual completion or failure of an asynchronous operation\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "promises"
+      ],
+      "sourceRefs": [
+        "Q4-Web2.pdf#q9"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q10",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Code Organization",
+      "difficulty": "medium",
+      "questionMd": "Why does the lecture suggest extracting the album rendering logic into a separate `_renderAlbums()` helper method?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "To avoid exceeding the maximum allowed number of lines in a single method"
+        },
+        {
+          "id": "B",
+          "text": "So the same rendering code can be reused both after the initial fetch and after each sort operation"
+        },
+        {
+          "id": "C",
+          "text": "To prevent the browser from caching the album images between renders"
+        },
+        {
+          "id": "D",
+          "text": "Because the `fetch()` API requires a dedicated render callback"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "The correct answer is \"So the same rendering code can be reused both after the initial fetch and after each sort operation\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "javascript"
+      ],
+      "sourceRefs": [
+        "Q4-Web2.pdf#q10"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q11",
+      "type": "single_choice",
+      "topic": "REST API",
+      "subtopic": "URLs",
+      "difficulty": "easy",
+      "questionMd": "When constructing a URL with multiple query parameters, which character is used to separate each parameter after the first one?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "`&`"
+        },
+        {
+          "id": "B",
+          "text": "`?`"
+        },
+        {
+          "id": "C",
+          "text": "`,`"
+        },
+        {
+          "id": "D",
+          "text": "`;`"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "The correct answer is \"`&`\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "rest-api"
+      ],
+      "sourceRefs": [
+        "Q4-Web2.pdf#q11"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q12",
+      "type": "single_choice",
+      "topic": "HTTP",
+      "subtopic": "Methods",
+      "difficulty": "easy",
+      "questionMd": "Which HTTP method does a browser send automatically whenever you navigate to a URL in the address bar?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "PUT"
+        },
+        {
+          "id": "B",
+          "text": "GET"
+        },
+        {
+          "id": "C",
+          "text": "DELETE"
+        },
+        {
+          "id": "D",
+          "text": "POST"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "The correct answer is \"GET\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "http"
+      ],
+      "sourceRefs": [
+        "Q4-Web2.pdf#q12"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q13",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Classes & Events",
+      "difficulty": "medium",
+      "questionMd": "In the discography page example, how does the `SortButton` class communicate a sort action back to the `App` class?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "It dispatches a custom keyboard event that triggers the App's event listener"
+        },
+        {
+          "id": "B",
+          "text": "It calls an `onClickCallback` function passed to it during construction, supplying the sort function as an argument"
+        },
+        {
+          "id": "C",
+          "text": "It directly modifies the `albumInfo` property of the `App` instance"
+        },
+        {
+          "id": "D",
+          "text": "It fires a built-in DOM click event that the `App` class listens for on the document"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "The correct answer is \"It calls an `onClickCallback` function passed to it during construction, supplying the sort function as an argument\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "javascript"
+      ],
+      "sourceRefs": [
+        "Q4-Web2.pdf#q13"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q14",
+      "type": "single_choice",
+      "topic": "Development",
+      "subtopic": "Local Server",
+      "difficulty": "easy",
+      "questionMd": "Which command is used to serve local files over HTTP so that `fetch()` can access them during development?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "`npm start http`"
+        },
+        {
+          "id": "B",
+          "text": "`node server.js`"
+        },
+        {
+          "id": "C",
+          "text": "`python3 -m fetch.server`"
+        },
+        {
+          "id": "D",
+          "text": "`python3 -m http.server`"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "The correct answer is \"`python3 -m http.server`\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "development"
+      ],
+      "sourceRefs": [
+        "Q4-Web2.pdf#q14"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q15",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Array Methods",
+      "difficulty": "easy",
+      "questionMd": "Which built-in JavaScript array method is used in the lecture to reorder album objects by year?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "`.reduce()`"
+        },
+        {
+          "id": "B",
+          "text": "`.map()`"
+        },
+        {
+          "id": "C",
+          "text": "`.filter()`"
+        },
+        {
+          "id": "D",
+          "text": "`.sort()`"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "The correct answer is \"`.sort()`\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "javascript"
+      ],
+      "sourceRefs": [
+        "Q4-Web2.pdf#q15"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q16",
+      "type": "single_choice",
+      "topic": "REST API",
+      "subtopic": "URLs",
+      "difficulty": "easy",
+      "questionMd": "Why is `encodeURIComponent()` used on a user's search query before appending it to a fetch URL?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "To encrypt the user's input before sending it to the server"
+        },
+        {
+          "id": "B",
+          "text": "To trim whitespace from the beginning and end of the search text"
+        },
+        {
+          "id": "C",
+          "text": "To convert the query string into a JSON-compatible format"
+        },
+        {
+          "id": "D",
+          "text": "To ensure special characters in the query string are properly percent-encoded and do not break the URL"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "The correct answer is \"To ensure special characters in the query string are properly percent-encoded and do not break the URL\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "rest-api"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming Quiz-4.pdf#q1"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q17",
+      "type": "single_choice",
+      "topic": "JSON",
+      "subtopic": "Terminology",
+      "difficulty": "easy",
+      "questionMd": "What does the acronym JSON stand for?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "JavaScript Object Notation"
+        },
+        {
+          "id": "B",
+          "text": "JavaScript Ordered Notation"
+        },
+        {
+          "id": "C",
+          "text": "Java Standard Object Notation"
+        },
+        {
+          "id": "D",
+          "text": "Java Serialized Object Notation"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "The correct answer is \"JavaScript Object Notation\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "json"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming Quiz-4.pdf#q2"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q18",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Classes & Events",
+      "difficulty": "medium",
+      "questionMd": "In the discography page example, how does the `SortButton` class communicate a sort action back to the `App` class?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "It calls an `onClickCallback` function passed to it during construction, supplying the sort function as an argument"
+        },
+        {
+          "id": "B",
+          "text": "It dispatches a custom keyboard event that triggers the App's event listener"
+        },
+        {
+          "id": "C",
+          "text": "It directly modifies the `albumInfo` property of the `App` instance"
+        },
+        {
+          "id": "D",
+          "text": "It fires a built-in DOM click event that the `App` class listens for on the document"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "The correct answer is \"It calls an `onClickCallback` function passed to it during construction, supplying the sort function as an argument\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "javascript"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming Quiz-4.pdf#q3"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q19",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Array Methods",
+      "difficulty": "easy",
+      "questionMd": "Which built-in JavaScript array method is used in the lecture to reorder album objects by year?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "`.reduce()`"
+        },
+        {
+          "id": "B",
+          "text": "`.map()`"
+        },
+        {
+          "id": "C",
+          "text": "`.sort()`"
+        },
+        {
+          "id": "D",
+          "text": "`.filter()`"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "The correct answer is \"`.sort()`\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "javascript"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming Quiz-4.pdf#q4"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q20",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Purpose",
+      "difficulty": "easy",
+      "questionMd": "What is the primary purpose of the `fetch()` function in JavaScript?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "To parse HTML documents and manipulate the DOM"
+        },
+        {
+          "id": "B",
+          "text": "To load resources asynchronously over a network using a Promise-based approach"
+        },
+        {
+          "id": "C",
+          "text": "To serialize JavaScript objects into JSON strings"
+        },
+        {
+          "id": "D",
+          "text": "To synchronously read files from the local file system"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "The correct answer is \"To load resources asynchronously over a network using a Promise-based approach\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "fetch-api"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming Quiz-4.pdf#q5"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q21",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "DOM Manipulation",
+      "difficulty": "medium",
+      "questionMd": "In the album discography example, how are existing album images removed from the page before re-rendering a sorted list?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "By setting `albumContainer.innerHTML = ''`"
+        },
+        {
+          "id": "B",
+          "text": "By iterating over child nodes and calling `remove()` on each"
+        },
+        {
+          "id": "C",
+          "text": "By calling `document.body.removeChild(albumContainer)`"
+        },
+        {
+          "id": "D",
+          "text": "By hiding the container with `albumContainer.style.display = 'none'`"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "The correct answer is \"By setting `albumContainer.innerHTML = ''`\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "javascript"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming Quiz-4.pdf#q6"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q22",
+      "type": "single_choice",
+      "topic": "JSON",
+      "subtopic": "Object Access",
+      "difficulty": "easy",
+      "questionMd": "Given the JSON object `{\"albums\": [{\"name\": \"Daydream\", \"year\": 1995}]}` parsed into a variable called `data`, how would you access the year of the first album?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "`data.albums.year[0]`"
+        },
+        {
+          "id": "B",
+          "text": "`data[\"year\"][\"albums\"][0]`"
+        },
+        {
+          "id": "C",
+          "text": "`data[0].albums.year`"
+        },
+        {
+          "id": "D",
+          "text": "`data.albums[0].year`"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "The correct answer is \"`data.albums[0].year`\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "json"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming Quiz-4.pdf#q7"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q23",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Array Sort",
+      "difficulty": "medium",
+      "questionMd": "To sort an array of album objects by year in ascending order, which comparator function should be passed to `.sort()`?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "`function(a, b) { return a.year - b.year; }`"
+        },
+        {
+          "id": "B",
+          "text": "`function(a, b) { return a.year; }`"
+        },
+        {
+          "id": "C",
+          "text": "`function(a, b) { return b.year - a.year; }`"
+        },
+        {
+          "id": "D",
+          "text": "`function(a, b) { return a.year + b.year; }`"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "The correct answer is \"`function(a, b) { return a.year - b.year; }`\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "javascript"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming Quiz-4.pdf#q8"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q24",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "DOM Input",
+      "difficulty": "easy",
+      "questionMd": "How does JavaScript read the current text entered by a user in an `<input type=\"text\">` element?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "By reading the `.textContent` property of the input element"
+        },
+        {
+          "id": "B",
+          "text": "By listening to the `input` event and reading `event.key`"
+        },
+        {
+          "id": "C",
+          "text": "By calling `getAttribute(\"text\")` on the input element"
+        },
+        {
+          "id": "D",
+          "text": "By accessing the `.value` property of the input element"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "The correct answer is \"By accessing the `.value` property of the input element\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "javascript"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming Quiz-4.pdf#q9"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q25",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Forms",
+      "difficulty": "easy",
+      "questionMd": "Why should `event.preventDefault()` be called inside a form's submit handler in a single-page web application?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "To stop the browser from refreshing the page upon form submission"
+        },
+        {
+          "id": "B",
+          "text": "To disable the submit button after the first click"
+        },
+        {
+          "id": "C",
+          "text": "To block any fetch requests triggered inside the handler"
+        },
+        {
+          "id": "D",
+          "text": "To prevent the form's input fields from being cleared automatically"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "The correct answer is \"To stop the browser from refreshing the page upon form submission\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "javascript"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming Quiz-4.pdf#q10"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q26",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "this Binding",
+      "difficulty": "medium",
+      "questionMd": "When a method like `_onJsonReady` is passed as a callback to `.then()`, why must it be bound using `this._onJsonReady = this._onJsonReady.bind(this)` in the constructor?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "To ensure that `this` inside the callback correctly refers to the class instance rather than being undefined or the global object"
+        },
+        {
+          "id": "B",
+          "text": "To prevent the method from being called more than once"
+        },
+        {
+          "id": "C",
+          "text": "To make the method execute synchronously instead of asynchronously"
+        },
+        {
+          "id": "D",
+          "text": "To allow the method to accept multiple parameters from the Promise chain"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "The correct answer is \"To ensure that `this` inside the callback correctly refers to the class instance rather than being undefined or the global object\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "javascript"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming Quiz-4.pdf#q11"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q27",
+      "type": "single_choice",
+      "topic": "JSON",
+      "subtopic": "Parsing",
+      "difficulty": "easy",
+      "questionMd": "A developer receives the string `{\"name\":\"Ice Bear\"}` from a server. Which function should they use to turn it into a usable JavaScript object?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "`JSON.objectify()`"
+        },
+        {
+          "id": "B",
+          "text": "`JSON.decode()`"
+        },
+        {
+          "id": "C",
+          "text": "`JSON.parse()`"
+        },
+        {
+          "id": "D",
+          "text": "`JSON.stringify()`"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "The correct answer is \"`JSON.parse()`\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "json"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming Quiz-4.pdf#q12"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q28",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "DOM Manipulation",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture's completed fetch example, which JavaScript expression creates a new image element equivalent to `document.createElement('img')`?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "`document.newImage()`"
+        },
+        {
+          "id": "B",
+          "text": "`new Image()`"
+        },
+        {
+          "id": "C",
+          "text": "`Image.create()`"
+        },
+        {
+          "id": "D",
+          "text": "`new Img()`"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "The correct answer is \"`new Image()`\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "javascript"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming Quiz-4.pdf#q13"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q29",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "Basics",
+      "difficulty": "easy",
+      "questionMd": "Which of the following best describes a JavaScript Promise?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "A built-in timer that delays code execution by a specified amount"
+        },
+        {
+          "id": "B",
+          "text": "A special array type used to store multiple fetch results"
+        },
+        {
+          "id": "C",
+          "text": "A synchronous function that immediately returns a value"
+        },
+        {
+          "id": "D",
+          "text": "An object representing the eventual completion or failure of an asynchronous operation"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "The correct answer is \"An object representing the eventual completion or failure of an asynchronous operation\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "promises"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming Quiz-4.pdf#q14"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q30",
+      "type": "single_choice",
+      "topic": "REST API",
+      "subtopic": "URLs",
+      "difficulty": "easy",
+      "questionMd": "In the URL `https://api.spotify.com/v1/search?type=album&q=beyonce`, what character marks the beginning of the query parameters?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "`/`"
+        },
+        {
+          "id": "B",
+          "text": "`&`"
+        },
+        {
+          "id": "C",
+          "text": "`?`"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "The correct answer is \"`?`\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "rest-api"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming Quiz-4.pdf#q15"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q31",
+      "type": "single_choice",
+      "topic": "REST API",
+      "subtopic": "Discovery",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, what is a common way to discover whether a product or service exposes a public REST API?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Browse the product's main website and look for a settings page"
+        },
+        {
+          "id": "B",
+          "text": "Search for `\"product name\" API` using a search engine"
+        },
+        {
+          "id": "C",
+          "text": "Check if the product has a mobile application available"
+        },
+        {
+          "id": "D",
+          "text": "Send an HTTP OPTIONS request directly to the product's base URL"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "The correct answer is \"Search for `\"product name\" API` using a search engine\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "rest-api"
+      ],
+      "sourceRefs": [
+        "Q4-supplementary-screenshots-set-A#q2"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q32",
+      "type": "single_choice",
+      "topic": "REST API",
+      "subtopic": "Definition",
+      "difficulty": "easy",
+      "questionMd": "Which of the following best describes a RESTful API?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "An API that only works with browser-side JavaScript and cannot be accessed from a server"
+        },
+        {
+          "id": "B",
+          "text": "An interface that exclusively uses the POST method to exchange data"
+        },
+        {
+          "id": "C",
+          "text": "A URL-based API that uses HTTP methods and sends requests to a base endpoint, returning a specified content type such as JSON"
+        },
+        {
+          "id": "D",
+          "text": "A protocol for rendering HTML pages dynamically using query strings"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "The correct answer is \"A URL-based API that uses HTTP methods and sends requests to a base endpoint, returning a specified content type such as JSON\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "rest-api"
+      ],
+      "sourceRefs": [
+        "Q4-supplementary-screenshots-set-A#q3"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q33",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "DOM Input",
+      "difficulty": "easy",
+      "questionMd": "How does JavaScript read the current text entered by a user in an `<input type=\"text\">` element?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "By accessing the `.value` property of the input element"
+        },
+        {
+          "id": "B",
+          "text": "By listening to the `input` event and reading `event.key`"
+        },
+        {
+          "id": "C",
+          "text": "By calling `getAttribute(\"text\")` on the input element"
+        },
+        {
+          "id": "D",
+          "text": "By reading the `.textContent` property of the input element"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "The correct answer is \"By accessing the `.value` property of the input element\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "javascript"
+      ],
+      "sourceRefs": [
+        "Q4-supplementary-screenshots-set-A#q4"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q34",
+      "type": "single_choice",
+      "topic": "JSON",
+      "subtopic": "Serialization",
+      "difficulty": "easy",
+      "questionMd": "Which of the following data types is natively preserved when a JavaScript object is serialized to JSON using `JSON.stringify()`?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Numbers"
+        },
+        {
+          "id": "B",
+          "text": "`undefined` values"
+        },
+        {
+          "id": "C",
+          "text": "Date objects"
+        },
+        {
+          "id": "D",
+          "text": "Functions"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "The correct answer is \"Numbers\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "json"
+      ],
+      "sourceRefs": [
+        "Q4-supplementary-screenshots-set-A#q5"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q35",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Array Sort",
+      "difficulty": "medium",
+      "questionMd": "To sort an array of album objects by year in ascending order, which comparator function should be passed to `.sort()`?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "`function(a, b) { return a.year + b.year; }`"
+        },
+        {
+          "id": "B",
+          "text": "`function(a, b) { return a.year - b.year; }`"
+        },
+        {
+          "id": "C",
+          "text": "`function(a, b) { return a.year; }`"
+        },
+        {
+          "id": "D",
+          "text": "`function(a, b) { return b.year - a.year; }`"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "The correct answer is \"`function(a, b) { return a.year - b.year; }`\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "javascript"
+      ],
+      "sourceRefs": [
+        "Q4-supplementary-screenshots-set-A#q6"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q36",
+      "type": "single_choice",
+      "topic": "REST API",
+      "subtopic": "Static vs Dynamic",
+      "difficulty": "medium",
+      "questionMd": "What is the fundamental difference between a URL that points to a static file and a URL that represents a REST API endpoint?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "A REST API endpoint returns HTML, while a static file URL always returns JSON"
+        },
+        {
+          "id": "B",
+          "text": "A REST API endpoint always requires POST, while static file URLs always use GET"
+        },
+        {
+          "id": "C",
+          "text": "A static file URL must include query parameters, while a REST API endpoint never does"
+        },
+        {
+          "id": "D",
+          "text": "A REST API endpoint causes the server to dynamically generate a response, whereas a static file URL causes the server to return a stored file"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "The correct answer is \"A REST API endpoint causes the server to dynamically generate a response, whereas a static file URL causes the server to return a stored file\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "rest-api"
+      ],
+      "sourceRefs": [
+        "Q4-supplementary-screenshots-set-A#q7"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q37",
+      "type": "single_choice",
+      "topic": "JSON",
+      "subtopic": "Object Access",
+      "difficulty": "easy",
+      "questionMd": "Given the JSON object `{\"albums\": [{\"name\": \"Daydream\", \"year\": 1995}]}` parsed into a variable called `data`, how would you access the year of the first album?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "`data[0].albums.year`"
+        },
+        {
+          "id": "B",
+          "text": "`data.albums.year[0]`"
+        },
+        {
+          "id": "C",
+          "text": "`data.albums[0].year`"
+        },
+        {
+          "id": "D",
+          "text": "`data[\"year\"][\"albums\"][0]`"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "The correct answer is \"`data.albums[0].year`\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "json"
+      ],
+      "sourceRefs": [
+        "Q4-supplementary-screenshots-set-A#q8"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q38",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Forms",
+      "difficulty": "easy",
+      "questionMd": "To allow a form to submit when a user presses the Enter key, which event should be listened for on the `<form>` element?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "click"
+        },
+        {
+          "id": "B",
+          "text": "submit"
+        },
+        {
+          "id": "C",
+          "text": "keydown"
+        },
+        {
+          "id": "D",
+          "text": "change"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "The correct answer is \"submit\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "javascript"
+      ],
+      "sourceRefs": [
+        "Q4-supplementary-screenshots-set-A#q9"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q40",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "DOM Manipulation",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture's completed fetch example, which JavaScript expression creates a new image element equivalent to `document.createElement('img')`?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "`new Image()`"
+        },
+        {
+          "id": "B",
+          "text": "`new Img()`"
+        },
+        {
+          "id": "C",
+          "text": "`Image.create()`"
+        },
+        {
+          "id": "D",
+          "text": "`document.newImage()`"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "The correct answer is \"`new Image()`\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "javascript"
+      ],
+      "sourceRefs": [
+        "Q4-supplementary-screenshots-set-A#q11"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q41",
+      "type": "single_choice",
+      "topic": "Development",
+      "subtopic": "Local Server",
+      "difficulty": "easy",
+      "questionMd": "Which command is used to serve local files over HTTP so that `fetch()` can access them during development?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "`npm start http`"
+        },
+        {
+          "id": "B",
+          "text": "`python3 -m fetch.server`"
+        },
+        {
+          "id": "C",
+          "text": "`python3 -m http.server`"
+        },
+        {
+          "id": "D",
+          "text": "`node server.js`"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "The correct answer is \"`python3 -m http.server`\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "development"
+      ],
+      "sourceRefs": [
+        "Q4-supplementary-screenshots-set-A#q12"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q42",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Forms",
+      "difficulty": "easy",
+      "questionMd": "Why should `event.preventDefault()` be called inside a form's submit handler in a single-page web application?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "To stop the browser from refreshing the page upon form submission"
+        },
+        {
+          "id": "B",
+          "text": "To prevent the form's input fields from being cleared automatically"
+        },
+        {
+          "id": "C",
+          "text": "To block any fetch requests triggered inside the handler"
+        },
+        {
+          "id": "D",
+          "text": "To disable the submit button after the first click"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "The correct answer is \"To stop the browser from refreshing the page upon form submission\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "javascript"
+      ],
+      "sourceRefs": [
+        "Q4-supplementary-screenshots-set-A#q13"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q43",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Response Object",
+      "difficulty": "easy",
+      "questionMd": "In a typical `fetch()` call chain, what does the first `.then()` callback receive as its parameter?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "A JSON string representation of the resource"
+        },
+        {
+          "id": "B",
+          "text": "The final parsed data ready for use"
+        },
+        {
+          "id": "C",
+          "text": "An array of all fetched resources"
+        },
+        {
+          "id": "D",
+          "text": "A Response object from the network request"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "The correct answer is \"A Response object from the network request\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "fetch-api"
+      ],
+      "sourceRefs": [
+        "Q4-supplementary-screenshots-set-A#q14"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q44",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Async Behavior",
+      "difficulty": "easy",
+      "questionMd": "Why is the `fetch()` API described as asynchronous in the context of web programming?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "It blocks script execution until the full response is received"
+        },
+        {
+          "id": "B",
+          "text": "It automatically retries failed requests without any extra code"
+        },
+        {
+          "id": "C",
+          "text": "It allows the browser to continue executing other code while waiting for the network response"
+        },
+        {
+          "id": "D",
+          "text": "It guarantees that the response arrives faster than synchronous requests"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "The correct answer is \"It allows the browser to continue executing other code while waiting for the network response\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "fetch-api"
+      ],
+      "sourceRefs": [
+        "Q4-supplementary-screenshots-set-A#q15"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q45",
+      "type": "single_choice",
+      "topic": "REST API",
+      "subtopic": "URLs",
+      "difficulty": "easy",
+      "questionMd": "In the URL `https://api.spotify.com/v1/search?type=album&q=beyonce`, what character marks the beginning of the query parameters?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "`?`"
+        },
+        {
+          "id": "B",
+          "text": "`/`"
+        },
+        {
+          "id": "C",
+          "text": "`&`"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "The correct answer is \"`?`\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "rest-api"
+      ],
+      "sourceRefs": [
+        "Q4-supplementary-screenshots-set-A#q1"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q46",
+      "type": "single_choice",
+      "topic": "HTTP",
+      "subtopic": "Methods",
+      "difficulty": "easy",
+      "questionMd": "By default, without any additional options, which HTTP method does the `fetch()` API use when making a request?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "POST"
+        },
+        {
+          "id": "B",
+          "text": "GET"
+        },
+        {
+          "id": "C",
+          "text": "DELETE"
+        },
+        {
+          "id": "D",
+          "text": "PUT"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "The correct answer is \"GET\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "http"
+      ],
+      "sourceRefs": [
+        "Q4-supplementary-screenshots-set-B#q1"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q47",
+      "type": "single_choice",
+      "topic": "Web History",
+      "subtopic": "GraphQL",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, which company originally developed and used GraphQL before open-sourcing it?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "GitHub"
+        },
+        {
+          "id": "B",
+          "text": "Netflix"
+        },
+        {
+          "id": "C",
+          "text": "Facebook"
+        },
+        {
+          "id": "D",
+          "text": "Spotify"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "The correct answer is \"Facebook\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "web-history"
+      ],
+      "sourceRefs": [
+        "Q4-supplementary-screenshots-set-B#q4"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q48",
+      "type": "single_choice",
+      "topic": "REST API",
+      "subtopic": "MIME Types",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, what does MIME type (content type) specify in the context of a RESTful API request?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "The maximum size of the response body allowed"
+        },
+        {
+          "id": "B",
+          "text": "The HTTP method that must be used for the request"
+        },
+        {
+          "id": "C",
+          "text": "The authentication scheme required to access the endpoint"
+        },
+        {
+          "id": "D",
+          "text": "The format of the data being sent or returned, such as JSON, HTML, or plain text"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "The correct answer is \"The format of the data being sent or returned, such as JSON, HTML, or plain text\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "rest-api"
+      ],
+      "sourceRefs": [
+        "Q4-supplementary-screenshots-set-B#q7"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q49",
+      "type": "single_choice",
+      "topic": "Web APIs",
+      "subtopic": "Falcor vs GraphQL",
+      "difficulty": "medium",
+      "questionMd": "How does the lecture characterize Netflix's Falcor compared to GraphQL as an alternative to REST?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Falcor is described as the most widely adopted REST alternative in the industry"
+        },
+        {
+          "id": "B",
+          "text": "Falcor is described as a synchronous alternative to REST that avoids HTTP entirely"
+        },
+        {
+          "id": "C",
+          "text": "Falcor is described as likely interesting but rarely used in practice and lacking a Wikipedia page"
+        },
+        {
+          "id": "D",
+          "text": "Falcor is described as the predecessor to GraphQL that Facebook later adopted"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "The correct answer is \"Falcor is described as likely interesting but rarely used in practice and lacking a Wikipedia page\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "web-apis"
+      ],
+      "sourceRefs": [
+        "Q4-supplementary-screenshots-set-B#q11"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q50",
+      "type": "single_choice",
+      "topic": "HTTP",
+      "subtopic": "Status Codes",
+      "difficulty": "easy",
+      "questionMd": "In HTTP communication, what does a status code in the 200 range generally indicate?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "The client must authenticate before proceeding"
+        },
+        {
+          "id": "B",
+          "text": "The server encountered an internal error"
+        },
+        {
+          "id": "C",
+          "text": "The request was successful"
+        },
+        {
+          "id": "D",
+          "text": "The resource was not found"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "The correct answer is \"The request was successful\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "http"
+      ],
+      "sourceRefs": [
+        "Q4-supplementary-screenshots-set-B#q18"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q51",
+      "type": "single_choice",
+      "topic": "HTTP",
+      "subtopic": "Methods",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, which HTTP method is used specifically to send or submit data to a server?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "GET"
+        },
+        {
+          "id": "B",
+          "text": "HEAD"
+        },
+        {
+          "id": "C",
+          "text": "PATCH"
+        },
+        {
+          "id": "D",
+          "text": "POST"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "The correct answer is \"POST\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "http"
+      ],
+      "sourceRefs": [
+        "Q4-supplementary-screenshots-set-B#q19"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q52",
+      "type": "single_choice",
+      "topic": "JSON",
+      "subtopic": "Parsing",
+      "difficulty": "easy",
+      "questionMd": "Which function would you use to convert a JSON string back into a JavaScript object?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "`JSON.decode()`"
+        },
+        {
+          "id": "B",
+          "text": "`JSON.stringify()`"
+        },
+        {
+          "id": "C",
+          "text": "`JSON.parse()`"
+        },
+        {
+          "id": "D",
+          "text": "`JSON.hydrate()`"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "The correct answer is \"`JSON.parse()`\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "json"
+      ],
+      "sourceRefs": [
+        "Q4-supplementary-screenshots-set-B#q23"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q53",
+      "type": "single_choice",
+      "topic": "JSON",
+      "subtopic": "Serialization",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, what does it mean to \"serialize\" an object?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "To turn an object into a string that can later be deserialized"
+        },
+        {
+          "id": "B",
+          "text": "To load an object from an external file using fetch"
+        },
+        {
+          "id": "C",
+          "text": "To send an object directly to a server over HTTP"
+        },
+        {
+          "id": "D",
+          "text": "To convert a string into a JavaScript object"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "The correct answer is \"To turn an object into a string that can later be deserialized\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "json"
+      ],
+      "sourceRefs": [
+        "Q4-supplementary-screenshots-set-B#q24"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q54",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Chaining",
+      "difficulty": "medium",
+      "questionMd": "In the lecture's chained fetch example, what is the correct order of asynchronous operations?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "`fetch` completes, then `onResponse` runs, then `response.text()` completes, then `onStreamProcessed` runs"
+        },
+        {
+          "id": "B",
+          "text": "`onStreamProcessed` runs first, then `fetch` completes, then `onResponse` runs"
+        },
+        {
+          "id": "C",
+          "text": "`fetch` and `response.text()` run simultaneously before any handlers fire"
+        },
+        {
+          "id": "D",
+          "text": "`response.text()` runs before `fetch` completes"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "The correct answer is \"`fetch` completes, then `onResponse` runs, then `response.text()` completes, then `onStreamProcessed` runs\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "fetch-api"
+      ],
+      "sourceRefs": [
+        "Q4-supplementary-screenshots-set-B#q25"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q55",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "then()",
+      "difficulty": "easy",
+      "questionMd": "A Promise has a `.then()` method that accepts which of the following?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "A timeout value and a retry count"
+        },
+        {
+          "id": "B",
+          "text": "A single callback that handles both success and failure identically"
+        },
+        {
+          "id": "C",
+          "text": "Functions to execute on success or on error"
+        },
+        {
+          "id": "D",
+          "text": "A URL string and an HTTP method"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "The correct answer is \"Functions to execute on success or on error\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "promises"
+      ],
+      "sourceRefs": [
+        "Q4-supplementary-screenshots-set-B#q22"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q56",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Response Handling",
+      "difficulty": "easy",
+      "questionMd": "How does `response.text()` read the response data according to the lecture?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Synchronously, by returning the string directly"
+        },
+        {
+          "id": "B",
+          "text": "Asynchronously, by returning a Promise that resolves with the response string"
+        },
+        {
+          "id": "C",
+          "text": "By dispatching a DOM event when reading is complete"
+        },
+        {
+          "id": "D",
+          "text": "By writing the result into a global variable"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "The correct answer is \"Asynchronously, by returning a Promise that resolves with the response string\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "fetch-api"
+      ],
+      "sourceRefs": [
+        "Q4-supplementary-screenshots-set-B#q21"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4m_q57",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "States",
+      "difficulty": "easy",
+      "questionMd": "Which of the following best describes the \"pending\" state of a Promise?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "The state where the error handler has been triggered"
+        },
+        {
+          "id": "B",
+          "text": "The state where the operation completed but returned no data"
+        },
+        {
+          "id": "C",
+          "text": "The state where `.then()` has been called but not yet attached"
+        },
+        {
+          "id": "D",
+          "text": "The initial state where the operation has not yet fulfilled or rejected"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "The correct answer is \"The initial state where the operation has not yet fulfilled or rejected\" based on the lecture/examples in the provided quiz sources.",
+      "tags": [
+        "promises"
+      ],
+      "sourceRefs": [
+        "Q4-supplementary-screenshots-set-B#q20"
+      ],
+      "needs_review": false
+    }
+  ]
+}

@@ -1,0 +1,2721 @@
+{
+  "quizId": "old-examples-mert",
+  "title": "Dynamic Web Programming - Old Examples",
+  "course": "Dynamic Web Programming",
+  "language": "en",
+  "source": "web2 çıkmış- Mert.pdf",
+  "shuffleQuestions": false,
+  "shuffleOptions": false,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "true_false",
+      "topic": "JavaScript",
+      "subtopic": "Event Loop",
+      "difficulty": "easy",
+      "questionMd": "The order in which callbacks are added to the event queue determines the order in which they are executed.",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Correct answer according to the source material: True",
+      "tags": [
+        "javascript",
+        "event-loop"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q2",
+      "type": "true_false",
+      "topic": "Express",
+      "subtopic": "Basics",
+      "difficulty": "easy",
+      "questionMd": "Express.js is a server-side JavaScript framework.",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Correct answer according to the source material: True",
+      "tags": [
+        "express",
+        "basics"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "topic": "Server-side",
+      "subtopic": "Basics",
+      "difficulty": "easy",
+      "questionMd": "What is a server-side programming language?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "A programming language that can run on both the client-side and server-side"
+        },
+        {
+          "id": "B",
+          "text": "A programming language that runs on the server-side"
+        },
+        {
+          "id": "C",
+          "text": "A programming language that runs on the client-side"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Correct answer according to the source material: A programming language that runs on the server-side",
+      "tags": [
+        "server-side",
+        "basics"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "topic": "Node.js",
+      "subtopic": "Modules",
+      "difficulty": "easy",
+      "questionMd": "In Node.js, the `require` function is used to import external modules and libraries.",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Correct answer according to the source material: True",
+      "tags": [
+        "node.js",
+        "modules"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q5",
+      "type": "single_choice",
+      "topic": "REST API",
+      "subtopic": "HTTP Methods",
+      "difficulty": "easy",
+      "questionMd": "What does the HTTP method PUT do in RESTful API?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Retrieve a resource"
+        },
+        {
+          "id": "B",
+          "text": "Update an existing resource"
+        },
+        {
+          "id": "C",
+          "text": "Delete a resource"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Correct answer according to the source material: Update an existing resource",
+      "tags": [
+        "rest-api",
+        "http-methods"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q6",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Asynchronous Programming",
+      "difficulty": "easy",
+      "questionMd": "When an asynchronous function is called, where does it get executed?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "The callback queue"
+        },
+        {
+          "id": "B",
+          "text": "The call stack"
+        },
+        {
+          "id": "C",
+          "text": "The event queue"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Correct answer according to the source material: The callback queue",
+      "tags": [
+        "javascript",
+        "asynchronous-programming"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q7",
+      "type": "single_choice",
+      "topic": "Express",
+      "subtopic": "Code Completion",
+      "difficulty": "easy",
+      "questionMd": "Which of the following correctly completes the code to create an Express app?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "server()"
+        },
+        {
+          "id": "B",
+          "text": "router()"
+        },
+        {
+          "id": "C",
+          "text": "express()"
+        },
+        {
+          "id": "D",
+          "text": "app()"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "Correct answer according to the source material: express()",
+      "tags": [
+        "express",
+        "code-completion"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q8",
+      "type": "single_choice",
+      "topic": "Express",
+      "subtopic": "Routing",
+      "difficulty": "easy",
+      "questionMd": "Which of the following methods is used to specify the URL path and HTTP method for a route in Express.js?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "app.put()"
+        },
+        {
+          "id": "B",
+          "text": "app.use()"
+        },
+        {
+          "id": "C",
+          "text": "app.get()"
+        },
+        {
+          "id": "D",
+          "text": "app.post()"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "Correct answer according to the source material: app.get()",
+      "tags": [
+        "express",
+        "routing"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q9",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Response Parsing",
+      "difficulty": "easy",
+      "questionMd": "Which method is used to parse the response body as JSON?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "json()"
+        },
+        {
+          "id": "B",
+          "text": "text()"
+        },
+        {
+          "id": "C",
+          "text": "blob()"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Correct answer according to the source material: json()",
+      "tags": [
+        "fetch-api",
+        "response-parsing"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q10",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Request Options",
+      "difficulty": "easy",
+      "questionMd": "What is the purpose of the `headers` property in a Fetch API request?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "To specify the URL of the server to send the request to"
+        },
+        {
+          "id": "B",
+          "text": "To specify the content type of the request body"
+        },
+        {
+          "id": "C",
+          "text": "To specify the type of HTTP method to use"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Correct answer according to the source material: To specify the content type of the request body. This source answer is preserved as shown in the PDF.",
+      "tags": [
+        "fetch-api",
+        "request-options"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": true
+    },
+    {
+      "id": "q11",
+      "type": "true_false",
+      "topic": "JavaScript",
+      "subtopic": "Event Loop",
+      "difficulty": "easy",
+      "questionMd": "The event loop is a feature of the V8 engine used by Google Chrome and Node.js.",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Correct answer according to the source material: True",
+      "tags": [
+        "javascript",
+        "event-loop"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q12",
+      "type": "single_choice",
+      "topic": "Web",
+      "subtopic": "Servers",
+      "difficulty": "easy",
+      "questionMd": "What is a server?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "A computer program that processes requests and delivers data over the internet"
+        },
+        {
+          "id": "B",
+          "text": "A programming language used for creating web applications"
+        },
+        {
+          "id": "C",
+          "text": "A type of database used for storing user information"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Correct answer according to the source material: A computer program that processes requests and delivers data over the internet",
+      "tags": [
+        "web",
+        "servers"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q13",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "HTTP Methods",
+      "difficulty": "easy",
+      "questionMd": "What is the syntax for making a GET request with the Fetch API?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "fetch(url, {method: 'POST'})"
+        },
+        {
+          "id": "B",
+          "text": "fetch(url, {method: 'GET'})"
+        },
+        {
+          "id": "C",
+          "text": "fetch(url, {method: 'PUT'})"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Correct answer according to the source material: fetch(url, {method: 'GET'})",
+      "tags": [
+        "fetch-api",
+        "http-methods"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q14",
+      "type": "true_false",
+      "topic": "Express",
+      "subtopic": "Response Methods",
+      "difficulty": "easy",
+      "questionMd": "In Express.js, the `res.sendFile()` method is used to send a file as a response.",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Correct answer according to the source material: True",
+      "tags": [
+        "express",
+        "response-methods"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q15",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Promises and Async/Await",
+      "difficulty": "easy",
+      "questionMd": "What is the difference between `fetch` and `fetch with async/await`?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "`fetch` with async/await is a deprecated method of handling responses"
+        },
+        {
+          "id": "B",
+          "text": "`fetch` with async/await is a more concise and readable way to handle responses"
+        },
+        {
+          "id": "C",
+          "text": "There is no difference, they are the same thing"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Correct answer according to the source material: `fetch` with async/await is a more concise and readable way to handle responses",
+      "tags": [
+        "fetch-api",
+        "promises-and-async/await"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q16",
+      "type": "true_false",
+      "topic": "Express",
+      "subtopic": "Basics",
+      "difficulty": "easy",
+      "questionMd": "Express is a Node.js web framework for building web applications and APIs.",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Correct answer according to the source material: True",
+      "tags": [
+        "express",
+        "basics"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q17",
+      "type": "true_false",
+      "topic": "JavaScript",
+      "subtopic": "Event Loop",
+      "difficulty": "easy",
+      "questionMd": "The event loop can block the execution of synchronous code in JavaScript.",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Correct answer according to the source material: False",
+      "tags": [
+        "javascript",
+        "event-loop"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q18",
+      "type": "single_choice",
+      "topic": "Express",
+      "subtopic": "Basics",
+      "difficulty": "easy",
+      "questionMd": "Which of the following statements is true about Express.js?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "It is a programming language for Node.js"
+        },
+        {
+          "id": "B",
+          "text": "It is a web application framework for Node.js"
+        },
+        {
+          "id": "C",
+          "text": "It is a package manager for Node.js"
+        },
+        {
+          "id": "D",
+          "text": "It is a database management system for Node.js"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Correct answer according to the source material: It is a web application framework for Node.js",
+      "tags": [
+        "express",
+        "basics"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q19",
+      "type": "true_false",
+      "topic": "Express",
+      "subtopic": "Server Startup",
+      "difficulty": "easy",
+      "questionMd": "The `app.listen` method is used to start a Node.js server with Express.",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Correct answer according to the source material: True",
+      "tags": [
+        "express",
+        "server-startup"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q20",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Event Loop",
+      "difficulty": "easy",
+      "questionMd": "What is the event loop in JavaScript?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "A system that handles asynchronous operations in JavaScript"
+        },
+        {
+          "id": "B",
+          "text": "A function that synchronously executes JavaScript code"
+        },
+        {
+          "id": "C",
+          "text": "A loop that executes JavaScript code repeatedly"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Correct answer according to the source material: A system that handles asynchronous operations in JavaScript",
+      "tags": [
+        "javascript",
+        "event-loop"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q21",
+      "type": "single_choice",
+      "topic": "Express",
+      "subtopic": "Request Object",
+      "difficulty": "easy",
+      "questionMd": "What is the purpose of the `req` object in Express.js?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "To receive data from the client"
+        },
+        {
+          "id": "B",
+          "text": "To store data in the client's browser"
+        },
+        {
+          "id": "C",
+          "text": "To execute a middleware function"
+        },
+        {
+          "id": "D",
+          "text": "To send a response to the client"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Correct answer according to the source material: To receive data from the client",
+      "tags": [
+        "express",
+        "request-object"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q22",
+      "type": "true_false",
+      "topic": "Express",
+      "subtopic": "API Design",
+      "difficulty": "easy",
+      "questionMd": "Express.js can be used to create both RESTful and non-RESTful APIs.",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Correct answer according to the source material: True",
+      "tags": [
+        "express",
+        "api-design"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q23",
+      "type": "true_false",
+      "topic": "JavaScript",
+      "subtopic": "Call Stack",
+      "difficulty": "easy",
+      "questionMd": "The call stack is a first-in, last-out data structure that stores function calls.",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Correct answer according to the source material: True",
+      "tags": [
+        "javascript",
+        "call-stack"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q24",
+      "type": "single_choice",
+      "topic": "REST API",
+      "subtopic": "Status Codes",
+      "difficulty": "easy",
+      "questionMd": "Which status code indicates a successful response in RESTful API?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "500 Internal Server Error"
+        },
+        {
+          "id": "B",
+          "text": "404 Not Found"
+        },
+        {
+          "id": "C",
+          "text": "200 OK"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "Correct answer according to the source material: 200 OK",
+      "tags": [
+        "rest-api",
+        "status-codes"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q25",
+      "type": "single_choice",
+      "topic": "Web",
+      "subtopic": "Architecture",
+      "difficulty": "easy",
+      "questionMd": "What is the back-end of a web application?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "The part of the application the user interacts with"
+        },
+        {
+          "id": "B",
+          "text": "The part of the application responsible for processing and storing data"
+        },
+        {
+          "id": "C",
+          "text": "The part of the application responsible for designing the user interface"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Correct answer according to the source material: The part of the application responsible for processing and storing data",
+      "tags": [
+        "web",
+        "architecture"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q26",
+      "type": "single_choice",
+      "topic": "Node.js",
+      "subtopic": "Express vs Node",
+      "difficulty": "easy",
+      "questionMd": "Which of the following is a difference between Node.js and Express.js?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Node.js is a package manager, while Express.js is a web application framework"
+        },
+        {
+          "id": "B",
+          "text": "Node.js is a runtime environment for executing JavaScript, while Express.js is a web application framework built on top of Node.js"
+        },
+        {
+          "id": "C",
+          "text": "Node.js is used for server-side scripting, while Express.js is used for client-side scripting"
+        },
+        {
+          "id": "D",
+          "text": "Node.js is a programming language, while Express.js is a database management system"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Correct answer according to the source material: Node.js is a runtime environment for executing JavaScript, while Express.js is a web application framework built on top of Node.js",
+      "tags": [
+        "node.js",
+        "express-vs-node"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q27",
+      "type": "single_choice",
+      "topic": "Express",
+      "subtopic": "Response Methods",
+      "difficulty": "easy",
+      "questionMd": "What is the purpose of the `res.send()` method in an Express.js application?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "To send a response back to the client"
+        },
+        {
+          "id": "B",
+          "text": "To define the routes for the application"
+        },
+        {
+          "id": "C",
+          "text": "To handle errors in the application"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Correct answer according to the source material: To send a response back to the client",
+      "tags": [
+        "express",
+        "response-methods"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q28",
+      "type": "single_choice",
+      "topic": "Node.js",
+      "subtopic": "Event Loop",
+      "difficulty": "easy",
+      "questionMd": "What is the purpose of the event loop in Node.js?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "To handle file I/O operations"
+        },
+        {
+          "id": "B",
+          "text": "To handle HTTP requests"
+        },
+        {
+          "id": "C",
+          "text": "To handle asynchronous operations"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "Correct answer according to the source material: To handle asynchronous operations",
+      "tags": [
+        "node.js",
+        "event-loop"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q29",
+      "type": "single_choice",
+      "topic": "Express",
+      "subtopic": "Middleware",
+      "difficulty": "easy",
+      "questionMd": "What is the purpose of the `app.use()` middleware function in Express.js?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "To handle HTTP requests"
+        },
+        {
+          "id": "B",
+          "text": "To define route handlers"
+        },
+        {
+          "id": "C",
+          "text": "To serve static files"
+        },
+        {
+          "id": "D",
+          "text": "To execute a middleware function"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "Correct answer according to the source material: To execute a middleware function. Some other source screenshots in this PDF specifically mention static-file serving via express.static(), but this question's displayed source answer is preserved.",
+      "tags": [
+        "express",
+        "middleware"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": true
+    },
+    {
+      "id": "q30",
+      "type": "single_choice",
+      "topic": "Node.js",
+      "subtopic": "npm",
+      "difficulty": "easy",
+      "questionMd": "What is the purpose of the `npm` command in Node.js?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "To start a Node.js server"
+        },
+        {
+          "id": "B",
+          "text": "To install and manage packages and dependencies"
+        },
+        {
+          "id": "C",
+          "text": "To create a new Node.js application"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Correct answer according to the source material: To install and manage packages and dependencies",
+      "tags": [
+        "node.js",
+        "npm"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q31",
+      "type": "true_false",
+      "topic": "JavaScript",
+      "subtopic": "Event Loop",
+      "difficulty": "easy",
+      "questionMd": "The event loop is only used in web browsers and is not present in server-side JavaScript environments like Node.js.",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Correct answer according to the source material: False",
+      "tags": [
+        "javascript",
+        "event-loop"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q32",
+      "type": "true_false",
+      "topic": "Node.js",
+      "subtopic": "Basics",
+      "difficulty": "easy",
+      "questionMd": "Node.js is a server-side runtime environment for executing JavaScript code.",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Correct answer according to the source material: True",
+      "tags": [
+        "node.js",
+        "basics"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q33",
+      "type": "single_choice",
+      "topic": "Express",
+      "subtopic": "Static Files",
+      "difficulty": "easy",
+      "questionMd": "What is the purpose of the `express.static()` middleware in Express.js?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "To handle HTTP requests"
+        },
+        {
+          "id": "B",
+          "text": "To define route handlers"
+        },
+        {
+          "id": "C",
+          "text": "To serve static files"
+        },
+        {
+          "id": "D",
+          "text": "To execute a middleware function"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "Correct answer according to the source material: To serve static files",
+      "tags": [
+        "express",
+        "static-files"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q34",
+      "type": "true_false",
+      "topic": "Node.js",
+      "subtopic": "Asynchronous Programming",
+      "difficulty": "easy",
+      "questionMd": "In Node.js, asynchronous operations can be handled using callbacks, promises, or async/await.",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Correct answer according to the source material: True",
+      "tags": [
+        "node.js",
+        "asynchronous-programming"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q35",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Basics",
+      "difficulty": "easy",
+      "questionMd": "Which of the following is used on the client-side to make HTTP requests?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "None of them"
+        },
+        {
+          "id": "B",
+          "text": "Express.js"
+        },
+        {
+          "id": "C",
+          "text": "Both of them"
+        },
+        {
+          "id": "D",
+          "text": "Fetch API"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "Correct answer according to the source material: Fetch API",
+      "tags": [
+        "fetch-api",
+        "basics"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q36",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Basics",
+      "difficulty": "easy",
+      "questionMd": "What is the Fetch API used for?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "To create and manipulate HTML elements"
+        },
+        {
+          "id": "B",
+          "text": "To make HTTP requests and receive responses from servers"
+        },
+        {
+          "id": "C",
+          "text": "To perform complex mathematical calculations"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Correct answer according to the source material: To make HTTP requests and receive responses from servers",
+      "tags": [
+        "fetch-api",
+        "basics"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q37",
+      "type": "true_false",
+      "topic": "Express",
+      "subtopic": "Basics",
+      "difficulty": "easy",
+      "questionMd": "Express.js can only handle HTTP requests and responses.",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Correct answer according to the source material: True. This source answer is preserved from the PDF.",
+      "tags": [
+        "express",
+        "basics"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": true
+    },
+    {
+      "id": "q38",
+      "type": "true_false",
+      "topic": "JavaScript",
+      "subtopic": "Event Loop",
+      "difficulty": "easy",
+      "questionMd": "The event loop in JavaScript is a single-threaded system.",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Correct answer according to the source material: True",
+      "tags": [
+        "javascript",
+        "event-loop"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q39",
+      "type": "true_false",
+      "topic": "JavaScript",
+      "subtopic": "Event Loop",
+      "difficulty": "easy",
+      "questionMd": "The event loop is responsible for handling both synchronous and asynchronous operations in JavaScript.",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Correct answer according to the source material: True",
+      "tags": [
+        "javascript",
+        "event-loop"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q40",
+      "type": "true_false",
+      "topic": "Express",
+      "subtopic": "Static Files",
+      "difficulty": "easy",
+      "questionMd": "Express.js allows you to serve static files, such as HTML, CSS, and JavaScript, using the `express.static()` middleware.",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Correct answer according to the source material: True",
+      "tags": [
+        "express",
+        "static-files"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q41",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Promises",
+      "difficulty": "easy",
+      "questionMd": "What is a Promise in the context of the Fetch API?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "A way to handle errors that occur during a Fetch request"
+        },
+        {
+          "id": "B",
+          "text": "A way to handle synchronous operations in JavaScript"
+        },
+        {
+          "id": "C",
+          "text": "A way to handle asynchronous operations in JavaScript"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "Correct answer according to the source material: A way to handle asynchronous operations in JavaScript",
+      "tags": [
+        "javascript",
+        "promises"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q42",
+      "type": "single_choice",
+      "topic": "Express",
+      "subtopic": "Basics",
+      "difficulty": "easy",
+      "questionMd": "What is the purpose of the `express()` function in Express.js?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "It sends a response to the client"
+        },
+        {
+          "id": "B",
+          "text": "It creates a new Express application"
+        },
+        {
+          "id": "C",
+          "text": "It defines a new route"
+        },
+        {
+          "id": "D",
+          "text": "It connects to a database"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Correct answer according to the source material: It creates a new Express application",
+      "tags": [
+        "express",
+        "basics"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q43",
+      "type": "single_choice",
+      "topic": "REST API",
+      "subtopic": "Basics",
+      "difficulty": "easy",
+      "questionMd": "What is a RESTful API?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "An API that uses the REST architectural style for building web services"
+        },
+        {
+          "id": "B",
+          "text": "An API that is easy to use and understand"
+        },
+        {
+          "id": "C",
+          "text": "An API that is designed specifically for mobile applications"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Correct answer according to the source material: An API that uses the REST architectural style for building web services",
+      "tags": [
+        "rest-api",
+        "basics"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q44",
+      "type": "true_false",
+      "topic": "Express",
+      "subtopic": "Express vs Node",
+      "difficulty": "easy",
+      "questionMd": "Express.js can be used as a substitute for Node.js.",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Correct answer according to the source material: False",
+      "tags": [
+        "express",
+        "express-vs-node"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q45",
+      "type": "single_choice",
+      "topic": "Express",
+      "subtopic": "Server Startup",
+      "difficulty": "easy",
+      "questionMd": "What is the purpose of the `app.listen()` method in an Express.js application?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "To start the server and listen for incoming requests"
+        },
+        {
+          "id": "B",
+          "text": "To define the routes for the application"
+        },
+        {
+          "id": "C",
+          "text": "To handle errors in the application"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Correct answer according to the source material: To start the server and listen for incoming requests",
+      "tags": [
+        "express",
+        "server-startup"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q46",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Response Object",
+      "difficulty": "easy",
+      "questionMd": "What is the purpose of the `response` object in a Fetch API request?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "To represent the request to the server"
+        },
+        {
+          "id": "B",
+          "text": "To represent the response from the server"
+        },
+        {
+          "id": "C",
+          "text": "To represent the data sent to the server"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Correct answer according to the source material: To represent the response from the server",
+      "tags": [
+        "fetch-api",
+        "response-object"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q47",
+      "type": "single_choice",
+      "topic": "Node.js",
+      "subtopic": "npm",
+      "difficulty": "easy",
+      "questionMd": "What is npm?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "A package manager for Node.js"
+        },
+        {
+          "id": "B",
+          "text": "A programming language"
+        },
+        {
+          "id": "C",
+          "text": "A framework for building web applications"
+        },
+        {
+          "id": "D",
+          "text": "A database management system"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Correct answer according to the source material: A package manager for Node.js",
+      "tags": [
+        "node.js",
+        "npm"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q48",
+      "type": "single_choice",
+      "topic": "Web",
+      "subtopic": "Servers",
+      "difficulty": "easy",
+      "questionMd": "What is a web server?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "A computer program that delivers web pages and other resources to clients"
+        },
+        {
+          "id": "B",
+          "text": "A type of database used for storing user information"
+        },
+        {
+          "id": "C",
+          "text": "A programming language used for creating web applications"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Correct answer according to the source material: A computer program that delivers web pages and other resources to clients",
+      "tags": [
+        "web",
+        "servers"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q49",
+      "type": "single_choice",
+      "topic": "Node.js",
+      "subtopic": "Basics",
+      "difficulty": "easy",
+      "questionMd": "What is Node.js?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "A server-side runtime environment for executing JavaScript code"
+        },
+        {
+          "id": "B",
+          "text": "A client-side runtime environment for executing JavaScript code"
+        },
+        {
+          "id": "C",
+          "text": "A programming language"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Correct answer according to the source material: A server-side runtime environment for executing JavaScript code",
+      "tags": [
+        "node.js",
+        "basics"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q50",
+      "type": "single_choice",
+      "topic": "APIs",
+      "subtopic": "Basics",
+      "difficulty": "easy",
+      "questionMd": "What is an API?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "A type of database used for storing user information"
+        },
+        {
+          "id": "B",
+          "text": "A programming language used for creating web applications"
+        },
+        {
+          "id": "C",
+          "text": "A set of protocols and tools used for building software applications"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "Correct answer according to the source material: A set of protocols and tools used for building software applications",
+      "tags": [
+        "apis",
+        "basics"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q51",
+      "type": "single_choice",
+      "topic": "Express",
+      "subtopic": "Response Methods",
+      "difficulty": "easy",
+      "questionMd": "Which of the following correctly completes the code to send a response with JSON data in Express?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "sendFile"
+        },
+        {
+          "id": "B",
+          "text": "send"
+        },
+        {
+          "id": "C",
+          "text": "json"
+        },
+        {
+          "id": "D",
+          "text": "render"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "Correct answer according to the source material: json",
+      "tags": [
+        "express",
+        "response-methods"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q52",
+      "type": "single_choice",
+      "topic": "REST API",
+      "subtopic": "HTTP Methods",
+      "difficulty": "easy",
+      "questionMd": "What does the HTTP method GET do in RESTful API?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Update an existing resource"
+        },
+        {
+          "id": "B",
+          "text": "Create a new resource"
+        },
+        {
+          "id": "C",
+          "text": "Retrieve a resource"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "Correct answer according to the source material: Retrieve a resource",
+      "tags": [
+        "rest-api",
+        "http-methods"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q53",
+      "type": "single_choice",
+      "topic": "Express",
+      "subtopic": "Server-side",
+      "difficulty": "easy",
+      "questionMd": "Which of the following is used on the server-side to handle HTTP requests?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both of them"
+        },
+        {
+          "id": "B",
+          "text": "Express.js"
+        },
+        {
+          "id": "C",
+          "text": "Fetch API"
+        },
+        {
+          "id": "D",
+          "text": "None of them"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Correct answer according to the source material: Express.js",
+      "tags": [
+        "express",
+        "server-side"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q54",
+      "type": "single_choice",
+      "topic": "Express",
+      "subtopic": "Request Parameters",
+      "difficulty": "easy",
+      "questionMd": "Which of the following is a way to access request parameters in Express.js?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "req.params"
+        },
+        {
+          "id": "B",
+          "text": "req.query"
+        },
+        {
+          "id": "C",
+          "text": "req.body"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Correct answer according to the source material: req.params",
+      "tags": [
+        "express",
+        "request-parameters"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q55",
+      "type": "true_false",
+      "topic": "Express",
+      "subtopic": "Response Methods",
+      "difficulty": "easy",
+      "questionMd": "In Express.js, the `res.json()` method is used to send a JSON response to the client.",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Correct answer according to the source material: True",
+      "tags": [
+        "express",
+        "response-methods"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q56",
+      "type": "single_choice",
+      "topic": "Node.js",
+      "subtopic": "HTTP Server Code",
+      "difficulty": "easy",
+      "questionMd": "Which of the following correctly completes the missing code in this Node.js example that creates an HTTP server?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "console.log('Hello World!');"
+        },
+        {
+          "id": "B",
+          "text": "res.write('Hello World!');"
+        },
+        {
+          "id": "C",
+          "text": "res.send('Hello World!');"
+        },
+        {
+          "id": "D",
+          "text": "res.end('Hello World!');"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "Correct answer according to the source material: res.end('Hello World!');",
+      "tags": [
+        "node.js",
+        "http-server-code"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q57",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Request Options",
+      "difficulty": "easy",
+      "questionMd": "What is the default value for the `mode` property in a Fetch API request?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "\"same-origin\""
+        },
+        {
+          "id": "B",
+          "text": "\"cors\""
+        },
+        {
+          "id": "C",
+          "text": "\"no-cors\""
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "Correct answer according to the source material: \"no-cors\". This answer is preserved exactly as shown in the PDF source.",
+      "tags": [
+        "fetch-api",
+        "request-options"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": true
+    },
+    {
+      "id": "q58",
+      "type": "true_false",
+      "topic": "Express",
+      "subtopic": "Routing",
+      "difficulty": "easy",
+      "questionMd": "Express.js routes can only handle GET requests.",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Correct answer according to the source material: False",
+      "tags": [
+        "express",
+        "routing"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q59",
+      "type": "single_choice",
+      "topic": "Node.js",
+      "subtopic": "HTTP Module",
+      "difficulty": "easy",
+      "questionMd": "What is the purpose of the `http` module in Node.js?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "To perform file system operations"
+        },
+        {
+          "id": "B",
+          "text": "To perform network operations"
+        },
+        {
+          "id": "C",
+          "text": "To perform database operations"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Correct answer according to the source material: To perform network operations",
+      "tags": [
+        "node.js",
+        "http-module"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q60",
+      "type": "single_choice",
+      "topic": "Express",
+      "subtopic": "Route Parameters",
+      "difficulty": "easy",
+      "questionMd": "Which of the following correctly completes the code to define a route parameter in Express?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "age"
+        },
+        {
+          "id": "B",
+          "text": "email"
+        },
+        {
+          "id": "C",
+          "text": "id"
+        },
+        {
+          "id": "D",
+          "text": "name"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "Correct answer according to the source material: id",
+      "tags": [
+        "express",
+        "route-parameters"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q61",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Event Loop Concepts",
+      "difficulty": "easy",
+      "questionMd": "Which of the following is NOT a key concept in understanding the event loop?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Event queue"
+        },
+        {
+          "id": "B",
+          "text": "Call stack"
+        },
+        {
+          "id": "C",
+          "text": "V8 JavaScript Engine"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "Correct answer according to the source material: V8 JavaScript Engine",
+      "tags": [
+        "javascript",
+        "event-loop-concepts"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q62",
+      "type": "single_choice",
+      "topic": "Software",
+      "subtopic": "Frameworks",
+      "difficulty": "easy",
+      "questionMd": "What is a framework?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "A collection of pre-written code and tools used for building applications"
+        },
+        {
+          "id": "B",
+          "text": "A type of database used for storing user information"
+        },
+        {
+          "id": "C",
+          "text": "A programming language used for creating web applications"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Correct answer according to the source material: A collection of pre-written code and tools used for building applications",
+      "tags": [
+        "software",
+        "frameworks"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q63",
+      "type": "single_choice",
+      "topic": "Web",
+      "subtopic": "HTTP",
+      "difficulty": "easy",
+      "questionMd": "What is HTTP?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "A protocol used for transmitting data over the internet"
+        },
+        {
+          "id": "B",
+          "text": "A type of database used for storing user information"
+        },
+        {
+          "id": "C",
+          "text": "A programming language used for creating web applications"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Correct answer according to the source material: A protocol used for transmitting data over the internet",
+      "tags": [
+        "web",
+        "http"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q64",
+      "type": "single_choice",
+      "topic": "REST API",
+      "subtopic": "HTTP Methods",
+      "difficulty": "easy",
+      "questionMd": "What does the HTTP method POST do in RESTful API?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Retrieve a resource"
+        },
+        {
+          "id": "B",
+          "text": "Delete a resource"
+        },
+        {
+          "id": "C",
+          "text": "Create a new resource"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "Correct answer according to the source material: Create a new resource",
+      "tags": [
+        "rest-api",
+        "http-methods"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q65",
+      "type": "single_choice",
+      "topic": "REST API",
+      "subtopic": "HTTP Methods",
+      "difficulty": "easy",
+      "questionMd": "What does the HTTP method DELETE do in RESTful API?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Create a new resource"
+        },
+        {
+          "id": "B",
+          "text": "Update an existing resource"
+        },
+        {
+          "id": "C",
+          "text": "Delete a resource"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "Correct answer according to the source material: Delete a resource",
+      "tags": [
+        "rest-api",
+        "http-methods"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q66",
+      "type": "single_choice",
+      "topic": "REST API",
+      "subtopic": "Responses",
+      "difficulty": "easy",
+      "questionMd": "What does a RESTful API return by default?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "HTML pages"
+        },
+        {
+          "id": "B",
+          "text": "JSON data"
+        },
+        {
+          "id": "C",
+          "text": "XML documents"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Correct answer according to the source material: JSON data",
+      "tags": [
+        "rest-api",
+        "responses"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q67",
+      "type": "single_choice",
+      "topic": "REST API",
+      "subtopic": "HTTP Methods",
+      "difficulty": "easy",
+      "questionMd": "Which HTTP methods are commonly used in RESTful API?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "GET, ADD, REMOVE, MODIFY"
+        },
+        {
+          "id": "B",
+          "text": "GET, POST, UPDATE, PUSH"
+        },
+        {
+          "id": "C",
+          "text": "GET, POST, DELETE, PUT"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "Correct answer according to the source material: GET, POST, DELETE, PUT",
+      "tags": [
+        "rest-api",
+        "http-methods"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q68",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Events",
+      "difficulty": "easy",
+      "questionMd": "Which of the following is an example of an event in JavaScript?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "A variable declaration"
+        },
+        {
+          "id": "B",
+          "text": "A function call"
+        },
+        {
+          "id": "C",
+          "text": "A mouse click"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "Correct answer according to the source material: A mouse click",
+      "tags": [
+        "javascript",
+        "events"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q69",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Promises",
+      "difficulty": "easy",
+      "questionMd": "What does the Fetch API return?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "A string representing the response body"
+        },
+        {
+          "id": "B",
+          "text": "A JSON object"
+        },
+        {
+          "id": "C",
+          "text": "A Promise that resolves to a Response object"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "Correct answer according to the source material: A Promise that resolves to a Response object",
+      "tags": [
+        "fetch-api",
+        "promises"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q70",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Headers",
+      "difficulty": "easy",
+      "questionMd": "What is the purpose of the `Headers` object in a Fetch API request?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "To represent the headers of the response"
+        },
+        {
+          "id": "B",
+          "text": "To represent the headers of the request"
+        },
+        {
+          "id": "C",
+          "text": "To represent the data sent to the server"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Correct answer according to the source material: To represent the headers of the request",
+      "tags": [
+        "fetch-api",
+        "headers"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q71",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Promises",
+      "difficulty": "easy",
+      "questionMd": "What is the purpose of the `then` method in a Fetch API request?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "To handle the response data asynchronously"
+        },
+        {
+          "id": "B",
+          "text": "To handle errors that occur during the request"
+        },
+        {
+          "id": "C",
+          "text": "To convert the response to JSON format"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Correct answer according to the source material: To handle the response data asynchronously",
+      "tags": [
+        "fetch-api",
+        "promises"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q72",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Promises",
+      "difficulty": "easy",
+      "questionMd": "What is a Promise object?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "A way to handle errors that occur during a Fetch request"
+        },
+        {
+          "id": "B",
+          "text": "A way to handle synchronous operations in JavaScript"
+        },
+        {
+          "id": "C",
+          "text": "A way to handle asynchronous operations in JavaScript"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "Correct answer according to the source material: A way to handle asynchronous operations in JavaScript",
+      "tags": [
+        "javascript",
+        "promises"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q73",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Request Body",
+      "difficulty": "easy",
+      "questionMd": "What is the purpose of the `body` property in a Fetch API request?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "To specify the type of HTTP method to use"
+        },
+        {
+          "id": "B",
+          "text": "To specify the content of the request"
+        },
+        {
+          "id": "C",
+          "text": "To specify the URL of the server to send the request to"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Correct answer according to the source material: To specify the content of the request",
+      "tags": [
+        "fetch-api",
+        "request-body"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q74",
+      "type": "true_false",
+      "topic": "JavaScript",
+      "subtopic": "Event Loop",
+      "difficulty": "easy",
+      "questionMd": "The event loop is responsible for managing the order in which code is executed in JavaScript.",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Correct answer according to the source material: True",
+      "tags": [
+        "javascript",
+        "event-loop"
+      ],
+      "sourceRefs": [
+        "web2 çıkmış- Mert.pdf"
+      ],
+      "needs_review": false
+    }
+  ]
+}

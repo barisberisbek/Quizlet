@@ -1,0 +1,2511 @@
+{
+  "quizId": "q3-merged",
+  "title": "Dynamic Web Programming - Quiz 3 (Merged)",
+  "course": "Dynamic Web Programming",
+  "language": "en",
+  "semester": "2023-2024 Spring",
+  "source": "Merged from uploaded Quiz 3 documents and screenshots",
+  "durationMinutes": 30,
+  "shuffleQuestions": false,
+  "shuffleOptions": false,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "topic": "Data Formats",
+      "subtopic": "JSON",
+      "difficulty": "easy",
+      "questionMd": "Why is storing data as JSON preferable to storing it as plain text when using `fetch()`?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "JSON is the only format the Fetch API is able to read"
+        },
+        {
+          "id": "B",
+          "text": "JSON files load faster because they are compressed by the browser"
+        },
+        {
+          "id": "C",
+          "text": "JSON eliminates the need to manually parse field separators when deserializing structured data"
+        },
+        {
+          "id": "D",
+          "text": "Plain text requires XMLHttpRequest while JSON works with fetch"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "JSON can be deserialized directly into structured data, avoiding manual delimiter parsing.",
+      "tags": [
+        "data-formats",
+        "json"
+      ],
+      "sourceRefs": [
+        "Q3-Web2.pdf",
+        "Q3-Web2(1).pdf",
+        "Q3.jpeg",
+        "Ekran görüntüsü 2026-04-13 084858.png",
+        "Ekran görüntüsü 2026-04-13 084846.png",
+        "Ekran görüntüsü 2026-04-13 084836.png",
+        "Q3(1).jpeg",
+        "Ekran görüntüsü 2026-04-13 084719(1).png",
+        "Ekran görüntüsü 2026-04-13 084712(1).png",
+        "Ekran görüntüsü 2026-04-13 084705(1).png"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "States",
+      "difficulty": "easy",
+      "questionMd": "Which of the following best describes the \"fulfilled\" state of a Promise?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Promise is waiting for a `.then()` handler to be attached"
+        },
+        {
+          "id": "B",
+          "text": "The operation encountered a network error"
+        },
+        {
+          "id": "C",
+          "text": "The Promise has been created but not yet started"
+        },
+        {
+          "id": "D",
+          "text": "The asynchronous operation completed successfully"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "A fulfilled Promise has completed successfully and produced a result.",
+      "tags": [
+        "promises",
+        "states"
+      ],
+      "sourceRefs": [
+        "Q3-Web2.pdf",
+        "Q3-Web2(1).pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Purpose",
+      "difficulty": "easy",
+      "questionMd": "What is the primary purpose of the Fetch API in a web browser?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "To serialize JavaScript objects into strings"
+        },
+        {
+          "id": "B",
+          "text": "To define callback functions for user interface events"
+        },
+        {
+          "id": "C",
+          "text": "To manipulate the DOM after a page has loaded"
+        },
+        {
+          "id": "D",
+          "text": "To load external resources such as text and JSON asynchronously"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "Fetch is used to request resources asynchronously, such as text, JSON, or other network content.",
+      "tags": [
+        "fetch-api",
+        "purpose"
+      ],
+      "sourceRefs": [
+        "Q3-Web2.pdf",
+        "Q3-Web2(1).pdf",
+        "Q3.jpeg",
+        "Ekran görüntüsü 2026-04-13 084858.png",
+        "Ekran görüntüsü 2026-04-13 084846.png",
+        "Ekran görüntüsü 2026-04-13 084836.png"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q4",
+      "type": "single_choice",
+      "topic": "JSON",
+      "subtopic": "Serialization",
+      "difficulty": "easy",
+      "questionMd": "Which function would you use to convert a JavaScript object into a JSON-formatted string?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "JSON.parse()"
+        },
+        {
+          "id": "B",
+          "text": "JSON.stringify()"
+        },
+        {
+          "id": "C",
+          "text": "JSON.encode()"
+        },
+        {
+          "id": "D",
+          "text": "JSON.deserialize()"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "`JSON.stringify()` converts a JavaScript value into a JSON string.",
+      "tags": [
+        "json",
+        "serialization"
+      ],
+      "sourceRefs": [
+        "Q3-Web2.pdf",
+        "Q3-Web2(1).pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q5",
+      "type": "single_choice",
+      "topic": "Web APIs",
+      "subtopic": "Media Devices",
+      "difficulty": "medium",
+      "questionMd": "What is the key difference between `navigator.getUserMedia` and `navigator.mediaDevices.getUserMedia`?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "The newer version requires HTTPS while the deprecated version does not"
+        },
+        {
+          "id": "B",
+          "text": "The deprecated version uses Promises; the newer version uses callbacks"
+        },
+        {
+          "id": "C",
+          "text": "Only the deprecated version supports video streaming"
+        },
+        {
+          "id": "D",
+          "text": "The newer version returns a Promise; the deprecated version uses callbacks"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "The modern API is Promise-based; the legacy API used callbacks.",
+      "tags": [
+        "web-apis",
+        "media-devices"
+      ],
+      "sourceRefs": [
+        "Q3-Web2.pdf",
+        "Q3-Web2(1).pdf",
+        "Dynamic Web Programming Quiz-3.pdf",
+        "Dynamic Web Programming Quiz-3(1).pdf",
+        "Q3(1).jpeg",
+        "Ekran görüntüsü 2026-04-13 084719(1).png",
+        "Ekran görüntüsü 2026-04-13 084712(1).png",
+        "Ekran görüntüsü 2026-04-13 084705(1).png"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q6",
+      "type": "single_choice",
+      "topic": "Data Serialization",
+      "subtopic": "Terminology",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, what does it mean to \"deserialize\" a string?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "To encode a string using HTML entities"
+        },
+        {
+          "id": "B",
+          "text": "To split a string into an array using a separator"
+        },
+        {
+          "id": "C",
+          "text": "To turn a serialized string back into a JavaScript object"
+        },
+        {
+          "id": "D",
+          "text": "To convert a JavaScript object into a JSON string"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "Deserialization means reconstructing structured data from its serialized string form.",
+      "tags": [
+        "data-serialization",
+        "terminology"
+      ],
+      "sourceRefs": [
+        "Q3-Web2.pdf",
+        "Q3-Web2(1).pdf",
+        "8413c2eb-e8fd-475d-8f6f-93db8afb72dc.png",
+        "d3ca2fb0-e08f-4ba6-b7c3-c2e2e681a20f.png",
+        "55c02a51-933c-4a84-9fd7-6bc9fbc2e0b7.png",
+        "a1d7c032-fcfe-4609-bebe-081f031f5ec8.png"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q7",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "Chaining",
+      "difficulty": "medium",
+      "questionMd": "In a chained Promise pattern, what must `onResponse` return for the next `.then()` in the chain to receive the text data?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "The response object itself"
+        },
+        {
+          "id": "B",
+          "text": "The Promise returned by `response.text()`"
+        },
+        {
+          "id": "C",
+          "text": "A JSON object created with `JSON.parse()`"
+        },
+        {
+          "id": "D",
+          "text": "A resolved string from `response.status`"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Returning `response.text()` passes a Promise that resolves with the response body text to the next handler.",
+      "tags": [
+        "promises",
+        "chaining"
+      ],
+      "sourceRefs": [
+        "Q3-Web2.pdf",
+        "Q3-Web2(1).pdf",
+        "Dynamic Web Programming Quiz-3.pdf",
+        "Dynamic Web Programming Quiz-3(1).pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q8",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Handlers",
+      "difficulty": "medium",
+      "questionMd": "What is the correct syntax for using the real Fetch API with success and error handlers?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "fetch('file.txt', onSuccess, onError);"
+        },
+        {
+          "id": "B",
+          "text": "fetch('file.txt').catch(onSuccess).then(onError);"
+        },
+        {
+          "id": "C",
+          "text": "fetch('file.txt').then(onSuccess, onError);"
+        },
+        {
+          "id": "D",
+          "text": "fetch('file.txt', { success: onSuccess, error: onError });"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "Fetch returns a Promise, so success and failure handlers are attached with `.then(success, error)` or `.catch(...)`.",
+      "tags": [
+        "fetch-api",
+        "handlers"
+      ],
+      "sourceRefs": [
+        "Q3-Web2.pdf",
+        "Q3-Web2(1).pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q9",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "Chaining",
+      "difficulty": "medium",
+      "questionMd": "When chaining `.then()` calls on a fetch Promise, what does the second `.then()` receive as its argument?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "The value returned or resolved by the first `.then()` handler"
+        },
+        {
+          "id": "B",
+          "text": "The HTTP status code from the first `.then()`"
+        },
+        {
+          "id": "C",
+          "text": "The original fetch response object"
+        },
+        {
+          "id": "D",
+          "text": "A new fetch Promise targeting the same resource"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Each `.then()` receives the resolved value returned from the previous step in the chain.",
+      "tags": [
+        "promises",
+        "chaining"
+      ],
+      "sourceRefs": [
+        "Q3-Web2.pdf",
+        "Q3-Web2(1).pdf",
+        "Q3.jpeg",
+        "Ekran görüntüsü 2026-04-13 084858.png",
+        "Ekran görüntüsü 2026-04-13 084846.png",
+        "Ekran görüntüsü 2026-04-13 084836.png"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q10",
+      "type": "single_choice",
+      "topic": "JSON",
+      "subtopic": "Parsing",
+      "difficulty": "easy",
+      "questionMd": "What does `JSON.parse()` accept as its argument?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "A JavaScript object to be serialized"
+        },
+        {
+          "id": "B",
+          "text": "A JSON-formatted string"
+        },
+        {
+          "id": "C",
+          "text": "A Promise returned by `fetch()`"
+        },
+        {
+          "id": "D",
+          "text": "A fetch response object"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "`JSON.parse()` expects a JSON string and converts it into a JavaScript value.",
+      "tags": [
+        "json",
+        "parsing"
+      ],
+      "sourceRefs": [
+        "Q3-Web2.pdf",
+        "Q3-Web2(1).pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q11",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "Syntax",
+      "difficulty": "medium",
+      "questionMd": "Which of the following correctly rewrites `fetch('f.txt').then(onResponse)` using an intermediate variable?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "let p = onResponse; p.fetch('f.txt');"
+        },
+        {
+          "id": "B",
+          "text": "const p = fetch('f.txt'); p.resolve(onResponse);"
+        },
+        {
+          "id": "C",
+          "text": "const p = new Promise('f.txt'); p.then(onResponse);"
+        },
+        {
+          "id": "D",
+          "text": "const p = fetch('f.txt'); p.then(onResponse);"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "Since `fetch()` returns a Promise, it can be assigned to a variable and then chained with `.then()`.",
+      "tags": [
+        "promises",
+        "syntax"
+      ],
+      "sourceRefs": [
+        "Q3-Web2.pdf",
+        "Q3-Web2(1).pdf",
+        "8413c2eb-e8fd-475d-8f6f-93db8afb72dc.png",
+        "d3ca2fb0-e08f-4ba6-b7c3-c2e2e681a20f.png",
+        "55c02a51-933c-4a84-9fd7-6bc9fbc2e0b7.png",
+        "a1d7c032-fcfe-4609-bebe-081f031f5ec8.png"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q12",
+      "type": "single_choice",
+      "topic": "JSON",
+      "subtopic": "Terminology",
+      "difficulty": "easy",
+      "questionMd": "What does JSON stand for?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Java Serialized Object Network"
+        },
+        {
+          "id": "B",
+          "text": "JavaScript Syntax Object Notation"
+        },
+        {
+          "id": "C",
+          "text": "JavaScript Object Notation"
+        },
+        {
+          "id": "D",
+          "text": "JavaScript Ordered Node"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "JSON stands for JavaScript Object Notation.",
+      "tags": [
+        "json",
+        "terminology"
+      ],
+      "sourceRefs": [
+        "Q3-Web2.pdf",
+        "Q3-Web2(1).pdf",
+        "Dynamic Web Programming Quiz-3.pdf",
+        "Dynamic Web Programming Quiz-3(1).pdf",
+        "Q3(1).jpeg",
+        "Ekran görüntüsü 2026-04-13 084719(1).png",
+        "Ekran görüntüsü 2026-04-13 084712(1).png",
+        "Ekran görüntüsü 2026-04-13 084705(1).png"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q13",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "History",
+      "difficulty": "easy",
+      "questionMd": "Which of the following correctly describes the old API that `fetch()` replaced for loading browser resources?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "XMLHttpRequest (XHR)"
+        },
+        {
+          "id": "B",
+          "text": "JSON.parse()"
+        },
+        {
+          "id": "C",
+          "text": "loadFromFile()"
+        },
+        {
+          "id": "D",
+          "text": "navigator.mediaDevices"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Fetch modernized browser resource loading that was previously often done with XMLHttpRequest.",
+      "tags": [
+        "fetch-api",
+        "history"
+      ],
+      "sourceRefs": [
+        "Q3-Web2.pdf",
+        "Q3-Web2(1).pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q14",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Local Files",
+      "difficulty": "easy",
+      "questionMd": "Why does calling `fetch()` on a local file opened via `file://` protocol result in an error?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Loading files via the `file://` protocol is disallowed by the browser"
+        },
+        {
+          "id": "B",
+          "text": "Local files must be fetched using XMLHttpRequest instead"
+        },
+        {
+          "id": "C",
+          "text": "The fetch API only supports JSON files, not text files"
+        },
+        {
+          "id": "D",
+          "text": "JavaScript blocks all file I/O on the main thread"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Browsers restrict fetching local files directly from `file://` for security reasons.",
+      "tags": [
+        "fetch-api",
+        "local-files"
+      ],
+      "sourceRefs": [
+        "Q3-Web2.pdf",
+        "Q3-Web2(1).pdf",
+        "Q3(1).jpeg",
+        "Ekran görüntüsü 2026-04-13 084719(1).png",
+        "Ekran görüntüsü 2026-04-13 084712(1).png",
+        "Ekran görüntüsü 2026-04-13 084705(1).png",
+        "8413c2eb-e8fd-475d-8f6f-93db8afb72dc.png",
+        "d3ca2fb0-e08f-4ba6-b7c3-c2e2e681a20f.png",
+        "55c02a51-933c-4a84-9fd7-6bc9fbc2e0b7.png",
+        "a1d7c032-fcfe-4609-bebe-081f031f5ec8.png"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q15",
+      "type": "single_choice",
+      "topic": "Web History",
+      "subtopic": "JSON",
+      "difficulty": "easy",
+      "questionMd": "Who created JSON according to the lecture?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ryan Dahl"
+        },
+        {
+          "id": "B",
+          "text": "Douglas Crockford"
+        },
+        {
+          "id": "C",
+          "text": "Brendan Eich"
+        },
+        {
+          "id": "D",
+          "text": "Tim Berners-Lee"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Douglas Crockford popularized and specified JSON.",
+      "tags": [
+        "web-history",
+        "json"
+      ],
+      "sourceRefs": [
+        "Q3-Web2.pdf",
+        "Q3-Web2(1).pdf",
+        "Dynamic Web Programming Quiz-3.pdf",
+        "Dynamic Web Programming Quiz-3(1).pdf",
+        "Q3(1).jpeg",
+        "Ekran görüntüsü 2026-04-13 084719(1).png",
+        "Ekran görüntüsü 2026-04-13 084712(1).png",
+        "Ekran görüntüsü 2026-04-13 084705(1).png"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q16",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Response Handling",
+      "difficulty": "easy",
+      "questionMd": "What does `response.text()` return?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "The raw bytes of the response body as a string immediately"
+        },
+        {
+          "id": "B",
+          "text": "A Promise that resolves with the response body as a string"
+        },
+        {
+          "id": "C",
+          "text": "A JSON object parsed from the response body"
+        },
+        {
+          "id": "D",
+          "text": "The HTTP status code as a text string"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "`response.text()` returns a Promise that resolves to the body text.",
+      "tags": [
+        "fetch-api",
+        "response-handling"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming Quiz-3.pdf",
+        "Dynamic Web Programming Quiz-3(1).pdf",
+        "Q3.jpeg",
+        "Ekran görüntüsü 2026-04-13 084858.png",
+        "Ekran görüntüsü 2026-04-13 084846.png",
+        "Ekran görüntüsü 2026-04-13 084836.png",
+        "Q3(1).jpeg",
+        "Ekran görüntüsü 2026-04-13 084719(1).png",
+        "Ekran görüntüsü 2026-04-13 084712(1).png",
+        "Ekran görüntüsü 2026-04-13 084705(1).png"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q17",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Return Values",
+      "difficulty": "easy",
+      "questionMd": "What does the `fetch()` function return?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "A JSON-parsed JavaScript object"
+        },
+        {
+          "id": "B",
+          "text": "A Promise"
+        },
+        {
+          "id": "C",
+          "text": "An XMLHttpRequest object"
+        },
+        {
+          "id": "D",
+          "text": "The raw text content of the requested resource"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "`fetch()` immediately returns a Promise that resolves to a Response object.",
+      "tags": [
+        "fetch-api",
+        "return-values"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming Quiz-3.pdf",
+        "Dynamic Web Programming Quiz-3(1).pdf",
+        "Q3.jpeg",
+        "Ekran görüntüsü 2026-04-13 084858.png",
+        "Ekran görüntüsü 2026-04-13 084846.png",
+        "Ekran görüntüsü 2026-04-13 084836.png"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q18",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Terminology",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, the Fetch API is made up of how many functions?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Four"
+        },
+        {
+          "id": "B",
+          "text": "Two"
+        },
+        {
+          "id": "C",
+          "text": "Three"
+        },
+        {
+          "id": "D",
+          "text": "One"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "In the lecture framing, the core API is presented as one main function: `fetch()`.",
+      "tags": [
+        "fetch-api",
+        "terminology"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming Quiz-3.pdf",
+        "Dynamic Web Programming Quiz-3(1).pdf",
+        "Q3.jpeg",
+        "Ekran görüntüsü 2026-04-13 084858.png",
+        "Ekran görüntüsü 2026-04-13 084846.png",
+        "Ekran görüntüsü 2026-04-13 084836.png",
+        "Q3(1).jpeg",
+        "Ekran görüntüsü 2026-04-13 084719(1).png",
+        "Ekran görüntüsü 2026-04-13 084712(1).png",
+        "Ekran görüntüsü 2026-04-13 084705(1).png"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q19",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "States",
+      "difficulty": "easy",
+      "questionMd": "A Promise object can be in one of three states. Which of the following is NOT one of those states?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pending"
+        },
+        {
+          "id": "B",
+          "text": "Resolved"
+        },
+        {
+          "id": "C",
+          "text": "Rejected"
+        },
+        {
+          "id": "D",
+          "text": "Fulfilled"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "The standard states are pending, fulfilled, and rejected. “Resolved” is not one of the three state names here.",
+      "tags": [
+        "promises",
+        "states"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming Quiz-3.pdf",
+        "Dynamic Web Programming Quiz-3(1).pdf",
+        "Q3(1).jpeg",
+        "Ekran görüntüsü 2026-04-13 084719(1).png",
+        "Ekran görüntüsü 2026-04-13 084712(1).png",
+        "Ekran görüntüsü 2026-04-13 084705(1).png"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q20",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "States",
+      "difficulty": "easy",
+      "questionMd": "Which of the following best describes the \"pending\" state of a Promise?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "The state where `.then()` has been called but not yet attached"
+        },
+        {
+          "id": "B",
+          "text": "The initial state where the operation has not yet fulfilled or rejected"
+        },
+        {
+          "id": "C",
+          "text": "The state where the error handler has been triggered"
+        },
+        {
+          "id": "D",
+          "text": "The state where the operation completed but returned no data"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "A Promise is pending before it settles as fulfilled or rejected.",
+      "tags": [
+        "promises",
+        "states"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming Quiz-3.pdf",
+        "Dynamic Web Programming Quiz-3(1).pdf",
+        "Q3.jpeg",
+        "Ekran görüntüsü 2026-04-13 084858.png",
+        "Ekran görüntüsü 2026-04-13 084846.png",
+        "Ekran görüntüsü 2026-04-13 084836.png"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q21",
+      "type": "single_choice",
+      "topic": "JSON",
+      "subtopic": "Serialization",
+      "difficulty": "easy",
+      "questionMd": "What type of value does `JSON.stringify(object)` return?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "A boolean indicating whether serialization succeeded"
+        },
+        {
+          "id": "B",
+          "text": "A Promise that resolves with the serialized data"
+        },
+        {
+          "id": "C",
+          "text": "A new JavaScript object with the same properties"
+        },
+        {
+          "id": "D",
+          "text": "A string representing the object in JSON format"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "`JSON.stringify()` returns a string.",
+      "tags": [
+        "json",
+        "serialization"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming Quiz-3.pdf",
+        "Dynamic Web Programming Quiz-3(1).pdf",
+        "Q3(1).jpeg",
+        "Ekran görüntüsü 2026-04-13 084719(1).png",
+        "Ekran görüntüsü 2026-04-13 084712(1).png",
+        "Ekran görüntüsü 2026-04-13 084705(1).png"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q22",
+      "type": "single_choice",
+      "topic": "Development",
+      "subtopic": "Local Server",
+      "difficulty": "easy",
+      "questionMd": "How can a developer serve local files over HTTP so that `fetch()` works correctly?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Use the `file://` protocol with a special fetch configuration option"
+        },
+        {
+          "id": "B",
+          "text": "Run a local HTTP server, such as with `python -m SimpleHTTPServer`"
+        },
+        {
+          "id": "C",
+          "text": "Enable CORS headers directly in the HTML file"
+        },
+        {
+          "id": "D",
+          "text": "Switch from `fetch()` to XMLHttpRequest for local files"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Serving files over HTTP avoids the browser restrictions associated with `file://`.",
+      "tags": [
+        "development",
+        "local-server"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming Quiz-3.pdf",
+        "Dynamic Web Programming Quiz-3(1).pdf",
+        "Q3(1).jpeg",
+        "Ekran görüntüsü 2026-04-13 084719(1).png",
+        "Ekran görüntüsü 2026-04-13 084712(1).png",
+        "Ekran görüntüsü 2026-04-13 084705(1).png"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q23",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "Handlers",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, how do you attach handlers to a Promise object?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Via the `.then()` method"
+        },
+        {
+          "id": "B",
+          "text": "Via the `.attach()` method"
+        },
+        {
+          "id": "C",
+          "text": "By assigning them to the `onSuccess` and `onError` properties"
+        },
+        {
+          "id": "D",
+          "text": "By passing them as arguments directly to `fetch()`"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Handlers are attached to Promises with `.then()` and optionally `.catch()`.",
+      "tags": [
+        "promises",
+        "handlers"
+      ],
+      "sourceRefs": [
+        "Q3(1).jpeg",
+        "Ekran görüntüsü 2026-04-13 084719(1).png",
+        "Ekran görüntüsü 2026-04-13 084712(1).png",
+        "Ekran görüntüsü 2026-04-13 084705(1).png"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q24",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "Handlers",
+      "difficulty": "easy",
+      "questionMd": "A Promise has a `.then()` method that accepts which of the following?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "A timeout value and a retry count"
+        },
+        {
+          "id": "B",
+          "text": "A single callback that handles both success and failure identically"
+        },
+        {
+          "id": "C",
+          "text": "Functions to execute on success or on error"
+        },
+        {
+          "id": "D",
+          "text": "A URL string and an HTTP method"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "`.then()` accepts callback functions for fulfillment and optionally rejection handling.",
+      "tags": [
+        "promises",
+        "handlers"
+      ],
+      "sourceRefs": [
+        "Q3.jpeg",
+        "Ekran görüntüsü 2026-04-13 084858.png",
+        "Ekran görüntüsü 2026-04-13 084846.png",
+        "Ekran görüntüsü 2026-04-13 084836.png"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q25",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "Execution Order",
+      "difficulty": "medium",
+      "questionMd": "In the lecture's chained fetch example, what is the correct order of asynchronous operations?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "`fetch` completes, then `onResponse` runs, then `response.text()` completes, then `onStreamProcessed` runs"
+        },
+        {
+          "id": "B",
+          "text": "`onStreamProcessed` runs first, then `fetch` completes, then `onResponse` runs"
+        },
+        {
+          "id": "C",
+          "text": "`fetch` and `response.text()` run simultaneously before any handlers fire"
+        },
+        {
+          "id": "D",
+          "text": "`response.text()` runs before `fetch` completes"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "The response arrives first, then the first handler runs, then the body text is resolved, then the next handler runs.",
+      "tags": [
+        "promises",
+        "execution-order"
+      ],
+      "sourceRefs": [
+        "Q3.jpeg",
+        "Ekran görüntüsü 2026-04-13 084858.png",
+        "Ekran görüntüsü 2026-04-13 084846.png",
+        "Ekran görüntüsü 2026-04-13 084836.png"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q26",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Response Handling",
+      "difficulty": "easy",
+      "questionMd": "Which method on a fetch `response` object provides built-in support for parsing JSON directly?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "`response.parse()`"
+        },
+        {
+          "id": "B",
+          "text": "`response.decode()`"
+        },
+        {
+          "id": "C",
+          "text": "`response.json()`"
+        },
+        {
+          "id": "D",
+          "text": "`response.text()`"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "`response.json()` reads the body and parses it as JSON.",
+      "tags": [
+        "fetch-api",
+        "response-handling"
+      ],
+      "sourceRefs": [
+        "Q3(1).jpeg",
+        "Ekran görüntüsü 2026-04-13 084719(1).png",
+        "Ekran görüntüsü 2026-04-13 084712(1).png",
+        "Ekran görüntüsü 2026-04-13 084705(1).png",
+        "8413c2eb-e8fd-475d-8f6f-93db8afb72dc.png",
+        "d3ca2fb0-e08f-4ba6-b7c3-c2e2e681a20f.png",
+        "55c02a51-933c-4a84-9fd7-6bc9fbc2e0b7.png",
+        "a1d7c032-fcfe-4609-bebe-081f031f5ec8.png"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q27",
+      "type": "single_choice",
+      "topic": "HTTP",
+      "subtopic": "Status Codes",
+      "difficulty": "easy",
+      "questionMd": "What does `response.status` contain when used inside a fetch success handler?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "The name of the file that was fetched"
+        },
+        {
+          "id": "B",
+          "text": "A boolean indicating whether the request succeeded"
+        },
+        {
+          "id": "C",
+          "text": "The HTTP status code of the request, such as 200"
+        },
+        {
+          "id": "D",
+          "text": "The text content of the fetched resource"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "`response.status` holds the numeric HTTP status code.",
+      "tags": [
+        "http",
+        "status-codes"
+      ],
+      "sourceRefs": [
+        "Q3(1).jpeg",
+        "Ekran görüntüsü 2026-04-13 084719(1).png",
+        "Ekran görüntüsü 2026-04-13 084712(1).png",
+        "Ekran görüntüsü 2026-04-13 084705(1).png",
+        "8413c2eb-e8fd-475d-8f6f-93db8afb72dc.png",
+        "d3ca2fb0-e08f-4ba6-b7c3-c2e2e681a20f.png",
+        "55c02a51-933c-4a84-9fd7-6bc9fbc2e0b7.png",
+        "a1d7c032-fcfe-4609-bebe-081f031f5ec8.png"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q28",
+      "type": "single_choice",
+      "topic": "Web APIs",
+      "subtopic": "Media Devices",
+      "difficulty": "medium",
+      "questionMd": "When using `navigator.mediaDevices.getUserMedia()` with a Promise, how is the camera stream accessed?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "By reading the return value of the function directly"
+        },
+        {
+          "id": "B",
+          "text": "By listening for a DOM event fired when the camera opens"
+        },
+        {
+          "id": "C",
+          "text": "By passing an `onSuccess` callback as the second argument"
+        },
+        {
+          "id": "D",
+          "text": "By attaching a `.then()` handler that receives the stream as its argument"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "The Promise resolves with the media stream, which is received in a `.then()` callback.",
+      "tags": [
+        "web-apis",
+        "media-devices"
+      ],
+      "sourceRefs": [
+        "8413c2eb-e8fd-475d-8f6f-93db8afb72dc.png",
+        "d3ca2fb0-e08f-4ba6-b7c3-c2e2e681a20f.png",
+        "55c02a51-933c-4a84-9fd7-6bc9fbc2e0b7.png",
+        "a1d7c032-fcfe-4609-bebe-081f031f5ec8.png"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q29",
+      "type": "single_choice",
+      "topic": "Data Serialization",
+      "subtopic": "Terminology",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, what does it mean to \"serialize\" an object?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "To turn an object into a string that can later be deserialized"
+        },
+        {
+          "id": "B",
+          "text": "To load an object from an external file using fetch"
+        },
+        {
+          "id": "C",
+          "text": "To send an object directly to a server over HTTP"
+        },
+        {
+          "id": "D",
+          "text": "To convert a string into a JavaScript object"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Serialization means converting structured data into a storable or transferable string form.",
+      "tags": [
+        "data-serialization",
+        "terminology"
+      ],
+      "sourceRefs": [
+        "Q3.jpeg",
+        "Ekran görüntüsü 2026-04-13 084858.png",
+        "Ekran görüntüsü 2026-04-13 084846.png",
+        "Ekran görüntüsü 2026-04-13 084836.png",
+        "8413c2eb-e8fd-475d-8f6f-93db8afb72dc.png",
+        "d3ca2fb0-e08f-4ba6-b7c3-c2e2e681a20f.png",
+        "55c02a51-933c-4a84-9fd7-6bc9fbc2e0b7.png",
+        "a1d7c032-fcfe-4609-bebe-081f031f5ec8.png"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q30",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "String Methods",
+      "difficulty": "medium",
+      "questionMd": "In the completed fetch example, which JavaScript method is used to break the fetched text into individual image URLs?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "`text.join(' ')`"
+        },
+        {
+          "id": "B",
+          "text": "`text.replace(' ', \\,)`"
+        },
+        {
+          "id": "C",
+          "text": "`text.slice(' ')`"
+        },
+        {
+          "id": "D",
+          "text": "`text.split(' ')`"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "The example uses `split` to separate the fetched text into multiple URLs.",
+      "tags": [
+        "javascript",
+        "string-methods"
+      ],
+      "sourceRefs": [
+        "8413c2eb-e8fd-475d-8f6f-93db8afb72dc.png",
+        "d3ca2fb0-e08f-4ba6-b7c3-c2e2e681a20f.png",
+        "55c02a51-933c-4a84-9fd7-6bc9fbc2e0b7.png",
+        "a1d7c032-fcfe-4609-bebe-081f031f5ec8.png"
+      ],
+      "needs_review": true
+    },
+    {
+      "id": "q31",
+      "type": "single_choice",
+      "topic": "Development",
+      "subtopic": "Local Server",
+      "difficulty": "easy",
+      "questionMd": "Which command is used to serve local files over HTTP so that `fetch()` can access them during development?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "`python3 -m http.server`"
+        },
+        {
+          "id": "B",
+          "text": "`python3 -m fetch-server`"
+        },
+        {
+          "id": "C",
+          "text": "`npm start http`"
+        },
+        {
+          "id": "D",
+          "text": "`node server.js`"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "A simple local HTTP server such as `python3 -m http.server` is enough for development.",
+      "tags": [
+        "development",
+        "local-server"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming Quiz-3.pdf",
+        "Dynamic Web Programming Quiz-3(1).pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q32",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "Conceptual Understanding",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture, which statement best captures the relationship between using and defining Promise?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Promises are easier to define than to use"
+        },
+        {
+          "id": "B",
+          "text": "Promises must be fully understood internally before they can be used"
+        },
+        {
+          "id": "C",
+          "text": "Promises are easier to use than to define"
+        },
+        {
+          "id": "D",
+          "text": "Promises are equally straightforward to both define and use"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "Using existing Promises is generally simpler than implementing Promise-producing logic yourself.",
+      "tags": [
+        "promises",
+        "conceptual-understanding"
+      ],
+      "sourceRefs": [
+        "Ekran görüntüsü 2026-04-13 084858.png"
+      ],
+      "needs_review": true
+    },
+    {
+      "id": "q33",
+      "type": "single_choice",
+      "topic": "Architecture",
+      "subtopic": "Callbacks",
+      "difficulty": "medium",
+      "questionMd": "In the discography page example, how does the `SortButton` class communicate a sort action back to the `App` class?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "It directly modifies the `albumInfo` property of the `App` instance"
+        },
+        {
+          "id": "B",
+          "text": "It dispatches a custom keyboard event that triggers the App's event listener"
+        },
+        {
+          "id": "C",
+          "text": "It fires a built-in DOM click event that the `App` class listens for on the document"
+        },
+        {
+          "id": "D",
+          "text": "It calls an `onClickCallback` function passed to it during construction, supplying the sort function as an argument"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "The component communicates upward by invoking a callback it received from its parent.",
+      "tags": [
+        "architecture",
+        "callbacks"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming Quiz-3.pdf",
+        "Dynamic Web Programming Quiz-3(1).pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q34",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Classes",
+      "difficulty": "easy",
+      "questionMd": "When defining methods inside an ES6 class body, which keyword must you omit?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "class"
+        },
+        {
+          "id": "B",
+          "text": "function"
+        },
+        {
+          "id": "C",
+          "text": "const"
+        },
+        {
+          "id": "D",
+          "text": "return"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Methods are declared directly inside a class body without the `function` keyword.",
+      "tags": [
+        "javascript",
+        "classes"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming Quiz-3.pdf",
+        "Dynamic Web Programming Quiz-3(1).pdf",
+        "8413c2eb-e8fd-475d-8f6f-93db8afb72dc.png",
+        "d3ca2fb0-e08f-4ba6-b7c3-c2e2e681a20f.png",
+        "55c02a51-933c-4a84-9fd7-6bc9fbc2e0b7.png",
+        "a1d7c032-fcfe-4609-bebe-081f031f5ec8.png"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q35",
+      "type": "single_choice",
+      "topic": "Web APIs",
+      "subtopic": "CustomEvent",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture, what is an important limitation of the `CustomEvent` API in JavaScript?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "CustomEvents are not supported in any browser that uses the V8 engine"
+        },
+        {
+          "id": "B",
+          "text": "CustomEvents can only be dispatched and listened to on HTML elements, not on arbitrary class instances"
+        },
+        {
+          "id": "C",
+          "text": "CustomEvents can only be created inside ES6 class constructors"
+        },
+        {
+          "id": "D",
+          "text": "CustomEvents cannot carry any additional data in their event object"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "The lecture highlights DOM-centric event dispatch/listening, not arbitrary class-instance event systems.",
+      "tags": [
+        "web-apis",
+        "customevent"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming Quiz-3.pdf",
+        "Dynamic Web Programming Quiz-3(1).pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q36",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Context (`this`)",
+      "difficulty": "medium",
+      "questionMd": "What problem does calling `this.methodName = this.methodName.bind(this)` in a constructor solve?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "It prevents the method from being called more than once per event"
+        },
+        {
+          "id": "B",
+          "text": "It ensures `this` always refers to the class instance when the method is used as an event handler"
+        },
+        {
+          "id": "C",
+          "text": "It registers the method as a global function accessible from any scope"
+        },
+        {
+          "id": "D",
+          "text": "It copies the method's code into the HTML element for faster execution"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Binding preserves the intended instance context when the method is passed as a callback.",
+      "tags": [
+        "javascript",
+        "context-(`this`)"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming Quiz-3.pdf",
+        "Dynamic Web Programming Quiz-3(1).pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q37",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Functions",
+      "difficulty": "easy",
+      "questionMd": "Which of the following is a characteristic of first-class functions in JavaScript?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Functions must always be declared before the class definition"
+        },
+        {
+          "id": "B",
+          "text": "Functions cannot be stored in variables or object properties"
+        },
+        {
+          "id": "C",
+          "text": "Functions require the `function` keyword and cannot use arrow syntax"
+        },
+        {
+          "id": "D",
+          "text": "Functions can be passed as parameters to other functions"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "First-class functions can be stored, passed, and returned like other values.",
+      "tags": [
+        "javascript",
+        "functions"
+      ],
+      "sourceRefs": [
+        "55c02a51-933c-4a84-9fd7-6bc9fbc2e0b7.png"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q38",
+      "type": "single_choice",
+      "topic": "JSON",
+      "subtopic": "Object Access",
+      "difficulty": "medium",
+      "questionMd": "Given the JSON object `{\"albums\": [{\"name\": \"Daydream\", \"year\": 1995}]}` parsed into a variable called `data`, how would you access the year of the first album?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "`data[0].albums.year`"
+        },
+        {
+          "id": "B",
+          "text": "`data.albums.year[0]`"
+        },
+        {
+          "id": "C",
+          "text": "`data.albums[0].year`"
+        },
+        {
+          "id": "D",
+          "text": "`data[\"year\"][\"albums\"][0]`"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "The array is under `albums`, so the first item's `year` is `data.albums[0].year`.",
+      "tags": [
+        "json",
+        "object-access"
+      ],
+      "sourceRefs": [
+        "55c02a51-933c-4a84-9fd7-6bc9fbc2e0b7.png",
+        "Dynamic Web Programming Quiz-3.pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q39",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Array Methods",
+      "difficulty": "medium",
+      "questionMd": "When passing a callback to `list.findIndex(callback)`, what value should the callback return when the desired element is found?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "The index of the element"
+        },
+        {
+          "id": "B",
+          "text": "`null`"
+        },
+        {
+          "id": "C",
+          "text": "`true`"
+        },
+        {
+          "id": "D",
+          "text": "The element itself"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "`findIndex` expects a predicate callback that returns a truthy value for a match.",
+      "tags": [
+        "javascript",
+        "array-methods"
+      ],
+      "sourceRefs": [
+        "55c02a51-933c-4a84-9fd7-6bc9fbc2e0b7.png"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q40",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Response Handling",
+      "difficulty": "easy",
+      "questionMd": "How does `response.text()` read the response data according to the lecture?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Synchronously, by returning the string directly"
+        },
+        {
+          "id": "B",
+          "text": "Asynchronously, by returning a Promise that resolves with the response string"
+        },
+        {
+          "id": "C",
+          "text": "By dispatching a DOM event when reading is complete"
+        },
+        {
+          "id": "D",
+          "text": "By writing the result into a global variable"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "`response.text()` is asynchronous and resolves later with the body text.",
+      "tags": [
+        "fetch-api",
+        "response-handling"
+      ],
+      "sourceRefs": [
+        "55c02a51-933c-4a84-9fd7-6bc9fbc2e0b7.png",
+        "Ekran görüntüsü 2026-04-13 084858.png"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q41",
+      "type": "single_choice",
+      "topic": "Web Concepts",
+      "subtopic": "Frontend",
+      "difficulty": "easy",
+      "questionMd": "Which set of programming languages is associated with front-end web development?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "SQL, XML, and SGML"
+        },
+        {
+          "id": "B",
+          "text": "HTML, CSS, and JavaScript"
+        },
+        {
+          "id": "C",
+          "text": "Node.js, PHP, and Go"
+        },
+        {
+          "id": "D",
+          "text": "Python, Java, and Ruby"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "HTML, CSS, and JavaScript are the core front-end web technologies.",
+      "tags": [
+        "web-concepts",
+        "frontend"
+      ],
+      "sourceRefs": [
+        "55c02a51-933c-4a84-9fd7-6bc9fbc2e0b7.png"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q42",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Closures",
+      "difficulty": "medium",
+      "questionMd": "In JavaScript, what is a closure?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "A function declared inside another function that retains access to the outer function's variables"
+        },
+        {
+          "id": "B",
+          "text": "A method that prevents other code from modifying an object's properties"
+        },
+        {
+          "id": "C",
+          "text": "A special syntax for defining private class fields in ES6"
+        },
+        {
+          "id": "D",
+          "text": "A technique for combining multiple event listeners into a single handler"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "A closure preserves access to variables from its lexical scope.",
+      "tags": [
+        "javascript",
+        "closures"
+      ],
+      "sourceRefs": [
+        "Ekran görüntüsü 2026-04-13 084836.png"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q43",
+      "type": "single_choice",
+      "topic": "Networking",
+      "subtopic": "TCP/IP",
+      "difficulty": "medium",
+      "questionMd": "In the TCP/IP model, what is the responsibility of the Internet Protocol (IP)?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "To convert hostnames into human-readable domain names"
+        },
+        {
+          "id": "B",
+          "text": "To encrypt data before transmission over the network"
+        },
+        {
+          "id": "C",
+          "text": "To route TCP packets to the correct destination address"
+        },
+        {
+          "id": "D",
+          "text": "To guarantee that all packets arrive in the correct order"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "IP is responsible for addressing and routing packets to the destination network/interface.",
+      "tags": [
+        "networking",
+        "tcp/ip"
+      ],
+      "sourceRefs": [
+        "Ekran görüntüsü 2026-04-13 084836.png"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q44",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Fetch vs XHR",
+      "difficulty": "easy",
+      "questionMd": "How does the lecture describe XMLHttpRequest (XHR) compared to the Fetch API?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Simpler but less flexible"
+        },
+        {
+          "id": "B",
+          "text": "More secure and widely supported"
+        },
+        {
+          "id": "C",
+          "text": "Faster and more reliable"
+        },
+        {
+          "id": "D",
+          "text": "Clunky and harder to use"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "The lecture characterizes XHR as a more awkward older API compared with Fetch.",
+      "tags": [
+        "fetch-api",
+        "fetch-vs-xhr"
+      ],
+      "sourceRefs": [
+        "Ekran görüntüsü 2026-04-13 084836.png"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q45",
+      "type": "single_choice",
+      "topic": "HTTP",
+      "subtopic": "MIME Types",
+      "difficulty": "easy",
+      "questionMd": "Which MIME type indicates that the content being transferred is an HTML web page?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "application/json"
+        },
+        {
+          "id": "B",
+          "text": "text/plain"
+        },
+        {
+          "id": "C",
+          "text": "text/html"
+        },
+        {
+          "id": "D",
+          "text": "image/jpeg"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "`text/html` is the standard MIME type for HTML documents.",
+      "tags": [
+        "http",
+        "mime-types"
+      ],
+      "sourceRefs": [
+        "Ekran görüntüsü 2026-04-13 084846.png"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q46",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Context (`this`)",
+      "difficulty": "easy",
+      "questionMd": "Inside an ES6 class constructor, what does the `this` keyword refer to?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "The HTML element that triggered the event"
+        },
+        {
+          "id": "B",
+          "text": "The new object instance being created"
+        },
+        {
+          "id": "C",
+          "text": "The parent class from which the current class inherits"
+        },
+        {
+          "id": "D",
+          "text": "The global window object of the browser"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Inside a constructor, `this` refers to the instance being initialized.",
+      "tags": [
+        "javascript",
+        "context-(`this`)"
+      ],
+      "sourceRefs": [
+        "Ekran görüntüsü 2026-04-13 084846.png"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q47",
+      "type": "single_choice",
+      "topic": "Web History",
+      "subtopic": "Markup Languages",
+      "difficulty": "medium",
+      "questionMd": "What is the role of SGML (Standard Generalized Markup Language) in relation to HTML?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "SGML is a transport protocol that HTTP was built upon"
+        },
+        {
+          "id": "B",
+          "text": "SGML is a standard for specifying markup languages and was used by Tim Berners-Lee to create the HTML specification"
+        },
+        {
+          "id": "C",
+          "text": "SGML is a scripting language that adds interactivity to static HTML pages"
+        },
+        {
+          "id": "D",
+          "text": "SGML is a stylesheet language used to define the visual presentation of XML documents"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "HTML was historically defined as an application of SGML.",
+      "tags": [
+        "web-history",
+        "markup-languages"
+      ],
+      "sourceRefs": [
+        "Ekran görüntüsü 2026-04-13 084846.png"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q48",
+      "type": "single_choice",
+      "topic": "Asynchronous JavaScript",
+      "subtopic": "Callbacks",
+      "difficulty": "medium",
+      "questionMd": "In the hypothetical asynchronous version of `loadFromFile()` shown in the lecture, how are success and failure handled?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "By checking a return value after the function completes"
+        },
+        {
+          "id": "B",
+          "text": "By wrapping the call in a try-catch block"
+        },
+        {
+          "id": "C",
+          "text": "By polling the function repeatedly until it resolves"
+        },
+        {
+          "id": "D",
+          "text": "By passing `onSuccess` and `onFail` as callback function arguments"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "The asynchronous pattern presented uses explicit success/failure callbacks.",
+      "tags": [
+        "asynchronous-javascript",
+        "callbacks"
+      ],
+      "sourceRefs": [
+        "Ekran görüntüsü 2026-04-13 084846.png"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q49",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "History",
+      "difficulty": "easy",
+      "questionMd": "Which of the following correctly describes the old API that `fetch()` replaced for loading browser resources?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "navigator.mediaDevices"
+        },
+        {
+          "id": "B",
+          "text": "XMLHttpRequest (XHR)"
+        },
+        {
+          "id": "C",
+          "text": "JSON.parse()"
+        },
+        {
+          "id": "D",
+          "text": "loadFromFile()"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Fetch replaced the older XMLHttpRequest pattern for many browser network tasks.",
+      "tags": [
+        "fetch-api",
+        "history"
+      ],
+      "sourceRefs": [
+        "Dynamic Web Programming Quiz-3.pdf",
+        "Dynamic Web Programming Quiz-3(1).pdf"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q50",
+      "type": "single_choice",
+      "topic": "JSON",
+      "subtopic": "Parsing",
+      "difficulty": "easy",
+      "questionMd": "Which function would you use to convert a JSON string back into a JavaScript object?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "JSON.decode()"
+        },
+        {
+          "id": "B",
+          "text": "JSON.stringify()"
+        },
+        {
+          "id": "C",
+          "text": "JSON.parse()"
+        },
+        {
+          "id": "D",
+          "text": "JSON.hydrate()"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "JSON strings are parsed into JavaScript values with `JSON.parse()`.",
+      "tags": [
+        "json",
+        "parsing"
+      ],
+      "sourceRefs": [
+        "Q3.jpeg",
+        "Ekran görüntüsü 2026-04-13 084858.png",
+        "Ekran görüntüsü 2026-04-13 084846.png",
+        "Ekran görüntüsü 2026-04-13 084836.png"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q51",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Response Handling",
+      "difficulty": "easy",
+      "questionMd": "Which method on a fetch `response` object provides built-in support for parsing JSON directly?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "`response.text()`"
+        },
+        {
+          "id": "B",
+          "text": "`response.json()`"
+        },
+        {
+          "id": "C",
+          "text": "`response.parse()`"
+        },
+        {
+          "id": "D",
+          "text": "`response.decode()`"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "The built-in JSON-parsing method is `response.json()`.",
+      "tags": [
+        "fetch-api",
+        "response-handling"
+      ],
+      "sourceRefs": [
+        "Q3(1).jpeg"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q52",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "Handlers",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, which statement about `.then()` is correct?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "It can only be called once per Promise object"
+        },
+        {
+          "id": "B",
+          "text": "It replaces the need for the `fetch()` function"
+        },
+        {
+          "id": "C",
+          "text": "It immediately executes the fetch request synchronously"
+        },
+        {
+          "id": "D",
+          "text": "It lets you attach functions to execute when a Promise succeeds or fails"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "`.then()` registers callbacks to run when a Promise settles.",
+      "tags": [
+        "promises",
+        "handlers"
+      ],
+      "sourceRefs": [
+        "Ekran görüntüsü 2026-04-13 084858.png"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q53",
+      "type": "single_choice",
+      "topic": "JSON",
+      "subtopic": "Parsing",
+      "difficulty": "easy",
+      "questionMd": "What does `JSON.parse()` accept as its argument?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "A Promise returned by `fetch()`"
+        },
+        {
+          "id": "B",
+          "text": "A JavaScript object to be serialized"
+        },
+        {
+          "id": "C",
+          "text": "A fetch response object"
+        },
+        {
+          "id": "D",
+          "text": "A JSON-formatted string"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "`JSON.parse()` parses a JSON string.",
+      "tags": [
+        "json",
+        "parsing"
+      ],
+      "sourceRefs": [
+        "Ekran görüntüsü 2026-04-13 084858.png"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q54",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Return Values",
+      "difficulty": "easy",
+      "questionMd": "What does `fetch()` return?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "The raw text content of the requested resource"
+        },
+        {
+          "id": "B",
+          "text": "An XMLHttpRequest object"
+        },
+        {
+          "id": "C",
+          "text": "A JSON-parsed JavaScript object"
+        },
+        {
+          "id": "D",
+          "text": "A Promise"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "`fetch()` returns a Promise.",
+      "tags": [
+        "fetch-api",
+        "return-values"
+      ],
+      "sourceRefs": [
+        "Ekran görüntüsü 2026-04-13 084858.png"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q55",
+      "type": "single_choice",
+      "topic": "JSON",
+      "subtopic": "Serialization",
+      "difficulty": "easy",
+      "questionMd": "Which function would you use to convert a JavaScript object into a JSON-formatted string?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "JSON.stringify()"
+        },
+        {
+          "id": "B",
+          "text": "JSON.parse()"
+        },
+        {
+          "id": "C",
+          "text": "JSON.deserialize()"
+        },
+        {
+          "id": "D",
+          "text": "JSON.encode()"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "`JSON.stringify()` serializes a JavaScript object to JSON text.",
+      "tags": [
+        "json",
+        "serialization"
+      ],
+      "sourceRefs": [
+        "Ekran görüntüsü 2026-04-13 084858.png"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q56",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Response Handling",
+      "difficulty": "easy",
+      "questionMd": "How does `response.text()` read the response data according to the lecture?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Synchronously, by returning the string directly"
+        },
+        {
+          "id": "B",
+          "text": "By dispatching a DOM event when reading is complete"
+        },
+        {
+          "id": "C",
+          "text": "Asynchronously, by returning a Promise that resolves with the response string"
+        },
+        {
+          "id": "D",
+          "text": "By writing the result into a global variable"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "`response.text()` resolves asynchronously with the body text.",
+      "tags": [
+        "fetch-api",
+        "response-handling"
+      ],
+      "sourceRefs": [
+        "Ekran görüntüsü 2026-04-13 084858.png"
+      ],
+      "needs_review": false
+    },
+    {
+      "id": "q57",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Handlers",
+      "difficulty": "medium",
+      "questionMd": "What is the correct syntax for using the real Fetch API with success and error handlers?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "fetch('file.txt').catch(onSuccess).then(onError);"
+        },
+        {
+          "id": "B",
+          "text": "fetch('file.txt').then(onSuccess, onError);"
+        },
+        {
+          "id": "C",
+          "text": "fetch('file.txt', { success: onSuccess, error: onError });"
+        },
+        {
+          "id": "D",
+          "text": "fetch('file.txt', onSuccess, onError);"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "The lecture's Promise-based pattern attaches success/error handlers with `.then(success, error)`.",
+      "tags": [
+        "fetch-api",
+        "handlers"
+      ],
+      "sourceRefs": [
+        "Q3(1).jpeg"
+      ],
+      "needs_review": false
+    }
+  ]
+}

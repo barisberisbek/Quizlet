@@ -3,34 +3,32 @@
     "id": "q2-merged",
     "title": "Quiz 2 — DOM, Events & Async JavaScript",
     "description": "DOM manipulation, event handling, async/await, promises, and browser APIs.",
-    "source": "DWP Past Exams",
+    "source": "DWP Past Exams (Merged)",
     "topic": "DOM & Events",
     "topics": [
-      "Web History",
-      "Fetch API",
-      "Course Structure",
-      "JavaScript",
-      "History",
-      "Web Concepts",
-      "Promises",
-      "Web APIs",
-      "HTTP",
-      "Data Formats",
-      "JSON",
-      "REST API",
-      "Networking",
-      "Data Serialization",
       "Architecture",
-      "Events",
-      "Development Environment",
+      "Course Structure",
+      "DOM",
+      "DOM Manipulation",
+      "Data Formats",
+      "Data Serialization",
+      "Development",
+      "Fetch API",
+      "HTTP",
+      "JSON",
+      "JavaScript",
+      "Networking",
       "Node.js",
-      "DOM Manipulation"
+      "Promises",
+      "REST API",
+      "Web APIs",
+      "Web Development"
     ],
-    "questionCount": 57,
+    "questionCount": 55,
     "difficulty": "medium",
-    "estimatedMinutes": 86,
+    "estimatedMinutes": 83,
     "tags": [
-      "quiz-2",
+      "q2",
       "merged",
       "past-exam"
     ],
@@ -38,612 +36,7 @@
   },
   "questions": [
     {
-      "id": "q2-01",
-      "type": "single_choice",
-      "topic": "Web History",
-      "subtopic": "W3C",
-      "difficulty": "easy",
-      "questionMd": "What is the primary purpose of the World Wide Web Consortium (W3C)?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "To sell hosting packages to web companies"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "To create new web browsers"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "To police the internet against malware"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "To develop protocols and guidelines that ensure long-term growth for the Web"
-        }
-      ],
-      "correctAnswer": [
-        "d"
-      ],
-      "explanationMd": "The W3C is the main international standards organization for the World Wide Web.",
-      "tags": [
-        "web-history",
-        "w3c",
-        "standards"
-      ],
-      "sourceRefs": [
-        "Dynamic Web Programming - Emir Quiz 2.json",
-        "Q2-Berhudan.json"
-      ],
-      "mergedFromCount": 2,
-      "needs_review": true
-    },
-    {
-      "id": "q2-02",
-      "type": "single_choice",
-      "topic": "Fetch API",
-      "subtopic": "Purpose",
-      "difficulty": "easy",
-      "questionMd": "What is the primary purpose of the `fetch()` function in JavaScript?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "To serialize JavaScript objects into JSON strings"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "To load resources asynchronously over a network using a Promise-based approach"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "To synchronously read files from the local file system"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "To parse HTML documents and manipulate the DOM"
-        }
-      ],
-      "correctAnswer": [
-        "b"
-      ],
-      "explanationMd": "No explanation provided.",
-      "tags": [],
-      "sourceRefs": [
-        "Dynamic Web Programming - Emir Quiz 2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "q2-03",
-      "type": "single_choice",
-      "topic": "Web History",
-      "subtopic": "GraphQL",
-      "difficulty": "easy",
-      "questionMd": "According to the lecture, which company originally developed and used GraphQL before open-sourcing it?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "Netflix"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "Facebook"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "GitHub"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "Spotify"
-        }
-      ],
-      "correctAnswer": [
-        "b"
-      ],
-      "explanationMd": "No explanation provided.",
-      "tags": [],
-      "sourceRefs": [
-        "Dynamic Web Programming - Emir Quiz 2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "q2-04",
-      "type": "single_choice",
-      "topic": "Fetch API",
-      "subtopic": "Fetch vs XHR",
-      "difficulty": "medium",
-      "questionMd": "How does the lecture describe XMLHttpRequest (XHR) compared to the Fetch API?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "Simpler but less flexible"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "More secure and widely supported"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "Faster and more reliable"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "Clunky and harder to use"
-        }
-      ],
-      "correctAnswer": [
-        "d"
-      ],
-      "explanationMd": "No explanation provided.",
-      "tags": [],
-      "sourceRefs": [
-        "Dynamic Web Programming - Emir Quiz 2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "q2-05",
-      "type": "single_choice",
-      "topic": "Course Structure",
-      "subtopic": "Evaluation",
-      "difficulty": "easy",
-      "questionMd": "According to the course evaluation structure, what percentage of the final grade is determined by the midterm component?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "50%"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "40%"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "30%"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "60%"
-        }
-      ],
-      "correctAnswer": [
-        "b"
-      ],
-      "explanationMd": "No explanation provided.",
-      "tags": [],
-      "sourceRefs": [
-        "Dynamic Web Programming - Emir Quiz 2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "q2-06",
-      "type": "single_choice",
-      "topic": "JavaScript",
-      "subtopic": "Context (this)",
-      "difficulty": "medium",
-      "questionMd": "Inside an ES6 class constructor, what does the `this` keyword refer to?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "The global window object of the browser"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "The new object instance being created"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "The parent class from which the current class inherits"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "The HTML element that triggered the event"
-        }
-      ],
-      "correctAnswer": [
-        "b"
-      ],
-      "explanationMd": "No explanation provided.",
-      "tags": [],
-      "sourceRefs": [
-        "Dynamic Web Programming - Emir Quiz 2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "q2-07",
-      "type": "single_choice",
-      "topic": "History",
-      "subtopic": "JSON",
-      "difficulty": "easy",
-      "questionMd": "Who created JSON according to the lecture?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "Douglas Crockford"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "Ryan Dahl"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "Tim Berners-Lee"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "Brendan Eich"
-        }
-      ],
-      "correctAnswer": [
-        "a"
-      ],
-      "explanationMd": "No explanation provided.",
-      "tags": [],
-      "sourceRefs": [
-        "Dynamic Web Programming - Emir Quiz 2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "q2-08",
-      "type": "single_choice",
-      "topic": "Fetch API",
-      "subtopic": "HTTP Methods",
-      "difficulty": "easy",
-      "questionMd": "By default, without any additional options, which HTTP method does the `fetch()` API use when making a request?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "PUT"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "POST"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "DELETE"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "GET"
-        }
-      ],
-      "correctAnswer": [
-        "d"
-      ],
-      "explanationMd": "No explanation provided.",
-      "tags": [],
-      "sourceRefs": [
-        "Dynamic Web Programming - Emir Quiz 2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "q2-09",
-      "type": "single_choice",
-      "topic": "Fetch API",
-      "subtopic": "Purpose",
-      "difficulty": "easy",
-      "questionMd": "What is the primary purpose of the Fetch API in a web browser?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "To manipulate the DOM after a page has loaded"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "To serialize JavaScript objects into strings"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "To load external resources such as text and JSON asynchronously"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "To define callback functions for user interface events"
-        }
-      ],
-      "correctAnswer": [
-        "c"
-      ],
-      "explanationMd": "No explanation provided.",
-      "tags": [],
-      "sourceRefs": [
-        "Dynamic Web Programming - Emir Quiz 2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "q2-10",
-      "type": "single_choice",
-      "topic": "Web Concepts",
-      "subtopic": "Frontend",
-      "difficulty": "easy",
-      "questionMd": "Which set of programming languages is associated with front-end web development?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "Node.js, PHP, and Go"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "SQL, XML, and SGML"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "Python, Java, and Ruby"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "HTML, CSS, and JavaScript"
-        }
-      ],
-      "correctAnswer": [
-        "d"
-      ],
-      "explanationMd": "No explanation provided.",
-      "tags": [],
-      "sourceRefs": [
-        "Dynamic Web Programming - Emir Quiz 2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "q2-11",
-      "type": "single_choice",
-      "topic": "Promises",
-      "subtopic": "Chaining",
-      "difficulty": "medium",
-      "questionMd": "In a Promise chain such as `fetch(url).then(a).then(b)`, what value does function `b` receive as its argument?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "The original URL string passed to fetch()"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "The value returned by function a"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "The raw HTTP response object"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "The HTTP status code of the response"
-        }
-      ],
-      "correctAnswer": [
-        "b"
-      ],
-      "explanationMd": "No explanation provided.",
-      "tags": [],
-      "sourceRefs": [
-        "Dynamic Web Programming - Emir Quiz 2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "q2-12",
-      "type": "single_choice",
-      "topic": "Web APIs",
-      "subtopic": "Fetch vs XHR",
-      "difficulty": "easy",
-      "questionMd": "Which of the following correctly describes the old API that `fetch()` replaced for loading browser resources?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "JSON.parse()"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "loadFromFile()"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "navigator.mediaDevices"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "XMLHttpRequest (XHR)"
-        }
-      ],
-      "correctAnswer": [
-        "d"
-      ],
-      "explanationMd": "No explanation provided.",
-      "tags": [],
-      "sourceRefs": [
-        "Dynamic Web Programming - Emir Quiz 2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "q2-13",
-      "type": "single_choice",
-      "topic": "Promises",
-      "subtopic": "Handlers",
-      "difficulty": "easy",
-      "questionMd": "Which of the following statements about `.then()` is correct according to the lecture?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "It can only be called once per Promise object"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "It replaces the need for the fetch() function"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "It immediately executes the fetch request synchronously"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "It lets you attach functions to execute when a Promise succeeds or fails"
-        }
-      ],
-      "correctAnswer": [
-        "d"
-      ],
-      "explanationMd": "No explanation provided.",
-      "tags": [],
-      "sourceRefs": [
-        "Dynamic Web Programming - Emir Quiz 2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "q2-14",
-      "type": "single_choice",
-      "topic": "HTTP",
-      "subtopic": "Status Codes",
-      "difficulty": "easy",
-      "questionMd": "In HTTP communication, what does a status code in the 200 range generally indicate?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "The request was successful"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "The client must authenticate before proceeding"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "The server encountered an internal error"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "The resource was not found"
-        }
-      ],
-      "correctAnswer": [
-        "a"
-      ],
-      "explanationMd": "No explanation provided.",
-      "tags": [],
-      "sourceRefs": [
-        "Dynamic Web Programming - Emir Quiz 2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "q2-15",
-      "type": "single_choice",
-      "topic": "Data Formats",
-      "subtopic": "JSON",
-      "difficulty": "easy",
-      "questionMd": "Why is storing data as JSON preferable to storing it as plain text when using `fetch()`?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "JSON files load faster because they are compressed by the browser"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "JSON eliminates the need to manually parse field separators when deserializing structured data"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "Plain text requires XMLHttpRequest while JSON works with fetch"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "JSON is the only format the Fetch API is able to read"
-        }
-      ],
-      "correctAnswer": [
-        "b"
-      ],
-      "explanationMd": "No explanation provided.",
-      "tags": [],
-      "sourceRefs": [
-        "Dynamic Web Programming - Emir Quiz 2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "q2-16",
+      "id": "q2-001",
       "type": "single_choice",
       "topic": "Fetch API",
       "subtopic": "Response Handling",
@@ -681,14 +74,17 @@
         "promise"
       ],
       "sourceRefs": [
+        "dwp_quiz2_merged.json",
+        "Q2-Web2.json",
         "Dynamic Web Programming - Quiz 2 Sema.json",
-        "Q2-Web2.json"
+        "dwp_quiz3_merged.json",
+        "Dynamic Web Programming - Quiz 3.json"
       ],
-      "mergedFromCount": 2,
-      "needs_review": false
+      "mergedFromCount": 5,
+      "needs_review": true
     },
     {
-      "id": "q2-17",
+      "id": "q2-002",
       "type": "single_choice",
       "topic": "Data Formats",
       "subtopic": "Plain Text vs JSON",
@@ -725,14 +121,18 @@
         "parsing"
       ],
       "sourceRefs": [
+        "dwp_quiz2_merged.json",
+        "Q2-Web2.json",
         "Dynamic Web Programming - Quiz 2 Sema.json",
-        "Q2-Web2.json"
+        "dwp_quiz4_merged.json",
+        "Q4-Web2.json",
+        "Dynamic Web Programming - Quiz 4 Sema.json"
       ],
-      "mergedFromCount": 2,
-      "needs_review": false
+      "mergedFromCount": 6,
+      "needs_review": true
     },
     {
-      "id": "q2-18",
+      "id": "q2-003",
       "type": "single_choice",
       "topic": "Fetch API",
       "subtopic": "Response Object",
@@ -769,14 +169,17 @@
         "fetch"
       ],
       "sourceRefs": [
+        "dwp_quiz2_merged.json",
+        "Q2-Web2.json",
         "Dynamic Web Programming - Quiz 2 Sema.json",
-        "Q2-Web2.json"
+        "dwp_quiz3_merged.json",
+        "Dynamic Web Programming - Emir Quiz 3.json"
       ],
-      "mergedFromCount": 2,
-      "needs_review": false
+      "mergedFromCount": 5,
+      "needs_review": true
     },
     {
-      "id": "q2-19",
+      "id": "q2-004",
       "type": "single_choice",
       "topic": "JSON",
       "subtopic": "Parsing",
@@ -813,14 +216,20 @@
         "javascript"
       ],
       "sourceRefs": [
+        "dwp_quiz2_merged.json",
+        "Q2-Web2.json",
         "Dynamic Web Programming - Quiz 2 Sema.json",
-        "Q2-Web2.json"
+        "Dynamic Web Programming - Quiz 3.json",
+        "dwp_quiz3_merged.json",
+        "Q3-Web2.json",
+        "Dynamic Web Programming - Quiz 3 Sema.json",
+        "Q3-Berhudan.json"
       ],
-      "mergedFromCount": 2,
-      "needs_review": false
+      "mergedFromCount": 8,
+      "needs_review": true
     },
     {
-      "id": "q2-20",
+      "id": "q2-005",
       "type": "single_choice",
       "topic": "JSON",
       "subtopic": "Advantages",
@@ -857,15 +266,19 @@
         "javascript"
       ],
       "sourceRefs": [
-        "Dynamic Web Programming - Quiz 2 Sema.json",
+        "dwp_quiz2_merged.json",
         "Q2-Web2.json",
+        "Dynamic Web Programming - Quiz 2 Sema.json",
+        "dwp_quiz4_merged.json",
+        "Q4-Web2.json",
+        "Dynamic Web Programming - Quiz 4 Sema.json",
         "Dynamic Web Programming - Quiz 2.json"
       ],
-      "mergedFromCount": 3,
+      "mergedFromCount": 7,
       "needs_review": true
     },
     {
-      "id": "q2-21",
+      "id": "q2-006",
       "type": "single_choice",
       "topic": "Promises",
       "subtopic": "Syntax",
@@ -903,14 +316,19 @@
         "fetch"
       ],
       "sourceRefs": [
+        "dwp_quiz2_merged.json",
+        "Q2-Web2.json",
+        "Q3-Web2.json",
+        "dwp_quiz3_merged.json",
         "Dynamic Web Programming - Quiz 2 Sema.json",
-        "Q2-Web2.json"
+        "Dynamic Web Programming - Emir Quiz 3.json",
+        "Dynamic Web Programming - Quiz 3 Sema.json"
       ],
-      "mergedFromCount": 2,
+      "mergedFromCount": 7,
       "needs_review": true
     },
     {
-      "id": "q2-22",
+      "id": "q2-007",
       "type": "single_choice",
       "topic": "REST API",
       "subtopic": "Terminology",
@@ -947,58 +365,19 @@
         "api"
       ],
       "sourceRefs": [
+        "dwp_quiz2_merged.json",
+        "Q2-Web2.json",
         "Dynamic Web Programming - Quiz 2 Sema.json",
-        "Q2-Web2.json"
+        "dwp_quiz4_merged.json",
+        "Q4-Web2.json",
+        "Dynamic Web Programming - Quiz 4 Sema.json",
+        "Dynamic Web Programming - Emir Quiz 4.json"
       ],
-      "mergedFromCount": 2,
-      "needs_review": false
+      "mergedFromCount": 7,
+      "needs_review": true
     },
     {
-      "id": "q2-23",
-      "type": "single_choice",
-      "topic": "Networking",
-      "subtopic": "LAN/WAN",
-      "difficulty": "medium",
-      "questionMd": "How do LANs and WANs relate to the concepts of Intranet and Internet respectively?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "LANs form private internal networks (Intranet), while WANs connect these networks together to form the Internet"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "LANs use wireless connections only, while WANs use wired connections only"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "LANs are always public networks, while WANs are always private networks"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "LANs operate at the application layer, while WANs operate at the physical layer"
-        }
-      ],
-      "correctAnswer": [
-        "a"
-      ],
-      "explanationMd": "LANs are local, private networks (Intranets), and WANs connect them globally to form the broader Internet.",
-      "tags": [
-        "networking",
-        "internet"
-      ],
-      "sourceRefs": [
-        "Dynamic Web Programming - Quiz 2 Sema.json",
-        "Q2-Web2.json"
-      ],
-      "mergedFromCount": 2,
-      "needs_review": false
-    },
-    {
-      "id": "q2-24",
+      "id": "q2-008",
       "type": "single_choice",
       "topic": "Fetch API",
       "subtopic": "Return Values",
@@ -1035,15 +414,18 @@
         "promise"
       ],
       "sourceRefs": [
-        "Dynamic Web Programming - Quiz 2 Sema.json",
+        "dwp_quiz2_merged.json",
         "Q2-Web2.json",
-        "Dynamic Web Programming - Quiz 2.json"
+        "Dynamic Web Programming - Quiz 2 Sema.json",
+        "Dynamic Web Programming - Quiz 2.json",
+        "dwp_quiz3_merged.json",
+        "Dynamic Web Programming - Quiz 3.json"
       ],
-      "mergedFromCount": 3,
+      "mergedFromCount": 6,
       "needs_review": true
     },
     {
-      "id": "q2-25",
+      "id": "q2-009",
       "type": "single_choice",
       "topic": "REST API",
       "subtopic": "Static vs Dynamic",
@@ -1081,14 +463,19 @@
         "architecture"
       ],
       "sourceRefs": [
+        "dwp_quiz2_merged.json",
+        "Q2-Web2.json",
         "Dynamic Web Programming - Quiz 2 Sema.json",
-        "Q2-Web2.json"
+        "dwp_quiz4_merged.json",
+        "Q3-Berhudan.json",
+        "Q4-Berhudan.json",
+        "Dynamic Web Programming - Emir Quiz 4.json"
       ],
-      "mergedFromCount": 2,
-      "needs_review": false
+      "mergedFromCount": 7,
+      "needs_review": true
     },
     {
-      "id": "q2-26",
+      "id": "q2-010",
       "type": "single_choice",
       "topic": "Networking",
       "subtopic": "Internet vs Intranet",
@@ -1125,14 +512,15 @@
         "internet"
       ],
       "sourceRefs": [
-        "Dynamic Web Programming - Quiz 2 Sema.json",
-        "Q2-Web2.json"
+        "dwp_quiz2_merged.json",
+        "Q2-Web2.json",
+        "Dynamic Web Programming - Quiz 2 Sema.json"
       ],
-      "mergedFromCount": 2,
+      "mergedFromCount": 3,
       "needs_review": false
     },
     {
-      "id": "q2-27",
+      "id": "q2-011",
       "type": "single_choice",
       "topic": "Data Serialization",
       "subtopic": "Terminology",
@@ -1169,14 +557,19 @@
         "serialization"
       ],
       "sourceRefs": [
+        "dwp_quiz2_merged.json",
+        "Q2-Web2.json",
         "Dynamic Web Programming - Quiz 2 Sema.json",
-        "Q2-Web2.json"
+        "Dynamic Web Programming - Emir Quiz 3.json",
+        "dwp_quiz3_merged.json",
+        "Q3-Web2.json",
+        "Dynamic Web Programming - Quiz 3 Sema.json"
       ],
-      "mergedFromCount": 2,
-      "needs_review": false
+      "mergedFromCount": 7,
+      "needs_review": true
     },
     {
-      "id": "q2-28",
+      "id": "q2-012",
       "type": "single_choice",
       "topic": "Promises",
       "subtopic": "States",
@@ -1213,14 +606,17 @@
         "promise"
       ],
       "sourceRefs": [
+        "dwp_quiz2_merged.json",
+        "dwp_quiz3_merged.json",
+        "Q2-Web2.json",
         "Dynamic Web Programming - Quiz 2 Sema.json",
-        "Q2-Web2.json"
+        "Dynamic Web Programming - Quiz 3.json"
       ],
-      "mergedFromCount": 2,
+      "mergedFromCount": 5,
       "needs_review": false
     },
     {
-      "id": "q2-29",
+      "id": "q2-013",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Context (this)",
@@ -1258,14 +654,15 @@
         "events"
       ],
       "sourceRefs": [
-        "Dynamic Web Programming - Quiz 2 Sema.json",
-        "Q2-Web2.json"
+        "dwp_quiz2_merged.json",
+        "Q2-Web2.json",
+        "Dynamic Web Programming - Quiz 2 Sema.json"
       ],
-      "mergedFromCount": 2,
+      "mergedFromCount": 3,
       "needs_review": false
     },
     {
-      "id": "q2-30",
+      "id": "q2-014",
       "type": "single_choice",
       "topic": "Web APIs",
       "subtopic": "Media Devices",
@@ -1302,16 +699,658 @@
         "web-api"
       ],
       "sourceRefs": [
+        "dwp_quiz2_merged.json",
+        "Q2-Web2.json",
+        "Q3-Web2.json",
         "Dynamic Web Programming - Quiz 2 Sema.json",
-        "Q2-Web2.json"
+        "Dynamic Web Programming - Quiz 3 Sema.json",
+        "dwp_quiz3_merged.json",
+        "Dynamic Web Programming - Emir Quiz 3.json",
+        "Dynamic Web Programming - Quiz 3.json"
+      ],
+      "mergedFromCount": 8,
+      "needs_review": true
+    },
+    {
+      "id": "q2-015",
+      "type": "single_choice",
+      "topic": "Course Structure",
+      "subtopic": "Evaluation",
+      "difficulty": "easy",
+      "questionMd": "According to the course evaluation structure, what percentage of the final grade is determined by the midterm component?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "50%"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "40%"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "30%"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "60%"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "No explanation provided.",
+      "tags": [],
+      "sourceRefs": [
+        "dwp_quiz2_merged.json",
+        "Dynamic Web Programming - Emir Quiz 2.json"
       ],
       "mergedFromCount": 2,
       "needs_review": false
     },
     {
-      "id": "q2-31",
+      "id": "q2-016",
       "type": "single_choice",
-      "topic": "Architecture",
+      "topic": "JavaScript",
+      "subtopic": "Classes",
+      "difficulty": "easy",
+      "questionMd": "Inside an ES6 class constructor, what does the `this` keyword refer to?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The HTML element that triggered the event"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The new object instance being created"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The parent class from which the current class inherits"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The global window object of the browser"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Inside a constructor, `this` refers to the instance being initialized.",
+      "tags": [
+        "javascript",
+        "classes",
+        "this"
+      ],
+      "sourceRefs": [
+        "dwp_quiz2_merged.json",
+        "dwp_quiz3_merged.json",
+        "Dynamic Web Programming - Emir Quiz 2.json"
+      ],
+      "mergedFromCount": 3,
+      "needs_review": false
+    },
+    {
+      "id": "q2-017",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "Chaining",
+      "difficulty": "medium",
+      "questionMd": "In a Promise chain such as `fetch(url).then(a).then(b)`, what value does function `b` receive as its argument?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The original URL string passed to fetch()"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The value returned by function a"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The raw HTTP response object"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The HTTP status code of the response"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "No explanation provided.",
+      "tags": [],
+      "sourceRefs": [
+        "dwp_quiz2_merged.json",
+        "Q4-Web2.json",
+        "Dynamic Web Programming - Emir Quiz 2.json",
+        "Dynamic Web Programming - Quiz 4 Sema.json"
+      ],
+      "mergedFromCount": 4,
+      "needs_review": false
+    },
+    {
+      "id": "q2-018",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "XHR",
+      "difficulty": "easy",
+      "questionMd": "Which of the following correctly describes the old API that `fetch()` replaced for loading browser resources?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "XMLHttpRequest (XHR)"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "JSON.parse()"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "navigator.mediaDevices"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "loadFromFile()"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Fetch replaced the older XHR pattern for many browser resource requests.",
+      "tags": [
+        "fetch",
+        "xhr"
+      ],
+      "sourceRefs": [
+        "dwp_quiz2_merged.json",
+        "dwp_quiz3_merged.json",
+        "Q3-Web2.json",
+        "Dynamic Web Programming - Quiz 3 Sema.json",
+        "Dynamic Web Programming - Quiz 3.json",
+        "Dynamic Web Programming - Emir Quiz 2.json"
+      ],
+      "mergedFromCount": 6,
+      "needs_review": true
+    },
+    {
+      "id": "q2-019",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "then",
+      "difficulty": "easy",
+      "questionMd": "Which of the following statements about `.then()` is correct according to the lecture?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "It lets you attach functions to execute when a Promise succeeds or fails"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "It replaces the need for the `fetch()` function"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "It immediately executes the fetch request synchronously"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "It can only be called once per Promise object"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "`.then()` attaches fulfillment and optionally rejection handlers to a Promise.",
+      "tags": [
+        "promise",
+        "then",
+        "javascript"
+      ],
+      "sourceRefs": [
+        "dwp_quiz2_merged.json",
+        "Dynamic Web Programming - Emir Quiz 2.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "q2-020",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "JSON Parsing",
+      "difficulty": "easy",
+      "questionMd": "Which method on a fetch `response` object provides built-in support for parsing JSON directly?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "response.json()"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "response.decode()"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "response.text()"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "response.parse()"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "`response.json()` reads the body and parses it as JSON, returning a Promise.",
+      "tags": [
+        "fetch",
+        "response",
+        "json"
+      ],
+      "sourceRefs": [
+        "dwp_quiz2_merged.json",
+        "dwp_quiz3_merged.json",
+        "Dynamic Web Programming - Emir Quiz 3.json"
+      ],
+      "mergedFromCount": 3,
+      "needs_review": true
+    },
+    {
+      "id": "q2-021",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Refactoring",
+      "difficulty": "medium",
+      "questionMd": "Why does the lecture suggest extracting the album rendering logic into a separate `_renderAlbums()` helper method?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Because the `fetch()` API requires a dedicated render callback"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "To avoid exceeding the maximum allowed number of lines in a single method"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "To prevent the browser from caching the album images between renders"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "So the same rendering code can be reused both after the initial fetch and after each sort operation"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "A helper method avoids duplication by reusing the same rendering logic after loading and sorting.",
+      "tags": [
+        "refactoring",
+        "rendering",
+        "javascript"
+      ],
+      "sourceRefs": [
+        "dwp_quiz2_merged.json",
+        "dwp_quiz4_merged.json",
+        "Q4-Web2.json",
+        "Dynamic Web Programming - Quiz 4 Sema.json"
+      ],
+      "mergedFromCount": 4,
+      "needs_review": true
+    },
+    {
+      "id": "q2-022",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "then",
+      "difficulty": "easy",
+      "questionMd": "A Promise has a `.then()` method that accepts which of the following?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A single callback that handles both success and failure identically"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "A timeout value and a retry count"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Functions to execute on success or on error"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "A URL string and an HTTP method"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "`.then()` accepts fulfillment and optionally rejection callback functions.",
+      "tags": [
+        "promise",
+        "then"
+      ],
+      "sourceRefs": [
+        "dwp_quiz2_merged.json",
+        "dwp_quiz3_merged.json",
+        "dwp_quiz4_merged.json"
+      ],
+      "mergedFromCount": 3,
+      "needs_review": false
+    },
+    {
+      "id": "q2-023",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "String Methods",
+      "difficulty": "medium",
+      "questionMd": "In the completed fetch example, which JavaScript method is used to break the fetched text into individual image URLs?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "text.split(' ')"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "text.replace(' ', ',')"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "text.slice(' ')"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "text.join(' ')"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "`split()` breaks a string into an array using a separator. The screenshot appears to show a space separator.",
+      "tags": [
+        "javascript",
+        "strings",
+        "split"
+      ],
+      "sourceRefs": [
+        "dwp_quiz2_merged.json",
+        "dwp_quiz3_merged.json",
+        "Dynamic Web Programming - Emir Quiz 3.json"
+      ],
+      "mergedFromCount": 3,
+      "needs_review": true
+    },
+    {
+      "id": "q2-024",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Overview",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, the Fetch API is made up of how many functions?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "One"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Four"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Two"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Three"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "The lecture treats `fetch()` as the single core function of the Fetch API.",
+      "tags": [
+        "fetch",
+        "api"
+      ],
+      "sourceRefs": [
+        "dwp_quiz2_merged.json",
+        "Q3-Berhudan.json",
+        "dwp_quiz3_merged.json",
+        "Dynamic Web Programming - Quiz 3.json",
+        "Dynamic Web Programming - Emir Quiz 3.json"
+      ],
+      "mergedFromCount": 5,
+      "needs_review": true
+    },
+    {
+      "id": "q2-025",
+      "type": "single_choice",
+      "topic": "Promises",
+      "subtopic": "Definition",
+      "difficulty": "easy",
+      "questionMd": "Which of the following best describes a JavaScript Promise?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A built in timer that delays code execution by a specified amount"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "A special array type used to store multiple fetch results"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "An object representing the eventual completion or failure of an asynchronous operation"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "A synchronous function that immediately returns a value"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "A Promise represents a future result of an asynchronous operation.",
+      "tags": [
+        "promise",
+        "asynchronous"
+      ],
+      "sourceRefs": [
+        "dwp_quiz2_merged.json",
+        "dwp_quiz4_merged.json",
+        "Q4-Web2.json",
+        "Dynamic Web Programming - Quiz 4 Sema.json"
+      ],
+      "mergedFromCount": 4,
+      "needs_review": true
+    },
+    {
+      "id": "q2-026",
+      "type": "single_choice",
+      "topic": "DOM",
+      "subtopic": "Images",
+      "difficulty": "easy",
+      "questionMd": "In the completed fetch example, how is each image added to the web page after its URL is extracted?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The image URL is written directly into the HTML using `innerHTML`"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "A CSS background property is applied to an existing element"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The URL is passed to a separate fetch call to load the image data"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "A new `<img>` element is created and appended to `document.body`"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "The example creates an image element and appends it to the DOM.",
+      "tags": [
+        "dom",
+        "image",
+        "appendChild"
+      ],
+      "sourceRefs": [
+        "dwp_quiz2_merged.json",
+        "Dynamic Web Programming - Quiz 3.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "q2-027",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Functions as Objects",
+      "difficulty": "medium",
+      "questionMd": "Because functions in JavaScript are objects, which of the following can be called directly on a function variable?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The `bind()` method, which permanently deletes the function from memory"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The `compile()` method, which optimizes the function for performance"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The `call()` method, which executes the function's underlying code"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The `render()` method, which displays the function's output in the DOM"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Functions are callable objects; `call()` is a real method on function objects.",
+      "tags": [
+        "javascript",
+        "functions",
+        "call"
+      ],
+      "sourceRefs": [
+        "dwp_quiz2_merged.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q2-028",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "response.text",
+      "difficulty": "easy",
+      "questionMd": "How does `response.text()` read the response data according to the lecture?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Asynchronously, by returning a Promise that resolves with the response string"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Synchronously, by returning the string directly"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "By dispatching a DOM event when reading is complete"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "By writing the result into a global variable"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "`response.text()` is asynchronous and returns a Promise resolved with the body text.",
+      "tags": [
+        "fetch",
+        "response",
+        "promise"
+      ],
+      "sourceRefs": [
+        "dwp_quiz2_merged.json",
+        "dwp_quiz3_merged.json",
+        "dwp_quiz4_merged.json",
+        "Dynamic Web Programming - Emir Quiz 3.json"
+      ],
+      "mergedFromCount": 4,
+      "needs_review": true
+    },
+    {
+      "id": "q2-029",
+      "type": "single_choice",
+      "topic": "JavaScript",
       "subtopic": "Callbacks",
       "difficulty": "medium",
       "questionMd": "In the discography page example, how does the `SortButton` class communicate a sort action back to the `App` class?",
@@ -1319,7 +1358,7 @@
         {
           "id": "a",
           "label": "A",
-          "text": "It directly modifies the albumInfo property of the App instance"
+          "text": "It directly modifies the `albumInfo` property of the `App` instance"
         },
         {
           "id": "b",
@@ -1329,150 +1368,40 @@
         {
           "id": "c",
           "label": "C",
-          "text": "It fires a built-in DOM click event that the App class listens for on the document"
+          "text": "It fires a built-in DOM click event that the `App` class listens to on the document"
         },
         {
           "id": "d",
           "label": "D",
-          "text": "It calls an onClickCallback function passed to it during construction, supplying the sort function as an argument"
+          "text": "It calls an `onClickCallback` function passed to it during construction, supplying the sort function as an argument"
         }
       ],
       "correctAnswer": [
         "d"
       ],
-      "explanationMd": "No explanation provided.",
-      "tags": [],
+      "explanationMd": "The callback-based design lets `SortButton` notify the `App` class without tightly coupling the classes.",
+      "tags": [
+        "callback",
+        "classes",
+        "events"
+      ],
       "sourceRefs": [
+        "dwp_quiz2_merged.json",
+        "dwp_quiz3_merged.json",
+        "dwp_quiz4_merged.json",
+        "Q4-Web2.json",
+        "Dynamic Web Programming - Emir Quiz 4.json",
+        "Dynamic Web Programming - Quiz 4 Sema.json",
         "Dynamic Web Programming - Quiz 2.json"
       ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      "mergedFromCount": 7,
+      "needs_review": true
     },
     {
-      "id": "q2-32",
+      "id": "q2-030",
       "type": "single_choice",
-      "topic": "JavaScript",
-      "subtopic": "Classes",
-      "difficulty": "easy",
-      "questionMd": "When defining methods inside an ES6 class body, which keyword must you omit?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "class"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "function"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "const"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "return"
-        }
-      ],
-      "correctAnswer": [
-        "b"
-      ],
-      "explanationMd": "No explanation provided.",
-      "tags": [],
-      "sourceRefs": [
-        "Dynamic Web Programming - Quiz 2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "q2-33",
-      "type": "single_choice",
-      "topic": "Events",
-      "subtopic": "CustomEvent",
-      "difficulty": "medium",
-      "questionMd": "According to the lecture, what is an important limitation of the CustomEvent API in JavaScript?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "CustomEvents are not supported in any browser that uses the V8 engine"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "CustomEvents can only be dispatched and listened to on HTML elements, not on arbitrary class instances"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "CustomEvents can only be created inside ES6 class constructors"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "CustomEvents cannot carry any additional data in their event object"
-        }
-      ],
-      "correctAnswer": [
-        "b"
-      ],
-      "explanationMd": "No explanation provided.",
-      "tags": [],
-      "sourceRefs": [
-        "Dynamic Web Programming - Quiz 2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "q2-34",
-      "type": "single_choice",
-      "topic": "JavaScript",
-      "subtopic": "Context (this)",
-      "difficulty": "medium",
-      "questionMd": "What problem does calling `this.methodName = this.methodName.bind(this)` in a constructor solve?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "It prevents the method from being called more than once per event"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "It ensures this always refers to the class instance when the method is used as an event handler"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "It registers the method as a global function accessible from any scope"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "It copies the method's code into the HTML element for faster execution"
-        }
-      ],
-      "correctAnswer": [
-        "b"
-      ],
-      "explanationMd": "No explanation provided.",
-      "tags": [],
-      "sourceRefs": [
-        "Dynamic Web Programming - Quiz 2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "q2-35",
-      "type": "single_choice",
-      "topic": "Data Formats",
-      "subtopic": "Serialization",
+      "topic": "Data Serialization",
+      "subtopic": "serialize",
       "difficulty": "easy",
       "questionMd": "According to the lecture, what does it mean to \"serialize\" an object?",
       "options": [
@@ -1500,31 +1429,37 @@
       "correctAnswer": [
         "c"
       ],
-      "explanationMd": "No explanation provided.",
-      "tags": [],
-      "sourceRefs": [
-        "Dynamic Web Programming - Quiz 2.json"
+      "explanationMd": "Serialization converts structured data into a string form for storage or transfer.",
+      "tags": [
+        "serialization",
+        "json"
       ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      "sourceRefs": [
+        "dwp_quiz2_merged.json",
+        "Dynamic Web Programming - Quiz 2.json",
+        "dwp_quiz3_merged.json",
+        "dwp_quiz4_merged.json"
+      ],
+      "mergedFromCount": 4,
+      "needs_review": true
     },
     {
-      "id": "q2-36",
+      "id": "q2-031",
       "type": "single_choice",
       "topic": "Promises",
       "subtopic": "Chaining",
       "difficulty": "medium",
-      "questionMd": "In a chained Promise pattern, what must `onResponse` return for the next `then()` in the chain to receive the text data?",
+      "questionMd": "In a chained Promise pattern, what must `onResponse` return for the next `.then()` in the chain to receive the text data?",
       "options": [
         {
           "id": "a",
           "label": "A",
-          "text": "A resolved string from response.status"
+          "text": "A resolved string from `response.status`"
         },
         {
           "id": "b",
           "label": "B",
-          "text": "The Promise returned by response.text()"
+          "text": "The Promise returned by `response.text()`"
         },
         {
           "id": "c",
@@ -1534,72 +1469,41 @@
         {
           "id": "d",
           "label": "D",
-          "text": "A JSON object created with JSON.parse()"
+          "text": "A JSON object created with `JSON.parse()`"
         }
       ],
       "correctAnswer": [
         "b"
       ],
-      "explanationMd": "No explanation provided.",
-      "tags": [],
-      "sourceRefs": [
-        "Dynamic Web Programming - Quiz 2.json"
+      "explanationMd": "Returning `response.text()` passes a Promise into the chain that resolves to the text data.",
+      "tags": [
+        "promise",
+        "then",
+        "response.text"
       ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      "sourceRefs": [
+        "dwp_quiz2_merged.json",
+        "dwp_quiz3_merged.json",
+        "Q3-Web2.json",
+        "Dynamic Web Programming - Quiz 3 Sema.json",
+        "Dynamic Web Programming - Quiz 2.json",
+        "Dynamic Web Programming - Quiz 3.json"
+      ],
+      "mergedFromCount": 6,
+      "needs_review": true
     },
     {
-      "id": "q2-37",
+      "id": "q2-032",
       "type": "single_choice",
       "topic": "JavaScript",
-      "subtopic": "Functions",
-      "difficulty": "easy",
-      "questionMd": "Which of the following is a characteristic of first-class functions in JavaScript?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "Functions must always be declared before the class definition"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "Functions cannot be stored in variables or object properties"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "Functions require the function keyword and cannot use arrow syntax"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "Functions can be passed as parameters to other functions"
-        }
-      ],
-      "correctAnswer": [
-        "d"
-      ],
-      "explanationMd": "No explanation provided.",
-      "tags": [],
-      "sourceRefs": [
-        "Dynamic Web Programming - Quiz 2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "q2-38",
-      "type": "single_choice",
-      "topic": "JavaScript",
-      "subtopic": "Context (this)",
-      "difficulty": "hard",
+      "subtopic": "bind",
+      "difficulty": "medium",
       "questionMd": "In the discography example, when a method is used as both a fetch callback and an event handler, what must be done in the constructor for `this` to work correctly in both cases?",
       "options": [
         {
           "id": "a",
           "label": "A",
-          "text": "Each method must be rebound to the instance using bind(this) and the result stored back on the object"
+          "text": "Each method must be rebound to the instance using `.bind(this)` and the result stored back on the object"
         },
         {
           "id": "b",
@@ -1614,25 +1518,30 @@
         {
           "id": "d",
           "label": "D",
-          "text": "The methods must be made static so they do not rely on this"
+          "text": "The methods must be made static so they do not rely on `this`"
         }
       ],
       "correctAnswer": [
         "a"
       ],
-      "explanationMd": "No explanation provided.",
-      "tags": [],
+      "explanationMd": "Rebinding methods in the constructor keeps `this` correct in both callback contexts.",
+      "tags": [
+        "bind",
+        "this",
+        "callbacks"
+      ],
       "sourceRefs": [
+        "dwp_quiz2_merged.json",
         "Dynamic Web Programming - Quiz 2.json"
       ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      "mergedFromCount": 2,
+      "needs_review": true
     },
     {
-      "id": "q2-39",
+      "id": "q2-033",
       "type": "single_choice",
       "topic": "Fetch API",
-      "subtopic": "Syntax",
+      "subtopic": "then syntax",
       "difficulty": "medium",
       "questionMd": "What is the correct syntax for using the real Fetch API with success and error handlers?",
       "options": [
@@ -1660,16 +1569,343 @@
       "correctAnswer": [
         "c"
       ],
-      "explanationMd": "No explanation provided.",
-      "tags": [],
+      "explanationMd": "Promise handlers can be attached with `.then(onSuccess, onError)`.",
+      "tags": [
+        "fetch",
+        "promise",
+        "then"
+      ],
       "sourceRefs": [
+        "dwp_quiz2_merged.json",
+        "dwp_quiz3_merged.json",
+        "Q3-Web2.json",
+        "Dynamic Web Programming - Quiz 2.json",
+        "Dynamic Web Programming - Quiz 3 Sema.json"
+      ],
+      "mergedFromCount": 5,
+      "needs_review": true
+    },
+    {
+      "id": "q2-034",
+      "type": "single_choice",
+      "topic": "JSON",
+      "subtopic": "Property Access",
+      "difficulty": "easy",
+      "questionMd": "Given the JSON object `{\"albums\": [{\"name\": \"Daydream\", \"year\": 1995}]}` parsed into a variable called `data`, how would you access the year of the first album?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "data[\"year\"][\"albums\"][0]"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "data[0].albums.year"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "data.albums[0].year"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "data.albums.year[0]"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "`albums` is an array property, so you index into it first, then access `year`.",
+      "tags": [
+        "json",
+        "objects",
+        "arrays"
+      ],
+      "sourceRefs": [
+        "dwp_quiz2_merged.json",
+        "dwp_quiz3_merged.json",
+        "dwp_quiz4_merged.json"
+      ],
+      "mergedFromCount": 3,
+      "needs_review": true
+    },
+    {
+      "id": "q2-035",
+      "type": "single_choice",
+      "topic": "Development",
+      "subtopic": "Local Server",
+      "difficulty": "easy",
+      "questionMd": "Which command is used to serve local files over HTTP so that `fetch()` can access them during development?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "python3 -m http.server"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "python3 -m fetch-server"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "npm start http"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "node server.js"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "`python3 -m http.server` starts a simple local HTTP server suitable for development.",
+      "tags": [
+        "fetch",
+        "http",
+        "development"
+      ],
+      "sourceRefs": [
+        "dwp_quiz2_merged.json",
+        "dwp_quiz3_merged.json",
+        "dwp_quiz4_merged.json",
+        "Q4-Web2.json",
+        "Dynamic Web Programming - Quiz 4 Sema.json",
+        "Q4-Berhudan.json",
         "Dynamic Web Programming - Quiz 2.json"
       ],
-      "mergedFromCount": 1,
+      "mergedFromCount": 7,
+      "needs_review": true
+    },
+    {
+      "id": "q2-036",
+      "type": "single_choice",
+      "topic": "Web Development",
+      "subtopic": "Frameworks",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, why are web frameworks so commonly used in web development?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "They make software architecture decisions ahead of time and provide starter code, reducing the number of decisions a developer must make"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "They automatically generate HTML and CSS from back-end database schemas"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "They compile JavaScript into machine code for faster execution in the browser"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "They replace the need to learn HTML, CSS, and JavaScript entirely"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Frameworks reduce setup effort and architectural decision-making by providing structure and starter code.",
+      "tags": [
+        "frameworks",
+        "architecture"
+      ],
+      "sourceRefs": [
+        "dwp_quiz2_merged.json",
+        "Dynamic Web Programming - Quiz 2.json"
+      ],
+      "mergedFromCount": 2,
       "needs_review": false
     },
     {
-      "id": "q2-40",
+      "id": "q2-037",
+      "type": "single_choice",
+      "topic": "Networking",
+      "subtopic": "IP",
+      "difficulty": "medium",
+      "questionMd": "In the TCP/IP model, what is the responsibility of the Internet Protocol (IP)?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "To convert hostnames into human-readable domain names"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "To encrypt data before transmission over the network"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "To route TCP packets to the correct destination address"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "To guarantee that all packets arrive in the correct order"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Among the given options, routing packets toward the destination address is the role closest to IP.",
+      "tags": [
+        "networking",
+        "ip",
+        "tcp-ip"
+      ],
+      "sourceRefs": [
+        "dwp_quiz2_merged.json",
+        "dwp_quiz3_merged.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "q2-038",
+      "type": "single_choice",
+      "topic": "HTTP",
+      "subtopic": "MIME Types",
+      "difficulty": "easy",
+      "questionMd": "Which MIME type indicates that the content being transferred is an HTML web page?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "application/json"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "text/plain"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "text/html"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "image/jpeg"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "HTML documents are served with the `text/html` MIME type.",
+      "tags": [
+        "http",
+        "mime",
+        "html"
+      ],
+      "sourceRefs": [
+        "dwp_quiz2_merged.json",
+        "dwp_quiz3_merged.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "q2-039",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Callbacks",
+      "difficulty": "medium",
+      "questionMd": "In the hypothetical asynchronous version of `loadFromFile()` shown in the lecture, how are success and failure handled?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "By checking a return value after the function completes"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "By wrapping the call in a try-catch block"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "By polling the function repeatedly until it resolves"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "By passing `onSuccess` and `onFail` as callback function arguments"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "The lecture's hypothetical async function uses callbacks for success and failure.",
+      "tags": [
+        "callbacks",
+        "async"
+      ],
+      "sourceRefs": [
+        "dwp_quiz2_merged.json",
+        "dwp_quiz3_merged.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "q2-040",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Array Methods",
+      "difficulty": "medium",
+      "questionMd": "When passing a callback to `list.findIndex(callback)`, what value should the callback return when the desired element is found?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The index of the element"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "null"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "true"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The element itself"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "`findIndex()` expects the predicate callback to return a truthy value for a match.",
+      "tags": [
+        "javascript",
+        "array",
+        "findIndex"
+      ],
+      "sourceRefs": [
+        "dwp_quiz2_merged.json",
+        "dwp_quiz3_merged.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "q2-041",
       "type": "single_choice",
       "topic": "JSON",
       "subtopic": "Data Access",
@@ -1709,127 +1945,7 @@
       "needs_review": false
     },
     {
-      "id": "q2-41",
-      "type": "single_choice",
-      "topic": "Web History",
-      "subtopic": "SGML",
-      "difficulty": "medium",
-      "questionMd": "What is the role of SGML (Standard Generalized Markup Language) in relation to HTML?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "SGML is a standard for specifying markup languages and was used by Tim Berners-Lee to create the HTML specification"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "SGML is a stylesheet language used to define the visual presentation of XML documents"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "SGML is a transport protocol that HTTP was built upon"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "SGML is a scripting language that adds interactivity to static HTML pages"
-        }
-      ],
-      "correctAnswer": [
-        "a"
-      ],
-      "explanationMd": "No explanation provided.",
-      "tags": [],
-      "sourceRefs": [
-        "Dynamic Web Programming - Quiz 2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "q2-42",
-      "type": "single_choice",
-      "topic": "Development Environment",
-      "subtopic": "Servers",
-      "difficulty": "medium",
-      "questionMd": "Which command is used to serve local files over HTTP so that `fetch()` can access them during development?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "python3 -m http.server"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "python3 -m fetch server"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "npm start http"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "node server.js"
-        }
-      ],
-      "correctAnswer": [
-        "a"
-      ],
-      "explanationMd": "No explanation provided.",
-      "tags": [],
-      "sourceRefs": [
-        "Dynamic Web Programming - Quiz 2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "q2-43",
-      "type": "single_choice",
-      "topic": "Architecture",
-      "subtopic": "Frameworks",
-      "difficulty": "easy",
-      "questionMd": "According to the lecture, why are web frameworks so commonly used in web development?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "They make software architecture decisions ahead of time and provide starter code, reducing the number of decisions a developer must make"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "They automatically generate HTML and CSS from back-end database schemas"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "They compile JavaScript into machine code for faster execution in the browser"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "They replace the need to learn HTML, CSS, and JavaScript entirely"
-        }
-      ],
-      "correctAnswer": [
-        "a"
-      ],
-      "explanationMd": "No explanation provided.",
-      "tags": [],
-      "sourceRefs": [
-        "Dynamic Web Programming - Quiz 2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "q2-44",
+      "id": "q2-042",
       "type": "single_choice",
       "topic": "Fetch API",
       "subtopic": "Response Handling",
@@ -1873,7 +1989,7 @@
       "needs_review": false
     },
     {
-      "id": "q2-45",
+      "id": "q2-043",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Variables",
@@ -1917,7 +2033,7 @@
       "needs_review": false
     },
     {
-      "id": "q2-46",
+      "id": "q2-044",
       "type": "single_choice",
       "topic": "Networking",
       "subtopic": "Protocols",
@@ -1961,7 +2077,7 @@
       "needs_review": false
     },
     {
-      "id": "q2-47",
+      "id": "q2-045",
       "type": "single_choice",
       "topic": "Architecture",
       "subtopic": "Dependencies",
@@ -2005,7 +2121,7 @@
       "needs_review": false
     },
     {
-      "id": "q2-48",
+      "id": "q2-046",
       "type": "single_choice",
       "topic": "Promises",
       "subtopic": "States",
@@ -2048,7 +2164,7 @@
       "needs_review": false
     },
     {
-      "id": "q2-49",
+      "id": "q2-047",
       "type": "single_choice",
       "topic": "Node.js",
       "subtopic": "Core Modules",
@@ -2092,7 +2208,7 @@
       "needs_review": false
     },
     {
-      "id": "q2-50",
+      "id": "q2-048",
       "type": "single_choice",
       "topic": "Fetch API",
       "subtopic": "Structure",
@@ -2135,7 +2251,7 @@
       "needs_review": false
     },
     {
-      "id": "q2-51",
+      "id": "q2-049",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Classes",
@@ -2179,7 +2295,7 @@
       "needs_review": false
     },
     {
-      "id": "q2-52",
+      "id": "q2-050",
       "type": "single_choice",
       "topic": "Web APIs",
       "subtopic": "Fetch vs XHR",
@@ -2223,7 +2339,7 @@
       "needs_review": false
     },
     {
-      "id": "q2-53",
+      "id": "q2-051",
       "type": "single_choice",
       "topic": "HTTP",
       "subtopic": "Methods",
@@ -2267,7 +2383,7 @@
       "needs_review": false
     },
     {
-      "id": "q2-54",
+      "id": "q2-052",
       "type": "single_choice",
       "topic": "DOM Manipulation",
       "subtopic": "Images",
@@ -2310,7 +2426,7 @@
       "needs_review": false
     },
     {
-      "id": "q2-55",
+      "id": "q2-053",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Methods",
@@ -2354,7 +2470,7 @@
       "needs_review": false
     },
     {
-      "id": "q2-56",
+      "id": "q2-054",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Context (this)",
@@ -2399,7 +2515,7 @@
       "needs_review": false
     },
     {
-      "id": "q2-57",
+      "id": "q2-055",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Arrow Functions",
