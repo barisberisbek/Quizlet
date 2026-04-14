@@ -2,7 +2,7 @@
 
 A production-ready, static-first quiz platform for practicing **Dynamic Web Programming** past exam questions. Built with React, TypeScript, Vite, and Tailwind CSS. Deployable to GitHub Pages with zero backend dependencies.
 
-🔗 **Live Demo**: [https://barisberisbek.github.io/Dynamic-Web-Programming/](https://barisberisbek.github.io/Dynamic-Web-Programming/)
+🔗 **Live Demo**: [https://barisberisbek.github.io/Quizlet/](https://barisberisbek.github.io/Quizlet/)
 
 ---
 
@@ -146,7 +146,7 @@ npm run dev
 ## Build for Production
 
 ```bash
-# TypeScript check + Vite build (base path: /Dynamic-Web-Programming/)
+# TypeScript check + Vite build (base path: /Quizlet/)
 npm run build
 
 # Preview the production build locally

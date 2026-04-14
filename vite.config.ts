@@ -4,9 +4,9 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => ({
-  // Production: /Dynamic-Web-Programming/ for GitHub Pages
+  // Production: /Quizlet/ for GitHub Pages
   // Development: / for local dev server
-  base: mode === 'production' ? '/Dynamic-Web-Programming/' : '/',
+  base: mode === 'production' ? '/Quizlet/' : '/',
   plugins: [
     react(),
     tailwindcss(),

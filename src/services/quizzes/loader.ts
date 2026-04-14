@@ -5,7 +5,7 @@ import type { Quiz, QuizIndex, QuizMeta } from '../../types/quiz.types';
  * QuizLoaderService — Loads quiz data from static JSON files.
  * 
  * All paths resolve via import.meta.env.BASE_URL to ensure correct
- * resolution on both local dev (/) and GitHub Pages (/Dynamic-Web-Programming/).
+ * resolution on both local dev (/) and GitHub Pages (/Quizlet/).
  * 
  * Future migration path:
  * - Replace fetch calls with Firestore queries
