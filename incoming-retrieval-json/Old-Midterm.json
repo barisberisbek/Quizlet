@@ -1,0 +1,1023 @@
+{
+  "quizId": "Old-Midterm-Extended",
+  "title": "Information Retrieval - Old Midterm (Extended)",
+  "course": "Information Retrieval",
+  "language": "en",
+  "semester": "Unknown",
+  "source": "Past Exam",
+  "durationMinutes": 60,
+  "shuffleQuestions": false,
+  "shuffleOptions": false,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Efficiency",
+      "difficulty": "medium",
+      "questionMd": "Which model is more efficient for processing queries?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Vector Space Model" },
+        { "id": "B", "text": "Boolean Retrieval Model" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "The Boolean Retrieval Model is computationally simpler and therefore more efficient at query processing time compared to the Vector Space Model, which requires calculating cosine similarities.",
+      "tags": ["boolean", "efficiency", "models"]
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "topic": "Term Weighting",
+      "subtopic": "IDF",
+      "difficulty": "medium",
+      "questionMd": "What is the inverse document frequency (IDF) used for in the vector space model?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "To weight the importance of terms in a query" },
+        { "id": "B", "text": "To identify the most frequent terms in a corpus" },
+        { "id": "C", "text": "To determine the relevance of documents to a query" },
+        { "id": "D", "text": "To calculate the cosine similarity between documents" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "IDF is primarily used to weight the importance of terms. Rare terms receive a higher weight (because they are more informative), while common terms receive a lower weight.",
+      "tags": ["idf", "vector-space", "weighting"]
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Boolean Model",
+      "difficulty": "easy",
+      "questionMd": "The Boolean Retrieval Model retrieves documents based on their relevance to the query.",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "False. The Boolean model is an exact-match model. It does not calculate a graded relevance score; a document is either a match (1) or not a match (0).",
+      "tags": ["boolean", "relevance", "true-false"]
+    },
+    {
+      "id": "q4",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Partial Matches",
+      "difficulty": "easy",
+      "questionMd": "Which model allows for partial matches between query terms and document terms?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Boolean Retrieval Model" },
+        { "id": "B", "text": "Vector Space Model" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "The Vector Space Model allows for partial matches by computing a cosine similarity score. Even if a document doesn't contain all query terms, it can still be retrieved.",
+      "tags": ["vector-space", "partial-match"]
+    },
+    {
+      "id": "q5",
+      "type": "single_choice",
+      "topic": "Indexing",
+      "subtopic": "BSBI",
+      "difficulty": "hard",
+      "questionMd": "Which of the following algorithms is, by definition, used for sorting in block sort-based inverted indexing?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Insertion sort" },
+        { "id": "B", "text": "Quick sort" },
+        { "id": "C", "text": "Bubble sort" },
+        { "id": "D", "text": "Merge sort" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "Block Sort-Based Indexing (BSBI) relies on an external merge sort algorithm to efficiently merge multiple sorted blocks from disk into a final inverted index.",
+      "tags": ["bsbi", "indexing", "sorting"]
+    },
+    {
+      "id": "q6",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Limitations",
+      "difficulty": "medium",
+      "questionMd": "Which of the following is a limitation of the vector space model?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "It cannot handle synonyms or variations in word forms" },
+        { "id": "B", "text": "It cannot handle complex queries" },
+        { "id": "C", "text": "It is too slow for large datasets" },
+        { "id": "D", "text": "It is not compatible with modern search engines" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "According to the course material, a stated limitation of the standard Vector Space Model is its difficulty in natively handling complex structured logic queries compared to Boolean systems.",
+      "tags": ["vector-space", "limitations"]
+    },
+    {
+      "id": "q7",
+      "type": "single_choice",
+      "topic": "System Architecture",
+      "subtopic": "Components",
+      "difficulty": "easy",
+      "questionMd": "Which of the following is NOT a component of an Information Retrieval System?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Web Scrabbing" },
+        { "id": "B", "text": "Indexing" },
+        { "id": "C", "text": "Ranking (Matching)" },
+        { "id": "D", "text": "Query" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "While web scraping (or crawling) is used to gather data from the internet, the core architectural components of an IR system itself are Indexing, Query processing, and Ranking/Matching.",
+      "tags": ["architecture", "components"]
+    },
+    {
+      "id": "q8",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Vector Space Model",
+      "difficulty": "easy",
+      "questionMd": "The Vector Space Model retrieves documents based on their relevance to the query.",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "True. The Vector Space Model computes a graded relevance score (like cosine similarity) to rank and retrieve documents based on how relevant they are to the user's query.",
+      "tags": ["vector-space", "relevance", "true-false"]
+    },
+    {
+      "id": "q9",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Relevance Score",
+      "difficulty": "easy",
+      "questionMd": "Which model provides a relevance score for each document in the result set?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Boolean Retrieval Model" },
+        { "id": "B", "text": "Vector Space Model" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "The Vector Space Model provides a continuous score (usually between 0 and 1) for each document, whereas the Boolean model provides a binary inclusion/exclusion.",
+      "tags": ["vector-space", "scoring"]
+    },
+    {
+      "id": "q10",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Exact Matching",
+      "difficulty": "easy",
+      "questionMd": "The Vector Space Model is better suited for exact matching of terms in queries and documents.",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "False. The Boolean model is better suited for exact logical matching. The Vector Space Model excels at partial matches and similarity scoring.",
+      "tags": ["vector-space", "exact-match", "true-false"]
+    },
+    {
+      "id": "q11",
+      "type": "single_choice",
+      "topic": "Fundamentals",
+      "subtopic": "Objectives",
+      "difficulty": "easy",
+      "questionMd": "What is the primary benefit of information retrieval systems?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "To help users find relevant information quickly" },
+        { "id": "B", "text": "To ensure data accuracy and consistency" },
+        { "id": "C", "text": "To provide a centralized location for data storage" },
+        { "id": "D", "text": "To limit access to information" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "The ultimate goal and benefit of an IR system is to efficiently satisfy a user's information need by finding relevant documents quickly.",
+      "tags": ["fundamentals", "objectives"]
+    },
+    {
+      "id": "q12",
+      "type": "single_choice",
+      "topic": "Fundamentals",
+      "subtopic": "Unstructured Data",
+      "difficulty": "medium",
+      "questionMd": "Which of the following is a common approach to managing unstructured data in Information Retrieval Systems?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Normalization" },
+        { "id": "B", "text": "Sampling" },
+        { "id": "C", "text": "Compression" },
+        { "id": "D", "text": "Indexing" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "IR systems manage massive amounts of unstructured data (like free text) by parsing and Indexing it into structures like inverted indexes for fast lookup.",
+      "tags": ["indexing", "unstructured-data"]
+    },
+    {
+      "id": "q13",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Boolean Logic",
+      "difficulty": "easy",
+      "questionMd": "The Boolean Retrieval Model requires all terms in a query to be present in a document for it to be retrieved.",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "True (in the context of an implicit AND query). If a query is parsed as an AND conjunction, the Boolean model rigidly requires every single term to be present.",
+      "tags": ["boolean", "logic", "true-false"]
+    },
+    {
+      "id": "q14",
+      "type": "single_choice",
+      "topic": "Term Weighting",
+      "subtopic": "Boolean Model",
+      "difficulty": "easy",
+      "questionMd": "Which model assumes that all query terms are equally important?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Vector Space Model" },
+        { "id": "B", "text": "Boolean Retrieval Model" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "The Boolean model does not assign weights (like TF-IDF) to terms. It treats every term as a strict logical requirement, meaning all are equally important for a match.",
+      "tags": ["boolean", "term-weighting"]
+    },
+    {
+      "id": "q15",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Model Types",
+      "difficulty": "easy",
+      "questionMd": "Which of the following is NOT a common information retrieval system model?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Boolean model" },
+        { "id": "B", "text": "Syntax model" },
+        { "id": "C", "text": "Vector space model" },
+        { "id": "D", "text": "Probabilistic model" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "The classic models in information retrieval are the Boolean, Vector Space, and Probabilistic models. 'Syntax model' is not a standard IR model.",
+      "tags": ["models", "fundamentals"]
+    },
+    {
+      "id": "q16",
+      "type": "single_choice",
+      "topic": "Boolean Retrieval",
+      "subtopic": "NOT Operator",
+      "difficulty": "medium",
+      "questionMd": "In the Boolean retrieval model, what is the result of a query that contains only a NOT operator?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "The documents that contain either the term or its negation" },
+        { "id": "B", "text": "The documents that do not contain the term" },
+        { "id": "C", "text": "The documents that contain both the term and its negation" },
+        { "id": "D", "text": "The documents that contain the term" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "A pure NOT operator acts as a set complement. It returns the set of all documents in the entire corpus that do NOT contain the specified term.",
+      "tags": ["boolean", "operators", "not-operator"]
+    },
+    {
+      "id": "q17",
+      "type": "single_choice",
+      "topic": "Fundamentals",
+      "subtopic": "Scale",
+      "difficulty": "medium",
+      "questionMd": "What is the benefit of processing large amounts of data in information retrieval?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "It limits the amount of information returned" },
+        { "id": "B", "text": "It allows for faster retrieval of information" },
+        { "id": "C", "text": "It provides more diverse search results" },
+        { "id": "D", "text": "It ensures 100% accuracy of results" }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "Processing a larger corpus increases the diversity and comprehensive coverage of the search results, giving users a richer pool of relevant documents.",
+      "tags": ["big-data", "diversity", "fundamentals"]
+    },
+    {
+      "id": "q18",
+      "type": "single_choice",
+      "topic": "Term Weighting",
+      "subtopic": "TF",
+      "difficulty": "easy",
+      "questionMd": "In the vector space model, what is the term frequency?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "The number of documents containing a term" },
+        { "id": "B", "text": "The inverse document frequency of a term" },
+        { "id": "C", "text": "The number of times a term appears in a corpus" },
+        { "id": "D", "text": "The number of times a term appears in a document" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "Term Frequency (TF) explicitly counts the number of occurrences of a specific term within a single, specific document.",
+      "tags": ["tf", "definitions", "vector-space"]
+    },
+    {
+      "id": "q19",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Term Overlap",
+      "difficulty": "medium",
+      "questionMd": "Which model is based on the assumption that the relevance of a document to a query can be measured by the overlap of terms between the query and the document?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "All of the models" },
+        { "id": "B", "text": "Probabilistic model" },
+        { "id": "C", "text": "Boolean model" },
+        { "id": "D", "text": "Vector space model" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "According to the course exam key, all fundamental bag-of-words IR models rely on the basic assumption that term overlap (lexical matching) between the query and the document is a proxy for relevance.",
+      "tags": ["overlap", "relevance", "models"]
+    },
+    {
+      "id": "q20",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Partial Matches",
+      "difficulty": "easy",
+      "questionMd": "The Boolean Retrieval Model can handle partial matches between terms in queries and documents.",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "False. The Boolean model is strictly exact-match. Partial matches are handled by models like the Vector Space Model.",
+      "tags": ["boolean", "partial-match", "true-false"]
+    },
+    {
+      "id": "q21",
+      "type": "single_choice",
+      "topic": "Data Types",
+      "subtopic": "Databases vs IR",
+      "difficulty": "medium",
+      "questionMd": "Which type of data is best suited for traditional database systems, and which type of data is best suited for Information Retrieval Systems?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Both structured and unstructured data are best suited for database systems." },
+        { "id": "B", "text": "Structured data is best suited for database systems, and unstructured data is best suited for Information Retrieval Systems." },
+        { "id": "C", "text": "Both structured and unstructured data are best suited for Information Retrieval Systems." },
+        { "id": "D", "text": "Unstructured data is best suited for database systems, and structured data is best suited for Information Retrieval Systems" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "Traditional databases (like SQL) are optimized for highly structured, tabular data. IR systems are built to parse and search unstructured data like free text.",
+      "tags": ["data-types", "database", "ir-vs-db"]
+    },
+    {
+      "id": "q22",
+      "type": "single_choice",
+      "topic": "Boolean Retrieval",
+      "subtopic": "Foundations",
+      "difficulty": "easy",
+      "questionMd": "Which of the following models is based on set theory?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Vector Space Model" },
+        { "id": "B", "text": "Boolean Retrieval Model" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "The Boolean model represents documents as sets of terms and uses Set Theory operations (Union for OR, Intersection for AND) to retrieve documents.",
+      "tags": ["boolean", "theory", "math"]
+    },
+    {
+      "id": "q23",
+      "type": "single_choice",
+      "topic": "Indexing",
+      "subtopic": "BSBI",
+      "difficulty": "medium",
+      "questionMd": "Which of the following is NOT a benefit of using block sort-based inverted indexing?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Faster query processing" },
+        { "id": "B", "text": "Higher indexing speed" },
+        { "id": "C", "text": "Lower memory usage" },
+        { "id": "D", "text": "Improved relevance ranking" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "BSBI is a backend construction technique to build an index within memory constraints. It does not change how documents are ranked or scored for relevance.",
+      "tags": ["bsbi", "indexing", "benefits"]
+    },
+    {
+      "id": "q24",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Commercial Use",
+      "difficulty": "medium",
+      "questionMd": "Which model is more commonly used in commercial search engines?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Boolean Retrieval Model" },
+        { "id": "B", "text": "Vector Space Model" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "Commercial search engines rely on graded relevance ranking to show users the 'best' results first. The Vector Space Model (and its variants) provides this capability, unlike the Boolean model.",
+      "tags": ["vector-space", "commercial-search"]
+    },
+    {
+      "id": "q25",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Limitations",
+      "difficulty": "medium",
+      "questionMd": "What is the main limitation of the Boolean retrieval model?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "It is too slow for large datasets" },
+        { "id": "B", "text": "It cannot handle synonyms or variations in word forms" },
+        { "id": "C", "text": "It cannot handle complex queries" },
+        { "id": "D", "text": "It is not compatible with modern search engines" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "The Boolean model relies on exact string matches. A query for 'car' will completely fail to retrieve a highly relevant document that uses the word 'automobile'.",
+      "tags": ["boolean", "limitations", "vocabulary-mismatch"]
+    },
+    {
+      "id": "q26",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Efficiency",
+      "difficulty": "easy",
+      "questionMd": "The Vector Space Model is more efficient than the Boolean Retrieval Model in processing queries.",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "False. Computing cosine similarity vectors is much more computationally heavy (less efficient) than executing simple Boolean set intersections.",
+      "tags": ["vector-space", "efficiency", "true-false"]
+    },
+    {
+      "id": "q27",
+      "type": "single_choice",
+      "topic": "Fundamentals",
+      "subtopic": "Scale",
+      "difficulty": "easy",
+      "questionMd": "What kind of data does information retrieval process?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Structured data" },
+        { "id": "B", "text": "Small amounts of data" },
+        { "id": "C", "text": "Large amounts of data" },
+        { "id": "D", "text": "Real-time data" }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "IR systems are explicitly designed to handle, index, and query extremely large amounts of unstructured data efficiently.",
+      "tags": ["big-data", "fundamentals"]
+    },
+    {
+      "id": "q28",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Term Frequency",
+      "difficulty": "easy",
+      "questionMd": "The Boolean Retrieval Model does not consider the frequency of terms in documents when calculating relevance.",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "True. The Boolean model is binary. Whether a term appears 1 time or 100 times in a document, it is simply registered as 'present'.",
+      "tags": ["boolean", "term-frequency", "true-false"]
+    },
+    {
+      "id": "q29",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Term Weighting",
+      "difficulty": "easy",
+      "questionMd": "The Vector Space Model assigns weights to terms based on their frequency in documents and queries.",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "True. This is the foundation of TF-IDF weighting, which the Vector Space Model uses to generate document vectors.",
+      "tags": ["vector-space", "term-weighting", "true-false"]
+    },
+    {
+      "id": "q30",
+      "type": "single_choice",
+      "topic": "Indexing",
+      "subtopic": "BSBI",
+      "difficulty": "medium",
+      "questionMd": "Which of the following is NOT a characteristic of block sort-based inverted indexing?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Interactivity" },
+        { "id": "B", "text": "Efficiency" },
+        { "id": "C", "text": "Scalability" },
+        { "id": "D", "text": "Flexibility" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "BSBI is a backend batch-processing technique. It focuses on scalability and efficiency for index construction, but it is not an 'interactive' real-time process.",
+      "tags": ["bsbi", "indexing", "characteristics"]
+    },
+    {
+      "id": "q31",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Scale",
+      "difficulty": "easy",
+      "questionMd": "Which model is more suited for large-scale document retrieval?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Boolean Retrieval Model" },
+        { "id": "B", "text": "Vector Space Model" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "For large-scale retrieval where users need the best results ranked at the top out of millions of hits, the Vector Space Model's ranking mechanism is much more suitable than Boolean's unranked sets.",
+      "tags": ["vector-space", "scale", "commercial-search"]
+    },
+    {
+      "id": "q32",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Boolean Purpose",
+      "difficulty": "easy",
+      "questionMd": "What is the purpose of the Boolean retrieval model?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "To provide a mechanism for ranking search results" },
+        { "id": "B", "text": "To provide a simple way to search for information" },
+        { "id": "C", "text": "To filter out irrelevant results" },
+        { "id": "D", "text": "To return the most relevant results to a query" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "The Boolean model offers a very simple, fast, and strict mechanism to retrieve exact matches using basic logical operators.",
+      "tags": ["boolean", "purpose"]
+    },
+    {
+      "id": "q33",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Boolean Logic",
+      "difficulty": "easy",
+      "questionMd": "The Boolean Retrieval Model is based on set theory and uses logical operators to retrieve relevant documents.",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "True. It uses AND, OR, and NOT (logical operators) which directly map to Set Intersection, Set Union, and Set Complement.",
+      "tags": ["boolean", "logic", "true-false"]
+    },
+    {
+      "id": "q34",
+      "type": "single_choice",
+      "topic": "Term Weighting",
+      "subtopic": "DF",
+      "difficulty": "easy",
+      "questionMd": "In the vector space model, what is the document frequency?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "The number of times a term appears in a corpus" },
+        { "id": "B", "text": "The number of times a term appears in a document" },
+        { "id": "C", "text": "The number of documents containing a term" },
+        { "id": "D", "text": "The inverse document frequency of a term" }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "Document Frequency (DF) counts the total number of distinct documents within the collection that contain the specific term.",
+      "tags": ["df", "definitions"]
+    },
+    {
+      "id": "q35",
+      "type": "single_choice",
+      "topic": "Term Weighting",
+      "subtopic": "TF-IDF",
+      "difficulty": "medium",
+      "questionMd": "What is the term frequency-inverse document frequency (TF-IDF) used for in the vector space model?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "To determine the relevance of documents to a query" },
+        { "id": "B", "text": "To weight the importance of terms in a document" },
+        { "id": "C", "text": "To identify the most frequent terms in a corpus" },
+        { "id": "D", "text": "To calculate the cosine similarity between documents" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "TF-IDF is the standard weighting scheme used to assign a numerical value (weight) to each term in a document, representing its importance to that specific document.",
+      "tags": ["tf-idf", "vector-space", "weighting"]
+    },
+    {
+      "id": "q36",
+      "type": "single_choice",
+      "topic": "Boolean Retrieval",
+      "subtopic": "OR Operator",
+      "difficulty": "easy",
+      "questionMd": "In the Boolean retrieval model, what is the primary drawback of using the OR operator?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "It returns too many irrelevant results" },
+        { "id": "B", "text": "It is not supported by most search engines" },
+        { "id": "C", "text": "It is too complex to use effectively" },
+        { "id": "D", "text": "It returns too few relevant results" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "Because OR acts as a union, adding more terms with OR drastically increases the size of the result set, pulling in many non-relevant documents.",
+      "tags": ["boolean", "operators", "precision"]
+    },
+    {
+      "id": "q37",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Cosine Similarity",
+      "difficulty": "easy",
+      "questionMd": "Which model uses the cosine similarity measure for ranking documents?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Vector Space Model" },
+        { "id": "B", "text": "Boolean Retrieval Model" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "The Vector Space Model represents texts as vectors and computes the cosine of the angle between them to establish similarity.",
+      "tags": ["vector-space", "cosine-similarity"]
+    },
+    {
+      "id": "q38",
+      "type": "single_choice",
+      "topic": "Fundamentals",
+      "subtopic": "Objectives",
+      "difficulty": "easy",
+      "questionMd": "What is the primary objective of a search engine in information retrieval?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "To return the least relevant results" },
+        { "id": "B", "text": "To limit access to information" },
+        { "id": "C", "text": "To return the most relevant results" },
+        { "id": "D", "text": "To prioritize paid results over organic results" }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "The core objective of any search engine is to rank and return the most highly relevant documents at the top of the search results.",
+      "tags": ["search-engine", "objectives", "relevance"]
+    },
+    {
+      "id": "q39",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Accuracy",
+      "difficulty": "easy",
+      "questionMd": "Which model is more accurate in retrieving highly relevant documents?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Vector Space Model" },
+        { "id": "B", "text": "Boolean Retrieval Model" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "Because it applies weighting and partial matching, the Vector Space Model generally yields a more accurate and nuanced set of relevant documents than strict Boolean logic.",
+      "tags": ["vector-space", "accuracy", "comparison"]
+    },
+    {
+      "id": "q40",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Complex Queries",
+      "difficulty": "easy",
+      "questionMd": "The Boolean Retrieval Model can handle complex queries with multiple concepts.",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "False. The rigid requirement of Boolean operators makes it notoriously difficult to balance complex queries containing multiple disparate concepts without yielding zero results.",
+      "tags": ["boolean", "queries", "true-false"]
+    },
+    {
+      "id": "q41",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Vector Space Model",
+      "difficulty": "easy",
+      "questionMd": "In the vector space model, what is the result of a query that contains only one term?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "The documents that contain the term and its negation" },
+        { "id": "B", "text": "The documents that do not contain the term" },
+        { "id": "C", "text": "The documents that contain synonyms of the term" },
+        { "id": "D", "text": "The documents that contain the term" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "A single-term query will establish a vector along a single dimension, and any document containing that term will have a non-zero similarity score and be retrieved.",
+      "tags": ["vector-space", "single-term", "queries"]
+    },
+    {
+      "id": "q42",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Cosine Similarity",
+      "difficulty": "medium",
+      "questionMd": "In the vector space model, what is the cosine similarity used for?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "To cluster documents into groups" },
+        { "id": "B", "text": "To identify the most frequent terms in a corpus" },
+        { "id": "C", "text": "To calculate the distance between documents" },
+        { "id": "D", "text": "To rank documents according to their relevance" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "Cosine similarity provides a normalized score measuring the closeness of the query vector to the document vector, which the system uses to rank the output.",
+      "tags": ["vector-space", "cosine-similarity", "ranking"]
+    },
+    {
+      "id": "q43",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Partial Matches",
+      "difficulty": "easy",
+      "questionMd": "The Vector Space Model can handle partial matches between terms in queries and documents.",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "True. Due to its continuous scoring mechanism, if a document contains only 2 out of 3 query terms, it still registers a positive similarity score.",
+      "tags": ["vector-space", "partial-match", "true-false"]
+    },
+    {
+      "id": "q44",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Exact Matching",
+      "difficulty": "easy",
+      "questionMd": "Which model is more appropriate for finding exact matches between query terms and document terms?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Boolean Retrieval Model" },
+        { "id": "B", "text": "Vector Space Model" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "The Boolean model is specifically designed for exact constraint matching (e.g., retrieving rows where a term is absolutely present).",
+      "tags": ["boolean", "exact-match"]
+    },
+    {
+      "id": "q45",
+      "type": "single_choice",
+      "topic": "Indexing",
+      "subtopic": "BSBI",
+      "difficulty": "easy",
+      "questionMd": "Which of the following is a common use case for block sort-based inverted indexing?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Sentiment analysis" },
+        { "id": "B", "text": "Image classification" },
+        { "id": "C", "text": "Document clustering" },
+        { "id": "D", "text": "Information retrieval" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "BSBI is a foundational algorithm used explicitly to build the inverted indexes required by Information Retrieval systems.",
+      "tags": ["bsbi", "indexing", "use-cases"]
+    },
+    {
+      "id": "q46",
+      "type": "single_choice",
+      "topic": "Data Types",
+      "subtopic": "Big Data",
+      "difficulty": "medium",
+      "questionMd": "Which of the following is a characteristic of big data?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "It can include both structured and unstructured data" },
+        { "id": "B", "text": "It can be stored on a single disk" },
+        { "id": "C", "text": "It can be easily managed using traditional database systems" },
+        { "id": "D", "text": "It can be processed using a single machine" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "Big Data encompasses vast amounts of information across all formats—from highly structured SQL databases to totally unstructured text, videos, and logs.",
+      "tags": ["big-data", "data-types"]
+    },
+    {
+      "id": "q47",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Boolean Model",
+      "difficulty": "easy",
+      "questionMd": "Which of the following is an advantage of the Boolean retrieval model?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "It is easy to implement" },
+        { "id": "B", "text": "It provides sophisticated ranking algorithms" },
+        { "id": "C", "text": "It is more effective than other retrieval models" },
+        { "id": "D", "text": "It works well with unstructured data" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "The primary advantage of the Boolean model is its extreme simplicity and efficiency. The set-logic operations are very easy to implement.",
+      "tags": ["boolean", "advantages"]
+    },
+    {
+      "id": "q48",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Exact Matching",
+      "difficulty": "easy",
+      "questionMd": "The Boolean Retrieval Model is better suited for exact matching of terms in queries and documents.",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "True. The Boolean model evaluates queries as strict true/false conditions, making it perfect for exact matches.",
+      "tags": ["boolean", "exact-match", "true-false"]
+    },
+    {
+      "id": "q49",
+      "type": "single_choice",
+      "topic": "Data Types",
+      "subtopic": "Unstructured Data",
+      "difficulty": "easy",
+      "questionMd": "Which of the following is a characteristic of unstructured data?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "It is stored in a predefined format" },
+        { "id": "B", "text": "It can be easily queried using SQL" },
+        { "id": "C", "text": "It can include text, images, and videos" },
+        { "id": "D", "text": "It is organized in tables and columns" }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "Unstructured data includes raw real-world data formats like plain text, multimedia files, and documents that don't fit into relational tables.",
+      "tags": ["data-types", "unstructured-data"]
+    },
+    {
+      "id": "q50",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Keyword Queries",
+      "difficulty": "easy",
+      "questionMd": "Which model is more suited for simple keyword-based queries?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Vector Space Model" },
+        { "id": "B", "text": "Boolean Retrieval Model" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "For extremely simple, rigid keyword queries where the user just wants documents containing exactly the requested word, the Boolean model is highly efficient.",
+      "tags": ["boolean", "keywords"]
+    },
+    {
+      "id": "q51",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Limitations",
+      "difficulty": "medium",
+      "questionMd": "Which of the following is a disadvantage of the vector space model?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "It requires significant computational resources" },
+        { "id": "B", "text": "It cannot handle large datasets" },
+        { "id": "C", "text": "It cannot handle complex queries" },
+        { "id": "D", "text": "It is not compatible with modern search engines" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "Because it relies on calculating TF-IDF weights and floating-point cosine similarities for every document vector, it is significantly more computationally expensive than the Boolean model.",
+      "tags": ["vector-space", "limitations", "performance"]
+    },
+    {
+      "id": "q52",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Foundations",
+      "difficulty": "easy",
+      "questionMd": "Which of the following models is based on linear algebra?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Boolean Retrieval Model" },
+        { "id": "B", "text": "Vector Space Model" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "The Vector Space Model represents data as vectors in a multi-dimensional space, relying on linear algebra concepts to measure similarity.",
+      "tags": ["vector-space", "theory", "math"]
+    },
+    {
+      "id": "q53",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Complex Queries",
+      "difficulty": "medium",
+      "questionMd": "Which model can handle multiple concepts in a single query?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Vector Space Model" },
+        { "id": "B", "text": "Boolean Retrieval Model" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "The Vector Space Model smoothly blends multiple diverse concepts by weighting their importance, allowing for partial matches. A Boolean model struggles with this, often resulting in zero hits.",
+      "tags": ["vector-space", "queries", "multiple-concepts"]
+    }
+  ]
+}

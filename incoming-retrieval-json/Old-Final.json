@@ -1,0 +1,1213 @@
+{
+  "quizId": "Old-Final",
+  "title": "Information Retrieval - Old Final",
+  "course": "Information Retrieval",
+  "language": "en",
+  "semester": "Unknown",
+  "source": "Past Exam",
+  "durationMinutes": 75,
+  "shuffleQuestions": false,
+  "shuffleOptions": false,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "topic": "Indexing",
+      "subtopic": "Inverted Index",
+      "difficulty": "easy",
+      "questionMd": "Which of the following describes a \"Term List\" within an Inverted Index?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "A list of unique terms in the document collection." },
+        { "id": "B", "text": "A list of stop words to be eliminated." },
+        { "id": "C", "text": "A list of search queries made by users." },
+        { "id": "D", "text": "A list of all documents in the collection with their content." }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "An inverted index consists of a Dictionary (or Term List) containing all the unique vocabulary terms found across the entire corpus, and Postings Lists which map those terms to the documents they appear in.",
+      "tags": ["inverted-index", "term-list", "indexing"]
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "topic": "Preprocessing",
+      "subtopic": "Stopwords",
+      "difficulty": "easy",
+      "questionMd": "What is the purpose of \"Stopword Elimination\" in text preprocessing?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "To combine words with similar meanings." },
+        { "id": "B", "text": "To identify proper nouns within a document." },
+        { "id": "C", "text": "To remove words that carry no information." },
+        { "id": "D", "text": "To correct grammatical errors in the text." }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "Stopwords are extremely common words (like 'the', 'is', 'at') that appear in almost all documents. They provide very little semantic value for search and are often eliminated to save index space and processing time.",
+      "tags": ["preprocessing", "stopwords"]
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "TF-IDF",
+      "difficulty": "medium",
+      "questionMd": "If a query contains multiple terms, how does the TF-IDF model generally calculate the score for a document?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "By considering only the most frequent query term." },
+        { "id": "B", "text": "By summing the TF-IDF weights of all query terms present in the document." },
+        { "id": "C", "text": "By subtracting the lowest TF-IDF weight from the highest." },
+        { "id": "D", "text": "By taking the maximum TF-IDF weight of any single query term." }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "For a multi-term query, a standard dot-product scoring mechanism in the Vector Space Model simply sums up the individual TF-IDF weights of each query term that matches in the document.",
+      "tags": ["tf-idf", "scoring", "vector-space"]
+    },
+    {
+      "id": "q4",
+      "type": "single_choice",
+      "topic": "Query Optimization",
+      "subtopic": "Execution Order",
+      "difficulty": "medium",
+      "questionMd": "What is the recommended approach for query optimization when dealing with an AND query of multiple terms?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Process terms in alphabetical order." },
+        { "id": "B", "text": "Process all terms simultaneously." },
+        { "id": "C", "text": "Process query in order of decreasing document frequency." },
+        { "id": "D", "text": "Process query in order of increasing document frequency." }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "To optimize an AND query, you should start by merging the smallest postings lists first. This corresponds to the terms with the lowest Document Frequency (DF). Processing in increasing order of DF shrinks the intermediate result set as quickly as possible.",
+      "tags": ["query-optimization", "boolean", "document-frequency"]
+    },
+    {
+      "id": "q5",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Boolean Model",
+      "difficulty": "easy",
+      "questionMd": "Which of the following is a characteristic of the Boolean Retrieval Model?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "It considers the frequency of terms in a document." },
+        { "id": "B", "text": "It uses Boolean operators such as AND, OR, and NOT to match documents." },
+        { "id": "C", "text": "It allows for partial matching of documents." },
+        { "id": "D", "text": "It provides a ranked list of documents." }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "The Boolean model relies entirely on exact set-theoretic logic using operators like AND (intersection), OR (union), and NOT (complement). It does not provide ranking or partial matches.",
+      "tags": ["boolean", "operators"]
+    },
+    {
+      "id": "q6",
+      "type": "single_choice",
+      "topic": "Term Weighting",
+      "subtopic": "Raw TF Issues",
+      "difficulty": "medium",
+      "questionMd": "What is the main issue with using raw Term Frequency (TF) directly for ranking documents?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Relevance increases proportionally with term frequency, which is desired." },
+        { "id": "B", "text": "It makes the system too complex to implement." },
+        { "id": "C", "text": "Shorter documents are favored." },
+        { "id": "D", "text": "Longer documents are favored." }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "Without length normalization, raw Term Frequency heavily favors long documents simply because they have more words overall, not necessarily because they are denser with relevant information.",
+      "tags": ["tf", "normalization", "limitations"]
+    },
+    {
+      "id": "q7",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Vector Space Model",
+      "difficulty": "medium",
+      "questionMd": "In the Vector Space Model, how is the relevance of a document to a query primarily determined?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "By the number of unique terms in the document." },
+        { "id": "B", "text": "By the length of the document." },
+        { "id": "C", "text": "If the document contains the query terms at least once." },
+        { "id": "D", "text": "By calculating the cosine similarity between the query vector and the document vector." }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "In the Vector Space Model, documents and queries are represented as weighted vectors. Relevance is determined by measuring the geometric similarity (usually Cosine Similarity) between these vectors.",
+      "tags": ["vector-space", "cosine-similarity", "relevance"]
+    },
+    {
+      "id": "q8",
+      "type": "single_choice",
+      "topic": "Fundamentals",
+      "subtopic": "Vocabulary Challenges",
+      "difficulty": "medium",
+      "questionMd": "Why might the assumption that a document is relevant if it simply contains query terms not always hold true?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Because the system cannot process all terms." },
+        { "id": "B", "text": "Because documents are too long to read." },
+        { "id": "C", "text": "Because words can have several meanings." },
+        { "id": "D", "text": "Because queries are usually too detailed." }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "This refers to the problem of 'polysemy' (words having multiple meanings). A document containing the word 'apple' might be about the fruit or the technology company, meaning mere presence of the term doesn't guarantee true relevance.",
+      "tags": ["polysemy", "relevance", "semantics"]
+    },
+    {
+      "id": "q9",
+      "type": "single_choice",
+      "topic": "Term Weighting",
+      "subtopic": "IDF Logic",
+      "difficulty": "medium",
+      "questionMd": "What is the significance of using $\\log(N/df)$ instead of $N/df$ for IDF?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "To ensure IDF is always a positive value." },
+        { "id": "B", "text": "To make IDF values proportional to term frequency." },
+        { "id": "C", "text": "To lessen the effect of IDF." },
+        { "id": "D", "text": "To increase the effect of IDF." }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "Using the raw ratio $N/df$ would make the weight of extremely rare terms astronomically high, causing them to completely dominate the scoring. Applying a logarithm 'dampens' or lessens this scaling effect, keeping weights balanced.",
+      "tags": ["idf", "math", "logarithm"]
+    },
+    {
+      "id": "q10",
+      "type": "single_choice",
+      "topic": "Term Weighting",
+      "subtopic": "Raw TF Issues",
+      "difficulty": "medium",
+      "questionMd": "Which of the following is NOT a problem with raw Term Frequency (TF) for ranking documents?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "The relative relevance of a term is not considered." },
+        { "id": "B", "text": "A document with 10 occurrences of a term is not necessarily 10 times more relevant than a document with 1 occurrence." },
+        { "id": "C", "text": "It correctly accounts for the diminishing returns of additional term occurrences." },
+        { "id": "D", "text": "Documents are favored based on their length, even if they are not truly more relevant." }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "Raw TF *fails* to account for diminishing returns (the fact that the 100th occurrence of a word matters less than the 1st). Because statement C claims it *does* correctly account for this, statement C is false, making it the right answer to the 'NOT a problem' question.",
+      "tags": ["tf", "limitations", "math"]
+    },
+    {
+      "id": "q11",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Query Formulation",
+      "difficulty": "easy",
+      "questionMd": "What is a key difference between the Boolean Model and the Vector Space Model regarding query formulation?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Boolean uses Boolean expressions, while Vector Space uses free-text queries." },
+        { "id": "B", "text": "Both use only free-text queries." },
+        { "id": "C", "text": "Boolean uses free-text queries, while Vector Space uses Boolean expressions." },
+        { "id": "D", "text": "Both use only Boolean expressions." }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "The Boolean model requires queries to be strictly formulated using logical operators (e.g., `cat AND dog NOT fish`). The Vector Space Model accepts natural, free-text bag-of-words queries (e.g., `cute cats and dogs`).",
+      "tags": ["boolean", "vector-space", "queries"]
+    },
+    {
+      "id": "q12",
+      "type": "single_choice",
+      "topic": "Evaluation",
+      "subtopic": "Test Collections",
+      "difficulty": "easy",
+      "questionMd": "What is the main characteristic of a \"test collection\" used for IR evaluation?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "It includes documents and queries." },
+        { "id": "B", "text": "It contains human-annotated relevance judgments." },
+        { "id": "C", "text": "It consists of a large set of random documents." },
+        { "id": "D", "text": "It is used only for training machine learning models." }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "While a test collection does include documents and queries, its defining characteristic that allows for actual algorithm evaluation is the 'qrels'—the gold-standard relevance judgments made by humans.",
+      "tags": ["evaluation", "test-collection", "qrels"]
+    },
+    {
+      "id": "q13",
+      "type": "single_choice",
+      "topic": "Indexing",
+      "subtopic": "BSBI",
+      "difficulty": "medium",
+      "questionMd": "After individual blocks are processed in Block Sort-Based Indexing (BSBI), what is the next step to create a complete inverted index?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Performing a final merge of the sorted runs from each block." },
+        { "id": "B", "text": "Re-indexing all documents." },
+        { "id": "C", "text": "Sending blocks to a distributed file system." },
+        { "id": "D", "text": "Storing each block's index separately without merging." }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "BSBI operates by generating intermediate inverted indexes (runs) for chunks of the corpus, saving them to disk, and then performing a massive n-way merge of all those sorted runs to produce the final global index.",
+      "tags": ["bsbi", "indexing", "merge"]
+    },
+    {
+      "id": "q14",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "BM25 Parameters",
+      "difficulty": "hard",
+      "questionMd": "What is the role of the parameter 'b' in the BM25 formula?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "It sets the minimum score for a relevant document." },
+        { "id": "B", "text": "It defines the maximum number of terms to consider." },
+        { "id": "C", "text": "It controls the impact of document length normalization." },
+        { "id": "D", "text": "It adjusts the importance of query term frequency." }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "In the BM25 scoring algorithm, the `b` parameter (which ranges from 0 to 1) dictates how heavily the document's length normalizes the score. If `b = 1`, full length normalization is applied; if `b = 0`, length is ignored.",
+      "tags": ["bm25", "parameters", "length-normalization"]
+    },
+    {
+      "id": "q15",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Boolean Limitations",
+      "difficulty": "easy",
+      "questionMd": "What is a primary \"Con\" (disadvantage) of the Boolean Model mentioned in the lecture?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "It is too slow for large document collections." },
+        { "id": "B", "text": "It is too complex to implement." },
+        { "id": "C", "text": "It requires extensive user training." },
+        { "id": "D", "text": "It does not provide ranking of results." }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "Because it relies on exact set matches, the Boolean model treats all matching documents equally. It cannot sort them by 'how good' the match is, leaving the user with an unranked, chaotic list of results.",
+      "tags": ["boolean", "limitations", "ranking"]
+    },
+    {
+      "id": "q16",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Boolean Relevance",
+      "difficulty": "easy",
+      "questionMd": "In the Boolean Retrieval Model, what is the relevance value assigned to a document for a given query?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "A score between 0 (not relevant) and 1 (relevant)." },
+        { "id": "B", "text": "The inverse document frequency of query terms." },
+        { "id": "C", "text": "A binary value of either 0 (not relevant) or 1 (relevant)." },
+        { "id": "D", "text": "The term frequency of query terms in the document." }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "The Boolean model is strictly binary. A document either completely satisfies the logical query (relevance = 1) or it fails to satisfy it entirely (relevance = 0).",
+      "tags": ["boolean", "relevance", "binary"]
+    },
+    {
+      "id": "q17",
+      "type": "single_choice",
+      "topic": "Evaluation",
+      "subtopic": "Precision Constraints",
+      "difficulty": "medium",
+      "questionMd": "Why is a single point metric (e.g., Precision at 10 documents) generally not sufficient for overall IR system evaluation?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "It only considers the first page of a search engine result, we need to see more pages." },
+        { "id": "B", "text": "It depends on the number of documents in the collection." },
+        { "id": "C", "text": "It does not give a true picture of performance across different recall levels." },
+        { "id": "D", "text": "It is too difficult to calculate." }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "A system might have excellent precision for the first 10 results but perform terribly at finding the rest of the relevant documents. You need to look at precision across multiple recall levels (like a PR-Curve or MAP) for a holistic evaluation.",
+      "tags": ["evaluation", "precision", "recall"]
+    },
+    {
+      "id": "q18",
+      "type": "single_choice",
+      "topic": "Indexing",
+      "subtopic": "Postings Lists",
+      "difficulty": "easy",
+      "questionMd": "If the term \"fox\" appears in Document 1 once, Document 2 once, and Document 3 twice, how would its entry appear in a Posting List that includes Term Frequencies?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "[fox: doc1, doc2, doc3]" },
+        { "id": "B", "text": "[doc1:1, doc2:1, doc3:2]" },
+        { "id": "C", "text": "[doc1, doc2, doc3]" },
+        { "id": "D", "text": "[1, 1, 2]" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "An augmented postings list stores not just the Document ID, but also the payload (in this case, the term frequency within that document) as a pair. Thus, `[docID: TF, docID: TF]`.",
+      "tags": ["postings", "inverted-index", "tf"]
+    },
+    {
+      "id": "q19",
+      "type": "single_choice",
+      "topic": "Query Optimization",
+      "subtopic": "Boolean Merge",
+      "difficulty": "easy",
+      "questionMd": "What is mathematically required of two postings lists (p1 and p2) when using the two-pointer INTERSECT merge algorithm?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "They must be of the same length." },
+        { "id": "B", "text": "They must contain the same terms." },
+        { "id": "C", "text": "They must be sorted by Document ID." },
+        { "id": "D", "text": "They must be unique." }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "The linear $O(m+n)$ intersection algorithm relies entirely on both arrays being pre-sorted. If they are not sorted, you cannot step through them simultaneously using parallel pointers.",
+      "tags": ["boolean", "merge", "algorithm"]
+    },
+    {
+      "id": "q20",
+      "type": "single_choice",
+      "topic": "Term Weighting",
+      "subtopic": "TF-IDF Status",
+      "difficulty": "easy",
+      "questionMd": "Why is TF-IDF still considered \"one of the best known weighting schemes in information retrieval\"?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Because it ignores document length." },
+        { "id": "B", "text": "Because it only uses rare terms." },
+        { "id": "C", "text": "Because it is simple, effective, and widely used." },
+        { "id": "D", "text": "Because it is the newest weighting scheme." }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "Despite being invented decades ago, the core logic of TF-IDF (frequent in document, rare in corpus) remains an incredibly robust, highly interpretable, and computationally cheap baseline that forms the foundation of modern search.",
+      "tags": ["tf-idf", "history", "evaluation"]
+    },
+    {
+      "id": "q21",
+      "type": "single_choice",
+      "topic": "Evaluation",
+      "subtopic": "F-Measure",
+      "difficulty": "easy",
+      "questionMd": "What does the F-measure allow for in IR system evaluation?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "It combines precision and recall for a balanced assessment into a single metric." },
+        { "id": "B", "text": "It measures the speed of document retrieval." },
+        { "id": "C", "text": "It only emphasizes recall over precision." },
+        { "id": "D", "text": "It only emphasizes precision over recall." }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "The F-measure is the harmonic mean of precision and recall. It forces a system to maintain a balance; a system cannot achieve a high F-score by sacrificing one metric entirely for the other.",
+      "tags": ["evaluation", "f-measure", "precision", "recall"]
+    },
+    {
+      "id": "q22",
+      "type": "single_choice",
+      "topic": "Indexing",
+      "subtopic": "Postings Lists",
+      "difficulty": "easy",
+      "questionMd": "What core information does a \"Posting List\" typically contain for each term in an Inverted Index?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "The list of documents (IDs) that contain the term." },
+        { "id": "B", "text": "The historical search volume of the term." },
+        { "id": "C", "text": "The definition of the term." },
+        { "id": "D", "text": "The grammatical category of the term." }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "By definition, a postings list is a list of document IDs (postings) representing every document in the corpus where the specific term occurs.",
+      "tags": ["postings", "inverted-index"]
+    },
+    {
+      "id": "q23",
+      "type": "single_choice",
+      "topic": "Term Weighting",
+      "subtopic": "Log TF",
+      "difficulty": "medium",
+      "questionMd": "What is the purpose of \"Log-frequency weighting\" in calculating term frequency?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "To make the score 0 if any query term is present." },
+        { "id": "B", "text": "To ensure the score is always a whole number." },
+        { "id": "C", "text": "To increase the score of documents with very high term frequencies proportionally." },
+        { "id": "D", "text": "To dampen or lessen the scaling effect of high term frequencies." }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "Using a log function (like `1 + log(tf)`) dampens the effect of raw counts. It mathematically represents that a word appearing 100 times is not strictly 100 times more important than a word appearing 1 time.",
+      "tags": ["term-weighting", "tf", "logarithm"]
+    },
+    {
+      "id": "q24",
+      "type": "single_choice",
+      "topic": "Indexing",
+      "subtopic": "Term List Data",
+      "difficulty": "easy",
+      "questionMd": "Which statistical information is typically associated with and stored alongside the \"Term List\" (Dictionary) in an Inverted Index?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Term Position." },
+        { "id": "B", "text": "Term Frequencies (TF) for specific documents." },
+        { "id": "C", "text": "Document Length." },
+        { "id": "D", "text": "Document Frequency (DF)." }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "The dictionary (Term List) typically stores the word itself, a pointer to the head of the postings list, and the Document Frequency (DF) so that IDF can be quickly calculated without scanning the lists.",
+      "tags": ["indexing", "dictionary", "df"]
+    },
+    {
+      "id": "q25",
+      "type": "single_choice",
+      "topic": "Indexing",
+      "subtopic": "Definitions",
+      "difficulty": "easy",
+      "questionMd": "Why is the core data structure of search engines called an \"inverted\" index?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Because it inverts the natural relationship, mapping terms back to documents rather than documents to terms." },
+        { "id": "B", "text": "Because it is designed for searching rather than browsing." },
+        { "id": "C", "text": "Because it stores terms in reverse alphabetical order." },
+        { "id": "D", "text": "Because it is built from the bottom up." }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "A natural 'forward' index maps a Document ID to the list of words inside it (like reading a book). An 'inverted' index flips this around, mapping a Word to a list of Document IDs (like the index at the back of a textbook).",
+      "tags": ["inverted-index", "definitions"]
+    },
+    {
+      "id": "q26",
+      "type": "single_choice",
+      "topic": "Indexing",
+      "subtopic": "BSBI",
+      "difficulty": "medium",
+      "questionMd": "In Block Sort-Based Indexing, what is the initial step for processing blocks of documents?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Removing stopwords from the entire collection." },
+        { "id": "B", "text": "Merging all blocks into a single index." },
+        { "id": "C", "text": "Parsing, sorting, inverting, and writing each block to disk." },
+        { "id": "D", "text": "Calculating TF-IDF scores for each term." }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "BSBI first reads a block of documents into memory, parses them into `(termID, docID)` pairs, sorts them, builds a mini inverted index for just that block, and writes it to disk before moving to the next block.",
+      "tags": ["bsbi", "indexing", "algorithms"]
+    },
+    {
+      "id": "q27",
+      "type": "single_choice",
+      "topic": "Preprocessing",
+      "subtopic": "Stemming",
+      "difficulty": "easy",
+      "questionMd": "What is the purpose of Stemming in text preprocessing?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "To reduce a word to its base or root form by stripping suffixes and prefixes." },
+        { "id": "B", "text": "To categorize documents into predefined classes." },
+        { "id": "C", "text": "To translate text from one language to another." },
+        { "id": "D", "text": "To count the occurrences of each word in a document." }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "Stemming uses heuristic rules to chop off word endings (like '-ing', '-ed', '-s') so that variations of a word (e.g., 'running', 'runs') collapse into a single core term ('run') in the index.",
+      "tags": ["preprocessing", "stemming", "nlp"]
+    },
+    {
+      "id": "q28",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "BM25",
+      "difficulty": "easy",
+      "questionMd": "What does the abbreviation BM25 stand for?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Best Match 25" },
+        { "id": "B", "text": "Binary Model 25" },
+        { "id": "C", "text": "Basic Modeling 25" },
+        { "id": "D", "text": "Boolean Matching 25" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "BM25 stands for 'Best Match 25'. It is the 25th iteration of a probabilistic retrieval algorithm developed by the Okapi team in the 1980s and 90s.",
+      "tags": ["bm25", "history", "probabilistic-model"]
+    },
+    {
+      "id": "q29",
+      "type": "single_choice",
+      "topic": "Indexing",
+      "subtopic": "Positional Index",
+      "difficulty": "easy",
+      "questionMd": "What is the purpose of a Positional Index?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "To record the frequency of each term in the entire collection." },
+        { "id": "B", "text": "To store the exact positional offsets of a term within documents to allow phrase querying." },
+        { "id": "C", "text": "To store the total number of terms in each document." },
+        { "id": "D", "text": "To index documents by their creation date." }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "A standard inverted index only knows *if* a word is in a document. A positional index records the exact integer position of every occurrence, which is strictly required to execute phrase queries like 'machine learning'.",
+      "tags": ["positional-index", "indexing", "phrase-queries"]
+    },
+    {
+      "id": "q30",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Boolean Logic",
+      "difficulty": "medium",
+      "questionMd": "In the example query `cat AND dog` for documents:\nDoc1: \"Cats are cute, but I prefer dogs.\"\nDoc2: \"Dogs are great pets for families with children.\"\nDoc3: \"I have both a cat and a dog at home.\"\nAssuming basic stemming is applied, which document(s) would be retrieved?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Doc1 and Doc3." },
+        { "id": "B", "text": "Doc1 only." },
+        { "id": "C", "text": "Doc2 only." },
+        { "id": "D", "text": "Doc3 only." }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "An AND query requires both terms. With stemming, 'Cats' becomes 'cat' and 'dogs' becomes 'dog'. Therefore, Doc1 contains both terms. Doc3 explicitly contains both terms. Doc2 only contains 'dog'. So Doc1 and Doc3 are retrieved. *(Note: If strictly un-stemmed, only Doc3 matches. Assuming standard IR pipeline with normalization, A is correct.)*",
+      "tags": ["boolean", "logic", "stemming"]
+    },
+    {
+      "id": "q31",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Vector Space Model",
+      "difficulty": "easy",
+      "questionMd": "How does the Vector Space Model generally handle document ranking compared to the Boolean Model?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "It provides no document ranking, similar to the Boolean Model." },
+        { "id": "B", "text": "It ranks documents based solely on their length." },
+        { "id": "C", "text": "It only provides an exact match, without ranking." },
+        { "id": "D", "text": "It provides a ranked document list with respect to their similarity/relevance." }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "Unlike the Boolean model which provides an unordered set of matches, the Vector Space Model calculates a graded relevance score (cosine similarity), allowing results to be sorted from most to least relevant.",
+      "tags": ["vector-space", "ranking", "comparison"]
+    },
+    {
+      "id": "q32",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "BM25 Parameters",
+      "difficulty": "easy",
+      "questionMd": "What does `avgdl` represent in the BM25 formula?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "The average term frequency in a document." },
+        { "id": "B", "text": "The average number of unique terms per document." },
+        { "id": "C", "text": "The average document length across the entire collection." },
+        { "id": "D", "text": "The average document frequency of a term." }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "`avgdl` stands for Average Document Length. It is used as a baseline to penalize or reward documents based on whether they are longer or shorter than the average document in the corpus.",
+      "tags": ["bm25", "parameters", "math"]
+    },
+    {
+      "id": "q33",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "BM25",
+      "difficulty": "medium",
+      "questionMd": "Which retrieval model explicitly and natively accounts for robust document length normalization via tunable parameters?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Raw Term Frequency Model." },
+        { "id": "B", "text": "Boolean Model." },
+        { "id": "C", "text": "BM25." },
+        { "id": "D", "text": "Standard un-normalized TF-IDF." }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "BM25 is famous specifically because it introduced the `b` and `avgdl` parameters to handle document length normalization much more effectively than standard vector models.",
+      "tags": ["bm25", "normalization", "models"]
+    },
+    {
+      "id": "q34",
+      "type": "single_choice",
+      "topic": "Indexing",
+      "subtopic": "Inverted Index",
+      "difficulty": "easy",
+      "questionMd": "An Inverted Index is a data structure that maps what to what?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Search queries to relevant documents." },
+        { "id": "B", "text": "Document frequency to term frequency." },
+        { "id": "C", "text": "Documents to the terms they contain." },
+        { "id": "D", "text": "Terms to the documents that contain them." }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "An inverted index flips the natural hierarchy of text. Instead of a Document mapping to its words, it maps a specific Word (term) to a list of Documents containing it.",
+      "tags": ["inverted-index", "definitions"]
+    },
+    {
+      "id": "q35",
+      "type": "single_choice",
+      "topic": "Preprocessing",
+      "subtopic": "Pipeline",
+      "difficulty": "easy",
+      "questionMd": "Which of the following is NOT typically a part of text wrangling and clean-up?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Spelling & Grammar Correction." },
+        { "id": "B", "text": "Formatting Unification." },
+        { "id": "C", "text": "Document ranking based on relevance." },
+        { "id": "D", "text": "Lowercasing or Normalization." }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "Document ranking occurs during the 'Online' or query-execution phase using math formulas. Wrangling/clean-up (lowercasing, formatting, stemming) happens during the 'Offline' preprocessing phase.",
+      "tags": ["preprocessing", "pipeline"]
+    },
+    {
+      "id": "q36",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "BM25 Parameters",
+      "difficulty": "hard",
+      "questionMd": "In the BM25 formula, what is the role of the parameter k1?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "It normalizes the document length." },
+        { "id": "B", "text": "It specifies the number of documents to retrieve." },
+        { "id": "C", "text": "It controls how quickly the term frequency (TF) component saturates." },
+        { "id": "D", "text": "It determines the impact of the Inverse Document Frequency (IDF) component." }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "The `k1` parameter calibrates the term frequency scaling. It sets an asymptote that limits how much a single term's frequency can boost the score, effectively applying a curve to raw TF.",
+      "tags": ["bm25", "parameters", "tf"]
+    },
+    {
+      "id": "q37",
+      "type": "single_choice",
+      "topic": "System Architecture",
+      "subtopic": "Pipeline Settings",
+      "difficulty": "medium",
+      "questionMd": "In the context of information retrieval systems, what are the two main operational settings or phases?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Data Collection and Data Analysis." },
+        { "id": "B", "text": "Index Time and Runtime (On-the-fly)." },
+        { "id": "C", "text": "Offline Processing (Indexing) and Online Processing (Querying)." },
+        { "id": "D", "text": "Backend Storage and Frontend UI." }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "IR systems conceptually divide workloads into two phases: Offline (crawling, parsing, and building the heavy indexes) and Online (taking user queries in real-time and ranking documents against the pre-built index).",
+      "tags": ["architecture", "offline", "online"]
+    },
+    {
+      "id": "q38",
+      "type": "single_choice",
+      "topic": "Fundamentals",
+      "subtopic": "Bag of Words",
+      "difficulty": "easy",
+      "questionMd": "What is the main baseline assumption about document relevance in classic (Bag-of-Words) information retrieval?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Document relevance is based on its publication date." },
+        { "id": "B", "text": "A document's relevance is determined by its author." },
+        { "id": "C", "text": "A document is relevant if it contains the query terms." },
+        { "id": "D", "text": "A document is relevant if it contains many unique terms." }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "The foundational premise of standard IR models (Boolean, VSM, BM25) is lexical overlap: if a document contains the words the user typed, it is likely relevant to the user's intent.",
+      "tags": ["bag-of-words", "relevance", "fundamentals"]
+    },
+    {
+      "id": "q39",
+      "type": "single_choice",
+      "topic": "Indexing",
+      "subtopic": "Structures",
+      "difficulty": "easy",
+      "questionMd": "What is the most widely used index structure for Information Retrieval (IR)?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "B-tree index" },
+        { "id": "B", "text": "Hash table index" },
+        { "id": "C", "text": "Inverted index" },
+        { "id": "D", "text": "Sequential file index" }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "While B-trees and Hashes are standard in relational databases, the Inverted Index is the undisputed core architecture required for fast, scalable full-text information retrieval.",
+      "tags": ["inverted-index", "architecture"]
+    },
+    {
+      "id": "q40",
+      "type": "single_choice",
+      "topic": "Indexing",
+      "subtopic": "BSBI Complexity",
+      "difficulty": "medium",
+      "questionMd": "What is the expected time complexity for the quicksort or mergesort algorithms used for sorting each block in BSB Indexing?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "O(n^2)" },
+        { "id": "B", "text": "O(n)" },
+        { "id": "C", "text": "O(n log n)" },
+        { "id": "D", "text": "O(log n)" }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "Standard efficient sorting algorithms (like Quicksort and Mergesort) used to sort the (termID, docID) pairs in memory operate at an expected time complexity of O(n log n).",
+      "tags": ["bsbi", "algorithms", "time-complexity"]
+    },
+    {
+      "id": "q41",
+      "type": "single_choice",
+      "topic": "Query Optimization",
+      "subtopic": "Boolean Merge",
+      "difficulty": "medium",
+      "questionMd": "What is a crucial property for postings lists to allow for highly efficient $O(x+y)$ merging during Boolean query processing?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Postings lists must be sorted by document ID." },
+        { "id": "B", "text": "Postings lists must contain only unique terms." },
+        { "id": "C", "text": "Postings lists must be sorted by term frequency." },
+        { "id": "D", "text": "Postings lists must be of equal length." }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "If arrays are pre-sorted by Document ID, the intersect algorithm can walk linearly through both arrays using parallel pointers. If they weren't sorted, checking for matches would require an $O(x*y)$ nested loop.",
+      "tags": ["boolean", "merge", "optimization"]
+    },
+    {
+      "id": "q42",
+      "type": "single_choice",
+      "topic": "Indexing",
+      "subtopic": "Scale Constraints",
+      "difficulty": "medium",
+      "questionMd": "What is the main computational challenge when building an inverted index for very large text collections?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Insufficient processing power." },
+        { "id": "B", "text": "Lack of physical storage (Disk)." },
+        { "id": "C", "text": "Difficulty in parsing documents." },
+        { "id": "D", "text": "The lack of available main memory (RAM)." }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "Modern corpora easily exceed Terabytes, which cannot fit entirely into main memory (RAM) at once to be sorted. This RAM bottleneck is what necessitates disk-based indexing algorithms like BSBI or SPIMI.",
+      "tags": ["indexing", "ram", "scale"]
+    },
+    {
+      "id": "q43",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Term Weighting",
+      "difficulty": "easy",
+      "questionMd": "When are query terms weighted with respect to their importance in the document collection?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Only for short queries." },
+        { "id": "B", "text": "In the Boolean Model, where all query terms are treated equally." },
+        { "id": "C", "text": "Only when using simple log-frequency weighting." },
+        { "id": "D", "text": "In the Vector Space Model and Probabilistic Models, query terms are weighted." }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "The Boolean model ignores term weighting entirely. Weighting mechanisms (like applying IDF to prioritize rare query terms) are the core functionality of ranked retrieval systems like VSM and BM25.",
+      "tags": ["vector-space", "weighting", "models"]
+    },
+    {
+      "id": "q44",
+      "type": "single_choice",
+      "topic": "Preprocessing",
+      "subtopic": "Tokenization",
+      "difficulty": "easy",
+      "questionMd": "What is the definition of Tokenization in the context of text preprocessing?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "The process of identifying the main topics of a document." },
+        { "id": "B", "text": "The process of converting text into numerical vector representations." },
+        { "id": "C", "text": "The process of breaking down a text sequence into individual meaningful units (tokens)." },
+        { "id": "D", "text": "The process of removing common words like 'the' or 'is'." }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "Tokenization is the very first step in parsing text; it involves chopping a continuous stream of characters into discrete pieces (usually words) separated by spaces or punctuation.",
+      "tags": ["preprocessing", "tokenization"]
+    },
+    {
+      "id": "q45",
+      "type": "single_choice",
+      "topic": "Evaluation",
+      "subtopic": "F-Measure",
+      "difficulty": "easy",
+      "questionMd": "What mathematical function does the F-measure (or F-score) provide?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "The square root of the product of precision and recall." },
+        { "id": "B", "text": "A simple arithmetic average of precision and recall." },
+        { "id": "C", "text": "The sum of precision and recall." },
+        { "id": "D", "text": "The harmonic mean of precision and recall." }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "The F-Score calculates the Harmonic Mean of Precision and Recall (`2PR / (P+R)`). The harmonic mean is used instead of arithmetic mean because it heavily penalizes the system if either precision or recall drops to near zero.",
+      "tags": ["evaluation", "f-measure", "math"]
+    },
+    {
+      "id": "q46",
+      "type": "single_choice",
+      "topic": "Evaluation",
+      "subtopic": "Recall Calculation",
+      "difficulty": "medium",
+      "questionMd": "If an IR system retrieves 10 documents, and 7 of them are relevant, but there are a total of 14 relevant documents in the collection, what is the Recall?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "1.0 (14/14)" },
+        { "id": "B", "text": "0.25 (7/28)" },
+        { "id": "C", "text": "0.7 (7/10)" },
+        { "id": "D", "text": "0.5 (7/14)" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "Recall is calculated as `Relevant Retrieved / Total Relevant in Corpus`. Here, the system found 7 out of the 14 possible relevant documents. $7 / 14 = 0.5$.",
+      "tags": ["evaluation", "recall", "math"]
+    },
+    {
+      "id": "q47",
+      "type": "single_choice",
+      "topic": "Evaluation",
+      "subtopic": "Precision Calculation",
+      "difficulty": "medium",
+      "questionMd": "If an IR system retrieves 10 documents, and 7 of them are relevant, but there are a total of 14 relevant documents in the collection, what is the Precision?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "0.3 (3/10)" },
+        { "id": "B", "text": "1.0 (10/10)" },
+        { "id": "C", "text": "0.7 (7/10)" },
+        { "id": "D", "text": "0.5 (7/14)" }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "Precision is calculated as `Relevant Retrieved / Total Retrieved`. The system handed the user 10 documents, and 7 were good. $7 / 10 = 0.7$.",
+      "tags": ["evaluation", "precision", "math"]
+    },
+    {
+      "id": "q48",
+      "type": "single_choice",
+      "topic": "Preprocessing",
+      "subtopic": "Tokenization Logic",
+      "difficulty": "easy",
+      "questionMd": "How are tokens most commonly and basically identified during the tokenization process in English?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Based on the semantic meaning of the words." },
+        { "id": "B", "text": "Based on whitespace or punctuation marks between characters." },
+        { "id": "C", "text": "Based on the length of the words." },
+        { "id": "D", "text": "Based on the alphabetical order of characters." }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "Simple tokenizers split strings on non-alphanumeric characters like spaces, commas, and periods to isolate the individual words.",
+      "tags": ["preprocessing", "tokenization", "nlp"]
+    },
+    {
+      "id": "q49",
+      "type": "single_choice",
+      "topic": "Query Optimization",
+      "subtopic": "Time Complexity",
+      "difficulty": "medium",
+      "questionMd": "When processing a Boolean query with an AND operator using the two-pointer merging algorithm, what is the time complexity if the sorted postings list lengths are x and y?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "O(log(x+y))" },
+        { "id": "B", "text": "O(min(x,y))" },
+        { "id": "C", "text": "O(x+y)" },
+        { "id": "D", "text": "O(x*y)" }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "By advancing pointers through the two sorted lists simultaneously, the absolute maximum number of steps required is the sum of the lengths of the two lists, resulting in a linear $O(x+y)$ complexity.",
+      "tags": ["boolean", "time-complexity", "merge"]
+    },
+    {
+      "id": "q50",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "BM25 Advantages",
+      "difficulty": "medium",
+      "questionMd": "What is the main advantage of the BM25 ranking function over traditional raw TF-IDF for document ranking?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "It is mathematically simpler to compute." },
+        { "id": "B", "text": "It applies robust document length normalization and saturates term frequency." },
+        { "id": "C", "text": "It does not require Inverse Document Frequency calculation." },
+        { "id": "D", "text": "It only considers exact phrase matches." }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "Standard TF-IDF can overly favor long documents and fails to cap the influence of raw term frequency. BM25 introduced tunable parameters to normalize document length and 'curve' TF so it doesn't grow infinitely.",
+      "tags": ["bm25", "tf-idf", "normalization"]
+    },
+    {
+      "id": "q51",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Performance Tradeoffs",
+      "difficulty": "medium",
+      "questionMd": "What is the typical impact on performance when choosing the Vector Space Model over the Boolean Model?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "It is faster and more efficient, but less precise." },
+        { "id": "B", "text": "It is slower and computationally more complex, but generally yields more accurate and highly relevant rankings." },
+        { "id": "C", "text": "The Vector Space Model is only suitable for small collections." },
+        { "id": "D", "text": "Both models have identical performance characteristics." }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "Calculating vector dot products for thousands of documents is slower than simple bitwise AND/OR operations, but the resulting graded relevance list makes the system much more usable and accurate.",
+      "tags": ["vector-space", "boolean", "tradeoffs"]
+    },
+    {
+      "id": "q52",
+      "type": "single_choice",
+      "topic": "Preprocessing",
+      "subtopic": "Stopwords vs Positional",
+      "difficulty": "hard",
+      "questionMd": "Why is Stopword Elimination typically NOT applied when using Positional Indexes for phrase queries?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Because stopwords are less common in phrase queries." },
+        { "id": "B", "text": "Because it would increase the index size too much." },
+        { "id": "C", "text": "Because stopwords are always irrelevant." },
+        { "id": "D", "text": "Because removing them breaks the exact positional offsets needed to accurately match contiguous phrases." }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "If a user searches for 'to be or not to be', almost every word is a stopword. If you remove them during indexing, the position offsets are destroyed, making it impossible to reconstruct and match exact famous phrases or names.",
+      "tags": ["preprocessing", "stopwords", "positional-index"]
+    },
+    {
+      "id": "q53",
+      "type": "single_choice",
+      "topic": "Term Weighting",
+      "subtopic": "TF-IDF Formula",
+      "difficulty": "easy",
+      "questionMd": "How does TF-IDF mathematically combine the importance of a term within a document and its rarity across the collection?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "By dividing the term frequency by the inverse document frequency." },
+        { "id": "B", "text": "By summing the term frequency and inverse document frequency." },
+        { "id": "C", "text": "By multiplying the term frequency (TF) by the inverse document frequency (IDF)." },
+        { "id": "D", "text": "By taking the average of term frequency and inverse document frequency." }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "The final weight is a pure product: $Weight = TF \\times IDF$. This ensures the term must be both frequent locally AND rare globally to get a massive score.",
+      "tags": ["tf-idf", "math", "weighting"]
+    },
+    {
+      "id": "q54",
+      "type": "single_choice",
+      "topic": "Evaluation",
+      "subtopic": "Core Metrics",
+      "difficulty": "easy",
+      "questionMd": "What are the two foundational metrics that most Information Retrieval evaluation campaigns are based on?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Index size and query execution time." },
+        { "id": "B", "text": "Precision and Recall." },
+        { "id": "C", "text": "Document length and term frequency." },
+        { "id": "D", "text": "User satisfaction and system uptime." }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "Precision (how much of what we found is good) and Recall (how much of all the good stuff did we find) form the basis of almost all offline IR evaluation (MAP, F1, PR-Curves).",
+      "tags": ["evaluation", "precision", "recall"]
+    },
+    {
+      "id": "q55",
+      "type": "single_choice",
+      "topic": "Preprocessing",
+      "subtopic": "Text Wrangling",
+      "difficulty": "easy",
+      "questionMd": "What is the primary goal of text wrangling and cleansing in information retrieval?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "To prepare high-quality, standardized text data for indexing and analysis." },
+        { "id": "B", "text": "To convert text into a different file format." },
+        { "id": "C", "text": "To identify the most frequently occurring terms in a document." },
+        { "id": "D", "text": "To increase the speed of document retrieval." }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "Raw text is messy. Cleansing (removing HTML tags, lowercasing, stemming) normalizes the data so that variations of words accurately map to standard tokens in the index.",
+      "tags": ["preprocessing", "data-cleaning"]
+    },
+    {
+      "id": "q56",
+      "type": "single_choice",
+      "topic": "Term Weighting",
+      "subtopic": "Informative Terms",
+      "difficulty": "medium",
+      "questionMd": "According to the principles of term weighting, what type of terms are considered mathematically \"more informative\" in information retrieval?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Terms that appear in all documents." },
+        { "id": "B", "text": "Rare terms that appear in only a few documents." },
+        { "id": "C", "text": "Common terms, like 'university' or 'life'." },
+        { "id": "D", "text": "Frequent terms, like stopwords." }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "Rare terms have a high Inverse Document Frequency (IDF). Because they appear in very few documents, if a user searches for that term, the documents containing it are highly likely to be exactly what the user wants.",
+      "tags": ["idf", "term-weighting", "information-theory"]
+    },
+    {
+      "id": "q57",
+      "type": "single_choice",
+      "topic": "Indexing",
+      "subtopic": "DF Role",
+      "difficulty": "easy",
+      "questionMd": "What does Document Frequency (DF) of a term 't' represent?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "The position of 't' within a document." },
+        { "id": "B", "text": "The importance of 't' in a specific document." },
+        { "id": "C", "text": "The total number of occurrences of 't' in the entire collection." },
+        { "id": "D", "text": "The absolute number of distinct documents in which 't' occurs." }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "Document frequency counts the *documents*, not the individual word occurrences. If a word appears 100 times but only inside a single document, its DF is 1.",
+      "tags": ["df", "definitions", "indexing"]
+    },
+    {
+      "id": "q58",
+      "type": "single_choice",
+      "topic": "Indexing",
+      "subtopic": "BSBI",
+      "difficulty": "easy",
+      "questionMd": "What is the primary approach discussed for indexing large text collections that do not fit into main memory?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Distributed indexing" },
+        { "id": "B", "text": "Manual indexing" },
+        { "id": "C", "text": "In-memory indexing" },
+        { "id": "D", "text": "Block Sort-Based Indexing (BSBI)" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "Block Sort-Based Indexing solves the memory constraint problem by building mini-indexes in RAM, writing them to disk as blocks, and then merging the blocks.",
+      "tags": ["bsbi", "indexing", "memory"]
+    },
+    {
+      "id": "q59",
+      "type": "single_choice",
+      "topic": "Term Weighting",
+      "subtopic": "IDF Role",
+      "difficulty": "easy",
+      "questionMd": "What does the IDF (Inverse Document Frequency) of a term measure?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "How rare a term is across the entire document collection." },
+        { "id": "B", "text": "How frequently a term appears in a specific document." },
+        { "id": "C", "text": "The position of a term within a document." },
+        { "id": "D", "text": "The total number of documents in the collection." }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "IDF acts as a measure of the 'informativeness' of a term. Higher IDF means the term is very rare, and thus highly informative when filtering results.",
+      "tags": ["idf", "definitions", "term-weighting"]
+    },
+    {
+      "id": "q60",
+      "type": "single_choice",
+      "topic": "Term Weighting",
+      "subtopic": "High DF Impact",
+      "difficulty": "medium",
+      "questionMd": "In the TF-IDF term weighting scheme, what is the mathematical impact of a term appearing in many documents (having a high DF)?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Its TF-IDF weight will be determined solely by its term frequency." },
+        { "id": "B", "text": "Its TF-IDF weight will remain unchanged." },
+        { "id": "C", "text": "Its TF-IDF weight will be higher." },
+        { "id": "D", "text": "Its final TF-IDF weight will be heavily penalized (lowered)." }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "If Document Frequency (DF) is high, the ratio $N/df$ is small. Therefore, the $\\log(N/df)$ (which is the IDF) becomes very small, severely lowering the final multiplied TF-IDF score. Common words are penalized.",
+      "tags": ["df", "tf-idf", "math"]
+    }
+  ]
+}

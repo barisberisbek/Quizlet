@@ -1,0 +1,855 @@
+{
+  "quizId": "Q2-v2",
+  "title": "Q2-v2",
+  "course": "Information Retrieval",
+  "language": "en",
+  "semester": "",
+  "source": "Extracted from user-provided HTML (Quiz 2)",
+  "durationMinutes": 0,
+  "shuffleQuestions": false,
+  "shuffleOptions": false,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "topic": "Index Compression",
+      "subtopic": "Gap Encoding",
+      "difficulty": "easy",
+      "questionMd": "A postings list for the term \"orbit\" contains the doc_ids `[3, 11, 22, 45, 56]`. What is the correct gap-encoded representation of this list?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "[3, 5, 7, 6, 14]"
+        },
+        {
+          "id": "B",
+          "text": "[3, 11, 22, 45, 56] stored unchanged because the first value is already a gap"
+        },
+        {
+          "id": "C",
+          "text": "[0, 8, 11, 23, 11]"
+        },
+        {
+          "id": "D",
+          "text": "[3, 8, 11, 23, 11]"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "Gap encoding keeps the first docID unchanged and stores later values as differences from the previous one.\n\n- `3`\n- `11 - 3 = 8`\n- `22 - 11 = 11`\n- `45 - 22 = 23`\n- `56 - 45 = 11`\n\nSo the correct representation is **`[3, 8, 11, 23, 11]`**.",
+      "tags": [
+        "gap encoding",
+        "postings list",
+        "compression"
+      ]
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "topic": "Text Preprocessing",
+      "subtopic": "Lemmatization",
+      "difficulty": "easy",
+      "questionMd": "What is the primary reason that lemmatization requires Part-of-Speech (POS) tagging to work correctly?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "The same word form can have different base forms depending on its grammatical role"
+        },
+        {
+          "id": "B",
+          "text": "Without POS tagging, lemmatization cannot distinguish between nouns and proper nouns"
+        },
+        {
+          "id": "C",
+          "text": "Lemmatization uses a dictionary that is indexed by POS tag rather than by word form"
+        },
+        {
+          "id": "D",
+          "text": "POS tagging is needed to filter out stopwords before lemmatization begins"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "The same surface form can map to different lemmas depending on its grammatical role. For example, a word may behave as a noun in one context and as a verb in another. POS tagging gives the lemmatizer the grammatical information needed to choose the correct base form.",
+      "tags": [
+        "lemmatization",
+        "pos tagging",
+        "normalization"
+      ]
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "topic": "Text Preprocessing",
+      "subtopic": "Stemming Errors",
+      "difficulty": "medium",
+      "questionMd": "After applying the full preprocessing pipeline (`tokenize → lowercase → stopword removal → Porter stemming`) to the input \"The astronauts ORBITING the International Space Station\", which term in the output best illustrates a known over-stemming problem?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "\"astronaut\" produced from \"astronauts\""
+        },
+        {
+          "id": "B",
+          "text": "\"station\" produced from \"Station\""
+        },
+        {
+          "id": "C",
+          "text": "\"space\" produced from \"Space\""
+        },
+        {
+          "id": "D",
+          "text": "\"intern\" produced from \"International\""
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "Producing **`intern`** from **`International`** is a classic over-stemming example. The stemmer removes too much of the word and collapses it into a form that no longer preserves the intended meaning.",
+      "tags": [
+        "porter stemmer",
+        "overstemming",
+        "preprocessing"
+      ]
+    },
+    {
+      "id": "q4",
+      "type": "single_choice",
+      "topic": "Indexing",
+      "subtopic": "Term Definition",
+      "difficulty": "easy",
+      "questionMd": "A term is best defined as which of the following in the context of information retrieval indexing?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Any single occurrence of a word anywhere in a document collection"
+        },
+        {
+          "id": "B",
+          "text": "A token produced by splitting raw text on whitespace boundaries"
+        },
+        {
+          "id": "C",
+          "text": "A unique word form in the vocabulary before any normalization is applied"
+        },
+        {
+          "id": "D",
+          "text": "A normalized type that survives all preprocessing steps and enters the inverted index"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "In IR indexing, a **term** is the normalized form that remains after preprocessing such as case folding, stopword removal, stemming, or lemmatization, and is the form that is actually inserted into the inverted index.",
+      "tags": [
+        "term",
+        "indexing",
+        "preprocessing"
+      ]
+    },
+    {
+      "id": "q5",
+      "type": "single_choice",
+      "topic": "Text Preprocessing",
+      "subtopic": "Stopword Removal",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, which scenario represents a case where stopword removal should **NOT** be applied?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Indexing a large corpus of general news articles"
+        },
+        {
+          "id": "B",
+          "text": "A keyword query for a common technical term like \"network\""
+        },
+        {
+          "id": "C",
+          "text": "A phrase query such as \"to be or not to be\""
+        },
+        {
+          "id": "D",
+          "text": "Preprocessing queries submitted to a web-scale search engine"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "In phrase queries, even common function words may be essential to meaning. Removing stopwords from **`to be or not to be`** destroys the structure and meaning of the query, so stopword removal should not be applied here.",
+      "tags": [
+        "stopwords",
+        "phrase query",
+        "preprocessing"
+      ]
+    },
+    {
+      "id": "q6",
+      "type": "single_choice",
+      "topic": "Text Preprocessing",
+      "subtopic": "WordNet Lemmatizer",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture, the NLTK WordNetLemmatizer called on the word \"ran\" without providing a POS tag will produce which (incorrect) output?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "\"runn\", because it applies a heuristic suffix-stripping rule"
+        },
+        {
+          "id": "B",
+          "text": "\"ran\" unchanged, because it defaults to treating the word as a noun"
+        },
+        {
+          "id": "C",
+          "text": "\"go\", because it links irregular verb forms through WordNet"
+        },
+        {
+          "id": "D",
+          "text": "\"run\", because it correctly identifies the past tense"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Without a POS tag, WordNetLemmatizer defaults to **noun** behavior. Because of that, **`ran`** is returned unchanged instead of being mapped to the verb lemma **`run`**.",
+      "tags": [
+        "wordnet",
+        "lemmatization",
+        "pos tagging",
+        "nltk"
+      ]
+    },
+    {
+      "id": "q7",
+      "type": "single_choice",
+      "topic": "Text Preprocessing",
+      "subtopic": "Lemmatization",
+      "difficulty": "easy",
+      "questionMd": "How does lemmatization handle the word \"better\" when supplied with the correct POS tag indicating it is an adjective?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "It maps \"better\" to \"bett\" by stripping the comparative suffix"
+        },
+        {
+          "id": "B",
+          "text": "It maps \"better\" to \"good\""
+        },
+        {
+          "id": "C",
+          "text": "It maps \"better\" to \"best\" as the superlative base form"
+        },
+        {
+          "id": "D",
+          "text": "It returns \"better\" unchanged because it is already a base-form adjective"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "With the correct adjective POS tag, **`better`** is recognized as the comparative form of **`good`**. Lemmatization uses lexical knowledge, not just suffix stripping, so the correct lemma is **`good`**.",
+      "tags": [
+        "lemmatization",
+        "adjective",
+        "irregular forms"
+      ]
+    },
+    {
+      "id": "q8",
+      "type": "single_choice",
+      "topic": "Text Preprocessing",
+      "subtopic": "Tokenization",
+      "difficulty": "easy",
+      "questionMd": "Which of the following best explains why simple whitespace tokenization is insufficient for production search systems?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "It fails to handle contractions, possessives, URLs, and hyphenated expressions correctly"
+        },
+        {
+          "id": "B",
+          "text": "It requires an external dictionary to identify valid word boundaries"
+        },
+        {
+          "id": "C",
+          "text": "It always produces more tokens than a regex-based tokenizer would for the same input"
+        },
+        {
+          "id": "D",
+          "text": "It is too slow for large corpora because it scans the entire text character by character"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Whitespace tokenization only splits on spaces. That makes it unreliable for real text containing contractions, possessives, URLs, punctuation, and hyphenated expressions. Production search needs more robust tokenization rules.",
+      "tags": [
+        "tokenization",
+        "whitespace tokenizer",
+        "preprocessing"
+      ]
+    },
+    {
+      "id": "q9",
+      "type": "single_choice",
+      "topic": "Indexing",
+      "subtopic": "Positional Indexes",
+      "difficulty": "easy",
+      "questionMd": "A basic inverted index returns documents containing both \"space\" and \"shuttle\" using an AND operation, but includes a document where these words appear far apart and in a different order. What type of index is needed to eliminate such false positives?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "A positional index that stores token positions within each document"
+        },
+        {
+          "id": "B",
+          "text": "A compressed index that uses gap encoding to reduce postings list size"
+        },
+        {
+          "id": "C",
+          "text": "A term-frequency index that weights terms by how often they co-occur"
+        },
+        {
+          "id": "D",
+          "text": "A biword index that stores every adjacent pair of terms as a single entry"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "To verify that terms occur **near each other** and in the **correct order**, the system needs position information. A **positional index** stores token positions for each term occurrence, which lets the engine resolve phrase and proximity queries correctly.",
+      "tags": [
+        "positional index",
+        "phrase query",
+        "proximity"
+      ]
+    },
+    {
+      "id": "q10",
+      "type": "single_choice",
+      "topic": "Text Preprocessing",
+      "subtopic": "Tokenization",
+      "difficulty": "easy",
+      "questionMd": "Which of the following inputs causes whitespace tokenization to produce an incorrect or problematic result?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "\"nlp.stanford.edu\" treated as a single token"
+        },
+        {
+          "id": "B",
+          "text": "\"running\" treated as a single token"
+        },
+        {
+          "id": "C",
+          "text": "\"cat\" treated as a single token"
+        },
+        {
+          "id": "D",
+          "text": "\"search\" treated as a single token"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "A URL-like string such as **`nlp.stanford.edu`** contains meaningful internal structure, but whitespace tokenization keeps it as one token because there are no spaces. That is a typical case where simple whitespace splitting fails.",
+      "tags": [
+        "tokenization",
+        "urls",
+        "whitespace tokenizer"
+      ]
+    },
+    {
+      "id": "q11",
+      "type": "single_choice",
+      "topic": "Text Preprocessing",
+      "subtopic": "Stemming",
+      "difficulty": "easy",
+      "questionMd": "Which stemmer described in the lectures is characterized as the most aggressive, producing the smallest vocabulary but the highest over-stemming error rate?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Lancaster"
+        },
+        {
+          "id": "B",
+          "text": "Porter"
+        },
+        {
+          "id": "C",
+          "text": "Snowball"
+        },
+        {
+          "id": "D",
+          "text": "WordNet lemmatizer"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "The **Lancaster** stemmer is the most aggressive among the listed options. It reduces words strongly, which can shrink vocabulary substantially, but that comes with a higher risk of **over-stemming**.",
+      "tags": [
+        "stemming",
+        "lancaster",
+        "overstemming"
+      ]
+    },
+    {
+      "id": "q12",
+      "type": "single_choice",
+      "topic": "Statistical Properties of Text",
+      "subtopic": "Heaps' Law",
+      "difficulty": "medium",
+      "questionMd": "Heap's Law states that vocabulary grows sub-linearly with corpus size. Which of the following engineering decisions is most directly motivated by this property?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Stopword removal can be skipped because rare terms never appear in large corpora"
+        },
+        {
+          "id": "B",
+          "text": "Indexing systems must support incremental updates because new terms keep arriving even as growth slows"
+        },
+        {
+          "id": "C",
+          "text": "The entire index can be built in a single pass because vocabulary size is bounded"
+        },
+        {
+          "id": "D",
+          "text": "Compression is unnecessary because sub-linear growth keeps the index small"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Heaps' Law says vocabulary growth slows as the corpus grows, but it **does not stop**. New terms continue to appear, so real indexing systems need to support **incremental updates**.",
+      "tags": [
+        "heaps law",
+        "vocabulary growth",
+        "incremental indexing"
+      ]
+    },
+    {
+      "id": "q13",
+      "type": "single_choice",
+      "topic": "Index Construction",
+      "subtopic": "BSBI",
+      "difficulty": "medium",
+      "questionMd": "In the BSBI algorithm, after each RAM-sized block is processed and written to disk, what operation combines all on-disk blocks into the final inverted index?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "A second full pass over the original corpus to resolve term_id collisions"
+        },
+        {
+          "id": "B",
+          "text": "A hash join that matches term_ids across blocks using an in-memory lookup table"
+        },
+        {
+          "id": "C",
+          "text": "An external k-way merge sort over all sorted block files"
+        },
+        {
+          "id": "D",
+          "text": "A binary search tree insertion that merges block entries one term at a time"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "BSBI writes sorted intermediate block files to disk and then combines them using an **external k-way merge sort**. That merge step produces the final global inverted index.",
+      "tags": [
+        "bsbi",
+        "external merge",
+        "index construction"
+      ]
+    },
+    {
+      "id": "q14",
+      "type": "single_choice",
+      "topic": "Index Construction",
+      "subtopic": "BSBI vs SPIMI",
+      "difficulty": "medium",
+      "questionMd": "Which statement correctly identifies a limitation of BSBI that SPIMI does not share?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "BSBI appends doc_ids directly to hash-map postings lists, causing memory fragmentation"
+        },
+        {
+          "id": "B",
+          "text": "BSBI cannot handle corpora larger than available RAM because it performs no disk-based operations"
+        },
+        {
+          "id": "C",
+          "text": "BSBI sorts each block's postings list only once, making it slower than SPIMI's repeated sorting"
+        },
+        {
+          "id": "D",
+          "text": "BSBI requires a global term-to-integer dictionary to be maintained across all blocks, consuming additional memory"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "A key limitation of BSBI is that it needs a **global term-to-integer dictionary** across blocks. SPIMI avoids this overhead by building postings directly for terms during block processing.",
+      "tags": [
+        "bsbi",
+        "spimi",
+        "dictionary",
+        "index construction"
+      ]
+    },
+    {
+      "id": "q15",
+      "type": "single_choice",
+      "topic": "Statistical Properties of Text",
+      "subtopic": "Heaps' Law",
+      "difficulty": "easy",
+      "questionMd": "Heap's Law describes how vocabulary size `V` grows with the total number of tokens `N` in a corpus. Which statement correctly characterizes this growth?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Vocabulary grows linearly, adding a fixed number of new terms per document"
+        },
+        {
+          "id": "B",
+          "text": "Vocabulary growth stops once the corpus exceeds a threshold size"
+        },
+        {
+          "id": "C",
+          "text": "Vocabulary grows sub-linearly and never fully stops growing"
+        },
+        {
+          "id": "D",
+          "text": "Vocabulary grows exponentially in proportion to the square of N"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "Heaps' Law predicts **sub-linear vocabulary growth**. As the corpus gets larger, new terms continue to appear, but at a slower rate than token growth.",
+      "tags": [
+        "heaps law",
+        "vocabulary",
+        "corpus statistics"
+      ]
+    },
+    {
+      "id": "q16",
+      "type": "single_choice",
+      "topic": "Text Preprocessing",
+      "subtopic": "Pipeline Order",
+      "difficulty": "easy",
+      "questionMd": "In the text preprocessing pipeline, what is the correct order of stages?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tokenize → Stem/Lemmatize → Normalize → Remove Stopwords → Index Terms"
+        },
+        {
+          "id": "B",
+          "text": "Tokenize → Normalize → Remove Stopwords → Stem/Lemmatize → Index Terms"
+        },
+        {
+          "id": "C",
+          "text": "Normalize → Tokenize → Stem/Lemmatize → Remove Stopwords → Index Terms"
+        },
+        {
+          "id": "D",
+          "text": "Remove Stopwords → Tokenize → Normalize → Stem/Lemmatize → Index Terms"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "A standard preprocessing flow is **Tokenize → Normalize → Remove Stopwords → Stem/Lemmatize → Index Terms**. First the text is broken into tokens, then normalized, then filtered, then reduced to root forms before indexing.",
+      "tags": [
+        "preprocessing pipeline",
+        "tokenization",
+        "stemming",
+        "stopwords"
+      ]
+    },
+    {
+      "id": "q17",
+      "type": "single_choice",
+      "topic": "Index Compression",
+      "subtopic": "Variable-Byte Encoding",
+      "difficulty": "medium",
+      "questionMd": "Using VB encoding, a gap value of 5 requires how many bytes, and a gap value of 200 requires how many bytes?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "1 byte for gap 5 and 1 byte for gap 200"
+        },
+        {
+          "id": "B",
+          "text": "1 byte for gap 5 and 2 bytes for gap 200"
+        },
+        {
+          "id": "C",
+          "text": "2 bytes for gap 5 and 2 bytes for gap 200"
+        },
+        {
+          "id": "D",
+          "text": "2 bytes for gap 5 and 4 bytes for gap 200"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Variable-byte encoding uses **7 bits per byte** for payload and 1 continuation bit. Since `5` fits within 7 bits, it needs **1 byte**. Since `200` is larger than `127`, it needs **2 bytes**.",
+      "tags": [
+        "variable-byte encoding",
+        "compression",
+        "gap encoding"
+      ]
+    },
+    {
+      "id": "q18",
+      "type": "single_choice",
+      "topic": "Text Preprocessing",
+      "subtopic": "Case Folding",
+      "difficulty": "easy",
+      "questionMd": "Case folding converts \"Apple\" to \"apple\" during normalization. According to the lecture, which specific example demonstrates that lowercasing is **NOT** always a safe operation?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Accent folding should always be performed before case folding"
+        },
+        {
+          "id": "B",
+          "text": "\"NASA\" should always be lowercased to \"nasa\" for consistency"
+        },
+        {
+          "id": "C",
+          "text": "\"Running\" and \"running\" should always be treated as the same term"
+        },
+        {
+          "id": "D",
+          "text": "\"Apple\" (company name) vs. \"apple\" (the fruit) carry different meanings"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "Lowercasing can erase meaningful distinctions. **`Apple`** the company and **`apple`** the fruit are not the same concept, so case folding is not always semantically safe.",
+      "tags": [
+        "case folding",
+        "normalization",
+        "ambiguity"
+      ]
+    },
+    {
+      "id": "q19",
+      "type": "single_choice",
+      "topic": "Text Preprocessing",
+      "subtopic": "Stopword Lists",
+      "difficulty": "medium",
+      "questionMd": "The NLTK English stopword list contains approximately how many words, and what is the approximate size of Lucene's default stopword list?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "179 words in NLTK and approximately 179 in Lucene"
+        },
+        {
+          "id": "B",
+          "text": "33 words in NLTK and approximately 179 in Lucene"
+        },
+        {
+          "id": "C",
+          "text": "500 words in NLTK and approximately 100 in Lucene"
+        },
+        {
+          "id": "D",
+          "text": "179 words in NLTK and approximately 33 in Lucene"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "The lecture comparison highlights that NLTK's English stopword list is much larger, at around **179 words**, بينما Lucene's default list is much smaller, at around **33 words**.",
+      "tags": [
+        "stopwords",
+        "nltk",
+        "lucene",
+        "preprocessing"
+      ]
+    },
+    {
+      "id": "q20",
+      "type": "single_choice",
+      "topic": "Index Compression",
+      "subtopic": "Gap + VB Encoding",
+      "difficulty": "medium",
+      "questionMd": "Why do high-frequency terms (with large document frequency) achieve better compression ratios than rare terms when gap encoding combined with VB encoding is applied?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "High-frequency terms benefit from front-coding in the dictionary, independently of the postings lists"
+        },
+        {
+          "id": "B",
+          "text": "High-frequency terms appear in many documents, producing smaller average gaps that fit in fewer VB bytes"
+        },
+        {
+          "id": "C",
+          "text": "High-frequency terms have shorter string representations in the dictionary, reducing total index size"
+        },
+        {
+          "id": "D",
+          "text": "High-frequency terms are processed first by SPIMI, so their postings lists are already sorted"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Frequent terms appear in many documents, so their postings lists are denser. That usually creates **smaller average gaps** between docIDs, and smaller integers take fewer bytes under variable-byte encoding, which improves compression.",
+      "tags": [
+        "compression",
+        "gap encoding",
+        "variable-byte",
+        "document frequency"
+      ]
+    },
+    {
+      "id": "q21",
+      "type": "single_choice",
+      "topic": "Search Systems",
+      "subtopic": "English Analyzer",
+      "difficulty": "easy",
+      "questionMd": "An Elasticsearch deployment uses the \"english\" language analyzer. Based on the lecture content, which stemming algorithm does this analyzer apply by default?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Snowball multilingual stemming"
+        },
+        {
+          "id": "B",
+          "text": "WordNet lemmatization"
+        },
+        {
+          "id": "C",
+          "text": "Porter stemming"
+        },
+        {
+          "id": "D",
+          "text": "Lancaster stemming"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "The default **english** analyzer in Elasticsearch/OpenSearch applies **Porter stemming**. It is the standard stemming choice discussed for English text normalization in the course.",
+      "tags": [
+        "elasticsearch",
+        "english analyzer",
+        "porter stemmer"
+      ]
+    },
+    {
+      "id": "q22",
+      "type": "single_choice",
+      "topic": "Index Construction",
+      "subtopic": "BSBI vs SPIMI",
+      "difficulty": "medium",
+      "questionMd": "What is the key architectural difference between the BSBI and SPIMI index construction algorithms?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "SPIMI sorts all term-document pairs before writing any block to disk, while BSBI does not"
+        },
+        {
+          "id": "B",
+          "text": "BSBI is designed for single-pass processing, while SPIMI requires multiple passes over the corpus"
+        },
+        {
+          "id": "C",
+          "text": "BSBI requires a global term-to-integer mapping across all blocks, while SPIMI does not"
+        },
+        {
+          "id": "D",
+          "text": "BSBI writes sorted postings directly to disk, while SPIMI keeps all postings in RAM permanently"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "The main architectural difference is that **BSBI** depends on a **global term-to-integer mapping** shared across blocks, whereas **SPIMI** builds postings directly using terms and avoids that global dictionary requirement during block construction.",
+      "tags": [
+        "bsbi",
+        "spimi",
+        "index construction",
+        "dictionary"
+      ]
+    }
+  ]
+}

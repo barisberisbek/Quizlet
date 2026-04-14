@@ -1,0 +1,793 @@
+{
+  "quizId": "Q3-IR-Complete",
+  "title": "Information Retrieval - Quiz 3 (Complete)",
+  "course": "Information Retrieval",
+  "language": "en",
+  "semester": "2023-2024",
+  "source": "Past Exam",
+  "durationMinutes": 60,
+  "shuffleQuestions": false,
+  "shuffleOptions": false,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "topic": "Phrase Queries",
+      "subtopic": "Biword Indexes",
+      "difficulty": "medium",
+      "questionMd": "How does a biword index handle a three-word phrase query such as \"machine learning model\"?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "It stores the entire three-word phrase as a single compound dictionary entry" },
+        { "id": "B", "text": "It decomposes the phrase into overlapping biwords and executes an AND query over machine_learning and learning_model" },
+        { "id": "C", "text": "It falls back to a standard Boolean AND query over the three individual terms" },
+        { "id": "D", "text": "It uses the positional index for any phrase longer than two words" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "A biword index only stores two-word combinations. To handle longer phrases, the system breaks the query into overlapping pairs (biwords) and intersects their postings lists using an AND merge.",
+      "tags": ["phrase-queries", "biword-index", "boolean"]
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "topic": "Phrase Queries",
+      "subtopic": "Biword Indexes",
+      "difficulty": "medium",
+      "questionMd": "A biword index speeds up two-word phrase queries, but which weakness makes it unsuitable for general-purpose phrase retrieval?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Position information is discarded, making proximity queries impossible" },
+        { "id": "B", "text": "All phrase queries must be preprocessed into single tokens at index build time" },
+        { "id": "C", "text": "Longer phrase queries can produce false positive results and the index size roughly doubles" },
+        { "id": "D", "text": "It cannot support trailing wildcard patterns alongside phrase queries" }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "Because longer phrases are broken down into overlapping biwords (e.g., A B AND B C), the query might falsely match a document containing 'A B' and later 'B C', but not consecutively. Additionally, storing all possible word pairs severely inflates the vocabulary size.",
+      "tags": ["phrase-queries", "biword-index", "limitations"]
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "topic": "System Architecture",
+      "subtopic": "Query Processing",
+      "difficulty": "medium",
+      "questionMd": "In the complete Boolean query engine described in the lecture, which component is responsible for processing the user's query string immediately before the wildcard resolver?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "The query optimizer, which reorders AND operands by ascending document frequency" },
+        { "id": "B", "text": "The spelling corrector, which substitutes misspelled tokens with vocabulary candidates" },
+        { "id": "C", "text": "The Boolean executor, which performs AND, OR, and NOT postings merges" },
+        { "id": "D", "text": "The query parser, which identifies operators, phrases, and wildcard patterns in the raw input" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "The query parser takes the raw string input and identifies the structural elements (like wildcards, phrases, and Boolean operators) so that specific components like the wildcard resolver can process their respective pieces.",
+      "tags": ["architecture", "parsing", "boolean"]
+    },
+    {
+      "id": "q4",
+      "type": "single_choice",
+      "topic": "Term Frequencies",
+      "subtopic": "Definitions",
+      "difficulty": "easy",
+      "questionMd": "A term has a document frequency (DF) of 500 and a term frequency (TF) of 12 in one particular document. What does the DF value of 500 indicate?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "The term appears in 500 different documents in the corpus" },
+        { "id": "B", "text": "The term's postings list contains 500 position entries" },
+        { "id": "C", "text": "The term appears in documents with an average length of 500 tokens" },
+        { "id": "D", "text": "The term appears 500 times across all documents combined" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "Document Frequency (DF) is explicitly defined as the total number of distinct documents within a corpus that contain the term at least once, regardless of how many times the term appears inside those individual documents.",
+      "tags": ["df", "tf", "definitions"]
+    },
+    {
+      "id": "q5",
+      "type": "single_choice",
+      "topic": "Query Optimization",
+      "subtopic": "Execution Order",
+      "difficulty": "easy",
+      "questionMd": "A Boolean AND query contains five terms with document frequencies 620, 3400, 8100, 12000, and 880. Which processing order is optimal?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "620-3400-880-8100-12000" },
+        { "id": "B", "text": "12000-8100-3400-880-620" },
+        { "id": "C", "text": "620-880-3400-8100-12000" },
+        { "id": "D", "text": "3400-620-880-8100-12000" }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "To optimize an AND query, operands should always be evaluated in ascending order of their Document Frequency (DF). This shrinks the intermediate result set as quickly as possible. The sorted order is 620, 880, 3400, 8100, 12000.",
+      "tags": ["query-optimization", "boolean", "document-frequency"]
+    },
+    {
+      "id": "q6",
+      "type": "single_choice",
+      "topic": "Query Optimization",
+      "subtopic": "Skip Pointers",
+      "difficulty": "hard",
+      "questionMd": "During an AND merge with skip pointers, under what condition should the pointer in list $P_1$ jump to the skip target rather than stepping forward by one?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "When the value at the skip target position in $P_1$ is strictly less than the current value in $P_2$" },
+        { "id": "B", "text": "When the value at the skip target position in $P_1$ is less than or equal to the current value in $P_2$" },
+        { "id": "C", "text": "When the current value in $P_1$ is greater than the current value in $P_2$" },
+        { "id": "D", "text": "When the skip target is within $\\lfloor\\sqrt{p}\\rfloor$ positions of the current index in $P_1$" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "A skip is only safe if it doesn't overshoot the target document ID. Therefore, $P_1$ can safely jump to the skip target if the document ID at the skip target is less than or equal to the document ID currently being pointed to in $P_2$.",
+      "tags": ["skip-pointers", "algorithm", "merge"]
+    },
+    {
+      "id": "q7",
+      "type": "single_choice",
+      "topic": "Boolean Retrieval",
+      "subtopic": "NOT Operator",
+      "difficulty": "medium",
+      "questionMd": "Why is leading a query with a NOT operation alone considered poor practice?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "It requires scanning the entire corpus to find all document IDs not in the negated list" },
+        { "id": "B", "text": "It produces the same result as an AND query but takes longer to parse" },
+        { "id": "C", "text": "It requires building a secondary inverted index from scratch at query time" },
+        { "id": "D", "text": "It can only be applied after an OR merge has been completed" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "A pure NOT query (e.g., `NOT apple`) conceptually means returning every document in the universe except those containing 'apple'. This forces the system to load the entire dictionary and all documents, which is computationally unfeasible.",
+      "tags": ["boolean", "not-operator", "performance"]
+    },
+    {
+      "id": "q8",
+      "type": "single_choice",
+      "topic": "Query Optimization",
+      "subtopic": "Skip Pointers",
+      "difficulty": "medium",
+      "questionMd": "When the two postings lists being merged with skip pointers have approximately equal lengths, what effect do skip pointers have on performance?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "The merge terminates earlier than the naive case because both lists can skip simultaneously" },
+        { "id": "B", "text": "Skip pointers have no effect at all because they are only stored for lists longer than 10,000 entries" },
+        { "id": "C", "text": "Skip pointers provide the largest speedup because both lists benefit equally from jumping ahead" },
+        { "id": "D", "text": "The overhead of checking skip conditions at each step can make performance marginally worse than the naive merge" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "Skip pointers are only beneficial when one list can skip over large portions of another. If the lists are dense and similarly sized, the algorithm rarely skips, meaning the CPU cycles spent checking if a skip is valid are wasted, causing a slight performance drop.",
+      "tags": ["skip-pointers", "performance", "tradeoffs"]
+    },
+    {
+      "id": "q9",
+      "type": "single_choice",
+      "topic": "Boolean Retrieval",
+      "subtopic": "Merge Algorithms",
+      "difficulty": "easy",
+      "questionMd": "During a two-pointer AND merge, when the values at both pointers are equal, which pointers should be advanced?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Only the pointer into the first list" },
+        { "id": "B", "text": "Both pointers must be advanced" },
+        { "id": "C", "text": "Only the pointer into the shorter list" },
+        { "id": "D", "text": "The pointer into the list with the larger next value" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "In an AND intersection, when both pointers point to the same document ID, you record that ID as a match. Because neither list will contain that ID again (sets are unique), both pointers must be incremented to check the next IDs.",
+      "tags": ["boolean", "merge", "algorithm"]
+    },
+    {
+      "id": "q10",
+      "type": "single_choice",
+      "topic": "Wildcard Queries",
+      "subtopic": "Permuterm Index",
+      "difficulty": "easy",
+      "questionMd": "Compared to the original forward dictionary, approximately how much larger does the permuterm index grow?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Roughly 10 times larger" },
+        { "id": "B", "text": "The same size, since rotations are stored as pointers rather than full strings" },
+        { "id": "C", "text": "Roughly 4 to 5 times larger" },
+        { "id": "D", "text": "Roughly 2 times larger" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "A permuterm index stores every possible circular rotation of a word. A typical English word length yields many rotations, and literature generally asserts the dictionary size inflates by roughly a factor of 10.",
+      "tags": ["permuterm-index", "wildcards", "storage"]
+    },
+    {
+      "id": "q11",
+      "type": "single_choice",
+      "topic": "Boolean Retrieval",
+      "subtopic": "Query Parsing",
+      "difficulty": "medium",
+      "questionMd": "In the Boolean retrieval model, which operator precedence order is correct when no parentheses are used?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "NOT is evaluated first, then AND, then OR" },
+        { "id": "B", "text": "AND is evaluated first, then NOT, then OR" },
+        { "id": "C", "text": "NOT and AND share equal precedence and are evaluated before OR" },
+        { "id": "D", "text": "OR is evaluated first, then AND, then NOT" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "Standard Boolean logic precedence generally dictates that NOT has the highest precedence (evaluated first), followed by AND, and finally OR has the lowest precedence.",
+      "tags": ["boolean", "operators", "precedence"]
+    },
+    {
+      "id": "q12",
+      "type": "single_choice",
+      "topic": "Spelling Correction",
+      "subtopic": "Phonetics",
+      "difficulty": "easy",
+      "questionMd": "The Soundex algorithm is best described as a tool designed for which specific purpose?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Phonetic matching of proper names by encoding names that sound similar to the same code" },
+        { "id": "B", "text": "Ranking spelling correction candidates by their edit distance from a misspelled query" },
+        { "id": "C", "text": "General-purpose spelling correction for any English vocabulary term" },
+        { "id": "D", "text": "Wildcard query resolution by hashing vocabulary terms into fixed-length codes" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "Soundex is specifically a phonetic algorithm meant to group words (originally proper nouns and surnames) that sound alike but are spelled differently (e.g., Smith vs. Smyth).",
+      "tags": ["soundex", "phonetics", "spelling"]
+    },
+    {
+      "id": "q13",
+      "type": "single_choice",
+      "topic": "Wildcard Queries",
+      "subtopic": "k-gram Index",
+      "difficulty": "easy",
+      "questionMd": "When building a k-gram index for general English text information retrieval, which value of k is described as the recommended tradeoff between index size and retrieval precision?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "1" },
+        { "id": "B", "text": "2" },
+        { "id": "C", "text": "3" },
+        { "id": "D", "text": "4" }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "In general IR literature, a 3-gram (trigram) is recommended for English as it provides enough specificity to reduce false positives without creating an overly bloated index, representing the optimal tradeoff point.",
+      "tags": ["k-gram", "wildcards", "optimization"]
+    },
+    {
+      "id": "q14",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Boolean Retrieval",
+      "difficulty": "easy",
+      "questionMd": "In the Boolean retrieval model, what does a query return?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "A ranked list of documents sorted by relevance score" },
+        { "id": "B", "text": "A probability distribution over matching documents" },
+        { "id": "C", "text": "A set of document IDs sorted by term frequency" },
+        { "id": "D", "text": "A set of document IDs with no ordering or relevance scores" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "The Boolean model is strictly binary: a document either matches the query perfectly, or it doesn't. It does not compute partial matches, ranks, or scores. It simply returns an unranked set of matching document IDs.",
+      "tags": ["boolean", "retrieval-models", "concept"]
+    },
+    {
+      "id": "q15",
+      "type": "single_choice",
+      "topic": "Wildcard Queries",
+      "subtopic": "Permuterm Index",
+      "difficulty": "medium",
+      "questionMd": "Using a permuterm index, how is the wildcard query \"*tion\" translated before performing a dictionary lookup?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "It is reversed to noit and a suffix scan is performed on the dictionary" },
+        { "id": "B", "text": "It is decomposed into k-grams and an intersection query is run against the k-gram index" },
+        { "id": "C", "text": "It is padded to stions and an exact match is performed in the permuterm dictionary" },
+        { "id": "D", "text": "It is rotated to tion$ and then a prefix lookup is performed on tion$" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "To handle a wildcard query in a permuterm index, an end-of-word symbol `$` is appended (resulting in `*tion$`). Then, the term is rotated so the wildcard `*` is at the end (resulting in `tion$*`). The system then performs a standard prefix lookup on `tion$`.",
+      "tags": ["wildcards", "permuterm-index", "queries"]
+    },
+    {
+      "id": "q16",
+      "type": "single_choice",
+      "topic": "Phrase Queries",
+      "subtopic": "Positional Indexes",
+      "difficulty": "easy",
+      "questionMd": "In the positional index approach to phrase queries, what is the role of the first phase?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "It verifies that query terms appear at consecutive positions in each document" },
+        { "id": "B", "text": "It resolves wildcard patterns into concrete vocabulary terms using the k-gram index" },
+        { "id": "C", "text": "It applies Jaccard similarity to rank candidate documents by term overlap" },
+        { "id": "D", "text": "It uses an AND merge to produce a candidate set of documents containing all query terms" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "Checking positions is computationally expensive. Therefore, the first step is always to perform a fast Boolean AND merge to retrieve only the subset of documents that contain all the target words before analyzing their exact positions.",
+      "tags": ["phrase-queries", "positional-index", "optimization"]
+    },
+    {
+      "id": "q17",
+      "type": "single_choice",
+      "topic": "Phrase Queries",
+      "subtopic": "Concepts",
+      "difficulty": "easy",
+      "questionMd": "Why does the phrase query \"machine learning\" return fewer results than the Boolean query machine AND learning?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "The phrase query automatically removes stop words, reducing the candidate set before merging" },
+        { "id": "B", "text": "The phrase query restricts matching to document titles, whereas the Boolean AND searches the full text" },
+        { "id": "C", "text": "The phrase query additionally requires the two terms to appear consecutively in the correct order within a document" },
+        { "id": "D", "text": "The phrase query applies a Jaccard similarity threshold that the Boolean AND does not use" }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "A Boolean AND query matches a document if both words appear anywhere in the text, independent of position. A phrase query is far stricter, demanding exact proximity and ordering.",
+      "tags": ["phrase-queries", "boolean", "comparison"]
+    },
+    {
+      "id": "q18",
+      "type": "single_choice",
+      "topic": "Spelling Correction",
+      "subtopic": "Soundex",
+      "difficulty": "medium",
+      "questionMd": "In the Soundex phonetic encoding algorithm, how are vowels treated after the initial letter is recorded?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Vowels are removed entirely and do not contribute a digit code" },
+        { "id": "B", "text": "Vowels are each assigned the digit code 0 and retained in the output" },
+        { "id": "C", "text": "Vowels cause the adjacent consonant codes to be doubled in the output" },
+        { "id": "D", "text": "Vowels are treated identically to the consonants that immediately follow them" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "After keeping the first letter, Soundex drops all vowels (A, E, I, O, U) as well as H, W, and Y, to collapse phonetic variations into standard consonant-driven codes.",
+      "tags": ["soundex", "phonetics", "algorithms"]
+    },
+    {
+      "id": "q19",
+      "type": "single_choice",
+      "topic": "Wildcard Queries",
+      "subtopic": "k-gram Calculation",
+      "difficulty": "hard",
+      "questionMd": "What is the correct set of 3-grams (with boundary markers) for the vocabulary term \"query\"?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "($qu, que, uer, ery)" },
+        { "id": "B", "text": "($qu, que, uer, ery, ry$)" },
+        { "id": "C", "text": "($qu, que, uer, ry$)" },
+        { "id": "D", "text": "(qu, que, uer, ery, ry)" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "First, append boundary markers: `$query$`. Then extract sliding sequences of 3 characters: `$qu`, `que`, `uer`, `ery`, `ry$`.",
+      "tags": ["k-gram", "wildcards", "string-manipulation"]
+    },
+    {
+      "id": "q20",
+      "type": "single_choice",
+      "topic": "Boolean Retrieval",
+      "subtopic": "Time Complexity",
+      "difficulty": "medium",
+      "questionMd": "The two-pointer AND merge achieves $O(m+n)$ time complexity only because of one crucial property of postings lists. What is that property?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Postings lists are stored in sorted order of document ID" },
+        { "id": "B", "text": "Postings lists use variable-byte encoded gaps between document IDs" },
+        { "id": "C", "text": "Postings lists contain positional information for each document" },
+        { "id": "D", "text": "Postings lists are stored in order of decreasing term frequency" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "Because the document IDs are sorted in ascending order, the intersection algorithm can simply walk two pointers linearly through the arrays. If they weren't sorted, checking for intersections would require a far slower $O(m \\times n)$ comparison process.",
+      "tags": ["boolean", "merge", "algorithm"]
+    },
+    {
+      "id": "q21",
+      "type": "single_choice",
+      "topic": "Boolean Retrieval",
+      "subtopic": "Time Complexity",
+      "difficulty": "easy",
+      "questionMd": "Given two sorted postings lists of lengths m and n, what is the time complexity of the two-pointer AND merge algorithm?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "$O(m \\times n)$" },
+        { "id": "B", "text": "$O(n^2)$" },
+        { "id": "C", "text": "$O(m \\log n)$" },
+        { "id": "D", "text": "$O(m + n)$" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "By traversing both pre-sorted lists simultaneously, the maximum number of steps required equals the combined length of the two lists, resulting in linear $O(m+n)$ complexity.",
+      "tags": ["time-complexity", "boolean", "merge"]
+    },
+    {
+      "id": "q22",
+      "type": "single_choice",
+      "topic": "Boolean Retrieval",
+      "subtopic": "Merge Algorithms",
+      "difficulty": "medium",
+      "questionMd": "When two sorted postings lists are merged with OR and both pointers point to the same document ID, what is the correct action?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Emit the document ID twice to reflect it appears in both lists and advance both pointers" },
+        { "id": "B", "text": "Emit the document ID once and advance only the pointer into the shorter list" },
+        { "id": "C", "text": "Skip the document ID entirely because it indicates an AND match, not an OR match" },
+        { "id": "D", "text": "Emit the document ID once and advance both pointers" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "An OR operation is a set union. Sets contain unique elements. Therefore, the common document ID should be emitted exactly once to the result list, and both pointers must advance to continue the merge without getting stuck.",
+      "tags": ["boolean", "merge", "algorithm"]
+    },
+    {
+      "id": "q23",
+      "type": "single_choice",
+      "topic": "Query Optimization",
+      "subtopic": "Skip Pointers",
+      "difficulty": "easy",
+      "questionMd": "What is the recommended skip pointer interval for a postings list of length 400?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "10" },
+        { "id": "B", "text": "20" },
+        { "id": "C", "text": "40" },
+        { "id": "D", "text": "200" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "A standard heuristic dictates the skip frequency should be $\\sqrt{P}$, where $P$ is the length of the list. Since $\\sqrt{400} = 20$, the interval is 20.",
+      "tags": ["skip-pointers", "optimization", "math"]
+    },
+    {
+      "id": "q24",
+      "type": "single_choice",
+      "topic": "Query Optimization",
+      "subtopic": "Execution Order",
+      "difficulty": "medium",
+      "questionMd": "When optimizing a multi-term AND query by sorting operands in order of ascending document frequency, what is the primary benefit?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Skip pointers become unnecessary for the remaining operations" },
+        { "id": "B", "text": "The total number of postings lists loaded into memory is reduced" },
+        { "id": "C", "text": "The OR merge step is eliminated from the query plan" },
+        { "id": "D", "text": "Intermediate result sets shrink fastest when processing begins with the rarest terms" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "By starting intersections with the smallest sets, the size of the intermediate sets shrinks rapidly. Processing a massive set early would consume significant memory and CPU, only for most of it to be discarded later.",
+      "tags": ["query-optimization", "boolean", "document-frequency"]
+    },
+    {
+      "id": "q25",
+      "type": "single_choice",
+      "topic": "Wildcard Queries",
+      "subtopic": "k-gram Index",
+      "difficulty": "medium",
+      "questionMd": "The k-gram index built over vocabulary terms serves two distinct retrieval functions. Which pair correctly identifies both?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Biword index construction and permuterm rotation lookup" },
+        { "id": "B", "text": "Wildcard query resolution and spelling correction candidate retrieval" },
+        { "id": "C", "text": "Phrase query position verification and proximity query distance checking" },
+        { "id": "D", "text": "Query optimization by document frequency and skip pointer construction" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "The k-gram index is a versatile tool used both to resolve wildcards (e.g., finding all words containing 'red') and to rapidly retrieve a wide net of candidate terms that share substrings with a misspelled word for spelling correction.",
+      "tags": ["k-gram", "wildcards", "spelling-correction"]
+    },
+    {
+      "id": "q26",
+      "type": "single_choice",
+      "topic": "Query Optimization",
+      "subtopic": "Skip Pointers",
+      "difficulty": "medium",
+      "questionMd": "Embedding skip pointers into a postings list at index build time introduces which tradeoff?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Postings lists can no longer be gap-encoded because skip targets violate sorted order" },
+        { "id": "B", "text": "The index occupies more storage space in exchange for faster AND merge performance" },
+        { "id": "C", "text": "Compression of postings lists becomes impossible once skip pointers are inserted" },
+        { "id": "D", "text": "The index must be rebuilt from scratch each time a new document is added to the corpus" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "Skip pointers augment the lists with extra data (the target IDs and lengths), inflating the index size on disk. However, this extra storage buys significant execution speed during long AND queries by allowing bypasses.",
+      "tags": ["skip-pointers", "tradeoffs", "optimization"]
+    },
+    {
+      "id": "q27",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Boolean Limitations",
+      "difficulty": "medium",
+      "questionMd": "Which of the following is a fundamental limitation of the Boolean retrieval model?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Query processing time scales quadratically with the number of query terms" },
+        { "id": "B", "text": "A document that satisfies all but one query term is excluded entirely from results" },
+        { "id": "C", "text": "The model cannot support the NOT operator on large corpora" },
+        { "id": "D", "text": "Results cannot be cached because they change with each query" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "Because Boolean logic is rigidly binary (match vs non-match), a document that perfectly satisfies an information need but happens to be missing one specific keyword in an AND query will be brutally omitted. It lacks graded relevance.",
+      "tags": ["boolean", "limitations", "retrieval-models"]
+    },
+    {
+      "id": "q28",
+      "type": "single_choice",
+      "topic": "Spelling Correction",
+      "subtopic": "Pipeline",
+      "difficulty": "medium",
+      "questionMd": "Which sequence correctly describes the three-stage spelling correction pipeline?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Edit distance ranking → Jaccard similarity filtering → k-gram candidate retrieval" },
+        { "id": "B", "text": "K-gram candidate retrieval → edit distance ranking → Jaccard similarity filtering" },
+        { "id": "C", "text": "Jaccard similarity filtering → k-gram candidate retrieval → edit distance ranking" },
+        { "id": "D", "text": "K-gram candidate retrieval → Jaccard similarity filtering → edit distance ranking" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "First, retrieve all candidates sharing k-grams (fast but noisy). Second, filter out the worst matches using Jaccard string similarity (cheap heuristic). Finally, rank the surviving candidates using exact Levenshtein edit distance (expensive but accurate).",
+      "tags": ["spelling-correction", "pipeline", "architecture"]
+    },
+    {
+      "id": "q29",
+      "type": "single_choice",
+      "topic": "Query Optimization",
+      "subtopic": "NOT Operator",
+      "difficulty": "hard",
+      "questionMd": "Which query structure correctly follows the best practice for using the NOT operator?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Apply NOT to the largest postings list to maximize the pruning effect" },
+        { "id": "B", "text": "Replace every NOT operand with an equivalent OR over all other terms" },
+        { "id": "C", "text": "Perform an AND merge first to reduce the candidate set, then apply NOT to the result" },
+        { "id": "D", "text": "Lead the query with NOT to eliminate irrelevant documents before any AND merge" }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "Computing a pure NOT is extremely expensive because it targets the entire universe of documents. The standard best practice is to resolve positive AND/OR constraints first to build a small candidate set, then filter that restricted set using the NOT condition.",
+      "tags": ["boolean", "not-operator", "query-optimization"]
+    },
+    {
+      "id": "q30",
+      "type": "single_choice",
+      "topic": "Spelling Correction",
+      "subtopic": "Jaccard Similarity",
+      "difficulty": "hard",
+      "questionMd": "A spelling corrector using a Jaccard threshold of 0.2 consistently returns no candidates for misspelled words of four characters or fewer. What is the most likely cause?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Short words produce very few k-grams, so Jaccard scores are inherently lower and often fall below the fixed threshold" },
+        { "id": "B", "text": "Edit distance computation fails on short strings because the dynamic programming table is too small" },
+        { "id": "C", "text": "The k-gram index only indexes vocabulary terms of five characters or more by default" },
+        { "id": "D", "text": "Short words are automatically classified as stop words and excluded from the k-gram index" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "Jaccard relies on the ratio of overlap. Short words yield very few k-grams. Even a 1-character typo destroys a large proportion of these k-grams, causing the Jaccard coefficient to drop sharply, often rendering static thresholds (like 0.2) ineffective.",
+      "tags": ["spelling-correction", "jaccard", "k-gram"]
+    },
+    {
+      "id": "q31",
+      "type": "single_choice",
+      "topic": "Phrase Queries",
+      "subtopic": "Positional Relationships",
+      "difficulty": "easy",
+      "questionMd": "For the phrase query \"A B C\" evaluated against a positional index, which position relationship must hold in a matching document?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "A must appear before B, and B must appear before C, with no constraint on the exact gap" },
+        { "id": "B", "text": "A and C must appear at adjacent positions, with B appearing anywhere in the document" },
+        { "id": "C", "text": "A must appear at some position p, B at position $p+1$, and C at position $p+2$" },
+        { "id": "D", "text": "A, B, and C must each appear at least once and their positions must sum to a value below a threshold" }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "A true phrase query demands exact, gapless sequence. If the first term is at position `p`, the next term must be exactly one spot over (`p+1`), and the next exactly one spot after that (`p+2`).",
+      "tags": ["phrase-queries", "positional-index"]
+    },
+    {
+      "id": "q32",
+      "type": "single_choice",
+      "topic": "Phrase Queries",
+      "subtopic": "Proximity",
+      "difficulty": "medium",
+      "questionMd": "A proximity query is written as `term1 /k term2`. Which condition must hold in a candidate document for it to be included in the result?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "The absolute difference between any occurrence position of term1 and any occurrence position of term2 must be at most k" },
+        { "id": "B", "text": "term1 must appear exactly k positions before term2 in every occurrence" },
+        { "id": "C", "text": "The total count of term1 and term2 occurrences in the document must equal k" },
+        { "id": "D", "text": "The terms must appear in the same sentence and within k paragraphs of each other" }
+      ],
+      "correctAnswer": ["A"],
+      "explanationMd": "The proximity operator `/k` specifies a maximum acceptable distance between two terms. They can occur in any order, provided the absolute difference between their positions is less than or equal to `k`.",
+      "tags": ["proximity-queries", "boolean", "positional-index"]
+    },
+    {
+      "id": "q33",
+      "type": "single_choice",
+      "topic": "Spelling Correction",
+      "subtopic": "Edit Distance",
+      "difficulty": "easy",
+      "questionMd": "What is the Levenshtein edit distance between \"information\" and \"informtion\"?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "0" },
+        { "id": "B", "text": "1" },
+        { "id": "C", "text": "2" },
+        { "id": "D", "text": "3" }
+      ],
+      "correctAnswer": ["B"],
+      "explanationMd": "The string \"informtion\" is missing the letter 'a'. It requires exactly one operation (an insertion of 'a') to transform it back to \"information\". Therefore, the edit distance is 1.",
+      "tags": ["edit-distance", "levenshtein", "spelling-correction"]
+    },
+    {
+      "id": "q34",
+      "type": "single_choice",
+      "topic": "Wildcard Queries",
+      "subtopic": "Post-Filtering",
+      "difficulty": "hard",
+      "questionMd": "After intersecting k-gram postings to resolve a wildcard query, why is a mandatory post-filtering step required?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "K-gram postings lists are unsorted, so the intersection result contains duplicate terms" },
+        { "id": "B", "text": "Post-filtering converts k-gram integer IDs back into human-readable vocabulary terms" },
+        { "id": "C", "text": "The k-gram intersection can only retrieve terms from a single partition of the vocabulary at a time" },
+        { "id": "D", "text": "K-gram matching is a necessary but not sufficient condition—candidate terms may not actually match the original wildcard pattern" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "A word might contain all the required k-grams of a query but still fail to match the overall pattern. For example, evaluating 'red*' via k-grams might falsely match the word 'ordered' because it contains 'red', even though it doesn't start with it.",
+      "tags": ["wildcards", "k-gram", "filtering"]
+    },
+    {
+      "id": "q35",
+      "type": "single_choice",
+      "topic": "Query Optimization",
+      "subtopic": "Skip Pointers",
+      "difficulty": "medium",
+      "questionMd": "Under which condition do skip pointers provide the greatest reduction in comparisons during an AND merge?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "When both postings lists have identical length" },
+        { "id": "B", "text": "When the query contains three or more AND operands" },
+        { "id": "C", "text": "When both postings lists contain more than 10,000 entries" },
+        { "id": "D", "text": "When the two postings lists are very unequal in length" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "Skip pointers are designed to fast-forward through blocks of document IDs. This only happens frequently when merging a very short list with a very long list, allowing the shorter list to \"skip\" over huge irrelevant swaths of the longer one.",
+      "tags": ["skip-pointers", "optimization", "merge"]
+    },
+    {
+      "id": "q36",
+      "type": "single_choice",
+      "topic": "Spelling Correction",
+      "subtopic": "Edit Distance",
+      "difficulty": "medium",
+      "questionMd": "Levenshtein edit distance counts the minimum number of operations needed to transform one string into another. Which set of operations does it use?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "Split a string, merge two strings, substitute one character for another" },
+        { "id": "B", "text": "Insert a character, delete a character, transpose two adjacent characters" },
+        { "id": "C", "text": "Substitute one character for another, transpose two adjacent characters, delete a character" },
+        { "id": "D", "text": "Insert a character, delete a character, substitute one character for another" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "Classic Levenshtein distance recognizes exactly three operations: insertion, deletion, and substitution. Transpositions are specifically handled by the modified Damerau-Levenshtein variant.",
+      "tags": ["edit-distance", "levenshtein", "algorithms"]
+    },
+    {
+      "id": "q37",
+      "type": "single_choice",
+      "topic": "Spelling Correction",
+      "subtopic": "Jaccard Similarity",
+      "difficulty": "easy",
+      "questionMd": "Given two k-gram sets A and B, which expression correctly computes their Jaccard similarity?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "$|A \\cap B| / |A|$" },
+        { "id": "B", "text": "$|A \\cup B| / |A \\cap B|$" },
+        { "id": "C", "text": "$|A \\cap B| / |A \\cup B|$" },
+        { "id": "D", "text": "$(|A| + |B|) / |A \\cap B|$" }
+      ],
+      "correctAnswer": ["C"],
+      "explanationMd": "Jaccard similarity evaluates the overlap between two sets. The formula mathematically divides the size of the intersection (shared elements) by the size of the union (total unique elements).",
+      "tags": ["jaccard", "math", "sets"]
+    },
+    {
+      "id": "q38",
+      "type": "single_choice",
+      "topic": "Boolean Retrieval",
+      "subtopic": "OR Merge",
+      "difficulty": "easy",
+      "questionMd": "When performing an OR merge on two sorted postings lists of lengths m and n, which statement correctly describes the size of the result?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "The result is always smaller than both input lists" },
+        { "id": "B", "text": "The result is always exactly $m + n$" },
+        { "id": "C", "text": "The result is always equal to the shorter list's length" },
+        { "id": "D", "text": "The result is always at least as large as the longer of the two input lists" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "An OR query is a set union. At a minimum, the final list will contain every item from the longer list. The final size will be anywhere from $max(m,n)$ (if one list is a subset of the other) up to $m+n$ (if they share no document IDs).",
+      "tags": ["boolean", "merge", "or-operator"]
+    },
+    {
+      "id": "q39",
+      "type": "single_choice",
+      "topic": "Spelling Correction",
+      "subtopic": "Pipeline",
+      "difficulty": "medium",
+      "questionMd": "In the three-stage spelling correction pipeline, what is the primary purpose of the Jaccard similarity filtering stage?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        { "id": "A", "text": "To rank the final correction suggestions by their phonetic similarity to the misspelled word" },
+        { "id": "B", "text": "To build the initial candidate set by finding all vocabulary terms sharing at least one k-gram" },
+        { "id": "C", "text": "To apply context-sensitive correction by comparing candidates against a bigram language model" },
+        { "id": "D", "text": "To eliminate most implausible candidates cheaply before the expensive edit distance computation" }
+      ],
+      "correctAnswer": ["D"],
+      "explanationMd": "Edit distance is computationally heavy. Jaccard is applied as a fast, cheap heuristic filter to severely narrow down a large candidate pool into a manageable handful of likely words before calculating Levenshtein matrices.",
+      "tags": ["spelling-correction", "jaccard", "pipeline"]
+    }
+  ]
+}

@@ -1,0 +1,797 @@
+{
+  "quizId": "Q6-v2",
+  "title": "Q6-v2",
+  "course": "Information Retrieval",
+  "language": "en",
+  "semester": "",
+  "source": "Extracted from user-provided HTML (Quiz 6)",
+  "durationMinutes": 0,
+  "shuffleQuestions": false,
+  "shuffleOptions": false,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "topic": "OpenSearch",
+      "subtopic": "Shard Routing",
+      "difficulty": "medium",
+      "questionMd": "OpenSearch uses the formula `shard_id = hash(document_id) mod num_primary_shards` to decide where to store a document. What is the primary consequence of this routing mechanism?",
+      "codeBlock": "shard_id = hash(document_id) mod num_primary_shards",
+      "codeLanguage": "text",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Changing the number of primary shards after index creation would invalidate all existing routing calculations."
+        },
+        {
+          "id": "B",
+          "text": "Documents are always evenly distributed across shards regardless of dataset size, eliminating hot-spot shards."
+        },
+        {
+          "id": "C",
+          "text": "Two documents with the same content will always land on the same shard because the hash is content-based."
+        },
+        {
+          "id": "D",
+          "text": "Replica shards use a different routing formula so they never store the same document IDs as the primary shard."
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Routing depends directly on `num_primary_shards`. If that value changes, the result of the modulo operation changes too, so previously indexed documents would map to different shard IDs. That would break existing routing assumptions. This is why the number of primary shards is a fundamental part of index design.",
+      "tags": [
+        "opensearch",
+        "routing",
+        "shards",
+        "distributed indexing"
+      ]
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "topic": "Lucene",
+      "subtopic": "Finite State Transducer",
+      "difficulty": "medium",
+      "questionMd": "Lucene uses a Finite State Transducer (FST) as its term dictionary structure. What property makes the FST particularly well-suited for this role?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "It is a compact, memory-efficient graph that supports O(len) prefix and suffix lookups on the sorted term list."
+        },
+        {
+          "id": "B",
+          "text": "It uses a B-tree structure to guarantee O(log n) insertion time when new terms are added to a mutable segment."
+        },
+        {
+          "id": "C",
+          "text": "It stores postings lists in columnar format so that aggregations can be computed without loading all term data into RAM."
+        },
+        {
+          "id": "D",
+          "text": "It is a hash map that maps each term to its document frequency, enabling O(1) IDF lookups during scoring."
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "An FST is effective for a term dictionary because it is **compact** and shares common prefixes efficiently across many terms. That makes it memory efficient while still supporting very fast traversal over a sorted vocabulary. It is not a B-tree, not a hash map, and not a columnar postings structure.",
+      "tags": [
+        "lucene",
+        "fst",
+        "term dictionary",
+        "index structures"
+      ]
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "topic": "OpenSearch",
+      "subtopic": "Replicas and Throughput",
+      "difficulty": "easy",
+      "questionMd": "A system administrator doubles the number of replica shards in an OpenSearch cluster that is under heavy read load. Which outcome is most directly expected?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Indexing latency decreases because replicas process new documents in parallel with the primary."
+        },
+        {
+          "id": "B",
+          "text": "Query relevance scores improve because IDF is now computed using a larger combined document pool."
+        },
+        {
+          "id": "C",
+          "text": "Read throughput increases because more shards can serve search requests concurrently."
+        },
+        {
+          "id": "D",
+          "text": "Write throughput increases because documents are now distributed across more physical locations."
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "Replica shards provide additional searchable copies of the same data. Under heavy read traffic, this increases **read throughput** because more shard copies can answer search requests in parallel. Replicas do not improve BM25 relevance scoring and usually add write overhead rather than increasing write speed.",
+      "tags": [
+        "opensearch",
+        "replicas",
+        "read throughput",
+        "cluster"
+      ]
+    },
+    {
+      "id": "q4",
+      "type": "single_choice",
+      "topic": "Lucene",
+      "subtopic": "Segment Merging",
+      "difficulty": "easy",
+      "questionMd": "Why does OpenSearch periodically merge smaller Lucene segments into larger ones in the background?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Merging segments compresses stored document content, reducing disk storage requirements significantly."
+        },
+        {
+          "id": "B",
+          "text": "Fewer, larger segments reduce the number of files that must be opened and scanned during a query."
+        },
+        {
+          "id": "C",
+          "text": "Merging allows the primary shard count to grow dynamically without requiring a full reindex."
+        },
+        {
+          "id": "D",
+          "text": "The merge process recalculates BM25 scores globally, correcting the IDF discrepancy across shards."
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Too many small Lucene segments increase search overhead, because the engine must consult more files and structures. Merging them into fewer, larger segments reduces that overhead and improves search efficiency. The main point is query performance, not changing shard counts or globally recomputing BM25.",
+      "tags": [
+        "lucene",
+        "segments",
+        "merge",
+        "search efficiency"
+      ]
+    },
+    {
+      "id": "q5",
+      "type": "single_choice",
+      "topic": "OpenSearch",
+      "subtopic": "Mappings and Aggregations",
+      "difficulty": "easy",
+      "questionMd": "A developer wants to build a faceted navigation sidebar that counts how many products belong to each category (for example, `Electronics: 120`, `Clothing: 85`). Which field type should the `category` field use in the OpenSearch mapping?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "`text` with the `english` analyzer, so that category names are stemmed before aggregation."
+        },
+        {
+          "id": "B",
+          "text": "`keyword`, because it stores exact unanalyzed values that can be used in `terms` aggregations."
+        },
+        {
+          "id": "C",
+          "text": "`integer`, because aggregation requires numeric fields to produce accurate bucket counts."
+        },
+        {
+          "id": "D",
+          "text": "`text`, because it supports full-text analysis which enables partial matching of category names."
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Faceted navigation needs **exact category values**, not analyzed text. A `keyword` field preserves the whole value such as `Electronics` and works well with `terms` aggregations. A `text` field is analyzed into tokens for full-text search, which is not appropriate for exact category buckets.",
+      "tags": [
+        "opensearch",
+        "mapping",
+        "keyword",
+        "aggregations",
+        "facets"
+      ]
+    },
+    {
+      "id": "q6",
+      "type": "single_choice",
+      "topic": "OpenSearch",
+      "subtopic": "Mappings",
+      "difficulty": "easy",
+      "questionMd": "In OpenSearch terminology, which abstraction is most analogous to a *schema definition* in a relational database, specifying the field names, data types, and analyzers for stored documents?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "A mapping."
+        },
+        {
+          "id": "B",
+          "text": "An index."
+        },
+        {
+          "id": "C",
+          "text": "A setting."
+        },
+        {
+          "id": "D",
+          "text": "A segment."
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "A **mapping** defines how fields are interpreted in OpenSearch: their names, types, analyzers, and indexing behavior. That makes it the closest equivalent to a relational database schema. An index is more like the broader container, while settings and segments serve different roles.",
+      "tags": [
+        "opensearch",
+        "mapping",
+        "schema",
+        "field types"
+      ]
+    },
+    {
+      "id": "q7",
+      "type": "single_choice",
+      "topic": "OpenSearch Analysis",
+      "subtopic": "Analysis Pipeline",
+      "difficulty": "easy",
+      "questionMd": "In OpenSearch's text analysis pipeline, what is the correct order of processing stages?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Character filters → Token filters → Tokenizer"
+        },
+        {
+          "id": "B",
+          "text": "Character filters → Tokenizer → Token filters"
+        },
+        {
+          "id": "C",
+          "text": "Token filters → Tokenizer → Character filters"
+        },
+        {
+          "id": "D",
+          "text": "Tokenizer → Character filters → Token filters"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "The correct order is:\n\n1. **Character filters** modify the raw input text.\n2. The **tokenizer** splits the text into tokens.\n3. **Token filters** transform those tokens, such as lowercasing or stemming.\n\nThis order matters because token filters operate on tokens, not on raw character streams.",
+      "tags": [
+        "opensearch",
+        "analysis pipeline",
+        "tokenizer",
+        "token filters",
+        "character filters"
+      ]
+    },
+    {
+      "id": "q8",
+      "type": "single_choice",
+      "topic": "Distributed Retrieval",
+      "subtopic": "Shard-Level BM25",
+      "difficulty": "medium",
+      "questionMd": "A rare term appears in only one shard of a 5-shard OpenSearch index. Without any correction, how does this affect BM25 scoring for that term?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "The term is excluded from scoring because OpenSearch requires a term to appear on at least two shards to be indexed."
+        },
+        {
+          "id": "B",
+          "text": "The term is assigned a zero IDF score because the coordinating node cannot find it on all shards simultaneously."
+        },
+        {
+          "id": "C",
+          "text": "The shard containing that term computes an artificially high IDF because its local document count is much smaller than the global total."
+        },
+        {
+          "id": "D",
+          "text": "The term receives a lower-than-global IDF because each shard divides its local IDF by the total number of shards."
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "Without a global correction step, each shard uses **local statistics**. If a rare term appears on only one shard, that shard may compute an **artificially high local IDF**, since its local document pool is much smaller than the full collection. This can distort BM25 scores across shards.",
+      "tags": [
+        "opensearch",
+        "bm25",
+        "shards",
+        "idf",
+        "distributed search"
+      ]
+    },
+    {
+      "id": "q9",
+      "type": "single_choice",
+      "topic": "OpenSearch Analysis",
+      "subtopic": "Analyzer Mismatch",
+      "difficulty": "easy",
+      "questionMd": "A developer indexes documents using the `english` analyzer (which applies Porter stemming), but accidentally uses the `standard` analyzer (no stemming) at query time. What problem will this cause?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Queries will return too many results because the standard analyzer is less selective than the English analyzer."
+        },
+        {
+          "id": "B",
+          "text": "OpenSearch automatically detects the mismatch and applies the index-time analyzer to query terms before searching."
+        },
+        {
+          "id": "C",
+          "text": "BM25 scores will be slightly lower, but all relevant documents will still be retrieved correctly."
+        },
+        {
+          "id": "D",
+          "text": "The query term will not match the stemmed index tokens — for example, `shuttle` will fail to match the stored token `shuttl`."
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "If the index-time analyzer stems a token to something like `shuttl`, but the query-time analyzer leaves the query as `shuttle`, the terms may not match. This is a classic **analysis mismatch** problem, and it can cause relevant documents to be missed entirely.",
+      "tags": [
+        "opensearch",
+        "analyzer mismatch",
+        "stemming",
+        "query analysis"
+      ]
+    },
+    {
+      "id": "q10",
+      "type": "single_choice",
+      "topic": "OpenSearch Cluster",
+      "subtopic": "Coordinating Node",
+      "difficulty": "easy",
+      "questionMd": "In an OpenSearch cluster, which node type is responsible for receiving a client search request, routing it to the appropriate shards, and merging the results before returning them to the client?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "The replica node designated as the query leader for that request."
+        },
+        {
+          "id": "B",
+          "text": "The coordinating node."
+        },
+        {
+          "id": "C",
+          "text": "The primary data node that holds the most shards."
+        },
+        {
+          "id": "D",
+          "text": "The master node."
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "The **coordinating node** receives the request, forwards it to the relevant shards, collects shard responses, merges them, and returns the final result to the client. The master node handles cluster management, not request orchestration.",
+      "tags": [
+        "opensearch",
+        "coordinating node",
+        "cluster",
+        "distributed search"
+      ]
+    },
+    {
+      "id": "q11",
+      "type": "single_choice",
+      "topic": "OpenSearch Query DSL",
+      "subtopic": "Fuzzy Query",
+      "difficulty": "easy",
+      "questionMd": "An OpenSearch query uses `{ \"fuzzy\": { \"title\": { \"value\": \"shudtle\", \"fuzziness\": \"AUTO\" } } }`. Which concept from earlier in the course does this query clause directly implement at the search engine level?",
+      "codeBlock": "{ \"fuzzy\": { \"title\": { \"value\": \"shudtle\", \"fuzziness\": \"AUTO\" } } }",
+      "codeLanguage": "json",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Phonetic similarity hashing, which maps words that sound alike to the same hash bucket for retrieval."
+        },
+        {
+          "id": "B",
+          "text": "Wildcard pattern expansion, which generates all terms matching a prefix or suffix pattern before scoring."
+        },
+        {
+          "id": "C",
+          "text": "Edit distance (Levenshtein distance) based spelling correction."
+        },
+        {
+          "id": "D",
+          "text": "Porter stemming, which normalizes inflected word forms to a common root before index lookup."
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "A fuzzy query implements **edit-distance-based matching**, typically using Levenshtein distance. It allows the search engine to retrieve terms that are close to the input spelling, such as matching `shudtle` to `shuttle`.",
+      "tags": [
+        "opensearch",
+        "fuzzy query",
+        "levenshtein",
+        "edit distance"
+      ]
+    },
+    {
+      "id": "q12",
+      "type": "single_choice",
+      "topic": "OpenSearch Execution",
+      "subtopic": "Fetch Phase",
+      "difficulty": "medium",
+      "questionMd": "In OpenSearch's two-phase query execution model, what does the coordinating node do during the *fetch* phase?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "It broadcasts the query to all shards and waits for each shard to score its local documents."
+        },
+        {
+          "id": "B",
+          "text": "It collects global term statistics from every shard before any scoring takes place."
+        },
+        {
+          "id": "C",
+          "text": "It selects the global top-k documents by merging shard scores, then retrieves from the relevant shards."
+        },
+        {
+          "id": "D",
+          "text": "It writes the query result to a distributed cache so that repeated queries are served without contacting the shards again."
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "In two-phase search, the first phase identifies candidate hits and scores. In the **fetch phase**, the coordinating node determines the global top results and retrieves the actual stored fields or `_source` from the relevant shards for those documents.",
+      "tags": [
+        "opensearch",
+        "fetch phase",
+        "coordinating node",
+        "distributed search"
+      ]
+    },
+    {
+      "id": "q13",
+      "type": "single_choice",
+      "topic": "OpenSearch Query DSL",
+      "subtopic": "Boolean Queries",
+      "difficulty": "easy",
+      "questionMd": "In an OpenSearch `bool` query, which clause excludes matching documents from the result set without contributing to the relevance score of remaining documents?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "`must_not`"
+        },
+        {
+          "id": "B",
+          "text": "`should` with `minimum_should_match` set to 0"
+        },
+        {
+          "id": "C",
+          "text": "`must` with a negated term"
+        },
+        {
+          "id": "D",
+          "text": "`filter`"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "The `must_not` clause is used to **exclude** documents from the results. It removes matching documents but does not add any positive score to the remaining ones. A `filter` restricts matching documents without scoring, but it does not act as a negative exclusion in the same way.",
+      "tags": [
+        "opensearch",
+        "bool query",
+        "must_not",
+        "query dsl"
+      ]
+    },
+    {
+      "id": "q14",
+      "type": "single_choice",
+      "topic": "OpenSearch Query DSL",
+      "subtopic": "Field Boosting",
+      "difficulty": "easy",
+      "questionMd": "An OpenSearch query uses `\"fields\": [\"title^3\", \"body^1\"]` inside a `multi_match` clause. What does the `^3` notation mean for the `title` field?",
+      "codeBlock": "\"fields\": [\"title^3\", \"body^1\"]",
+      "codeLanguage": "json",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "OpenSearch searches the `title` field three times before falling back to the `body` field."
+        },
+        {
+          "id": "B",
+          "text": "The query requires at least three matching terms in the `title` field before the document is considered a candidate."
+        },
+        {
+          "id": "C",
+          "text": "A match in the `title` field contributes three times more to the relevance score than an equivalent match in the `body` field."
+        },
+        {
+          "id": "D",
+          "text": "The `title` field is indexed three times to increase recall for title matches."
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "The `^3` notation is a **field boost**. It means a hit in the `title` field is weighted more strongly than a similar hit in the `body` field. This is commonly used when titles are considered more informative than general document body text.",
+      "tags": [
+        "opensearch",
+        "multi_match",
+        "field boosting",
+        "query dsl"
+      ]
+    },
+    {
+      "id": "q15",
+      "type": "single_choice",
+      "topic": "Lucene",
+      "subtopic": "Segment Updates",
+      "difficulty": "medium",
+      "questionMd": "In Apache Lucene's segment-based architecture, what happens when a document is updated?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "The old document is marked as deleted and the updated version is written as a new entry."
+        },
+        {
+          "id": "B",
+          "text": "The document is moved to a special update buffer that replaces the original segment during the next merge."
+        },
+        {
+          "id": "C",
+          "text": "All segments containing that document are merged immediately to apply the update atomically."
+        },
+        {
+          "id": "D",
+          "text": "The existing segment is opened and the document's fields are overwritten in place."
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Lucene segments are effectively **immutable**. So an update is implemented as **delete plus add**: the old document is marked deleted, and the updated version is indexed as a new document entry.",
+      "tags": [
+        "lucene",
+        "segments",
+        "update",
+        "immutability"
+      ]
+    },
+    {
+      "id": "q16",
+      "type": "single_choice",
+      "topic": "OpenSearch Debugging",
+      "subtopic": "Explain API",
+      "difficulty": "easy",
+      "questionMd": "A search engineer notices that a document is ranked lower than expected. Which OpenSearch tool would help them understand exactly why that document received its specific relevance score?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "The explain API, which returns the per-term BM25 score breakdown for a specific document."
+        },
+        {
+          "id": "B",
+          "text": "The profile API, which identifies which query clause is the bottleneck causing slow response times."
+        },
+        {
+          "id": "C",
+          "text": "The `_analyze` API, which shows how the query string is tokenized by the analyzer before matching."
+        },
+        {
+          "id": "D",
+          "text": "The `_stats` API, which returns index-level statistics including total document count and segment information."
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "The **explain API** is the right tool for score debugging. It shows how a particular query matched a particular document and provides a breakdown of the scoring contributions, including BM25-related components.",
+      "tags": [
+        "opensearch",
+        "explain api",
+        "score debugging",
+        "bm25"
+      ]
+    },
+    {
+      "id": "q17",
+      "type": "single_choice",
+      "topic": "OpenSearch",
+      "subtopic": "Near Real-Time Search",
+      "difficulty": "easy",
+      "questionMd": "A developer indexes a document in OpenSearch and immediately issues a search query but does not find the new document. Which concept best explains this behavior?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Search queries skip the in-memory buffer by design; new documents are invisible until a segment merge completes."
+        },
+        {
+          "id": "B",
+          "text": "Near-real-time search requires a refresh before newly indexed documents become searchable."
+        },
+        {
+          "id": "C",
+          "text": "Documents are only searchable after a full fsync commit, which occurs at most once per minute by default."
+        },
+        {
+          "id": "D",
+          "text": "The document must be replicated to all replica shards before it can appear in search results."
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "OpenSearch is **near real-time**, not instantly real time. Newly indexed documents become searchable after a **refresh**, which opens a new searcher on the latest segment data. A full commit is not required for search visibility.",
+      "tags": [
+        "opensearch",
+        "refresh",
+        "near real-time",
+        "indexing"
+      ]
+    },
+    {
+      "id": "q18",
+      "type": "single_choice",
+      "topic": "OpenSearch Storage",
+      "subtopic": "DocValues",
+      "difficulty": "easy",
+      "questionMd": "Which of the following operations in OpenSearch relies on DocValues rather than the inverted index?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sorting results by a numeric price field and computing aggregation buckets for faceted navigation."
+        },
+        {
+          "id": "B",
+          "text": "Storing the original human-readable content of a document so it can be displayed in search results."
+        },
+        {
+          "id": "C",
+          "text": "Finding all documents that contain the term `laptop` in a full-text search query."
+        },
+        {
+          "id": "D",
+          "text": "Applying a Porter stemmer to tokenize and normalize query terms at search time."
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "DocValues are a **column-oriented storage structure** designed for sorting, aggregations, and scripts over field values. Full-text search uses the inverted index, while original content retrieval usually comes from `_source` or stored fields.",
+      "tags": [
+        "opensearch",
+        "docvalues",
+        "sorting",
+        "aggregations"
+      ]
+    },
+    {
+      "id": "q19",
+      "type": "single_choice",
+      "topic": "OpenSearch Query DSL",
+      "subtopic": "Filter Context",
+      "difficulty": "medium",
+      "questionMd": "A search application needs to find news articles about `space exploration` published after January 1, 2024, ranked by relevance. How should the date constraint be placed in the OpenSearch Query DSL to achieve the best performance?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "In the `filter` clause of a `bool` query, because filter context is cached and does not affect the relevance score."
+        },
+        {
+          "id": "B",
+          "text": "In the `should` clause of a `bool` query, giving a score boost to articles published after the cutoff date."
+        },
+        {
+          "id": "C",
+          "text": "In the `must` clause of a `bool` query, so that it contributes positively to the relevance score for recent articles."
+        },
+        {
+          "id": "D",
+          "text": "As a top-level `range` query outside any `bool` wrapper, since date fields cannot be nested inside compound queries."
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "A date restriction is a **hard constraint**, not a relevance signal. Putting it in the `filter` clause is best because filter context can be optimized and cached, while leaving relevance scoring to the actual text-matching parts of the query.",
+      "tags": [
+        "opensearch",
+        "bool query",
+        "filter context",
+        "range query",
+        "performance"
+      ]
+    },
+    {
+      "id": "q20",
+      "type": "single_choice",
+      "topic": "OpenSearch",
+      "subtopic": "Shard Scaling",
+      "difficulty": "medium",
+      "questionMd": "An OpenSearch index is created with 3 primary shards. After the index goes into production, the team finds that data has grown and they need more shards. What is the correct approach?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Update the index settings at runtime to increase the number of primary shards."
+        },
+        {
+          "id": "B",
+          "text": "Increase the replica count, which automatically redistributes documents across more shards."
+        },
+        {
+          "id": "C",
+          "text": "Create a new index with the desired shard count and reindex all documents into it."
+        },
+        {
+          "id": "D",
+          "text": "Use the Shard Split API to divide each existing primary shard into smaller shards without reindexing."
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "The standard safe approach is to **create a new index** with the desired number of primary shards and **reindex** the documents into it. Primary shard count is a fundamental part of routing, so it is not normally changed dynamically after the index is already in production.",
+      "tags": [
+        "opensearch",
+        "primary shards",
+        "reindex",
+        "scaling"
+      ]
+    }
+  ]
+}

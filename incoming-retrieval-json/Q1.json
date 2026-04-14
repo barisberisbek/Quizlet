@@ -1,0 +1,773 @@
+{
+  "quizId": "information-retrieval-quiz-1",
+  "title": "Information Retrieval Quiz 1",
+  "course": "Information Retrieval",
+  "language": "en",
+  "semester": "",
+  "source": "Compiled from uploaded Quiz 1 PDF and image files",
+  "durationMinutes": 0,
+  "shuffleQuestions": false,
+  "shuffleOptions": false,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "topic": "Information Retrieval Fundamentals",
+      "subtopic": "Vocabulary Mismatch",
+      "difficulty": "medium",
+      "questionMd": "A user searches \"automobile fuel efficiency\" but the most relevant document uses only the phrases \"car gas mileage\" and \"vehicle consumption\". What problem does this scenario illustrate?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "The vocabulary mismatch problem — lexical overlap is zero despite near-identical meaning"
+        },
+        {
+          "id": "B",
+          "text": "The corpus freshness problem — the index has not been updated to include recent terminology"
+        },
+        {
+          "id": "C",
+          "text": "The stopword problem — common function words are masking the discriminating content terms"
+        },
+        {
+          "id": "D",
+          "text": "The precision-recall tradeoff — retrieving more documents lowers average result quality"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "This is a classic **vocabulary mismatch** case. The user's intent and the document's meaning are close, but the exact words differ: `automobile` vs `car`, `fuel efficiency` vs `gas mileage`. A simple lexical matching system may miss the relevant document even though it is semantically appropriate.",
+      "tags": [
+        "information retrieval",
+        "vocabulary mismatch",
+        "semantic matching"
+      ]
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "topic": "Ranking and Scoring",
+      "subtopic": "TF-IDF",
+      "difficulty": "medium",
+      "questionMd": "Document A has 1000 tokens and mentions \"space\" 10 times. Document B has 100 tokens and mentions \"space\" 5 times. Which claim about TF-IDF scoring is correct?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Document B scores higher because its relative term frequency (5%) exceeds Document A's (1%)"
+        },
+        {
+          "id": "B",
+          "text": "Document A scores higher because raw term count always dominates TF-IDF computation"
+        },
+        {
+          "id": "C",
+          "text": "Document A scores higher because a larger document contains more contextual evidence"
+        },
+        {
+          "id": "D",
+          "text": "Both documents receive identical TF-IDF scores because IDF is the same for both"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Under standard normalized term-frequency reasoning, `TF_A = 10/1000 = 0.01` and `TF_B = 5/100 = 0.05`. Since the term is the same in both documents, the **IDF component is shared**, so the higher normalized TF makes **Document B** score higher. Raw count alone does not automatically dominate once document length is considered.",
+      "tags": [
+        "tf-idf",
+        "term frequency",
+        "ranking"
+      ]
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "topic": "Ranking and Scoring",
+      "subtopic": "Inverse Document Frequency",
+      "difficulty": "medium",
+      "questionMd": "Why does a term that appears in every document in a corpus receive an IDF score of zero?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because the logarithm function is undefined when the document frequency equals zero"
+        },
+        {
+          "id": "B",
+          "text": "Because stopword removal deletes the term before the IDF calculation is performed"
+        },
+        {
+          "id": "C",
+          "text": "Because universal terms inflate TF scores and must be cancelled by a negative IDF"
+        },
+        {
+          "id": "D",
+          "text": "Because such a term cannot discriminate between documents and therefore contributes nothing to relevance ranking"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "IDF measures how **informative** or **discriminative** a term is across the collection. If a term appears in every document, then `N / df = 1`, so `log(1) = 0`. That means the term does not help distinguish one document from another, so its IDF is zero.",
+      "tags": [
+        "idf",
+        "document frequency",
+        "retrieval models"
+      ]
+    },
+    {
+      "id": "q4",
+      "type": "single_choice",
+      "topic": "Information Retrieval Fundamentals",
+      "subtopic": "Relevance",
+      "difficulty": "medium",
+      "questionMd": "Which of the following is an accurate characterisation of relevance in information retrieval?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Relevance is a fixed property of a document independent of who is asking"
+        },
+        {
+          "id": "B",
+          "text": "Relevance is graded, subjective, and context-dependent"
+        },
+        {
+          "id": "C",
+          "text": "Two users with identical queries will always agree on which documents are relevant"
+        },
+        {
+          "id": "D",
+          "text": "Relevance is binary and can be determined algorithmically without human input"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "In IR, relevance is not purely objective. It often depends on the **user's task, background, intent, and context**, and it can be **graded** rather than strictly yes/no. Two users can issue the same query but still value different documents.",
+      "tags": [
+        "relevance",
+        "ir fundamentals",
+        "user context"
+      ]
+    },
+    {
+      "id": "q5",
+      "type": "single_choice",
+      "topic": "Indexing and Boolean Retrieval",
+      "subtopic": "Boolean AND",
+      "difficulty": "easy",
+      "questionMd": "Using the inverted index for the three documents below, which document is returned by the Boolean AND query `cat AND sat`?\n\nDoc 0: \"the cat sat on the mat\"\nDoc 1: \"the cat ate the rat\"\nDoc 2: \"the rat sat and ate\"",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Doc 0 and Doc 1"
+        },
+        {
+          "id": "B",
+          "text": "Doc 1 and Doc 2"
+        },
+        {
+          "id": "C",
+          "text": "Doc 0 and Doc 2"
+        },
+        {
+          "id": "D",
+          "text": "Doc 0 only"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "A Boolean `AND` returns only documents containing **both** terms. `cat` appears in Doc 0 and Doc 1, while `sat` appears in Doc 0 and Doc 2. Their intersection is **Doc 0** only.",
+      "tags": [
+        "boolean retrieval",
+        "and query",
+        "inverted index"
+      ]
+    },
+    {
+      "id": "q6",
+      "type": "single_choice",
+      "topic": "Ranking and Scoring",
+      "subtopic": "Term Frequency",
+      "difficulty": "easy",
+      "questionMd": "A document contains 200 tokens, and the term \"orbit\" appears 4 times. What is the Term Frequency (TF) of \"orbit\" in this document?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "4.0"
+        },
+        {
+          "id": "B",
+          "text": "0.02"
+        },
+        {
+          "id": "C",
+          "text": "0.04"
+        },
+        {
+          "id": "D",
+          "text": "0.20"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Using normalized term frequency, `TF = count / total_tokens = 4 / 200 = 0.02`. So the term occupies **2%** of the document.",
+      "tags": [
+        "term frequency",
+        "tf",
+        "text statistics"
+      ]
+    },
+    {
+      "id": "q7",
+      "type": "single_choice",
+      "topic": "Evaluation",
+      "subtopic": "Precision and Recall",
+      "difficulty": "easy",
+      "questionMd": "A retrieval system returns 10 documents in response to a query. Seven of them are relevant. The corpus contains 20 relevant documents in total. What are the precision and recall values?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Precision = 0.35, Recall = 0.7"
+        },
+        {
+          "id": "B",
+          "text": "Precision = 0.7, Recall = 0.35"
+        },
+        {
+          "id": "C",
+          "text": "Precision = 0.7, Recall = 0.7"
+        },
+        {
+          "id": "D",
+          "text": "Precision = 0.35, Recall = 0.35"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Precision is `relevant retrieved / retrieved = 7 / 10 = 0.7`. Recall is `relevant retrieved / all relevant = 7 / 20 = 0.35`. So the system is fairly precise, but it retrieves only a smaller portion of all relevant documents.",
+      "tags": [
+        "precision",
+        "recall",
+        "evaluation metrics"
+      ]
+    },
+    {
+      "id": "q8",
+      "type": "single_choice",
+      "topic": "IR Systems Architecture",
+      "subtopic": "IR Pipeline",
+      "difficulty": "medium",
+      "questionMd": "Which sequence correctly represents the order of the seven stages in the standard IR pipeline introduced in Week 1?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Preprocess → Crawl → Index → Rank → Query Processing → Present → Evaluate"
+        },
+        {
+          "id": "B",
+          "text": "Crawl → Preprocess → Index → Query Processing → Rank → Present → Evaluate"
+        },
+        {
+          "id": "C",
+          "text": "Query Processing → Crawl → Preprocess → Index → Rank → Evaluate → Present"
+        },
+        {
+          "id": "D",
+          "text": "Crawl → Index → Preprocess → Query Processing → Evaluate → Rank → Present"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "A standard IR workflow first **collects documents** (`Crawl`), then **cleans/transforms** them (`Preprocess`), then **builds searchable structures** (`Index`). At query time it performs **Query Processing**, then **Ranking**, then **Presentation**, and finally **Evaluation** assesses system quality.",
+      "tags": [
+        "ir pipeline",
+        "architecture",
+        "search systems"
+      ]
+    },
+    {
+      "id": "q9",
+      "type": "single_choice",
+      "topic": "IR Systems Architecture",
+      "subtopic": "Offline vs Online Processing",
+      "difficulty": "medium",
+      "questionMd": "Crawling, text preprocessing, and index construction are all classified as offline pipeline stages. What is the primary architectural reason for this design choice?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Online stages require specialized hardware that cannot also execute indexing workloads"
+        },
+        {
+          "id": "B",
+          "text": "Offline stages consume too much RAM to run concurrently with live query traffic"
+        },
+        {
+          "id": "C",
+          "text": "Preprocessing must be performed after each user query to reflect the most recent document versions"
+        },
+        {
+          "id": "D",
+          "text": "Building the index in advance allows online query processing to complete within strict millisecond latency budgets"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "The main reason is **latency**. Expensive work such as crawling, tokenizing, normalizing, and indexing is done **before users search**, so the online system can answer queries quickly. Precomputing these structures is what makes low-latency retrieval possible.",
+      "tags": [
+        "offline processing",
+        "online processing",
+        "latency"
+      ]
+    },
+    {
+      "id": "q10",
+      "type": "single_choice",
+      "topic": "Evaluation",
+      "subtopic": "Precision-Recall Tradeoff",
+      "difficulty": "medium",
+      "questionMd": "Expanding a search to retrieve more candidate documents generally increases recall. What is the typical effect on precision?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Precision increases proportionally because a larger result set exposes more relevant documents"
+        },
+        {
+          "id": "B",
+          "text": "Precision is unaffected because it is computed over only the relevant documents retrieved"
+        },
+        {
+          "id": "C",
+          "text": "Precision tends to decrease because more irrelevant documents enter the result set"
+        },
+        {
+          "id": "D",
+          "text": "Precision and recall always move in the same direction under any retrieval strategy"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "When you broaden retrieval, you often capture **more relevant documents**, which helps recall, but you also usually admit **more irrelevant documents**. That lowers the fraction of retrieved documents that are relevant, so precision typically decreases.",
+      "tags": [
+        "precision",
+        "recall",
+        "tradeoff"
+      ]
+    },
+    {
+      "id": "q11",
+      "type": "single_choice",
+      "topic": "Information Retrieval Fundamentals",
+      "subtopic": "IR Triangle Model",
+      "difficulty": "easy",
+      "questionMd": "In the IR triangle model, which concept sits at the centre connecting the query, the document, and the information need?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Vocabulary"
+        },
+        {
+          "id": "B",
+          "text": "Relevance"
+        },
+        {
+          "id": "C",
+          "text": "Ranking"
+        },
+        {
+          "id": "D",
+          "text": "Precision"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "The central concept is **relevance**, because IR is fundamentally about judging how well a document satisfies an information need given a query representation. Query, document, and need are all related through this notion.",
+      "tags": [
+        "ir triangle",
+        "relevance",
+        "fundamentals"
+      ]
+    },
+    {
+      "id": "q12",
+      "type": "single_choice",
+      "topic": "Indexing and Boolean Retrieval",
+      "subtopic": "Postings Lists",
+      "difficulty": "easy",
+      "questionMd": "Given the documents below, which postings list is correct for the term \"cat\"?\n\nDoc 0: \"the cat sat on the mat\"\nDoc 1: \"the cat ate the rat\"\nDoc 2: \"the rat sat and ate\"",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Doc 0 and Doc 2"
+        },
+        {
+          "id": "B",
+          "text": "Doc 1 and Doc 2"
+        },
+        {
+          "id": "C",
+          "text": "Doc 0 and Doc 1"
+        },
+        {
+          "id": "D",
+          "text": "Doc 0, Doc 1, and Doc 2"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "A postings list stores the IDs of documents that contain a term. The word `cat` appears in **Doc 0** and **Doc 1**, but not in **Doc 2**. Therefore the correct postings list is `{0, 1}`.",
+      "tags": [
+        "postings list",
+        "inverted index",
+        "indexing"
+      ]
+    },
+    {
+      "id": "q13",
+      "type": "single_choice",
+      "topic": "IR History",
+      "subtopic": "Cranfield Evaluation",
+      "difficulty": "medium",
+      "questionMd": "Which 1960s development is credited as the first systematic, reproducible evaluation of IR systems, establishing the methodology of using test collections and relevance judgments?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "The launch of MEDLARS at the National Library of Medicine"
+        },
+        {
+          "id": "B",
+          "text": "The Cranfield experiments"
+        },
+        {
+          "id": "C",
+          "text": "The SMART system developed by Salton at Cornell"
+        },
+        {
+          "id": "D",
+          "text": "The introduction of Luhn's automatic keyword extraction"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "The **Cranfield experiments** established the classic evaluation methodology for IR: a document collection, a set of queries, and human relevance judgments. That framework became foundational for later test collections such as TREC.",
+      "tags": [
+        "cranfield",
+        "ir history",
+        "evaluation"
+      ]
+    },
+    {
+      "id": "q14",
+      "type": "single_choice",
+      "topic": "IR Systems Design",
+      "subtopic": "Efficiency vs Effectiveness",
+      "difficulty": "medium",
+      "questionMd": "In IR system design, Boolean retrieval and neural reranking sit at opposite ends of a fundamental tradeoff. Which pair of terms correctly names the two competing goals?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Efficiency (speed and scale) versus effectiveness (accuracy and relevance)"
+        },
+        {
+          "id": "B",
+          "text": "Precision (result quality) versus recall (result completeness)"
+        },
+        {
+          "id": "C",
+          "text": "Offline processing versus online processing"
+        },
+        {
+          "id": "D",
+          "text": "Index compression versus index coverage"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "This tradeoff is about balancing **fast, scalable retrieval** against **higher-quality ranking**. Simpler methods can be very efficient, while more advanced models often improve effectiveness but require more computation.",
+      "tags": [
+        "efficiency",
+        "effectiveness",
+        "system design"
+      ]
+    },
+    {
+      "id": "q15",
+      "type": "single_choice",
+      "topic": "Indexing and Boolean Retrieval",
+      "subtopic": "Boolean OR",
+      "difficulty": "easy",
+      "questionMd": "In Boolean retrieval, an OR query between two terms produces results by applying which set operation to their postings lists?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Set complement — all documents not containing either term"
+        },
+        {
+          "id": "B",
+          "text": "Set union — documents containing either term or both"
+        },
+        {
+          "id": "C",
+          "text": "Set intersection — documents containing both terms simultaneously"
+        },
+        {
+          "id": "D",
+          "text": "Set difference — documents containing the first term but not the second"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "A Boolean `OR` returns documents that contain **at least one** of the two terms. In set language, that is the **union** of the two postings lists.",
+      "tags": [
+        "boolean retrieval",
+        "or query",
+        "set operations"
+      ]
+    },
+    {
+      "id": "q16",
+      "type": "single_choice",
+      "topic": "Search Models",
+      "subtopic": "Database Search vs IR",
+      "difficulty": "medium",
+      "questionMd": "A developer uses `SELECT * FROM papers WHERE abstract LIKE '%heart attack%'` to find cardiology research. What is the most significant limitation of this approach compared to an IR system?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "It returns no results for documents using the synonym \"myocardial infarction\" even though they are equally relevant"
+        },
+        {
+          "id": "B",
+          "text": "It cannot filter results by publication date or author name"
+        },
+        {
+          "id": "C",
+          "text": "It requires a separate full-text parser before the SQL engine can execute"
+        },
+        {
+          "id": "D",
+          "text": "It is slower than an inverted index for corpora with fewer than one million rows"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "A naive SQL `LIKE` pattern relies on **exact surface text**. It does not naturally handle **synonyms** or semantic similarity, so it can miss highly relevant documents that use different wording such as `myocardial infarction` instead of `heart attack`.",
+      "tags": [
+        "sql like",
+        "lexical matching",
+        "synonyms"
+      ]
+    },
+    {
+      "id": "q17",
+      "type": "single_choice",
+      "topic": "Information Retrieval Fundamentals",
+      "subtopic": "Query vs Information Need",
+      "difficulty": "medium",
+      "questionMd": "A student searches for \"flight delays snow\". Their actual need is to understand why winter weather disrupts air travel. What does this example best illustrate?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "A query is always a lossy compression of the underlying information need"
+        },
+        {
+          "id": "B",
+          "text": "Queries and information needs are equivalent when the user is precise"
+        },
+        {
+          "id": "C",
+          "text": "Information needs can be fully captured in two or three words"
+        },
+        {
+          "id": "D",
+          "text": "Search engines require queries to match document text exactly"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "The user's true need is richer than the short query string. A query is often just a **compressed, incomplete proxy** for the underlying information need, which is why IR systems must bridge that gap using ranking, expansion, and semantic matching.",
+      "tags": [
+        "information need",
+        "query formulation",
+        "ir fundamentals"
+      ]
+    },
+    {
+      "id": "q18",
+      "type": "single_choice",
+      "topic": "Information Retrieval Fundamentals",
+      "subtopic": "Definition of IR",
+      "difficulty": "easy",
+      "questionMd": "Which statement most accurately captures the definition of Information Retrieval as a discipline?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Executing structured queries against relational database tables to return exact matching rows"
+        },
+        {
+          "id": "B",
+          "text": "Automatically discovering hidden patterns and clusters across large numerical datasets"
+        },
+        {
+          "id": "C",
+          "text": "Finding relevant information resources from a collection in response to an information need"
+        },
+        {
+          "id": "D",
+          "text": "Annotating natural language text with grammatical and semantic labels for downstream processing"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "Information Retrieval is concerned with finding **relevant resources** for a user's **information need** from a collection. The other options describe neighboring areas such as database querying, data mining, and NLP annotation, but not IR itself.",
+      "tags": [
+        "definition",
+        "information retrieval",
+        "fundamentals"
+      ]
+    },
+    {
+      "id": "q19",
+      "type": "single_choice",
+      "topic": "IR Applications",
+      "subtopic": "Vertical Search",
+      "difficulty": "easy",
+      "questionMd": "PubMed, arXiv, and GitHub Code Search are all examples of which category of IR system?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Conversational IR — answer synthesis rather than ranked document retrieval"
+        },
+        {
+          "id": "B",
+          "text": "Vertical search — domain-specific retrieval over a specialised corpus"
+        },
+        {
+          "id": "C",
+          "text": "Enterprise search — internal document retrieval within an organisation"
+        },
+        {
+          "id": "D",
+          "text": "Multimedia IR — retrieval using images or audio as the query"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "These systems search within a **specialized domain**: biomedical literature, scientific papers, and source code. That makes them examples of **vertical search**, where retrieval is tailored to a focused corpus rather than the whole web.",
+      "tags": [
+        "vertical search",
+        "domain-specific search",
+        "applications"
+      ]
+    },
+    {
+      "id": "q20",
+      "type": "single_choice",
+      "topic": "Ranking and Scoring",
+      "subtopic": "Inverse Document Frequency",
+      "difficulty": "medium",
+      "questionMd": "A corpus contains 1000 documents, and the term \"quasar\" appears in exactly 50 of them. Applying the formula `IDF(t) = log(N / df(t))`, what is the IDF of \"quasar\"?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "log(1000) ≈ 6.9"
+        },
+        {
+          "id": "B",
+          "text": "log(20) ≈ 3.0"
+        },
+        {
+          "id": "C",
+          "text": "log(0.05) ≈ -3.0"
+        },
+        {
+          "id": "D",
+          "text": "log(50) ≈ 3.9"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Substitute into the formula: `N / df = 1000 / 50 = 20`. Therefore `IDF = log(20)`, which is approximately **3.0** when using the natural logarithm. The key step is computing the ratio `N / df`, not `df / N`.",
+      "tags": [
+        "idf",
+        "logarithm",
+        "tf-idf"
+      ]
+    }
+  ]
+}

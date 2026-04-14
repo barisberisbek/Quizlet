@@ -1,0 +1,1519 @@
+{
+  "meta": {
+    "id": "irs-new-mix-merged",
+    "title": "[IRS] New Mix Questions",
+    "description": "A collection of Information Retrieval Systems exam questions.",
+    "source": "IRS Past Exams",
+    "course": "Information Retrieval Systems",
+    "topic": "BM25",
+    "topics": [
+      "BM25",
+      "BM25 and TF Weighting",
+      "Boolean Retrieval",
+      "Evaluation",
+      "IDF",
+      "Index Compression",
+      "Index Construction",
+      "OpenSearch",
+      "Probabilistic Retrieval",
+      "Ranking and Scoring",
+      "Retrieval Models",
+      "SMART Notation",
+      "Statistical Properties of Text",
+      "Term Frequency",
+      "Text Preprocessing",
+      "Vector Space Model"
+    ],
+    "questionCount": 33,
+    "difficulty": "medium",
+    "estimatedMinutes": 50,
+    "tags": [
+      "irs",
+      "new-mix",
+      "merged"
+    ],
+    "fileName": "irs-new-mix-merged.json"
+  },
+  "questions": [
+    {
+      "id": "new-mix-irs-001",
+      "type": "single_choice",
+      "topic": "Ranking and Scoring",
+      "subtopic": "Inverse Document Frequency",
+      "difficulty": "medium",
+      "questionMd": "A corpus contains 1000 documents, and the term \"quasar\" appears in exactly 50 of them. Applying the formula `IDF(t) = log(N / df(t))`, what is the IDF of \"quasar\"?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "log(1000) ≈ 6.9"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "log(20) ≈ 3.0"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "log(0.05) ≈ -3.0"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "log(50) ≈ 3.9"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Substitute into the formula: `N / df = 1000 / 50 = 20`. Therefore `IDF = log(20)`, which is approximately **3.0** when using the natural logarithm. The key step is computing the ratio `N / df`, not `df / N`.",
+      "tags": [
+        "idf",
+        "logarithm",
+        "tf-idf"
+      ],
+      "sourceRefs": [
+        "new-mix.json",
+        "Q1.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "new-mix-irs-002",
+      "type": "single_choice",
+      "topic": "BM25",
+      "subtopic": "Document Length Normalization",
+      "difficulty": "medium",
+      "questionMd": "How does BM25's approach to document length normalization differ from the cosine-based L2 normalization used in the Vector Space Model?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "BM25 normalizes by the document's maximum term frequency, while L2 normalization normalizes by the sum of all term frequencies"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "BM25 applies per-term length normalization controlled by the parameter b"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "BM25 applies length normalization only to query terms, whereas L2 normalization is applied only to document vectors"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "BM25 removes length normalization entirely, relying solely on TF saturation to control the influence of document length"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "BM25 uses a **document-length normalization factor** inside its scoring formula, controlled by the parameter `b` and relative to `avgdl`. L2 normalization in the Vector Space Model instead rescales the **entire vector** to unit length. So BM25 and cosine normalization both address length effects, but they do so in **different mathematical ways**.",
+      "tags": [
+        "bm25",
+        "length normalization",
+        "vector space model"
+      ],
+      "sourceRefs": [
+        "new-mix.json",
+        "Q4.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "new-mix-irs-003",
+      "type": "single_choice",
+      "topic": "Probabilistic Retrieval",
+      "subtopic": "Binary Independence Model",
+      "difficulty": "medium",
+      "questionMd": "What simplifying assumption does the Binary Independence Model (BIM) make about query terms when estimating the probability that a document is relevant?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Terms are assumed to appear the same number of times in every relevant document in the collection"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Terms are assumed to be statistically independent of one another given the relevance status of the document"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Terms are assumed to have equal document frequency across the entire collection"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Terms are assumed to be ranked by their IDF value before any probability estimation is performed"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "The **Binary Independence Model** assumes that query terms are conditionally independent given relevance or non-relevance. This assumption makes the probability model tractable and is one of the foundations behind probabilistic IR and BM25-style reasoning.",
+      "tags": [
+        "bim",
+        "probabilistic ir",
+        "independence assumption"
+      ],
+      "sourceRefs": [
+        "new-mix.json",
+        "Q4.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "new-mix-irs-004",
+      "type": "single_choice",
+      "topic": "BM25",
+      "subtopic": "Adoption in Search Engines",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture notes, in which of the following systems has BM25 been the default scorer?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The TREC evaluation framework as the only permitted baseline for ad-hoc retrieval tracks"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Elasticsearch and OpenSearch since version 5.0, and Lucene since version 6.0"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The Google PageRank algorithm as its primary term-matching component since 2010"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Apache Spark MLlib and scikit-learn since their initial releases"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "BM25 became the default ranking function in major Lucene-based search systems. The key point is that **Lucene and systems built on it adopted BM25 as the standard lexical scorer**, replacing older defaults such as classic TF-IDF similarity.",
+      "tags": [
+        "bm25",
+        "lucene",
+        "elasticsearch",
+        "opensearch"
+      ],
+      "sourceRefs": [
+        "new-mix.json",
+        "Q4.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "new-mix-irs-005",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Theoretical Foundations",
+      "difficulty": "medium",
+      "questionMd": "Which statement correctly describes a key theoretical difference between BM25 and TF-IDF with cosine similarity?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Both BM25 and TF-IDF are derived from the Binary Independence Model but differ only in their length normalization"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "TF-IDF is derived from the Probability Ranking Principle, while BM25 is an empirical approximation with no theoretical basis"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "BM25 is derived from the Binary Independence Model and the Probability Ranking Principle, while TF-IDF is a heuristic weighting scheme"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "BM25 is a purely heuristic method, while TF-IDF has a formal probabilistic derivation from the Robertson-Sparck Jones weight"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "BM25 has a **probabilistic motivation** connected to the Binary Independence Model and Probability Ranking Principle. By contrast, TF-IDF is mainly a **heuristic weighting family** rather than a single formally derived probabilistic model.",
+      "tags": [
+        "bm25",
+        "tf-idf",
+        "prp",
+        "bim"
+      ],
+      "sourceRefs": [
+        "new-mix.json",
+        "Q4.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "new-mix-irs-006",
+      "type": "single_choice",
+      "topic": "IDF",
+      "subtopic": "Probabilistic IDF Limitation",
+      "difficulty": "medium",
+      "questionMd": "Which of the following is a known limitation of the probabilistic IDF formula `log((N - df) / df)` as noted in the lecture?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The formula cannot be computed when the document frequency is greater than 1"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The formula doubles the IDF value of any term whose document frequency exceeds N/2"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The formula always returns the same value regardless of the collection size N"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The formula can produce negative values, requiring careful handling in implementations"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "If `df > N/2`, then `(N - df) / df < 1`, and the logarithm becomes **negative**. That is a known practical issue with this probabilistic form of IDF and motivates smoothing or clipping strategies in implementations.",
+      "tags": [
+        "idf",
+        "probabilistic idf",
+        "log weighting"
+      ],
+      "sourceRefs": [
+        "new-mix.json",
+        "Q4.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "new-mix-irs-007",
+      "type": "single_choice",
+      "topic": "Vector Space Model",
+      "subtopic": "L2 Normalization",
+      "difficulty": "easy",
+      "questionMd": "After L2 normalization is applied to all document vectors in the Vector Space Model, what geometric property do all normalized document vectors share?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "All normalized document vectors have the same direction as the query vector for the collection's most common query"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "All normalized document vectors become orthogonal to one another, eliminating redundant documents"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "All normalized document vectors are projected onto a two-dimensional plane to enable fast ranking"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "All normalized document vectors lie on the unit sphere, meaning their Euclidean norm equals 1"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "L2 normalization divides each vector by its Euclidean norm. As a result, every normalized vector has **length 1**, so all such vectors lie on the **unit sphere** in vector space.",
+      "tags": [
+        "l2 normalization",
+        "vector space model",
+        "geometry"
+      ],
+      "sourceRefs": [
+        "new-mix.json",
+        "Q4.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "new-mix-irs-008",
+      "type": "single_choice",
+      "topic": "SMART Notation",
+      "subtopic": "Augmented TF",
+      "difficulty": "medium",
+      "questionMd": "In the SMART notation table, the augmented TF variant (symbol `a`) is defined as which of the following?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "tf / (tf + max_tf(d))"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "0.5 + 0.5 * tf / max_tf(d)"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "1 + log(tf / max_tf(d))"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "0.5 * log(tf) + 0.5 * max_tf(d)"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "The SMART **augmented TF** rescales term frequency relative to the document's maximum term frequency: `0.5 + 0.5 * tf / max_tf(d)`. This keeps weights in a moderate range and reduces the dominance of raw counts.",
+      "tags": [
+        "smart notation",
+        "augmented tf",
+        "weighting"
+      ],
+      "sourceRefs": [
+        "new-mix.json",
+        "Q4.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "new-mix-irs-009",
+      "type": "single_choice",
+      "topic": "BM25 and TF Weighting",
+      "subtopic": "TF Saturation",
+      "difficulty": "easy",
+      "questionMd": "Which statement best captures the concept of TF saturation as modeled by BM25 and log-TF?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "TF saturation increases the weight of the first occurrence of a term and sets all subsequent occurrences to zero"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "TF saturation means that once a term appears more than `k1` times, it is completely ignored in scoring"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Each additional occurrence of a term contributes equally to the relevance score regardless of how many times it has already appeared"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Each additional occurrence of a term contributes progressively less to the relevance score"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "TF saturation means there are **diminishing returns**. The first few occurrences of a term usually matter more than later repetitions, so BM25 and log-TF both dampen the gain from very large raw term counts.",
+      "tags": [
+        "tf saturation",
+        "bm25",
+        "log tf"
+      ],
+      "sourceRefs": [
+        "new-mix.json",
+        "Q4.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "new-mix-irs-010",
+      "type": "single_choice",
+      "topic": "BM25",
+      "subtopic": "TF Saturation Function",
+      "difficulty": "medium",
+      "questionMd": "As the raw term frequency `tf` in a document increases toward infinity, what value does the BM25 TF saturation function `tf * (k1 + 1) / (tf + k1)` approach?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The value `k1`, which acts as a hard ceiling on TF contributions"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The value `tf`, meaning the saturation function converges back to raw TF at very high counts"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The value `1`, because the saturation function is normalized to the range [0, 1]"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The value `k1 + 1`, which is the asymptotic maximum that the saturation function never exceeds"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "For very large `tf`, the highest-degree terms dominate and the fraction approaches `k1 + 1`. So the BM25 TF component has a **finite asymptote**, which is how it enforces saturation.",
+      "tags": [
+        "bm25",
+        "tf saturation",
+        "asymptote"
+      ],
+      "sourceRefs": [
+        "new-mix.json",
+        "Q4.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "new-mix-irs-011",
+      "type": "single_choice",
+      "topic": "Term Frequency",
+      "subtopic": "Length Bias",
+      "difficulty": "easy",
+      "questionMd": "Why is raw term frequency (TF) considered a biased signal when comparing documents of different lengths?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Raw TF values become negative for very high-frequency terms"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Longer documents tend to accumulate higher raw TF values"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Raw TF counts cannot be stored in an inverted index"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Raw TF ignores whether a term appears in the query at all"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Longer documents naturally have more opportunities to repeat a term, so raw TF can unfairly favor them. This is why many weighting schemes normalize or damp TF before using it in ranking.",
+      "tags": [
+        "term frequency",
+        "length bias",
+        "normalization"
+      ],
+      "sourceRefs": [
+        "new-mix.json",
+        "Q4.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "new-mix-irs-012",
+      "type": "single_choice",
+      "topic": "IDF",
+      "subtopic": "Standard Formula",
+      "difficulty": "easy",
+      "questionMd": "Using the standard IDF formula taught in lecture, how is `IDF(t)` computed for a term `t` given a collection of `N` documents where it appears in `df(t)` of them?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "log(df(t) / N)"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "N / df(t)"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "log(N / df(t))"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "log(N + df(t))"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "The standard IDF idea is to compare the total number of documents `N` with the number containing the term `df(t)`. That gives `IDF(t) = log(N / df(t))`, which increases as the term becomes rarer.",
+      "tags": [
+        "idf",
+        "formula",
+        "tf-idf"
+      ],
+      "sourceRefs": [
+        "new-mix.json",
+        "Q4.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "new-mix-irs-013",
+      "type": "single_choice",
+      "topic": "Boolean Retrieval",
+      "subtopic": "Motivation for Ranked Retrieval",
+      "difficulty": "medium",
+      "questionMd": "Which of the following is a fundamental limitation of Boolean retrieval that motivates the move to ranked retrieval?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Boolean retrieval cannot use an inverted index to look up postings lists"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Boolean retrieval requires all query terms to be stemmed before matching"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Boolean retrieval is unable to handle OR operators between query terms"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "A document matching 3 out of 4 query terms is assumed no better than a document matching 0 terms"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Boolean retrieval makes **hard yes/no decisions**. Without ranking, it cannot express that one document is *almost* a match while another is completely irrelevant. That inability to capture **partial matching quality** is a major reason ranked retrieval became standard.",
+      "tags": [
+        "boolean retrieval",
+        "ranked retrieval",
+        "partial matching"
+      ],
+      "sourceRefs": [
+        "new-mix.json",
+        "Q4.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "new-mix-irs-014",
+      "type": "single_choice",
+      "topic": "Vector Space Model",
+      "subtopic": "Cosine Formula",
+      "difficulty": "easy",
+      "questionMd": "Which expression correctly gives the cosine similarity between document vector `d` and query vector `q`?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "||d|| * ||q|| / (d · q)"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "(d · q) / (||d|| + ||q||)"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "(d · q) / (||d|| * ||q||)"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "(d · q)^2 / (||d|| * ||q||)"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Cosine similarity is the **dot product divided by the product of vector norms**. This makes the score depend on the angle between the vectors rather than their raw magnitudes.",
+      "tags": [
+        "cosine similarity",
+        "formula",
+        "vector space model"
+      ],
+      "sourceRefs": [
+        "new-mix.json",
+        "Q4.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "new-mix-irs-015",
+      "type": "single_choice",
+      "topic": "BM25",
+      "subtopic": "Length Normalization Example",
+      "difficulty": "medium",
+      "questionMd": "According to the length-normalization worked example in the lecture notes, when two documents contain a query term the same number of times but differ in length, how does BM25 treat the shorter document?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The shorter document is excluded from ranking because BM25 requires a minimum document length relative to `avgdl`"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The shorter document receives a lower TF saturation score because BM25 penalizes documents with few total tokens"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Both documents receive identical TF saturation scores because BM25 only compares document length to `k1`, not to `avgdl`"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The shorter document receives a higher TF saturation score because its length is below average, signaling greater topical focus"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "BM25 rewards term occurrences **more strongly in shorter documents** when all else is equal, because the same number of matches in fewer tokens suggests greater topical concentration. This is one of the main effects of BM25's document-length normalization.",
+      "tags": [
+        "bm25",
+        "length normalization",
+        "avgdl"
+      ],
+      "sourceRefs": [
+        "new-mix.json",
+        "Q4.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "new-mix-irs-016",
+      "type": "single_choice",
+      "topic": "OpenSearch",
+      "subtopic": "Mappings and Aggregations",
+      "difficulty": "easy",
+      "questionMd": "A developer wants to build a faceted navigation sidebar that counts how many products belong to each category (e.g., \"Electronics: 120\", \"Clothing: 85\"). Which field type should the `category` field use in the OpenSearch mapping?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "integer, because aggregation requires numeric fields to produce accurate bucket counts"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "text, because it supports full-text analysis which enables partial matching of category names"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "text with the english analyzer, so that category names are stemmed before aggregation"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "keyword, because it stores exact unanalyzed values that can be used in terms aggregations"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Faceted navigation usually needs **exact bucket labels**, not analyzed text. A `keyword` field preserves the original category value such as `Electronics` or `Clothing`, so OpenSearch can count exact matches in a **terms aggregation**. A `text` field would be analyzed into tokens, which is useful for full-text search but not for exact category buckets.",
+      "tags": [
+        "opensearch",
+        "mapping",
+        "keyword",
+        "aggregations",
+        "faceted navigation"
+      ],
+      "sourceRefs": [
+        "new-mix.json",
+        "Q6.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "new-mix-irs-017",
+      "type": "single_choice",
+      "topic": "Index Compression",
+      "subtopic": "Gap Encoding and VB Encoding",
+      "difficulty": "medium",
+      "questionMd": "Why do high-frequency terms with large document frequency achieve better compression ratios than rare terms when gap encoding is combined with variable-byte encoding?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "High-frequency terms are processed first by SPIMI, so their postings lists are already sorted"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "High-frequency terms appear in many documents, producing smaller average gaps that fit in fewer VB bytes"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "High-frequency terms have shorter string representations in the dictionary, reducing total index size"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "High-frequency terms benefit from front-coding in the dictionary, independently of the postings lists"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Gap encoding stores differences between adjacent docIDs. When a term appears in many documents, those gaps tend to be smaller on average, and **small integers need fewer bytes** under variable-byte encoding. That is why frequent terms often compress better in postings lists.",
+      "tags": [
+        "compression",
+        "gap encoding",
+        "variable-byte",
+        "postings"
+      ],
+      "sourceRefs": [
+        "new-mix.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "new-mix-irs-018",
+      "type": "single_choice",
+      "topic": "Text Preprocessing",
+      "subtopic": "Tokens and Types",
+      "difficulty": "easy",
+      "questionMd": "The sentence \"The cat sat on the mat\" contains how many tokens and how many types respectively?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "6 tokens and 5 types"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "6 tokens and 6 types"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "5 tokens and 5 types"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "5 tokens and 6 types"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "There are **6 tokens** in the sentence: `The`, `cat`, `sat`, `on`, `the`, `mat`. The unique word forms are `{the, cat, sat, on, mat}`, which gives **5 types** if case is normalized in the usual way.",
+      "tags": [
+        "tokens",
+        "types",
+        "tokenization"
+      ],
+      "sourceRefs": [
+        "new-mix.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "new-mix-irs-019",
+      "type": "single_choice",
+      "topic": "Text Preprocessing",
+      "subtopic": "Tokens Types Terms",
+      "difficulty": "easy",
+      "questionMd": "Which of the following correctly describes the relationship between a token, a type, and a term?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A term is one occurrence in text; a token is a unique normalized form; a type is what enters the index"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "A token is one occurrence in text; a type is a unique word form; a term is a normalized type entering the index"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "A type is one occurrence in text; a token is a unique word form; a term is produced by tokenization"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "A token and a type are interchangeable; a term is produced only after stopword removal"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "A **token** is a specific occurrence in text. A **type** is the distinct word form represented by many token occurrences. A **term** is typically the normalized form that survives preprocessing and is actually stored in the index.",
+      "tags": [
+        "tokens",
+        "types",
+        "terms",
+        "indexing"
+      ],
+      "sourceRefs": [
+        "new-mix.json",
+        "Q2.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "new-mix-irs-020",
+      "type": "single_choice",
+      "topic": "Statistical Properties of Text",
+      "subtopic": "Zipf's Law",
+      "difficulty": "easy",
+      "questionMd": "On a log-log plot of term rank versus term frequency, what shape does Zipf's law predict?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A concave curve that levels off as rank increases"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "A straight line with a slope of approximately -1"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "An S-shaped logistic curve"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "A straight line with a positive slope"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Zipf's law predicts an inverse relationship between rank and frequency. On a **log-log plot**, that power-law behavior appears approximately as a **straight line with slope -1**.",
+      "tags": [
+        "zipf",
+        "power law",
+        "term frequency"
+      ],
+      "sourceRefs": [
+        "new-mix.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "new-mix-irs-021",
+      "type": "single_choice",
+      "topic": "Statistical Properties of Text",
+      "subtopic": "Heaps' Law",
+      "difficulty": "medium",
+      "questionMd": "A corpus has `N = 100,000` tokens. Using Heaps' law with `k = 44` and `b = 0.49`, what is the approximate predicted vocabulary size?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Approximately 100,000 unique terms"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Approximately 13,600 unique terms"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Approximately 44,000 unique terms"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Approximately 4,400 unique terms"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Heaps' law is `V = kN^b`. Plugging in the values gives approximately `44 * 100000^0.49`, which is about **13,600**. The key takeaway is that vocabulary growth is **sub-linear**, not proportional to corpus size.",
+      "tags": [
+        "heaps law",
+        "vocabulary growth",
+        "corpus statistics"
+      ],
+      "sourceRefs": [
+        "new-mix.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "new-mix-irs-022",
+      "type": "single_choice",
+      "topic": "Index Construction",
+      "subtopic": "BSBI",
+      "difficulty": "medium",
+      "questionMd": "What is the time complexity of BSBI expressed in terms of `T`, the total number of token occurrences in the corpus?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "O(T log T) due to the dominant sorting step"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "O(T) because each token is processed exactly once in a single pass"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "O(T^2) because every token pair must be compared during the merge phase"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "O(T log N) where `N` is the number of documents"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "BSBI spends most of its cost sorting term-document pairs, so the dominant complexity is **O(T log T)**. The indexing process is not purely linear because sorting is central to the method.",
+      "tags": [
+        "bsbi",
+        "index construction",
+        "complexity",
+        "sorting"
+      ],
+      "sourceRefs": [
+        "new-mix.json",
+        "Q2.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "new-mix-irs-023",
+      "type": "single_choice",
+      "topic": "Index Compression",
+      "subtopic": "Variable-Byte Encoding",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture's compression data, combining gap encoding with variable-byte encoding on a typical postings list achieves what overall compression factor compared to storing raw `int32` docIDs?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Exactly 8× compression because VB uses 7 data bits per byte instead of 8"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Less than 1.5× compression"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Approximately 10–20× compression"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Approximately 3–5× compression"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "In practice, gap encoding plus variable-byte encoding often gives a **moderate but significant** compression gain, commonly around **3–5×** compared with raw 32-bit docIDs. The exact value depends on the distribution of gaps.",
+      "tags": [
+        "compression",
+        "vb encoding",
+        "gap encoding"
+      ],
+      "sourceRefs": [
+        "new-mix.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "new-mix-irs-024",
+      "type": "single_choice",
+      "topic": "Statistical Properties of Text",
+      "subtopic": "Zipf's Law",
+      "difficulty": "easy",
+      "questionMd": "What practical implication does Zipf's law have for the design of a stopword list?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Zipf's law predicts that stopword removal will have no measurable effect on vocabulary size"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The most frequent terms visible at the left of the Zipf curve are low-information words that can often be safely removed"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Zipf's law implies that all terms above a fixed frequency threshold carry equal information"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Stopwords should be selected from the rarest terms at the right tail of the Zipf distribution"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Zipf's law highlights that a small set of very frequent words account for a large fraction of token occurrences. Many of these are function words with low discriminative power, so they are good candidates for a **stopword list**.",
+      "tags": [
+        "zipf",
+        "stopwords",
+        "preprocessing"
+      ],
+      "sourceRefs": [
+        "new-mix.json",
+        "Q2.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "new-mix-irs-025",
+      "type": "single_choice",
+      "topic": "Evaluation",
+      "subtopic": "Qrels",
+      "difficulty": "easy",
+      "questionMd": "In a standard TREC qrels file, each line maps a `(query_id, doc_id)` pair to a relevance label. What does a grade of `0` in a graded qrels file signify?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The document was not in the judgment pool and was therefore never assessed"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The document was judged by a human assessor and found to be irrelevant to the query"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The document is partially relevant — useful but not a complete answer"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The query was retired and no longer active in the evaluation campaign"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "In graded qrels, a label of **0** normally means the document was **judged irrelevant**. It is different from an unjudged document, which is a separate issue in pooled evaluation.",
+      "tags": [
+        "qrels",
+        "trec",
+        "relevance judgments"
+      ],
+      "sourceRefs": [
+        "new-mix.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "new-mix-irs-026",
+      "type": "single_choice",
+      "topic": "Evaluation",
+      "subtopic": "NDCG",
+      "difficulty": "easy",
+      "questionMd": "A system achieves `NDCG@k = 1.0` for a given query. What must be true?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The system's DCG@k equals zero, meaning no relevant documents were returned"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "`NDCG@k = 1.0` is impossible; values are strictly bounded below 1.0 in practice"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The system retrieved exactly `k` documents, all of which are relevant"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The system's ranking is identical to the ideal ranking"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "NDCG is computed by dividing DCG by the **ideal DCG**. A value of **1.0** means the system matched the ideal ordering exactly for the cutoff being considered.",
+      "tags": [
+        "ndcg",
+        "ranking quality",
+        "evaluation"
+      ],
+      "sourceRefs": [
+        "new-mix.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "new-mix-irs-027",
+      "type": "single_choice",
+      "topic": "Evaluation",
+      "subtopic": "DCG",
+      "difficulty": "easy",
+      "questionMd": "In Discounted Cumulative Gain (DCG), relevance scores are divided by the log base-2 of `(rank + 1)`. What user behavior does this logarithmic discount model?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The discount penalizes systems that retrieve more than `k` documents, keeping result sets short"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Users ignore results in random order, so position should have no effect on contribution"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Users prefer documents that are only marginally relevant at high ranks over highly relevant documents at low ranks"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "User attention diminishes at lower ranks, so a relevant document at rank 10 is worth less than one at rank 1"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "DCG discounts gain as rank increases because users usually pay more attention to **higher-ranked** results. A relevant result found lower in the list is still useful, but it contributes less than one found near the top.",
+      "tags": [
+        "dcg",
+        "rank discount",
+        "user behavior"
+      ],
+      "sourceRefs": [
+        "new-mix.json",
+        "Q5.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "new-mix-irs-028",
+      "type": "single_choice",
+      "topic": "Evaluation",
+      "subtopic": "F1 Score",
+      "difficulty": "easy",
+      "questionMd": "Which formula correctly defines the F1 score in terms of Precision (`P`) and Recall (`R`)?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "2PR / (P + R)"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "(P + R) / 2"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "R / (P + R)"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "2(P + R) / (P × R)"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "The F1 score is the **harmonic mean** of Precision and Recall: `2PR / (P + R)`. It rewards systems that balance the two measures rather than maximizing only one.",
+      "tags": [
+        "f1",
+        "precision",
+        "recall"
+      ],
+      "sourceRefs": [
+        "new-mix.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "new-mix-irs-029",
+      "type": "single_choice",
+      "topic": "Evaluation",
+      "subtopic": "NDCG",
+      "difficulty": "easy",
+      "questionMd": "Why is Normalized DCG (NDCG) preferred over raw DCG when comparing results across multiple queries?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "NDCG applies a steeper position discount than DCG, making it more sensitive to early retrieval errors"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "NDCG normalizes by the ideal DCG so all queries map to [0, 1]"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Raw DCG rewards retrieving more documents, while NDCG penalizes systems that return more than `k` results"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "NDCG uses binary relevance labels, which are easier to collect than the graded labels required by raw DCG"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Raw DCG values are not directly comparable across queries because queries can have very different gain distributions. NDCG divides by the **ideal DCG**, which puts scores on a shared **0 to 1 scale**.",
+      "tags": [
+        "ndcg",
+        "dcg",
+        "cross-query comparison"
+      ],
+      "sourceRefs": [
+        "new-mix.json",
+        "Q5.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "new-mix-irs-030",
+      "type": "single_choice",
+      "topic": "Evaluation",
+      "subtopic": "DCG and NDCG",
+      "difficulty": "easy",
+      "questionMd": "The Ideal DCG (`IDCG@k`) is defined as the `DCG@k` of which ranking?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The ranking produced by the best-performing system in the evaluation pool"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The ranking that maximizes Precision@k regardless of graded relevance"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The ranking that places all irrelevant documents first to establish a worst-case baseline"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The theoretically perfect ranking, where all documents are sorted by descending relevance grade"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "IDCG is the DCG of the **best possible ordering** for that query under the available relevance labels. It is obtained by sorting documents by **descending relevance grade**.",
+      "tags": [
+        "idcg",
+        "dcg",
+        "ndcg"
+      ],
+      "sourceRefs": [
+        "new-mix.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "new-mix-irs-031",
+      "type": "single_choice",
+      "topic": "Evaluation",
+      "subtopic": "Average Precision",
+      "difficulty": "medium",
+      "questionMd": "Given the ranked list `R, I, I, R, R` (`R = relevant`, `I = irrelevant`), what is the Average Precision (AP)?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "0.700"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "0.500"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "0.333"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "0.600"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Relevant documents appear at ranks 1, 4, and 5. The precision values there are `1/1 = 1.0`, `2/4 = 0.5`, and `3/5 = 0.6`. Averaging them gives `(1.0 + 0.5 + 0.6)/3 = 0.7`, so **AP = 0.700**.",
+      "tags": [
+        "average precision",
+        "ap",
+        "ranked list"
+      ],
+      "sourceRefs": [
+        "new-mix.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "new-mix-irs-032",
+      "type": "single_choice",
+      "topic": "Evaluation",
+      "subtopic": "MAP",
+      "difficulty": "easy",
+      "questionMd": "Three queries yield Average Precision scores of `0.72`, `0.45`, and `0.38` for a system. What is the Mean Average Precision (MAP)?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "0.720, because MAP reports the highest AP score across all queries"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "0.517, computed as (0.72 + 0.45 + 0.38) / 3"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "0.550, computed as the median of the three AP values"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "1.550, because MAP sums the AP values without dividing by the number of queries"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "MAP is simply the **mean of AP over queries**. Here that is `(0.72 + 0.45 + 0.38) / 3 = 0.5166...`, which rounds to **0.517**.",
+      "tags": [
+        "map",
+        "average precision",
+        "mean"
+      ],
+      "sourceRefs": [
+        "new-mix.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "new-mix-irs-033",
+      "type": "single_choice",
+      "topic": "SMART Notation",
+      "subtopic": "Document Weighting",
+      "difficulty": "medium",
+      "questionMd": "In SMART notation, what does the scheme `lnc` specify for document weighting?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Natural TF, no IDF, cosine normalization"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Log-average TF, natural IDF, no normalization"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Logarithmic TF, natural IDF, cosine normalization"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Logarithmic TF, no IDF, cosine normalization"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "In SMART notation, `l` means **logarithmic TF**, `n` means **no IDF**, and `c` means **cosine normalization**. So `lnc` corresponds to **log TF + no IDF + cosine normalization**.",
+      "tags": [
+        "smart notation",
+        "lnc",
+        "vector space model"
+      ],
+      "sourceRefs": [
+        "new-mix.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    }
+  ]
+}

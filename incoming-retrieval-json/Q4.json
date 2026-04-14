@@ -1,0 +1,1384 @@
+{
+  "quizId": "information-retrieval-quiz-4",
+  "title": "Information Retrieval Quiz 4",
+  "course": "Information Retrieval",
+  "language": "en",
+  "semester": "",
+  "source": "Compiled from uploaded Quiz 4 PDF and image files",
+  "durationMinutes": 0,
+  "shuffleQuestions": false,
+  "shuffleOptions": false,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "topic": "BM25",
+      "subtopic": "Document Length Normalization",
+      "difficulty": "medium",
+      "questionMd": "How does BM25's approach to document length normalization differ from the cosine-based L2 normalization used in the Vector Space Model?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "BM25 normalizes by the document's maximum term frequency, while L2 normalization normalizes by the sum of all term frequencies"
+        },
+        {
+          "id": "B",
+          "text": "BM25 applies per-term length normalization controlled by the parameter b"
+        },
+        {
+          "id": "C",
+          "text": "BM25 applies length normalization only to query terms, whereas L2 normalization is applied only to document vectors"
+        },
+        {
+          "id": "D",
+          "text": "BM25 removes length normalization entirely, relying solely on TF saturation to control the influence of document length"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "BM25 uses a **document-length normalization factor** inside its scoring formula, controlled by the parameter `b` and relative to `avgdl`. L2 normalization in the Vector Space Model instead rescales the **entire vector** to unit length. So BM25 and cosine normalization both address length effects, but they do so in **different mathematical ways**.",
+      "tags": [
+        "bm25",
+        "length normalization",
+        "vector space model"
+      ]
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "topic": "Probabilistic Retrieval",
+      "subtopic": "Binary Independence Model",
+      "difficulty": "medium",
+      "questionMd": "What simplifying assumption does the Binary Independence Model (BIM) make about query terms when estimating the probability that a document is relevant?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Terms are assumed to appear the same number of times in every relevant document in the collection"
+        },
+        {
+          "id": "B",
+          "text": "Terms are assumed to be statistically independent of one another given the relevance status of the document"
+        },
+        {
+          "id": "C",
+          "text": "Terms are assumed to have equal document frequency across the entire collection"
+        },
+        {
+          "id": "D",
+          "text": "Terms are assumed to be ranked by their IDF value before any probability estimation is performed"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "The **Binary Independence Model** assumes that query terms are conditionally independent given relevance or non-relevance. This assumption makes the probability model tractable and is one of the foundations behind probabilistic IR and BM25-style reasoning.",
+      "tags": [
+        "bim",
+        "probabilistic ir",
+        "independence assumption"
+      ]
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "topic": "BM25",
+      "subtopic": "Adoption in Search Engines",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture notes, in which of the following systems has BM25 been the default scorer?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "The TREC evaluation framework as the only permitted baseline for ad-hoc retrieval tracks"
+        },
+        {
+          "id": "B",
+          "text": "Elasticsearch and OpenSearch since version 5.0, and Lucene since version 6.0"
+        },
+        {
+          "id": "C",
+          "text": "The Google PageRank algorithm as its primary term-matching component since 2010"
+        },
+        {
+          "id": "D",
+          "text": "Apache Spark MLlib and scikit-learn since their initial releases"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "BM25 became the default ranking function in major Lucene-based search systems. The key point is that **Lucene and systems built on it adopted BM25 as the standard lexical scorer**, replacing older defaults such as classic TF-IDF similarity.",
+      "tags": [
+        "bm25",
+        "lucene",
+        "elasticsearch",
+        "opensearch"
+      ]
+    },
+    {
+      "id": "q4",
+      "type": "single_choice",
+      "topic": "BM25",
+      "subtopic": "Parameter Effects",
+      "difficulty": "medium",
+      "questionMd": "What retrieval behavior results when the BM25 parameter `k1` is set to 0?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "The TF component becomes binary — only whether a term is present matters, not how many times it appears"
+        },
+        {
+          "id": "B",
+          "text": "Length normalization is disabled because the denominator reduces to the raw term frequency"
+        },
+        {
+          "id": "C",
+          "text": "The IDF component dominates entirely and term frequency is weighted at its maximum possible value"
+        },
+        {
+          "id": "D",
+          "text": "The BM25 score becomes equivalent to raw TF multiplied by IDF with no saturation"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "When `k1 = 0`, the BM25 TF factor collapses so that **term occurrence is effectively binary**. A term contributes if it appears, but repeating it more times does not increase the score. This is why the effect resembles a Boolean term-presence signal.",
+      "tags": [
+        "bm25",
+        "k1",
+        "tf saturation"
+      ]
+    },
+    {
+      "id": "q5",
+      "type": "single_choice",
+      "topic": "Vector Space Model",
+      "subtopic": "Cosine Similarity",
+      "difficulty": "easy",
+      "questionMd": "Why is cosine similarity preferred over the raw dot product for ranking documents in the Vector Space Model?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cosine similarity is faster to compute than the dot product for large sparse vectors"
+        },
+        {
+          "id": "B",
+          "text": "Cosine similarity produces scores in the range [-1, 1], while dot products are unbounded"
+        },
+        {
+          "id": "C",
+          "text": "Cosine similarity normalizes for document length, preventing longer documents from automatically scoring higher than shorter, more focused ones"
+        },
+        {
+          "id": "D",
+          "text": "Cosine similarity accounts for term order, while the dot product does not"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "The raw dot product is biased toward **longer documents**, because they tend to contain more terms and larger weights. Cosine similarity divides by vector lengths, so it compares **direction rather than magnitude**, making ranking fairer across documents of different lengths.",
+      "tags": [
+        "cosine similarity",
+        "vector space model",
+        "length bias"
+      ]
+    },
+    {
+      "id": "q6",
+      "type": "single_choice",
+      "topic": "TF-IDF",
+      "subtopic": "IDF Intuition",
+      "difficulty": "easy",
+      "questionMd": "What is the core intuition behind Inverse Document Frequency (IDF) as used in TF-IDF weighting?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "IDF penalizes terms based on how frequently they appear within a single document"
+        },
+        {
+          "id": "B",
+          "text": "Terms that appear in many documents carry little discriminating information and should receive lower weights"
+        },
+        {
+          "id": "C",
+          "text": "Terms that appear in many documents are more likely to be relevant to any query"
+        },
+        {
+          "id": "D",
+          "text": "IDF increases the weight of terms that co-occur with stopwords"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "IDF downweights terms that are **common across the collection**, because those terms do not help distinguish one document from another. Rare terms are usually more informative for retrieval, so they receive **higher IDF weight**.",
+      "tags": [
+        "idf",
+        "tf-idf",
+        "term discrimination"
+      ]
+    },
+    {
+      "id": "q7",
+      "type": "single_choice",
+      "topic": "BM25",
+      "subtopic": "Score Interpretation",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture notes, which of the following statements about BM25 scores is correct?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "BM25 scores always fall within the range [0, 1] because the IDF component is bounded by log(N)"
+        },
+        {
+          "id": "B",
+          "text": "BM25 scores are calibrated probabilities that sum to 1 across all documents for a given query"
+        },
+        {
+          "id": "C",
+          "text": "BM25 scores are symmetric, meaning the score for query Q against document D equals the score for D against Q"
+        },
+        {
+          "id": "D",
+          "text": "BM25 scores are ordinal relevance estimates and should not be compared across different queries"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "BM25 scores are best interpreted as **ranking signals**, not calibrated probabilities. They are useful for ordering documents **within the same query**, but comparing raw BM25 scores **across different queries** is generally not meaningful.",
+      "tags": [
+        "bm25",
+        "ranking",
+        "score calibration"
+      ]
+    },
+    {
+      "id": "q8",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Theoretical Foundations",
+      "difficulty": "medium",
+      "questionMd": "Which statement correctly describes a key theoretical difference between BM25 and TF-IDF with cosine similarity?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both BM25 and TF-IDF are derived from the Binary Independence Model but differ only in their length normalization"
+        },
+        {
+          "id": "B",
+          "text": "TF-IDF is derived from the Probability Ranking Principle, while BM25 is an empirical approximation with no theoretical basis"
+        },
+        {
+          "id": "C",
+          "text": "BM25 is derived from the Binary Independence Model and the Probability Ranking Principle, while TF-IDF is a heuristic weighting scheme"
+        },
+        {
+          "id": "D",
+          "text": "BM25 is a purely heuristic method, while TF-IDF has a formal probabilistic derivation from the Robertson-Sparck Jones weight"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "BM25 has a **probabilistic motivation** connected to the Binary Independence Model and Probability Ranking Principle. By contrast, TF-IDF is mainly a **heuristic weighting family** rather than a single formally derived probabilistic model.",
+      "tags": [
+        "bm25",
+        "tf-idf",
+        "prp",
+        "bim"
+      ]
+    },
+    {
+      "id": "q9",
+      "type": "single_choice",
+      "topic": "TF-IDF",
+      "subtopic": "High TF and Low IDF",
+      "difficulty": "medium",
+      "questionMd": "A term has high TF in a document but very low IDF across the collection. What does this combination indicate about the term's usefulness as a relevance signal?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "The term is a strong relevance signal because high TF always dominates the combined TF-IDF weight"
+        },
+        {
+          "id": "B",
+          "text": "The term should be removed from the index because its combined TF-IDF weight will be exactly zero"
+        },
+        {
+          "id": "C",
+          "text": "The term is highly informative because low IDF indicates it appears in very few documents"
+        },
+        {
+          "id": "D",
+          "text": "The term is a weak discriminator because it appears frequently in many documents"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "A **low IDF** means the term is common across the collection. Even if it appears many times in one document, it still provides weak evidence for relevance because it does not distinguish that document well from many others.",
+      "tags": [
+        "tf-idf",
+        "idf",
+        "relevance signal"
+      ]
+    },
+    {
+      "id": "q10",
+      "type": "single_choice",
+      "topic": "BM25",
+      "subtopic": "Collection Statistics",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture notes, when is the `avgdl` (average document length) statistic used by BM25 computed?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Each time a new document is added to the index, `avgdl` is recomputed from scratch"
+        },
+        {
+          "id": "B",
+          "text": "Once at index construction time and stored as a collection-level statistic"
+        },
+        {
+          "id": "C",
+          "text": "At query time by averaging the lengths of all retrieved candidate documents"
+        },
+        {
+          "id": "D",
+          "text": "Only during evaluation when comparing BM25 against TF-IDF outputs"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "BM25 uses `avgdl` as a **collection-level statistic**. It is typically computed during indexing and stored for later use, rather than recomputed separately for every query.",
+      "tags": [
+        "avgdl",
+        "bm25",
+        "indexing"
+      ]
+    },
+    {
+      "id": "q11",
+      "type": "single_choice",
+      "topic": "IDF",
+      "subtopic": "Probabilistic IDF Limitation",
+      "difficulty": "medium",
+      "questionMd": "Which of the following is a known limitation of the probabilistic IDF formula `log((N - df) / df)` as noted in the lecture?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "The formula cannot be computed when the document frequency is greater than 1"
+        },
+        {
+          "id": "B",
+          "text": "The formula doubles the IDF value of any term whose document frequency exceeds N/2"
+        },
+        {
+          "id": "C",
+          "text": "The formula always returns the same value regardless of the collection size N"
+        },
+        {
+          "id": "D",
+          "text": "The formula can produce negative values, requiring careful handling in implementations"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "If `df > N/2`, then `(N - df) / df < 1`, and the logarithm becomes **negative**. That is a known practical issue with this probabilistic form of IDF and motivates smoothing or clipping strategies in implementations.",
+      "tags": [
+        "idf",
+        "probabilistic idf",
+        "log weighting"
+      ]
+    },
+    {
+      "id": "q12",
+      "type": "single_choice",
+      "topic": "TF-IDF",
+      "subtopic": "Weighting Behavior",
+      "difficulty": "easy",
+      "questionMd": "A term receives a high TF-IDF weight in a document when which condition holds?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "The term has a low IDF value and a high document frequency"
+        },
+        {
+          "id": "B",
+          "text": "The term appears in every document in the collection"
+        },
+        {
+          "id": "C",
+          "text": "The term appears rarely in that document but frequently across the overall collection"
+        },
+        {
+          "id": "D",
+          "text": "The term appears frequently in that document but rarely across the overall collection"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "TF-IDF becomes large when **TF is high** in the current document and **IDF is high** across the collection. That means the term is important in this document and also relatively rare globally.",
+      "tags": [
+        "tf-idf",
+        "term weighting",
+        "idf"
+      ]
+    },
+    {
+      "id": "q13",
+      "type": "single_choice",
+      "topic": "BM25",
+      "subtopic": "BM25F",
+      "difficulty": "medium",
+      "questionMd": "Which specific problem motivated the development of the BM25F variant?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Standard BM25 treats a document as a single flat text field"
+        },
+        {
+          "id": "B",
+          "text": "Standard BM25 produces negative IDF values for terms with very high document frequency, which BM25F corrects"
+        },
+        {
+          "id": "C",
+          "text": "Standard BM25 requires all documents in the collection to have the same length, which BM25F relaxes with per-document normalization"
+        },
+        {
+          "id": "D",
+          "text": "Standard BM25 cannot handle multi-word queries because it sums scores term by term, a limitation BM25F overcomes"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "BM25 assumes a document is a **single unstructured field**. BM25F was introduced to handle **multiple fields** such as title, body, and anchor text, each with its own importance and normalization behavior.",
+      "tags": [
+        "bm25f",
+        "structured documents",
+        "fielded retrieval"
+      ]
+    },
+    {
+      "id": "q14",
+      "type": "single_choice",
+      "topic": "IDF",
+      "subtopic": "Smoothed IDF",
+      "difficulty": "medium",
+      "questionMd": "Why does the smoothed IDF formula `log(N / (df + 1)) + 1` add 1 to the denominator?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "To ensure that every term receives an IDF value greater than 1 regardless of collection size"
+        },
+        {
+          "id": "B",
+          "text": "To prevent division by zero when a term has never appeared in any document in the collection"
+        },
+        {
+          "id": "C",
+          "text": "To bring the IDF range into alignment with the range produced by log-TF"
+        },
+        {
+          "id": "D",
+          "text": "To make very common terms receive a higher IDF than they would under the standard formula"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "If a term has `df = 0`, the unsmoothed formula would require division by zero. Adding 1 to the denominator is a **smoothing trick** that keeps the value defined while still preserving the idea that rarer terms should have larger weights.",
+      "tags": [
+        "idf",
+        "smoothing",
+        "tf-idf"
+      ]
+    },
+    {
+      "id": "q15",
+      "type": "single_choice",
+      "topic": "Vector Space Model",
+      "subtopic": "L2 Normalization",
+      "difficulty": "easy",
+      "questionMd": "After L2 normalization is applied to all document vectors in the Vector Space Model, what geometric property do all normalized document vectors share?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "All normalized document vectors have the same direction as the query vector for the collection's most common query"
+        },
+        {
+          "id": "B",
+          "text": "All normalized document vectors become orthogonal to one another, eliminating redundant documents"
+        },
+        {
+          "id": "C",
+          "text": "All normalized document vectors are projected onto a two-dimensional plane to enable fast ranking"
+        },
+        {
+          "id": "D",
+          "text": "All normalized document vectors lie on the unit sphere, meaning their Euclidean norm equals 1"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "L2 normalization divides each vector by its Euclidean norm. As a result, every normalized vector has **length 1**, so all such vectors lie on the **unit sphere** in vector space.",
+      "tags": [
+        "l2 normalization",
+        "vector space model",
+        "geometry"
+      ]
+    },
+    {
+      "id": "q16",
+      "type": "single_choice",
+      "topic": "SMART Notation",
+      "subtopic": "Augmented TF",
+      "difficulty": "medium",
+      "questionMd": "In the SMART notation table, the augmented TF variant (symbol `a`) is defined as which of the following?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "tf / (tf + max_tf(d))"
+        },
+        {
+          "id": "B",
+          "text": "0.5 + 0.5 * tf / max_tf(d)"
+        },
+        {
+          "id": "C",
+          "text": "1 + log(tf / max_tf(d))"
+        },
+        {
+          "id": "D",
+          "text": "0.5 * log(tf) + 0.5 * max_tf(d)"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "The SMART **augmented TF** rescales term frequency relative to the document's maximum term frequency: `0.5 + 0.5 * tf / max_tf(d)`. This keeps weights in a moderate range and reduces the dominance of raw counts.",
+      "tags": [
+        "smart notation",
+        "augmented tf",
+        "weighting"
+      ]
+    },
+    {
+      "id": "q17",
+      "type": "single_choice",
+      "topic": "Indexing",
+      "subtopic": "Document Frequency",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture notes, where do the document frequency (`df`) values required for both TF-IDF and BM25 computation come from at retrieval time?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "From the query itself, by counting how many query terms appear in a predefined stopword list"
+        },
+        {
+          "id": "B",
+          "text": "From the inverted index constructed during indexing, specifically from the length of each term's postings list"
+        },
+        {
+          "id": "C",
+          "text": "From a separate per-document frequency table computed fresh at query time by scanning the corpus"
+        },
+        {
+          "id": "D",
+          "text": "From the average document length statistic `avgdl` stored alongside the inverted index"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "The document frequency of a term is available from the **inverted index**. In practice, `df` is tied to the **postings list length** for that term, so the system does not need to rescan the corpus at query time.",
+      "tags": [
+        "document frequency",
+        "inverted index",
+        "bm25",
+        "tf-idf"
+      ]
+    },
+    {
+      "id": "q18",
+      "type": "single_choice",
+      "topic": "SMART Notation",
+      "subtopic": "lnc.ltc",
+      "difficulty": "medium",
+      "questionMd": "In SMART notation, the scheme `lnc.ltc` specifies which combination of weighting choices for documents and queries respectively?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Documents use log-TF, no IDF, no normalization; queries use log-TF, standard IDF, cosine normalization"
+        },
+        {
+          "id": "B",
+          "text": "Documents use log-TF, natural IDF, cosine normalization; queries use log-TF, no IDF, cosine normalization"
+        },
+        {
+          "id": "C",
+          "text": "Documents use natural TF, cosine normalization, no IDF; queries use log-TF, IDF, cosine normalization"
+        },
+        {
+          "id": "D",
+          "text": "Documents use log-TF, no IDF, cosine normalization; queries use log-TF, standard IDF, cosine normalization"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "The code `lnc.ltc` means:\n\n- **Documents:** `l` = log-TF, `n` = no IDF, `c` = cosine normalization\n- **Queries:** `l` = log-TF, `t` = IDF, `c` = cosine normalization\n\nSo only the query side includes IDF in this scheme.",
+      "tags": [
+        "smart notation",
+        "lnc.ltc",
+        "vector space model"
+      ]
+    },
+    {
+      "id": "q19",
+      "type": "single_choice",
+      "topic": "Vector Space Model",
+      "subtopic": "Sparsity",
+      "difficulty": "easy",
+      "questionMd": "In the Vector Space Model, why are document vectors described as sparse?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Document vectors are sparse because only the top-k highest-weighted terms are stored to save memory"
+        },
+        {
+          "id": "B",
+          "text": "Sparsity arises because IDF values are rounded to zero for any term with document frequency above a threshold"
+        },
+        {
+          "id": "C",
+          "text": "Vectors are sparse because cosine normalization sets most small weights to zero during L2 normalization"
+        },
+        {
+          "id": "D",
+          "text": "Most vocabulary terms do not appear in any given document"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "A collection vocabulary can be very large, but any single document contains only a **small subset** of those terms. That means most coordinates in its vector are zero, which is exactly what **sparse** means.",
+      "tags": [
+        "vector space model",
+        "sparse vectors",
+        "vocabulary"
+      ]
+    },
+    {
+      "id": "q20",
+      "type": "single_choice",
+      "topic": "Vector Space Model",
+      "subtopic": "Similarity Measures",
+      "difficulty": "medium",
+      "questionMd": "Why does the Vector Space Model use cosine similarity rather than Euclidean distance to compare document and query vectors?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cosine similarity is always faster to compute than Euclidean distance for sparse TF-IDF vectors"
+        },
+        {
+          "id": "B",
+          "text": "Euclidean distance produces values outside the range [0, 1], making it impossible to rank documents consistently"
+        },
+        {
+          "id": "C",
+          "text": "Euclidean distance would make a long document seem very different from a short one covering the same topics"
+        },
+        {
+          "id": "D",
+          "text": "Euclidean distance cannot be computed for high-dimensional vectors, whereas cosine similarity is defined for any number of dimensions"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "Euclidean distance is sensitive to **vector magnitude**, so longer documents can look far away even when they discuss the same topics. Cosine similarity focuses on **angle**, which better matches topical similarity in text retrieval.",
+      "tags": [
+        "cosine similarity",
+        "euclidean distance",
+        "vsm"
+      ]
+    },
+    {
+      "id": "q21",
+      "type": "single_choice",
+      "topic": "Language Modeling Assumptions",
+      "subtopic": "Bag of Words",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture, in which of the following situations does the Bag-of-Words assumption most clearly lead to incorrect retrieval behavior?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "When query terms appear frequently in the same document, because BoW over-weights high-frequency terms"
+        },
+        {
+          "id": "B",
+          "text": "When query terms are stopwords, because BoW assigns them the same weight as content terms"
+        },
+        {
+          "id": "C",
+          "text": "When a query contains negation such as \"not relevant\""
+        },
+        {
+          "id": "D",
+          "text": "When two documents have the same vocabulary size, because BoW cannot differentiate their vectors"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "Bag-of-Words ignores **word order and compositional structure**. Negation depends heavily on structure, so phrases like `not relevant` can be badly misrepresented if the model only tracks word counts without syntax or order.",
+      "tags": [
+        "bag of words",
+        "negation",
+        "query semantics"
+      ]
+    },
+    {
+      "id": "q22",
+      "type": "single_choice",
+      "topic": "SMART Notation",
+      "subtopic": "Boolean TF",
+      "difficulty": "easy",
+      "questionMd": "In SMART notation, which TF variant assigns a weight of 1 to any term that appears at least once in a document, and 0 to terms that do not appear, completely ignoring how many times the term occurs?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Boolean variant (symbol `b`), which returns 1 if `tf > 0` and 0 otherwise"
+        },
+        {
+          "id": "B",
+          "text": "The augmented variant (symbol `a`), which returns a value in the range [0.5, 1]"
+        },
+        {
+          "id": "C",
+          "text": "The natural variant (symbol `n`), which returns the raw count `tf(t, d)`"
+        },
+        {
+          "id": "D",
+          "text": "The logarithmic variant (symbol `l`), which returns `1 + log(tf)`"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "The SMART symbol `b` means **Boolean term weighting**. It records only whether a term is present or absent, ignoring repeated occurrences.",
+      "tags": [
+        "smart notation",
+        "boolean tf",
+        "term weighting"
+      ]
+    },
+    {
+      "id": "q23",
+      "type": "single_choice",
+      "topic": "BM25 and TF Weighting",
+      "subtopic": "TF Saturation",
+      "difficulty": "easy",
+      "questionMd": "Which statement best captures the concept of TF saturation as modeled by BM25 and log-TF?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "TF saturation increases the weight of the first occurrence of a term and sets all subsequent occurrences to zero"
+        },
+        {
+          "id": "B",
+          "text": "TF saturation means that once a term appears more than `k1` times, it is completely ignored in scoring"
+        },
+        {
+          "id": "C",
+          "text": "Each additional occurrence of a term contributes equally to the relevance score regardless of how many times it has already appeared"
+        },
+        {
+          "id": "D",
+          "text": "Each additional occurrence of a term contributes progressively less to the relevance score"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "TF saturation means there are **diminishing returns**. The first few occurrences of a term usually matter more than later repetitions, so BM25 and log-TF both dampen the gain from very large raw term counts.",
+      "tags": [
+        "tf saturation",
+        "bm25",
+        "log tf"
+      ]
+    },
+    {
+      "id": "q24",
+      "type": "single_choice",
+      "topic": "BM25",
+      "subtopic": "TF Saturation Function",
+      "difficulty": "medium",
+      "questionMd": "As the raw term frequency `tf` in a document increases toward infinity, what value does the BM25 TF saturation function `tf * (k1 + 1) / (tf + k1)` approach?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "The value `k1`, which acts as a hard ceiling on TF contributions"
+        },
+        {
+          "id": "B",
+          "text": "The value `tf`, meaning the saturation function converges back to raw TF at very high counts"
+        },
+        {
+          "id": "C",
+          "text": "The value `1`, because the saturation function is normalized to the range [0, 1]"
+        },
+        {
+          "id": "D",
+          "text": "The value `k1 + 1`, which is the asymptotic maximum that the saturation function never exceeds"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "For very large `tf`, the highest-degree terms dominate and the fraction approaches `k1 + 1`. So the BM25 TF component has a **finite asymptote**, which is how it enforces saturation.",
+      "tags": [
+        "bm25",
+        "tf saturation",
+        "asymptote"
+      ]
+    },
+    {
+      "id": "q25",
+      "type": "single_choice",
+      "topic": "TF-IDF",
+      "subtopic": "Keyword Extraction",
+      "difficulty": "easy",
+      "questionMd": "How does TF-IDF enable keyword extraction from a single document within a larger corpus?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Terms whose raw TF exceeds the collection average document frequency are selected as keywords regardless of their IDF value"
+        },
+        {
+          "id": "B",
+          "text": "Terms with the lowest TF-IDF weight are the best keywords because they are unique to the document and appear nowhere else"
+        },
+        {
+          "id": "C",
+          "text": "Terms with the highest TF-IDF weight in a document are strong candidate keywords for that document"
+        },
+        {
+          "id": "D",
+          "text": "Terms are selected as keywords when their IDF value equals zero, indicating they are universally recognized concepts"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "High TF-IDF terms are both **important within the document** and **relatively uncommon in the collection**, which makes them good keyword candidates for summarizing that document's distinctive content.",
+      "tags": [
+        "tf-idf",
+        "keyword extraction",
+        "document analysis"
+      ]
+    },
+    {
+      "id": "q26",
+      "type": "single_choice",
+      "topic": "Probabilistic Retrieval",
+      "subtopic": "Probability Ranking Principle",
+      "difficulty": "medium",
+      "questionMd": "The Probability Ranking Principle (PRP), which motivates BM25, states that documents should be ranked according to which criterion?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Increasing document frequency of the query terms in the collection"
+        },
+        {
+          "id": "B",
+          "text": "Decreasing term frequency summed across all query terms"
+        },
+        {
+          "id": "C",
+          "text": "Decreasing document length relative to the collection average"
+        },
+        {
+          "id": "D",
+          "text": "Decreasing probability of relevance given the document and query"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "The PRP says the optimal ranking is obtained by ordering documents by their **probability of relevance**. In practice that means placing the most likely relevant documents first. The option wording reflects ranking by decreasing order of that probability.",
+      "tags": [
+        "prp",
+        "bm25",
+        "probabilistic ranking"
+      ]
+    },
+    {
+      "id": "q27",
+      "type": "single_choice",
+      "topic": "Term Frequency",
+      "subtopic": "Length Bias",
+      "difficulty": "easy",
+      "questionMd": "Why is raw term frequency (TF) considered a biased signal when comparing documents of different lengths?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Raw TF values become negative for very high-frequency terms"
+        },
+        {
+          "id": "B",
+          "text": "Longer documents tend to accumulate higher raw TF values"
+        },
+        {
+          "id": "C",
+          "text": "Raw TF counts cannot be stored in an inverted index"
+        },
+        {
+          "id": "D",
+          "text": "Raw TF ignores whether a term appears in the query at all"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Longer documents naturally have more opportunities to repeat a term, so raw TF can unfairly favor them. This is why many weighting schemes normalize or damp TF before using it in ranking.",
+      "tags": [
+        "term frequency",
+        "length bias",
+        "normalization"
+      ]
+    },
+    {
+      "id": "q28",
+      "type": "single_choice",
+      "topic": "BM25",
+      "subtopic": "Large k1 Limit",
+      "difficulty": "medium",
+      "questionMd": "What is the effect of setting the BM25 parameter `k1` to a very large value (approaching infinity)?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "The IDF component is scaled down and rare terms receive lower weights"
+        },
+        {
+          "id": "B",
+          "text": "Length normalization is disabled and all documents are treated as having equal length"
+        },
+        {
+          "id": "C",
+          "text": "The BM25 score becomes equivalent to a binary (Boolean) match signal"
+        },
+        {
+          "id": "D",
+          "text": "TF saturation disappears and the scoring approaches raw TF with diminishing returns removed"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "As `k1` grows very large, the BM25 TF factor behaves more and more like **raw term frequency**, because the saturation effect weakens. So repeated occurrences keep increasing the score with much less damping.",
+      "tags": [
+        "bm25",
+        "k1",
+        "tf saturation"
+      ]
+    },
+    {
+      "id": "q29",
+      "type": "single_choice",
+      "topic": "IDF",
+      "subtopic": "Standard Formula",
+      "difficulty": "easy",
+      "questionMd": "Using the standard IDF formula taught in lecture, how is `IDF(t)` computed for a term `t` given a collection of `N` documents where it appears in `df(t)` of them?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "log(df(t) / N)"
+        },
+        {
+          "id": "B",
+          "text": "N / df(t)"
+        },
+        {
+          "id": "C",
+          "text": "log(N / df(t))"
+        },
+        {
+          "id": "D",
+          "text": "log(N + df(t))"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "The standard IDF idea is to compare the total number of documents `N` with the number containing the term `df(t)`. That gives `IDF(t) = log(N / df(t))`, which increases as the term becomes rarer.",
+      "tags": [
+        "idf",
+        "formula",
+        "tf-idf"
+      ]
+    },
+    {
+      "id": "q30",
+      "type": "single_choice",
+      "topic": "BM25",
+      "subtopic": "Parameter b",
+      "difficulty": "medium",
+      "questionMd": "In the BM25 formula, what happens to document length normalization when the parameter `b` is set to 0?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "The parameter `avgdl` becomes the only length signal used in the formula"
+        },
+        {
+          "id": "B",
+          "text": "BM25 reduces to a pure Boolean retrieval model with no frequency weighting"
+        },
+        {
+          "id": "C",
+          "text": "Document length is fully normalized and short documents are heavily favored"
+        },
+        {
+          "id": "D",
+          "text": "Document length has no effect on the score and all documents are treated as having the same length"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "The parameter `b` controls the strength of **document-length normalization**. When `b = 0`, that normalization disappears, so document length does not affect the BM25 TF denominator.",
+      "tags": [
+        "bm25",
+        "parameter b",
+        "length normalization"
+      ]
+    },
+    {
+      "id": "q31",
+      "type": "single_choice",
+      "topic": "Boolean Retrieval",
+      "subtopic": "Motivation for Ranked Retrieval",
+      "difficulty": "medium",
+      "questionMd": "Which of the following is a fundamental limitation of Boolean retrieval that motivates the move to ranked retrieval?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Boolean retrieval cannot use an inverted index to look up postings lists"
+        },
+        {
+          "id": "B",
+          "text": "Boolean retrieval requires all query terms to be stemmed before matching"
+        },
+        {
+          "id": "C",
+          "text": "Boolean retrieval is unable to handle OR operators between query terms"
+        },
+        {
+          "id": "D",
+          "text": "A document matching 3 out of 4 query terms is assumed no better than a document matching 0 terms"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "Boolean retrieval makes **hard yes/no decisions**. Without ranking, it cannot express that one document is *almost* a match while another is completely irrelevant. That inability to capture **partial matching quality** is a major reason ranked retrieval became standard.",
+      "tags": [
+        "boolean retrieval",
+        "ranked retrieval",
+        "partial matching"
+      ]
+    },
+    {
+      "id": "q32",
+      "type": "single_choice",
+      "topic": "Vector Space Model",
+      "subtopic": "Cosine Formula",
+      "difficulty": "easy",
+      "questionMd": "Which expression correctly gives the cosine similarity between document vector `d` and query vector `q`?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "||d|| * ||q|| / (d · q)"
+        },
+        {
+          "id": "B",
+          "text": "(d · q) / (||d|| + ||q||)"
+        },
+        {
+          "id": "C",
+          "text": "(d · q) / (||d|| * ||q||)"
+        },
+        {
+          "id": "D",
+          "text": "(d · q)^2 / (||d|| * ||q||)"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "Cosine similarity is the **dot product divided by the product of vector norms**. This makes the score depend on the angle between the vectors rather than their raw magnitudes.",
+      "tags": [
+        "cosine similarity",
+        "formula",
+        "vector space model"
+      ]
+    },
+    {
+      "id": "q33",
+      "type": "single_choice",
+      "topic": "SMART Notation",
+      "subtopic": "Logarithmic TF",
+      "difficulty": "easy",
+      "questionMd": "According to SMART notation, which formula defines the logarithmic TF variant (symbol `l`) for a term with a non-zero count?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "log(tf) - 1"
+        },
+        {
+          "id": "B",
+          "text": "0.5 + 0.5 * tf / max_tf(d)"
+        },
+        {
+          "id": "C",
+          "text": "tf / (1 + log(tf))"
+        },
+        {
+          "id": "D",
+          "text": "1 + log(tf)"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "The SMART logarithmic TF variant uses `1 + log(tf)` for non-zero counts. The logarithm reduces the dominance of large raw term frequencies while still rewarding repeated occurrences.",
+      "tags": [
+        "smart notation",
+        "log tf",
+        "term weighting"
+      ]
+    },
+    {
+      "id": "q34",
+      "type": "single_choice",
+      "topic": "SMART Notation",
+      "subtopic": "Log-Average TF",
+      "difficulty": "medium",
+      "questionMd": "The log-average TF variant (symbol `L`) in SMART notation is defined as which of the following expressions?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.5 + 0.5 * log(tf) / log(avg_tf(d))"
+        },
+        {
+          "id": "B",
+          "text": "(1 + log(tf)) / (1 + log(avg_tf(d)))"
+        },
+        {
+          "id": "C",
+          "text": "(1 + log(tf)) * avg_tf(d)"
+        },
+        {
+          "id": "D",
+          "text": "log(tf / avg_tf(d))"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "The SMART `L` scheme compares a term's log-scaled TF to the document's **average TF**, giving `(1 + log(tf)) / (1 + log(avg_tf(d)))`. This normalizes term importance relative to the document's internal frequency scale.",
+      "tags": [
+        "smart notation",
+        "log-average tf",
+        "weighting"
+      ]
+    },
+    {
+      "id": "q35",
+      "type": "single_choice",
+      "topic": "Vector Space Model",
+      "subtopic": "Dimensionality",
+      "difficulty": "easy",
+      "questionMd": "In the Vector Space Model (VSM), what determines the number of dimensions in a document vector?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "The number of tokens in the document being represented"
+        },
+        {
+          "id": "B",
+          "text": "The number of documents in the collection"
+        },
+        {
+          "id": "C",
+          "text": "The size of the vocabulary `|V|` of the entire collection"
+        },
+        {
+          "id": "D",
+          "text": "The number of unique terms in the query"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "Each vocabulary term defines one coordinate in the Vector Space Model. Therefore the dimension of every document vector is the size of the **global collection vocabulary**, not the number of tokens in any single document.",
+      "tags": [
+        "vector space model",
+        "vocabulary",
+        "dimensions"
+      ]
+    },
+    {
+      "id": "q36",
+      "type": "single_choice",
+      "topic": "BM25",
+      "subtopic": "Length Normalization Example",
+      "difficulty": "medium",
+      "questionMd": "According to the length-normalization worked example in the lecture notes, when two documents contain a query term the same number of times but differ in length, how does BM25 treat the shorter document?",
+      "codeBlock": "",
+      "codeLanguage": "",
+      "image": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "The shorter document is excluded from ranking because BM25 requires a minimum document length relative to `avgdl`"
+        },
+        {
+          "id": "B",
+          "text": "The shorter document receives a lower TF saturation score because BM25 penalizes documents with few total tokens"
+        },
+        {
+          "id": "C",
+          "text": "Both documents receive identical TF saturation scores because BM25 only compares document length to `k1`, not to `avgdl`"
+        },
+        {
+          "id": "D",
+          "text": "The shorter document receives a higher TF saturation score because its length is below average, signaling greater topical focus"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "BM25 rewards term occurrences **more strongly in shorter documents** when all else is equal, because the same number of matches in fewer tokens suggests greater topical concentration. This is one of the main effects of BM25's document-length normalization.",
+      "tags": [
+        "bm25",
+        "length normalization",
+        "avgdl"
+      ]
+    }
+  ]
+}

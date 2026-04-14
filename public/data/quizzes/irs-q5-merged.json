@@ -1,0 +1,1833 @@
+{
+  "meta": {
+    "id": "irs-q5-merged",
+    "title": "[IRS] Quiz 5 — Indexing",
+    "description": "Inverted indices, skip pointers, compression algorithms.",
+    "source": "IRS Past Exams",
+    "course": "Information Retrieval Systems",
+    "topic": "Evaluation Campaigns",
+    "topics": [
+      "Evaluation Campaigns",
+      "Evaluation Metrics",
+      "Significance Testing"
+    ],
+    "questionCount": 40,
+    "difficulty": "medium",
+    "estimatedMinutes": 60,
+    "tags": [
+      "irs",
+      "q5",
+      "merged"
+    ],
+    "fileName": "irs-q5-merged.json"
+  },
+  "questions": [
+    {
+      "id": "q5-irs-001",
+      "type": "single_choice",
+      "topic": "Evaluation Metrics",
+      "subtopic": "Offline Evaluation",
+      "difficulty": "medium",
+      "questionMd": "Which statement correctly describes a known limitation of offline IR evaluation using test collections?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Offline NDCG scores are always higher than online CTR metrics because they are computed over larger document sets"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Offline evaluation requires live user traffic and is therefore more expensive than online A/B testing"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Test collections used in offline evaluation automatically update their qrels as new systems are submitted"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Gains in offline metrics do not always correspond to improvements in online user behavior metrics"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Çevrimdışı (offline) metriklerdeki iyileşme, çevrimiçi (online) kullanıcı davranış metriklerinde (tıklama oranı, oturum süresi vb.) her zaman iyileşmeye dönüşmez. Bu bilinen ve önemli bir sınırlamadır.\n\n**Neden diğerleri yanlış?**\n• **A)** Offline NDCG her zaman online CTR'den yüksek değildir; karşılaştırılamazlar.\n• **B)** Offline değerlendirme canlı trafik gerektirmez; daha ucuzdur.\n• **C)** Test koleksiyonlarındaki qrels otomatik güncellenmez.",
+      "tags": [
+        "evaluation",
+        "offline-testing",
+        "limitations"
+      ],
+      "sourceRefs": [
+        "Q5-v2.json",
+        "Q5.json",
+        "new-mix.json"
+      ],
+      "mergedFromCount": 3,
+      "needs_review": true
+    },
+    {
+      "id": "q5-irs-002",
+      "type": "single_choice",
+      "topic": "Evaluation Metrics",
+      "subtopic": "MRR Use Cases",
+      "difficulty": "easy",
+      "questionMd": "For which type of query is Mean Reciprocal Rank (MRR) the most appropriate evaluation metric?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "E-discovery tasks where both high precision and high recall are legally required"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Medical literature searches requiring comprehensive coverage of all relevant studies"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Ad-hoc multi-document queries evaluated over a large corpus with hundreds of relevant documents"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Navigational or single-answer queries where users care only about finding the first correct result"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "MRR, kullanıcının yalnızca ilk doğru sonucu önemsediği navigasyonel veya tek cevaplı sorgular için en uygun metriktir.\n\n**Neden diğerleri yanlış?**\n• **A)** E-discovery yüksek recall gerektirir; MRR bunu ölçmez.\n• **B)** Tıbbi literatür taraması kapsamlı kapsama gerektirir; recall odaklı metrikler daha uygun.\n• **C)** Çok belgeli ad-hoc sorgularda MAP veya NDCG daha uygun.",
+      "tags": [
+        "evaluation",
+        "mrr",
+        "use-cases"
+      ],
+      "sourceRefs": [
+        "Q5-v2.json",
+        "Q5.json",
+        "new-mix.json"
+      ],
+      "mergedFromCount": 3,
+      "needs_review": true
+    },
+    {
+      "id": "q5-irs-003",
+      "type": "single_choice",
+      "topic": "Evaluation Metrics",
+      "subtopic": "History",
+      "difficulty": "easy",
+      "questionMd": "Which decade saw the introduction of the Cranfield experiments, the first systematic methodology for evaluating information retrieval systems?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The 1940s"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The 1970s"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The 1980s"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The 1960s"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Cranfield deneyleri **1960'larda** Cyril Cleverdon tarafından başlatılmıştır. IR sistemlerinin sistematik değerlendirmesi için temel çerçeveyi oluşturan bu çalışmalar, bugünkü TREC metodolojisinin öncüsüdür.\n\n**Neden diğerleri yanlış?**\n• **A)** 1940'lar çok erken; bilgi erişim disiplini henüz şekillenmemişti.\n• **B)** 1970'ler SMART sistemi dönemine denk gelir, Cranfield değil.\n• **C)** 1980'ler TREC öncesi dönemdir.",
+      "tags": [
+        "evaluation",
+        "history",
+        "cranfield"
+      ],
+      "sourceRefs": [
+        "Q5-v2.json",
+        "new-mix.json",
+        "Q5.json"
+      ],
+      "mergedFromCount": 3,
+      "needs_review": true
+    },
+    {
+      "id": "q5-irs-004",
+      "type": "single_choice",
+      "topic": "Evaluation Metrics",
+      "subtopic": "Precision Definition",
+      "difficulty": "easy",
+      "questionMd": "Which formula correctly defines Precision in an information retrieval evaluation context?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "|Relevant ∩ Retrieved| / |Retrieved|"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "|Relevant ∩ Retrieved| / |Relevant|"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "|Relevant| / (|Relevant| + |Retrieved|)"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "|Retrieved| / |Relevant|"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Precision = |getirilen ∩ ilgili| / |getirilen|. Getirilen belgeler arasındaki ilgili belge oranıdır.\n\n**Neden diğerleri yanlış?**\n• **B)** Bu recall formülüdür.\n• **C)** Bu F-measure'a benzer, precision değil.\n• **D)** Bu doğruluk (accuracy) ölçüsüdür, precision değil.",
+      "tags": [
+        "evaluation",
+        "precision",
+        "math"
+      ],
+      "sourceRefs": [
+        "Q5-v2.json",
+        "new-mix.json",
+        "Q5.json"
+      ],
+      "mergedFromCount": 3,
+      "needs_review": true
+    },
+    {
+      "id": "q5-irs-005",
+      "type": "single_choice",
+      "topic": "Evaluation Metrics",
+      "subtopic": "History",
+      "difficulty": "easy",
+      "questionMd": "Which organisation established TREC (Text REtrieval Conference) in 1992 to provide shared benchmarks for IR evaluation?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "IEEE (Institute of Electrical and Electronics Engineers)"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "DARPA (Defense Advanced Research Projects Agency)"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "ACM (Association for Computing Machinery)"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "NIST (National Institute of Standards and Technology)"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "**NIST** (National Institute of Standards and Technology), DARPA'nın finansmanıyla 1992'de TREC'i kurmuştur. NIST organizasyonu yönetir, test koleksiyonlarını sağlar ve sonuçları değerlendirir.\n\n**Neden diğerleri yanlış?**\n• **A)** IEEE bir yayın/standart kuruluşudur, TREC'i kurmamıştır.\n• **B)** DARPA TREC'e fon sağlamıştır ancak kuran/yöneten kuruluş NIST'tir.\n• **C)** ACM bir bilgisayar bilimi topluluğudur, TREC'i kurmamıştır.",
+      "tags": [
+        "evaluation",
+        "history",
+        "trec"
+      ],
+      "sourceRefs": [
+        "Q5-v2.json",
+        "new-mix.json",
+        "Q5.json"
+      ],
+      "mergedFromCount": 3,
+      "needs_review": true
+    },
+    {
+      "id": "q5-irs-006",
+      "type": "single_choice",
+      "topic": "Evaluation Metrics",
+      "subtopic": "Inter-annotator Agreement",
+      "difficulty": "medium",
+      "questionMd": "In TREC relevance judging, Cohen's κ values typically fall between 0.6 and 0.8. What does this imply about IR evaluation?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The κ range shows that automated relevance labeling is more reliable than human judgment"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Agreement is nearly perfect, so evaluation results can be treated as ground truth without reservation"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Annotators disagree so frequently that per-query results are unreliable and should be discarded"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "There is substantial but imperfect agreement among assessors."
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Cohen's κ 0.6–0.8 aralığı, değerlendiriciler arasında **önemli ama kusursuz olmayan uyum** (substantial agreement) olduğunu gösterir. Bu, IR değerlendirmesinin tamamen güvenilmez olmadığını ama %100 kesin de olmadığını ifade eder.\n\n**Neden diğerleri yanlış?**\n• **A)** κ insan yargılarının güvenilirliğini ölçer, otomatik etiketleme ile karşılaştırma yapmaz.\n• **B)** 'Neredeyse mükemmel' uyum κ > 0.8 gerektirir; 0.6-0.8 'substantial'dır.\n• **C)** Bu aralık, sonuçların atılması gerektiği anlamına gelmez; yeterli güvenilirlik vardır.",
+      "tags": [
+        "evaluation",
+        "trec",
+        "statistics"
+      ],
+      "sourceRefs": [
+        "Q5-v2.json",
+        "new-mix.json",
+        "Q5.json"
+      ],
+      "mergedFromCount": 3,
+      "needs_review": true
+    },
+    {
+      "id": "q5-irs-007",
+      "type": "single_choice",
+      "topic": "Evaluation Metrics",
+      "subtopic": "Significance Testing",
+      "difficulty": "medium",
+      "questionMd": "A researcher reports p < 0.05 on a Wilcoxon signed-rank test comparing two IR systems. A colleague argues this alone is insufficient to conclude that one system is better. Why is the colleague correct?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "p < 0.05 confirms the null hypothesis, meaning the systems perform identically on the query set"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Statistical significance only rules out chance."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "A Wilcoxon test requires at least 100 queries before p-values become meaningful, regardless of the result"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The Wilcoxon test only applies to normally distributed data; using it on MAP scores is methodologically invalid"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "p < 0.05 sadece gözlenen farkın rastlantısal olmadığını söyler. Farkın *büyüklüğünü* (effect size) veya pratik önemini ölçmez. İstatistiksel anlamlılık ≠ pratik anlamlılık.\n\n**Neden diğerleri yanlış?**\n• **A)** p < 0.05 null hipotezi *reddeder*, doğrulamaz.\n• **C)** 100 sorgu eşiği keyfidir; Wilcoxon küçük örneklemlerde de çalışır.\n• **D)** Wilcoxon parametrik olmayan bir testtir, normal dağılım gerektirmez.",
+      "tags": [
+        "evaluation",
+        "statistics",
+        "significance"
+      ],
+      "sourceRefs": [
+        "Q5-v2.json",
+        "new-mix.json",
+        "Q5.json"
+      ],
+      "mergedFromCount": 3,
+      "needs_review": true
+    },
+    {
+      "id": "q5-irs-008",
+      "type": "single_choice",
+      "topic": "Evaluation Metrics",
+      "subtopic": "Bootstrap Resampling",
+      "difficulty": "medium",
+      "questionMd": "In IR significance testing, bootstrap resampling estimates confidence intervals by which procedure?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Randomly splitting the document corpus into halves and comparing system scores on each half"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Shuffling relevance judgments across queries to simulate a null distribution"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Repeatedly sampling queries with replacement from the evaluation set and recomputing the metric each time"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Running the retrieval system multiple times with different random seeds and averaging the results"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Bootstrap yeniden örnekleme, değerlendirme kümesinden **yerine koyarak tekrarlı sorgu örneklemesi** yaparak ve her seferinde metriği yeniden hesaplayarak güven aralıklarını tahmin eder.\n\n**Neden diğerleri yanlış?**\n• **A)** Korpusu ikiye bölmek bootstrap değil, split-half yöntemidir.\n• **B)** Alaka yargılarını karıştırmak permütasyon testidir, bootstrap değil.\n• **D)** Farklı random seed'lerle çalıştırma stokastik sistemler için geçerlidir; bootstrap yöntemi değildir.",
+      "tags": [
+        "evaluation",
+        "statistics",
+        "bootstrap"
+      ],
+      "sourceRefs": [
+        "Q5-v2.json",
+        "Q5.json",
+        "new-mix.json"
+      ],
+      "mergedFromCount": 3,
+      "needs_review": true
+    },
+    {
+      "id": "q5-irs-009",
+      "type": "single_choice",
+      "topic": "Evaluation Metrics",
+      "subtopic": "P@k vs AP",
+      "difficulty": "medium",
+      "questionMd": "A colleague claims that P@10 is equivalent to Average Precision (AP). Which statement best explains why this claim is incorrect?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "P@10 is normalized to [0,1] across queries, whereas AP can exceed 1.0"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "P@10 only counts relevant documents in the top 10 regardless of their positions."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "P@10 uses graded relevance scores while AP uses binary relevance only"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "AP averages over a fixed cutoff of 10, whereas P@10 considers the entire ranked list"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "P@10 sadece ilk 10 sonucu sayar ve ilgili belgelerin **hangi pozisyonlarda** olduğunu önemsemez. AP ise her ilgili belgenin pozisyonundaki precision'u hesaba katar — sıralama kalitesini ölçer.\n\n**Neden diğerleri yanlış?**\n• **A)** AP de [0,1] aralığındadır; 1.0'ı aşamaz.\n• **C)** P@10 ikili alaka kullanır; derecelendirme NDCG'ye aittir.\n• **D)** Tam tersi: AP tüm listeyi, P@10 sadece ilk 10'u dikkate alır.",
+      "tags": [
+        "evaluation",
+        "map",
+        "precision-at-k"
+      ],
+      "sourceRefs": [
+        "Q5-v2.json",
+        "new-mix.json",
+        "Q5.json"
+      ],
+      "mergedFromCount": 3,
+      "needs_review": true
+    },
+    {
+      "id": "q5-irs-010",
+      "type": "single_choice",
+      "topic": "Evaluation Metrics",
+      "subtopic": "MAP Penalties",
+      "difficulty": "medium",
+      "questionMd": "Mean Average Precision (MAP) penalizes a system that fails to retrieve some relevant documents. Why?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Relevant documents that are never retrieved contribute a precision of 0 to the AP calculation."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Unretrieved documents are assigned the lowest possible rank, which increases the denominator of the AP formula."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "MAP applies a log-discount to later ranks, making missing documents proportionally more costly."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "MAP is computed only over queries where the system retrieved at least one relevant document, excluding all others."
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "MAP'ta getirilmeyen ilgili belgeler AP hesaplamasına 0 precision ile katkıda bulunur. AP, toplam ilgili belge sayısına böler — getirilmeyenler payı artırmaz ama paydada yer alır.\n\n**Neden diğerleri yanlış?**\n• **B)** Getirilmeyen belgelere 'en düşük sıra' atanmaz; böyle bir mekanizma yoktur.\n• **C)** Log-discount DCG'ye aittir, MAP'a değil.\n• **D)** MAP tüm sorguları dahil eder; dışlama yapmaz.",
+      "tags": [
+        "evaluation",
+        "map",
+        "penalties"
+      ],
+      "sourceRefs": [
+        "Q5-v2.json",
+        "new-mix.json",
+        "Q5.json"
+      ],
+      "mergedFromCount": 3,
+      "needs_review": true
+    },
+    {
+      "id": "q5-irs-011",
+      "type": "single_choice",
+      "topic": "Evaluation Metrics",
+      "subtopic": "Recall Definition",
+      "difficulty": "easy",
+      "questionMd": "Recall measures which aspect of retrieval performance?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The average precision at each recall level across multiple queries"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The rank position of the first relevant document in the result list"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The fraction of all relevant documents that were successfully retrieved"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The fraction of retrieved documents that are relevant"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Recall = |getirilen ∩ ilgili| / |tüm ilgili|. Koleksiyondaki ilgili belgelerin ne kadarının başarıyla getirildiğini ölçer.\n\n**Neden diğerleri yanlış?**\n• **A)** Bu, interpolated precision tanımıdır.\n• **B)** Bu, reciprocal rank (RR) tanımıdır.\n• **D)** Bu *precision* tanımıdır, recall değil.",
+      "tags": [
+        "evaluation",
+        "recall",
+        "definitions"
+      ],
+      "sourceRefs": [
+        "Q5-v2.json",
+        "new-mix.json",
+        "Q5.json"
+      ],
+      "mergedFromCount": 3,
+      "needs_review": true
+    },
+    {
+      "id": "q5-irs-012",
+      "type": "single_choice",
+      "topic": "Evaluation Metrics",
+      "subtopic": "F-Measure",
+      "difficulty": "hard",
+      "questionMd": "A search application requires that Recall be weighted more heavily than Precision. Which setting of β in the Fβ formula achieves this?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "β > 1, because larger β values increase the weight assigned to Recall in the harmonic mean"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "β=0, because this setting removes Precision from the calculation entirely"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "β=1, because this balances Precision and Recall and therefore emphasises neither"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "β < 1, because smaller β values shift focus away from Precision toward Recall"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "F-measure formülü: F_β = (1+β²)·(P·R) / (β²·P + R). β > 1 olduğunda Recall daha ağırlıklıdır. Recall'un Precision'dan daha önemli olduğu senaryolarda β > 1 kullanılır (örn. β = 2).\n\n**Neden diğerleri yanlış?**\n• **B)** β < 1 Precision'ı ağırlıklandırır.\n• **C)** β = 1 eşit ağırlık verir (F1 skoru).\n• **D)** β = 0 sadece Precision ölçer.",
+      "tags": [
+        "evaluation",
+        "f-score",
+        "math"
+      ],
+      "sourceRefs": [
+        "Q5-v2.json",
+        "new-mix.json",
+        "Q5.json"
+      ],
+      "mergedFromCount": 3,
+      "needs_review": true
+    },
+    {
+      "id": "q5-irs-013",
+      "type": "single_choice",
+      "topic": "Evaluation Metrics",
+      "subtopic": "Relevance Scale",
+      "difficulty": "easy",
+      "questionMd": "Under the TREC standard four-point graded relevance scale, which grade label is assigned to a document that is a perfect, exact answer to the query?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "1 — Partially relevant"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "4 — Authoritative source"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "3 — Perfectly relevant"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "2 — Highly relevant"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "TREC'in dört puanlık derecelendirme ölçeğinde, sorguya mükemmel ve tam cevap olan belgeye **3 — Perfectly relevant** verilir. Ölçek: 0 = ilgisiz, 1 = kısmen ilgili, 2 = yüksek derecede ilgili, 3 = mükemmel derecede ilgili.\n\n**Neden diğerleri yanlış?**\n• **A)** 1 kısmen ilgili belgeler içindir.\n• **B)** 4 puanlık ölçekte 4 değeri yoktur (0-3 arası).\n• **D)** 2 yüksek derecede ilgili ama mükemmel cevap değildir.",
+      "tags": [
+        "evaluation",
+        "trec",
+        "relevance-scale"
+      ],
+      "sourceRefs": [
+        "Q5-v2.json",
+        "new-mix.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "q5-irs-014",
+      "type": "single_choice",
+      "topic": "Evaluation Metrics",
+      "subtopic": "Pooling Bias",
+      "difficulty": "hard",
+      "questionMd": "A new retrieval system retrieves a highly relevant document that was not included in the TREC judgment pool. How does this affect the system's measured evaluation score?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The document is treated as irrelevant because it was never judged, which unfairly penalises the system"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The document is excluded from the metric computation, leaving the system's score unchanged"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The evaluation is restarted with an expanded pool that includes the new system's results"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The document receives the highest relevance grade automatically, rewarding novel retrieval"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "TREC havuzunda (pool) bulunmayan belgeler, değerlendirilmedikleri için **ilgisiz kabul edilir** — bu, yeni sistemi haksız yere cezalandırır. Bu, *pool bias* olarak bilinen önemli bir değerlendirme sınırlamasıdır.\n\n**Neden diğerleri yanlış?**\n• **B)** Belge metrik hesaplamasından dışlanmaz; ilgisiz sayılarak dahil edilir.\n• **C)** Havuz geriye dönük genişletilmez; mevcut yargılarla değerlendirilir.\n• **D)** Otomatik yüksek derece verilmez; havuzda yoksa 'unjudged = irrelevant' kuralı uygulanır.",
+      "tags": [
+        "evaluation",
+        "trec",
+        "pooling",
+        "bias"
+      ],
+      "sourceRefs": [
+        "Q5-v2.json",
+        "new-mix.json",
+        "Q5.json"
+      ],
+      "mergedFromCount": 3,
+      "needs_review": false
+    },
+    {
+      "id": "q5-irs-015",
+      "type": "single_choice",
+      "topic": "Evaluation Metrics",
+      "subtopic": "Test Collections",
+      "difficulty": "easy",
+      "questionMd": "A standard IR test collection consists of exactly three required components. Which of the following correctly identifies all three?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A ranked retrieval model, a query parser, and a relevance feedback module"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "An inverted index, a stemmer, and a stop-word list"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "A training set, a validation set, and a held-out test set"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "A fixed corpus, standardized topics, and human relevance judgments (qrels)"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Standart IR test koleksiyonunun üç bileşeni: (1) **sabit korpus**, (2) **standartlaştırılmış konular/sorgular** (topics), (3) **insan alaka yargıları** (qrels). Bu üçlü Cranfield paradigmasının temelidir.\n\n**Neden diğerleri yanlış?**\n• **A)** Model, parser ve feedback modülü sistem bileşenleridir, test koleksiyonu bileşenleri değil.\n• **B)** İndeks, stemmer ve stopword listesi indeksleme araçlarıdır.\n• **C)** Training/validation/test split makine öğrenmesi yapısıdır, IR test koleksiyonu değil.",
+      "tags": [
+        "evaluation",
+        "test-collection",
+        "cranfield"
+      ],
+      "sourceRefs": [
+        "Q5-v2.json",
+        "new-mix.json",
+        "Q5.json"
+      ],
+      "mergedFromCount": 3,
+      "needs_review": true
+    },
+    {
+      "id": "q5-irs-016",
+      "type": "single_choice",
+      "topic": "Evaluation Metrics",
+      "subtopic": "MRR Edge Cases",
+      "difficulty": "medium",
+      "questionMd": "In a Mean Reciprocal Rank (MRR) computation, a query returns a ranked list in which no relevant document appears anywhere in the results. What Reciprocal Rank value is assigned to this query?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "0.0, because no relevant document was found"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "1.0, because the metric defaults to the maximum when the query cannot be penalised further"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "0.5, as the midpoint value for a partial retrieval failure"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The query is excluded from the MRR calculation to avoid distorting the mean"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Sonuçlarda hiçbir ilgili belge yoksa Reciprocal Rank = 0.0 atanır. MRR hesaplamasında bu sorgu 0 ile katkıda bulunur.\n\n**Neden diğerleri yanlış?**\n• **B)** İlgili belge bulunamadığında 1.0 atanmaz; tam tersi.\n• **C)** 0.5 keyfi bir değerdir ve kullanılmaz.\n• **D)** Sorgu genellikle dışlanmaz; 0 olarak dahil edilir.",
+      "tags": [
+        "evaluation",
+        "mrr",
+        "edge-cases"
+      ],
+      "sourceRefs": [
+        "Q5-v2.json",
+        "new-mix.json",
+        "Q5.json"
+      ],
+      "mergedFromCount": 3,
+      "needs_review": true
+    },
+    {
+      "id": "q5-irs-017",
+      "type": "single_choice",
+      "topic": "Evaluation Metrics",
+      "subtopic": "Reciprocal Rank",
+      "difficulty": "easy",
+      "questionMd": "For a single query, the first relevant document appears at rank 3 in the result list. What is the Reciprocal Rank (RR) for this query?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "0.33"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "3.00"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "0.10"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "0.50"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "İlk ilgili belge 3. sırada görünüyorsa, Reciprocal Rank = 1/3 ≈ 0.33. RR = 1 / (ilk ilgili belgenin sırası).\n\n**Neden diğerleri yanlış?**\n• **B)** 3.0 sıra numarasıdır, RR değil.\n• **C)** 1/3, 0.5 değil 0.33'tür.\n• **D)** 0 sadece hiçbir ilgili belge yoksa olur.",
+      "tags": [
+        "evaluation",
+        "mrr",
+        "math"
+      ],
+      "sourceRefs": [
+        "Q5-v2.json",
+        "new-mix.json",
+        "Q5.json"
+      ],
+      "mergedFromCount": 3,
+      "needs_review": true
+    },
+    {
+      "id": "q5-irs-018",
+      "type": "single_choice",
+      "topic": "Evaluation Metrics",
+      "subtopic": "DCG",
+      "difficulty": "medium",
+      "questionMd": "In Discounted Cumulative Gain (DCG), relevance scores are divided by the log base-2 of (rank + 1). What user behavior does this logarithmic discount model?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The discount penalizes systems that retrieve more than k documents, keeping result sets short"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Users prefer documents that are only marginally relevant at high ranks over highly relevant documents at low ranks"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Users read results in random order, so position should have no effect on contribution"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "User attention diminishes at lower ranks, so a relevant document at rank 10 is worth less than one at rank 1"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "DCG'deki logaritmik indirim, kullanıcıların düşük sıralardaki sonuçlara daha az dikkat ettiğini modellemektedir. 10. sıradaki ilgili belge, 1. sıradakinden daha az katkı sağlar.\n\n**Neden diğerleri yanlış?**\n• **A)** İndirim k'dan fazla belge getirmeyi cezalandırmaz.\n• **B)** Kullanıcılar düşük sıralarda marjinal ilgili belgeleri tercih etmez; tam tersi.\n• **C)** Pozisyon etkisizse indirim uygulanmazdı.",
+      "tags": [
+        "evaluation",
+        "dcg",
+        "user-behavior"
+      ],
+      "sourceRefs": [
+        "Q5-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q5-irs-019",
+      "type": "single_choice",
+      "topic": "Evaluation Metrics",
+      "subtopic": "NDCG",
+      "difficulty": "medium",
+      "questionMd": "A system achieves NDCG@k = 1.0 for a given query. What must be true?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The system's ranking is identical to the ideal ranking"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The system's DCG@k equals zero, meaning no relevant documents were returned"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "NDCG@k=1.0 is impossible; values are strictly bounded below 1.0 in practice"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The system retrieved exactly k documents, all of which are relevant"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "NDCG@k = DCG@k / IDCG@k = 1.0 demek, sistemin sıralamasının ideal sıralama ile birebir aynı olduğu anlamına gelir.\n\n**Neden diğerleri yanlış?**\n• **B)** DCG = 0 olsaydı NDCG 0 olurdu, 1 değil.\n• **C)** NDCG@k = 1.0 mümkündür ve ideal sıralamada elde edilir.\n• **D)** Tam k ilgili belge getirmek yetmez; sıralama da ideal olmalıdır.",
+      "tags": [
+        "evaluation",
+        "ndcg",
+        "logic"
+      ],
+      "sourceRefs": [
+        "Q5-v2.json",
+        "Q5.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "q5-irs-020",
+      "type": "single_choice",
+      "topic": "Evaluation Metrics",
+      "subtopic": "R-Precision",
+      "difficulty": "medium",
+      "questionMd": "R-Precision is defined as Precision computed at rank R, where R is which quantity?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The ratio of retrieved documents to total collection size"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The rank of the first relevant document returned by the system"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The total number of relevant documents for that query in the collection"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The value of the fixed cutoff k chosen by the evaluator"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "R-Precision, R sırasında hesaplanan Precision'dır ve burada R, ilgili belgelerin toplam sayısıdır (|Rel|). Yani sorgu için kaç ilgili belge varsa, o kadar sonuçtaki precision ölçülür.\n\n**Neden diğerleri yanlış?**\n• **A)** R, getirilen belge sayısı değildir.\n• **B)** R, koleksiyondaki toplam belge sayısı değildir.\n• **D)** R, kullanıcı tarafından belirlenen sabit bir kesim değildir.",
+      "tags": [
+        "evaluation",
+        "precision",
+        "definitions"
+      ],
+      "sourceRefs": [
+        "Q5-v2.json",
+        "Q5.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "q5-irs-021",
+      "type": "single_choice",
+      "topic": "Evaluation Metrics",
+      "subtopic": "Average Precision",
+      "difficulty": "hard",
+      "questionMd": "A system retrieves 5 documents for a query that has 10 relevant documents, and all 5 retrieved documents are relevant and ranked perfectly. What is the maximum possible AP for this query?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "0.5, because the 5 unretrieved relevant documents each contribute 0 to the AP sum"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "0.75, because partial retrieval is penalised by a fixed 25% reduction in AP"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "1.0, because every retrieved document is relevant and ranked in perfect order"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "0.0, because MAP requires all relevant documents to be retrieved before assigning any credit"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "AP = Σ(Precision@rank_i × rel_i) / |toplam ilgili belge|. 5 ilgili belge mükemmel sıralanmış: P@1=1, P@2=1, ..., P@5=1. Toplam = 5. Toplam ilgili = 10. AP = 5/10 = **0.5**.\n\n**Neden diğerleri yanlış?**\n• **C)** 1.0 olması için 10 ilgili belgenin tamamı getirilmeliydi.\n• **B)** %25 sabit azaltma uygulanmaz.\n• **D)** MAP, kısmi getirmeye de kredi verir; sıfır atamaz.",
+      "tags": [
+        "evaluation",
+        "map",
+        "math"
+      ],
+      "sourceRefs": [
+        "Q5-v2.json",
+        "Q5.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "q5-irs-022",
+      "type": "single_choice",
+      "topic": "Evaluation Metrics",
+      "subtopic": "IDCG",
+      "difficulty": "medium",
+      "questionMd": "The Ideal DCG (IDCG@k) is defined as the DCG@k of which ranking?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The theoretically perfect ranking, where all documents are sorted by descending relevance grade"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The ranking that places all irrelevant documents first to establish a worst-case baseline"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The ranking produced by the best-performing system in the evaluation pool"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The ranking that maximizes Precision@k regardless of graded relevance"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "IDCG@k, belgelerin alaka derecelerine göre ideal (en iyi mümkün) sıralamanın DCG@k değeridir. Yani tüm ilgili belgeler en üst sıralarda olacak şekilde sıralandığında elde edilen DCG'dir.\n\n**Neden diğerleri yanlış?**\n• **B)** Rastgele sıralama ideal değildir.\n• **C)** En kötü sıralama IDCG tanımı değildir.\n• **D)** Sistem sıralaması ideal olmayabilir.",
+      "tags": [
+        "evaluation",
+        "dcg",
+        "ndcg"
+      ],
+      "sourceRefs": [
+        "Q5-v2.json",
+        "Q5.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "q5-irs-023",
+      "type": "single_choice",
+      "topic": "Evaluation Metrics",
+      "subtopic": "MAP Limitations",
+      "difficulty": "medium",
+      "questionMd": "A colleague argues that MAP is always preferable to NDCG@k because MAP considers the entire ranked list rather than a cutoff. Which counter-argument best explains a key limitation of MAP?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "MAP is only defined for navigational queries where exactly one relevant document exists"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "MAP penalises systems that retrieve more than k documents, making deep retrieval unfair"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "MAP requires a larger query set than NDCG@k to produce stable estimates"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "MAP assumes binary relevance"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "MAP'ın temel sınırlaması ikili (binary) alaka varsaymasıdır: bir belge ya ilgili ya değildir. NDCG@k ise derecelendirilmiş alaka (graded relevance) kullanarak 'çok ilgili' ve 'biraz ilgili' ayrımı yapabilir.\n\n**Neden diğerleri yanlış?**\n• **A)** MAP tek ilgili belgeli sorgularla sınırlı değildir.\n• **B)** MAP k'dan fazla belge getirmeyi cezalandırmaz.\n• **C)** MAP'ın daha büyük sorgu kümesi gerektirdiği genel bir kural değildir.",
+      "tags": [
+        "evaluation",
+        "map",
+        "limitations"
+      ],
+      "sourceRefs": [
+        "Q5-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q5-irs-024",
+      "type": "single_choice",
+      "topic": "Evaluation Metrics",
+      "subtopic": "Qrels",
+      "difficulty": "medium",
+      "questionMd": "In a standard TREC qrels file, each line maps a (query_id, doc_id) pair to a relevance label. What does a grade of 0 in a graded qrels file signify?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The document was not in the judgment pool and was therefore never assessed"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The document was judged by a human assessor and found to be irrelevant to the query"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The document is partially relevant — useful but not a complete answer"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The query was retired and no longer active in the evaluation campaign"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "qrels dosyasında derece 0, belgenin bir insan değerlendirici tarafından **değerlendirildiğini ve ilgisiz bulunduğunu** gösterir. Belge havuzda olup incelenmiş, ancak sorguyla ilgili değil olarak işaretlenmiştir.\n\n**Neden diğerleri yanlış?**\n• **A)** Havuzda olmayan belgeler qrels dosyasında yer almaz; 0 aktif bir yargıdır.\n• **C)** Kısmen ilgili belgeler 1 veya daha yüksek derece alır.\n• **D)** Sorgu durumu qrels derecesiyle ilgisizdir.",
+      "tags": [
+        "evaluation",
+        "trec",
+        "qrels"
+      ],
+      "sourceRefs": [
+        "Q5-v2.json",
+        "Q5.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "q5-irs-025",
+      "type": "single_choice",
+      "topic": "Evaluation Metrics",
+      "subtopic": "Wilcoxon Test",
+      "difficulty": "medium",
+      "questionMd": "Why is the Wilcoxon signed-rank test generally preferred over the paired t-test for comparing per-query AP score distributions in IR experiments?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Wilcoxon is always more statistically powerful than the t-test, producing lower p-values on the same data"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The paired t-test requires at least 1,000 queries to produce valid results, while Wilcoxon works on any sample size"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Wilcoxon is non-parametric and does not assume that per-query score differences are normally distributed"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Wilcoxon directly optimises NDCG, making it more aligned with the evaluation objective than the t-test"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Wilcoxon işaretli sıra testi **parametrik olmayan** (non-parametric) bir testtir — sorgu başına skor farklarının normal dağılım göstermesini varsaymaz. IR'de AP skorları genellikle normal dağılmaz; bu yüzden Wilcoxon tercih edilir.\n\n**Neden diğerleri yanlış?**\n• **A)** Wilcoxon her zaman daha güçlü değildir; normal dağılımda t-test daha güçlüdür.\n• **B)** t-test 1000 sorgu gerektirmez; küçük örneklemlerde de çalışır.\n• **D)** Wilcoxon NDCG'yi optimize etmez; genel amaçlı bir istatistiksel testtir.",
+      "tags": [
+        "evaluation",
+        "statistics",
+        "wilcoxon"
+      ],
+      "sourceRefs": [
+        "Q5-v2.json",
+        "Q5.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "q5-irs-026",
+      "type": "single_choice",
+      "topic": "Evaluation Metrics",
+      "subtopic": "Online vs Offline",
+      "difficulty": "medium",
+      "questionMd": "A research team reports that their new ranking model improves NDCG@10 by +0.03 in offline evaluation but observes no improvement in click-through rate during a live A/B test. What does this illustrate?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "That the A/B test sample was too small and the experiment should be repeated with more users"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "That click-through rate is an unreliable metric and should be replaced by NDCG in live experiments"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "That offline metric gains and online user behaviour metrics can diverge significantly"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "That the NDCG improvement is not statistically significant and the offline result should be discarded"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Bu örnek, **çevrimdışı metrik kazanımları ile çevrimiçi kullanıcı davranış metrikleri arasındaki ayrışmayı** (divergence) göstermektedir. Offline NDCG iyileşmesi her zaman online CTR iyileşmesine dönüşmez.\n\n**Neden diğerleri yanlış?**\n• **A)** Örneklem boyutu sorunu olabilir ama temel ders offline/online ayrışmasıdır.\n• **B)** CTR güvenilmez değildir; farklı bir şeyi ölçer.\n• **D)** NDCG iyileşmesinin istatistiksel anlamlılığı burada sorgulanan konu değildir.",
+      "tags": [
+        "evaluation",
+        "online-testing",
+        "metrics"
+      ],
+      "sourceRefs": [
+        "Q5-v2.json",
+        "Q5.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "q5-irs-027",
+      "type": "single_choice",
+      "topic": "Evaluation Metrics",
+      "subtopic": "MAP Calculation",
+      "difficulty": "easy",
+      "questionMd": "Three queries yield Average Precision scores of 0.72, 0.45, and 0.38 for a system. What is the MAP?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "0.517, computed as (0.72 + 0.45 + 0.38) / 3"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "1.550, because MAP sums the AP values without dividing by the number of queries"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "0.550, computed as the median of the three AP values"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "0.720, because MAP reports the highest AP score across all queries"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "MAP = Mean Average Precision = AP değerlerinin **aritmetik ortalaması**. (0.72 + 0.45 + 0.38) / 3 = 1.55 / 3 = **0.517**.\n\n**Neden diğerleri yanlış?**\n• **B)** MAP toplamı sorgu sayısına böler; toplamaz.\n• **C)** MAP medyan değil, ortalama kullanır.\n• **D)** MAP en yüksek AP'yi değil, ortalamayı raporlar.",
+      "tags": [
+        "evaluation",
+        "map",
+        "math"
+      ],
+      "sourceRefs": [
+        "Q5-v2.json",
+        "Q5.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "q5-irs-028",
+      "type": "single_choice",
+      "topic": "Evaluation Metrics",
+      "subtopic": "AP Calculation",
+      "difficulty": "medium",
+      "questionMd": "Given the ranked list **R, I, I, R, R** (R = relevant, I = irrelevant), what is the Average Precision (AP)?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "0.700"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "0.600"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "0.500"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "0.333"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Sıralı liste: R, I, I, R, R\n• Rank 1 (R): P@1 = 1/1 = 1.0\n• Rank 4 (R): P@4 = 2/4 = 0.5\n• Rank 5 (R): P@5 = 3/5 = 0.6\nAP = (1.0 + 0.5 + 0.6) / 3 = 2.1 / 3 = **0.700**\n\n**Neden diğerleri yanlış?**\nDiğer seçenekler AP hesaplamasını yanlış yapar.",
+      "tags": [
+        "evaluation",
+        "map",
+        "calculation"
+      ],
+      "sourceRefs": [
+        "Q5-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q5-irs-029",
+      "type": "single_choice",
+      "topic": "Evaluation Metrics",
+      "subtopic": "Precision-Recall Tradeoff",
+      "difficulty": "easy",
+      "questionMd": "What is the typical relationship between Precision and Recall as more documents are retrieved?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Precision stays constant while Recall increases"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Recall decreases as Precision increases, because early ranks contain the best results"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Precision tends to decrease as Recall increases, reflecting a fundamental tradeoff"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Both Precision and Recall increase together as more documents are retrieved"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Daha fazla belge getirildikçe **Recall artar** (daha fazla ilgili belge bulunur) ama **Precision azalır** (ilgisiz belgeler de sonuca girer). Bu, IR’deki temel *precision-recall tradeoff*’unu yansıtır.\n\n**Neden diğerleri yanlış?**\n• **A)** Precision sabit kalmaz; genellikle düşer.\n• **B)** Recall azalmaz; daha fazla belge getirdikçe artar.\n• **D)** İkisi birlikte artmaz; ters yönlü hareket ederler.",
+      "tags": [
+        "evaluation",
+        "precision",
+        "recall"
+      ],
+      "sourceRefs": [
+        "Q5-v2.json",
+        "Q5.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "q5-irs-030",
+      "type": "single_choice",
+      "topic": "Evaluation Metrics",
+      "subtopic": "Interpolated Precision",
+      "difficulty": "medium",
+      "questionMd": "When constructing an 11-point interpolated Precision-Recall curve, how is interpolated Precision defined at a given recall level r?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The minimum Precision across all recall levels r' > r, to represent a pessimistic bound"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The arithmetic mean of Precision values immediately before and after recall level r"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The Precision value recorded the first time recall r is reached during retrieval"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The maximum Precision achieved at any recall level r' that is greater than or equal to r"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "11 noktalı interpolasyonlu Precision-Recall eğrisinde, belirli bir recall seviyesi r için interpolasyonlu Precision: r’ye **eşit veya daha büyük** herhangi bir recall seviyesinde elde edilen **maksimum Precision** olarak tanımlanır.\n\n**Neden diğerleri yanlış?**\n• **A)** Minimum değil, maksimum kullanılır.\n• **B)** Aritmetik ortalama değil, maksimum kullanılır.\n• **C)** İlk ulaşılan değer değil, sonraki tüm seviyelerdeki maksimum kullanılır.",
+      "tags": [
+        "evaluation",
+        "pr-curve",
+        "interpolation"
+      ],
+      "sourceRefs": [
+        "Q5-v2.json",
+        "Q5.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "q5-irs-031",
+      "type": "single_choice",
+      "topic": "Evaluation Metrics",
+      "subtopic": "F-Measure",
+      "difficulty": "easy",
+      "questionMd": "Which formula correctly defines the F1 score in terms of Precision (P) and Recall (R)?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "PR / (P + R)"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "2PR / (P + R)"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "(P + R) / 2"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "2(P + R) / (P × R)"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "F1 skoru, Precision ve Recall'ın **harmonik ortalaması**dır: `F1 = 2PR / (P + R)`. Her iki metriğin de yüksek olmasını teşvik eder; biri düşükse F1 de düşük kalır.\n\n**Neden diğerleri yanlış?**\n• **A)** PR/(P+R) harmonik ortalamayla ilgili ama 2 çarpanı eksik.\n• **C)** (P+R)/2 aritmetik ortalamadır; harmonik ortalama değildir.\n• **D)** 2(P+R)/(P×R) payda ve payı ters çevirir; doğru değildir.",
+      "tags": [
+        "evaluation",
+        "f-score",
+        "math"
+      ],
+      "sourceRefs": [
+        "Q5-v2.json",
+        "Q5.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "q5-irs-032",
+      "type": "single_choice",
+      "topic": "Evaluation Metrics",
+      "subtopic": "Metric Selection",
+      "difficulty": "medium",
+      "questionMd": "A medical literature search system is designed to ensure clinicians find *every* relevant study on a drug interaction. Which evaluation metric is most appropriate?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "NDCG@10, because graded relevance most accurately reflects a clinician's document preferences"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "MAP, because it rewards retrieving all relevant documents and penalises any that are missed"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "MRR, because clinicians only need to find the single most authoritative study for each query"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "P@5, because clinicians typically only read the first five results returned"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "When the goal is comprehensive coverage (finding *every* relevant document), recall is critical. Mean Average Precision (MAP) accounts for both precision and recall, strictly penalizing the system if it fails to retrieve some of the relevant documents from the corpus.",
+      "tags": [
+        "evaluation",
+        "map",
+        "recall"
+      ],
+      "sourceRefs": [
+        "Q5.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q5-irs-033",
+      "type": "single_choice",
+      "topic": "Evaluation Metrics",
+      "subtopic": "PR Curve",
+      "difficulty": "medium",
+      "questionMd": "A system has a high Area Under the Precision-Recall Curve (AUC-PR). What does this indicate about its retrieval behavior?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The system maintains good Precision across a wide range of Recall levels simultaneously"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The system retrieves all relevant documents within the top 10 results"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The system has a very high Precision@1 but low Recall across all cutoffs"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The system's ranked list is longer than competitors, covering more of the corpus"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "A high Area Under the PR Curve indicates that as the system retrieves more documents (increasing Recall), it does not sacrifice much Precision. It maintains strong performance across both dimensions.",
+      "tags": [
+        "evaluation",
+        "precision",
+        "recall",
+        "auc"
+      ],
+      "sourceRefs": [
+        "Q5.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q5-irs-034",
+      "type": "single_choice",
+      "topic": "Evaluation Metrics",
+      "subtopic": "NDCG Edge Cases",
+      "difficulty": "hard",
+      "questionMd": "What must a developer do in code when computing NDCG@k for a query that has no relevant documents in the collection?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Return 0.0 as a special-case guard, because IDCG=0 makes the formula undefined"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Return 1.0, because a system cannot be penalised for a query with no correct answers"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Assign each retrieved document a relevance grade of 1 and recompute normally"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Exclude that query from the evaluation and reduce Q by 1 in the MAP formula"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "If there are zero relevant documents for a query, the Ideal DCG (IDCG) is exactly 0. Attempting to calculate NDCG (DCG / IDCG) would cause a divide-by-zero error. Standard evaluation scripts catch this and typically assign 0.0.",
+      "tags": [
+        "evaluation",
+        "ndcg",
+        "edge-cases"
+      ],
+      "sourceRefs": [
+        "Q5.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q5-irs-035",
+      "type": "single_choice",
+      "topic": "Evaluation Campaigns",
+      "subtopic": "Pooling Bias",
+      "difficulty": "medium",
+      "questionMd": "In TREC-style evaluation, the pooling method is used to reduce annotation cost. What known bias does this approach introduce?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Pooling forces all systems to retrieve the same top-k documents, reducing result diversity"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Annotators judge documents from all queries simultaneously, leading to topic confusion"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Documents in the pool receive inflated relevance scores because annotators see too many results at once"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Documents outside the pool are treated as irrelevant"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Because humans cannot assess millions of documents, only the top-k results from multiple systems are 'pooled' and judged. If a future system retrieves a brilliant relevant document that wasn't in that original pool, standard scoring algorithms treat it as irrelevant.",
+      "tags": [
+        "evaluation",
+        "trec",
+        "pooling",
+        "bias"
+      ],
+      "sourceRefs": [
+        "Q5.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q5-irs-036",
+      "type": "single_choice",
+      "topic": "Evaluation Metrics",
+      "subtopic": "DCG Calculation",
+      "difficulty": "hard",
+      "questionMd": "A ranked list has graded relevance scores `[3, 1, 0, 2, 1]` at ranks 1 through 5. What is the approximate DCG@5? *(Using rel_i / log2(i+1))*",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "7.000, computed by summing the raw relevance grades 3+1+0+2+1"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "3.000, because only the first rank contributes and its grade is 3"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "2.500, computed as the arithmetic mean of the five relevance grades"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "4.879, computed as 3/1.000 + 1/1.585 + 0/2.000 + 2/2.322 + 1/2.585"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "DCG evaluates items based on their grade divided by their position discount: `(3 / log2(2)) + (1 / log2(3)) + (0 / log2(4)) + (2 / log2(5)) + (1 / log2(6))`. Mathematically, this equals approximately 4.879.",
+      "tags": [
+        "evaluation",
+        "dcg",
+        "math"
+      ],
+      "sourceRefs": [
+        "Q5.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q5-irs-037",
+      "type": "single_choice",
+      "topic": "Evaluation Metrics",
+      "subtopic": "Average Precision Formula",
+      "difficulty": "medium",
+      "questionMd": "In the Average Precision formula `AP = (1/R) × Σ P@k`, what does the summation run over?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The top-k positions specified by the evaluation cutoff"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "All positions where the retrieved document is irrelevant, as a penalty term"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "All rank positions from 1 to the total number of retrieved documents"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Only the rank positions k where the retrieved document is relevant"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Average precision sums the precision values evaluated *only* at the specific ranks where a relevant document is found. If the document at rank `k` is irrelevant, it contributes nothing to the summation step.",
+      "tags": [
+        "evaluation",
+        "map",
+        "math"
+      ],
+      "sourceRefs": [
+        "Q5.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q5-irs-038",
+      "type": "single_choice",
+      "topic": "Significance Testing",
+      "subtopic": "Interpretation",
+      "difficulty": "easy",
+      "questionMd": "System A has MAP = 0.42 and System B has MAP = 0.43. A Wilcoxon signed-rank test yields p = 0.21. What is the correct conclusion?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "System B is statistically and practically superior because it has a higher MAP score"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The test is invalid because the MAP difference is smaller than the p-value"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "System A is preferred because p > 0.05 confirms its stability across queries"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The difference is not statistically significant"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "In hypothesis testing, a p-value above the standard alpha threshold (0.05) indicates that we cannot reject the null hypothesis. The +0.01 difference in MAP is likely just random noise.",
+      "tags": [
+        "evaluation",
+        "statistics",
+        "significance"
+      ],
+      "sourceRefs": [
+        "Q5.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q5-irs-039",
+      "type": "single_choice",
+      "topic": "Evaluation Metrics",
+      "subtopic": "AP Calculation",
+      "difficulty": "hard",
+      "questionMd": "Given the ranked list `R, I, I, R, R` (where R = relevant, I = irrelevant), what is the Average Precision (AP)?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "0.600"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "0.500"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "0.333"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "0.700"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Precision at each relevant rank: Rank 1 (R) = 1/1 = 1.0. Rank 4 (R) = 2/4 = 0.5. Rank 5 (R) = 3/5 = 0.6. Total relevant documents = 3. `AP = (1.0 + 0.5 + 0.6) / 3 = 2.1 / 3 = 0.700`.",
+      "tags": [
+        "evaluation",
+        "map",
+        "math"
+      ],
+      "sourceRefs": [
+        "Q5.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q5-irs-040",
+      "type": "single_choice",
+      "topic": "Evaluation Metrics",
+      "subtopic": "DCG Formula",
+      "difficulty": "medium",
+      "questionMd": "Using the DCG formula `rel_i / log2(i + 1)`, what is the position discount factor applied to a document at rank 2?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Exactly 1.00, because rank 2 is still in the top results and receives no discount"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Approximately 0.43, because log2(5) ≈ 2.322 and 1/2.322 ≈ 0.43"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Exactly 0.50, because rank 2 halves the contribution relative to rank 1"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Approximately 0.63, because log2(3) ≈ 1.585 and 1/1.585 ≈ 0.63"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "For rank `i=2`, the formula requires evaluating `1 / log2(2 + 1)`, which is `1 / log2(3)`. Since `log2(3)` is roughly 1.585, `1 / 1.585` evaluates to approximately 0.63.",
+      "tags": [
+        "evaluation",
+        "dcg",
+        "math"
+      ],
+      "sourceRefs": [
+        "Q5.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    }
+  ]
+}

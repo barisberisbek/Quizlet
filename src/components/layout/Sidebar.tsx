@@ -72,6 +72,17 @@ export function Sidebar() {
     });
   }, [quizIndex, sidebarSearchQuery, sidebarTopicFilter]);
 
+  // Group Quizzes by Course
+  const groupedQuizzes = useMemo(() => {
+    const groups: Record<string, typeof filteredQuizzes> = {};
+    filteredQuizzes.forEach((quiz) => {
+      const courseName = quiz.course || 'Dynamic Web Programming';
+      if (!groups[courseName]) groups[courseName] = [];
+      groups[courseName].push(quiz);
+    });
+    return groups;
+  }, [filteredQuizzes]);
+
   const handleSelectQuiz = async (quiz: typeof quizIndex[0]) => {
     await selectQuiz(quiz);
     navigate(`/quiz/${quiz.id}`);
@@ -125,7 +136,7 @@ export function Sidebar() {
                   <BookOpen size={16} className="text-indigo-400" />
                 </div>
                 <div>
-                  <h1 className="text-sm font-bold text-slate-100 tracking-tight">DWP Quiz</h1>
+                  <h1 className="text-sm font-bold text-slate-100 tracking-tight">CS Quiz</h1>
                   <p className="text-[10px] text-slate-500 font-medium">Study Platform</p>
                 </div>
               </div>
@@ -227,77 +238,88 @@ export function Sidebar() {
                 </div>
               )}
 
-              {filteredQuizzes.map((quiz) => {
-                const isActive = activeQuiz?.meta.id === quiz.id || location.pathname.includes(quiz.id);
-                const progress = getQuizProgress(quiz.id, quiz.questionCount);
+              {Object.entries(groupedQuizzes).map(([course, courseQuizzes]) => (
+                <div key={course} className="mb-4">
+                  <div className="px-5 mb-2 flex items-center gap-2">
+                    <div className="h-px bg-white/10 flex-1"></div>
+                    <h3 className="text-[10px] font-bold tracking-widest text-slate-500 uppercase">
+                      {course}
+                    </h3>
+                    <div className="h-px bg-white/10 flex-1"></div>
+                  </div>
+                  {courseQuizzes.map((quiz) => {
+                    const isActive = activeQuiz?.meta.id === quiz.id || location.pathname.includes(quiz.id);
+                    const progress = getQuizProgress(quiz.id, quiz.questionCount);
 
-                return (
-                  <button
-                    key={quiz.id}
-                    onClick={() => handleSelectQuiz(quiz)}
-                    className={cn(
-                      'w-full text-left px-3 py-2.5 mx-1 mb-0.5 rounded-lg transition-all duration-150',
-                      'hover:bg-white/5 group',
-                      isActive && 'bg-indigo-500/10 border border-indigo-500/20 hover:bg-indigo-500/15'
-                    )}
-                    style={{ width: 'calc(100% - 8px)' }}
-                  >
-                    <div className="flex items-start justify-between gap-2">
-                      <div className="flex-1 min-w-0">
-                        <div className="flex items-center gap-1.5 mb-0.5">
-                          {progress.answered === quiz.questionCount && progress.answered > 0 ? (
-                            <CheckCircle2 size={13} className="text-emerald-400 shrink-0" />
-                          ) : progress.answered > 0 ? (
-                            <Circle size={13} className="text-amber-400 shrink-0" />
-                          ) : null}
-                          <p
-                            className={cn(
-                              'text-xs font-semibold truncate',
-                              isActive ? 'text-indigo-300' : 'text-slate-200'
-                            )}
-                          >
-                            {quiz.title}
-                          </p>
-                        </div>
-                        <div className="flex items-center gap-2 mt-1">
-                          <span className="text-[10px] text-slate-500">
-                            {quiz.questionCount} questions
-                          </span>
-                          <span
-                            className={cn(
-                              'text-[10px] font-medium px-1.5 py-0 rounded border',
-                              getDifficultyColor(quiz.difficulty)
-                            )}
-                          >
-                            {getDifficultyLabel(quiz.difficulty)}
-                          </span>
-                        </div>
-                        {/* Progress bar */}
-                        {progress.answered > 0 && (
-                          <div className="mt-1.5 flex items-center gap-2">
-                            <div className="flex-1 h-1 rounded-full bg-white/5 overflow-hidden">
-                              <div
-                                className="h-full rounded-full bg-indigo-500/60 transition-all duration-300"
-                                style={{ width: `${progress.percent}%` }}
-                              />
-                            </div>
-                            <span className="text-[10px] text-slate-500 shrink-0">
-                              {formatPercent(progress.answered, quiz.questionCount)}
-                            </span>
-                          </div>
-                        )}
-                      </div>
-                      <ChevronRight
-                        size={14}
+                    return (
+                      <button
+                        key={quiz.id}
+                        onClick={() => handleSelectQuiz(quiz)}
                         className={cn(
-                          'shrink-0 mt-1 transition-colors',
-                          isActive ? 'text-indigo-400' : 'text-slate-600 group-hover:text-slate-400'
+                          'w-full text-left px-3 py-2.5 mx-1 mb-0.5 rounded-lg transition-all duration-150',
+                          'hover:bg-white/5 group',
+                          isActive && 'bg-indigo-500/10 border border-indigo-500/20 hover:bg-indigo-500/15'
                         )}
-                      />
-                    </div>
-                  </button>
-                );
-              })}
+                        style={{ width: 'calc(100% - 8px)' }}
+                      >
+                        <div className="flex items-start justify-between gap-2">
+                          <div className="flex-1 min-w-0">
+                            <div className="flex items-center gap-1.5 mb-0.5">
+                              {progress.answered === quiz.questionCount && progress.answered > 0 ? (
+                                <CheckCircle2 size={13} className="text-emerald-400 shrink-0" />
+                              ) : progress.answered > 0 ? (
+                                <Circle size={13} className="text-amber-400 shrink-0" />
+                              ) : null}
+                              <p
+                                className={cn(
+                                  'text-xs font-semibold truncate',
+                                  isActive ? 'text-indigo-300' : 'text-slate-200'
+                                )}
+                              >
+                                {quiz.title}
+                              </p>
+                            </div>
+                            <div className="flex items-center gap-2 mt-1">
+                              <span className="text-[10px] text-slate-500">
+                                {quiz.questionCount} questions
+                              </span>
+                              <span
+                                className={cn(
+                                  'text-[10px] font-medium px-1.5 py-0 rounded border',
+                                  getDifficultyColor(quiz.difficulty)
+                                )}
+                              >
+                                {getDifficultyLabel(quiz.difficulty)}
+                              </span>
+                            </div>
+                            {/* Progress bar */}
+                            {progress.answered > 0 && (
+                              <div className="mt-1.5 flex items-center gap-2">
+                                <div className="flex-1 h-1 rounded-full bg-white/5 overflow-hidden">
+                                  <div
+                                    className="h-full rounded-full bg-indigo-500/60 transition-all duration-300"
+                                    style={{ width: `${progress.percent}%` }}
+                                  />
+                                </div>
+                                <span className="text-[10px] text-slate-500 shrink-0">
+                                  {formatPercent(progress.answered, quiz.questionCount)}
+                                </span>
+                              </div>
+                            )}
+                          </div>
+                          <ChevronRight
+                            size={14}
+                            className={cn(
+                              'shrink-0 mt-1 transition-colors',
+                              isActive ? 'text-indigo-400' : 'text-slate-600 group-hover:text-slate-400'
+                            )}
+                          />
+                        </div>
+                      </button>
+                    );
+                  })}
+                </div>
+              ))}
             </div>
 
             {/* Footer stats */}

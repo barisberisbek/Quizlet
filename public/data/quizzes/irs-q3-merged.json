@@ -1,0 +1,1944 @@
+{
+  "meta": {
+    "id": "irs-q3-merged",
+    "title": "[IRS] Quiz 3 — Evaluation",
+    "description": "Precision, recall, MAP, NDCG, and Cranfield evaluation model.",
+    "source": "IRS Past Exams",
+    "course": "Information Retrieval Systems",
+    "topic": "Boolean Retrieval",
+    "topics": [
+      "Boolean Retrieval",
+      "Phrase Queries",
+      "Query Optimization",
+      "Retrieval Models",
+      "Spelling Correction",
+      "System Architecture",
+      "Term Frequencies",
+      "Wildcard Queries"
+    ],
+    "questionCount": 43,
+    "difficulty": "medium",
+    "estimatedMinutes": 65,
+    "tags": [
+      "irs",
+      "q3",
+      "merged"
+    ],
+    "fileName": "irs-q3-merged.json"
+  },
+  "questions": [
+    {
+      "id": "q3-irs-001",
+      "type": "single_choice",
+      "topic": "Query Optimization",
+      "subtopic": "Execution Order",
+      "difficulty": "easy",
+      "questionMd": "A Boolean AND query contains five terms with document frequencies 620, 3400, 8100, 12000, and 880. Which processing order is optimal?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "620 → 3400 → 880 → 8100 → 12000"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "620 → 880 → 3400 → 8100 → 12000"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "3400 → 620 → 880 → 8100 → 12000"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "12000 → 8100 → 3400 → 880 → 620"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "AND sorgusunda optimizasyon için, posting listeleri belge frekansına (df) göre küçükten büyüğe sıralanır. En kısa liste önce işlenir çünkü kesişim sonucu en küçük listeden büyük olamaz. Sıralama: 620, 880, 3400, 8100, 12000.\n\n**Neden diğerleri yanlış?**\nDiğer sıralamalar daha büyük ara sonuçlar üreterek verimsiz birleştirme işlemlerine yol açar.",
+      "tags": [
+        "query-optimization",
+        "boolean",
+        "document-frequency"
+      ],
+      "sourceRefs": [
+        "Q3-v2.json",
+        "Q3.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "q3-irs-002",
+      "type": "single_choice",
+      "topic": "Phrase Queries",
+      "subtopic": "Boolean Comparison",
+      "difficulty": "medium",
+      "questionMd": "Why does the phrase query \"machine learning\" return fewer results than the Boolean query machine AND learning?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The phrase query additionally requires the two terms to appear consecutively in the correct order within a document"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The phrase query applies a Jaccard similarity threshold that the Boolean AND does not use"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The phrase query automatically removes stop words, reducing the candidate set before merging"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The phrase query restricts matching to document titles, whereas the Boolean AND searches the full text"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Phrase query (\"machine learning\"), kelimelerin yan yana ve sıralı olmasını gerektirir. Boolean AND ise kelimelerin belgede herhangi bir yerde geçmesini yeterli sayar. Bu nedenle phrase query daha kısıtlayıcıdır ve daha az sonuç döndürür.\n\n**Neden diğerleri yanlış?**\n• **B)** Phrase query AND'den daha fazla sonuç döndürmez.\n• **C)** İkisi eşdeğer değildir; konum bilgisi fark yaratır.\n• **D)** Phrase query, kelime sırasını dikkate alır.",
+      "tags": [
+        "phrase-queries",
+        "boolean",
+        "logic"
+      ],
+      "sourceRefs": [
+        "Q3-v2.json",
+        "Q3.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "q3-irs-003",
+      "type": "single_choice",
+      "topic": "Boolean Retrieval",
+      "subtopic": "Merge Algorithm",
+      "difficulty": "easy",
+      "questionMd": "During a two-pointer AND merge, when the values at both pointers are equal, which pointers should be advanced?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Only the pointer into the first list"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Both pointers must be advanced"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The pointer into the list with the larger next value"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Only the pointer into the shorter list"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "İki pointer AND birleştirmesinde her iki değer eşit olduğunda: belge ID sonuç listesine eklenir ve HER İKİ pointer da ilerletilir. Eşitlik, belgenin her iki posting listesinde de var olduğunu gösterir (AND koşulu sağlanmış).\n\n**Neden diğerleri yanlış?**\n• **A)** Sadece bir pointer ilerletmek sonsuz döngüye yol açar.\n• **C)** Belgeyi atlamak AND mantığını bozar.\n• **D)** Sadece bir pointer ilerletmek yanlıştır.",
+      "tags": [
+        "boolean",
+        "merge",
+        "algorithm"
+      ],
+      "sourceRefs": [
+        "Q3-v2.json",
+        "Q3.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "q3-irs-004",
+      "type": "single_choice",
+      "topic": "Wildcard Queries",
+      "subtopic": "k-gram Index",
+      "difficulty": "medium",
+      "questionMd": "When building a k-gram index for general English text information retrieval, which value of k is described as the recommended tradeoff between index size and retrieval precision?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "2"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "3"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "4"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Genel İngilizce metin IR'ı için önerilen k-gram değeri **k = 3**'tür (trigram). Bu, indeks boyutu ve getirme hassasiyeti arasındaki en iyi dengeyi sağlar. k=2 çok fazla yanlış eşleşme üretir; k=4+ indeksi aşırı büyütür.\n\n**Neden diğerleri yanlış?**\n• **k=1:** Tek karakter, anlamsız derecede genel.\n• **k=2:** Çok fazla false positive.\n• **k=4+:** İndeks boyutu gereksiz büyür, esneklik azalır.",
+      "tags": [
+        "k-gram",
+        "index",
+        "optimization"
+      ],
+      "sourceRefs": [
+        "Q3-v2.json",
+        "Q3.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "q3-irs-005",
+      "type": "single_choice",
+      "topic": "Boolean Retrieval",
+      "subtopic": "OR Merge Algorithm",
+      "difficulty": "easy",
+      "questionMd": "When two sorted postings lists are merged with OR and both pointers point to the same document ID, what is the correct action?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Emit the document ID twice to reflect it appears in both lists and advance both pointers"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Emit the document ID once and advance only the pointer into the shorter list"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Skip the document ID entirely because it indicates an AND match, not an OR match"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Emit the document ID once and advance both pointers"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "OR birleştirmesinde her iki pointer aynı belge ID'sini gösterdiğinde, ID bir kez yazılır ve her iki pointer ilerletilir. OR, bir belgenin herhangi bir listede olmasını yeterli sayar.\n\n**Neden diğerleri yanlış?**\n• **A)** İki kez yazmak kopya oluşturur.\n• **B)** Sadece bir pointer ilerletmek aynı ID'yi tekrar işlemeye neden olur.\n• **C)** Belgeyi atlamak OR mantığını bozar.",
+      "tags": [
+        "boolean",
+        "merge",
+        "or-operator"
+      ],
+      "sourceRefs": [
+        "Q3-v2.json",
+        "Q3.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "q3-irs-006",
+      "type": "single_choice",
+      "topic": "Spelling Correction",
+      "subtopic": "Edit Distance",
+      "difficulty": "medium",
+      "questionMd": "Levenshtein edit distance counts the minimum number of operations needed to transform one string into another. Which set of operations does it use?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Insert a character, delete a character, transpose two adjacent characters"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Split a string, merge two strings, substitute one character for another"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Insert a character, delete a character, substitute one character for another"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Substitute one character for another, transpose two adjacent characters, delete a character"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Levenshtein düzenleme mesafesi üç temel işlem kullanır: **ekleme** (insert), **silme** (delete) ve **değiştirme** (substitute).\n\n**Neden diğerleri yanlış?**\n• **A)** Transpozisyon (iki komşu karakteri yer değiştirme) *Damerau*-Levenshtein'a aittir, standart Levenshtein'a değil.\n• **B)** String bölme/birleştirme edit distance işlemleri değildir.\n• **D)** Yine transpozisyon içerir, standart Levenshtein değil.",
+      "tags": [
+        "edit-distance",
+        "levenshtein",
+        "algorithms"
+      ],
+      "sourceRefs": [
+        "Q3-v2.json",
+        "Q3.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "q3-irs-007",
+      "type": "single_choice",
+      "topic": "Wildcard Queries",
+      "subtopic": "k-gram Computation",
+      "difficulty": "medium",
+      "questionMd": "What is the correct set of 3-grams (with boundary markers) for the vocabulary term `query`?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "{$qu, que, uer, ery}"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "{$qu, que, uer, ery, ry$}"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "{qu$, que, uer, ery, ry$}"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "{$qu, que, uer, ry$}"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "`query` terimi sınır işaretçileri ile `$query$` olur. 3 karakterlik pencereler: **$qu**, **que**, **uer**, **ery**, **ry$**. Toplam 5 adet 3-gram elde edilir.\n\n**Neden diğerleri yanlış?**\n• Sınır işaretçileri ($) dahil edilmelidir — bunlar terimin başını ve sonunu belirtir.\n• Eksik veya fazla 3-gram içeren kümeler hatalıdır.",
+      "tags": [
+        "k-gram",
+        "wildcards",
+        "string-manipulation"
+      ],
+      "sourceRefs": [
+        "Q3-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q3-irs-008",
+      "type": "single_choice",
+      "topic": "Phrase Queries",
+      "subtopic": "Proximity",
+      "difficulty": "medium",
+      "questionMd": "A proximity query is written as `term₁ /k term₂`. Which condition must hold in a candidate document for it to be included in the result?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The terms must appear in the same sentence and within k paragraphs of each other"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "term₁ must appear exactly k positions before term₂ in every occurrence"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The total count of term₁ and term₂ occurrences in the document must equal k"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The absolute difference between any occurrence position of term₁ and any occurrence position of term₂ must be at most k"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Proximity sorgusunda `term₁ /k term₂`, bir belgenin eşleşmesi için term₁ ve term₂'nin herhangi bir konum çiftinin mutlak farkı ≤ k olmalıdır.\n\n**Neden diğerleri yanlış?**\n• **A)** Yakınlık kelime pozisyonlarıyla ölçülür, paragraf değil.\n• **B)** Tam k pozisyon olması gerekmez, en fazla k yeterlidir.\n• **C)** Toplam geçiş sayısıyla ilgisi yoktur.",
+      "tags": [
+        "proximity-queries",
+        "positional-index",
+        "boolean"
+      ],
+      "sourceRefs": [
+        "Q3-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q3-irs-009",
+      "type": "single_choice",
+      "topic": "Query Optimization",
+      "subtopic": "NOT Operator",
+      "difficulty": "hard",
+      "questionMd": "Which query structure correctly follows the best practice for using the NOT operator?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Perform an AND merge first to reduce the candidate set, then apply NOT to the result"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Lead the query with NOT to eliminate irrelevant documents before any AND merge"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Replace every NOT operand with an equivalent OR over all other terms"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Apply NOT to the largest postings list to maximize the pruning effect"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "En iyi uygulama: önce AND ile aday kümeyi daralt, sonra NOT uygula. NOT başta uygulanırsa devasa bir ara sonuç kümesi oluşur.\n\n**Neden diğerleri yanlış?**\n• **B)** NOT ile başlamak tüm koleksiyonu taramayı gerektirebilir — çok verimsiz.\n• **C)** NOT'u OR ile değiştirmek sorgu anlamını tamamen bozar.\n• **D)** En büyük listeye NOT uygulamak verimsiz ve mantıksızdır.",
+      "tags": [
+        "boolean",
+        "not-operator",
+        "query-optimization"
+      ],
+      "sourceRefs": [
+        "Q3-v2.json",
+        "Q3.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "q3-irs-010",
+      "type": "single_choice",
+      "topic": "Query Optimization",
+      "subtopic": "Skip Pointers",
+      "difficulty": "medium",
+      "questionMd": "Embedding skip pointers into a postings list at index build time introduces which tradeoff?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Postings lists can no longer be gap-encoded because skip targets violate sorted order"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Compression of postings lists becomes impossible once skip pointers are inserted"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The index must be rebuilt from scratch each time a new document is added to the corpus"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The index occupies more storage space in exchange for faster AND merge performance"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Skip pointer'lar klasik bir *alan-zaman ödünleşimidir*: daha fazla depolama karşılığında AND birleştirmede hız kazancı sağlar.\n\n**Neden diğerleri yanlış?**\n• **A)** Gap-encoding skip pointer'larla birlikte çalışabilir.\n• **B)** Sıkıştırma hâlâ uygulanabilir.\n• **C)** İndeksin sıfırdan yeniden oluşturulması gerekmez.",
+      "tags": [
+        "skip-pointers",
+        "tradeoffs",
+        "optimization"
+      ],
+      "sourceRefs": [
+        "Q3-v2.json",
+        "Q3.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "q3-irs-011",
+      "type": "single_choice",
+      "topic": "Spelling Correction",
+      "subtopic": "Soundex",
+      "difficulty": "easy",
+      "questionMd": "In the Soundex phonetic encoding algorithm, how are vowels treated after the initial letter is recorded?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Vowels cause the adjacent consonant codes to be doubled in the output"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Vowels are treated identically to the consonants that immediately follow them"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Vowels are each assigned the digit code 0 and retained in the output"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Vowels are removed entirely and do not contribute a digit code"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Soundex'te ilk harf korunur; sonrasında sesli harfler (A, E, I, O, U) ve H, W, Y tamamen çıkarılır, herhangi bir rakam koduna katkıda bulunmaz.\n\n**Neden diğerleri yanlış?**\n• **A)** Sesli harfler ünsüz kodlarını ikiye katlamaz.\n• **B)** Sesli harfler ünsüzlerle aynı şekilde işlenmez.\n• **C)** Sesli harflere 0 kodu atanıp çıktıda tutulmaz.",
+      "tags": [
+        "soundex",
+        "phonetics",
+        "algorithms"
+      ],
+      "sourceRefs": [
+        "Q3-v2.json",
+        "Q3.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "q3-irs-012",
+      "type": "single_choice",
+      "topic": "Wildcard Queries",
+      "subtopic": "Permuterm Index",
+      "difficulty": "medium",
+      "questionMd": "Compared to the original forward dictionary, approximately how much larger does the permuterm index grow?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The same size, since rotations are stored as pointers rather than full strings"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Roughly 2 times larger"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Roughly 10 times larger"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Roughly 4 to 5 times larger"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Permuterm indeksi orijinal sözlüğün yaklaşık **4-5 katı** büyüklüğündedir. Ortalama L uzunluğundaki her terim L+1 rotasyon üretir ($ işareti eklenerek).\n\n**Neden diğerleri yanlış?**\n• **A)** Rotasyonlar pointer değil, tam string olarak saklanır.\n• **B)** 2 kat, gerçek genişleme faktörünün altındadır.\n• **C)** 10 kat aşırı büyük bir tahmindir.",
+      "tags": [
+        "permuterm-index",
+        "storage",
+        "wildcards"
+      ],
+      "sourceRefs": [
+        "Q3-v2.json",
+        "Q3.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "q3-irs-013",
+      "type": "single_choice",
+      "topic": "Boolean Retrieval",
+      "subtopic": "Query Parsing",
+      "difficulty": "medium",
+      "questionMd": "In the Boolean retrieval model, which operator precedence order is correct when no parentheses are used?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "NOT and AND share equal precedence and are evaluated before OR"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "AND is evaluated first, then NOT, then OR"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "NOT is evaluated first, then AND, then OR"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "OR is evaluated first, then AND, then NOT"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Boolean retrieval'da operatör öncelik sırası: **NOT > AND > OR**. Bu, mantık ve programlama dillerindeki standart öncelik kurallarıyla uyumludur.\n\n**Neden diğerleri yanlış?**\n• **A)** NOT ve AND eşit öncelikli değildir; NOT daha önce gelir.\n• **B)** AND, NOT'tan önce değerlendirilmez.\n• **D)** OR en düşük önceliğe sahiptir, en yüksek değil.",
+      "tags": [
+        "boolean",
+        "operators",
+        "precedence"
+      ],
+      "sourceRefs": [
+        "Q3-v2.json",
+        "Q3.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "q3-irs-014",
+      "type": "single_choice",
+      "topic": "Wildcard Queries",
+      "subtopic": "k-gram Index",
+      "difficulty": "medium",
+      "questionMd": "The k-gram index built over vocabulary terms serves two distinct retrieval functions in Week 3. Which pair correctly identifies both?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Wildcard query resolution and spelling correction candidate retrieval"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Phrase query position verification and proximity query distance checking"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Query optimization by document frequency and skip pointer construction"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Biword index construction and permuterm rotation lookup"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "K-gram indeksi iki temel işlev görür: (1) **Wildcard sorgu çözümleme** — joker karakter içeren sorguları k-gram kesişimine dönüştürme; (2) **Yazım düzeltme adayı bulma** — Jaccard benzerliği ile yakın terimleri tespit etme.\n\n**Neden diğerleri yanlış?**\n• **B)** Phrase ve proximity sorguları pozisyonel indeks gerektirir.\n• **C)** Sorgu optimizasyonu ve skip pointer k-gram ile ilgisiz.\n• **D)** Biword ve permuterm farklı indeks yapılarıdır.",
+      "tags": [
+        "k-gram",
+        "wildcards",
+        "spelling-correction"
+      ],
+      "sourceRefs": [
+        "Q3-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q3-irs-015",
+      "type": "single_choice",
+      "topic": "Spelling Correction",
+      "subtopic": "Jaccard Similarity",
+      "difficulty": "easy",
+      "questionMd": "Given two k-gram sets A and B, which expression correctly computes their Jaccard similarity?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "|A ∪ B| / |A ∩ B|"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "|A ∩ B| / |A ∪ B|"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "(|A| + |B|) / |A ∩ B|"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "|A ∩ B| / |A|"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Jaccard katsayısı = |A ∩ B| / |A ∪ B|. İki k-gram kümesinin benzerliğini ölçmek için kesişim boyutu birleşim boyutuna bölünür.\n\n**Neden diğerleri yanlış?**\nDiğer seçenekler Jaccard formülünü yanlış ifade eder; örneğin kesişimi fark ile karıştırır veya payda ile payı yer değiştirir.",
+      "tags": [
+        "jaccard",
+        "math",
+        "sets"
+      ],
+      "sourceRefs": [
+        "Q3-v2.json",
+        "Q3.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "q3-irs-016",
+      "type": "single_choice",
+      "topic": "Spelling Correction",
+      "subtopic": "Pipeline",
+      "difficulty": "medium",
+      "questionMd": "In the three-stage spelling correction pipeline, what is the primary purpose of the Jaccard similarity filtering stage?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "To rank the final correction suggestions by their phonetic similarity to the misspelled word"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "To build the initial candidate set by finding all vocabulary terms sharing at least one k-gram"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "To apply context-sensitive correction by comparing candidates against a bigram language model"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "To eliminate most implausible candidates cheaply before the expensive edit distance computation"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Jaccard benzerliği filtreleme aşaması, pahalı edit distance hesaplamasından önce olası olmayan adayları **ucuza eleyerek** işlem yükünü azaltır. K-gram kesişimi hızlıca hesaplanabilir.\n\n**Neden diğerleri yanlış?**\n• **A)** Fonetik benzerlik sıralaması bu aşamanın amacı değildir.\n• **B)** İlk aday kümesini oluşturmak k-gram aday getirme aşamasının işidir, Jaccard filtrelemenin değil.\n• **C)** Bağlam duyarlı düzeltme farklı bir süreçtir.",
+      "tags": [
+        "spelling-correction",
+        "jaccard",
+        "pipeline"
+      ],
+      "sourceRefs": [
+        "Q3-v2.json",
+        "Q3.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "q3-irs-017",
+      "type": "single_choice",
+      "topic": "Query Optimization",
+      "subtopic": "Skip Pointers",
+      "difficulty": "hard",
+      "questionMd": "During an AND merge with skip pointers, under what condition should the pointer in list P₁ jump to the skip target rather than stepping forward by one?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "When the value at the skip target position in P₁ is less than or equal to the current value in P₂"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "When the value at the skip target position in P₁ is strictly less than the current value in P₂"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "When the current value in P₁ is greater than the current value in P₂"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "When the skip target is within ⌊√p⌋ positions of the current index in P₁"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Skip pointer kullanılmalıdır: P₁'deki skip hedefinin değeri P₂'deki mevcut değerden **küçük veya eşit** olduğunda. Bu, atlamanın güvenli olduğunu — yani potansiyel eşleşmeleri atlamayacağımızı — garanti eder.\n\n**Neden diğerleri yanlış?**\n• **B)** 'Strictly less than' eşitlik durumunu kaçırır.\n• **C)** P₁ > P₂ olduğunda P₂ ilerletilir, P₁ değil.\n• **D)** Pozisyon mesafesi skip koşulunu belirlemez; değer karşılaştırması önemlidir.",
+      "tags": [
+        "skip-pointers",
+        "algorithm",
+        "merge"
+      ],
+      "sourceRefs": [
+        "Q3-v2.json",
+        "Q3.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "q3-irs-018",
+      "type": "single_choice",
+      "topic": "Boolean Retrieval",
+      "subtopic": "OR Merge",
+      "difficulty": "medium",
+      "questionMd": "When performing an OR merge on two sorted postings lists of lengths m and n, which statement correctly describes the size of the result?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The result is always smaller than both input lists"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The result is always at least as large as the longer of the two input lists"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The result is always exactly m + n"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The result is always equal to the shorter list's length"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "OR birleştirmesi küme birleşimi (union) yapar. Sonuç, en az uzun listenin boyutunda olur; ortak elemanlar varsa m+n'den küçük olabilir ama her zaman ≥ max(m, n).\n\n**Neden diğerleri yanlış?**\n• **A)** OR birleştirmesi sonuç kümesini daraltmaz, genişletir.\n• **C)** Ortak elemanlar sadece bir kez sayılır, bu yüzden her zaman m+n değildir.\n• **D)** Kısa listenin boyutu değil, en az uzun listenin boyutu garantidir.",
+      "tags": [
+        "boolean",
+        "merge",
+        "or-operator"
+      ],
+      "sourceRefs": [
+        "Q3-v2.json",
+        "Q3.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "q3-irs-019",
+      "type": "single_choice",
+      "topic": "Spelling Correction",
+      "subtopic": "Pipeline",
+      "difficulty": "medium",
+      "questionMd": "Which sequence correctly describes the three-stage spelling correction pipeline?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Edit distance ranking → Jaccard similarity filtering → k-gram candidate retrieval"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "K-gram candidate retrieval → edit distance ranking → Jaccard similarity filtering"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Jaccard similarity filtering → k-gram candidate retrieval → edit distance ranking"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "K-gram candidate retrieval → Jaccard similarity filtering → edit distance ranking"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Üç aşamalı yazım düzeltme pipeline’ı: (1) **K-gram aday getirme** — k-gram indeksinden potansiyel adayları topla, (2) **Jaccard benzerliği filtreleme** — düşük benzerlikli adayları ucuza ele, (3) **Edit distance sıralama** — kalan adayları Levenshtein mesafesine göre sırala.\n\n**Neden diğerleri yanlış?**\nDiğer seçenekler aşamaların sırasını yanlış verir.",
+      "tags": [
+        "spelling-correction",
+        "pipeline",
+        "architecture"
+      ],
+      "sourceRefs": [
+        "Q3-v2.json",
+        "Q3.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "q3-irs-020",
+      "type": "single_choice",
+      "topic": "Boolean Retrieval",
+      "subtopic": "Time Complexity",
+      "difficulty": "medium",
+      "questionMd": "The two-pointer AND merge achieves O(m + n) time complexity only because of one crucial property of postings lists. What is that property?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Postings lists use variable-byte encoded gaps between document IDs"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Postings lists are stored in sorted order of document ID"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Postings lists are stored in order of decreasing term frequency"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Postings lists contain positional information for each document"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Two-pointer AND merge O(m+n) karmaşıklığı, posting listelerinin **belge ID'sine göre sıralı** (sorted) saklanması sayesinde mümkündür. Sıralı listeler, pointer'ların sadece ileri yönde ilerlemesini ve her elemanın en fazla bir kez işlenmesini garanti eder.\n\n**Neden diğerleri yanlış?**\n• **A)** VB encoding sıkıştırma tekniğidir; karmaşıklık garantisi sağlamaz.\n• **C)** Terim frekansına göre sıralama AND merge için kullanılmaz.\n• **D)** Pozisyon bilgisi phrase query için gereklidir, O(m+n) için değil.",
+      "tags": [
+        "boolean",
+        "time-complexity",
+        "algorithm"
+      ],
+      "sourceRefs": [
+        "Q3-v2.json",
+        "Q3.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "q3-irs-021",
+      "type": "single_choice",
+      "topic": "Boolean Retrieval",
+      "subtopic": "Merge Time Complexity",
+      "difficulty": "easy",
+      "questionMd": "Given two sorted postings lists of lengths m and n, what is the time complexity of the two-pointer AND merge algorithm?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "O(m + n)"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "O(n²)"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "O(m × n)"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "O(m log n)"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Two-pointer AND merge algoritmasının zaman karmaşıklığı **O(m + n)**'dir. Her pointer en fazla listesinin sonuna kadar ilerler; toplam işlem sayısı m + n ile orantılıdır.\n\n**Neden diğerleri yanlış?**\n• **B)** O(n²) sıralı listeler için gereksiz yüksektir.\n• **C)** O(m×n) her eleman çiftini karşılaştırmak demektir; sıralı listelerde gerekli değildir.\n• **D)** O(m log n) binary search yaklaşımıdır; two-pointer değildir.",
+      "tags": [
+        "boolean",
+        "time-complexity",
+        "math"
+      ],
+      "sourceRefs": [
+        "Q3-v2.json",
+        "Q3.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "q3-irs-022",
+      "type": "single_choice",
+      "topic": "Spelling Correction",
+      "subtopic": "Jaccard Limitations",
+      "difficulty": "hard",
+      "questionMd": "A spelling corrector using a Jaccard threshold of 0.2 consistently returns no candidates for misspelled words of four characters or fewer. What is the most likely cause?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Short words are automatically classified as stop words and excluded from the k-gram index"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Short words produce very few k-grams, so Jaccard scores are inherently lower and often fall below the fixed threshold"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The k-gram index only indexes vocabulary terms of five characters or more by default"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Edit distance computation fails on short strings because the dynamic programming table is too small"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Kısa kelimeler az sayıda k-gram üretir → Jaccard skorları doğal olarak düşük kalır → sabit eşik değerinin (0.2) altına düşer → hiçbir aday geçemez. Bu, sabit Jaccard eşiğinin kısa kelimeler için uygun olmadığını gösterir.\n\n**Neden diğerleri yanlış?**\n• **A)** Kısa kelimeler otomatik olarak stopword sayılmaz.\n• **C)** K-gram indeksi kelime uzunluğuna göre filtreleme yapmaz.\n• **D)** Edit distance kısa stringlerlerde sorunsuz çalışır.",
+      "tags": [
+        "spelling-correction",
+        "jaccard",
+        "k-gram"
+      ],
+      "sourceRefs": [
+        "Q3-v2.json",
+        "Q3.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "q3-irs-023",
+      "type": "single_choice",
+      "topic": "Phrase Queries",
+      "subtopic": "Biword Indexes",
+      "difficulty": "medium",
+      "questionMd": "A biword index speeds up two-word phrase queries, but which weakness makes it unsuitable for general-purpose phrase retrieval?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "It cannot support trailing wildcard patterns alongside phrase queries"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Position information is discarded, making proximity queries impossible"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "All phrase queries must be preprocessed into single tokens at index build time"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Longer phrase queries can produce false positive results and the index size roughly doubles"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Biword indeksi iki kelimelik phrase query'leri hızlandırır ama: (1) **uzun phrase query'lerde false positive** üretebilir — çünkü sözcük çiftleri birleştirilirken arada başka kelimeler olabilir, (2) **indeks boyutu yaklaşık 2 katına çıkar**.\n\n**Neden diğerleri yanlış?**\n• **A)** Biword indeksinin wildcard desteklemesi ayrı bir konudur.\n• **B)** Biword indeksi konum bilgisi değil, ardışık çift bilgisi saklar.\n• **C)** Phrase query'ler tek tokena dönüştürülmez.",
+      "tags": [
+        "biword-index",
+        "phrase-queries",
+        "limitations"
+      ],
+      "sourceRefs": [
+        "Q3-v2.json",
+        "Q3.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "q3-irs-024",
+      "type": "single_choice",
+      "topic": "Spelling Correction",
+      "subtopic": "Levenshtein Example",
+      "difficulty": "easy",
+      "questionMd": "What is the Levenshtein edit distance between `information` and `informtion`?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "0"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "3"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "1"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "2"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "'information' ve 'informtion' arasındaki fark: 'a' harfinin eksik olmasıdır (inform**a**tion → informtion). Tek bir ekleme (insert) işlemiyle düzeltilir → **edit distance = 1**.\n\n**Neden diğerleri yanlış?**\n• **A)** 0 olsaydı iki kelime aynı olurdu.\n• **B)** 3 çok fazla; sadece bir karakter eksik.\n• **D)** 2 de fazla; tek işlem yeterli.",
+      "tags": [
+        "edit-distance",
+        "levenshtein"
+      ],
+      "sourceRefs": [
+        "Q3-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q3-irs-025",
+      "type": "single_choice",
+      "topic": "Query Optimization",
+      "subtopic": "Skip Pointers Performance",
+      "difficulty": "medium",
+      "questionMd": "When the two postings lists being merged with skip pointers have approximately equal lengths, what effect do skip pointers have on performance?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Skip pointers provide the largest speedup because both lists benefit equally from jumping ahead"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The merge terminates earlier than the naive case because both lists can skip simultaneously"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The overhead of checking skip conditions at each step can make performance marginally worse than the naive merge"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Skip pointers have no effect at all because they are only stored for lists longer than 10,000 entries"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Eşit uzunluktaki listelerde skip pointer'lar nadiren tetiklenir çünkü değerler birbirine yakındır. Her adımda skip koşulunu kontrol etmenin ek yükü (overhead), performansı **marjinal olarak kötüleştirebilir**.\n\n**Neden diğerleri yanlış?**\n• **A)** Skip pointer'lar uzunluk farkı büyük olduğunda en etkilidir, eşit olduğunda değil.\n• **B)** Eşit listelerde skip nadiren tetiklenir; erken sonlanma olmaz.\n• **D)** Skip pointer'lar herhangi bir liste uzunluğunda saklanabilir.",
+      "tags": [
+        "skip-pointers",
+        "performance",
+        "tradeoffs"
+      ],
+      "sourceRefs": [
+        "Q3-v2.json",
+        "Q3.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "q3-irs-026",
+      "type": "single_choice",
+      "topic": "System Architecture",
+      "subtopic": "Query Processing",
+      "difficulty": "medium",
+      "questionMd": "In the complete Boolean query engine described in the lecture, which component is responsible for processing the user's query string immediately before the wildcard resolver?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The Boolean executor, which performs AND, OR, and NOT postings merges"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The query parser, which identifies operators, phrases, and wildcard patterns in the raw input"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The spelling corrector, which substitutes misspelled tokens with vocabulary candidates"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The query optimizer, which reorders AND operands by ascending document frequency"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Boolean sorgu motorunda wildcard çözücüsünden hemen önce gelen bileşen **query parser**'dır. Parser, ham kullanıcı girdisindeki operatörleri, phrase'leri ve wildcard kalıplarını tanımlar.\n\n**Neden diğerleri yanlış?**\n• **A)** Boolean executor pipeline'da daha sonra gelir.\n• **C)** Spelling corrector wildcard resolver'dan önce değil, sonra çalışır.\n• **D)** Query optimizer daha geç aşamada çalışır.",
+      "tags": [
+        "boolean",
+        "architecture",
+        "parsing"
+      ],
+      "sourceRefs": [
+        "Q3-v2.json",
+        "Q3.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "q3-irs-027",
+      "type": "single_choice",
+      "topic": "Query Optimization",
+      "subtopic": "Execution Order",
+      "difficulty": "easy",
+      "questionMd": "When optimizing a multi-term AND query by sorting operands in order of ascending document frequency, what is the primary benefit?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Intermediate result sets shrink fastest when processing begins with the rarest terms"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The total number of postings lists loaded into memory is reduced"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Skip pointers become unnecessary for the remaining operations"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The OR merge step is eliminated from the query plan"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "AND sorgusunda en nadir terimle başlamak, ilk ara sonuç kümesini minimumda tutar. Sonraki her birleştirme küçük bir kümeyle yapılır → **toplam işlem sayısı en aza iner**.\n\n**Neden diğerleri yanlış?**\n• **B)** Tüm posting listeleri yine yüklenir; sadece birleştirme sırası değişir.\n• **C)** Skip pointer'lar bağımsız bir optimizasyondur; sıralama gereksiz kılmaz.\n• **D)** OR merge adımı zaten AND sorgusunun parçası değildir.",
+      "tags": [
+        "query-optimization",
+        "boolean",
+        "document-frequency"
+      ],
+      "sourceRefs": [
+        "Q3-v2.json",
+        "Q3.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "q3-irs-028",
+      "type": "single_choice",
+      "topic": "Phrase Queries",
+      "subtopic": "Biword Indexes",
+      "difficulty": "medium",
+      "questionMd": "How does a biword index handle a three-word phrase query such as \"machine learning model\"?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "It stores the entire three-word phrase as a single compound dictionary entry"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "It decomposes the phrase into overlapping biwords and executes an AND query over machine_learning and learning_model"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "It falls back to a standard Boolean AND query over the three individual terms"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "It uses the positional index for any phrase longer than two words"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "A biword index only stores two-word combinations. To handle longer phrases, the system breaks the query into overlapping pairs (biwords) and intersects their postings lists using an AND merge.",
+      "tags": [
+        "phrase-queries",
+        "biword-index",
+        "boolean"
+      ],
+      "sourceRefs": [
+        "Q3.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q3-irs-029",
+      "type": "single_choice",
+      "topic": "Term Frequencies",
+      "subtopic": "Definitions",
+      "difficulty": "easy",
+      "questionMd": "A term has a document frequency (DF) of 500 and a term frequency (TF) of 12 in one particular document. What does the DF value of 500 indicate?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The term appears in 500 different documents in the corpus"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The term's postings list contains 500 position entries"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The term appears in documents with an average length of 500 tokens"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The term appears 500 times across all documents combined"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Document Frequency (DF) is explicitly defined as the total number of distinct documents within a corpus that contain the term at least once, regardless of how many times the term appears inside those individual documents.",
+      "tags": [
+        "df",
+        "tf",
+        "definitions"
+      ],
+      "sourceRefs": [
+        "Q3.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q3-irs-030",
+      "type": "single_choice",
+      "topic": "Boolean Retrieval",
+      "subtopic": "NOT Operator",
+      "difficulty": "medium",
+      "questionMd": "Why is leading a query with a NOT operation alone considered poor practice?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "It requires scanning the entire corpus to find all document IDs not in the negated list"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "It produces the same result as an AND query but takes longer to parse"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "It requires building a secondary inverted index from scratch at query time"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "It can only be applied after an OR merge has been completed"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "A pure NOT query (e.g., `NOT apple`) conceptually means returning every document in the universe except those containing 'apple'. This forces the system to load the entire dictionary and all documents, which is computationally unfeasible.",
+      "tags": [
+        "boolean",
+        "not-operator",
+        "performance"
+      ],
+      "sourceRefs": [
+        "Q3.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q3-irs-031",
+      "type": "single_choice",
+      "topic": "Spelling Correction",
+      "subtopic": "Phonetics",
+      "difficulty": "easy",
+      "questionMd": "The Soundex algorithm is best described as a tool designed for which specific purpose?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Phonetic matching of proper names by encoding names that sound similar to the same code"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Ranking spelling correction candidates by their edit distance from a misspelled query"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "General-purpose spelling correction for any English vocabulary term"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Wildcard query resolution by hashing vocabulary terms into fixed-length codes"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Soundex is specifically a phonetic algorithm meant to group words (originally proper nouns and surnames) that sound alike but are spelled differently (e.g., Smith vs. Smyth).",
+      "tags": [
+        "soundex",
+        "phonetics",
+        "spelling"
+      ],
+      "sourceRefs": [
+        "Q3.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q3-irs-032",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Boolean Retrieval",
+      "difficulty": "easy",
+      "questionMd": "In the Boolean retrieval model, what does a query return?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A ranked list of documents sorted by relevance score"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "A probability distribution over matching documents"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "A set of document IDs sorted by term frequency"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "A set of document IDs with no ordering or relevance scores"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "The Boolean model is strictly binary: a document either matches the query perfectly, or it doesn't. It does not compute partial matches, ranks, or scores. It simply returns an unranked set of matching document IDs.",
+      "tags": [
+        "boolean",
+        "retrieval-models",
+        "concept"
+      ],
+      "sourceRefs": [
+        "Q3.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q3-irs-033",
+      "type": "single_choice",
+      "topic": "Wildcard Queries",
+      "subtopic": "Permuterm Index",
+      "difficulty": "medium",
+      "questionMd": "Using a permuterm index, how is the wildcard query \"*tion\" translated before performing a dictionary lookup?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "It is reversed to noit and a suffix scan is performed on the dictionary"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "It is decomposed into k-grams and an intersection query is run against the k-gram index"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "It is padded to stions and an exact match is performed in the permuterm dictionary"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "It is rotated to tion$ and then a prefix lookup is performed on tion$"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "To handle a wildcard query in a permuterm index, an end-of-word symbol `$` is appended (resulting in `*tion$`). Then, the term is rotated so the wildcard `*` is at the end (resulting in `tion$*`). The system then performs a standard prefix lookup on `tion$`.",
+      "tags": [
+        "wildcards",
+        "permuterm-index",
+        "queries"
+      ],
+      "sourceRefs": [
+        "Q3.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q3-irs-034",
+      "type": "single_choice",
+      "topic": "Phrase Queries",
+      "subtopic": "Positional Indexes",
+      "difficulty": "easy",
+      "questionMd": "In the positional index approach to phrase queries, what is the role of the first phase?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "It verifies that query terms appear at consecutive positions in each document"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "It resolves wildcard patterns into concrete vocabulary terms using the k-gram index"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "It applies Jaccard similarity to rank candidate documents by term overlap"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "It uses an AND merge to produce a candidate set of documents containing all query terms"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Checking positions is computationally expensive. Therefore, the first step is always to perform a fast Boolean AND merge to retrieve only the subset of documents that contain all the target words before analyzing their exact positions.",
+      "tags": [
+        "phrase-queries",
+        "positional-index",
+        "optimization"
+      ],
+      "sourceRefs": [
+        "Q3.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q3-irs-035",
+      "type": "single_choice",
+      "topic": "Wildcard Queries",
+      "subtopic": "k-gram Calculation",
+      "difficulty": "hard",
+      "questionMd": "What is the correct set of 3-grams (with boundary markers) for the vocabulary term \"query\"?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "($qu, que, uer, ery)"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "($qu, que, uer, ery, ry$)"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "($qu, que, uer, ry$)"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "(qu, que, uer, ery, ry)"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "First, append boundary markers: `$query$`. Then extract sliding sequences of 3 characters: `$qu`, `que`, `uer`, `ery`, `ry$`.",
+      "tags": [
+        "k-gram",
+        "wildcards",
+        "string-manipulation"
+      ],
+      "sourceRefs": [
+        "Q3.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q3-irs-036",
+      "type": "single_choice",
+      "topic": "Query Optimization",
+      "subtopic": "Skip Pointers",
+      "difficulty": "easy",
+      "questionMd": "What is the recommended skip pointer interval for a postings list of length 400?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "10"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "20"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "40"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "200"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "A standard heuristic dictates the skip frequency should be $\\sqrt{P}$, where $P$ is the length of the list. Since $\\sqrt{400} = 20$, the interval is 20.",
+      "tags": [
+        "skip-pointers",
+        "optimization",
+        "math"
+      ],
+      "sourceRefs": [
+        "Q3.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q3-irs-037",
+      "type": "single_choice",
+      "topic": "Wildcard Queries",
+      "subtopic": "k-gram Index",
+      "difficulty": "medium",
+      "questionMd": "The k-gram index built over vocabulary terms serves two distinct retrieval functions. Which pair correctly identifies both?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Biword index construction and permuterm rotation lookup"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Wildcard query resolution and spelling correction candidate retrieval"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Phrase query position verification and proximity query distance checking"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Query optimization by document frequency and skip pointer construction"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "The k-gram index is a versatile tool used both to resolve wildcards (e.g., finding all words containing 'red') and to rapidly retrieve a wide net of candidate terms that share substrings with a misspelled word for spelling correction.",
+      "tags": [
+        "k-gram",
+        "wildcards",
+        "spelling-correction"
+      ],
+      "sourceRefs": [
+        "Q3.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q3-irs-038",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Boolean Limitations",
+      "difficulty": "medium",
+      "questionMd": "Which of the following is a fundamental limitation of the Boolean retrieval model?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Query processing time scales quadratically with the number of query terms"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "A document that satisfies all but one query term is excluded entirely from results"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The model cannot support the NOT operator on large corpora"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Results cannot be cached because they change with each query"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Because Boolean logic is rigidly binary (match vs non-match), a document that perfectly satisfies an information need but happens to be missing one specific keyword in an AND query will be brutally omitted. It lacks graded relevance.",
+      "tags": [
+        "boolean",
+        "limitations",
+        "retrieval-models"
+      ],
+      "sourceRefs": [
+        "Q3.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q3-irs-039",
+      "type": "single_choice",
+      "topic": "Phrase Queries",
+      "subtopic": "Positional Relationships",
+      "difficulty": "easy",
+      "questionMd": "For the phrase query \"A B C\" evaluated against a positional index, which position relationship must hold in a matching document?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A must appear before B, and B must appear before C, with no constraint on the exact gap"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "A and C must appear at adjacent positions, with B appearing anywhere in the document"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "A must appear at some position p, B at position $p+1$, and C at position $p+2$"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "A, B, and C must each appear at least once and their positions must sum to a value below a threshold"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "A true phrase query demands exact, gapless sequence. If the first term is at position `p`, the next term must be exactly one spot over (`p+1`), and the next exactly one spot after that (`p+2`).",
+      "tags": [
+        "phrase-queries",
+        "positional-index"
+      ],
+      "sourceRefs": [
+        "Q3.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q3-irs-040",
+      "type": "single_choice",
+      "topic": "Phrase Queries",
+      "subtopic": "Proximity",
+      "difficulty": "medium",
+      "questionMd": "A proximity query is written as `term1 /k term2`. Which condition must hold in a candidate document for it to be included in the result?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The absolute difference between any occurrence position of term1 and any occurrence position of term2 must be at most k"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "term1 must appear exactly k positions before term2 in every occurrence"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The total count of term1 and term2 occurrences in the document must equal k"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The terms must appear in the same sentence and within k paragraphs of each other"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "The proximity operator `/k` specifies a maximum acceptable distance between two terms. They can occur in any order, provided the absolute difference between their positions is less than or equal to `k`.",
+      "tags": [
+        "proximity-queries",
+        "boolean",
+        "positional-index"
+      ],
+      "sourceRefs": [
+        "Q3.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q3-irs-041",
+      "type": "single_choice",
+      "topic": "Spelling Correction",
+      "subtopic": "Edit Distance",
+      "difficulty": "easy",
+      "questionMd": "What is the Levenshtein edit distance between \"information\" and \"informtion\"?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "0"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "1"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "2"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "3"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "The string \"informtion\" is missing the letter 'a'. It requires exactly one operation (an insertion of 'a') to transform it back to \"information\". Therefore, the edit distance is 1.",
+      "tags": [
+        "edit-distance",
+        "levenshtein",
+        "spelling-correction"
+      ],
+      "sourceRefs": [
+        "Q3.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q3-irs-042",
+      "type": "single_choice",
+      "topic": "Wildcard Queries",
+      "subtopic": "Post-Filtering",
+      "difficulty": "hard",
+      "questionMd": "After intersecting k-gram postings to resolve a wildcard query, why is a mandatory post-filtering step required?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "K-gram postings lists are unsorted, so the intersection result contains duplicate terms"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Post-filtering converts k-gram integer IDs back into human-readable vocabulary terms"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The k-gram intersection can only retrieve terms from a single partition of the vocabulary at a time"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "K-gram matching is a necessary but not sufficient condition—candidate terms may not actually match the original wildcard pattern"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "A word might contain all the required k-grams of a query but still fail to match the overall pattern. For example, evaluating 'red*' via k-grams might falsely match the word 'ordered' because it contains 'red', even though it doesn't start with it.",
+      "tags": [
+        "wildcards",
+        "k-gram",
+        "filtering"
+      ],
+      "sourceRefs": [
+        "Q3.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q3-irs-043",
+      "type": "single_choice",
+      "topic": "Query Optimization",
+      "subtopic": "Skip Pointers",
+      "difficulty": "medium",
+      "questionMd": "Under which condition do skip pointers provide the greatest reduction in comparisons during an AND merge?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "When both postings lists have identical length"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "When the query contains three or more AND operands"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "When both postings lists contain more than 10,000 entries"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "When the two postings lists are very unequal in length"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Skip pointers are designed to fast-forward through blocks of document IDs. This only happens frequently when merging a very short list with a very long list, allowing the shorter list to \"skip\" over huge irrelevant swaths of the longer one.",
+      "tags": [
+        "skip-pointers",
+        "optimization",
+        "merge"
+      ],
+      "sourceRefs": [
+        "Q3.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    }
+  ]
+}

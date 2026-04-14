@@ -39,6 +39,7 @@ export interface QuizMeta {
   title: string;
   description: string;
   source: string;              // e.g. "2024 Midterm", "Practice Set"
+  course?: string;             // e.g. "Dynamic Web Programming", "Information Retrieval Systems"
   year?: number;
   topic: string;               // Primary topic
   topics: string[];            // All topics covered
@@ -104,6 +105,7 @@ export const QuizMetaSchema = z.object({
   title: z.string(),
   description: z.string(),
   source: z.string(),
+  course: z.string().optional(),
   year: z.number().optional(),
   topic: z.string(),
   topics: z.array(z.string()),

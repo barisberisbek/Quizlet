@@ -27,7 +27,8 @@
         "merged",
         "past-exam"
       ],
-      "fileName": "old-merged.json"
+      "fileName": "old-merged.json",
+      "course": "Dynamic Web Programming"
     },
     {
       "id": "q1-merged",
@@ -56,7 +57,8 @@
         "merged",
         "past-exam"
       ],
-      "fileName": "q1-merged.json"
+      "fileName": "q1-merged.json",
+      "course": "Dynamic Web Programming"
     },
     {
       "id": "q2-merged",
@@ -91,7 +93,8 @@
         "merged",
         "past-exam"
       ],
-      "fileName": "q2-merged.json"
+      "fileName": "q2-merged.json",
+      "course": "Dynamic Web Programming"
     },
     {
       "id": "q3-merged",
@@ -120,7 +123,8 @@
         "merged",
         "past-exam"
       ],
-      "fileName": "q3-merged.json"
+      "fileName": "q3-merged.json",
+      "course": "Dynamic Web Programming"
     },
     {
       "id": "q4-merged",
@@ -150,7 +154,253 @@
         "merged",
         "past-exam"
       ],
-      "fileName": "q4-merged.json"
+      "fileName": "q4-merged.json",
+      "course": "Dynamic Web Programming"
+    },
+    {
+      "id": "irs-new-mix-merged",
+      "title": "[IRS] New Mix Questions",
+      "description": "A collection of Information Retrieval Systems exam questions.",
+      "source": "IRS Past Exams",
+      "course": "Information Retrieval Systems",
+      "topic": "BM25",
+      "topics": [
+        "BM25",
+        "BM25 and TF Weighting",
+        "Boolean Retrieval",
+        "Evaluation",
+        "IDF",
+        "Index Compression",
+        "Index Construction",
+        "OpenSearch",
+        "Probabilistic Retrieval",
+        "Ranking and Scoring",
+        "Retrieval Models",
+        "SMART Notation",
+        "Statistical Properties of Text",
+        "Term Frequency",
+        "Text Preprocessing",
+        "Vector Space Model"
+      ],
+      "questionCount": 33,
+      "difficulty": "medium",
+      "estimatedMinutes": 50,
+      "tags": [
+        "irs",
+        "new-mix",
+        "merged"
+      ],
+      "fileName": "irs-new-mix-merged.json"
+    },
+    {
+      "id": "irs-old-final-merged",
+      "title": "[IRS] Old Final Questions",
+      "description": "A collection of Information Retrieval Systems exam questions.",
+      "source": "IRS Past Exams",
+      "course": "Information Retrieval Systems",
+      "topic": "Evaluation",
+      "topics": [
+        "Evaluation",
+        "Fundamentals",
+        "Indexing",
+        "Preprocessing",
+        "Query Optimization",
+        "Retrieval Models",
+        "System Architecture",
+        "Term Weighting"
+      ],
+      "questionCount": 59,
+      "difficulty": "medium",
+      "estimatedMinutes": 89,
+      "tags": [
+        "irs",
+        "old-final",
+        "merged"
+      ],
+      "fileName": "irs-old-final-merged.json"
+    },
+    {
+      "id": "irs-old-midterm-merged",
+      "title": "[IRS] Old Midterm Questions",
+      "description": "A collection of Information Retrieval Systems exam questions.",
+      "source": "IRS Past Exams",
+      "course": "Information Retrieval Systems",
+      "topic": "Boolean Retrieval",
+      "topics": [
+        "Boolean Retrieval",
+        "Data Types",
+        "Fundamentals",
+        "Indexing",
+        "Retrieval Models",
+        "System Architecture",
+        "Term Weighting"
+      ],
+      "questionCount": 53,
+      "difficulty": "medium",
+      "estimatedMinutes": 80,
+      "tags": [
+        "irs",
+        "old-midterm",
+        "merged"
+      ],
+      "fileName": "irs-old-midterm-merged.json"
+    },
+    {
+      "id": "irs-q1-merged",
+      "title": "[IRS] Quiz 1 — IR Fundamentals",
+      "description": "Vocabulary mismatch, Term Frequency, basic IR queries.",
+      "source": "IRS Past Exams",
+      "course": "Information Retrieval Systems",
+      "topic": "Architecture",
+      "topics": [
+        "Architecture",
+        "Evaluation Metrics",
+        "Fundamentals",
+        "History of IR",
+        "IR Systems",
+        "IR vs Databases",
+        "Retrieval Models",
+        "System Architecture",
+        "Term Weighting",
+        "User Queries"
+      ],
+      "questionCount": 20,
+      "difficulty": "medium",
+      "estimatedMinutes": 30,
+      "tags": [
+        "irs",
+        "q1",
+        "merged"
+      ],
+      "fileName": "irs-q1-merged.json"
+    },
+    {
+      "id": "irs-q2-merged",
+      "title": "[IRS] Quiz 2 — Retrieval Models",
+      "description": "Vector space model, BM25, probabilistic models.",
+      "source": "IRS Past Exams",
+      "course": "Information Retrieval Systems",
+      "topic": "Index Compression",
+      "topics": [
+        "Index Compression",
+        "Index Construction",
+        "Indexing",
+        "Search Systems",
+        "Statistical Properties of Text",
+        "Stemming and Lemmatization",
+        "Text Preprocessing",
+        "Text Statistics"
+      ],
+      "questionCount": 38,
+      "difficulty": "medium",
+      "estimatedMinutes": 57,
+      "tags": [
+        "irs",
+        "q2",
+        "merged"
+      ],
+      "fileName": "irs-q2-merged.json"
+    },
+    {
+      "id": "irs-q3-merged",
+      "title": "[IRS] Quiz 3 — Evaluation",
+      "description": "Precision, recall, MAP, NDCG, and Cranfield evaluation model.",
+      "source": "IRS Past Exams",
+      "course": "Information Retrieval Systems",
+      "topic": "Boolean Retrieval",
+      "topics": [
+        "Boolean Retrieval",
+        "Phrase Queries",
+        "Query Optimization",
+        "Retrieval Models",
+        "Spelling Correction",
+        "System Architecture",
+        "Term Frequencies",
+        "Wildcard Queries"
+      ],
+      "questionCount": 43,
+      "difficulty": "medium",
+      "estimatedMinutes": 65,
+      "tags": [
+        "irs",
+        "q3",
+        "merged"
+      ],
+      "fileName": "irs-q3-merged.json"
+    },
+    {
+      "id": "irs-q4-merged",
+      "title": "[IRS] Quiz 4 — Crawling & Architecture",
+      "description": "Web scraping protocols, online vs offline processing, indexing architecture.",
+      "source": "IRS Past Exams",
+      "course": "Information Retrieval Systems",
+      "topic": "Fundamentals",
+      "topics": [
+        "Fundamentals",
+        "Indexing",
+        "Retrieval Models",
+        "System Architecture",
+        "Term Weighting"
+      ],
+      "questionCount": 28,
+      "difficulty": "medium",
+      "estimatedMinutes": 42,
+      "tags": [
+        "irs",
+        "q4",
+        "merged"
+      ],
+      "fileName": "irs-q4-merged.json"
+    },
+    {
+      "id": "irs-q5-merged",
+      "title": "[IRS] Quiz 5 — Indexing",
+      "description": "Inverted indices, skip pointers, compression algorithms.",
+      "source": "IRS Past Exams",
+      "course": "Information Retrieval Systems",
+      "topic": "Evaluation Campaigns",
+      "topics": [
+        "Evaluation Campaigns",
+        "Evaluation Metrics",
+        "Significance Testing"
+      ],
+      "questionCount": 40,
+      "difficulty": "medium",
+      "estimatedMinutes": 60,
+      "tags": [
+        "irs",
+        "q5",
+        "merged"
+      ],
+      "fileName": "irs-q5-merged.json"
+    },
+    {
+      "id": "irs-q6-merged",
+      "title": "[IRS] Quiz 6 — Web Search",
+      "description": "PageRank, HITS, adversarial web IR.",
+      "source": "IRS Past Exams",
+      "course": "Information Retrieval Systems",
+      "topic": "Distributed Retrieval",
+      "topics": [
+        "Distributed Retrieval",
+        "Lucene",
+        "OpenSearch",
+        "OpenSearch Analysis",
+        "OpenSearch Cluster",
+        "OpenSearch Debugging",
+        "OpenSearch Execution",
+        "OpenSearch Query DSL",
+        "OpenSearch Storage"
+      ],
+      "questionCount": 20,
+      "difficulty": "medium",
+      "estimatedMinutes": 30,
+      "tags": [
+        "irs",
+        "q6",
+        "merged"
+      ],
+      "fileName": "irs-q6-merged.json"
     }
   ]
 }
