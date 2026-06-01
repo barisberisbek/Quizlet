@@ -13,14 +13,15 @@
       "History of IR",
       "IR Systems",
       "IR vs Databases",
+      "Ranking and Scoring",
       "Retrieval Models",
       "System Architecture",
       "Term Weighting",
       "User Queries"
     ],
-    "questionCount": 20,
+    "questionCount": 21,
     "difficulty": "medium",
-    "estimatedMinutes": 30,
+    "estimatedMinutes": 32,
     "tags": [
       "irs",
       "q1",
@@ -30,282 +31,97 @@
   },
   "questions": [
     {
-      "id": "q1-irs-001",
+      "id": "irs-q1-001",
       "type": "single_choice",
-      "topic": "Fundamentals",
-      "subtopic": "Challenges",
-      "difficulty": "medium",
-      "questionMd": "A user searches \"automobile fuel efficiency\" but the most relevant document uses only the phrases \"car gas mileage\" and \"vehicle consumption\". What problem does this scenario illustrate?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "The stopword problem — common function words are masking the discriminating content terms"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "The vocabulary mismatch problem — lexical overlap is zero despite near-identical meaning"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "The precision-recall tradeoff — retrieving more documents lowers average result quality"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "The corpus freshness problem — the index has not been updated to include recent terminology"
-        }
-      ],
-      "correctAnswer": [
-        "b"
-      ],
-      "explanationMd": "Bir IR sistemi eşanlamlı yönetimi (synonym handling) veya sözlük entegrasyonu (thesaurus) kullanarak 'automobile' ve 'car' gibi farklı kelimelerin aynı kavramı ifade ettiğini anlayabilir.\n\n**Neden diğerleri yanlış?**\n• **A)** Stemming farklı köklere sahip eşanlamlıları yakalayamaz.\n• **C)** Boolean operatörler eşanlamlı problemi çözmez.\n• **D)** Sorgu genişletme tek başına yeterli değildir; kontrollü sözlük gerekir.",
-      "tags": [
-        "vocabulary-mismatch",
-        "fundamentals",
-        "synonymy"
-      ],
-      "sourceRefs": [
-        "Q1-v2.json",
-        "new-mix.json",
-        "Q1.json"
-      ],
-      "mergedFromCount": 3,
-      "needs_review": true
-    },
-    {
-      "id": "q1-irs-002",
-      "type": "single_choice",
-      "topic": "Term Weighting",
-      "subtopic": "TF Normalization",
+      "topic": "System Architecture",
+      "subtopic": "Tradeoffs",
       "difficulty": "hard",
-      "questionMd": "Document A has 1000 tokens and mentions \"space\" 10 times. Document B has 100 tokens and mentions \"space\" 5 times. Which claim about TF-IDF scoring is correct?",
+      "questionMd": "In IR system design, Boolean retrieval and neural reranking sit at opposite ends of a fundamental tradeoff. Which pair of terms correctly names the two competing goals?",
       "options": [
         {
           "id": "a",
           "label": "A",
-          "text": "Document A scores higher because a larger document contains more contextual evidence"
+          "text": "Precision (result quality) versus recall (result completeness)"
         },
         {
           "id": "b",
           "label": "B",
-          "text": "Document A scores higher because raw term count always dominates TF-IDF computation"
+          "text": "Offline processing versus online processing"
         },
         {
           "id": "c",
           "label": "C",
-          "text": "Document B scores higher because its relative term frequency (5%) exceeds Document A's (1%)"
+          "text": "Efficiency (speed and scale) versus effectiveness (accuracy and relevance)"
         },
         {
           "id": "d",
           "label": "D",
-          "text": "Both documents receive identical TF-IDF scores because IDF is the same for both"
+          "text": "Index compression versus index coverage"
         }
       ],
       "correctAnswer": [
         "c"
       ],
-      "explanationMd": "Document B'nin göreli terim frekansı (5/100 = %5), Document A'nınkinden (10/1000 = %1) yüksektir. TF-IDF, ham sayımı değil normalize edilmiş frekansı kullanır; bu nedenle B daha yüksek skor alır.\n\n**Neden diğerleri yanlış?**\n• **A)** Daha uzun belge otomatik olarak daha yüksek skor almaz; TF normalizasyonu bunu engeller.\n• **B)** Ham terim sayısı TF-IDF'te tek başına belirleyici değildir.\n• **D)** IDF aynı olsa da TF değerleri farklı olduğundan skorlar eşit olmaz.",
+      "explanationMd": "Boolean retrieval hız ve ölçeklenebilirlik (efficiency) önceliklendirirken, neural reranking doğruluk ve alaka (effectiveness) odaklıdır. Bu, IR sistem tasarımındaki temel ödünleşimdir.\n\n**Neden diğerleri yanlış?**\n• **A)** Precision ve recall, sistem performans metrikleridir; tasarım felsefesi değil.\n• **B)** Offline/online processing, işlem zamanlamasıyla ilgilidir, temel tradeoff'u tanımlamaz.\n• **D)** Doğru kavram çiftini yansıtmaz.",
       "tags": [
-        "tf-idf",
-        "normalization",
-        "math"
+        "architecture",
+        "efficiency",
+        "effectiveness"
       ],
       "sourceRefs": [
-        "Q1-v2.json",
-        "new-mix.json",
-        "Q1.json"
+        "incoming-retrieval-json/Q1-v2.json",
+        "incoming-retrieval-json/Q1.json"
       ],
-      "mergedFromCount": 3,
+      "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q1-irs-003",
-      "type": "single_choice",
-      "topic": "Term Weighting",
-      "subtopic": "IDF Logic",
-      "difficulty": "medium",
-      "questionMd": "Why does a term that appears in every document in a corpus receive an IDF score of zero?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "Because universal terms inflate TF scores and must be cancelled by a negative IDF"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "Because stopword removal deletes the term before the IDF calculation is performed"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "Because such a term cannot discriminate between documents and therefore contributes nothing to relevance ranking"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "Because the logarithm function is undefined when the document frequency equals zero"
-        }
-      ],
-      "correctAnswer": [
-        "c"
-      ],
-      "explanationMd": "Tüm belgelerde geçen bir terim, belgeler arasında ayrım yapamaz; dolayısıyla IDF = log(N/N) = log(1) = 0 olur. Ayırıcı gücü sıfırdır.\n\n**Neden diğerleri yanlış?**\n• **A)** IDF sıfır olmasının nedeni matematiksel hata değil, kavramsal bir sonuçtur.\n• **B)** IDF negatif olabilir (bazı formüllerde), ama burada tam sıfırdır.\n• **D)** Stopword olması zorunlu değildir; herhangi bir terim tüm belgelerde geçebilir.",
-      "tags": [
-        "idf",
-        "theory",
-        "tfidf"
-      ],
-      "sourceRefs": [
-        "Q1-v2.json",
-        "new-mix.json",
-        "Q1.json"
-      ],
-      "mergedFromCount": 3,
-      "needs_review": true
-    },
-    {
-      "id": "q1-irs-004",
-      "type": "single_choice",
-      "topic": "Fundamentals",
-      "subtopic": "Relevance",
-      "difficulty": "medium",
-      "questionMd": "Which of the following is an accurate characterisation of relevance in information retrieval?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "Relevance is binary and can be determined algorithmically without human input"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "Relevance is graded, subjective, and context-dependent"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "Relevance is a fixed property of a document independent of who is asking"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "Two users with identical queries will always agree on which documents are relevant"
-        }
-      ],
-      "correctAnswer": [
-        "b"
-      ],
-      "explanationMd": "Alaka (relevance), kullanıcıya, bağlama ve bilgi ihtiyacına göre değişen öznel bir kavramdır. Aynı belge farklı kullanıcılar için farklı derecelerde ilgili olabilir.\n\n**Neden diğerleri yanlış?**\n• **A)** Alaka sadece anahtar kelime eşleşmesiyle belirlenmez.\n• **C)** Alaka ikili (binary) değildir; derecelendirilmiş olabilir.\n• **D)** Alaka, sistem değil kullanıcı perspektifinden değerlendirilir.",
-      "tags": [
-        "relevance",
-        "theory",
-        "fundamentals"
-      ],
-      "sourceRefs": [
-        "Q1-v2.json",
-        "new-mix.json",
-        "Q1.json"
-      ],
-      "mergedFromCount": 3,
-      "needs_review": false
-    },
-    {
-      "id": "q1-irs-005",
+      "id": "irs-q1-002",
       "type": "single_choice",
       "topic": "Retrieval Models",
       "subtopic": "Boolean Retrieval",
       "difficulty": "easy",
-      "questionMd": "Using the inverted index for the three documents below, which document is returned by the Boolean AND query \"cat AND sat\"?\nDoc 0: \"the cat sat on the mat\"\nDoc 1: \"the cat ate the rat\"\nDoc 2: \"the rat sat and ate\"",
+      "questionMd": "In Boolean retrieval, an OR query between two terms produces results by applying which set operation to their postings lists?",
       "options": [
         {
           "id": "a",
           "label": "A",
-          "text": "Doc 0 and Doc 1"
+          "text": "Set complement — all documents not containing either term"
         },
         {
           "id": "b",
           "label": "B",
-          "text": "Doc 1 and Doc 2"
+          "text": "Set difference — documents containing the first term but not the second"
         },
         {
           "id": "c",
           "label": "C",
-          "text": "Doc 0 and Doc 2"
+          "text": "Set union — documents containing either term or both"
         },
         {
           "id": "d",
           "label": "D",
-          "text": "Doc 0 only"
-        }
-      ],
-      "correctAnswer": [
-        "d"
-      ],
-      "explanationMd": "Inverted index kullanılarak AND sorgusu çalıştırıldığında, her iki terimin posting listesinde de ortak olan belge ID'leri döndürülür (kesişim). Doğru belge, her iki terimi de içeren belgedir.\n\n**Neden diğerleri yanlış?**\nDiğer seçeneklerdeki belgeler, sorgudaki tüm terimleri aynı anda içermemektedir. AND sorgusu yalnızca TÜM terimlerin geçtiği belgeleri döndürür.",
-      "tags": [
-        "boolean",
-        "logic",
-        "inverted-index"
-      ],
-      "sourceRefs": [
-        "Q1-v2.json",
-        "new-mix.json",
-        "Q1.json"
-      ],
-      "mergedFromCount": 3,
-      "needs_review": true
-    },
-    {
-      "id": "q1-irs-006",
-      "type": "single_choice",
-      "topic": "Term Weighting",
-      "subtopic": "TF Calculation",
-      "difficulty": "easy",
-      "questionMd": "A document contains 200 tokens, and the term \"orbit\" appears 4 times. What is the Term Frequency (TF) of \"orbit\" in this document?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "0.04"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "0.20"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "0.02"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "4.0"
+          "text": "Set intersection — documents containing both terms simultaneously"
         }
       ],
       "correctAnswer": [
         "c"
       ],
-      "explanationMd": "Term Frequency (TF) = terimin belgedeki geçiş sayısı / belgedeki toplam token sayısı = 4/200 = 0.02.\n\n**Neden diğerleri yanlış?**\n• **A)** 4/100 yanlış payda kullanır.\n• **B)** 200/4 = 50 tersine hesaplamadır.\n• **D)** Log tabanlı TF burada sorulmuyor; ham TF oranı isteniyor.",
+      "explanationMd": "Boolean OR operatörü, küme teorisindeki birleşim (union / ∪) işlemine karşılık gelir: iki terimin posting listelerindeki tüm benzersiz belge ID'lerini birleştirir.\n\n**Neden diğerleri yanlış?**\n• **A)** Kesişim (∩) AND operatörüne karşılık gelir, OR'a değil.\n• **B)** Fark işlemi NOT operatörüyle ilişkilidir.\n• **D)** Kartezyen çarpım, belge getirme ile ilgisizdir.",
       "tags": [
-        "tf",
-        "math"
+        "boolean",
+        "set-theory",
+        "operators"
       ],
       "sourceRefs": [
-        "Q1-v2.json",
-        "new-mix.json",
-        "Q1.json"
+        "incoming-retrieval-json/Q1-v2.json",
+        "incoming-retrieval-json/Q1.json"
       ],
-      "mergedFromCount": 3,
+      "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q1-irs-007",
+      "id": "irs-q1-003",
       "type": "single_choice",
       "topic": "Evaluation Metrics",
       "subtopic": "Precision and Recall",
@@ -344,107 +160,59 @@
         "math"
       ],
       "sourceRefs": [
-        "Q1-v2.json",
-        "new-mix.json",
-        "Q1.json"
+        "incoming-retrieval-json/Q1-v2.json",
+        "incoming-retrieval-json/Q1.json"
       ],
-      "mergedFromCount": 3,
+      "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q1-irs-008",
+      "id": "irs-q1-004",
       "type": "single_choice",
-      "topic": "Architecture",
-      "subtopic": "Pipeline",
-      "difficulty": "hard",
-      "questionMd": "Which sequence correctly represents the order of the seven stages in the standard IR pipeline introduced in Week 1?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "Query Processing → Crawl → Preprocess → Index → Rank → Evaluate → Present"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "Crawl → Index → Preprocess → Query Processing → Evaluate → Rank → Present"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "Preprocess → Crawl → Index → Rank → Query Processing → Present → Evaluate"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "Crawl → Preprocess → Index → Query Processing → Rank → Present → Evaluate"
-        }
-      ],
-      "correctAnswer": [
-        "d"
-      ],
-      "explanationMd": "IR'nin yedi aşaması, bir bilgi ihtiyacının oluşmasından sonuçların değerlendirilmesine kadar olan süreçteki adımları temsil eder. Doğru sıralama, bilgi ihtiyacı → sorgu formülasyonu → indeksleme → arama → eşleştirme → sıralama → değerlendirme şeklindedir.\n\n**Neden diğerleri yanlış?**\nDiğer seçeneklerdeki sıralamalar mantıksal akışı bozar.",
-      "tags": [
-        "pipeline",
-        "architecture",
-        "stages"
-      ],
-      "sourceRefs": [
-        "Q1-v2.json",
-        "new-mix.json",
-        "Q1.json"
-      ],
-      "mergedFromCount": 3,
-      "needs_review": true
-    },
-    {
-      "id": "q1-irs-009",
-      "type": "single_choice",
-      "topic": "Architecture",
-      "subtopic": "Offline vs Online",
+      "topic": "Fundamentals",
+      "subtopic": "Relevance",
       "difficulty": "medium",
-      "questionMd": "Crawling, text preprocessing, and index construction are all classified as offline pipeline stages. What is the primary architectural reason for this design choice?",
+      "questionMd": "Which of the following is an accurate characterisation of relevance in information retrieval?",
       "options": [
         {
           "id": "a",
           "label": "A",
-          "text": "Building the index in advance allows online query processing to complete within strict millisecond latency budgets"
+          "text": "Relevance is binary and can be determined algorithmically without human input"
         },
         {
           "id": "b",
           "label": "B",
-          "text": "Offline stages consume too much RAM to run concurrently with live query traffic"
+          "text": "Relevance is graded, subjective, and context-dependent"
         },
         {
           "id": "c",
           "label": "C",
-          "text": "Online stages require specialised hardware that cannot also execute indexing workloads"
+          "text": "Relevance is a fixed property of a document independent of who is asking"
         },
         {
           "id": "d",
           "label": "D",
-          "text": "Preprocessing must be performed after each user query to reflect the most recent document versions"
+          "text": "Two users with identical queries will always agree on which documents are relevant"
         }
       ],
       "correctAnswer": [
-        "a"
+        "b"
       ],
-      "explanationMd": "İndeksi önceden oluşturmak, çevrimiçi sorgu işlemenin katı milisaniye gecikme bütçeleri içinde tamamlanmasını sağlar. Bu, IR mimarisinin temel tasarım prensibidir: ağır işleri çevrimdışı yaparak çevrimiçi deneyimi hızlandırmak.\n\n**Neden diğerleri yanlış?**\n• **B)** RAM tüketimi gerçek olsa da temel mimari sebep değil; gecikme bütçesidir.\n• **C)** Özel donanım gereksinimi genel bir kural değildir.\n• **D)** Her sorguda ön işleme yapmak offline pipeline'ın tam tersidir.",
+      "explanationMd": "Alaka (relevance), kullanıcıya, bağlama ve bilgi ihtiyacına göre değişen öznel bir kavramdır. Aynı belge farklı kullanıcılar için farklı derecelerde ilgili olabilir.\n\n**Neden diğerleri yanlış?**\n• **A)** Alaka sadece anahtar kelime eşleşmesiyle belirlenmez.\n• **C)** Alaka ikili (binary) değildir; derecelendirilmiş olabilir.\n• **D)** Alaka, sistem değil kullanıcı perspektifinden değerlendirilir.",
       "tags": [
-        "architecture",
-        "offline-processing",
-        "performance"
+        "relevance",
+        "theory",
+        "fundamentals"
       ],
       "sourceRefs": [
-        "Q1-v2.json",
-        "new-mix.json",
-        "Q1.json"
+        "incoming-retrieval-json/Q1-v2.json",
+        "incoming-retrieval-json/Q1.json"
       ],
-      "mergedFromCount": 3,
-      "needs_review": true
+      "mergedFromCount": 2,
+      "needs_review": false
     },
     {
-      "id": "q1-irs-010",
+      "id": "irs-q1-005",
       "type": "single_choice",
       "topic": "Evaluation Metrics",
       "subtopic": "Tradeoffs",
@@ -483,15 +251,59 @@
         "tradeoffs"
       ],
       "sourceRefs": [
-        "Q1-v2.json",
-        "new-mix.json",
-        "Q1.json"
+        "incoming-retrieval-json/Q1-v2.json",
+        "incoming-retrieval-json/Q1.json"
       ],
-      "mergedFromCount": 3,
+      "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q1-irs-011",
+      "id": "irs-q1-006",
+      "type": "single_choice",
+      "topic": "Term Weighting",
+      "subtopic": "IDF Logic",
+      "difficulty": "medium",
+      "questionMd": "Why does a term that appears in every document in a corpus receive an IDF score of zero?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Because universal terms inflate TF scores and must be cancelled by a negative IDF"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Because stopword removal deletes the term before the IDF calculation is performed"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Because such a term cannot discriminate between documents and therefore contributes nothing to relevance ranking"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Because the logarithm function is undefined when the document frequency equals zero"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Tüm belgelerde geçen bir terim, belgeler arasında ayrım yapamaz; dolayısıyla IDF = log(N/N) = log(1) = 0 olur. Ayırıcı gücü sıfırdır.\n\n**Neden diğerleri yanlış?**\n• **A)** IDF sıfır olmasının nedeni matematiksel hata değil, kavramsal bir sonuçtur.\n• **B)** IDF negatif olabilir (bazı formüllerde), ama burada tam sıfırdır.\n• **D)** Stopword olması zorunlu değildir; herhangi bir terim tüm belgelerde geçebilir.",
+      "tags": [
+        "idf",
+        "theory",
+        "tfidf"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q1-v2.json",
+        "incoming-retrieval-json/Q1.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "irs-q1-007",
       "type": "single_choice",
       "topic": "Fundamentals",
       "subtopic": "IR Triangle",
@@ -529,15 +341,59 @@
         "fundamentals"
       ],
       "sourceRefs": [
-        "Q1-v2.json",
-        "new-mix.json",
-        "Q1.json"
+        "incoming-retrieval-json/Q1-v2.json",
+        "incoming-retrieval-json/Q1.json"
       ],
-      "mergedFromCount": 3,
+      "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q1-irs-012",
+      "id": "irs-q1-008",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Boolean Retrieval",
+      "difficulty": "easy",
+      "questionMd": "Using the inverted index for the three documents below, which document is returned by the Boolean AND query \"cat AND sat\"?\nDoc 0: \"the cat sat on the mat\"\nDoc 1: \"the cat ate the rat\"\nDoc 2: \"the rat sat and ate\"",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Doc 0 and Doc 1"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Doc 1 and Doc 2"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Doc 0 and Doc 2"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Doc 0 only"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Inverted index kullanılarak AND sorgusu çalıştırıldığında, her iki terimin posting listesinde de ortak olan belge ID'leri döndürülür (kesişim). Doğru belge, her iki terimi de içeren belgedir.\n\n**Neden diğerleri yanlış?**\nDiğer seçeneklerdeki belgeler, sorgudaki tüm terimleri aynı anda içermemektedir. AND sorgusu yalnızca TÜM terimlerin geçtiği belgeleri döndürür.",
+      "tags": [
+        "boolean",
+        "logic",
+        "inverted-index"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q1-v2.json",
+        "incoming-retrieval-json/Q1.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "irs-q1-009",
       "type": "single_choice",
       "topic": "Retrieval Models",
       "subtopic": "Inverted Index",
@@ -574,199 +430,102 @@
         "postings"
       ],
       "sourceRefs": [
-        "Q1-v2.json",
-        "new-mix.json",
-        "Q1.json"
+        "incoming-retrieval-json/Q1-v2.json",
+        "incoming-retrieval-json/Q1.json"
       ],
-      "mergedFromCount": 3,
+      "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q1-irs-013",
+      "id": "irs-q1-010",
       "type": "single_choice",
-      "topic": "History of IR",
-      "subtopic": "Evaluation Paradigms",
-      "difficulty": "medium",
-      "questionMd": "Which 1960s development is credited as the first systematic, reproducible evaluation of IR systems, establishing the methodology of using test collections and relevance judgments?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "The Cranfield experiments"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "The SMART system developed by Salton at Cornell"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "The introduction of Luhn's automatic keyword extraction"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "The launch of MEDLARS at the National Library of Medicine"
-        }
-      ],
-      "correctAnswer": [
-        "a"
-      ],
-      "explanationMd": "**Cranfield deneyleri**, 1960'larda Cyril Cleverdon tarafından başlatılmıştır. Test koleksiyonları ve alaka yargıları kullanarak IR sistemlerini sistematik ve tekrarlanabilir şekilde değerlendiren ilk çalışmadır. Bugünkü TREC metodolojisinin öncüsüdür.\n\n**Neden diğerleri yanlış?**\n• **B)** SMART sistemi Salton tarafından geliştirildi ama sistematik değerlendirme metodolojisi kurmanın öncüsü değildir.\n• **C)** Luhn'un çalışmaları otomatik anahtar kelime çıkarmaya odaklanır, değerlendirme metodolojisi değil.\n• **D)** MEDLARS bir tıbbi kütüphane sistemidir; değerlendirme çerçevesi oluşturmamıştır.",
-      "tags": [
-        "history",
-        "cranfield",
-        "evaluation"
-      ],
-      "sourceRefs": [
-        "Q1-v2.json",
-        "new-mix.json",
-        "Q1.json"
-      ],
-      "mergedFromCount": 3,
-      "needs_review": true
-    },
-    {
-      "id": "q1-irs-014",
-      "type": "single_choice",
-      "topic": "System Architecture",
-      "subtopic": "Tradeoffs",
-      "difficulty": "hard",
-      "questionMd": "In IR system design, Boolean retrieval and neural reranking sit at opposite ends of a fundamental tradeoff. Which pair of terms correctly names the two competing goals?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "Precision (result quality) versus recall (result completeness)"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "Offline processing versus online processing"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "Efficiency (speed and scale) versus effectiveness (accuracy and relevance)"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "Index compression versus index coverage"
-        }
-      ],
-      "correctAnswer": [
-        "c"
-      ],
-      "explanationMd": "Boolean retrieval hız ve ölçeklenebilirlik (efficiency) önceliklendirirken, neural reranking doğruluk ve alaka (effectiveness) odaklıdır. Bu, IR sistem tasarımındaki temel ödünleşimdir.\n\n**Neden diğerleri yanlış?**\n• **A)** Precision ve recall, sistem performans metrikleridir; tasarım felsefesi değil.\n• **B)** Offline/online processing, işlem zamanlamasıyla ilgilidir, temel tradeoff'u tanımlamaz.\n• **D)** Doğru kavram çiftini yansıtmaz.",
-      "tags": [
-        "architecture",
-        "efficiency",
-        "effectiveness"
-      ],
-      "sourceRefs": [
-        "Q1-v2.json",
-        "new-mix.json",
-        "Q1.json"
-      ],
-      "mergedFromCount": 3,
-      "needs_review": true
-    },
-    {
-      "id": "q1-irs-015",
-      "type": "single_choice",
-      "topic": "Retrieval Models",
-      "subtopic": "Boolean Retrieval",
+      "topic": "Fundamentals",
+      "subtopic": "Definitions",
       "difficulty": "easy",
-      "questionMd": "In Boolean retrieval, an OR query between two terms produces results by applying which set operation to their postings lists?",
+      "questionMd": "Which statement most accurately captures the definition of Information Retrieval as a discipline?",
       "options": [
         {
           "id": "a",
           "label": "A",
-          "text": "Set complement — all documents not containing either term"
+          "text": "Annotating natural language text with grammatical and semantic labels for downstream processing"
         },
         {
           "id": "b",
           "label": "B",
-          "text": "Set difference — documents containing the first term but not the second"
+          "text": "Automatically discovering hidden patterns and clusters across large numerical datasets"
         },
         {
           "id": "c",
           "label": "C",
-          "text": "Set union — documents containing either term or both"
+          "text": "Executing structured queries against relational database tables to return exact matching rows"
         },
         {
           "id": "d",
           "label": "D",
-          "text": "Set intersection — documents containing both terms simultaneously"
-        }
-      ],
-      "correctAnswer": [
-        "c"
-      ],
-      "explanationMd": "Boolean OR operatörü, küme teorisindeki birleşim (union / ∪) işlemine karşılık gelir: iki terimin posting listelerindeki tüm benzersiz belge ID'lerini birleştirir.\n\n**Neden diğerleri yanlış?**\n• **A)** Kesişim (∩) AND operatörüne karşılık gelir, OR'a değil.\n• **B)** Fark işlemi NOT operatörüyle ilişkilidir.\n• **D)** Kartezyen çarpım, belge getirme ile ilgisizdir.",
-      "tags": [
-        "boolean",
-        "set-theory",
-        "operators"
-      ],
-      "sourceRefs": [
-        "Q1-v2.json",
-        "new-mix.json",
-        "Q1.json"
-      ],
-      "mergedFromCount": 3,
-      "needs_review": true
-    },
-    {
-      "id": "q1-irs-016",
-      "type": "single_choice",
-      "topic": "IR vs Databases",
-      "subtopic": "Limitations of SQL",
-      "difficulty": "hard",
-      "questionMd": "A developer uses `SELECT * FROM papers WHERE abstract LIKE '%heart attack%'` to find cardiology research. What is the most significant limitation of this approach compared to an IR system?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "It is slower than an inverted index for corpora with fewer than one million rows"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "It cannot filter results by publication date or author name"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "It requires a separate full-text parser before the SQL engine can execute"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "It returns no results for documents using the synonym \"myocardial infarction\" even though they are equally relevant"
+          "text": "Finding relevant information resources from a collection in response to an information need"
         }
       ],
       "correctAnswer": [
         "d"
       ],
-      "explanationMd": "SQL LIKE '%heart attack%', eşanlamlı olan 'myocardial infarction' ifadesini yakalayamaz. Bu, tam metin eşleştirmenin (exact string matching) en temel sınırlaması olan *vocabulary mismatch* problemidir.\n\n**Neden diğerleri yanlış?**\n• **A)** Hız karşılaştırması temel sınırlama değildir.\n• **B)** SQL tarih/yazar filtresi yapabilir.\n• **C)** LIKE ayrı bir parser gerektirmez.",
+      "explanationMd": "Information Retrieval, büyük miktarda yapılandırılmamış (genellikle metin) veri içinden kullanıcının bilgi ihtiyacını karşılayan ilgili materyali bulmayı amaçlar.\n\n**Neden diğerleri yanlış?**\n• **A)** IR sadece veritabanı sorgulaması değildir.\n• **B)** IR sadece web aramayla sınırlı değildir.\n• **C)** IR, yapılandırılmış veri yönetimi (DBMS) değildir.",
       "tags": [
-        "database",
-        "sql",
-        "semantics"
+        "definition",
+        "fundamentals"
       ],
       "sourceRefs": [
-        "Q1-v2.json",
-        "new-mix.json",
-        "Q1.json"
+        "incoming-retrieval-json/Q1-v2.json",
+        "incoming-retrieval-json/Q1.json"
       ],
-      "mergedFromCount": 3,
+      "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q1-irs-017",
+      "id": "irs-q1-011",
+      "type": "single_choice",
+      "topic": "Term Weighting",
+      "subtopic": "TF Calculation",
+      "difficulty": "easy",
+      "questionMd": "A document contains 200 tokens, and the term \"orbit\" appears 4 times. What is the Term Frequency (TF) of \"orbit\" in this document?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "0.04"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "0.20"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "0.02"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "4.0"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Term Frequency (TF) = terimin belgedeki geçiş sayısı / belgedeki toplam token sayısı = 4/200 = 0.02.\n\n**Neden diğerleri yanlış?**\n• **A)** 4/100 yanlış payda kullanır.\n• **B)** 200/4 = 50 tersine hesaplamadır.\n• **D)** Log tabanlı TF burada sorulmuyor; ham TF oranı isteniyor.",
+      "tags": [
+        "tf",
+        "math"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q1-v2.json",
+        "incoming-retrieval-json/Q1.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "irs-q1-012",
       "type": "single_choice",
       "topic": "User Queries",
       "subtopic": "Information Need",
@@ -804,105 +563,149 @@
         "concept"
       ],
       "sourceRefs": [
-        "Q1-v2.json",
-        "new-mix.json",
-        "Q1.json"
+        "incoming-retrieval-json/Q1-v2.json",
+        "incoming-retrieval-json/Q1.json"
       ],
-      "mergedFromCount": 3,
+      "mergedFromCount": 2,
       "needs_review": false
     },
     {
-      "id": "q1-irs-018",
+      "id": "irs-q1-013",
       "type": "single_choice",
-      "topic": "Fundamentals",
-      "subtopic": "Definitions",
-      "difficulty": "easy",
-      "questionMd": "Which statement most accurately captures the definition of Information Retrieval as a discipline?",
+      "topic": "Architecture",
+      "subtopic": "Pipeline",
+      "difficulty": "hard",
+      "questionMd": "Which sequence correctly represents the order of the seven stages in the standard IR pipeline introduced in Week 1?",
       "options": [
         {
           "id": "a",
           "label": "A",
-          "text": "Annotating natural language text with grammatical and semantic labels for downstream processing"
+          "text": "Query Processing → Crawl → Preprocess → Index → Rank → Evaluate → Present"
         },
         {
           "id": "b",
           "label": "B",
-          "text": "Automatically discovering hidden patterns and clusters across large numerical datasets"
+          "text": "Crawl → Index → Preprocess → Query Processing → Evaluate → Rank → Present"
         },
         {
           "id": "c",
           "label": "C",
-          "text": "Executing structured queries against relational database tables to return exact matching rows"
+          "text": "Preprocess → Crawl → Index → Rank → Query Processing → Present → Evaluate"
         },
         {
           "id": "d",
           "label": "D",
-          "text": "Finding relevant information resources from a collection in response to an information need"
+          "text": "Crawl → Preprocess → Index → Query Processing → Rank → Present → Evaluate"
         }
       ],
       "correctAnswer": [
         "d"
       ],
-      "explanationMd": "Information Retrieval, büyük miktarda yapılandırılmamış (genellikle metin) veri içinden kullanıcının bilgi ihtiyacını karşılayan ilgili materyali bulmayı amaçlar.\n\n**Neden diğerleri yanlış?**\n• **A)** IR sadece veritabanı sorgulaması değildir.\n• **B)** IR sadece web aramayla sınırlı değildir.\n• **C)** IR, yapılandırılmış veri yönetimi (DBMS) değildir.",
+      "explanationMd": "IR'nin yedi aşaması, bir bilgi ihtiyacının oluşmasından sonuçların değerlendirilmesine kadar olan süreçteki adımları temsil eder. Doğru sıralama, bilgi ihtiyacı → sorgu formülasyonu → indeksleme → arama → eşleştirme → sıralama → değerlendirme şeklindedir.\n\n**Neden diğerleri yanlış?**\nDiğer seçeneklerdeki sıralamalar mantıksal akışı bozar.",
       "tags": [
-        "definition",
-        "fundamentals"
+        "pipeline",
+        "architecture",
+        "stages"
       ],
       "sourceRefs": [
-        "Q1-v2.json",
-        "new-mix.json",
-        "Q1.json"
+        "incoming-retrieval-json/Q1-v2.json",
+        "incoming-retrieval-json/Q1.json"
       ],
-      "mergedFromCount": 3,
+      "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q1-irs-019",
+      "id": "irs-q1-014",
       "type": "single_choice",
-      "topic": "IR Systems",
-      "subtopic": "Categories",
-      "difficulty": "easy",
-      "questionMd": "PubMed, arXiv, and GitHub Code Search are all examples of which category of IR system?",
+      "topic": "IR vs Databases",
+      "subtopic": "Limitations of SQL",
+      "difficulty": "hard",
+      "questionMd": "A developer uses `SELECT * FROM papers WHERE abstract LIKE '%heart attack%'` to find cardiology research. What is the most significant limitation of this approach compared to an IR system?",
       "options": [
         {
           "id": "a",
           "label": "A",
-          "text": "Vertical search — domain-specific retrieval over a specialised corpus"
+          "text": "It is slower than an inverted index for corpora with fewer than one million rows"
         },
         {
           "id": "b",
           "label": "B",
-          "text": "Enterprise search — internal document retrieval within an organisation"
+          "text": "It cannot filter results by publication date or author name"
         },
         {
           "id": "c",
           "label": "C",
-          "text": "Conversational IR — answer synthesis rather than ranked document retrieval"
+          "text": "It requires a separate full-text parser before the SQL engine can execute"
         },
         {
           "id": "d",
           "label": "D",
-          "text": "Multimedia IR — retrieval using images or audio as the query"
+          "text": "It returns no results for documents using the synonym \"myocardial infarction\" even though they are equally relevant"
         }
       ],
       "correctAnswer": [
-        "a"
+        "d"
       ],
-      "explanationMd": "PubMed (tıp), arXiv (akademik makaleler) ve GitHub Code Search (kaynak kodu) belirli alanlara özgü uzmanlaşmış korpuslar üzerinde çalışan *dikey arama* (vertical search) sistemleridir.\n\n**Neden diğerleri yanlış?**\n• **B)** Bunlar kurumsal iç sistemler değil, kamuya açık alan-spesifik arama motorlarıdır.\n• **C)** Sohbetsel IR değildir; belge sıralama tabanlıdır.\n• **D)** Multimedya IR değildir; metin tabanlı arama yaparlar.",
+      "explanationMd": "SQL LIKE '%heart attack%', eşanlamlı olan 'myocardial infarction' ifadesini yakalayamaz. Bu, tam metin eşleştirmenin (exact string matching) en temel sınırlaması olan *vocabulary mismatch* problemidir.\n\n**Neden diğerleri yanlış?**\n• **A)** Hız karşılaştırması temel sınırlama değildir.\n• **B)** SQL tarih/yazar filtresi yapabilir.\n• **C)** LIKE ayrı bir parser gerektirmez.",
       "tags": [
-        "system-types",
-        "vertical-search"
+        "database",
+        "sql",
+        "semantics"
       ],
       "sourceRefs": [
-        "Q1-v2.json",
-        "new-mix.json",
-        "Q1.json"
+        "incoming-retrieval-json/Q1-v2.json",
+        "incoming-retrieval-json/Q1.json"
       ],
-      "mergedFromCount": 3,
+      "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q1-irs-020",
+      "id": "irs-q1-015",
+      "type": "single_choice",
+      "topic": "Fundamentals",
+      "subtopic": "Challenges",
+      "difficulty": "medium",
+      "questionMd": "A user searches \"automobile fuel efficiency\" but the most relevant document uses only the phrases \"car gas mileage\" and \"vehicle consumption\". What problem does this scenario illustrate?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The stopword problem — common function words are masking the discriminating content terms"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The vocabulary mismatch problem — lexical overlap is zero despite near-identical meaning"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The precision-recall tradeoff — retrieving more documents lowers average result quality"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The corpus freshness problem — the index has not been updated to include recent terminology"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Bir IR sistemi eşanlamlı yönetimi (synonym handling) veya sözlük entegrasyonu (thesaurus) kullanarak 'automobile' ve 'car' gibi farklı kelimelerin aynı kavramı ifade ettiğini anlayabilir.\n\n**Neden diğerleri yanlış?**\n• **A)** Stemming farklı köklere sahip eşanlamlıları yakalayamaz.\n• **C)** Boolean operatörler eşanlamlı problemi çözmez.\n• **D)** Sorgu genişletme tek başına yeterli değildir; kontrollü sözlük gerekir.",
+      "tags": [
+        "vocabulary-mismatch",
+        "fundamentals",
+        "synonymy"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q1-v2.json",
+        "incoming-retrieval-json/Q1.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "irs-q1-016",
       "type": "single_choice",
       "topic": "Term Weighting",
       "subtopic": "IDF Calculation",
@@ -940,7 +743,230 @@
         "tfidf"
       ],
       "sourceRefs": [
-        "Q1-v2.json"
+        "incoming-retrieval-json/Q1-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q1-017",
+      "type": "single_choice",
+      "topic": "Architecture",
+      "subtopic": "Offline vs Online",
+      "difficulty": "medium",
+      "questionMd": "Crawling, text preprocessing, and index construction are all classified as offline pipeline stages. What is the primary architectural reason for this design choice?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Building the index in advance allows online query processing to complete within strict millisecond latency budgets"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Offline stages consume too much RAM to run concurrently with live query traffic"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Online stages require specialised hardware that cannot also execute indexing workloads"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Preprocessing must be performed after each user query to reflect the most recent document versions"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "İndeksi önceden oluşturmak, çevrimiçi sorgu işlemenin katı milisaniye gecikme bütçeleri içinde tamamlanmasını sağlar. Bu, IR mimarisinin temel tasarım prensibidir: ağır işleri çevrimdışı yaparak çevrimiçi deneyimi hızlandırmak.\n\n**Neden diğerleri yanlış?**\n• **B)** RAM tüketimi gerçek olsa da temel mimari sebep değil; gecikme bütçesidir.\n• **C)** Özel donanım gereksinimi genel bir kural değildir.\n• **D)** Her sorguda ön işleme yapmak offline pipeline'ın tam tersidir.",
+      "tags": [
+        "architecture",
+        "offline-processing",
+        "performance"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q1-v2.json",
+        "incoming-retrieval-json/Q1.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "irs-q1-018",
+      "type": "single_choice",
+      "topic": "Term Weighting",
+      "subtopic": "TF Normalization",
+      "difficulty": "hard",
+      "questionMd": "Document A has 1000 tokens and mentions \"space\" 10 times. Document B has 100 tokens and mentions \"space\" 5 times. Which claim about TF-IDF scoring is correct?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Document A scores higher because a larger document contains more contextual evidence"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Document A scores higher because raw term count always dominates TF-IDF computation"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Document B scores higher because its relative term frequency (5%) exceeds Document A's (1%)"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Both documents receive identical TF-IDF scores because IDF is the same for both"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Document B'nin göreli terim frekansı (5/100 = %5), Document A'nınkinden (10/1000 = %1) yüksektir. TF-IDF, ham sayımı değil normalize edilmiş frekansı kullanır; bu nedenle B daha yüksek skor alır.\n\n**Neden diğerleri yanlış?**\n• **A)** Daha uzun belge otomatik olarak daha yüksek skor almaz; TF normalizasyonu bunu engeller.\n• **B)** Ham terim sayısı TF-IDF'te tek başına belirleyici değildir.\n• **D)** IDF aynı olsa da TF değerleri farklı olduğundan skorlar eşit olmaz.",
+      "tags": [
+        "tf-idf",
+        "normalization",
+        "math"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q1-v2.json",
+        "incoming-retrieval-json/Q1.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "irs-q1-019",
+      "type": "single_choice",
+      "topic": "IR Systems",
+      "subtopic": "Categories",
+      "difficulty": "easy",
+      "questionMd": "PubMed, arXiv, and GitHub Code Search are all examples of which category of IR system?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Vertical search — domain-specific retrieval over a specialised corpus"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Enterprise search — internal document retrieval within an organisation"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Conversational IR — answer synthesis rather than ranked document retrieval"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Multimedia IR — retrieval using images or audio as the query"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "PubMed (tıp), arXiv (akademik makaleler) ve GitHub Code Search (kaynak kodu) belirli alanlara özgü uzmanlaşmış korpuslar üzerinde çalışan *dikey arama* (vertical search) sistemleridir.\n\n**Neden diğerleri yanlış?**\n• **B)** Bunlar kurumsal iç sistemler değil, kamuya açık alan-spesifik arama motorlarıdır.\n• **C)** Sohbetsel IR değildir; belge sıralama tabanlıdır.\n• **D)** Multimedya IR değildir; metin tabanlı arama yaparlar.",
+      "tags": [
+        "system-types",
+        "vertical-search"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q1-v2.json",
+        "incoming-retrieval-json/Q1.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "irs-q1-020",
+      "type": "single_choice",
+      "topic": "History of IR",
+      "subtopic": "Evaluation Paradigms",
+      "difficulty": "medium",
+      "questionMd": "Which 1960s development is credited as the first systematic, reproducible evaluation of IR systems, establishing the methodology of using test collections and relevance judgments?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The Cranfield experiments"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The SMART system developed by Salton at Cornell"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The introduction of Luhn's automatic keyword extraction"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The launch of MEDLARS at the National Library of Medicine"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "**Cranfield deneyleri**, 1960'larda Cyril Cleverdon tarafından başlatılmıştır. Test koleksiyonları ve alaka yargıları kullanarak IR sistemlerini sistematik ve tekrarlanabilir şekilde değerlendiren ilk çalışmadır. Bugünkü TREC metodolojisinin öncüsüdür.\n\n**Neden diğerleri yanlış?**\n• **B)** SMART sistemi Salton tarafından geliştirildi ama sistematik değerlendirme metodolojisi kurmanın öncüsü değildir.\n• **C)** Luhn'un çalışmaları otomatik anahtar kelime çıkarmaya odaklanır, değerlendirme metodolojisi değil.\n• **D)** MEDLARS bir tıbbi kütüphane sistemidir; değerlendirme çerçevesi oluşturmamıştır.",
+      "tags": [
+        "history",
+        "cranfield",
+        "evaluation"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q1-v2.json",
+        "incoming-retrieval-json/Q1.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "irs-q1-021",
+      "type": "single_choice",
+      "topic": "Ranking and Scoring",
+      "subtopic": "Inverse Document Frequency",
+      "difficulty": "medium",
+      "questionMd": "A corpus contains 1000 documents, and the term \"quasar\" appears in exactly 50 of them. Applying the formula `IDF(t) = log(N / df(t))`, what is the IDF of \"quasar\"?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "log(1000) ≈ 6.9"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "log(20) ≈ 3.0"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "log(0.05) ≈ -3.0"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "log(50) ≈ 3.9"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Substitute into the formula: `N / df = 1000 / 50 = 20`. Therefore `IDF = log(20)`, which is approximately **3.0** when using the natural logarithm. The key step is computing the ratio `N / df`, not `df / N`.",
+      "tags": [
+        "idf",
+        "logarithm",
+        "tf-idf"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q1.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false

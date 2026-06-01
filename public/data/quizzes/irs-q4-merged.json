@@ -7,15 +7,23 @@
     "course": "Information Retrieval Systems",
     "topic": "Fundamentals",
     "topics": [
+      "BM25",
+      "BM25 and TF Weighting",
+      "Boolean Retrieval",
       "Fundamentals",
+      "IDF",
       "Indexing",
+      "Probabilistic Retrieval",
       "Retrieval Models",
+      "SMART Notation",
       "System Architecture",
-      "Term Weighting"
+      "Term Frequency",
+      "Term Weighting",
+      "Vector Space Model"
     ],
-    "questionCount": 28,
+    "questionCount": 42,
     "difficulty": "medium",
-    "estimatedMinutes": 42,
+    "estimatedMinutes": 63,
     "tags": [
       "irs",
       "q4",
@@ -25,53 +33,7 @@
   },
   "questions": [
     {
-      "id": "q4-irs-001",
-      "type": "single_choice",
-      "topic": "Retrieval Models",
-      "subtopic": "BM25 Parameters",
-      "difficulty": "medium",
-      "questionMd": "What retrieval behavior results when the BM25 parameter k₁ is set to 0?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "Length normalization is disabled because the denominator reduces to the raw term frequency"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "The BM25 score becomes equivalent to raw TF multiplied by IDF with no saturation"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "The IDF component dominates entirely and term frequency is weighted at its maximum possible value"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "The TF component becomes binary — only whether a term is present matters, not how many times it appears"
-        }
-      ],
-      "correctAnswer": [
-        "d"
-      ],
-      "explanationMd": "k₁ = 0 olduğunda BM25'in TF doyum fonksiyonu tf·(0+1)/(tf+0) = 1 olur (tf > 0 için). Yani terim belgede var mı yok mu — sadece bu önemlidir; kaç kez geçtiği skora etki etmez. TF bileşeni **ikili** (binary) hale gelir.\n\n**Neden diğerleri yanlış?**\n• **A)** Uzunluk normalizasyonu b parametresiyle kontrol edilir, k₁ ile değil.\n• **B)** Ham TF·IDF, doyum olmadan, k₁ → ∞ durumuna karşılık gelir.\n• **C)** IDF her zaman mevcuttur; k₁=0 TF'yi ikili yapar, IDF'yi değiştirmez.",
-      "tags": [
-        "bm25",
-        "parameters",
-        "tf-saturation"
-      ],
-      "sourceRefs": [
-        "Q4-v2.json",
-        "new-mix.json",
-        "Q4.json"
-      ],
-      "mergedFromCount": 3,
-      "needs_review": true
-    },
-    {
-      "id": "q4-irs-002",
+      "id": "irs-q4-001",
       "type": "single_choice",
       "topic": "Retrieval Models",
       "subtopic": "Vector Space Model",
@@ -109,429 +71,14 @@
         "ranking"
       ],
       "sourceRefs": [
-        "Q4-v2.json",
-        "new-mix.json",
-        "Q4.json"
+        "incoming-retrieval-json/Q4-v2.json",
+        "incoming-retrieval-json/Q4.json"
       ],
-      "mergedFromCount": 3,
+      "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q4-irs-003",
-      "type": "single_choice",
-      "topic": "Term Weighting",
-      "subtopic": "IDF Logic",
-      "difficulty": "easy",
-      "questionMd": "What is the core intuition behind Inverse Document Frequency (IDF) as used in TF-IDF weighting?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "Terms that appear in many documents carry little discriminating information and should receive lower weights"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "Terms that appear in many documents are more likely to be relevant to any query"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "IDF increases the weight of terms that co-occur with stopwords"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "IDF penalizes terms based on how frequently they appear within a single document"
-        }
-      ],
-      "correctAnswer": [
-        "a"
-      ],
-      "explanationMd": "IDF'in temel sezgisi: nadir terimler daha değerlidir. Bir terim az belgede geçiyorsa, o terimi içeren belgeler sorgu için daha ayırt edicidir.\n\n**Neden diğerleri yanlış?**\n• **B)** IDF sık terimlere yüksek ağırlık vermez, tersine düşük ağırlık verir.\n• **C)** IDF belge uzunluğuyla doğrudan ilgili değildir.\n• **D)** IDF sorgu terimlerinin frekansıyla değil, koleksiyondaki dağılımıyla ilgilenir.",
-      "tags": [
-        "idf",
-        "tf-idf",
-        "intuition"
-      ],
-      "sourceRefs": [
-        "Q4-v2.json",
-        "new-mix.json",
-        "Q4.json"
-      ],
-      "mergedFromCount": 3,
-      "needs_review": true
-    },
-    {
-      "id": "q4-irs-004",
-      "type": "single_choice",
-      "topic": "Retrieval Models",
-      "subtopic": "BM25",
-      "difficulty": "medium",
-      "questionMd": "According to the lecture notes, which of the following statements about BM25 scores is correct?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "BM25 scores are ordinal relevance estimates and should not be compared across different queries"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "BM25 scores are calibrated probabilities that sum to 1 across all documents for a given query"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "BM25 scores always fall within the range [0, 1] because the IDF component is bounded by log(N)"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "BM25 scores are symmetric, meaning the score for query Q against document D equals the score for D against Q"
-        }
-      ],
-      "correctAnswer": [
-        "a"
-      ],
-      "explanationMd": "BM25 skorları sıralama (ordinal) amaçlıdır; aynı sorgu içinde belgeleri karşılaştırır. Farklı sorgulardaki BM25 skorları karşılaştırılmamalıdır.\n\n**Neden diğerleri yanlış?**\n• **B)** BM25 skorları olasılık değildir ve 1'e toplanmaz.\n• **C)** BM25 skorları [0,1] aralığıyla sınırlı değildir; çok yüksek olabilir.\n• **D)** BM25 simetrik değildir; sorgu ve belge rolleri farklıdır.",
-      "tags": [
-        "bm25",
-        "scoring",
-        "ordinal-ranking"
-      ],
-      "sourceRefs": [
-        "Q4-v2.json",
-        "new-mix.json",
-        "Q4.json"
-      ],
-      "mergedFromCount": 3,
-      "needs_review": true
-    },
-    {
-      "id": "q4-irs-005",
-      "type": "single_choice",
-      "topic": "Term Weighting",
-      "subtopic": "TF-IDF",
-      "difficulty": "medium",
-      "questionMd": "A term has high TF in a document but very low IDF across the collection. What does this combination indicate about the term's usefulness as a relevance signal?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "The term is highly informative because low IDF indicates it appears in very few documents"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "The term should be removed from the index because its combined TF-IDF weight will be exactly zero"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "The term is a weak discriminator because it appears frequently in many documents"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "The term is a strong relevance signal because high TF always dominates the combined TF-IDF weight"
-        }
-      ],
-      "correctAnswer": [
-        "c"
-      ],
-      "explanationMd": "Yüksek TF ama çok düşük IDF = terim çoğu belgede yaygındır (örn. 'the', 'is'). Yaygın olduğu için belgeleri birbirinden ayırt edemez; zayıf bir ayırıcıdır.\n\n**Neden diğerleri yanlış?**\n• **A)** Düşük IDF az belgede değil, ÇOK belgede göründüğü anlamına gelir.\n• **B)** TF-IDF ağırlığı düşük olur ama tam sıfır olmak zorunda değildir.\n• **D)** Yüksek TF her zaman baskın olmaz; düşük IDF onu etkisiz kılar.",
-      "tags": [
-        "tf-idf",
-        "idf",
-        "relevance-signal"
-      ],
-      "sourceRefs": [
-        "Q4-v2.json",
-        "new-mix.json",
-        "Q4.json"
-      ],
-      "mergedFromCount": 3,
-      "needs_review": true
-    },
-    {
-      "id": "q4-irs-006",
-      "type": "single_choice",
-      "topic": "Retrieval Models",
-      "subtopic": "BM25 Parameters",
-      "difficulty": "medium",
-      "questionMd": "According to the lecture notes, when is the avgdl (average document length) statistic used by BM25 computed?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "Each time a new document is added to the index, avgdl is recomputed from scratch"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "At query time by averaging the lengths of all retrieved candidate documents"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "Once at index construction time and stored as a collection-level statistic"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "Only during evaluation when comparing BM25 against TF-IDF outputs"
-        }
-      ],
-      "correctAnswer": [
-        "c"
-      ],
-      "explanationMd": "`avgdl` indeks oluşturma zamanında bir kez hesaplanır ve koleksiyon düzeyinde saklanır. Sorgu zamanında tekrar hesaplanmaz.\n\n**Neden diğerleri yanlış?**\n• **A)** Her yeni belgede sıfırdan hesaplanmaz; bu çok maliyetli olur.\n• **B)** Sorgu zamanında hesaplanmaz; önceden saklanır.\n• **D)** Sadece değerlendirme sırasında değil, sıralama sırasında da kullanılır.",
-      "tags": [
-        "bm25",
-        "avgdl",
-        "indexing"
-      ],
-      "sourceRefs": [
-        "Q4-v2.json",
-        "new-mix.json",
-        "Q4.json"
-      ],
-      "mergedFromCount": 3,
-      "needs_review": true
-    },
-    {
-      "id": "q4-irs-007",
-      "type": "single_choice",
-      "topic": "Term Weighting",
-      "subtopic": "TF-IDF",
-      "difficulty": "easy",
-      "questionMd": "A term receives a high TF-IDF weight in a document when which condition holds?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "The term appears rarely in that document but frequently across the overall collection"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "The term has a low IDF value and a high document frequency"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "The term appears in every document in the collection"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "The term appears frequently in that document but rarely across the overall collection"
-        }
-      ],
-      "correctAnswer": [
-        "d"
-      ],
-      "explanationMd": "Bir terim yüksek TF-IDF ağırlığı alır: belgede sık geçer (yüksek TF) VE koleksiyonda nadir bulunur (yüksek IDF). İki koşulun birlikte sağlanması gerekir.\n\n**Neden diğerleri yanlış?**\n• **A)** Sadece yüksek TF yetmez; yaygın bir terim olabilir.\n• **B)** Sadece düşük df yetmez; belgede hiç geçmeyebilir.\n• **C)** TF ve IDF'in birlikte yüksek olması gerekir.",
-      "tags": [
-        "tf-idf",
-        "weighting",
-        "logic"
-      ],
-      "sourceRefs": [
-        "Q4-v2.json",
-        "new-mix.json",
-        "Q4.json"
-      ],
-      "mergedFromCount": 3,
-      "needs_review": false
-    },
-    {
-      "id": "q4-irs-008",
-      "type": "single_choice",
-      "topic": "Retrieval Models",
-      "subtopic": "BM25 Variants",
-      "difficulty": "medium",
-      "questionMd": "Which specific problem motivated the development of the BM25F variant?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "Standard BM25 treats a document as a single flat text field"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "Standard BM25 cannot handle multi-word queries because it sums scores term by term, a limitation BM25F overcomes"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "Standard BM25 requires all documents in the collection to have the same length, which BM25F relaxes with per-document normalization"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "Standard BM25 produces negative IDF values for terms with very high document frequency, which BM25F corrects"
-        }
-      ],
-      "correctAnswer": [
-        "a"
-      ],
-      "explanationMd": "BM25F'nin geliştirilme motivasyonu: standart BM25 bir belgeyi tek düz metin alanı olarak ele alır. Başlık, gövde, anchor text gibi farklı alanların farklı önemleri göz ardı edilir.\n\n**Neden diğerleri yanlış?**\n• **B)** BM25 çok kelimeli sorguları terim bazında toplayarak sorunsuz işler.\n• **C)** BM25 tüm belgelerin aynı uzunlukta olmasını gerektirmez.\n• **D)** Negatif IDF sorunu BM25+'ın odağıdır, BM25F'nin değil.",
-      "tags": [
-        "bm25",
-        "bm25f",
-        "structured-documents"
-      ],
-      "sourceRefs": [
-        "Q4-v2.json",
-        "new-mix.json",
-        "Q4.json"
-      ],
-      "mergedFromCount": 3,
-      "needs_review": false
-    },
-    {
-      "id": "q4-irs-009",
-      "type": "single_choice",
-      "topic": "Term Weighting",
-      "subtopic": "IDF Smoothing",
-      "difficulty": "medium",
-      "questionMd": "Why does the smoothed IDF formula `log(N / (df + 1)) + 1` add 1 to the denominator?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "To ensure that every term receives an IDF value greater than 1 regardless of collection size"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "To prevent division by zero when a term has never appeared in any document in the collection"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "To make very common terms receive a higher IDF than they would under the standard formula"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "To bring the IDF range into alignment with the range produced by log-TF"
-        }
-      ],
-      "correctAnswer": [
-        "b"
-      ],
-      "explanationMd": "Düzeltilmiş IDF formülünde paydaya +1 eklenmesinin nedeni: df = 0 olduğunda (terim hiçbir belgede görünmediğinde) **sıfıra bölmeyi önlemek**tir.\n\n**Neden diğerleri yanlış?**\n• **A)** IDF değerini 1'den büyük yapmak +1'in amacı değildir.\n• **C)** Yaygın terimlerin IDF'ini artırmak istenmez; tam tersi amaçlanır.\n• **D)** log-TF ile aralık hizalama +1'in motive edici nedeni değildir.",
-      "tags": [
-        "idf",
-        "smoothing",
-        "math"
-      ],
-      "sourceRefs": [
-        "Q4-v2.json",
-        "new-mix.json",
-        "Q4.json"
-      ],
-      "mergedFromCount": 3,
-      "needs_review": false
-    },
-    {
-      "id": "q4-irs-010",
-      "type": "single_choice",
-      "topic": "Indexing",
-      "subtopic": "Document Frequency",
-      "difficulty": "medium",
-      "questionMd": "According to the lecture notes, where do the document frequency (`df`) values required for both TF-IDF and BM25 computation come from at retrieval time?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "From the inverted index constructed during indexing, specifically from the length of each term's postings list"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "From the query itself, by counting how many query terms appear in a predefined stopword list"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "From the average document length statistic `avgdl` stored alongside the inverted index"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "From a separate per-document frequency table computed fresh at query time by scanning the corpus"
-        }
-      ],
-      "correctAnswer": [
-        "a"
-      ],
-      "explanationMd": "Belge frekansı (df) değerleri, indeksleme sırasında oluşturulan **ters indeksten** (inverted index) gelir — her terimin posting listesinin uzunluğu o terimin kaç belgede göründüğünü verir.\n\n**Neden diğerleri yanlış?**\n• **B)** df sorgudan değil, koleksiyondan hesaplanır.\n• **C)** avgdl farklı bir istatistiktir; df değeri değildir.\n• **D)** df her sorguda yeniden hesaplanmaz; indeks oluşturma zamanında saklanır.",
-      "tags": [
-        "df",
-        "indexing",
-        "retrieval"
-      ],
-      "sourceRefs": [
-        "Q4-v2.json",
-        "new-mix.json",
-        "Q4.json"
-      ],
-      "mergedFromCount": 3,
-      "needs_review": true
-    },
-    {
-      "id": "q4-irs-011",
-      "type": "single_choice",
-      "topic": "Term Weighting",
-      "subtopic": "SMART Notation",
-      "difficulty": "hard",
-      "questionMd": "In SMART notation, the scheme lnc.ltc specifies which combination of weighting choices for documents and queries respectively?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "Documents use log-TF, no IDF, cosine normalization; queries use log-TF, standard IDF, cosine normalization"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "Documents use log-TF, natural IDF, cosine normalization; queries use log-TF, no IDF, cosine normalization"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "Documents use natural TF, cosine normalization, no IDF; queries use log-TF, IDF, cosine normalization"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "Documents use log-TF, no IDF, no normalization; queries use log-TF, standard IDF, cosine normalization"
-        }
-      ],
-      "correctAnswer": [
-        "a"
-      ],
-      "explanationMd": "SMART notasyonunda `lnc.ltc`: Belgeler için **l**ogaritmik TF, **n**o IDF, **c**osine normalizasyonu; Sorgular için **l**ogaritmik TF, IDF (**t**), **c**osine normalizasyonu.\n\n**Neden diğerleri yanlış?**\nDiğer seçenekler SMART notasyonundaki üçlü yapıyı (TF-IDF-normalizasyon) yanlış eşleştirir.",
-      "tags": [
-        "smart-notation",
-        "term-weighting",
-        "vector-space"
-      ],
-      "sourceRefs": [
-        "Q4-v2.json",
-        "new-mix.json",
-        "Q4.json"
-      ],
-      "mergedFromCount": 3,
-      "needs_review": true
-    },
-    {
-      "id": "q4-irs-012",
+      "id": "irs-q4-002",
       "type": "single_choice",
       "topic": "Retrieval Models",
       "subtopic": "Vector Space Model",
@@ -569,520 +116,59 @@
         "vectors"
       ],
       "sourceRefs": [
-        "Q4-v2.json",
-        "new-mix.json",
-        "Q4.json"
-      ],
-      "mergedFromCount": 3,
-      "needs_review": true
-    },
-    {
-      "id": "q4-irs-013",
-      "type": "single_choice",
-      "topic": "Retrieval Models",
-      "subtopic": "Vector Space Model",
-      "difficulty": "medium",
-      "questionMd": "Why does the Vector Space Model use cosine similarity rather than Euclidean distance to compare document and query vectors?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "Euclidean distance cannot be computed for high-dimensional vectors, whereas cosine similarity is defined for any number of dimensions"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "Euclidean distance produces values outside the range [0, 1], making it impossible to rank documents consistently"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "Cosine similarity is always faster to compute than Euclidean distance for sparse TF-IDF vectors"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "Euclidean distance would make a long document seem very different from a short one covering the same topics"
-        }
-      ],
-      "correctAnswer": [
-        "d"
-      ],
-      "explanationMd": "Öklid mesafesi vektör büyüklüğüne duyarlıdır: aynı konuları kapsayan uzun ve kısa belgeler farklı büyüklükte vektörlere sahiptir ve Öklid mesafesi onları 'uzak' gösterir. Cosine similarity yalnızca yönü karşılaştırır.\n\n**Neden diğerleri yanlış?**\n• **A)** Öklid mesafesi yüksek boyutlarda hesaplanabilir.\n• **B)** Öklid mesafesinin değer aralığı sıralama için sorun oluşturmaz.\n• **C)** Hesaplama hızı temel sebep değildir.",
-      "tags": [
-        "vector-space",
-        "cosine-similarity",
-        "euclidean-distance"
-      ],
-      "sourceRefs": [
-        "Q4-v2.json",
-        "new-mix.json",
-        "Q4.json"
-      ],
-      "mergedFromCount": 3,
-      "needs_review": true
-    },
-    {
-      "id": "q4-irs-014",
-      "type": "single_choice",
-      "topic": "Fundamentals",
-      "subtopic": "Bag of Words",
-      "difficulty": "medium",
-      "questionMd": "According to the lecture, in which of the following situations does the Bag-of-Words assumption most clearly lead to incorrect retrieval behavior?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "When a query contains negation such as \"not relevant\""
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "When query terms appear frequently in the same document, because BoW over-weights high-frequency terms"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "When query terms are stopwords, because BoW assigns them the same weight as content terms"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "When two documents have the same vocabulary size, because BoW cannot differentiate their vectors"
-        }
-      ],
-      "correctAnswer": [
-        "a"
-      ],
-      "explanationMd": "Bag-of-Words modeli kelimeleri bağımsız işler, sıra ve anlam ilişkisini kaybeder. 'not relevant' ifadesinde BoW, 'not' ve 'relevant'ı ayrı ayrı değerlendirerek olumsuzlama anlamını tamamen yitirir.\n\n**Neden diğerleri yanlış?**\n• **B)** Yüksek frekanslı terimler BoW'un temel zayıflığı değildir; TF-IDF bunu dengeleyebilir.\n• **C)** Stopword ağırlıklandırması IDF ile çözülebilir.\n• **D)** Aynı sözlük boyutu, BoW vektörlerinin farklılığını engellemez.",
-      "tags": [
-        "bag-of-words",
-        "limitations",
-        "semantics"
-      ],
-      "sourceRefs": [
-        "Q4-v2.json",
-        "new-mix.json",
-        "Q4.json"
-      ],
-      "mergedFromCount": 3,
-      "needs_review": true
-    },
-    {
-      "id": "q4-irs-015",
-      "type": "single_choice",
-      "topic": "Term Weighting",
-      "subtopic": "SMART Notation",
-      "difficulty": "medium",
-      "questionMd": "In SMART notation, which TF variant assigns a weight of 1 to any term that appears at least once in a document, and 0 to terms that do not appear, completely ignoring how many times the term occurs?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "The natural variant (symbol n), which returns the raw count `tf(t,d)`"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "The Boolean variant (symbol b), which returns 1 if `tf > 0` and 0 otherwise"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "The augmented variant (symbol a), which returns a value in the range [0.5, 1]"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "The logarithmic variant (symbol l), which returns `1 + log(tf)`"
-        }
-      ],
-      "correctAnswer": [
-        "b"
-      ],
-      "explanationMd": "SMART notasyonunda **Boolean varyantı (b sembolü)**: terim belgede varsa 1, yoksa 0 döndürür. Terimin kaç kez geçtiği tamamen göz ardı edilir.\n\n**Neden diğerleri yanlış?**\n• **A)** Natural varyant (n) ham sayıyı döndürür; ikili değildir.\n• **C)** Augmented varyant (a) [0.5, 1] aralığında değer üretir; ikili değildir.\n• **D)** Logaritmik varyant (l) frekansa göre ağırlık hesaplar; ikili değildir.",
-      "tags": [
-        "smart-notation",
-        "tf",
-        "boolean"
-      ],
-      "sourceRefs": [
-        "Q4-v2.json",
-        "new-mix.json",
-        "Q4.json"
-      ],
-      "mergedFromCount": 3,
-      "needs_review": true
-    },
-    {
-      "id": "q4-irs-016",
-      "type": "single_choice",
-      "topic": "Term Weighting",
-      "subtopic": "Keyword Extraction",
-      "difficulty": "medium",
-      "questionMd": "How does TF-IDF enable keyword extraction from a single document within a larger corpus?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "Terms with the lowest TF-IDF weight are the best keywords because they are unique to the document and appear nowhere else"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "Terms whose raw TF exceeds the collection average document frequency are selected as keywords regardless of their IDF value"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "Terms with the highest TF-IDF weight in a document are strong candidate keywords for that document"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "Terms are selected as keywords when their IDF value equals zero, indicating they are universally recognized concepts"
-        }
-      ],
-      "correctAnswer": [
-        "c"
-      ],
-      "explanationMd": "Bir belgede **en yüksek TF-IDF ağırlığına** sahip terimler, o belge için güçlü anahtar kelime adaylarıdır. Bu terimler belgede sık geçer (yüksek TF) VE koleksiyonda nadir bulunur (yüksek IDF), dolayısıyla belgeyi en iyi tanımlayan kelimelerdir.\n\n**Neden diğerleri yanlış?**\n• **A)** En düşük TF-IDF'li terimler yaygın/önemsiz terimlerdir; anahtar kelime olmaz.\n• **B)** IDF değeri göz ardı edilemez; sadece TF yeterli değildir.\n• **D)** IDF = 0 olan terimler tüm belgelerde geçer ve ayırt edici değildir.",
-      "tags": [
-        "tf-idf",
-        "keyword-extraction",
-        "applications"
-      ],
-      "sourceRefs": [
-        "Q4-v2.json",
-        "new-mix.json",
-        "Q4.json"
-      ],
-      "mergedFromCount": 3,
-      "needs_review": false
-    },
-    {
-      "id": "q4-irs-017",
-      "type": "single_choice",
-      "topic": "Retrieval Models",
-      "subtopic": "Probabilistic Ranking Principle",
-      "difficulty": "hard",
-      "questionMd": "The Probability Ranking Principle (PRP), which motivates BM25, states that documents should be ranked according to which criterion?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "Decreasing document length relative to the collection average"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "Decreasing term frequency summed across all query terms"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "Increasing document frequency of the query terms in the collection"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "Decreasing probability of relevance given the document and query"
-        }
-      ],
-      "correctAnswer": [
-        "d"
-      ],
-      "explanationMd": "PRP'ye göre belgeler, belge ve sorgu verildiğinde **azalan alaka olasılığına** göre sıralanmalıdır: P(relevant | document, query). Bu, optimal sıralama stratejisidir.\n\n**Neden diğerleri yanlış?**\n• **A)** Belge uzunluğu tek başına sıralama kriteri değildir.\n• **B)** Ham TF toplamı olasılıksal sıralama ilkesiyle aynı şey değildir.\n• **C)** Artan df, yaygın terimleri önceliklendirir; tam tersi olmalıdır.",
-      "tags": [
-        "prp",
-        "probabilistic-model",
-        "bm25"
-      ],
-      "sourceRefs": [
-        "Q4-v2.json",
-        "new-mix.json",
-        "Q4.json"
-      ],
-      "mergedFromCount": 3,
-      "needs_review": false
-    },
-    {
-      "id": "q4-irs-018",
-      "type": "single_choice",
-      "topic": "Retrieval Models",
-      "subtopic": "BM25 Parameters",
-      "difficulty": "hard",
-      "questionMd": "What is the effect of setting the BM25 parameter `k1` to a very large value (approaching infinity)?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "Length normalization is disabled and all documents are treated as having equal length"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "The IDF component is scaled down and rare terms receive lower weights"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "The BM25 score becomes equivalent to a binary (Boolean) match signal"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "TF saturation disappears and the scoring approaches raw TF with no diminishing returns"
-        }
-      ],
-      "correctAnswer": [
-        "d"
-      ],
-      "explanationMd": "k₁ → ∞ olduğunda BM25'in TF doyum fonksiyonu tf·(k₁+1)/(tf+k₁) → tf olur. Doyum kaybolur ve skor ham TF ile orantılı hale gelir — azalan getiri (diminishing returns) ortadan kalkar.\n\n**Neden diğerleri yanlış?**\n• **A)** Uzunluk normalizasyonu b parametresiyle kontrol edilir, k₁ ile değil.\n• **B)** IDF bileşeni k₁'den bağımsızdır.\n• **C)** Binary eşleşme k₁ = 0 durumuna karşılık gelir, k₁ → ∞ değil.",
-      "tags": [
-        "bm25",
-        "parameters",
-        "limits"
-      ],
-      "sourceRefs": [
-        "Q4-v2.json",
-        "new-mix.json",
-        "Q4.json"
-      ],
-      "mergedFromCount": 3,
-      "needs_review": true
-    },
-    {
-      "id": "q4-irs-019",
-      "type": "single_choice",
-      "topic": "Retrieval Models",
-      "subtopic": "BM25 Parameters",
-      "difficulty": "medium",
-      "questionMd": "In the BM25 formula, what happens to document length normalization when the parameter b is set to 0?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "Document length is fully normalized and short documents are heavily favoured"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "BM25 reduces to a pure Boolean retrieval model with no frequency weighting"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "Document length has no effect on the score and all documents are treated as having the same length"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "The parameter avgdl becomes the only length signal used in the formula"
-        }
-      ],
-      "correctAnswer": [
-        "c"
-      ],
-      "explanationMd": "BM25'te `b = 0` olduğunda, belge uzunluğu normalizasyonu tamamen devre dışı kalır. Formüldeki (1 - b + b·dl/avgdl) ifadesi 1'e sadeleşir ve tüm belgeler aynı uzunluktaymış gibi değerlendirilir.\n\n**Neden diğerleri yanlış?**\n• **A)** b=0 normalizasyonu artırmaz, tamamen kapatır.\n• **B)** TF doyumu (saturation) k₁ parametresiyle kontrol edilir, b ile değil.\n• **D)** b=0 IDF'i etkilemez.",
-      "tags": [
-        "bm25",
-        "parameters",
-        "length-normalization"
-      ],
-      "sourceRefs": [
-        "Q4-v2.json",
-        "new-mix.json",
-        "Q4.json"
-      ],
-      "mergedFromCount": 3,
-      "needs_review": true
-    },
-    {
-      "id": "q4-irs-020",
-      "type": "single_choice",
-      "topic": "Term Weighting",
-      "subtopic": "SMART Notation",
-      "difficulty": "medium",
-      "questionMd": "According to SMART notation, which formula defines the logarithmic TF variant (symbol l) for a term with a non-zero count?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "1 + log(tf)"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "0.5 + 0.5 * tf"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "log(tf) - 1"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "tf / (1 + log(tf))"
-        }
-      ],
-      "correctAnswer": [
-        "a"
-      ],
-      "explanationMd": "SMART notasyonunda logaritmik TF varyantı: `1 + log(tf)` (tf > 0 ise). TF sıfırsa ağırlık 0'dır. Logaritma, yüksek frekansların etkisini yumuşatır.\n\n**Neden diğerleri yanlış?**\nDiğer seçenekler logaritmik TF formülünü yanlış ifade eder (eksik +1, yanlış taban, vb.).",
-      "tags": [
-        "smart-notation",
-        "tf",
-        "logarithm"
-      ],
-      "sourceRefs": [
-        "Q4-v2.json",
-        "new-mix.json",
-        "Q4.json"
-      ],
-      "mergedFromCount": 3,
-      "needs_review": true
-    },
-    {
-      "id": "q4-irs-021",
-      "type": "single_choice",
-      "topic": "Term Weighting",
-      "subtopic": "SMART Notation",
-      "difficulty": "hard",
-      "questionMd": "The log-average TF variant (symbol L) in SMART notation is defined as which of the following expressions?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "0.5 + 0.5 * log(tf) / log(max_tf(d))"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "(1 + log tf) * avg_tf(d)"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "log(tf / avg_tf(d))"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "(1 + log tf) / (1 + log avg_tf(d))"
-        }
-      ],
-      "correctAnswer": [
-        "d"
-      ],
-      "explanationMd": "SMART notasyonunda log-average TF varyantı (L sembolü): `(1 + log tf) / (1 + log avg_tf(d))`. Logaritmik TF'yi belgenin ortalama TF'sine göre normalize eder.\n\n**Neden diğerleri yanlış?**\n• **A)** Bu, augmented normalizasyon formülüne benzer, L değil.\n• **B)** Çarpma değil bölme kullanılır; normalizasyon amaçlanır.\n• **C)** Bu basit oran logaritmasıdır; standart SMART L tanımı değildir.",
-      "tags": [
-        "smart-notation",
-        "tf",
-        "normalization"
-      ],
-      "sourceRefs": [
-        "Q4-v2.json",
-        "new-mix.json",
-        "Q4.json"
-      ],
-      "mergedFromCount": 3,
-      "needs_review": true
-    },
-    {
-      "id": "q4-irs-022",
-      "type": "single_choice",
-      "topic": "Retrieval Models",
-      "subtopic": "Vector Space Model",
-      "difficulty": "easy",
-      "questionMd": "In the Vector Space Model (VSM), what determines the number of dimensions in a document vector?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "The number of tokens in the document being represented"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "The size of the vocabulary |V| of the entire collection"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "The number of unique terms in the query"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "The number of documents in the collection"
-        }
-      ],
-      "correctAnswer": [
-        "b"
-      ],
-      "explanationMd": "VSM'de belge vektörünün boyut sayısı, tüm koleksiyonun **sözlük boyutu |V|** tarafından belirlenir. Her benzersiz terim bir boyuta karşılık gelir.\n\n**Neden diğerleri yanlış?**\n• **A)** Belgedeki token sayısı vektör değerlerini etkiler, boyut sayısını değil.\n• **C)** Sorgudaki terim sayısı boyut belirlemez; tüm sözlük kullanılır.\n• **D)** Belge sayısı koleksiyon büyüklüğüdür, vektör boyutu değildir.",
-      "tags": [
-        "vector-space",
-        "dimensions",
-        "vocabulary"
-      ],
-      "sourceRefs": [
-        "Q4-v2.json",
-        "new-mix.json",
-        "Q4.json"
-      ],
-      "mergedFromCount": 3,
-      "needs_review": true
-    },
-    {
-      "id": "q4-irs-023",
-      "type": "single_choice",
-      "topic": "System Architecture",
-      "subtopic": "Query Processing",
-      "difficulty": "medium",
-      "questionMd": "According to the lecture notes, which traversal strategy is the standard approach in modern IR systems for accumulating TF-IDF scores?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "DAAT (Document At A Time), which processes all terms in a document simultaneously before moving to the next document"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "TAAT (Term At A Time), which is faster because it avoids the need for a score accumulator"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "DAAT (Document At A Time), which processes one document at a time and accumulates scores in a dictionary"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "TAAT (Term At A Time), which processes one term across all matching documents before moving to the next"
-        }
-      ],
-      "correctAnswer": [
-        "d"
-      ],
-      "explanationMd": "**TAAT** (Term At A Time), modern IR sistemlerinde TF-IDF skorlarını biriktirmek için standart yaklaşımdır. Bir terimi tüm eşleşen belgeler boyunca işler, sonra bir sonraki terime geçer. Her belge için bir skor biriktirici (accumulator) tutulur.\n\n**Neden diğerleri yanlış?**\n• **A)** Bu DAAT tanımıdır ama standart yaklaşım olarak TAAT gösterilmiştir.\n• **B)** TAAT skor biriktirici gerektirir; bu ifade yanlıştır.\n• **C)** Bu DAAT'ın alternatif tanımıdır, standart yaklaşım değildir.",
-      "tags": [
-        "query-processing",
-        "taat",
-        "daat"
-      ],
-      "sourceRefs": [
-        "Q4-v2.json",
-        "new-mix.json"
+        "incoming-retrieval-json/Q4-v2.json",
+        "incoming-retrieval-json/Q4.json"
       ],
       "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q4-irs-024",
+      "id": "irs-q4-003",
+      "type": "single_choice",
+      "topic": "Term Weighting",
+      "subtopic": "IDF Logic",
+      "difficulty": "easy",
+      "questionMd": "What is the core intuition behind Inverse Document Frequency (IDF) as used in TF-IDF weighting?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Terms that appear in many documents carry little discriminating information and should receive lower weights"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Terms that appear in many documents are more likely to be relevant to any query"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "IDF increases the weight of terms that co-occur with stopwords"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "IDF penalizes terms based on how frequently they appear within a single document"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "IDF'in temel sezgisi: nadir terimler daha değerlidir. Bir terim az belgede geçiyorsa, o terimi içeren belgeler sorgu için daha ayırt edicidir.\n\n**Neden diğerleri yanlış?**\n• **B)** IDF sık terimlere yüksek ağırlık vermez, tersine düşük ağırlık verir.\n• **C)** IDF belge uzunluğuyla doğrudan ilgili değildir.\n• **D)** IDF sorgu terimlerinin frekansıyla değil, koleksiyondaki dağılımıyla ilgilenir.",
+      "tags": [
+        "idf",
+        "tf-idf",
+        "intuition"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q4-v2.json",
+        "incoming-retrieval-json/Q4.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "irs-q4-004",
       "type": "single_choice",
       "topic": "Retrieval Models",
       "subtopic": "BM25 Variants",
@@ -1120,13 +206,103 @@
         "structured-documents"
       ],
       "sourceRefs": [
-        "Q4-v2.json"
+        "incoming-retrieval-json/Q4-v2.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q4-irs-025",
+      "id": "irs-q4-005",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "BM25 Parameters",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture notes, when is the avgdl (average document length) statistic used by BM25 computed?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Each time a new document is added to the index, avgdl is recomputed from scratch"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "At query time by averaging the lengths of all retrieved candidate documents"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Once at index construction time and stored as a collection-level statistic"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Only during evaluation when comparing BM25 against TF-IDF outputs"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "`avgdl` indeks oluşturma zamanında bir kez hesaplanır ve koleksiyon düzeyinde saklanır. Sorgu zamanında tekrar hesaplanmaz.\n\n**Neden diğerleri yanlış?**\n• **A)** Her yeni belgede sıfırdan hesaplanmaz; bu çok maliyetli olur.\n• **B)** Sorgu zamanında hesaplanmaz; önceden saklanır.\n• **D)** Sadece değerlendirme sırasında değil, sıralama sırasında da kullanılır.",
+      "tags": [
+        "bm25",
+        "avgdl",
+        "indexing"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q4-v2.json",
+        "incoming-retrieval-json/Q4.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "irs-q4-006",
+      "type": "single_choice",
+      "topic": "Fundamentals",
+      "subtopic": "Bag of Words",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture, in which of the following situations does the Bag-of-Words assumption most clearly lead to incorrect retrieval behavior?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "When a query contains negation such as \"not relevant\""
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "When query terms appear frequently in the same document, because BoW over-weights high-frequency terms"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "When query terms are stopwords, because BoW assigns them the same weight as content terms"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "When two documents have the same vocabulary size, because BoW cannot differentiate their vectors"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Bag-of-Words modeli kelimeleri bağımsız işler, sıra ve anlam ilişkisini kaybeder. 'not relevant' ifadesinde BoW, 'not' ve 'relevant'ı ayrı ayrı değerlendirerek olumsuzlama anlamını tamamen yitirir.\n\n**Neden diğerleri yanlış?**\n• **B)** Yüksek frekanslı terimler BoW'un temel zayıflığı değildir; TF-IDF bunu dengeleyebilir.\n• **C)** Stopword ağırlıklandırması IDF ile çözülebilir.\n• **D)** Aynı sözlük boyutu, BoW vektörlerinin farklılığını engellemez.",
+      "tags": [
+        "bag-of-words",
+        "limitations",
+        "semantics"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q4-v2.json",
+        "incoming-retrieval-json/Q4.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "irs-q4-007",
       "type": "single_choice",
       "topic": "Term Weighting",
       "subtopic": "Probabilistic IDF",
@@ -1164,13 +340,597 @@
         "math"
       ],
       "sourceRefs": [
-        "Q4-v2.json"
+        "incoming-retrieval-json/Q4-v2.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q4-irs-026",
+      "id": "irs-q4-008",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "BM25 Parameters",
+      "difficulty": "medium",
+      "questionMd": "In the BM25 formula, what happens to document length normalization when the parameter b is set to 0?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Document length is fully normalized and short documents are heavily favoured"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "BM25 reduces to a pure Boolean retrieval model with no frequency weighting"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Document length has no effect on the score and all documents are treated as having the same length"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The parameter avgdl becomes the only length signal used in the formula"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "BM25'te `b = 0` olduğunda, belge uzunluğu normalizasyonu tamamen devre dışı kalır. Formüldeki (1 - b + b·dl/avgdl) ifadesi 1'e sadeleşir ve tüm belgeler aynı uzunluktaymış gibi değerlendirilir.\n\n**Neden diğerleri yanlış?**\n• **A)** b=0 normalizasyonu artırmaz, tamamen kapatır.\n• **B)** TF doyumu (saturation) k₁ parametresiyle kontrol edilir, b ile değil.\n• **D)** b=0 IDF'i etkilemez.",
+      "tags": [
+        "bm25",
+        "parameters",
+        "length-normalization"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q4-v2.json",
+        "incoming-retrieval-json/Q4.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "irs-q4-009",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "BM25 Variants",
+      "difficulty": "medium",
+      "questionMd": "Which specific problem motivated the development of the BM25F variant?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Standard BM25 treats a document as a single flat text field"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Standard BM25 cannot handle multi-word queries because it sums scores term by term, a limitation BM25F overcomes"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Standard BM25 requires all documents in the collection to have the same length, which BM25F relaxes with per-document normalization"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Standard BM25 produces negative IDF values for terms with very high document frequency, which BM25F corrects"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "BM25F'nin geliştirilme motivasyonu: standart BM25 bir belgeyi tek düz metin alanı olarak ele alır. Başlık, gövde, anchor text gibi farklı alanların farklı önemleri göz ardı edilir.\n\n**Neden diğerleri yanlış?**\n• **B)** BM25 çok kelimeli sorguları terim bazında toplayarak sorunsuz işler.\n• **C)** BM25 tüm belgelerin aynı uzunlukta olmasını gerektirmez.\n• **D)** Negatif IDF sorunu BM25+'ın odağıdır, BM25F'nin değil.",
+      "tags": [
+        "bm25",
+        "bm25f",
+        "structured-documents"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q4-v2.json",
+        "incoming-retrieval-json/Q4.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q4-010",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "BM25",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture notes, which of the following statements about BM25 scores is correct?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "BM25 scores are ordinal relevance estimates and should not be compared across different queries"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "BM25 scores are calibrated probabilities that sum to 1 across all documents for a given query"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "BM25 scores always fall within the range [0, 1] because the IDF component is bounded by log(N)"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "BM25 scores are symmetric, meaning the score for query Q against document D equals the score for D against Q"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "BM25 skorları sıralama (ordinal) amaçlıdır; aynı sorgu içinde belgeleri karşılaştırır. Farklı sorgulardaki BM25 skorları karşılaştırılmamalıdır.\n\n**Neden diğerleri yanlış?**\n• **B)** BM25 skorları olasılık değildir ve 1'e toplanmaz.\n• **C)** BM25 skorları [0,1] aralığıyla sınırlı değildir; çok yüksek olabilir.\n• **D)** BM25 simetrik değildir; sorgu ve belge rolleri farklıdır.",
+      "tags": [
+        "bm25",
+        "scoring",
+        "ordinal-ranking"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q4-v2.json",
+        "incoming-retrieval-json/Q4.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "irs-q4-011",
+      "type": "single_choice",
+      "topic": "Term Weighting",
+      "subtopic": "SMART Notation",
+      "difficulty": "hard",
+      "questionMd": "In SMART notation, the scheme lnc.ltc specifies which combination of weighting choices for documents and queries respectively?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Documents use log-TF, no IDF, cosine normalization; queries use log-TF, standard IDF, cosine normalization"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Documents use log-TF, natural IDF, cosine normalization; queries use log-TF, no IDF, cosine normalization"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Documents use natural TF, cosine normalization, no IDF; queries use log-TF, IDF, cosine normalization"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Documents use log-TF, no IDF, no normalization; queries use log-TF, standard IDF, cosine normalization"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "SMART notasyonunda `lnc.ltc`: Belgeler için **l**ogaritmik TF, **n**o IDF, **c**osine normalizasyonu; Sorgular için **l**ogaritmik TF, IDF (**t**), **c**osine normalizasyonu.\n\n**Neden diğerleri yanlış?**\nDiğer seçenekler SMART notasyonundaki üçlü yapıyı (TF-IDF-normalizasyon) yanlış eşleştirir.",
+      "tags": [
+        "smart-notation",
+        "term-weighting",
+        "vector-space"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q4-v2.json",
+        "incoming-retrieval-json/Q4.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "irs-q4-012",
+      "type": "single_choice",
+      "topic": "Term Weighting",
+      "subtopic": "SMART Notation",
+      "difficulty": "medium",
+      "questionMd": "According to SMART notation, which formula defines the logarithmic TF variant (symbol l) for a term with a non-zero count?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "1 + log(tf)"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "0.5 + 0.5 * tf"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "log(tf) - 1"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "tf / (1 + log(tf))"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "SMART notasyonunda logaritmik TF varyantı: `1 + log(tf)` (tf > 0 ise). TF sıfırsa ağırlık 0'dır. Logaritma, yüksek frekansların etkisini yumuşatır.\n\n**Neden diğerleri yanlış?**\nDiğer seçenekler logaritmik TF formülünü yanlış ifade eder (eksik +1, yanlış taban, vb.).",
+      "tags": [
+        "smart-notation",
+        "tf",
+        "logarithm"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q4-v2.json",
+        "incoming-retrieval-json/Q4.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "irs-q4-013",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Vector Space Model",
+      "difficulty": "medium",
+      "questionMd": "Why does the Vector Space Model use cosine similarity rather than Euclidean distance to compare document and query vectors?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Euclidean distance cannot be computed for high-dimensional vectors, whereas cosine similarity is defined for any number of dimensions"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Euclidean distance produces values outside the range [0, 1], making it impossible to rank documents consistently"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Cosine similarity is always faster to compute than Euclidean distance for sparse TF-IDF vectors"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Euclidean distance would make a long document seem very different from a short one covering the same topics"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Öklid mesafesi vektör büyüklüğüne duyarlıdır: aynı konuları kapsayan uzun ve kısa belgeler farklı büyüklükte vektörlere sahiptir ve Öklid mesafesi onları 'uzak' gösterir. Cosine similarity yalnızca yönü karşılaştırır.\n\n**Neden diğerleri yanlış?**\n• **A)** Öklid mesafesi yüksek boyutlarda hesaplanabilir.\n• **B)** Öklid mesafesinin değer aralığı sıralama için sorun oluşturmaz.\n• **C)** Hesaplama hızı temel sebep değildir.",
+      "tags": [
+        "vector-space",
+        "cosine-similarity",
+        "euclidean-distance"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q4-v2.json",
+        "incoming-retrieval-json/Q4.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "irs-q4-014",
+      "type": "single_choice",
+      "topic": "Term Weighting",
+      "subtopic": "TF-IDF",
+      "difficulty": "easy",
+      "questionMd": "A term receives a high TF-IDF weight in a document when which condition holds?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The term appears rarely in that document but frequently across the overall collection"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The term has a low IDF value and a high document frequency"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The term appears in every document in the collection"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The term appears frequently in that document but rarely across the overall collection"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Bir terim yüksek TF-IDF ağırlığı alır: belgede sık geçer (yüksek TF) VE koleksiyonda nadir bulunur (yüksek IDF). İki koşulun birlikte sağlanması gerekir.\n\n**Neden diğerleri yanlış?**\n• **A)** Sadece yüksek TF yetmez; yaygın bir terim olabilir.\n• **B)** Sadece düşük df yetmez; belgede hiç geçmeyebilir.\n• **C)** TF ve IDF'in birlikte yüksek olması gerekir.",
+      "tags": [
+        "tf-idf",
+        "weighting",
+        "logic"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q4-v2.json",
+        "incoming-retrieval-json/Q4.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q4-015",
+      "type": "single_choice",
+      "topic": "Term Weighting",
+      "subtopic": "TF-IDF",
+      "difficulty": "medium",
+      "questionMd": "A term has high TF in a document but very low IDF across the collection. What does this combination indicate about the term's usefulness as a relevance signal?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The term is highly informative because low IDF indicates it appears in very few documents"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The term should be removed from the index because its combined TF-IDF weight will be exactly zero"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The term is a weak discriminator because it appears frequently in many documents"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The term is a strong relevance signal because high TF always dominates the combined TF-IDF weight"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Yüksek TF ama çok düşük IDF = terim çoğu belgede yaygındır (örn. 'the', 'is'). Yaygın olduğu için belgeleri birbirinden ayırt edemez; zayıf bir ayırıcıdır.\n\n**Neden diğerleri yanlış?**\n• **A)** Düşük IDF az belgede değil, ÇOK belgede göründüğü anlamına gelir.\n• **B)** TF-IDF ağırlığı düşük olur ama tam sıfır olmak zorunda değildir.\n• **D)** Yüksek TF her zaman baskın olmaz; düşük IDF onu etkisiz kılar.",
+      "tags": [
+        "tf-idf",
+        "idf",
+        "relevance-signal"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q4-v2.json",
+        "incoming-retrieval-json/Q4.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "irs-q4-016",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Vector Space Model",
+      "difficulty": "easy",
+      "questionMd": "In the Vector Space Model (VSM), what determines the number of dimensions in a document vector?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The number of tokens in the document being represented"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The size of the vocabulary |V| of the entire collection"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The number of unique terms in the query"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The number of documents in the collection"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "VSM'de belge vektörünün boyut sayısı, tüm koleksiyonun **sözlük boyutu |V|** tarafından belirlenir. Her benzersiz terim bir boyuta karşılık gelir.\n\n**Neden diğerleri yanlış?**\n• **A)** Belgedeki token sayısı vektör değerlerini etkiler, boyut sayısını değil.\n• **C)** Sorgudaki terim sayısı boyut belirlemez; tüm sözlük kullanılır.\n• **D)** Belge sayısı koleksiyon büyüklüğüdür, vektör boyutu değildir.",
+      "tags": [
+        "vector-space",
+        "dimensions",
+        "vocabulary"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q4-v2.json",
+        "incoming-retrieval-json/Q4.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "irs-q4-017",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "BM25 Parameters",
+      "difficulty": "medium",
+      "questionMd": "What retrieval behavior results when the BM25 parameter k₁ is set to 0?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Length normalization is disabled because the denominator reduces to the raw term frequency"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The BM25 score becomes equivalent to raw TF multiplied by IDF with no saturation"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The IDF component dominates entirely and term frequency is weighted at its maximum possible value"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The TF component becomes binary — only whether a term is present matters, not how many times it appears"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "k₁ = 0 olduğunda BM25'in TF doyum fonksiyonu tf·(0+1)/(tf+0) = 1 olur (tf > 0 için). Yani terim belgede var mı yok mu — sadece bu önemlidir; kaç kez geçtiği skora etki etmez. TF bileşeni **ikili** (binary) hale gelir.\n\n**Neden diğerleri yanlış?**\n• **A)** Uzunluk normalizasyonu b parametresiyle kontrol edilir, k₁ ile değil.\n• **B)** Ham TF·IDF, doyum olmadan, k₁ → ∞ durumuna karşılık gelir.\n• **C)** IDF her zaman mevcuttur; k₁=0 TF'yi ikili yapar, IDF'yi değiştirmez.",
+      "tags": [
+        "bm25",
+        "parameters",
+        "tf-saturation"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q4-v2.json",
+        "incoming-retrieval-json/Q4.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "irs-q4-018",
+      "type": "single_choice",
+      "topic": "System Architecture",
+      "subtopic": "Query Processing",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture notes, which traversal strategy is the standard approach in modern IR systems for accumulating TF-IDF scores?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "DAAT (Document At A Time), which processes all terms in a document simultaneously before moving to the next document"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "TAAT (Term At A Time), which is faster because it avoids the need for a score accumulator"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "DAAT (Document At A Time), which processes one document at a time and accumulates scores in a dictionary"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "TAAT (Term At A Time), which processes one term across all matching documents before moving to the next"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "**TAAT** (Term At A Time), modern IR sistemlerinde TF-IDF skorlarını biriktirmek için standart yaklaşımdır. Bir terimi tüm eşleşen belgeler boyunca işler, sonra bir sonraki terime geçer. Her belge için bir skor biriktirici (accumulator) tutulur.\n\n**Neden diğerleri yanlış?**\n• **A)** Bu DAAT tanımıdır ama standart yaklaşım olarak TAAT gösterilmiştir.\n• **B)** TAAT skor biriktirici gerektirir; bu ifade yanlıştır.\n• **C)** Bu DAAT'ın alternatif tanımıdır, standart yaklaşım değildir.",
+      "tags": [
+        "query-processing",
+        "taat",
+        "daat"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q4-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q4-019",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Probabilistic Ranking Principle",
+      "difficulty": "hard",
+      "questionMd": "The Probability Ranking Principle (PRP), which motivates BM25, states that documents should be ranked according to which criterion?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Decreasing document length relative to the collection average"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Decreasing term frequency summed across all query terms"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Increasing document frequency of the query terms in the collection"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Decreasing probability of relevance given the document and query"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "PRP'ye göre belgeler, belge ve sorgu verildiğinde **azalan alaka olasılığına** göre sıralanmalıdır: P(relevant | document, query). Bu, optimal sıralama stratejisidir.\n\n**Neden diğerleri yanlış?**\n• **A)** Belge uzunluğu tek başına sıralama kriteri değildir.\n• **B)** Ham TF toplamı olasılıksal sıralama ilkesiyle aynı şey değildir.\n• **C)** Artan df, yaygın terimleri önceliklendirir; tam tersi olmalıdır.",
+      "tags": [
+        "prp",
+        "probabilistic-model",
+        "bm25"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q4-v2.json",
+        "incoming-retrieval-json/Q4.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q4-020",
+      "type": "single_choice",
+      "topic": "Term Weighting",
+      "subtopic": "SMART Notation",
+      "difficulty": "hard",
+      "questionMd": "The log-average TF variant (symbol L) in SMART notation is defined as which of the following expressions?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "0.5 + 0.5 * log(tf) / log(max_tf(d))"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "(1 + log tf) * avg_tf(d)"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "log(tf / avg_tf(d))"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "(1 + log tf) / (1 + log avg_tf(d))"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "SMART notasyonunda log-average TF varyantı (L sembolü): `(1 + log tf) / (1 + log avg_tf(d))`. Logaritmik TF'yi belgenin ortalama TF'sine göre normalize eder.\n\n**Neden diğerleri yanlış?**\n• **A)** Bu, augmented normalizasyon formülüne benzer, L değil.\n• **B)** Çarpma değil bölme kullanılır; normalizasyon amaçlanır.\n• **C)** Bu basit oran logaritmasıdır; standart SMART L tanımı değildir.",
+      "tags": [
+        "smart-notation",
+        "tf",
+        "normalization"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q4-v2.json",
+        "incoming-retrieval-json/Q4.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "irs-q4-021",
       "type": "single_choice",
       "topic": "Retrieval Models",
       "subtopic": "BM25 IDF",
@@ -1208,13 +968,13 @@
         "math"
       ],
       "sourceRefs": [
-        "Q4-v2.json"
+        "incoming-retrieval-json/Q4-v2.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q4-irs-027",
+      "id": "irs-q4-022",
       "type": "single_choice",
       "topic": "Retrieval Models",
       "subtopic": "BM25 Saturation",
@@ -1252,13 +1012,193 @@
         "asymptote"
       ],
       "sourceRefs": [
-        "Q4-v2.json"
+        "incoming-retrieval-json/Q4-v2.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q4-irs-028",
+      "id": "irs-q4-023",
+      "type": "single_choice",
+      "topic": "Term Weighting",
+      "subtopic": "Keyword Extraction",
+      "difficulty": "medium",
+      "questionMd": "How does TF-IDF enable keyword extraction from a single document within a larger corpus?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Terms with the lowest TF-IDF weight are the best keywords because they are unique to the document and appear nowhere else"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Terms whose raw TF exceeds the collection average document frequency are selected as keywords regardless of their IDF value"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Terms with the highest TF-IDF weight in a document are strong candidate keywords for that document"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Terms are selected as keywords when their IDF value equals zero, indicating they are universally recognized concepts"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Bir belgede **en yüksek TF-IDF ağırlığına** sahip terimler, o belge için güçlü anahtar kelime adaylarıdır. Bu terimler belgede sık geçer (yüksek TF) VE koleksiyonda nadir bulunur (yüksek IDF), dolayısıyla belgeyi en iyi tanımlayan kelimelerdir.\n\n**Neden diğerleri yanlış?**\n• **A)** En düşük TF-IDF'li terimler yaygın/önemsiz terimlerdir; anahtar kelime olmaz.\n• **B)** IDF değeri göz ardı edilemez; sadece TF yeterli değildir.\n• **D)** IDF = 0 olan terimler tüm belgelerde geçer ve ayırt edici değildir.",
+      "tags": [
+        "tf-idf",
+        "keyword-extraction",
+        "applications"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q4-v2.json",
+        "incoming-retrieval-json/Q4.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q4-024",
+      "type": "single_choice",
+      "topic": "Indexing",
+      "subtopic": "Document Frequency",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture notes, where do the document frequency (`df`) values required for both TF-IDF and BM25 computation come from at retrieval time?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "From the inverted index constructed during indexing, specifically from the length of each term's postings list"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "From the query itself, by counting how many query terms appear in a predefined stopword list"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "From the average document length statistic `avgdl` stored alongside the inverted index"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "From a separate per-document frequency table computed fresh at query time by scanning the corpus"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Belge frekansı (df) değerleri, indeksleme sırasında oluşturulan **ters indeksten** (inverted index) gelir — her terimin posting listesinin uzunluğu o terimin kaç belgede göründüğünü verir.\n\n**Neden diğerleri yanlış?**\n• **B)** df sorgudan değil, koleksiyondan hesaplanır.\n• **C)** avgdl farklı bir istatistiktir; df değeri değildir.\n• **D)** df her sorguda yeniden hesaplanmaz; indeks oluşturma zamanında saklanır.",
+      "tags": [
+        "df",
+        "indexing",
+        "retrieval"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q4-v2.json",
+        "incoming-retrieval-json/Q4.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "irs-q4-025",
+      "type": "single_choice",
+      "topic": "Term Weighting",
+      "subtopic": "SMART Notation",
+      "difficulty": "medium",
+      "questionMd": "In SMART notation, which TF variant assigns a weight of 1 to any term that appears at least once in a document, and 0 to terms that do not appear, completely ignoring how many times the term occurs?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The natural variant (symbol n), which returns the raw count `tf(t,d)`"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The Boolean variant (symbol b), which returns 1 if `tf > 0` and 0 otherwise"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The augmented variant (symbol a), which returns a value in the range [0.5, 1]"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The logarithmic variant (symbol l), which returns `1 + log(tf)`"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "SMART notasyonunda **Boolean varyantı (b sembolü)**: terim belgede varsa 1, yoksa 0 döndürür. Terimin kaç kez geçtiği tamamen göz ardı edilir.\n\n**Neden diğerleri yanlış?**\n• **A)** Natural varyant (n) ham sayıyı döndürür; ikili değildir.\n• **C)** Augmented varyant (a) [0.5, 1] aralığında değer üretir; ikili değildir.\n• **D)** Logaritmik varyant (l) frekansa göre ağırlık hesaplar; ikili değildir.",
+      "tags": [
+        "smart-notation",
+        "tf",
+        "boolean"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q4-v2.json",
+        "incoming-retrieval-json/Q4.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "irs-q4-026",
+      "type": "single_choice",
+      "topic": "Term Weighting",
+      "subtopic": "IDF Smoothing",
+      "difficulty": "medium",
+      "questionMd": "Why does the smoothed IDF formula `log(N / (df + 1)) + 1` add 1 to the denominator?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "To ensure that every term receives an IDF value greater than 1 regardless of collection size"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "To prevent division by zero when a term has never appeared in any document in the collection"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "To make very common terms receive a higher IDF than they would under the standard formula"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "To bring the IDF range into alignment with the range produced by log-TF"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Düzeltilmiş IDF formülünde paydaya +1 eklenmesinin nedeni: df = 0 olduğunda (terim hiçbir belgede görünmediğinde) **sıfıra bölmeyi önlemek**tir.\n\n**Neden diğerleri yanlış?**\n• **A)** IDF değerini 1'den büyük yapmak +1'in amacı değildir.\n• **C)** Yaygın terimlerin IDF'ini artırmak istenmez; tam tersi amaçlanır.\n• **D)** log-TF ile aralık hizalama +1'in motive edici nedeni değildir.",
+      "tags": [
+        "idf",
+        "smoothing",
+        "math"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q4-v2.json",
+        "incoming-retrieval-json/Q4.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q4-027",
       "type": "single_choice",
       "topic": "Retrieval Models",
       "subtopic": "TF Saturation",
@@ -1296,7 +1236,670 @@
         "log-tf"
       ],
       "sourceRefs": [
-        "Q4-v2.json"
+        "incoming-retrieval-json/Q4-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q4-028",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "BM25 Parameters",
+      "difficulty": "hard",
+      "questionMd": "What is the effect of setting the BM25 parameter `k1` to a very large value (approaching infinity)?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Length normalization is disabled and all documents are treated as having equal length"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The IDF component is scaled down and rare terms receive lower weights"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The BM25 score becomes equivalent to a binary (Boolean) match signal"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "TF saturation disappears and the scoring approaches raw TF with no diminishing returns"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "k₁ → ∞ olduğunda BM25'in TF doyum fonksiyonu tf·(k₁+1)/(tf+k₁) → tf olur. Doyum kaybolur ve skor ham TF ile orantılı hale gelir — azalan getiri (diminishing returns) ortadan kalkar.\n\n**Neden diğerleri yanlış?**\n• **A)** Uzunluk normalizasyonu b parametresiyle kontrol edilir, k₁ ile değil.\n• **B)** IDF bileşeni k₁'den bağımsızdır.\n• **C)** Binary eşleşme k₁ = 0 durumuna karşılık gelir, k₁ → ∞ değil.",
+      "tags": [
+        "bm25",
+        "parameters",
+        "limits"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q4-v2.json",
+        "incoming-retrieval-json/Q4.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "irs-q4-029",
+      "type": "single_choice",
+      "topic": "BM25",
+      "subtopic": "Document Length Normalization",
+      "difficulty": "medium",
+      "questionMd": "How does BM25's approach to document length normalization differ from the cosine-based L2 normalization used in the Vector Space Model?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "BM25 normalizes by the document's maximum term frequency, while L2 normalization normalizes by the sum of all term frequencies"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "BM25 applies per-term length normalization controlled by the parameter b"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "BM25 applies length normalization only to query terms, whereas L2 normalization is applied only to document vectors"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "BM25 removes length normalization entirely, relying solely on TF saturation to control the influence of document length"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "BM25 uses a **document-length normalization factor** inside its scoring formula, controlled by the parameter `b` and relative to `avgdl`. L2 normalization in the Vector Space Model instead rescales the **entire vector** to unit length. So BM25 and cosine normalization both address length effects, but they do so in **different mathematical ways**.",
+      "tags": [
+        "bm25",
+        "length normalization",
+        "vector space model"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q4.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q4-030",
+      "type": "single_choice",
+      "topic": "Probabilistic Retrieval",
+      "subtopic": "Binary Independence Model",
+      "difficulty": "medium",
+      "questionMd": "What simplifying assumption does the Binary Independence Model (BIM) make about query terms when estimating the probability that a document is relevant?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Terms are assumed to appear the same number of times in every relevant document in the collection"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Terms are assumed to be statistically independent of one another given the relevance status of the document"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Terms are assumed to have equal document frequency across the entire collection"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Terms are assumed to be ranked by their IDF value before any probability estimation is performed"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "The **Binary Independence Model** assumes that query terms are conditionally independent given relevance or non-relevance. This assumption makes the probability model tractable and is one of the foundations behind probabilistic IR and BM25-style reasoning.",
+      "tags": [
+        "bim",
+        "probabilistic ir",
+        "independence assumption"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q4.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q4-031",
+      "type": "single_choice",
+      "topic": "BM25",
+      "subtopic": "Adoption in Search Engines",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture notes, in which of the following systems has BM25 been the default scorer?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The TREC evaluation framework as the only permitted baseline for ad-hoc retrieval tracks"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Elasticsearch and OpenSearch since version 5.0, and Lucene since version 6.0"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The Google PageRank algorithm as its primary term-matching component since 2010"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Apache Spark MLlib and scikit-learn since their initial releases"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "BM25 became the default ranking function in major Lucene-based search systems. The key point is that **Lucene and systems built on it adopted BM25 as the standard lexical scorer**, replacing older defaults such as classic TF-IDF similarity.",
+      "tags": [
+        "bm25",
+        "lucene",
+        "elasticsearch",
+        "opensearch"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q4.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q4-032",
+      "type": "single_choice",
+      "topic": "Retrieval Models",
+      "subtopic": "Theoretical Foundations",
+      "difficulty": "medium",
+      "questionMd": "Which statement correctly describes a key theoretical difference between BM25 and TF-IDF with cosine similarity?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Both BM25 and TF-IDF are derived from the Binary Independence Model but differ only in their length normalization"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "TF-IDF is derived from the Probability Ranking Principle, while BM25 is an empirical approximation with no theoretical basis"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "BM25 is derived from the Binary Independence Model and the Probability Ranking Principle, while TF-IDF is a heuristic weighting scheme"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "BM25 is a purely heuristic method, while TF-IDF has a formal probabilistic derivation from the Robertson-Sparck Jones weight"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "BM25 has a **probabilistic motivation** connected to the Binary Independence Model and Probability Ranking Principle. By contrast, TF-IDF is mainly a **heuristic weighting family** rather than a single formally derived probabilistic model.",
+      "tags": [
+        "bm25",
+        "tf-idf",
+        "prp",
+        "bim"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q4.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q4-033",
+      "type": "single_choice",
+      "topic": "IDF",
+      "subtopic": "Probabilistic IDF Limitation",
+      "difficulty": "medium",
+      "questionMd": "Which of the following is a known limitation of the probabilistic IDF formula `log((N - df) / df)` as noted in the lecture?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The formula cannot be computed when the document frequency is greater than 1"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The formula doubles the IDF value of any term whose document frequency exceeds N/2"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The formula always returns the same value regardless of the collection size N"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The formula can produce negative values, requiring careful handling in implementations"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "If `df > N/2`, then `(N - df) / df < 1`, and the logarithm becomes **negative**. That is a known practical issue with this probabilistic form of IDF and motivates smoothing or clipping strategies in implementations.",
+      "tags": [
+        "idf",
+        "probabilistic idf",
+        "log weighting"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q4.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q4-034",
+      "type": "single_choice",
+      "topic": "Vector Space Model",
+      "subtopic": "L2 Normalization",
+      "difficulty": "easy",
+      "questionMd": "After L2 normalization is applied to all document vectors in the Vector Space Model, what geometric property do all normalized document vectors share?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "All normalized document vectors have the same direction as the query vector for the collection's most common query"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "All normalized document vectors become orthogonal to one another, eliminating redundant documents"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "All normalized document vectors are projected onto a two-dimensional plane to enable fast ranking"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "All normalized document vectors lie on the unit sphere, meaning their Euclidean norm equals 1"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "L2 normalization divides each vector by its Euclidean norm. As a result, every normalized vector has **length 1**, so all such vectors lie on the **unit sphere** in vector space.",
+      "tags": [
+        "l2 normalization",
+        "vector space model",
+        "geometry"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q4.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q4-035",
+      "type": "single_choice",
+      "topic": "SMART Notation",
+      "subtopic": "Augmented TF",
+      "difficulty": "medium",
+      "questionMd": "In the SMART notation table, the augmented TF variant (symbol `a`) is defined as which of the following?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "tf / (tf + max_tf(d))"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "0.5 + 0.5 * tf / max_tf(d)"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "1 + log(tf / max_tf(d))"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "0.5 * log(tf) + 0.5 * max_tf(d)"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "The SMART **augmented TF** rescales term frequency relative to the document's maximum term frequency: `0.5 + 0.5 * tf / max_tf(d)`. This keeps weights in a moderate range and reduces the dominance of raw counts.",
+      "tags": [
+        "smart notation",
+        "augmented tf",
+        "weighting"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q4.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q4-036",
+      "type": "single_choice",
+      "topic": "BM25 and TF Weighting",
+      "subtopic": "TF Saturation",
+      "difficulty": "easy",
+      "questionMd": "Which statement best captures the concept of TF saturation as modeled by BM25 and log-TF?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "TF saturation increases the weight of the first occurrence of a term and sets all subsequent occurrences to zero"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "TF saturation means that once a term appears more than `k1` times, it is completely ignored in scoring"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Each additional occurrence of a term contributes equally to the relevance score regardless of how many times it has already appeared"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Each additional occurrence of a term contributes progressively less to the relevance score"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "TF saturation means there are **diminishing returns**. The first few occurrences of a term usually matter more than later repetitions, so BM25 and log-TF both dampen the gain from very large raw term counts.",
+      "tags": [
+        "tf saturation",
+        "bm25",
+        "log tf"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q4.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q4-037",
+      "type": "single_choice",
+      "topic": "BM25",
+      "subtopic": "TF Saturation Function",
+      "difficulty": "medium",
+      "questionMd": "As the raw term frequency `tf` in a document increases toward infinity, what value does the BM25 TF saturation function `tf * (k1 + 1) / (tf + k1)` approach?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The value `k1`, which acts as a hard ceiling on TF contributions"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The value `tf`, meaning the saturation function converges back to raw TF at very high counts"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The value `1`, because the saturation function is normalized to the range [0, 1]"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The value `k1 + 1`, which is the asymptotic maximum that the saturation function never exceeds"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "For very large `tf`, the highest-degree terms dominate and the fraction approaches `k1 + 1`. So the BM25 TF component has a **finite asymptote**, which is how it enforces saturation.",
+      "tags": [
+        "bm25",
+        "tf saturation",
+        "asymptote"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q4.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q4-038",
+      "type": "single_choice",
+      "topic": "Term Frequency",
+      "subtopic": "Length Bias",
+      "difficulty": "easy",
+      "questionMd": "Why is raw term frequency (TF) considered a biased signal when comparing documents of different lengths?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Raw TF values become negative for very high-frequency terms"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Longer documents tend to accumulate higher raw TF values"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Raw TF counts cannot be stored in an inverted index"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Raw TF ignores whether a term appears in the query at all"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Longer documents naturally have more opportunities to repeat a term, so raw TF can unfairly favor them. This is why many weighting schemes normalize or damp TF before using it in ranking.",
+      "tags": [
+        "term frequency",
+        "length bias",
+        "normalization"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q4.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q4-039",
+      "type": "single_choice",
+      "topic": "IDF",
+      "subtopic": "Standard Formula",
+      "difficulty": "easy",
+      "questionMd": "Using the standard IDF formula taught in lecture, how is `IDF(t)` computed for a term `t` given a collection of `N` documents where it appears in `df(t)` of them?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "log(df(t) / N)"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "N / df(t)"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "log(N / df(t))"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "log(N + df(t))"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "The standard IDF idea is to compare the total number of documents `N` with the number containing the term `df(t)`. That gives `IDF(t) = log(N / df(t))`, which increases as the term becomes rarer.",
+      "tags": [
+        "idf",
+        "formula",
+        "tf-idf"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q4.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q4-040",
+      "type": "single_choice",
+      "topic": "Boolean Retrieval",
+      "subtopic": "Motivation for Ranked Retrieval",
+      "difficulty": "medium",
+      "questionMd": "Which of the following is a fundamental limitation of Boolean retrieval that motivates the move to ranked retrieval?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Boolean retrieval cannot use an inverted index to look up postings lists"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Boolean retrieval requires all query terms to be stemmed before matching"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Boolean retrieval is unable to handle OR operators between query terms"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "A document matching 3 out of 4 query terms is assumed no better than a document matching 0 terms"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Boolean retrieval makes **hard yes/no decisions**. Without ranking, it cannot express that one document is *almost* a match while another is completely irrelevant. That inability to capture **partial matching quality** is a major reason ranked retrieval became standard.",
+      "tags": [
+        "boolean retrieval",
+        "ranked retrieval",
+        "partial matching"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q4.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q4-041",
+      "type": "single_choice",
+      "topic": "Vector Space Model",
+      "subtopic": "Cosine Formula",
+      "difficulty": "easy",
+      "questionMd": "Which expression correctly gives the cosine similarity between document vector `d` and query vector `q`?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "||d|| * ||q|| / (d · q)"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "(d · q) / (||d|| + ||q||)"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "(d · q) / (||d|| * ||q||)"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "(d · q)^2 / (||d|| * ||q||)"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Cosine similarity is the **dot product divided by the product of vector norms**. This makes the score depend on the angle between the vectors rather than their raw magnitudes.",
+      "tags": [
+        "cosine similarity",
+        "formula",
+        "vector space model"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q4.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q4-042",
+      "type": "single_choice",
+      "topic": "BM25",
+      "subtopic": "Length Normalization Example",
+      "difficulty": "medium",
+      "questionMd": "According to the length-normalization worked example in the lecture notes, when two documents contain a query term the same number of times but differ in length, how does BM25 treat the shorter document?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The shorter document is excluded from ranking because BM25 requires a minimum document length relative to `avgdl`"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The shorter document receives a lower TF saturation score because BM25 penalizes documents with few total tokens"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Both documents receive identical TF saturation scores because BM25 only compares document length to `k1`, not to `avgdl`"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The shorter document receives a higher TF saturation score because its length is below average, signaling greater topical focus"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "BM25 rewards term occurrences **more strongly in shorter documents** when all else is equal, because the same number of matches in fewer tokens suggests greater topical concentration. This is one of the main effects of BM25's document-length normalization.",
+      "tags": [
+        "bm25",
+        "length normalization",
+        "avgdl"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q4.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false

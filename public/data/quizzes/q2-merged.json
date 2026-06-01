@@ -4,6 +4,7 @@
     "title": "Quiz 2 — DOM, Events & Async JavaScript",
     "description": "DOM manipulation, event handling, async/await, promises, and browser APIs.",
     "source": "DWP Past Exams (Merged)",
+    "course": "Dynamic Web Programming",
     "topic": "DOM & Events",
     "topics": [
       "Architecture",
@@ -15,6 +16,7 @@
       "Development",
       "Fetch API",
       "HTTP",
+      "History",
       "JSON",
       "JavaScript",
       "Networking",
@@ -22,11 +24,13 @@
       "Promises",
       "REST API",
       "Web APIs",
-      "Web Development"
+      "Web Development",
+      "Web History",
+      "Web Standards"
     ],
-    "questionCount": 55,
-    "difficulty": "medium",
-    "estimatedMinutes": 83,
+    "questionCount": 75,
+    "difficulty": "easy",
+    "estimatedMinutes": 113,
     "tags": [
       "q2",
       "merged",
@@ -74,14 +78,12 @@
         "promise"
       ],
       "sourceRefs": [
-        "dwp_quiz2_merged.json",
-        "Q2-Web2.json",
-        "Dynamic Web Programming - Quiz 2 Sema.json",
-        "dwp_quiz3_merged.json",
-        "Dynamic Web Programming - Quiz 3.json"
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Q2-Web2.json",
+        "incoming-json/Dynamic Web Programming - Quiz 2 Sema.json"
       ],
-      "mergedFromCount": 5,
-      "needs_review": true
+      "mergedFromCount": 3,
+      "needs_review": false
     },
     {
       "id": "q2-002",
@@ -121,15 +123,12 @@
         "parsing"
       ],
       "sourceRefs": [
-        "dwp_quiz2_merged.json",
-        "Q2-Web2.json",
-        "Dynamic Web Programming - Quiz 2 Sema.json",
-        "dwp_quiz4_merged.json",
-        "Q4-Web2.json",
-        "Dynamic Web Programming - Quiz 4 Sema.json"
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Q2-Web2.json",
+        "incoming-json/Dynamic Web Programming - Quiz 2 Sema.json"
       ],
-      "mergedFromCount": 6,
-      "needs_review": true
+      "mergedFromCount": 3,
+      "needs_review": false
     },
     {
       "id": "q2-003",
@@ -169,14 +168,12 @@
         "fetch"
       ],
       "sourceRefs": [
-        "dwp_quiz2_merged.json",
-        "Q2-Web2.json",
-        "Dynamic Web Programming - Quiz 2 Sema.json",
-        "dwp_quiz3_merged.json",
-        "Dynamic Web Programming - Emir Quiz 3.json"
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Q2-Web2.json",
+        "incoming-json/Dynamic Web Programming - Quiz 2 Sema.json"
       ],
-      "mergedFromCount": 5,
-      "needs_review": true
+      "mergedFromCount": 3,
+      "needs_review": false
     },
     {
       "id": "q2-004",
@@ -216,17 +213,12 @@
         "javascript"
       ],
       "sourceRefs": [
-        "dwp_quiz2_merged.json",
-        "Q2-Web2.json",
-        "Dynamic Web Programming - Quiz 2 Sema.json",
-        "Dynamic Web Programming - Quiz 3.json",
-        "dwp_quiz3_merged.json",
-        "Q3-Web2.json",
-        "Dynamic Web Programming - Quiz 3 Sema.json",
-        "Q3-Berhudan.json"
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Q2-Web2.json",
+        "incoming-json/Dynamic Web Programming - Quiz 2 Sema.json"
       ],
-      "mergedFromCount": 8,
-      "needs_review": true
+      "mergedFromCount": 3,
+      "needs_review": false
     },
     {
       "id": "q2-005",
@@ -266,15 +258,12 @@
         "javascript"
       ],
       "sourceRefs": [
-        "dwp_quiz2_merged.json",
-        "Q2-Web2.json",
-        "Dynamic Web Programming - Quiz 2 Sema.json",
-        "dwp_quiz4_merged.json",
-        "Q4-Web2.json",
-        "Dynamic Web Programming - Quiz 4 Sema.json",
-        "Dynamic Web Programming - Quiz 2.json"
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Q2-Web2.json",
+        "incoming-json/Dynamic Web Programming - Quiz 2 Sema.json",
+        "incoming-json/Dynamic Web Programming - Quiz 2.json"
       ],
-      "mergedFromCount": 7,
+      "mergedFromCount": 4,
       "needs_review": true
     },
     {
@@ -316,15 +305,11 @@
         "fetch"
       ],
       "sourceRefs": [
-        "dwp_quiz2_merged.json",
-        "Q2-Web2.json",
-        "Q3-Web2.json",
-        "dwp_quiz3_merged.json",
-        "Dynamic Web Programming - Quiz 2 Sema.json",
-        "Dynamic Web Programming - Emir Quiz 3.json",
-        "Dynamic Web Programming - Quiz 3 Sema.json"
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Q2-Web2.json",
+        "incoming-json/Dynamic Web Programming - Quiz 2 Sema.json"
       ],
-      "mergedFromCount": 7,
+      "mergedFromCount": 3,
       "needs_review": true
     },
     {
@@ -365,19 +350,60 @@
         "api"
       ],
       "sourceRefs": [
-        "dwp_quiz2_merged.json",
-        "Q2-Web2.json",
-        "Dynamic Web Programming - Quiz 2 Sema.json",
-        "dwp_quiz4_merged.json",
-        "Q4-Web2.json",
-        "Dynamic Web Programming - Quiz 4 Sema.json",
-        "Dynamic Web Programming - Emir Quiz 4.json"
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Q2-Web2.json",
+        "incoming-json/Dynamic Web Programming - Quiz 2 Sema.json"
       ],
-      "mergedFromCount": 7,
-      "needs_review": true
+      "mergedFromCount": 3,
+      "needs_review": false
     },
     {
       "id": "q2-008",
+      "type": "single_choice",
+      "topic": "Networking",
+      "subtopic": "LAN/WAN",
+      "difficulty": "medium",
+      "questionMd": "How do LANs and WANs relate to the concepts of Intranet and Internet respectively?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "LANs form private internal networks (Intranet), while WANs connect these networks together to form the Internet"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "LANs use wireless connections only, while WANs use wired connections only"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "LANs are always public networks, while WANs are always private networks"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "LANs operate at the application layer, while WANs operate at the physical layer"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "LANs are local, private networks (Intranets), and WANs connect them globally to form the broader Internet.",
+      "tags": [
+        "networking",
+        "internet"
+      ],
+      "sourceRefs": [
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Q2-Web2.json",
+        "incoming-json/Dynamic Web Programming - Quiz 2 Sema.json"
+      ],
+      "mergedFromCount": 3,
+      "needs_review": false
+    },
+    {
+      "id": "q2-009",
       "type": "single_choice",
       "topic": "Fetch API",
       "subtopic": "Return Values",
@@ -414,18 +440,16 @@
         "promise"
       ],
       "sourceRefs": [
-        "dwp_quiz2_merged.json",
-        "Q2-Web2.json",
-        "Dynamic Web Programming - Quiz 2 Sema.json",
-        "Dynamic Web Programming - Quiz 2.json",
-        "dwp_quiz3_merged.json",
-        "Dynamic Web Programming - Quiz 3.json"
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Q2-Web2.json",
+        "incoming-json/Dynamic Web Programming - Quiz 2 Sema.json",
+        "incoming-json/Dynamic Web Programming - Quiz 2.json"
       ],
-      "mergedFromCount": 6,
+      "mergedFromCount": 4,
       "needs_review": true
     },
     {
-      "id": "q2-009",
+      "id": "q2-010",
       "type": "single_choice",
       "topic": "REST API",
       "subtopic": "Static vs Dynamic",
@@ -463,19 +487,15 @@
         "architecture"
       ],
       "sourceRefs": [
-        "dwp_quiz2_merged.json",
-        "Q2-Web2.json",
-        "Dynamic Web Programming - Quiz 2 Sema.json",
-        "dwp_quiz4_merged.json",
-        "Q3-Berhudan.json",
-        "Q4-Berhudan.json",
-        "Dynamic Web Programming - Emir Quiz 4.json"
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Q2-Web2.json",
+        "incoming-json/Dynamic Web Programming - Quiz 2 Sema.json"
       ],
-      "mergedFromCount": 7,
-      "needs_review": true
+      "mergedFromCount": 3,
+      "needs_review": false
     },
     {
-      "id": "q2-010",
+      "id": "q2-011",
       "type": "single_choice",
       "topic": "Networking",
       "subtopic": "Internet vs Intranet",
@@ -512,15 +532,15 @@
         "internet"
       ],
       "sourceRefs": [
-        "dwp_quiz2_merged.json",
-        "Q2-Web2.json",
-        "Dynamic Web Programming - Quiz 2 Sema.json"
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Q2-Web2.json",
+        "incoming-json/Dynamic Web Programming - Quiz 2 Sema.json"
       ],
       "mergedFromCount": 3,
       "needs_review": false
     },
     {
-      "id": "q2-011",
+      "id": "q2-012",
       "type": "single_choice",
       "topic": "Data Serialization",
       "subtopic": "Terminology",
@@ -557,19 +577,15 @@
         "serialization"
       ],
       "sourceRefs": [
-        "dwp_quiz2_merged.json",
-        "Q2-Web2.json",
-        "Dynamic Web Programming - Quiz 2 Sema.json",
-        "Dynamic Web Programming - Emir Quiz 3.json",
-        "dwp_quiz3_merged.json",
-        "Q3-Web2.json",
-        "Dynamic Web Programming - Quiz 3 Sema.json"
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Q2-Web2.json",
+        "incoming-json/Dynamic Web Programming - Quiz 2 Sema.json"
       ],
-      "mergedFromCount": 7,
-      "needs_review": true
+      "mergedFromCount": 3,
+      "needs_review": false
     },
     {
-      "id": "q2-012",
+      "id": "q2-013",
       "type": "single_choice",
       "topic": "Promises",
       "subtopic": "States",
@@ -606,17 +622,15 @@
         "promise"
       ],
       "sourceRefs": [
-        "dwp_quiz2_merged.json",
-        "dwp_quiz3_merged.json",
-        "Q2-Web2.json",
-        "Dynamic Web Programming - Quiz 2 Sema.json",
-        "Dynamic Web Programming - Quiz 3.json"
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Q2-Web2.json",
+        "incoming-json/Dynamic Web Programming - Quiz 2 Sema.json"
       ],
-      "mergedFromCount": 5,
+      "mergedFromCount": 3,
       "needs_review": false
     },
     {
-      "id": "q2-013",
+      "id": "q2-014",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Context (this)",
@@ -654,15 +668,15 @@
         "events"
       ],
       "sourceRefs": [
-        "dwp_quiz2_merged.json",
-        "Q2-Web2.json",
-        "Dynamic Web Programming - Quiz 2 Sema.json"
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Q2-Web2.json",
+        "incoming-json/Dynamic Web Programming - Quiz 2 Sema.json"
       ],
       "mergedFromCount": 3,
       "needs_review": false
     },
     {
-      "id": "q2-014",
+      "id": "q2-015",
       "type": "single_choice",
       "topic": "Web APIs",
       "subtopic": "Media Devices",
@@ -699,20 +713,184 @@
         "web-api"
       ],
       "sourceRefs": [
-        "dwp_quiz2_merged.json",
-        "Q2-Web2.json",
-        "Q3-Web2.json",
-        "Dynamic Web Programming - Quiz 2 Sema.json",
-        "Dynamic Web Programming - Quiz 3 Sema.json",
-        "dwp_quiz3_merged.json",
-        "Dynamic Web Programming - Emir Quiz 3.json",
-        "Dynamic Web Programming - Quiz 3.json"
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Q2-Web2.json",
+        "incoming-json/Dynamic Web Programming - Quiz 2 Sema.json"
       ],
-      "mergedFromCount": 8,
+      "mergedFromCount": 3,
+      "needs_review": false
+    },
+    {
+      "id": "q2-016",
+      "type": "single_choice",
+      "topic": "Web Standards",
+      "subtopic": "W3C",
+      "difficulty": "easy",
+      "questionMd": "What is the primary purpose of the World Wide Web Consortium (W3C)?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "It is a university consortium that funds research into network security protocols"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "It is a company that develops and maintains the Chrome and Firefox web browsers"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "It is a government agency that registers and manages all domain names globally"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "It is the main international standards organization for the World Wide Web"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "W3C develops and maintains Web standards.",
+      "tags": [
+        "w3c",
+        "web",
+        "standards"
+      ],
+      "sourceRefs": [
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Dynamic Web Programming - Emir Quiz 2.json",
+        "incoming-json/Q2-Berhudan.json"
+      ],
+      "mergedFromCount": 3,
       "needs_review": true
     },
     {
-      "id": "q2-015",
+      "id": "q2-017",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Purpose",
+      "difficulty": "easy",
+      "questionMd": "What is the primary purpose of the `fetch()` function in JavaScript?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "To serialize JavaScript objects into JSON strings"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "To load resources asynchronously over a network using a Promise-based approach"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "To synchronously read files from the local file system"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "To parse HTML documents and manipulate the DOM"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "No explanation provided.",
+      "tags": [],
+      "sourceRefs": [
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Dynamic Web Programming - Emir Quiz 2.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "q2-018",
+      "type": "single_choice",
+      "topic": "Web History",
+      "subtopic": "GraphQL",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, which company originally developed and used GraphQL before open-sourcing it?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Netflix"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Facebook"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "GitHub"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Spotify"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "No explanation provided.",
+      "tags": [],
+      "sourceRefs": [
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Dynamic Web Programming - Emir Quiz 2.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "q2-019",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Fetch vs XHR",
+      "difficulty": "medium",
+      "questionMd": "How does the lecture describe XMLHttpRequest (XHR) compared to the Fetch API?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Simpler but less flexible"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "More secure and widely supported"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Faster and more reliable"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Clunky and harder to use"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "No explanation provided.",
+      "tags": [],
+      "sourceRefs": [
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Dynamic Web Programming - Emir Quiz 2.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "q2-020",
       "type": "single_choice",
       "topic": "Course Structure",
       "subtopic": "Evaluation",
@@ -746,14 +924,14 @@
       "explanationMd": "No explanation provided.",
       "tags": [],
       "sourceRefs": [
-        "dwp_quiz2_merged.json",
-        "Dynamic Web Programming - Emir Quiz 2.json"
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Dynamic Web Programming - Emir Quiz 2.json"
       ],
       "mergedFromCount": 2,
       "needs_review": false
     },
     {
-      "id": "q2-016",
+      "id": "q2-021",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Classes",
@@ -791,15 +969,183 @@
         "this"
       ],
       "sourceRefs": [
-        "dwp_quiz2_merged.json",
-        "dwp_quiz3_merged.json",
-        "Dynamic Web Programming - Emir Quiz 2.json"
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Dynamic Web Programming - Emir Quiz 2.json"
       ],
-      "mergedFromCount": 3,
+      "mergedFromCount": 2,
       "needs_review": false
     },
     {
-      "id": "q2-017",
+      "id": "q2-022",
+      "type": "single_choice",
+      "topic": "History",
+      "subtopic": "JSON",
+      "difficulty": "easy",
+      "questionMd": "Who created JSON according to the lecture?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Douglas Crockford"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Ryan Dahl"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Tim Berners-Lee"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Brendan Eich"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "No explanation provided.",
+      "tags": [],
+      "sourceRefs": [
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Dynamic Web Programming - Emir Quiz 2.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "q2-023",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "HTTP Methods",
+      "difficulty": "easy",
+      "questionMd": "By default, without any additional options, which HTTP method does the `fetch()` API use when making a request?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "PUT"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "POST"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "DELETE"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "GET"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "No explanation provided.",
+      "tags": [],
+      "sourceRefs": [
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Dynamic Web Programming - Emir Quiz 2.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "q2-024",
+      "type": "single_choice",
+      "topic": "Fetch API",
+      "subtopic": "Purpose",
+      "difficulty": "easy",
+      "questionMd": "What is the primary purpose of the Fetch API in a web browser?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "To manipulate the DOM after a page has loaded"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "To serialize JavaScript objects into strings"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "To load external resources such as text and JSON asynchronously"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "To define callback functions for user interface events"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "No explanation provided.",
+      "tags": [],
+      "sourceRefs": [
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Dynamic Web Programming - Emir Quiz 2.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "q2-025",
+      "type": "single_choice",
+      "topic": "Web Development",
+      "subtopic": "Frontend",
+      "difficulty": "easy",
+      "questionMd": "Which set of programming languages is associated with front-end web development?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "SQL, XML, and SGML"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "HTML, CSS, and JavaScript"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Node.js, PHP, and Go"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Python, Java, and Ruby"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "The core front-end trio is HTML, CSS, and JavaScript.",
+      "tags": [
+        "frontend",
+        "html",
+        "css",
+        "javascript"
+      ],
+      "sourceRefs": [
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Dynamic Web Programming - Emir Quiz 2.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "q2-026",
       "type": "single_choice",
       "topic": "Promises",
       "subtopic": "Chaining",
@@ -833,16 +1179,14 @@
       "explanationMd": "No explanation provided.",
       "tags": [],
       "sourceRefs": [
-        "dwp_quiz2_merged.json",
-        "Q4-Web2.json",
-        "Dynamic Web Programming - Emir Quiz 2.json",
-        "Dynamic Web Programming - Quiz 4 Sema.json"
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Dynamic Web Programming - Emir Quiz 2.json"
       ],
-      "mergedFromCount": 4,
+      "mergedFromCount": 2,
       "needs_review": false
     },
     {
-      "id": "q2-018",
+      "id": "q2-027",
       "type": "single_choice",
       "topic": "Fetch API",
       "subtopic": "XHR",
@@ -879,18 +1223,14 @@
         "xhr"
       ],
       "sourceRefs": [
-        "dwp_quiz2_merged.json",
-        "dwp_quiz3_merged.json",
-        "Q3-Web2.json",
-        "Dynamic Web Programming - Quiz 3 Sema.json",
-        "Dynamic Web Programming - Quiz 3.json",
-        "Dynamic Web Programming - Emir Quiz 2.json"
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Dynamic Web Programming - Emir Quiz 2.json"
       ],
-      "mergedFromCount": 6,
+      "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q2-019",
+      "id": "q2-028",
       "type": "single_choice",
       "topic": "Promises",
       "subtopic": "then",
@@ -928,14 +1268,96 @@
         "javascript"
       ],
       "sourceRefs": [
-        "dwp_quiz2_merged.json",
-        "Dynamic Web Programming - Emir Quiz 2.json"
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Dynamic Web Programming - Emir Quiz 2.json"
       ],
       "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q2-020",
+      "id": "q2-029",
+      "type": "single_choice",
+      "topic": "HTTP",
+      "subtopic": "Status Codes",
+      "difficulty": "easy",
+      "questionMd": "In HTTP communication, what does a status code in the 200 range generally indicate?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The request was successful"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The client must authenticate before proceeding"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The server encountered an internal error"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The resource was not found"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "No explanation provided.",
+      "tags": [],
+      "sourceRefs": [
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Dynamic Web Programming - Emir Quiz 2.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "q2-030",
+      "type": "single_choice",
+      "topic": "Data Formats",
+      "subtopic": "JSON",
+      "difficulty": "easy",
+      "questionMd": "Why is storing data as JSON preferable to storing it as plain text when using `fetch()`?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "JSON files load faster because they are compressed by the browser"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "JSON eliminates the need to manually parse field separators when deserializing structured data"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Plain text requires XMLHttpRequest while JSON works with fetch"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "JSON is the only format the Fetch API is able to read"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "No explanation provided.",
+      "tags": [],
+      "sourceRefs": [
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Dynamic Web Programming - Emir Quiz 2.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "q2-031",
       "type": "single_choice",
       "topic": "Fetch API",
       "subtopic": "JSON Parsing",
@@ -973,15 +1395,57 @@
         "json"
       ],
       "sourceRefs": [
-        "dwp_quiz2_merged.json",
-        "dwp_quiz3_merged.json",
-        "Dynamic Web Programming - Emir Quiz 3.json"
+        "incomingv2-json/dwp_quiz2_merged.json"
       ],
-      "mergedFromCount": 3,
-      "needs_review": true
+      "mergedFromCount": 1,
+      "needs_review": false
     },
     {
-      "id": "q2-021",
+      "id": "q2-032",
+      "type": "single_choice",
+      "topic": "Networking",
+      "subtopic": "Internet History",
+      "difficulty": "easy",
+      "questionMd": "The Internet was originally developed in 1969 by which organization to connect computers at research facilities and universities?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Transmission Control Protocol Institute (TCPI)"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "European Organization for Nuclear Research (CERN)"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Defense Advanced Research Projects Agency (DARPA)"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "World Wide Web Consortium (W3C)"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "ARPANET, the precursor to the Internet, was funded by DARPA.",
+      "tags": [
+        "internet",
+        "history",
+        "darpa"
+      ],
+      "sourceRefs": [
+        "incomingv2-json/dwp_quiz2_merged.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q2-033",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Refactoring",
@@ -1019,16 +1483,13 @@
         "javascript"
       ],
       "sourceRefs": [
-        "dwp_quiz2_merged.json",
-        "dwp_quiz4_merged.json",
-        "Q4-Web2.json",
-        "Dynamic Web Programming - Quiz 4 Sema.json"
+        "incomingv2-json/dwp_quiz2_merged.json"
       ],
-      "mergedFromCount": 4,
-      "needs_review": true
+      "mergedFromCount": 1,
+      "needs_review": false
     },
     {
-      "id": "q2-022",
+      "id": "q2-034",
       "type": "single_choice",
       "topic": "Promises",
       "subtopic": "then",
@@ -1065,15 +1526,13 @@
         "then"
       ],
       "sourceRefs": [
-        "dwp_quiz2_merged.json",
-        "dwp_quiz3_merged.json",
-        "dwp_quiz4_merged.json"
+        "incomingv2-json/dwp_quiz2_merged.json"
       ],
-      "mergedFromCount": 3,
+      "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q2-023",
+      "id": "q2-035",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "String Methods",
@@ -1111,15 +1570,13 @@
         "split"
       ],
       "sourceRefs": [
-        "dwp_quiz2_merged.json",
-        "dwp_quiz3_merged.json",
-        "Dynamic Web Programming - Emir Quiz 3.json"
+        "incomingv2-json/dwp_quiz2_merged.json"
       ],
-      "mergedFromCount": 3,
-      "needs_review": true
+      "mergedFromCount": 1,
+      "needs_review": false
     },
     {
-      "id": "q2-024",
+      "id": "q2-036",
       "type": "single_choice",
       "topic": "Fetch API",
       "subtopic": "Overview",
@@ -1156,17 +1613,57 @@
         "api"
       ],
       "sourceRefs": [
-        "dwp_quiz2_merged.json",
-        "Q3-Berhudan.json",
-        "dwp_quiz3_merged.json",
-        "Dynamic Web Programming - Quiz 3.json",
-        "Dynamic Web Programming - Emir Quiz 3.json"
+        "incomingv2-json/dwp_quiz2_merged.json"
       ],
-      "mergedFromCount": 5,
-      "needs_review": true
+      "mergedFromCount": 1,
+      "needs_review": false
     },
     {
-      "id": "q2-025",
+      "id": "q2-037",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Classes",
+      "difficulty": "easy",
+      "questionMd": "How are public fields defined on a class instance in ES6?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "By assigning `this.fieldname = value` inside the constructor or a method"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "By listing them as parameters in the class declaration line"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "By declaring them with the `public` keyword before the constructor"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "By using the `var` keyword at the top of the class body"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "JavaScript class instances commonly receive public fields through assignment to `this`.",
+      "tags": [
+        "javascript",
+        "classes",
+        "this"
+      ],
+      "sourceRefs": [
+        "incomingv2-json/dwp_quiz2_merged.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q2-038",
       "type": "single_choice",
       "topic": "Promises",
       "subtopic": "Definition",
@@ -1203,16 +1700,56 @@
         "asynchronous"
       ],
       "sourceRefs": [
-        "dwp_quiz2_merged.json",
-        "dwp_quiz4_merged.json",
-        "Q4-Web2.json",
-        "Dynamic Web Programming - Quiz 4 Sema.json"
+        "incomingv2-json/dwp_quiz2_merged.json"
       ],
-      "mergedFromCount": 4,
-      "needs_review": true
+      "mergedFromCount": 1,
+      "needs_review": false
     },
     {
-      "id": "q2-026",
+      "id": "q2-039",
+      "type": "single_choice",
+      "topic": "HTTP",
+      "subtopic": "Ports",
+      "difficulty": "easy",
+      "questionMd": "On which TCP port does an HTTP server listen by default?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "25"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "161"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "53"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "80"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "The default port for HTTP is 80.",
+      "tags": [
+        "http",
+        "port"
+      ],
+      "sourceRefs": [
+        "incomingv2-json/dwp_quiz2_merged.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q2-040",
       "type": "single_choice",
       "topic": "DOM",
       "subtopic": "Images",
@@ -1250,14 +1787,13 @@
         "appendChild"
       ],
       "sourceRefs": [
-        "dwp_quiz2_merged.json",
-        "Dynamic Web Programming - Quiz 3.json"
+        "incomingv2-json/dwp_quiz2_merged.json"
       ],
-      "mergedFromCount": 2,
-      "needs_review": true
+      "mergedFromCount": 1,
+      "needs_review": false
     },
     {
-      "id": "q2-027",
+      "id": "q2-041",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Functions as Objects",
@@ -1295,13 +1831,13 @@
         "call"
       ],
       "sourceRefs": [
-        "dwp_quiz2_merged.json"
+        "incomingv2-json/dwp_quiz2_merged.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q2-028",
+      "id": "q2-042",
       "type": "single_choice",
       "topic": "Fetch API",
       "subtopic": "response.text",
@@ -1339,16 +1875,58 @@
         "promise"
       ],
       "sourceRefs": [
-        "dwp_quiz2_merged.json",
-        "dwp_quiz3_merged.json",
-        "dwp_quiz4_merged.json",
-        "Dynamic Web Programming - Emir Quiz 3.json"
+        "incomingv2-json/dwp_quiz2_merged.json"
       ],
-      "mergedFromCount": 4,
+      "mergedFromCount": 1,
       "needs_review": true
     },
     {
-      "id": "q2-029",
+      "id": "q2-043",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "bind",
+      "difficulty": "easy",
+      "questionMd": "What problem does calling `this.methodName = this.methodName.bind(this)` in a constructor solve?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "It ensures `this` always refers to the class instance when the method is used as an event handler"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "It copies the method's code into the HTML element for faster execution"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "It registers the method as a global function accessible from any scope"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "It prevents the method from being called more than once per event"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Binding fixes the value of `this` so the method still refers to the instance when passed around.",
+      "tags": [
+        "javascript",
+        "bind",
+        "this"
+      ],
+      "sourceRefs": [
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Dynamic Web Programming - Quiz 2.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "q2-044",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Callbacks",
@@ -1386,19 +1964,104 @@
         "events"
       ],
       "sourceRefs": [
-        "dwp_quiz2_merged.json",
-        "dwp_quiz3_merged.json",
-        "dwp_quiz4_merged.json",
-        "Q4-Web2.json",
-        "Dynamic Web Programming - Emir Quiz 4.json",
-        "Dynamic Web Programming - Quiz 4 Sema.json",
-        "Dynamic Web Programming - Quiz 2.json"
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Dynamic Web Programming - Quiz 2.json"
       ],
-      "mergedFromCount": 7,
+      "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q2-030",
+      "id": "q2-045",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Classes",
+      "difficulty": "easy",
+      "questionMd": "When defining methods inside an ES6 class body, which keyword must you omit?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "class"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "function"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "const"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "return"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Method definitions in class bodies omit the `function` keyword.",
+      "tags": [
+        "javascript",
+        "classes",
+        "syntax"
+      ],
+      "sourceRefs": [
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Dynamic Web Programming - Quiz 2.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "q2-046",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "CustomEvent",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture, what is an important limitation of the CustomEvent API in JavaScript?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "CustomEvents are not supported in any browser that uses the V8 engine"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "CustomEvents can only be dispatched and listened to on HTML elements, not on arbitrary class instances"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "CustomEvents can only be created inside ES6 class constructors"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "CustomEvents cannot carry any additional data in their event object"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "DOM custom events are dispatched/listened to through event targets such as DOM nodes, not plain class instances by default.",
+      "tags": [
+        "customEvent",
+        "dom",
+        "events"
+      ],
+      "sourceRefs": [
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Dynamic Web Programming - Quiz 2.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": false
+    },
+    {
+      "id": "q2-047",
       "type": "single_choice",
       "topic": "Data Serialization",
       "subtopic": "serialize",
@@ -1435,16 +2098,14 @@
         "json"
       ],
       "sourceRefs": [
-        "dwp_quiz2_merged.json",
-        "Dynamic Web Programming - Quiz 2.json",
-        "dwp_quiz3_merged.json",
-        "dwp_quiz4_merged.json"
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Dynamic Web Programming - Quiz 2.json"
       ],
-      "mergedFromCount": 4,
-      "needs_review": true
+      "mergedFromCount": 2,
+      "needs_review": false
     },
     {
-      "id": "q2-031",
+      "id": "q2-048",
       "type": "single_choice",
       "topic": "Promises",
       "subtopic": "Chaining",
@@ -1482,18 +2143,58 @@
         "response.text"
       ],
       "sourceRefs": [
-        "dwp_quiz2_merged.json",
-        "dwp_quiz3_merged.json",
-        "Q3-Web2.json",
-        "Dynamic Web Programming - Quiz 3 Sema.json",
-        "Dynamic Web Programming - Quiz 2.json",
-        "Dynamic Web Programming - Quiz 3.json"
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Dynamic Web Programming - Quiz 2.json"
       ],
-      "mergedFromCount": 6,
+      "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q2-032",
+      "id": "q2-049",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "First-class Functions",
+      "difficulty": "easy",
+      "questionMd": "Which of the following is a characteristic of first-class functions in JavaScript?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Functions must always be declared before the class definition"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Functions cannot be stored in variables or object properties"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Functions require the `function` keyword and cannot use arrow syntax"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Functions can be passed as parameters to other functions"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "First-class functions can be stored, passed, and returned like other values.",
+      "tags": [
+        "functions",
+        "javascript"
+      ],
+      "sourceRefs": [
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Dynamic Web Programming - Quiz 2.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "q2-050",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "bind",
@@ -1531,14 +2232,14 @@
         "callbacks"
       ],
       "sourceRefs": [
-        "dwp_quiz2_merged.json",
-        "Dynamic Web Programming - Quiz 2.json"
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Dynamic Web Programming - Quiz 2.json"
       ],
       "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q2-033",
+      "id": "q2-051",
       "type": "single_choice",
       "topic": "Fetch API",
       "subtopic": "then syntax",
@@ -1576,17 +2277,14 @@
         "then"
       ],
       "sourceRefs": [
-        "dwp_quiz2_merged.json",
-        "dwp_quiz3_merged.json",
-        "Q3-Web2.json",
-        "Dynamic Web Programming - Quiz 2.json",
-        "Dynamic Web Programming - Quiz 3 Sema.json"
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Dynamic Web Programming - Quiz 2.json"
       ],
-      "mergedFromCount": 5,
-      "needs_review": true
+      "mergedFromCount": 2,
+      "needs_review": false
     },
     {
-      "id": "q2-034",
+      "id": "q2-052",
       "type": "single_choice",
       "topic": "JSON",
       "subtopic": "Property Access",
@@ -1624,15 +2322,58 @@
         "arrays"
       ],
       "sourceRefs": [
-        "dwp_quiz2_merged.json",
-        "dwp_quiz3_merged.json",
-        "dwp_quiz4_merged.json"
+        "incomingv2-json/dwp_quiz2_merged.json"
       ],
-      "mergedFromCount": 3,
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q2-053",
+      "type": "single_choice",
+      "topic": "Web Standards",
+      "subtopic": "SGML",
+      "difficulty": "medium",
+      "questionMd": "What is the role of SGML (Standard Generalized Markup Language) in relation to HTML?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "SGML is a standard for specifying markup languages and was used by Tim Berners-Lee to create the HTML specification"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "SGML is a stylesheet language used to define the visual presentation of XML documents"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "SGML is a transport protocol that HTTP was built upon"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "SGML is a scripting language that adds interactivity to static HTML pages"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "HTML was historically defined as an SGML application.",
+      "tags": [
+        "sgml",
+        "html",
+        "history"
+      ],
+      "sourceRefs": [
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Dynamic Web Programming - Quiz 2.json"
+      ],
+      "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q2-035",
+      "id": "q2-054",
       "type": "single_choice",
       "topic": "Development",
       "subtopic": "Local Server",
@@ -1670,19 +2411,14 @@
         "development"
       ],
       "sourceRefs": [
-        "dwp_quiz2_merged.json",
-        "dwp_quiz3_merged.json",
-        "dwp_quiz4_merged.json",
-        "Q4-Web2.json",
-        "Dynamic Web Programming - Quiz 4 Sema.json",
-        "Q4-Berhudan.json",
-        "Dynamic Web Programming - Quiz 2.json"
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Dynamic Web Programming - Quiz 2.json"
       ],
-      "mergedFromCount": 7,
+      "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q2-036",
+      "id": "q2-055",
       "type": "single_choice",
       "topic": "Web Development",
       "subtopic": "Frameworks",
@@ -1719,14 +2455,57 @@
         "architecture"
       ],
       "sourceRefs": [
-        "dwp_quiz2_merged.json",
-        "Dynamic Web Programming - Quiz 2.json"
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Dynamic Web Programming - Quiz 2.json"
       ],
       "mergedFromCount": 2,
       "needs_review": false
     },
     {
-      "id": "q2-037",
+      "id": "q2-056",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Closures",
+      "difficulty": "easy",
+      "questionMd": "In JavaScript, what is a closure?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A function declared inside another function that retains access to the outer function's variables"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "A method that prevents other code from modifying an object's properties"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "A special syntax for defining private class fields in ES6"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "A technique for combining multiple event listeners into a single handler"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "A closure is a function plus the lexical environment it closes over.",
+      "tags": [
+        "javascript",
+        "closure"
+      ],
+      "sourceRefs": [
+        "incomingv2-json/dwp_quiz2_merged.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q2-057",
       "type": "single_choice",
       "topic": "Networking",
       "subtopic": "IP",
@@ -1764,14 +2543,13 @@
         "tcp-ip"
       ],
       "sourceRefs": [
-        "dwp_quiz2_merged.json",
-        "dwp_quiz3_merged.json"
+        "incomingv2-json/dwp_quiz2_merged.json"
       ],
-      "mergedFromCount": 2,
+      "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q2-038",
+      "id": "q2-058",
       "type": "single_choice",
       "topic": "HTTP",
       "subtopic": "MIME Types",
@@ -1809,14 +2587,13 @@
         "html"
       ],
       "sourceRefs": [
-        "dwp_quiz2_merged.json",
-        "dwp_quiz3_merged.json"
+        "incomingv2-json/dwp_quiz2_merged.json"
       ],
-      "mergedFromCount": 2,
+      "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q2-039",
+      "id": "q2-059",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Callbacks",
@@ -1853,14 +2630,13 @@
         "async"
       ],
       "sourceRefs": [
-        "dwp_quiz2_merged.json",
-        "dwp_quiz3_merged.json"
+        "incomingv2-json/dwp_quiz2_merged.json"
       ],
-      "mergedFromCount": 2,
+      "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q2-040",
+      "id": "q2-060",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Array Methods",
@@ -1898,14 +2674,13 @@
         "findIndex"
       ],
       "sourceRefs": [
-        "dwp_quiz2_merged.json",
-        "dwp_quiz3_merged.json"
+        "incomingv2-json/dwp_quiz2_merged.json"
       ],
-      "mergedFromCount": 2,
-      "needs_review": true
+      "mergedFromCount": 1,
+      "needs_review": false
     },
     {
-      "id": "q2-041",
+      "id": "q2-061",
       "type": "single_choice",
       "topic": "JSON",
       "subtopic": "Data Access",
@@ -1939,13 +2714,13 @@
       "explanationMd": "No explanation provided.",
       "tags": [],
       "sourceRefs": [
-        "Dynamic Web Programming - Quiz 2.json"
+        "incoming-json/Dynamic Web Programming - Quiz 2.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q2-042",
+      "id": "q2-062",
       "type": "single_choice",
       "topic": "Fetch API",
       "subtopic": "Response Handling",
@@ -1983,13 +2758,13 @@
         "javascript"
       ],
       "sourceRefs": [
-        "Q2-Berhudan.json"
+        "incoming-json/Q2-Berhudan.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q2-043",
+      "id": "q2-063",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Variables",
@@ -2027,13 +2802,13 @@
         "const"
       ],
       "sourceRefs": [
-        "Q2-Berhudan.json"
+        "incoming-json/Q2-Berhudan.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q2-044",
+      "id": "q2-064",
       "type": "single_choice",
       "topic": "Networking",
       "subtopic": "Protocols",
@@ -2071,13 +2846,13 @@
         "protocols"
       ],
       "sourceRefs": [
-        "Q2-Berhudan.json"
+        "incoming-json/Q2-Berhudan.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q2-045",
+      "id": "q2-065",
       "type": "single_choice",
       "topic": "Architecture",
       "subtopic": "Dependencies",
@@ -2115,13 +2890,13 @@
         "oop"
       ],
       "sourceRefs": [
-        "Q2-Berhudan.json"
+        "incoming-json/Q2-Berhudan.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q2-046",
+      "id": "q2-066",
       "type": "single_choice",
       "topic": "Promises",
       "subtopic": "States",
@@ -2158,13 +2933,13 @@
         "promise"
       ],
       "sourceRefs": [
-        "Q2-Berhudan.json"
+        "incoming-json/Q2-Berhudan.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q2-047",
+      "id": "q2-067",
       "type": "single_choice",
       "topic": "Node.js",
       "subtopic": "Core Modules",
@@ -2202,13 +2977,13 @@
         "server"
       ],
       "sourceRefs": [
-        "Q2-Berhudan.json"
+        "incoming-json/Q2-Berhudan.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q2-048",
+      "id": "q2-068",
       "type": "single_choice",
       "topic": "Fetch API",
       "subtopic": "Structure",
@@ -2245,13 +3020,13 @@
         "javascript"
       ],
       "sourceRefs": [
-        "Q2-Berhudan.json"
+        "incoming-json/Q2-Berhudan.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q2-049",
+      "id": "q2-069",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Classes",
@@ -2289,13 +3064,13 @@
         "static"
       ],
       "sourceRefs": [
-        "Q2-Berhudan.json"
+        "incoming-json/Q2-Berhudan.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q2-050",
+      "id": "q2-070",
       "type": "single_choice",
       "topic": "Web APIs",
       "subtopic": "Fetch vs XHR",
@@ -2333,13 +3108,13 @@
         "history"
       ],
       "sourceRefs": [
-        "Q2-Berhudan.json"
+        "incoming-json/Q2-Berhudan.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q2-051",
+      "id": "q2-071",
       "type": "single_choice",
       "topic": "HTTP",
       "subtopic": "Methods",
@@ -2377,13 +3152,13 @@
         "safe"
       ],
       "sourceRefs": [
-        "Q2-Berhudan.json"
+        "incoming-json/Q2-Berhudan.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q2-052",
+      "id": "q2-072",
       "type": "single_choice",
       "topic": "DOM Manipulation",
       "subtopic": "Images",
@@ -2420,13 +3195,13 @@
         "dom"
       ],
       "sourceRefs": [
-        "Q2-Berhudan.json"
+        "incoming-json/Q2-Berhudan.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q2-053",
+      "id": "q2-073",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Methods",
@@ -2464,13 +3239,13 @@
         "methods"
       ],
       "sourceRefs": [
-        "Q2-Berhudan.json"
+        "incoming-json/Q2-Berhudan.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q2-054",
+      "id": "q2-074",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Context (this)",
@@ -2509,13 +3284,13 @@
         "this"
       ],
       "sourceRefs": [
-        "Q2-Berhudan.json"
+        "incoming-json/Q2-Berhudan.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q2-055",
+      "id": "q2-075",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Arrow Functions",
@@ -2553,7 +3328,7 @@
         "this"
       ],
       "sourceRefs": [
-        "Q2-Berhudan.json"
+        "incoming-json/Q2-Berhudan.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false

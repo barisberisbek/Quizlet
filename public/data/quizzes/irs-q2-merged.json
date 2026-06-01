@@ -1,8 +1,8 @@
 {
   "meta": {
     "id": "irs-q2-merged",
-    "title": "[IRS] Quiz 2 — Retrieval Models",
-    "description": "Vector space model, BM25, probabilistic models.",
+    "title": "[IRS] Quiz 2 — Text Processing & Indexing",
+    "description": "Stemming, lemmatization, index compression, and text preprocessing.",
     "source": "IRS Past Exams",
     "course": "Information Retrieval Systems",
     "topic": "Index Compression",
@@ -16,9 +16,9 @@
       "Text Preprocessing",
       "Text Statistics"
     ],
-    "questionCount": 38,
-    "difficulty": "medium",
-    "estimatedMinutes": 57,
+    "questionCount": 40,
+    "difficulty": "easy",
+    "estimatedMinutes": 60,
     "tags": [
       "irs",
       "q2",
@@ -28,53 +28,7 @@
   },
   "questions": [
     {
-      "id": "q2-irs-001",
-      "type": "single_choice",
-      "topic": "Text Preprocessing",
-      "subtopic": "Tokenization",
-      "difficulty": "easy",
-      "questionMd": "Which of the following best explains why simple whitespace tokenization is insufficient for production search systems?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "It fails to handle contractions, possessives, URLs, and hyphenated expressions correctly"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "It requires an external dictionary to identify valid word boundaries"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "It always produces more tokens than a regex-based tokenizer would for the same input"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "It is too slow for large corpora because it scans the entire text character by character"
-        }
-      ],
-      "correctAnswer": [
-        "a"
-      ],
-      "explanationMd": "Whitespace tokenization only splits on spaces. That makes it unreliable for real text containing contractions, possessives, URLs, punctuation, and hyphenated expressions. Production search needs more robust tokenization rules.",
-      "tags": [
-        "tokenization",
-        "whitespace tokenizer",
-        "preprocessing"
-      ],
-      "sourceRefs": [
-        "Q2-v2.json",
-        "new-mix.json",
-        "Q2.json"
-      ],
-      "mergedFromCount": 3,
-      "needs_review": true
-    },
-    {
-      "id": "q2-irs-002",
+      "id": "irs-q2-001",
       "type": "single_choice",
       "topic": "Index Compression",
       "subtopic": "Gap Encoding",
@@ -112,14 +66,13 @@
         "compression"
       ],
       "sourceRefs": [
-        "Q2-v2.json",
-        "new-mix.json"
+        "incoming-retrieval-json/Q2-v2.json"
       ],
-      "mergedFromCount": 2,
-      "needs_review": true
+      "mergedFromCount": 1,
+      "needs_review": false
     },
     {
-      "id": "q2-irs-003",
+      "id": "irs-q2-002",
       "type": "single_choice",
       "topic": "Text Preprocessing",
       "subtopic": "Lemmatization",
@@ -157,15 +110,147 @@
         "normalization"
       ],
       "sourceRefs": [
-        "Q2-v2.json",
-        "new-mix.json",
-        "Q2.json"
+        "incoming-retrieval-json/Q2-v2.json",
+        "incoming-retrieval-json/Q2.json"
       ],
-      "mergedFromCount": 3,
+      "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q2-irs-004",
+      "id": "irs-q2-003",
+      "type": "single_choice",
+      "topic": "Text Preprocessing",
+      "subtopic": "Stemming Errors",
+      "difficulty": "medium",
+      "questionMd": "After applying the full preprocessing pipeline (`tokenize → lowercase → stopword removal → Porter stemming`) to the input \"The astronauts ORBITING the International Space Station\", which term in the output best illustrates a known over-stemming problem?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "\"astronaut\" produced from \"astronauts\""
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "\"station\" produced from \"Station\""
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "\"space\" produced from \"Space\""
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "\"intern\" produced from \"International\""
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Producing **`intern`** from **`International`** is a classic over-stemming example. The stemmer removes too much of the word and collapses it into a form that no longer preserves the intended meaning.",
+      "tags": [
+        "porter stemmer",
+        "overstemming",
+        "preprocessing"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q2-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q2-004",
+      "type": "single_choice",
+      "topic": "Indexing",
+      "subtopic": "Term Definition",
+      "difficulty": "easy",
+      "questionMd": "A term is best defined as which of the following in the context of information retrieval indexing?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Any single occurrence of a word anywhere in a document collection"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "A token produced by splitting raw text on whitespace boundaries"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "A unique word form in the vocabulary before any normalization is applied"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "A normalized type that survives all preprocessing steps and enters the inverted index"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "In IR indexing, a **term** is the normalized form that remains after preprocessing such as case folding, stopword removal, stemming, or lemmatization, and is the form that is actually inserted into the inverted index.",
+      "tags": [
+        "term",
+        "indexing",
+        "preprocessing"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q2-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q2-005",
+      "type": "single_choice",
+      "topic": "Text Preprocessing",
+      "subtopic": "Stopword Removal",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, which scenario represents a case where stopword removal should **NOT** be applied?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Indexing a large corpus of general news articles"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "A keyword query for a common technical term like \"network\""
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "A phrase query such as \"to be or not to be\""
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Preprocessing queries submitted to a web-scale search engine"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "In phrase queries, even common function words may be essential to meaning. Removing stopwords from **`to be or not to be`** destroys the structure and meaning of the query, so stopword removal should not be applied here.",
+      "tags": [
+        "stopwords",
+        "phrase query",
+        "preprocessing"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q2-v2.json",
+        "incoming-retrieval-json/Q2.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "irs-q2-006",
       "type": "single_choice",
       "topic": "Text Preprocessing",
       "subtopic": "WordNet Lemmatizer",
@@ -204,198 +289,14 @@
         "nltk"
       ],
       "sourceRefs": [
-        "Q2-v2.json",
-        "new-mix.json",
-        "Q2.json"
-      ],
-      "mergedFromCount": 3,
-      "needs_review": true
-    },
-    {
-      "id": "q2-irs-005",
-      "type": "single_choice",
-      "topic": "Text Preprocessing",
-      "subtopic": "Stemming",
-      "difficulty": "easy",
-      "questionMd": "Which stemmer described in the lectures is characterized as the most aggressive, producing the smallest vocabulary but the highest over-stemming error rate?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "Lancaster"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "Porter"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "Snowball"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "WordNet lemmatizer"
-        }
-      ],
-      "correctAnswer": [
-        "a"
-      ],
-      "explanationMd": "The **Lancaster** stemmer is the most aggressive among the listed options. It reduces words strongly, which can shrink vocabulary substantially, but that comes with a higher risk of **over-stemming**.",
-      "tags": [
-        "stemming",
-        "lancaster",
-        "overstemming"
-      ],
-      "sourceRefs": [
-        "Q2-v2.json",
-        "new-mix.json",
-        "Q2.json"
-      ],
-      "mergedFromCount": 3,
-      "needs_review": true
-    },
-    {
-      "id": "q2-irs-006",
-      "type": "single_choice",
-      "topic": "Statistical Properties of Text",
-      "subtopic": "Heaps' Law",
-      "difficulty": "medium",
-      "questionMd": "Heap's Law states that vocabulary grows sub-linearly with corpus size. Which of the following engineering decisions is most directly motivated by this property?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "Stopword removal can be skipped because rare terms never appear in large corpora"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "Indexing systems must support incremental updates because new terms keep arriving even as growth slows"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "The entire index can be built in a single pass because vocabulary size is bounded"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "Compression is unnecessary because sub-linear growth keeps the index small"
-        }
-      ],
-      "correctAnswer": [
-        "b"
-      ],
-      "explanationMd": "Heaps' Law says vocabulary growth slows as the corpus grows, but it **does not stop**. New terms continue to appear, so real indexing systems need to support **incremental updates**.",
-      "tags": [
-        "heaps law",
-        "vocabulary growth",
-        "incremental indexing"
-      ],
-      "sourceRefs": [
-        "Q2-v2.json",
-        "new-mix.json",
-        "Q2.json"
-      ],
-      "mergedFromCount": 3,
-      "needs_review": true
-    },
-    {
-      "id": "q2-irs-007",
-      "type": "single_choice",
-      "topic": "Indexing",
-      "subtopic": "Term Definition",
-      "difficulty": "easy",
-      "questionMd": "A term is best defined as which of the following in the context of information retrieval indexing?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "Any single occurrence of a word anywhere in a document collection"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "A token produced by splitting raw text on whitespace boundaries"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "A unique word form in the vocabulary before any normalization is applied"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "A normalized type that survives all preprocessing steps and enters the inverted index"
-        }
-      ],
-      "correctAnswer": [
-        "d"
-      ],
-      "explanationMd": "In IR indexing, a **term** is the normalized form that remains after preprocessing such as case folding, stopword removal, stemming, or lemmatization, and is the form that is actually inserted into the inverted index.",
-      "tags": [
-        "term",
-        "indexing",
-        "preprocessing"
-      ],
-      "sourceRefs": [
-        "Q2-v2.json",
-        "new-mix.json"
+        "incoming-retrieval-json/Q2-v2.json",
+        "incoming-retrieval-json/Q2.json"
       ],
       "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q2-irs-008",
-      "type": "single_choice",
-      "topic": "Text Preprocessing",
-      "subtopic": "Stopword Removal",
-      "difficulty": "easy",
-      "questionMd": "According to the lecture, which scenario represents a case where stopword removal should **NOT** be applied?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "Indexing a large corpus of general news articles"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "A keyword query for a common technical term like \"network\""
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "A phrase query such as \"to be or not to be\""
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "Preprocessing queries submitted to a web-scale search engine"
-        }
-      ],
-      "correctAnswer": [
-        "c"
-      ],
-      "explanationMd": "In phrase queries, even common function words may be essential to meaning. Removing stopwords from **`to be or not to be`** destroys the structure and meaning of the query, so stopword removal should not be applied here.",
-      "tags": [
-        "stopwords",
-        "phrase query",
-        "preprocessing"
-      ],
-      "sourceRefs": [
-        "Q2-v2.json",
-        "new-mix.json",
-        "Q2.json"
-      ],
-      "mergedFromCount": 3,
-      "needs_review": true
-    },
-    {
-      "id": "q2-irs-009",
+      "id": "irs-q2-007",
       "type": "single_choice",
       "topic": "Text Preprocessing",
       "subtopic": "Lemmatization",
@@ -433,15 +334,59 @@
         "irregular forms"
       ],
       "sourceRefs": [
-        "Q2-v2.json",
-        "new-mix.json",
-        "Q2.json"
+        "incoming-retrieval-json/Q2-v2.json",
+        "incoming-retrieval-json/Q2.json"
       ],
-      "mergedFromCount": 3,
+      "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q2-irs-010",
+      "id": "irs-q2-008",
+      "type": "single_choice",
+      "topic": "Text Preprocessing",
+      "subtopic": "Tokenization",
+      "difficulty": "easy",
+      "questionMd": "Which of the following best explains why simple whitespace tokenization is insufficient for production search systems?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "It fails to handle contractions, possessives, URLs, and hyphenated expressions correctly"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "It requires an external dictionary to identify valid word boundaries"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "It always produces more tokens than a regex-based tokenizer would for the same input"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "It is too slow for large corpora because it scans the entire text character by character"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Whitespace tokenization only splits on spaces. That makes it unreliable for real text containing contractions, possessives, URLs, punctuation, and hyphenated expressions. Production search needs more robust tokenization rules.",
+      "tags": [
+        "tokenization",
+        "whitespace tokenizer",
+        "preprocessing"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q2-v2.json",
+        "incoming-retrieval-json/Q2.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "irs-q2-009",
       "type": "single_choice",
       "topic": "Indexing",
       "subtopic": "Positional Indexes",
@@ -479,15 +424,14 @@
         "proximity"
       ],
       "sourceRefs": [
-        "Q2-v2.json",
-        "new-mix.json",
-        "Q2.json"
+        "incoming-retrieval-json/Q2-v2.json",
+        "incoming-retrieval-json/Q2.json"
       ],
-      "mergedFromCount": 3,
+      "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q2-irs-011",
+      "id": "irs-q2-010",
       "type": "single_choice",
       "topic": "Text Preprocessing",
       "subtopic": "Tokenization",
@@ -525,15 +469,104 @@
         "whitespace tokenizer"
       ],
       "sourceRefs": [
-        "Q2-v2.json",
-        "new-mix.json",
-        "Q2.json"
+        "incoming-retrieval-json/Q2-v2.json",
+        "incoming-retrieval-json/Q2.json"
       ],
-      "mergedFromCount": 3,
+      "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q2-irs-012",
+      "id": "irs-q2-011",
+      "type": "single_choice",
+      "topic": "Text Preprocessing",
+      "subtopic": "Stemming",
+      "difficulty": "easy",
+      "questionMd": "Which stemmer described in the lectures is characterized as the most aggressive, producing the smallest vocabulary but the highest over-stemming error rate?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Lancaster"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Porter"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Snowball"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "WordNet lemmatizer"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "The **Lancaster** stemmer is the most aggressive among the listed options. It reduces words strongly, which can shrink vocabulary substantially, but that comes with a higher risk of **over-stemming**.",
+      "tags": [
+        "stemming",
+        "lancaster",
+        "overstemming"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q2-v2.json",
+        "incoming-retrieval-json/Q2.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "irs-q2-012",
+      "type": "single_choice",
+      "topic": "Statistical Properties of Text",
+      "subtopic": "Heaps' Law",
+      "difficulty": "medium",
+      "questionMd": "Heap's Law states that vocabulary grows sub-linearly with corpus size. Which of the following engineering decisions is most directly motivated by this property?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Stopword removal can be skipped because rare terms never appear in large corpora"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Indexing systems must support incremental updates because new terms keep arriving even as growth slows"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The entire index can be built in a single pass because vocabulary size is bounded"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Compression is unnecessary because sub-linear growth keeps the index small"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Heaps' Law says vocabulary growth slows as the corpus grows, but it **does not stop**. New terms continue to appear, so real indexing systems need to support **incremental updates**.",
+      "tags": [
+        "heaps law",
+        "vocabulary growth",
+        "incremental indexing"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q2-v2.json",
+        "incoming-retrieval-json/Q2.json"
+      ],
+      "mergedFromCount": 2,
+      "needs_review": true
+    },
+    {
+      "id": "irs-q2-013",
       "type": "single_choice",
       "topic": "Index Construction",
       "subtopic": "BSBI",
@@ -571,15 +604,14 @@
         "index construction"
       ],
       "sourceRefs": [
-        "Q2-v2.json",
-        "new-mix.json",
-        "Q2.json"
+        "incoming-retrieval-json/Q2-v2.json",
+        "incoming-retrieval-json/Q2.json"
       ],
-      "mergedFromCount": 3,
+      "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q2-irs-013",
+      "id": "irs-q2-014",
       "type": "single_choice",
       "topic": "Index Construction",
       "subtopic": "BSBI vs SPIMI",
@@ -618,15 +650,14 @@
         "index construction"
       ],
       "sourceRefs": [
-        "Q2-v2.json",
-        "new-mix.json",
-        "Q2.json"
+        "incoming-retrieval-json/Q2-v2.json",
+        "incoming-retrieval-json/Q2.json"
       ],
-      "mergedFromCount": 3,
+      "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q2-irs-014",
+      "id": "irs-q2-015",
       "type": "single_choice",
       "topic": "Statistical Properties of Text",
       "subtopic": "Heaps' Law",
@@ -664,59 +695,14 @@
         "corpus statistics"
       ],
       "sourceRefs": [
-        "Q2-v2.json",
-        "new-mix.json"
+        "incoming-retrieval-json/Q2-v2.json",
+        "incoming-retrieval-json/Q2.json"
       ],
       "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q2-irs-015",
-      "type": "single_choice",
-      "topic": "Text Preprocessing",
-      "subtopic": "Stemming Errors",
-      "difficulty": "medium",
-      "questionMd": "After applying the full preprocessing pipeline (`tokenize → lowercase → stopword removal → Porter stemming`) to the input \"The astronauts ORBITING the International Space Station\", which term in the output best illustrates a known over-stemming problem?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "\"astronaut\" produced from \"astronauts\""
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "\"station\" produced from \"Station\""
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "\"space\" produced from \"Space\""
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "\"intern\" produced from \"International\""
-        }
-      ],
-      "correctAnswer": [
-        "d"
-      ],
-      "explanationMd": "Producing **`intern`** from **`International`** is a classic over-stemming example. The stemmer removes too much of the word and collapses it into a form that no longer preserves the intended meaning.",
-      "tags": [
-        "porter stemmer",
-        "overstemming",
-        "preprocessing"
-      ],
-      "sourceRefs": [
-        "Q2-v2.json",
-        "new-mix.json"
-      ],
-      "mergedFromCount": 2,
-      "needs_review": true
-    },
-    {
-      "id": "q2-irs-016",
+      "id": "irs-q2-016",
       "type": "single_choice",
       "topic": "Text Preprocessing",
       "subtopic": "Pipeline Order",
@@ -755,14 +741,14 @@
         "stopwords"
       ],
       "sourceRefs": [
-        "Q2-v2.json",
-        "Q2.json"
+        "incoming-retrieval-json/Q2-v2.json",
+        "incoming-retrieval-json/Q2.json"
       ],
       "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q2-irs-017",
+      "id": "irs-q2-017",
       "type": "single_choice",
       "topic": "Index Compression",
       "subtopic": "Variable-Byte Encoding",
@@ -800,14 +786,14 @@
         "gap encoding"
       ],
       "sourceRefs": [
-        "Q2-v2.json",
-        "Q2.json"
+        "incoming-retrieval-json/Q2-v2.json",
+        "incoming-retrieval-json/Q2.json"
       ],
       "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q2-irs-018",
+      "id": "irs-q2-018",
       "type": "single_choice",
       "topic": "Text Preprocessing",
       "subtopic": "Case Folding",
@@ -845,13 +831,13 @@
         "ambiguity"
       ],
       "sourceRefs": [
-        "Q2-v2.json"
+        "incoming-retrieval-json/Q2-v2.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q2-irs-019",
+      "id": "irs-q2-019",
       "type": "single_choice",
       "topic": "Text Preprocessing",
       "subtopic": "Stopword Lists",
@@ -890,14 +876,14 @@
         "preprocessing"
       ],
       "sourceRefs": [
-        "Q2-v2.json",
-        "Q2.json"
+        "incoming-retrieval-json/Q2-v2.json",
+        "incoming-retrieval-json/Q2.json"
       ],
       "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q2-irs-020",
+      "id": "irs-q2-020",
       "type": "single_choice",
       "topic": "Index Compression",
       "subtopic": "Gap + VB Encoding",
@@ -936,14 +922,14 @@
         "document frequency"
       ],
       "sourceRefs": [
-        "Q2-v2.json",
-        "Q2.json"
+        "incoming-retrieval-json/Q2-v2.json",
+        "incoming-retrieval-json/Q2.json"
       ],
       "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q2-irs-021",
+      "id": "irs-q2-021",
       "type": "single_choice",
       "topic": "Search Systems",
       "subtopic": "English Analyzer",
@@ -981,14 +967,14 @@
         "porter stemmer"
       ],
       "sourceRefs": [
-        "Q2-v2.json",
-        "Q2.json"
+        "incoming-retrieval-json/Q2-v2.json",
+        "incoming-retrieval-json/Q2.json"
       ],
       "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q2-irs-022",
+      "id": "irs-q2-022",
       "type": "single_choice",
       "topic": "Index Construction",
       "subtopic": "BSBI vs SPIMI",
@@ -1027,14 +1013,58 @@
         "dictionary"
       ],
       "sourceRefs": [
-        "Q2-v2.json",
-        "Q2.json"
+        "incoming-retrieval-json/Q2-v2.json",
+        "incoming-retrieval-json/Q2.json"
       ],
       "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q2-irs-023",
+      "id": "irs-q2-023",
+      "type": "single_choice",
+      "topic": "Text Preprocessing",
+      "subtopic": "Stopword Removal",
+      "difficulty": "medium",
+      "questionMd": "What practical implication does Zipf's Law have for the design of a stopword list?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Zipf's Law predicts that stopword removal will have no measurable effect on vocabulary size."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The most frequent terms visible at the left of the Zipf curve are low-information words that can safely be removed."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Stopwords should be selected from the rarest terms at the right tail of the Zipf distribution."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Zipf's Law implies that all terms above a fixed frequency threshold carry equal information."
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Zipf's Law states that a few words occur very frequently while most occur rarely. The high-frequency terms at the left side of the Zipf curve are typically function words (e.g., 'the', 'and', 'of') that carry little semantic content. Removing them as stopwords reduces index size without harming retrieval effectiveness.",
+      "tags": [
+        "Zipf's Law",
+        "stopwords",
+        "preprocessing"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q2-024",
       "type": "single_choice",
       "topic": "Index Compression",
       "subtopic": "Variable Byte Encoding",
@@ -1073,13 +1103,13 @@
         "postings list"
       ],
       "sourceRefs": [
-        "Q2.json"
+        "incoming-retrieval-json/Q2.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q2-irs-024",
+      "id": "irs-q2-025",
       "type": "single_choice",
       "topic": "Text Statistics",
       "subtopic": "Zipf's Law",
@@ -1117,13 +1147,13 @@
         "term distribution"
       ],
       "sourceRefs": [
-        "Q2.json"
+        "incoming-retrieval-json/Q2.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q2-irs-025",
+      "id": "irs-q2-026",
       "type": "single_choice",
       "topic": "Stemming and Lemmatization",
       "subtopic": "Porter Stemmer",
@@ -1161,13 +1191,13 @@
         "stemming consistency"
       ],
       "sourceRefs": [
-        "Q2.json"
+        "incoming-retrieval-json/Q2.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q2-irs-026",
+      "id": "irs-q2-027",
       "type": "single_choice",
       "topic": "Index Compression",
       "subtopic": "Compression Ratio",
@@ -1206,13 +1236,13 @@
         "postings list"
       ],
       "sourceRefs": [
-        "Q2.json"
+        "incoming-retrieval-json/Q2.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q2-irs-027",
+      "id": "irs-q2-028",
       "type": "single_choice",
       "topic": "Text Statistics",
       "subtopic": "Heap's Law",
@@ -1250,13 +1280,13 @@
         "text statistics"
       ],
       "sourceRefs": [
-        "Q2.json"
+        "incoming-retrieval-json/Q2.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q2-irs-028",
+      "id": "irs-q2-029",
       "type": "single_choice",
       "topic": "Index Construction",
       "subtopic": "Positional Index",
@@ -1294,13 +1324,13 @@
         "phrase queries"
       ],
       "sourceRefs": [
-        "Q2.json"
+        "incoming-retrieval-json/Q2.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q2-irs-029",
+      "id": "irs-q2-030",
       "type": "single_choice",
       "topic": "Text Preprocessing",
       "subtopic": "Tokenization",
@@ -1338,13 +1368,13 @@
         "vocabulary"
       ],
       "sourceRefs": [
-        "Q2.json"
+        "incoming-retrieval-json/Q2.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q2-irs-030",
+      "id": "irs-q2-031",
       "type": "single_choice",
       "topic": "Text Statistics",
       "subtopic": "Zipf's Law",
@@ -1382,13 +1412,58 @@
         "text statistics"
       ],
       "sourceRefs": [
-        "Q2.json"
+        "incoming-retrieval-json/Q2.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q2-irs-031",
+      "id": "irs-q2-032",
+      "type": "single_choice",
+      "topic": "Text Preprocessing",
+      "subtopic": "Token, Type, Term",
+      "difficulty": "easy",
+      "questionMd": "Which of the following correctly describes the relationship between a token, a type, and a term?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A type is one occurrence in text; a token is a unique word form; a term is produced by tokenization."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "A token and a type are interchangeable; a term is produced only after stopword removal."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "A token is one occurrence in text; a type is a unique word form; a term is a normalized type entering the index."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "A term is one occurrence in text; a token is a unique normalized form; a type is what enters the index."
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "In IR terminology: A **token** is an individual occurrence of a word in the text. A **type** is a distinct word form (unique string). A **term** is a normalized representation of a type after preprocessing (e.g., lowercasing, stemming) that is stored in the index.",
+      "tags": [
+        "token",
+        "type",
+        "term",
+        "vocabulary"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q2-033",
       "type": "single_choice",
       "topic": "Stemming and Lemmatization",
       "subtopic": "Snowball Stemmer",
@@ -1427,13 +1502,13 @@
         "stemming"
       ],
       "sourceRefs": [
-        "Q2.json"
+        "incoming-retrieval-json/Q2.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q2-irs-032",
+      "id": "irs-q2-034",
       "type": "single_choice",
       "topic": "Stemming and Lemmatization",
       "subtopic": "Overstemming Example",
@@ -1471,57 +1546,13 @@
         "precision"
       ],
       "sourceRefs": [
-        "Q2.json"
+        "incoming-retrieval-json/Q2.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q2-irs-033",
-      "type": "single_choice",
-      "topic": "Text Statistics",
-      "subtopic": "Heap's Law Characteristics",
-      "difficulty": "easy",
-      "questionMd": "Heap's Law describes how vocabulary size V grows with the total number of tokens N in a corpus. Which statement correctly characterizes this growth?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "Vocabulary grows sub-linearly and never fully stops growing."
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "Vocabulary growth stops once the corpus exceeds a threshold size."
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "Vocabulary grows linearly, adding a fixed number of new terms per document."
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "Vocabulary grows exponentially in proportion to the square of N."
-        }
-      ],
-      "correctAnswer": [
-        "a"
-      ],
-      "explanationMd": "Heap's Law states V = k N^β with 0 < β < 1 (typically around 0.5). This means vocabulary grows sub-linearly with corpus size and continues to grow, albeit more slowly, as more text is added; new words are always encountered, so vocabulary never reaches a hard limit.",
-      "tags": [
-        "Heap's Law",
-        "vocabulary growth",
-        "text statistics"
-      ],
-      "sourceRefs": [
-        "Q2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "q2-irs-034",
+      "id": "irs-q2-035",
       "type": "single_choice",
       "topic": "Text Preprocessing",
       "subtopic": "Case Folding Issues",
@@ -1559,13 +1590,57 @@
         "ambiguity"
       ],
       "sourceRefs": [
-        "Q2.json"
+        "incoming-retrieval-json/Q2.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q2-irs-035",
+      "id": "irs-q2-036",
+      "type": "single_choice",
+      "topic": "Index Construction",
+      "subtopic": "BSBI Time Complexity",
+      "difficulty": "medium",
+      "questionMd": "What is the time complexity of BSBI expressed in terms of T, the total number of token occurrences in the corpus?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "O(T log N) where N is the number of documents."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "O(T log T) due to the dominant sorting step."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "O(T) because each token is processed exactly once in a single pass."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "O(T²) because every token pair must be compared during the merge phase."
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "BSBI collects termID-docID pairs (T total pairs), sorts each block (O(T log T) dominates the total time), and then merges blocks. The overall complexity is O(T log T) because the sorting step is the most expensive operation.",
+      "tags": [
+        "BSBI",
+        "time complexity",
+        "sorting"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q2-037",
       "type": "single_choice",
       "topic": "Index Compression",
       "subtopic": "VB Continuation Bit",
@@ -1603,13 +1678,13 @@
         "compression"
       ],
       "sourceRefs": [
-        "Q2.json"
+        "incoming-retrieval-json/Q2.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q2-irs-036",
+      "id": "irs-q2-038",
       "type": "single_choice",
       "topic": "Index Compression",
       "subtopic": "Gap Encoding First Entry",
@@ -1647,13 +1722,13 @@
         "postings compression"
       ],
       "sourceRefs": [
-        "Q2.json"
+        "incoming-retrieval-json/Q2.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q2-irs-037",
+      "id": "irs-q2-039",
       "type": "single_choice",
       "topic": "Index Construction",
       "subtopic": "Biword Index Drawback",
@@ -1692,13 +1767,13 @@
         "vocabulary size"
       ],
       "sourceRefs": [
-        "Q2.json"
+        "incoming-retrieval-json/Q2.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q2-irs-038",
+      "id": "irs-q2-040",
       "type": "single_choice",
       "topic": "Stemming and Lemmatization",
       "subtopic": "Overstemming Example (astronaut)",
@@ -1736,7 +1811,7 @@
         "preprocessing"
       ],
       "sourceRefs": [
-        "Q2.json"
+        "incoming-retrieval-json/Q2.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false

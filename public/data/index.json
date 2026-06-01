@@ -1,40 +1,13 @@
 {
   "version": "3.0.0",
-  "lastUpdated": "2026-04-13",
+  "lastUpdated": "2026-06-01",
   "quizzes": [
-    {
-      "id": "old-merged",
-      "title": "Old Exam Examples",
-      "description": "Mixed questions from past DWP exams including true/false, Express, Fetch API, and more.",
-      "source": "DWP Past Exams (Merged)",
-      "topic": "Mixed",
-      "topics": [
-        "APIs",
-        "Express",
-        "Fetch API",
-        "JavaScript",
-        "Node.js",
-        "REST API",
-        "Server-side",
-        "Software",
-        "Web"
-      ],
-      "questionCount": 74,
-      "difficulty": "medium",
-      "estimatedMinutes": 111,
-      "tags": [
-        "old",
-        "merged",
-        "past-exam"
-      ],
-      "fileName": "old-merged.json",
-      "course": "Dynamic Web Programming"
-    },
     {
       "id": "q1-merged",
       "title": "Quiz 1 — Web Fundamentals & JavaScript Basics",
       "description": "Web history, HTML, HTTP, networking, CSS basics, and JavaScript fundamentals.",
       "source": "DWP Past Exams (Merged)",
+      "course": "Dynamic Web Programming",
       "topic": "Web Fundamentals",
       "topics": [
         "CSS",
@@ -50,21 +23,21 @@
         "Web History"
       ],
       "questionCount": 37,
-      "difficulty": "medium",
+      "difficulty": "easy",
       "estimatedMinutes": 56,
       "tags": [
         "q1",
         "merged",
         "past-exam"
       ],
-      "fileName": "q1-merged.json",
-      "course": "Dynamic Web Programming"
+      "fileName": "q1-merged.json"
     },
     {
       "id": "q2-merged",
       "title": "Quiz 2 — DOM, Events & Async JavaScript",
       "description": "DOM manipulation, event handling, async/await, promises, and browser APIs.",
       "source": "DWP Past Exams (Merged)",
+      "course": "Dynamic Web Programming",
       "topic": "DOM & Events",
       "topics": [
         "Architecture",
@@ -76,6 +49,7 @@
         "Development",
         "Fetch API",
         "HTTP",
+        "History",
         "JSON",
         "JavaScript",
         "Networking",
@@ -83,167 +57,123 @@
         "Promises",
         "REST API",
         "Web APIs",
-        "Web Development"
+        "Web Development",
+        "Web History",
+        "Web Standards"
       ],
-      "questionCount": 55,
-      "difficulty": "medium",
-      "estimatedMinutes": 83,
+      "questionCount": 75,
+      "difficulty": "easy",
+      "estimatedMinutes": 113,
       "tags": [
         "q2",
         "merged",
         "past-exam"
       ],
-      "fileName": "q2-merged.json",
-      "course": "Dynamic Web Programming"
+      "fileName": "q2-merged.json"
     },
     {
       "id": "q3-merged",
       "title": "Quiz 3 — Node.js, Express & Server-Side",
       "description": "Node.js runtime, Express middleware, routing, templating, and server-side concepts.",
       "source": "DWP Past Exams (Merged)",
+      "course": "Dynamic Web Programming",
       "topic": "Node.js & Express",
       "topics": [
+        "Architecture",
+        "Asynchronous JavaScript",
+        "DOM Manipulation",
         "Data Formats",
+        "Data Serialization",
         "Development",
         "Development Environment",
         "Fetch API",
         "HTTP",
         "JSON",
         "JavaScript",
+        "Networking",
         "Promises",
+        "REST API",
         "Software Engineering",
         "Web APIs",
+        "Web Concepts",
         "Web History"
       ],
-      "questionCount": 30,
-      "difficulty": "medium",
-      "estimatedMinutes": 45,
+      "questionCount": 63,
+      "difficulty": "easy",
+      "estimatedMinutes": 95,
       "tags": [
         "q3",
         "merged",
         "past-exam"
       ],
-      "fileName": "q3-merged.json",
-      "course": "Dynamic Web Programming"
+      "fileName": "q3-merged.json"
     },
     {
       "id": "q4-merged",
       "title": "Quiz 4 — REST, Databases & Security",
       "description": "REST API design, database concepts, authentication, cookies, sessions, and security.",
       "source": "DWP Past Exams (Merged)",
+      "course": "Dynamic Web Programming",
       "topic": "REST & Security",
       "topics": [
         "Architecture",
+        "CSS",
         "DOM Events",
         "DOM Manipulation",
+        "Data Formats",
+        "Development",
         "Fetch API",
+        "HTML",
+        "HTML5",
         "HTTP",
         "JSON",
         "JavaScript",
+        "Markup Languages",
+        "Networking",
         "Promises",
         "REST API",
         "URLs",
         "Web APIs",
+        "Web Concepts",
         "Web History"
       ],
-      "questionCount": 42,
-      "difficulty": "hard",
-      "estimatedMinutes": 63,
+      "questionCount": 73,
+      "difficulty": "easy",
+      "estimatedMinutes": 110,
       "tags": [
         "q4",
         "merged",
         "past-exam"
       ],
-      "fileName": "q4-merged.json",
-      "course": "Dynamic Web Programming"
+      "fileName": "q4-merged.json"
     },
     {
-      "id": "irs-new-mix-merged",
-      "title": "[IRS] New Mix Questions",
-      "description": "A collection of Information Retrieval Systems exam questions.",
-      "source": "IRS Past Exams",
-      "course": "Information Retrieval Systems",
-      "topic": "BM25",
+      "id": "old-merged",
+      "title": "Old Exam Examples",
+      "description": "Mixed questions from past DWP exams including true/false, Express, Fetch API, and more.",
+      "source": "DWP Past Exams (Merged)",
+      "course": "Dynamic Web Programming",
+      "topic": "Mixed",
       "topics": [
-        "BM25",
-        "BM25 and TF Weighting",
-        "Boolean Retrieval",
-        "Evaluation",
-        "IDF",
-        "Index Compression",
-        "Index Construction",
-        "OpenSearch",
-        "Probabilistic Retrieval",
-        "Ranking and Scoring",
-        "Retrieval Models",
-        "SMART Notation",
-        "Statistical Properties of Text",
-        "Term Frequency",
-        "Text Preprocessing",
-        "Vector Space Model"
+        "APIs",
+        "Express",
+        "Fetch API",
+        "JavaScript",
+        "Node.js",
+        "REST API",
+        "Server-side",
+        "Software",
+        "Web"
       ],
-      "questionCount": 33,
-      "difficulty": "medium",
-      "estimatedMinutes": 50,
+      "questionCount": 74,
+      "difficulty": "easy",
+      "estimatedMinutes": 111,
       "tags": [
-        "irs",
-        "new-mix",
-        "merged"
+        "old",
+        "merged",
+        "past-exam"
       ],
-      "fileName": "irs-new-mix-merged.json"
-    },
-    {
-      "id": "irs-old-final-merged",
-      "title": "[IRS] Old Final Questions",
-      "description": "A collection of Information Retrieval Systems exam questions.",
-      "source": "IRS Past Exams",
-      "course": "Information Retrieval Systems",
-      "topic": "Evaluation",
-      "topics": [
-        "Evaluation",
-        "Fundamentals",
-        "Indexing",
-        "Preprocessing",
-        "Query Optimization",
-        "Retrieval Models",
-        "System Architecture",
-        "Term Weighting"
-      ],
-      "questionCount": 59,
-      "difficulty": "medium",
-      "estimatedMinutes": 89,
-      "tags": [
-        "irs",
-        "old-final",
-        "merged"
-      ],
-      "fileName": "irs-old-final-merged.json"
-    },
-    {
-      "id": "irs-old-midterm-merged",
-      "title": "[IRS] Old Midterm Questions",
-      "description": "A collection of Information Retrieval Systems exam questions.",
-      "source": "IRS Past Exams",
-      "course": "Information Retrieval Systems",
-      "topic": "Boolean Retrieval",
-      "topics": [
-        "Boolean Retrieval",
-        "Data Types",
-        "Fundamentals",
-        "Indexing",
-        "Retrieval Models",
-        "System Architecture",
-        "Term Weighting"
-      ],
-      "questionCount": 53,
-      "difficulty": "medium",
-      "estimatedMinutes": 80,
-      "tags": [
-        "irs",
-        "old-midterm",
-        "merged"
-      ],
-      "fileName": "irs-old-midterm-merged.json"
+      "fileName": "old-merged.json"
     },
     {
       "id": "irs-q1-merged",
@@ -259,14 +189,15 @@
         "History of IR",
         "IR Systems",
         "IR vs Databases",
+        "Ranking and Scoring",
         "Retrieval Models",
         "System Architecture",
         "Term Weighting",
         "User Queries"
       ],
-      "questionCount": 20,
+      "questionCount": 21,
       "difficulty": "medium",
-      "estimatedMinutes": 30,
+      "estimatedMinutes": 32,
       "tags": [
         "irs",
         "q1",
@@ -276,8 +207,8 @@
     },
     {
       "id": "irs-q2-merged",
-      "title": "[IRS] Quiz 2 — Retrieval Models",
-      "description": "Vector space model, BM25, probabilistic models.",
+      "title": "[IRS] Quiz 2 — Text Processing & Indexing",
+      "description": "Stemming, lemmatization, index compression, and text preprocessing.",
       "source": "IRS Past Exams",
       "course": "Information Retrieval Systems",
       "topic": "Index Compression",
@@ -291,9 +222,9 @@
         "Text Preprocessing",
         "Text Statistics"
       ],
-      "questionCount": 38,
-      "difficulty": "medium",
-      "estimatedMinutes": 57,
+      "questionCount": 40,
+      "difficulty": "easy",
+      "estimatedMinutes": 60,
       "tags": [
         "irs",
         "q2",
@@ -303,8 +234,8 @@
     },
     {
       "id": "irs-q3-merged",
-      "title": "[IRS] Quiz 3 — Evaluation",
-      "description": "Precision, recall, MAP, NDCG, and Cranfield evaluation model.",
+      "title": "[IRS] Quiz 3 — Boolean & Phrase Queries",
+      "description": "Boolean retrieval, phrase queries, wildcard queries, spelling correction.",
       "source": "IRS Past Exams",
       "course": "Information Retrieval Systems",
       "topic": "Boolean Retrieval",
@@ -336,15 +267,23 @@
       "course": "Information Retrieval Systems",
       "topic": "Fundamentals",
       "topics": [
+        "BM25",
+        "BM25 and TF Weighting",
+        "Boolean Retrieval",
         "Fundamentals",
+        "IDF",
         "Indexing",
+        "Probabilistic Retrieval",
         "Retrieval Models",
+        "SMART Notation",
         "System Architecture",
-        "Term Weighting"
+        "Term Frequency",
+        "Term Weighting",
+        "Vector Space Model"
       ],
-      "questionCount": 28,
+      "questionCount": 42,
       "difficulty": "medium",
-      "estimatedMinutes": 42,
+      "estimatedMinutes": 63,
       "tags": [
         "irs",
         "q4",
@@ -354,8 +293,8 @@
     },
     {
       "id": "irs-q5-merged",
-      "title": "[IRS] Quiz 5 — Indexing",
-      "description": "Inverted indices, skip pointers, compression algorithms.",
+      "title": "[IRS] Quiz 5 — Evaluation Campaigns",
+      "description": "Evaluation metrics, significance testing, and retrieval evaluation campaigns.",
       "source": "IRS Past Exams",
       "course": "Information Retrieval Systems",
       "topic": "Evaluation Campaigns",
@@ -364,9 +303,9 @@
         "Evaluation Metrics",
         "Significance Testing"
       ],
-      "questionCount": 40,
+      "questionCount": 42,
       "difficulty": "medium",
-      "estimatedMinutes": 60,
+      "estimatedMinutes": 63,
       "tags": [
         "irs",
         "q5",
@@ -376,8 +315,8 @@
     },
     {
       "id": "irs-q6-merged",
-      "title": "[IRS] Quiz 6 — Web Search",
-      "description": "PageRank, HITS, adversarial web IR.",
+      "title": "[IRS] Quiz 6 — OpenSearch & Distributed Retrieval",
+      "description": "PageRank, HITS, OpenSearch, Lucene, distributed retrieval.",
       "source": "IRS Past Exams",
       "course": "Information Retrieval Systems",
       "topic": "Distributed Retrieval",
@@ -392,15 +331,122 @@
         "OpenSearch Query DSL",
         "OpenSearch Storage"
       ],
-      "questionCount": 20,
-      "difficulty": "medium",
-      "estimatedMinutes": 30,
+      "questionCount": 21,
+      "difficulty": "easy",
+      "estimatedMinutes": 32,
       "tags": [
         "irs",
         "q6",
         "merged"
       ],
       "fileName": "irs-q6-merged.json"
+    },
+    {
+      "id": "irs-new-mix-merged",
+      "title": "[IRS] New Mix Questions",
+      "description": "A collection of Information Retrieval Systems exam questions.",
+      "source": "IRS Past Exams",
+      "course": "Information Retrieval Systems",
+      "topic": "BM25",
+      "topics": [
+        "BM25",
+        "BM25 and TF Weighting",
+        "Boolean Retrieval",
+        "Distributed Retrieval",
+        "Evaluation",
+        "IDF",
+        "IR Applications",
+        "IR History",
+        "IR Systems Architecture",
+        "IR Systems Design",
+        "Index Compression",
+        "Index Construction",
+        "Indexing",
+        "Indexing and Boolean Retrieval",
+        "Information Retrieval Fundamentals",
+        "Language Modeling Assumptions",
+        "Lucene",
+        "OpenSearch",
+        "OpenSearch Analysis",
+        "OpenSearch Cluster",
+        "OpenSearch Debugging",
+        "OpenSearch Execution",
+        "OpenSearch Query DSL",
+        "OpenSearch Storage",
+        "Probabilistic Retrieval",
+        "Ranking and Scoring",
+        "Retrieval Efficiency",
+        "Retrieval Models",
+        "SMART Notation",
+        "Search Models",
+        "Statistical Properties of Text",
+        "TF-IDF",
+        "Term Frequency",
+        "Text Preprocessing",
+        "Vector Space Model"
+      ],
+      "questionCount": 126,
+      "difficulty": "easy",
+      "estimatedMinutes": 189,
+      "tags": [
+        "irs",
+        "new-mix",
+        "merged"
+      ],
+      "fileName": "irs-new-mix-merged.json"
+    },
+    {
+      "id": "irs-old-final-merged",
+      "title": "[IRS] Old Final Questions",
+      "description": "A collection of Information Retrieval Systems exam questions from past finals.",
+      "source": "IRS Past Exams",
+      "course": "Information Retrieval Systems",
+      "topic": "Evaluation",
+      "topics": [
+        "Evaluation",
+        "Fundamentals",
+        "Indexing",
+        "Preprocessing",
+        "Query Optimization",
+        "Retrieval Models",
+        "System Architecture",
+        "Term Weighting"
+      ],
+      "questionCount": 59,
+      "difficulty": "easy",
+      "estimatedMinutes": 89,
+      "tags": [
+        "irs",
+        "old-final",
+        "merged"
+      ],
+      "fileName": "irs-old-final-merged.json"
+    },
+    {
+      "id": "irs-old-midterm-merged",
+      "title": "[IRS] Old Midterm Questions",
+      "description": "A collection of Information Retrieval Systems exam questions from past midterms.",
+      "source": "IRS Past Exams",
+      "course": "Information Retrieval Systems",
+      "topic": "Boolean Retrieval",
+      "topics": [
+        "Boolean Retrieval",
+        "Data Types",
+        "Fundamentals",
+        "Indexing",
+        "Retrieval Models",
+        "System Architecture",
+        "Term Weighting"
+      ],
+      "questionCount": 53,
+      "difficulty": "easy",
+      "estimatedMinutes": 80,
+      "tags": [
+        "irs",
+        "old-midterm",
+        "merged"
+      ],
+      "fileName": "irs-old-midterm-merged.json"
     }
   ]
 }

@@ -4,6 +4,7 @@
     "title": "Quiz 1 — Web Fundamentals & JavaScript Basics",
     "description": "Web history, HTML, HTTP, networking, CSS basics, and JavaScript fundamentals.",
     "source": "DWP Past Exams (Merged)",
+    "course": "Dynamic Web Programming",
     "topic": "Web Fundamentals",
     "topics": [
       "CSS",
@@ -19,7 +20,7 @@
       "Web History"
     ],
     "questionCount": 37,
-    "difficulty": "medium",
+    "difficulty": "easy",
     "estimatedMinutes": 56,
     "tags": [
       "q1",
@@ -68,14 +69,10 @@
         "w3c"
       ],
       "sourceRefs": [
-        "dwp_quiz1_merged.json",
-        "dwp_quiz2_merged.json",
-        "Dynamic Web Programming - Emir Quiz 2.json",
-        "Q1-Berhudan.json",
-        "Dynamic Web Programming - Quiz 4.json",
-        "Q2-Berhudan.json"
+        "incomingv2-json/dwp_quiz1_merged.json",
+        "incoming-json/Q1-Berhudan.json"
       ],
-      "mergedFromCount": 6,
+      "mergedFromCount": 2,
       "needs_review": true
     },
     {
@@ -116,11 +113,10 @@
         "hypertext"
       ],
       "sourceRefs": [
-        "dwp_quiz1_merged.json",
-        "Q1-Berhudan.json",
-        "Dynamic Web Programming - Quiz 4.json"
+        "incomingv2-json/dwp_quiz1_merged.json",
+        "incoming-json/Q1-Berhudan.json"
       ],
-      "mergedFromCount": 3,
+      "mergedFromCount": 2,
       "needs_review": true
     },
     {
@@ -162,15 +158,11 @@
         "markup"
       ],
       "sourceRefs": [
-        "dwp_quiz1_merged.json",
-        "dwp_quiz2_merged.json",
-        "dwp_quiz3_merged.json",
-        "Dynamic Web Programming - Quiz 1.json",
-        "Dynamic Web Programming - Quiz 2.json",
-        "Q1-Berhudan.json",
-        "Dynamic Web Programming - Quiz 4.json"
+        "incomingv2-json/dwp_quiz1_merged.json",
+        "incoming-json/Dynamic Web Programming - Quiz 1.json",
+        "incoming-json/Q1-Berhudan.json"
       ],
-      "mergedFromCount": 7,
+      "mergedFromCount": 3,
       "needs_review": true
     },
     {
@@ -212,8 +204,8 @@
         "es6"
       ],
       "sourceRefs": [
-        "dwp_quiz1_merged.json",
-        "Dynamic Web Programming - Quiz 1.json"
+        "incomingv2-json/dwp_quiz1_merged.json",
+        "incoming-json/Dynamic Web Programming - Quiz 1.json"
       ],
       "mergedFromCount": 2,
       "needs_review": true
@@ -258,12 +250,9 @@
         "internet"
       ],
       "sourceRefs": [
-        "dwp_quiz1_merged.json",
-        "dwp_quiz2_merged.json",
-        "Q2-Web2.json",
-        "Dynamic Web Programming - Quiz 2 Sema.json"
+        "incomingv2-json/dwp_quiz1_merged.json"
       ],
-      "mergedFromCount": 4,
+      "mergedFromCount": 1,
       "needs_review": false
     },
     {
@@ -305,8 +294,8 @@
         "networking"
       ],
       "sourceRefs": [
-        "dwp_quiz1_merged.json",
-        "Dynamic Web Programming - Quiz 1.json"
+        "incomingv2-json/dwp_quiz1_merged.json",
+        "incoming-json/Dynamic Web Programming - Quiz 1.json"
       ],
       "mergedFromCount": 2,
       "needs_review": true
@@ -350,10 +339,9 @@
         "darpa"
       ],
       "sourceRefs": [
-        "dwp_quiz1_merged.json",
-        "dwp_quiz2_merged.json"
+        "incomingv2-json/dwp_quiz1_merged.json"
       ],
-      "mergedFromCount": 2,
+      "mergedFromCount": 1,
       "needs_review": false
     },
     {
@@ -395,7 +383,7 @@
         "tim-berners-lee"
       ],
       "sourceRefs": [
-        "dwp_quiz1_merged.json"
+        "incomingv2-json/dwp_quiz1_merged.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
@@ -440,13 +428,10 @@
         "javascript"
       ],
       "sourceRefs": [
-        "dwp_quiz1_merged.json",
-        "dwp_quiz2_merged.json",
-        "dwp_quiz3_merged.json",
-        "Dynamic Web Programming - Emir Quiz 2.json"
+        "incomingv2-json/dwp_quiz1_merged.json"
       ],
-      "mergedFromCount": 4,
-      "needs_review": true
+      "mergedFromCount": 1,
+      "needs_review": false
     },
     {
       "id": "q1-010",
@@ -487,12 +472,11 @@
         "ports"
       ],
       "sourceRefs": [
-        "dwp_quiz1_merged.json",
-        "Dynamic Web Programming - Quiz 1.json",
-        "dwp_quiz2_merged.json"
+        "incomingv2-json/dwp_quiz1_merged.json",
+        "incoming-json/Dynamic Web Programming - Quiz 1.json"
       ],
-      "mergedFromCount": 3,
-      "needs_review": true
+      "mergedFromCount": 2,
+      "needs_review": false
     },
     {
       "id": "q1-011",
@@ -533,12 +517,10 @@
         "functions"
       ],
       "sourceRefs": [
-        "dwp_quiz1_merged.json",
-        "dwp_quiz2_merged.json",
-        "dwp_quiz3_merged.json"
+        "incomingv2-json/dwp_quiz1_merged.json"
       ],
-      "mergedFromCount": 3,
-      "needs_review": true
+      "mergedFromCount": 1,
+      "needs_review": false
     },
     {
       "id": "q1-012",
@@ -579,7 +561,7 @@
         "tcp"
       ],
       "sourceRefs": [
-        "dwp_quiz1_merged.json"
+        "incomingv2-json/dwp_quiz1_merged.json"
       ],
       "mergedFromCount": 1,
       "needs_review": true
@@ -624,10 +606,9 @@
         "this"
       ],
       "sourceRefs": [
-        "dwp_quiz1_merged.json",
-        "dwp_quiz2_merged.json"
+        "incomingv2-json/dwp_quiz1_merged.json"
       ],
-      "mergedFromCount": 2,
+      "mergedFromCount": 1,
       "needs_review": false
     },
     {
@@ -669,8 +650,8 @@
         "currying"
       ],
       "sourceRefs": [
-        "dwp_quiz1_merged.json",
-        "Dynamic Web Programming - Quiz 1.json"
+        "incomingv2-json/dwp_quiz1_merged.json",
+        "incoming-json/Dynamic Web Programming - Quiz 1.json"
       ],
       "mergedFromCount": 2,
       "needs_review": true
@@ -714,7 +695,7 @@
         "scope"
       ],
       "sourceRefs": [
-        "dwp_quiz1_merged.json"
+        "incomingv2-json/dwp_quiz1_merged.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
@@ -758,8 +739,8 @@
         "web"
       ],
       "sourceRefs": [
-        "dwp_quiz1_merged.json",
-        "Dynamic Web Programming - Quiz 1.json"
+        "incomingv2-json/dwp_quiz1_merged.json",
+        "incoming-json/Dynamic Web Programming - Quiz 1.json"
       ],
       "mergedFromCount": 2,
       "needs_review": false
@@ -803,14 +784,11 @@
         "syntax"
       ],
       "sourceRefs": [
-        "dwp_quiz1_merged.json",
-        "Dynamic Web Programming - Quiz 1.json",
-        "dwp_quiz2_merged.json",
-        "dwp_quiz3_merged.json",
-        "Dynamic Web Programming - Quiz 2.json"
+        "incomingv2-json/dwp_quiz1_merged.json",
+        "incoming-json/Dynamic Web Programming - Quiz 1.json"
       ],
-      "mergedFromCount": 5,
-      "needs_review": true
+      "mergedFromCount": 2,
+      "needs_review": false
     },
     {
       "id": "q1-018",
@@ -851,12 +829,10 @@
         "events"
       ],
       "sourceRefs": [
-        "dwp_quiz1_merged.json",
-        "dwp_quiz2_merged.json",
-        "Dynamic Web Programming - Quiz 1.json",
-        "Dynamic Web Programming - Quiz 2.json"
+        "incomingv2-json/dwp_quiz1_merged.json",
+        "incoming-json/Dynamic Web Programming - Quiz 1.json"
       ],
-      "mergedFromCount": 4,
+      "mergedFromCount": 2,
       "needs_review": false
     },
     {
@@ -898,13 +874,10 @@
         "first-class-functions"
       ],
       "sourceRefs": [
-        "dwp_quiz1_merged.json",
-        "dwp_quiz2_merged.json",
-        "dwp_quiz3_merged.json",
-        "Dynamic Web Programming - Quiz 1.json",
-        "Dynamic Web Programming - Quiz 2.json"
+        "incomingv2-json/dwp_quiz1_merged.json",
+        "incoming-json/Dynamic Web Programming - Quiz 1.json"
       ],
-      "mergedFromCount": 5,
+      "mergedFromCount": 2,
       "needs_review": true
     },
     {
@@ -945,8 +918,8 @@
         "networking"
       ],
       "sourceRefs": [
-        "dwp_quiz1_merged.json",
-        "Dynamic Web Programming - Quiz 1.json"
+        "incomingv2-json/dwp_quiz1_merged.json",
+        "incoming-json/Dynamic Web Programming - Quiz 1.json"
       ],
       "mergedFromCount": 2,
       "needs_review": false
@@ -990,8 +963,8 @@
         "private"
       ],
       "sourceRefs": [
-        "dwp_quiz1_merged.json",
-        "Dynamic Web Programming - Quiz 1.json"
+        "incomingv2-json/dwp_quiz1_merged.json",
+        "incoming-json/Dynamic Web Programming - Quiz 1.json"
       ],
       "mergedFromCount": 2,
       "needs_review": true
@@ -1035,8 +1008,8 @@
         "syntax"
       ],
       "sourceRefs": [
-        "dwp_quiz1_merged.json",
-        "Dynamic Web Programming - Quiz 1.json"
+        "incomingv2-json/dwp_quiz1_merged.json",
+        "incoming-json/Dynamic Web Programming - Quiz 1.json"
       ],
       "mergedFromCount": 2,
       "needs_review": true
@@ -1081,14 +1054,11 @@
         "events"
       ],
       "sourceRefs": [
-        "dwp_quiz1_merged.json",
-        "dwp_quiz2_merged.json",
-        "dwp_quiz3_merged.json",
-        "Dynamic Web Programming - Quiz 1.json",
-        "Dynamic Web Programming - Quiz 2.json"
+        "incomingv2-json/dwp_quiz1_merged.json",
+        "incoming-json/Dynamic Web Programming - Quiz 1.json"
       ],
-      "mergedFromCount": 5,
-      "needs_review": true
+      "mergedFromCount": 2,
+      "needs_review": false
     },
     {
       "id": "q1-024",
@@ -1129,8 +1099,8 @@
         "ecmascript"
       ],
       "sourceRefs": [
-        "dwp_quiz1_merged.json",
-        "Dynamic Web Programming - Quiz 1.json"
+        "incomingv2-json/dwp_quiz1_merged.json",
+        "incoming-json/Dynamic Web Programming - Quiz 1.json"
       ],
       "mergedFromCount": 2,
       "needs_review": false
@@ -1170,7 +1140,7 @@
       "explanationMd": "No explanation provided.",
       "tags": [],
       "sourceRefs": [
-        "Dynamic Web Programming - Quiz 1.json"
+        "incoming-json/Dynamic Web Programming - Quiz 1.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
@@ -1213,10 +1183,9 @@
         "structure"
       ],
       "sourceRefs": [
-        "Q1-Berhudan.json",
-        "Dynamic Web Programming - Quiz 4.json"
+        "incoming-json/Q1-Berhudan.json"
       ],
-      "mergedFromCount": 2,
+      "mergedFromCount": 1,
       "needs_review": false
     },
     {
@@ -1258,10 +1227,9 @@
         "wan"
       ],
       "sourceRefs": [
-        "Q1-Berhudan.json",
-        "Dynamic Web Programming - Quiz 4.json"
+        "incoming-json/Q1-Berhudan.json"
       ],
-      "mergedFromCount": 2,
+      "mergedFromCount": 1,
       "needs_review": false
     },
     {
@@ -1303,10 +1271,9 @@
         "history"
       ],
       "sourceRefs": [
-        "Q1-Berhudan.json",
-        "Dynamic Web Programming - Quiz 4.json"
+        "incoming-json/Q1-Berhudan.json"
       ],
-      "mergedFromCount": 2,
+      "mergedFromCount": 1,
       "needs_review": false
     },
     {
@@ -1347,10 +1314,9 @@
         "internet"
       ],
       "sourceRefs": [
-        "Q1-Berhudan.json",
-        "Dynamic Web Programming - Quiz 4.json"
+        "incoming-json/Q1-Berhudan.json"
       ],
-      "mergedFromCount": 2,
+      "mergedFromCount": 1,
       "needs_review": false
     },
     {
@@ -1391,10 +1357,9 @@
         "inventors"
       ],
       "sourceRefs": [
-        "Q1-Berhudan.json",
-        "Dynamic Web Programming - Quiz 4.json"
+        "incoming-json/Q1-Berhudan.json"
       ],
-      "mergedFromCount": 2,
+      "mergedFromCount": 1,
       "needs_review": false
     },
     {
@@ -1436,10 +1401,9 @@
         "separation-of-concerns"
       ],
       "sourceRefs": [
-        "Q1-Berhudan.json",
-        "Dynamic Web Programming - Quiz 4.json"
+        "incoming-json/Q1-Berhudan.json"
       ],
-      "mergedFromCount": 2,
+      "mergedFromCount": 1,
       "needs_review": false
     },
     {
@@ -1481,10 +1445,9 @@
         "idempotent"
       ],
       "sourceRefs": [
-        "Q1-Berhudan.json",
-        "Dynamic Web Programming - Quiz 4.json"
+        "incoming-json/Q1-Berhudan.json"
       ],
-      "mergedFromCount": 2,
+      "mergedFromCount": 1,
       "needs_review": false
     },
     {
@@ -1526,10 +1489,9 @@
         "infrastructure"
       ],
       "sourceRefs": [
-        "Q1-Berhudan.json",
-        "Dynamic Web Programming - Quiz 4.json"
+        "incoming-json/Q1-Berhudan.json"
       ],
-      "mergedFromCount": 2,
+      "mergedFromCount": 1,
       "needs_review": false
     },
     {
@@ -1571,10 +1533,9 @@
         "ports"
       ],
       "sourceRefs": [
-        "Q1-Berhudan.json",
-        "Dynamic Web Programming - Quiz 4.json"
+        "incoming-json/Q1-Berhudan.json"
       ],
-      "mergedFromCount": 2,
+      "mergedFromCount": 1,
       "needs_review": false
     },
     {
@@ -1616,10 +1577,9 @@
         "oop"
       ],
       "sourceRefs": [
-        "Q1-Berhudan.json",
-        "Dynamic Web Programming - Quiz 4.json"
+        "incoming-json/Q1-Berhudan.json"
       ],
-      "mergedFromCount": 2,
+      "mergedFromCount": 1,
       "needs_review": false
     },
     {
@@ -1661,10 +1621,9 @@
         "graphics"
       ],
       "sourceRefs": [
-        "Q1-Berhudan.json",
-        "Dynamic Web Programming - Quiz 4.json"
+        "incoming-json/Q1-Berhudan.json"
       ],
-      "mergedFromCount": 2,
+      "mergedFromCount": 1,
       "needs_review": false
     },
     {
@@ -1706,10 +1665,9 @@
         "scope"
       ],
       "sourceRefs": [
-        "Q1-Berhudan.json",
-        "Dynamic Web Programming - Quiz 4.json"
+        "incoming-json/Q1-Berhudan.json"
       ],
-      "mergedFromCount": 2,
+      "mergedFromCount": 1,
       "needs_review": false
     }
   ]

@@ -1,8 +1,8 @@
 {
   "meta": {
     "id": "irs-q3-merged",
-    "title": "[IRS] Quiz 3 — Evaluation",
-    "description": "Precision, recall, MAP, NDCG, and Cranfield evaluation model.",
+    "title": "[IRS] Quiz 3 — Boolean & Phrase Queries",
+    "description": "Boolean retrieval, phrase queries, wildcard queries, spelling correction.",
     "source": "IRS Past Exams",
     "course": "Information Retrieval Systems",
     "topic": "Boolean Retrieval",
@@ -28,7 +28,7 @@
   },
   "questions": [
     {
-      "id": "q3-irs-001",
+      "id": "irs-q3-001",
       "type": "single_choice",
       "topic": "Query Optimization",
       "subtopic": "Execution Order",
@@ -66,14 +66,14 @@
         "document-frequency"
       ],
       "sourceRefs": [
-        "Q3-v2.json",
-        "Q3.json"
+        "incoming-retrieval-json/Q3-v2.json",
+        "incoming-retrieval-json/Q3.json"
       ],
       "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q3-irs-002",
+      "id": "irs-q3-002",
       "type": "single_choice",
       "topic": "Phrase Queries",
       "subtopic": "Boolean Comparison",
@@ -111,14 +111,14 @@
         "logic"
       ],
       "sourceRefs": [
-        "Q3-v2.json",
-        "Q3.json"
+        "incoming-retrieval-json/Q3-v2.json",
+        "incoming-retrieval-json/Q3.json"
       ],
       "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q3-irs-003",
+      "id": "irs-q3-003",
       "type": "single_choice",
       "topic": "Boolean Retrieval",
       "subtopic": "Merge Algorithm",
@@ -156,14 +156,14 @@
         "algorithm"
       ],
       "sourceRefs": [
-        "Q3-v2.json",
-        "Q3.json"
+        "incoming-retrieval-json/Q3-v2.json",
+        "incoming-retrieval-json/Q3.json"
       ],
       "mergedFromCount": 2,
       "needs_review": false
     },
     {
-      "id": "q3-irs-004",
+      "id": "irs-q3-004",
       "type": "single_choice",
       "topic": "Wildcard Queries",
       "subtopic": "k-gram Index",
@@ -201,14 +201,14 @@
         "optimization"
       ],
       "sourceRefs": [
-        "Q3-v2.json",
-        "Q3.json"
+        "incoming-retrieval-json/Q3-v2.json",
+        "incoming-retrieval-json/Q3.json"
       ],
       "mergedFromCount": 2,
       "needs_review": false
     },
     {
-      "id": "q3-irs-005",
+      "id": "irs-q3-005",
       "type": "single_choice",
       "topic": "Boolean Retrieval",
       "subtopic": "OR Merge Algorithm",
@@ -246,14 +246,14 @@
         "or-operator"
       ],
       "sourceRefs": [
-        "Q3-v2.json",
-        "Q3.json"
+        "incoming-retrieval-json/Q3-v2.json",
+        "incoming-retrieval-json/Q3.json"
       ],
       "mergedFromCount": 2,
       "needs_review": false
     },
     {
-      "id": "q3-irs-006",
+      "id": "irs-q3-006",
       "type": "single_choice",
       "topic": "Spelling Correction",
       "subtopic": "Edit Distance",
@@ -291,14 +291,14 @@
         "algorithms"
       ],
       "sourceRefs": [
-        "Q3-v2.json",
-        "Q3.json"
+        "incoming-retrieval-json/Q3-v2.json",
+        "incoming-retrieval-json/Q3.json"
       ],
       "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q3-irs-007",
+      "id": "irs-q3-007",
       "type": "single_choice",
       "topic": "Wildcard Queries",
       "subtopic": "k-gram Computation",
@@ -336,13 +336,13 @@
         "string-manipulation"
       ],
       "sourceRefs": [
-        "Q3-v2.json"
+        "incoming-retrieval-json/Q3-v2.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q3-irs-008",
+      "id": "irs-q3-008",
       "type": "single_choice",
       "topic": "Phrase Queries",
       "subtopic": "Proximity",
@@ -380,13 +380,13 @@
         "boolean"
       ],
       "sourceRefs": [
-        "Q3-v2.json"
+        "incoming-retrieval-json/Q3-v2.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q3-irs-009",
+      "id": "irs-q3-009",
       "type": "single_choice",
       "topic": "Query Optimization",
       "subtopic": "NOT Operator",
@@ -424,14 +424,14 @@
         "query-optimization"
       ],
       "sourceRefs": [
-        "Q3-v2.json",
-        "Q3.json"
+        "incoming-retrieval-json/Q3-v2.json",
+        "incoming-retrieval-json/Q3.json"
       ],
       "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q3-irs-010",
+      "id": "irs-q3-010",
       "type": "single_choice",
       "topic": "Query Optimization",
       "subtopic": "Skip Pointers",
@@ -469,14 +469,14 @@
         "optimization"
       ],
       "sourceRefs": [
-        "Q3-v2.json",
-        "Q3.json"
+        "incoming-retrieval-json/Q3-v2.json",
+        "incoming-retrieval-json/Q3.json"
       ],
       "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q3-irs-011",
+      "id": "irs-q3-011",
       "type": "single_choice",
       "topic": "Spelling Correction",
       "subtopic": "Soundex",
@@ -514,14 +514,14 @@
         "algorithms"
       ],
       "sourceRefs": [
-        "Q3-v2.json",
-        "Q3.json"
+        "incoming-retrieval-json/Q3-v2.json",
+        "incoming-retrieval-json/Q3.json"
       ],
       "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q3-irs-012",
+      "id": "irs-q3-012",
       "type": "single_choice",
       "topic": "Wildcard Queries",
       "subtopic": "Permuterm Index",
@@ -559,14 +559,14 @@
         "wildcards"
       ],
       "sourceRefs": [
-        "Q3-v2.json",
-        "Q3.json"
+        "incoming-retrieval-json/Q3-v2.json",
+        "incoming-retrieval-json/Q3.json"
       ],
       "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q3-irs-013",
+      "id": "irs-q3-013",
       "type": "single_choice",
       "topic": "Boolean Retrieval",
       "subtopic": "Query Parsing",
@@ -604,14 +604,14 @@
         "precedence"
       ],
       "sourceRefs": [
-        "Q3-v2.json",
-        "Q3.json"
+        "incoming-retrieval-json/Q3-v2.json",
+        "incoming-retrieval-json/Q3.json"
       ],
       "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q3-irs-014",
+      "id": "irs-q3-014",
       "type": "single_choice",
       "topic": "Wildcard Queries",
       "subtopic": "k-gram Index",
@@ -649,13 +649,13 @@
         "spelling-correction"
       ],
       "sourceRefs": [
-        "Q3-v2.json"
+        "incoming-retrieval-json/Q3-v2.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q3-irs-015",
+      "id": "irs-q3-015",
       "type": "single_choice",
       "topic": "Spelling Correction",
       "subtopic": "Jaccard Similarity",
@@ -693,14 +693,14 @@
         "sets"
       ],
       "sourceRefs": [
-        "Q3-v2.json",
-        "Q3.json"
+        "incoming-retrieval-json/Q3-v2.json",
+        "incoming-retrieval-json/Q3.json"
       ],
       "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q3-irs-016",
+      "id": "irs-q3-016",
       "type": "single_choice",
       "topic": "Spelling Correction",
       "subtopic": "Pipeline",
@@ -738,14 +738,14 @@
         "pipeline"
       ],
       "sourceRefs": [
-        "Q3-v2.json",
-        "Q3.json"
+        "incoming-retrieval-json/Q3-v2.json",
+        "incoming-retrieval-json/Q3.json"
       ],
       "mergedFromCount": 2,
       "needs_review": false
     },
     {
-      "id": "q3-irs-017",
+      "id": "irs-q3-017",
       "type": "single_choice",
       "topic": "Query Optimization",
       "subtopic": "Skip Pointers",
@@ -783,14 +783,14 @@
         "merge"
       ],
       "sourceRefs": [
-        "Q3-v2.json",
-        "Q3.json"
+        "incoming-retrieval-json/Q3-v2.json",
+        "incoming-retrieval-json/Q3.json"
       ],
       "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q3-irs-018",
+      "id": "irs-q3-018",
       "type": "single_choice",
       "topic": "Boolean Retrieval",
       "subtopic": "OR Merge",
@@ -828,14 +828,14 @@
         "or-operator"
       ],
       "sourceRefs": [
-        "Q3-v2.json",
-        "Q3.json"
+        "incoming-retrieval-json/Q3-v2.json",
+        "incoming-retrieval-json/Q3.json"
       ],
       "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q3-irs-019",
+      "id": "irs-q3-019",
       "type": "single_choice",
       "topic": "Spelling Correction",
       "subtopic": "Pipeline",
@@ -873,14 +873,14 @@
         "architecture"
       ],
       "sourceRefs": [
-        "Q3-v2.json",
-        "Q3.json"
+        "incoming-retrieval-json/Q3-v2.json",
+        "incoming-retrieval-json/Q3.json"
       ],
       "mergedFromCount": 2,
       "needs_review": false
     },
     {
-      "id": "q3-irs-020",
+      "id": "irs-q3-020",
       "type": "single_choice",
       "topic": "Boolean Retrieval",
       "subtopic": "Time Complexity",
@@ -918,14 +918,14 @@
         "algorithm"
       ],
       "sourceRefs": [
-        "Q3-v2.json",
-        "Q3.json"
+        "incoming-retrieval-json/Q3-v2.json",
+        "incoming-retrieval-json/Q3.json"
       ],
       "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q3-irs-021",
+      "id": "irs-q3-021",
       "type": "single_choice",
       "topic": "Boolean Retrieval",
       "subtopic": "Merge Time Complexity",
@@ -963,14 +963,14 @@
         "math"
       ],
       "sourceRefs": [
-        "Q3-v2.json",
-        "Q3.json"
+        "incoming-retrieval-json/Q3-v2.json",
+        "incoming-retrieval-json/Q3.json"
       ],
       "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q3-irs-022",
+      "id": "irs-q3-022",
       "type": "single_choice",
       "topic": "Spelling Correction",
       "subtopic": "Jaccard Limitations",
@@ -1008,14 +1008,14 @@
         "k-gram"
       ],
       "sourceRefs": [
-        "Q3-v2.json",
-        "Q3.json"
+        "incoming-retrieval-json/Q3-v2.json",
+        "incoming-retrieval-json/Q3.json"
       ],
       "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q3-irs-023",
+      "id": "irs-q3-023",
       "type": "single_choice",
       "topic": "Phrase Queries",
       "subtopic": "Biword Indexes",
@@ -1053,14 +1053,14 @@
         "limitations"
       ],
       "sourceRefs": [
-        "Q3-v2.json",
-        "Q3.json"
+        "incoming-retrieval-json/Q3-v2.json",
+        "incoming-retrieval-json/Q3.json"
       ],
       "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q3-irs-024",
+      "id": "irs-q3-024",
       "type": "single_choice",
       "topic": "Spelling Correction",
       "subtopic": "Levenshtein Example",
@@ -1097,13 +1097,13 @@
         "levenshtein"
       ],
       "sourceRefs": [
-        "Q3-v2.json"
+        "incoming-retrieval-json/Q3-v2.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q3-irs-025",
+      "id": "irs-q3-025",
       "type": "single_choice",
       "topic": "Query Optimization",
       "subtopic": "Skip Pointers Performance",
@@ -1141,14 +1141,14 @@
         "tradeoffs"
       ],
       "sourceRefs": [
-        "Q3-v2.json",
-        "Q3.json"
+        "incoming-retrieval-json/Q3-v2.json",
+        "incoming-retrieval-json/Q3.json"
       ],
       "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q3-irs-026",
+      "id": "irs-q3-026",
       "type": "single_choice",
       "topic": "System Architecture",
       "subtopic": "Query Processing",
@@ -1186,14 +1186,14 @@
         "parsing"
       ],
       "sourceRefs": [
-        "Q3-v2.json",
-        "Q3.json"
+        "incoming-retrieval-json/Q3-v2.json",
+        "incoming-retrieval-json/Q3.json"
       ],
       "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q3-irs-027",
+      "id": "irs-q3-027",
       "type": "single_choice",
       "topic": "Query Optimization",
       "subtopic": "Execution Order",
@@ -1231,14 +1231,14 @@
         "document-frequency"
       ],
       "sourceRefs": [
-        "Q3-v2.json",
-        "Q3.json"
+        "incoming-retrieval-json/Q3-v2.json",
+        "incoming-retrieval-json/Q3.json"
       ],
       "mergedFromCount": 2,
       "needs_review": true
     },
     {
-      "id": "q3-irs-028",
+      "id": "irs-q3-028",
       "type": "single_choice",
       "topic": "Phrase Queries",
       "subtopic": "Biword Indexes",
@@ -1276,13 +1276,13 @@
         "boolean"
       ],
       "sourceRefs": [
-        "Q3.json"
+        "incoming-retrieval-json/Q3.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q3-irs-029",
+      "id": "irs-q3-029",
       "type": "single_choice",
       "topic": "Term Frequencies",
       "subtopic": "Definitions",
@@ -1320,13 +1320,13 @@
         "definitions"
       ],
       "sourceRefs": [
-        "Q3.json"
+        "incoming-retrieval-json/Q3.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q3-irs-030",
+      "id": "irs-q3-030",
       "type": "single_choice",
       "topic": "Boolean Retrieval",
       "subtopic": "NOT Operator",
@@ -1364,13 +1364,13 @@
         "performance"
       ],
       "sourceRefs": [
-        "Q3.json"
+        "incoming-retrieval-json/Q3.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q3-irs-031",
+      "id": "irs-q3-031",
       "type": "single_choice",
       "topic": "Spelling Correction",
       "subtopic": "Phonetics",
@@ -1408,13 +1408,13 @@
         "spelling"
       ],
       "sourceRefs": [
-        "Q3.json"
+        "incoming-retrieval-json/Q3.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q3-irs-032",
+      "id": "irs-q3-032",
       "type": "single_choice",
       "topic": "Retrieval Models",
       "subtopic": "Boolean Retrieval",
@@ -1452,13 +1452,13 @@
         "concept"
       ],
       "sourceRefs": [
-        "Q3.json"
+        "incoming-retrieval-json/Q3.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q3-irs-033",
+      "id": "irs-q3-033",
       "type": "single_choice",
       "topic": "Wildcard Queries",
       "subtopic": "Permuterm Index",
@@ -1496,13 +1496,13 @@
         "queries"
       ],
       "sourceRefs": [
-        "Q3.json"
+        "incoming-retrieval-json/Q3.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q3-irs-034",
+      "id": "irs-q3-034",
       "type": "single_choice",
       "topic": "Phrase Queries",
       "subtopic": "Positional Indexes",
@@ -1540,13 +1540,13 @@
         "optimization"
       ],
       "sourceRefs": [
-        "Q3.json"
+        "incoming-retrieval-json/Q3.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q3-irs-035",
+      "id": "irs-q3-035",
       "type": "single_choice",
       "topic": "Wildcard Queries",
       "subtopic": "k-gram Calculation",
@@ -1584,13 +1584,13 @@
         "string-manipulation"
       ],
       "sourceRefs": [
-        "Q3.json"
+        "incoming-retrieval-json/Q3.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q3-irs-036",
+      "id": "irs-q3-036",
       "type": "single_choice",
       "topic": "Query Optimization",
       "subtopic": "Skip Pointers",
@@ -1628,13 +1628,13 @@
         "math"
       ],
       "sourceRefs": [
-        "Q3.json"
+        "incoming-retrieval-json/Q3.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q3-irs-037",
+      "id": "irs-q3-037",
       "type": "single_choice",
       "topic": "Wildcard Queries",
       "subtopic": "k-gram Index",
@@ -1672,13 +1672,13 @@
         "spelling-correction"
       ],
       "sourceRefs": [
-        "Q3.json"
+        "incoming-retrieval-json/Q3.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q3-irs-038",
+      "id": "irs-q3-038",
       "type": "single_choice",
       "topic": "Retrieval Models",
       "subtopic": "Boolean Limitations",
@@ -1716,13 +1716,13 @@
         "retrieval-models"
       ],
       "sourceRefs": [
-        "Q3.json"
+        "incoming-retrieval-json/Q3.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q3-irs-039",
+      "id": "irs-q3-039",
       "type": "single_choice",
       "topic": "Phrase Queries",
       "subtopic": "Positional Relationships",
@@ -1759,13 +1759,13 @@
         "positional-index"
       ],
       "sourceRefs": [
-        "Q3.json"
+        "incoming-retrieval-json/Q3.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q3-irs-040",
+      "id": "irs-q3-040",
       "type": "single_choice",
       "topic": "Phrase Queries",
       "subtopic": "Proximity",
@@ -1803,13 +1803,13 @@
         "positional-index"
       ],
       "sourceRefs": [
-        "Q3.json"
+        "incoming-retrieval-json/Q3.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q3-irs-041",
+      "id": "irs-q3-041",
       "type": "single_choice",
       "topic": "Spelling Correction",
       "subtopic": "Edit Distance",
@@ -1847,13 +1847,13 @@
         "spelling-correction"
       ],
       "sourceRefs": [
-        "Q3.json"
+        "incoming-retrieval-json/Q3.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q3-irs-042",
+      "id": "irs-q3-042",
       "type": "single_choice",
       "topic": "Wildcard Queries",
       "subtopic": "Post-Filtering",
@@ -1891,13 +1891,13 @@
         "filtering"
       ],
       "sourceRefs": [
-        "Q3.json"
+        "incoming-retrieval-json/Q3.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "q3-irs-043",
+      "id": "irs-q3-043",
       "type": "single_choice",
       "topic": "Query Optimization",
       "subtopic": "Skip Pointers",
@@ -1935,7 +1935,7 @@
         "merge"
       ],
       "sourceRefs": [
-        "Q3.json"
+        "incoming-retrieval-json/Q3.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false

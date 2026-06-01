@@ -2,7 +2,7 @@
   "meta": {
     "id": "irs-old-final-merged",
     "title": "[IRS] Old Final Questions",
-    "description": "A collection of Information Retrieval Systems exam questions.",
+    "description": "A collection of Information Retrieval Systems exam questions from past finals.",
     "source": "IRS Past Exams",
     "course": "Information Retrieval Systems",
     "topic": "Evaluation",
@@ -17,7 +17,7 @@
       "Term Weighting"
     ],
     "questionCount": 59,
-    "difficulty": "medium",
+    "difficulty": "easy",
     "estimatedMinutes": 89,
     "tags": [
       "irs",
@@ -28,7 +28,7 @@
   },
   "questions": [
     {
-      "id": "old-final-irs-001",
+      "id": "irs-old-final-001",
       "type": "single_choice",
       "topic": "Indexing",
       "subtopic": "Inverted Index",
@@ -66,13 +66,13 @@
         "indexing"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-002",
+      "id": "irs-old-final-002",
       "type": "single_choice",
       "topic": "Preprocessing",
       "subtopic": "Stopwords",
@@ -109,13 +109,13 @@
         "stopwords"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-003",
+      "id": "irs-old-final-003",
       "type": "single_choice",
       "topic": "Retrieval Models",
       "subtopic": "TF-IDF",
@@ -153,13 +153,13 @@
         "vector-space"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-004",
+      "id": "irs-old-final-004",
       "type": "single_choice",
       "topic": "Query Optimization",
       "subtopic": "Execution Order",
@@ -197,13 +197,13 @@
         "document-frequency"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-005",
+      "id": "irs-old-final-005",
       "type": "single_choice",
       "topic": "Retrieval Models",
       "subtopic": "Boolean Model",
@@ -240,13 +240,13 @@
         "operators"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-006",
+      "id": "irs-old-final-006",
       "type": "single_choice",
       "topic": "Term Weighting",
       "subtopic": "Raw TF Issues",
@@ -284,13 +284,13 @@
         "limitations"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-007",
+      "id": "irs-old-final-007",
       "type": "single_choice",
       "topic": "Retrieval Models",
       "subtopic": "Vector Space Model",
@@ -328,13 +328,13 @@
         "relevance"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-008",
+      "id": "irs-old-final-008",
       "type": "single_choice",
       "topic": "Fundamentals",
       "subtopic": "Vocabulary Challenges",
@@ -372,13 +372,13 @@
         "semantics"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-009",
+      "id": "irs-old-final-009",
       "type": "single_choice",
       "topic": "Term Weighting",
       "subtopic": "IDF Logic",
@@ -416,13 +416,13 @@
         "logarithm"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-010",
+      "id": "irs-old-final-010",
       "type": "single_choice",
       "topic": "Term Weighting",
       "subtopic": "Raw TF Issues",
@@ -460,13 +460,13 @@
         "math"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-011",
+      "id": "irs-old-final-011",
       "type": "single_choice",
       "topic": "Retrieval Models",
       "subtopic": "Query Formulation",
@@ -504,13 +504,13 @@
         "queries"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-012",
+      "id": "irs-old-final-012",
       "type": "single_choice",
       "topic": "Evaluation",
       "subtopic": "Test Collections",
@@ -548,13 +548,13 @@
         "qrels"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-013",
+      "id": "irs-old-final-013",
       "type": "single_choice",
       "topic": "Indexing",
       "subtopic": "BSBI",
@@ -592,13 +592,13 @@
         "merge"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-014",
+      "id": "irs-old-final-014",
       "type": "single_choice",
       "topic": "Retrieval Models",
       "subtopic": "BM25 Parameters",
@@ -636,13 +636,13 @@
         "length-normalization"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-015",
+      "id": "irs-old-final-015",
       "type": "single_choice",
       "topic": "Retrieval Models",
       "subtopic": "Boolean Limitations",
@@ -680,13 +680,13 @@
         "ranking"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-016",
+      "id": "irs-old-final-016",
       "type": "single_choice",
       "topic": "Retrieval Models",
       "subtopic": "Boolean Relevance",
@@ -724,13 +724,13 @@
         "binary"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-017",
+      "id": "irs-old-final-017",
       "type": "single_choice",
       "topic": "Evaluation",
       "subtopic": "Precision Constraints",
@@ -768,13 +768,13 @@
         "recall"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-018",
+      "id": "irs-old-final-018",
       "type": "single_choice",
       "topic": "Indexing",
       "subtopic": "Postings Lists",
@@ -812,13 +812,13 @@
         "tf"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-019",
+      "id": "irs-old-final-019",
       "type": "single_choice",
       "topic": "Query Optimization",
       "subtopic": "Boolean Merge",
@@ -856,13 +856,13 @@
         "algorithm"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-020",
+      "id": "irs-old-final-020",
       "type": "single_choice",
       "topic": "Term Weighting",
       "subtopic": "TF-IDF Status",
@@ -900,13 +900,13 @@
         "evaluation"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-021",
+      "id": "irs-old-final-021",
       "type": "single_choice",
       "topic": "Evaluation",
       "subtopic": "F-Measure",
@@ -945,13 +945,13 @@
         "recall"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-022",
+      "id": "irs-old-final-022",
       "type": "single_choice",
       "topic": "Indexing",
       "subtopic": "Postings Lists",
@@ -988,13 +988,13 @@
         "inverted-index"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-023",
+      "id": "irs-old-final-023",
       "type": "single_choice",
       "topic": "Term Weighting",
       "subtopic": "Log TF",
@@ -1032,13 +1032,13 @@
         "logarithm"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-024",
+      "id": "irs-old-final-024",
       "type": "single_choice",
       "topic": "Indexing",
       "subtopic": "Term List Data",
@@ -1076,13 +1076,13 @@
         "df"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-025",
+      "id": "irs-old-final-025",
       "type": "single_choice",
       "topic": "Indexing",
       "subtopic": "Definitions",
@@ -1119,13 +1119,13 @@
         "definitions"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-026",
+      "id": "irs-old-final-026",
       "type": "single_choice",
       "topic": "Indexing",
       "subtopic": "BSBI",
@@ -1163,13 +1163,13 @@
         "algorithms"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-027",
+      "id": "irs-old-final-027",
       "type": "single_choice",
       "topic": "Preprocessing",
       "subtopic": "Stemming",
@@ -1207,13 +1207,13 @@
         "nlp"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-028",
+      "id": "irs-old-final-028",
       "type": "single_choice",
       "topic": "Retrieval Models",
       "subtopic": "BM25",
@@ -1251,13 +1251,13 @@
         "probabilistic-model"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-029",
+      "id": "irs-old-final-029",
       "type": "single_choice",
       "topic": "Indexing",
       "subtopic": "Positional Index",
@@ -1295,13 +1295,13 @@
         "phrase-queries"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-030",
+      "id": "irs-old-final-030",
       "type": "single_choice",
       "topic": "Retrieval Models",
       "subtopic": "Boolean Logic",
@@ -1339,13 +1339,13 @@
         "stemming"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-031",
+      "id": "irs-old-final-031",
       "type": "single_choice",
       "topic": "Retrieval Models",
       "subtopic": "Vector Space Model",
@@ -1383,13 +1383,13 @@
         "comparison"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-032",
+      "id": "irs-old-final-032",
       "type": "single_choice",
       "topic": "Retrieval Models",
       "subtopic": "BM25 Parameters",
@@ -1427,13 +1427,13 @@
         "math"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-033",
+      "id": "irs-old-final-033",
       "type": "single_choice",
       "topic": "Retrieval Models",
       "subtopic": "BM25",
@@ -1471,13 +1471,13 @@
         "models"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-034",
+      "id": "irs-old-final-034",
       "type": "single_choice",
       "topic": "Indexing",
       "subtopic": "Inverted Index",
@@ -1514,13 +1514,13 @@
         "definitions"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-035",
+      "id": "irs-old-final-035",
       "type": "single_choice",
       "topic": "Preprocessing",
       "subtopic": "Pipeline",
@@ -1557,13 +1557,13 @@
         "pipeline"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-036",
+      "id": "irs-old-final-036",
       "type": "single_choice",
       "topic": "Retrieval Models",
       "subtopic": "BM25 Parameters",
@@ -1601,13 +1601,13 @@
         "tf"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-037",
+      "id": "irs-old-final-037",
       "type": "single_choice",
       "topic": "System Architecture",
       "subtopic": "Pipeline Settings",
@@ -1645,13 +1645,13 @@
         "online"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-038",
+      "id": "irs-old-final-038",
       "type": "single_choice",
       "topic": "Fundamentals",
       "subtopic": "Bag of Words",
@@ -1689,13 +1689,13 @@
         "fundamentals"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-039",
+      "id": "irs-old-final-039",
       "type": "single_choice",
       "topic": "Indexing",
       "subtopic": "Structures",
@@ -1732,13 +1732,13 @@
         "architecture"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-040",
+      "id": "irs-old-final-040",
       "type": "single_choice",
       "topic": "Indexing",
       "subtopic": "BSBI Complexity",
@@ -1776,13 +1776,13 @@
         "time-complexity"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-041",
+      "id": "irs-old-final-041",
       "type": "single_choice",
       "topic": "Query Optimization",
       "subtopic": "Boolean Merge",
@@ -1820,13 +1820,13 @@
         "optimization"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-042",
+      "id": "irs-old-final-042",
       "type": "single_choice",
       "topic": "Indexing",
       "subtopic": "Scale Constraints",
@@ -1864,13 +1864,13 @@
         "scale"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-043",
+      "id": "irs-old-final-043",
       "type": "single_choice",
       "topic": "Retrieval Models",
       "subtopic": "Term Weighting",
@@ -1908,13 +1908,13 @@
         "models"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-044",
+      "id": "irs-old-final-044",
       "type": "single_choice",
       "topic": "Preprocessing",
       "subtopic": "Tokenization",
@@ -1951,13 +1951,13 @@
         "tokenization"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-045",
+      "id": "irs-old-final-045",
       "type": "single_choice",
       "topic": "Evaluation",
       "subtopic": "F-Measure",
@@ -1995,13 +1995,13 @@
         "math"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-046",
+      "id": "irs-old-final-046",
       "type": "single_choice",
       "topic": "Evaluation",
       "subtopic": "Recall Calculation",
@@ -2039,13 +2039,13 @@
         "math"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": true
     },
     {
-      "id": "old-final-irs-047",
+      "id": "irs-old-final-047",
       "type": "single_choice",
       "topic": "Preprocessing",
       "subtopic": "Tokenization Logic",
@@ -2083,13 +2083,13 @@
         "nlp"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-048",
+      "id": "irs-old-final-048",
       "type": "single_choice",
       "topic": "Query Optimization",
       "subtopic": "Time Complexity",
@@ -2127,13 +2127,13 @@
         "merge"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-049",
+      "id": "irs-old-final-049",
       "type": "single_choice",
       "topic": "Retrieval Models",
       "subtopic": "BM25 Advantages",
@@ -2171,13 +2171,13 @@
         "normalization"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-050",
+      "id": "irs-old-final-050",
       "type": "single_choice",
       "topic": "Retrieval Models",
       "subtopic": "Performance Tradeoffs",
@@ -2215,13 +2215,13 @@
         "tradeoffs"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-051",
+      "id": "irs-old-final-051",
       "type": "single_choice",
       "topic": "Preprocessing",
       "subtopic": "Stopwords vs Positional",
@@ -2259,13 +2259,13 @@
         "positional-index"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-052",
+      "id": "irs-old-final-052",
       "type": "single_choice",
       "topic": "Term Weighting",
       "subtopic": "TF-IDF Formula",
@@ -2303,13 +2303,13 @@
         "weighting"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-053",
+      "id": "irs-old-final-053",
       "type": "single_choice",
       "topic": "Evaluation",
       "subtopic": "Core Metrics",
@@ -2347,13 +2347,13 @@
         "recall"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-054",
+      "id": "irs-old-final-054",
       "type": "single_choice",
       "topic": "Preprocessing",
       "subtopic": "Text Wrangling",
@@ -2390,13 +2390,13 @@
         "data-cleaning"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-055",
+      "id": "irs-old-final-055",
       "type": "single_choice",
       "topic": "Term Weighting",
       "subtopic": "Informative Terms",
@@ -2434,13 +2434,13 @@
         "information-theory"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-056",
+      "id": "irs-old-final-056",
       "type": "single_choice",
       "topic": "Indexing",
       "subtopic": "DF Role",
@@ -2478,13 +2478,13 @@
         "indexing"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-057",
+      "id": "irs-old-final-057",
       "type": "single_choice",
       "topic": "Indexing",
       "subtopic": "BSBI",
@@ -2522,13 +2522,13 @@
         "memory"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-058",
+      "id": "irs-old-final-058",
       "type": "single_choice",
       "topic": "Term Weighting",
       "subtopic": "IDF Role",
@@ -2566,13 +2566,13 @@
         "term-weighting"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
     },
     {
-      "id": "old-final-irs-059",
+      "id": "irs-old-final-059",
       "type": "single_choice",
       "topic": "Term Weighting",
       "subtopic": "High DF Impact",
@@ -2610,7 +2610,7 @@
         "math"
       ],
       "sourceRefs": [
-        "Old-Final.json"
+        "incoming-retrieval-json/Old-Final.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false
