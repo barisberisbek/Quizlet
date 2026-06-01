@@ -24,6 +24,7 @@ export interface Bookmark {
   quizId: string;
   bookmarkedAt: number;
   note?: string;
+  questionSnippet?: string;
 }
 
 // ── Wrong Answer Entry ────────────────────────────────────────
@@ -54,35 +55,7 @@ export interface TopicStat {
   wrong: number;
 }
 
-// ── User Preferences ─────────────────────────────────────────
-export interface UserPreferences {
-  theme: 'dark' | 'light';
-  viewMode: 'card' | 'list';
-  shuffleQuestions: boolean;
-  showQuestionNumbers: boolean;
-  autoReveal: boolean;
-  lastOpenedQuizId?: string;
-}
-
-// ── Complete Persisted State ──────────────────────────────────
-export interface PersistedState {
-  sessions: Record<string, QuizSession>;
-  bookmarks: Bookmark[];
-  wrongAnswers: WrongAnswer[];
-  stats: UserStats;
-  preferences: UserPreferences;
-  version: number;              // schema version for migrations
-}
-
 // ── Default Values ────────────────────────────────────────────
-export const DEFAULT_PREFERENCES: UserPreferences = {
-  theme: 'dark',
-  viewMode: 'card',
-  shuffleQuestions: false,
-  showQuestionNumbers: true,
-  autoReveal: false,
-};
-
 export const DEFAULT_STATS: UserStats = {
   totalAnswered: 0,
   totalCorrect: 0,
@@ -93,11 +66,3 @@ export const DEFAULT_STATS: UserStats = {
   topicStats: {},
 };
 
-export const DEFAULT_PERSISTED_STATE: PersistedState = {
-  sessions: {},
-  bookmarks: [],
-  wrongAnswers: [],
-  stats: DEFAULT_STATS,
-  preferences: DEFAULT_PREFERENCES,
-  version: 1,
-};

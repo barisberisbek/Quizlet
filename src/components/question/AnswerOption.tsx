@@ -79,7 +79,7 @@ export function AnswerOption({
       onClick={onClick}
       disabled={isAnswered}
       className={cn(
-        'w-full flex items-start gap-3 px-4 py-3 rounded-xl border transition-all duration-200 text-left',
+        'w-full flex items-start gap-3 px-4 py-3 rounded-xl border transition-all duration-200 text-left min-h-[52px]',
         getStateClasses(),
         !isAnswered && 'cursor-pointer',
         isAnswered && 'cursor-default'

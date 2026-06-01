@@ -6,7 +6,7 @@ import type { Bookmark } from '../types/progress.types';
 interface BookmarkState {
   bookmarks: Bookmark[];
   isBookmarked: (questionId: string) => boolean;
-  toggleBookmark: (questionId: string, quizId: string) => void;
+  toggleBookmark: (questionId: string, quizId: string, questionSnippet?: string) => void;
   removeBookmark: (questionId: string) => void;
   getBookmarksForQuiz: (quizId: string) => Bookmark[];
   clearAllBookmarks: () => void;
@@ -19,7 +19,7 @@ export const useBookmarkStore = create<BookmarkState>((set, get) => ({
     return get().bookmarks.some((b) => b.questionId === questionId);
   },
 
-  toggleBookmark: (questionId: string, quizId: string) => {
+  toggleBookmark: (questionId: string, quizId: string, questionSnippet?: string) => {
     const bookmarks = [...get().bookmarks];
     const index = bookmarks.findIndex((b) => b.questionId === questionId);
 
@@ -30,6 +30,7 @@ export const useBookmarkStore = create<BookmarkState>((set, get) => ({
         questionId,
         quizId,
         bookmarkedAt: Date.now(),
+        questionSnippet,
       });
     }
 

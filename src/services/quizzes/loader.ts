@@ -62,23 +62,3 @@ export async function loadQuiz(meta: QuizMeta): Promise<Quiz> {
   return result.data;
 }
 
-/**
- * Loads all quizzes from the index.
- */
-export async function loadAllQuizzes(): Promise<Quiz[]> {
-  const index = await loadQuizIndex();
-  const quizzes = await Promise.allSettled(
-    index.quizzes.map((meta) => loadQuiz(meta))
-  );
-
-  const loaded: Quiz[] = [];
-  quizzes.forEach((result, i) => {
-    if (result.status === 'fulfilled') {
-      loaded.push(result.value);
-    } else {
-      console.error(`[QuizLoader] Failed to load quiz "${index.quizzes[i].title}":`, result.reason);
-    }
-  });
-
-  return loaded;
-}

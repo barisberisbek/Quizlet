@@ -1,9 +1,9 @@
 import { create } from 'zustand';
-import type { Quiz, QuizMeta, PracticeMode, ViewMode } from '../types/quiz.types';
-import type { UserAnswer, QuizSession } from '../types/progress.types';
+import type { Quiz, QuizMeta, PracticeMode } from '../types/quiz.types';
+import type { UserAnswer, QuizSession, WrongAnswer } from '../types/progress.types';
 import { loadQuizIndex, loadQuiz } from '../services/quizzes/loader';
 import { storage } from '../services/storage/localStorage';
-import { getTodayDate } from '../lib/utils';
+import { getTodayDate, calculateStreak } from '../lib/utils';
 
 // ── State Shape ───────────────────────────────────────────────
 interface QuizState {
@@ -20,8 +20,7 @@ interface QuizState {
   // Session state
   currentQuestionIndex: number;
   practiceMode: PracticeMode;
-  viewMode: ViewMode;
-  questionOrder: number[];  // indices into questions array (for shuffling)
+  questionOrder: number[];
 
   // Sessions (persisted)
   sessions: Record<string, QuizSession>;
@@ -34,7 +33,6 @@ interface QuizState {
   nextQuestion: () => void;
   prevQuestion: () => void;
   setPracticeMode: (mode: PracticeMode) => void;
-  setViewMode: (mode: ViewMode) => void;
   answerQuestion: (questionId: string, selectedOptionIds: string[], isCorrect: boolean) => void;
   revealExplanation: (questionId: string) => void;
   getSession: (quizId: string) => QuizSession | undefined;
@@ -53,7 +51,6 @@ export const useQuizStore = create<QuizState>((set, get) => ({
   quizError: null,
   currentQuestionIndex: 0,
   practiceMode: 'normal',
-  viewMode: 'card',
   questionOrder: [],
   sessions: storage.get<Record<string, QuizSession>>('sessions') || {},
 
@@ -76,13 +73,11 @@ export const useQuizStore = create<QuizState>((set, get) => ({
     try {
       const quiz = await loadQuiz(meta);
       const order = quiz.questions.map((_, i) => i);
-      
-      // Restore session if exists
+
       const sessions = get().sessions;
       const session = sessions[meta.id];
       const questionIndex = session?.currentQuestionIndex ?? 0;
 
-      // Save last opened quiz
       storage.set('lastOpenedQuizId', meta.id);
 
       set({
@@ -108,7 +103,6 @@ export const useQuizStore = create<QuizState>((set, get) => ({
     const clampedIndex = Math.max(0, Math.min(index, quiz.questions.length - 1));
     set({ currentQuestionIndex: clampedIndex });
 
-    // Persist position in session
     const sessions = { ...get().sessions };
     const quizId = quiz.meta.id;
     if (sessions[quizId]) {
@@ -137,11 +131,6 @@ export const useQuizStore = create<QuizState>((set, get) => ({
     set({ practiceMode: mode });
   },
 
-  setViewMode: (mode: ViewMode) => {
-    set({ viewMode: mode });
-    storage.set('viewMode', mode);
-  },
-
   answerQuestion: (questionId: string, selectedOptionIds: string[], isCorrect: boolean) => {
     const quiz = get().activeQuiz;
     if (!quiz) return;
@@ -151,7 +140,6 @@ export const useQuizStore = create<QuizState>((set, get) => ({
     const now = Date.now();
     const today = getTodayDate();
 
-    // Create or update session
     if (!sessions[quizId]) {
       sessions[quizId] = {
         quizId,
@@ -177,7 +165,6 @@ export const useQuizStore = create<QuizState>((set, get) => ({
       answers: { ...sessions[quizId].answers, [questionId]: answer },
     };
 
-    // Check completion
     const answeredCount = Object.keys(sessions[quizId].answers).length;
     if (answeredCount >= quiz.questions.length) {
       sessions[quizId].completed = true;
@@ -187,12 +174,20 @@ export const useQuizStore = create<QuizState>((set, get) => ({
     set({ sessions });
     storage.set('sessions', sessions);
 
-    // Update stats
     updateStats(isCorrect, quiz.questions.find(q => q.id === questionId)?.topic || 'unknown', today);
 
-    // Track wrong answers
     if (!isCorrect) {
       addWrongAnswer(quizId, questionId);
+    } else {
+      // FIX: Mark previously-wrong answer as resolved
+      const wrongAnswers = storage.get<WrongAnswer[]>('wrongAnswers') || [];
+      const idx = wrongAnswers.findIndex(
+        w => w.questionId === questionId && w.quizId === quizId && !w.resolved
+      );
+      if (idx !== -1) {
+        wrongAnswers[idx] = { ...wrongAnswers[idx], resolved: true, lastRetryAt: now };
+        storage.set('wrongAnswers', wrongAnswers);
+      }
     }
   },
 
@@ -249,10 +244,13 @@ function updateStats(isCorrect: boolean, topic: string, today: string) {
   const totalAnswered = ((stats.totalAnswered as number) || 0) + 1;
   const totalCorrect = ((stats.totalCorrect as number) || 0) + (isCorrect ? 1 : 0);
   const totalWrong = ((stats.totalWrong as number) || 0) + (isCorrect ? 0 : 1);
-  const practiceDates = stats.practiceDates as string[] || [];
+  const practiceDates = (stats.practiceDates as string[]) || [];
   if (!practiceDates.includes(today)) {
     practiceDates.push(today);
   }
+
+  // FIX: Calculate streak from practice dates
+  const streakDays = calculateStreak(practiceDates);
 
   const topicStats = (stats.topicStats as Record<string, { topic: string; answered: number; correct: number; wrong: number }>) || {};
   if (!topicStats[topic]) {
@@ -267,6 +265,7 @@ function updateStats(isCorrect: boolean, topic: string, today: string) {
     totalAnswered,
     totalCorrect,
     totalWrong,
+    streakDays,
     lastPracticeDate: today,
     practiceDates,
     topicStats,
@@ -275,11 +274,12 @@ function updateStats(isCorrect: boolean, topic: string, today: string) {
 
 // ── Helper: Wrong Answer Tracking ─────────────────────────────
 function addWrongAnswer(quizId: string, questionId: string) {
-  const wrongAnswers = storage.get<Array<{ questionId: string; quizId: string; wrongAt: number; retryCount: number; resolved: boolean }>>('wrongAnswers') || [];
+  const wrongAnswers = storage.get<WrongAnswer[]>('wrongAnswers') || [];
   const existing = wrongAnswers.find(w => w.questionId === questionId && w.quizId === quizId);
   if (existing) {
     existing.retryCount++;
     existing.wrongAt = Date.now();
+    existing.resolved = false;
   } else {
     wrongAnswers.push({
       questionId,

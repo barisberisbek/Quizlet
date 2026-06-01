@@ -83,6 +83,14 @@ body {
   box-shadow: 0 0 20px oklch(0.40 0.10 250 / 0.1);
 }
 
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 .glow-brand {
   box-shadow: 0 0 30px oklch(0.55 0.19 250 / 0.15),
               0 0 60px oklch(0.55 0.19 250 / 0.05);

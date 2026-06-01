@@ -141,7 +141,7 @@ export function StatsPage() {
         ))}
       </motion.div>
 
-      {/* Streak */}
+      {/* Streak + 30 gün aktivite */}
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
@@ -150,15 +150,39 @@ export function StatsPage() {
       >
         <div className="flex items-center gap-3 mb-3">
           <Flame size={18} className="text-amber-400" />
-          <h2 className="text-sm font-semibold text-slate-200">Practice Streak</h2>
+          <h2 className="text-sm font-semibold text-slate-200">Çalışma Serisi</h2>
         </div>
-        <div className="flex items-baseline gap-2">
+        <div className="flex items-baseline gap-2 mb-4">
           <span className="text-3xl font-bold text-amber-400">{stats.streakDays}</span>
-          <span className="text-sm text-slate-500">consecutive days</span>
+          <span className="text-sm text-slate-500">arka arkaya gün</span>
         </div>
+
+        {/* Son 30 gün aktivite */}
+        <div>
+          <p className="text-[10px] text-slate-600 mb-2">Son 30 gün</p>
+          <div className="flex flex-wrap gap-1">
+            {Array.from({ length: 30 }, (_, i) => {
+              const d = new Date();
+              d.setDate(d.getDate() - (29 - i));
+              const dateStr = d.toISOString().split('T')[0];
+              const practiced = stats.practiceDates.includes(dateStr);
+              return (
+                <div
+                  key={dateStr}
+                  title={dateStr}
+                  className={cn(
+                    'w-3 h-3 rounded-sm transition-colors',
+                    practiced ? 'bg-indigo-500' : 'bg-white/5'
+                  )}
+                />
+              );
+            })}
+          </div>
+        </div>
+
         {stats.lastPracticeDate && (
-          <p className="text-[10px] text-slate-600 mt-1">
-            Last practiced: {stats.lastPracticeDate}
+          <p className="text-[10px] text-slate-600 mt-3">
+            Son çalışma: {stats.lastPracticeDate}
           </p>
         )}
       </motion.div>
