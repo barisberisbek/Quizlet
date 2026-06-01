@@ -4,13 +4,14 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => ({
-  // Production: /Quizlet/ for GitHub Pages
-  // Development: / for local dev server
   base: mode === 'production' ? '/Quizlet/' : '/',
+  // Her build'de farklı timestamp → CDN cache'i kırar
+  define: {
+    __BUILD_TIME__: JSON.stringify(Date.now()),
+  },
   plugins: [
     react(),
     tailwindcss(),
-    // PWA plugin will be added in Checkpoint C after the core app is stable
   ],
   build: {
     outDir: 'dist',

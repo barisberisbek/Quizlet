@@ -16,11 +16,16 @@ import type { Quiz, QuizIndex, QuizMeta } from '../../types/quiz.types';
 
 const BASE = import.meta.env.BASE_URL;
 
+// Her Vite build'inde farklı timestamp üretilir.
+// Bu sayede CDN/tarayıcı önbellekleri yeni deploy sonrası index.json'ı
+// taze olarak çeker; bireysel quiz dosyaları ise cache'lenmeye devam eder.
+const CACHE_V = typeof __BUILD_TIME__ !== 'undefined' ? __BUILD_TIME__ : Date.now();
+
 /**
  * Fetches the quiz index manifest.
  */
 export async function loadQuizIndex(): Promise<QuizIndex> {
-  const url = `${BASE}data/index.json`;
+  const url = `${BASE}data/index.json?v=${CACHE_V}`;
   
   const res = await fetch(url);
   if (!res.ok) {
