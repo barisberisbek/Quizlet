@@ -30,7 +30,7 @@
         "merged",
         "past-exam"
       ],
-      "fileName": "q1-merged.json"
+      "fileName": "dwp/q1-merged.json"
     },
     {
       "id": "q2-merged",
@@ -69,7 +69,7 @@
         "merged",
         "past-exam"
       ],
-      "fileName": "q2-merged.json"
+      "fileName": "dwp/q2-merged.json"
     },
     {
       "id": "q3-merged",
@@ -106,7 +106,7 @@
         "merged",
         "past-exam"
       ],
-      "fileName": "q3-merged.json"
+      "fileName": "dwp/q3-merged.json"
     },
     {
       "id": "q4-merged",
@@ -145,7 +145,55 @@
         "merged",
         "past-exam"
       ],
-      "fileName": "q4-merged.json"
+      "fileName": "dwp/q4-merged.json"
+    },
+    {
+      "id": "q5-merged",
+      "title": "Quiz 5 — Fetch API, REST & Async Patterns",
+      "description": "RESTful APIs, Fetch API, async/await, arrow functions, timers, and query parameters.",
+      "source": "DWP Past Exams (Merged)",
+      "course": "Dynamic Web Programming",
+      "topic": "Web APIs",
+      "topics": [
+        "Browser Architecture",
+        "HTML",
+        "JavaScript",
+        "Programming Concepts",
+        "Web APIs"
+      ],
+      "questionCount": 15,
+      "difficulty": "easy",
+      "estimatedMinutes": 23,
+      "tags": [
+        "q5",
+        "merged",
+        "past-exam"
+      ],
+      "fileName": "dwp/q5-merged.json"
+    },
+    {
+      "id": "q6-merged",
+      "title": "Quiz 6 — Node.js & Server-Side Fundamentals",
+      "description": "Node.js runtime, npm, HTTP servers, sockets, modules, and server-side programming.",
+      "source": "DWP Past Exams (Merged)",
+      "course": "Dynamic Web Programming",
+      "topic": "Node.js",
+      "topics": [
+        "HTTP",
+        "JavaScript Runtime",
+        "Networking",
+        "Node.js",
+        "Web Programming"
+      ],
+      "questionCount": 15,
+      "difficulty": "easy",
+      "estimatedMinutes": 23,
+      "tags": [
+        "q6",
+        "merged",
+        "past-exam"
+      ],
+      "fileName": "dwp/q6-merged.json"
     },
     {
       "id": "old-merged",
@@ -173,7 +221,7 @@
         "merged",
         "past-exam"
       ],
-      "fileName": "old-merged.json"
+      "fileName": "dwp/old-merged.json"
     },
     {
       "id": "irs-q1-merged",
@@ -203,7 +251,7 @@
         "q1",
         "merged"
       ],
-      "fileName": "irs-q1-merged.json"
+      "fileName": "irs/irs-q1-merged.json"
     },
     {
       "id": "irs-q2-merged",
@@ -230,7 +278,7 @@
         "q2",
         "merged"
       ],
-      "fileName": "irs-q2-merged.json"
+      "fileName": "irs/irs-q2-merged.json"
     },
     {
       "id": "irs-q3-merged",
@@ -257,7 +305,7 @@
         "q3",
         "merged"
       ],
-      "fileName": "irs-q3-merged.json"
+      "fileName": "irs/irs-q3-merged.json"
     },
     {
       "id": "irs-q4-merged",
@@ -289,7 +337,7 @@
         "q4",
         "merged"
       ],
-      "fileName": "irs-q4-merged.json"
+      "fileName": "irs/irs-q4-merged.json"
     },
     {
       "id": "irs-q5-merged",
@@ -311,7 +359,7 @@
         "q5",
         "merged"
       ],
-      "fileName": "irs-q5-merged.json"
+      "fileName": "irs/irs-q5-merged.json"
     },
     {
       "id": "irs-q6-merged",
@@ -339,7 +387,7 @@
         "q6",
         "merged"
       ],
-      "fileName": "irs-q6-merged.json"
+      "fileName": "irs/irs-q6-merged.json"
     },
     {
       "id": "irs-new-mix-merged",
@@ -393,7 +441,7 @@
         "new-mix",
         "merged"
       ],
-      "fileName": "irs-new-mix-merged.json"
+      "fileName": "irs/irs-new-mix-merged.json"
     },
     {
       "id": "irs-old-final-merged",
@@ -420,7 +468,7 @@
         "old-final",
         "merged"
       ],
-      "fileName": "irs-old-final-merged.json"
+      "fileName": "irs/irs-old-final-merged.json"
     },
     {
       "id": "irs-old-midterm-merged",
@@ -446,7 +494,7 @@
         "old-midterm",
         "merged"
       ],
-      "fileName": "irs-old-midterm-merged.json"
+      "fileName": "irs/irs-old-midterm-merged.json"
     }
   ]
 }

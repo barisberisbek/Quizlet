@@ -1,0 +1,702 @@
+{
+  "meta": {
+    "id": "q6-merged",
+    "title": "Quiz 6 — Node.js & Server-Side Fundamentals",
+    "description": "Node.js runtime, npm, HTTP servers, sockets, modules, and server-side programming.",
+    "source": "DWP Past Exams (Merged)",
+    "course": "Dynamic Web Programming",
+    "topic": "Node.js",
+    "topics": [
+      "HTTP",
+      "JavaScript Runtime",
+      "Networking",
+      "Node.js",
+      "Web Programming"
+    ],
+    "questionCount": 15,
+    "difficulty": "easy",
+    "estimatedMinutes": 23,
+    "tags": [
+      "q6",
+      "merged",
+      "past-exam"
+    ],
+    "fileName": "dwp/q6-merged.json"
+  },
+  "questions": [
+    {
+      "id": "q6-001",
+      "type": "single_choice",
+      "topic": "Node.js",
+      "subtopic": "Running JavaScript Files",
+      "difficulty": "easy",
+      "questionMd": "Which command correctly executes a JavaScript file called `app.js` using NodeJS?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "`run node --file app.js`"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "`node app.js`"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "`execute app.js --runtime node`"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "`npm start app.js`"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "A JavaScript file is executed with Node.js by writing `node` followed by the filename, such as `node app.js`.",
+      "tags": [
+        "nodejs",
+        "cli",
+        "javascript",
+        "app.js"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Quiz 6.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q6-002",
+      "type": "single_choice",
+      "topic": "Networking",
+      "subtopic": "Sockets",
+      "difficulty": "medium",
+      "questionMd": "In the context of networking, what is a socket?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A numbered logical endpoint, ranging from 0 to 65535, that identifies a specific service running on a host machine."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The encrypted tunnel created by HTTPS to protect data exchanged between a client browser and a remote web server."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "One end of a communication channel through which data can be sent and received."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "A physical hardware port on a server machine used to connect network cables to the motherboard."
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "A socket represents one endpoint of a network communication channel. It is used by software to send and receive data over a network.",
+      "tags": [
+        "networking",
+        "socket",
+        "tcp",
+        "server"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Quiz 6.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q6-003",
+      "type": "single_choice",
+      "topic": "Node.js",
+      "subtopic": "npm",
+      "difficulty": "easy",
+      "questionMd": "What is npm primarily used for in a NodeJS development workflow?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "It is a version control system integrated with NodeJS that tracks changes to JavaScript source files across a development team."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "It is a command-line tool that installs packages, libraries, and tools written in JavaScript and compatible with NodeJS."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "It is a built-in NodeJS module that provides methods for creating HTTP servers and handling incoming TCP connections."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "It is a browser extension that allows developers to inspect and modify the DOM of pages served from a NodeJS backend."
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "npm is the Node package manager. It is mainly used to install and manage JavaScript packages and development tools.",
+      "tags": [
+        "nodejs",
+        "npm",
+        "packages",
+        "package-manager"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Quiz 6.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q6-004",
+      "type": "single_choice",
+      "topic": "JavaScript Runtime",
+      "subtopic": "V8 Engine",
+      "difficulty": "easy",
+      "questionMd": "What is the V8 engine, and what role does it play in both Chrome and NodeJS?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "It is a package manager integrated into NodeJS that downloads and manages third-party JavaScript libraries from the npm registry."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "It is a DOM rendering engine that converts HTML and CSS into a visual pixel display inside the Chrome browser window."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "It is the JavaScript interpreter used by both Chrome and NodeJS to parse, compile, and execute JavaScript code."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "It is the network library embedded in Chrome that manages TCP connections and forwards HTTP messages to the operating system."
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "V8 is Google's JavaScript engine. Chrome uses it to run JavaScript in the browser, and Node.js uses it to run JavaScript outside the browser.",
+      "tags": [
+        "v8",
+        "chrome",
+        "nodejs",
+        "javascript-engine"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Quiz 6.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q6-005",
+      "type": "single_choice",
+      "topic": "HTTP",
+      "subtopic": "curl PUT Requests",
+      "difficulty": "easy",
+      "questionMd": "Which curl command would you use to send an HTTP PUT request to `http://localhost:3000/hello`?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "`curl --request PUT http://localhost:3000/hello`"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "`curl http://localhost:3000/hello --type PUT`"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "`curl --method PUT --Url http://localhost:3000/hello`"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "`curl PUT http://localhost:3000/hello`"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "In curl, `--request PUT` explicitly sets the HTTP method to PUT for the specified URL.",
+      "tags": [
+        "curl",
+        "http",
+        "put",
+        "localhost"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Quiz 6.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q6-006",
+      "type": "single_choice",
+      "topic": "HTTP",
+      "subtopic": "POST Request Body",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture, what is the recommended way to send data in a POST request rather than using query parameters in the URL?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Append data to the URL path as route segments instead of query parameters so Express can read them from `req.params`."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Send the data in the body of the HTTP request rather than appending it as query parameters to the URL."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Store data in the browser's local storage before making the POST request so the server can retrieve it on the next GET request."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Encode all data as Base64 and place it in the Authorization header so the server can decode it securely upon receipt."
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "POST requests commonly send data in the request body, which avoids putting the submitted data directly in the URL query string.",
+      "tags": [
+        "post",
+        "request-body",
+        "query-parameters",
+        "http"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Quiz 6.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q6-007",
+      "type": "single_choice",
+      "topic": "Node.js",
+      "subtopic": "Event Handling",
+      "difficulty": "medium",
+      "questionMd": "The NodeJS `on()` function used on a server object is the equivalent of which browser API?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "`document.querySelector()`, which selects DOM elements matching a given CSS selector string."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "`setTimeout()`, which schedules a callback function to be executed after a specified delay in milliseconds."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "`addEventListener`, which registers a callback function to handle a specific named event."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "`fetch()`, which asynchronously sends HTTP requests from the browser to a specified URL endpoint."
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "In Node.js, `.on(eventName, callback)` registers a listener for a named event, similar to `addEventListener` in browser JavaScript.",
+      "tags": [
+        "nodejs",
+        "events",
+        "on",
+        "addEventListener"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Quiz 6.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q6-008",
+      "type": "single_choice",
+      "topic": "Node.js",
+      "subtopic": "Localhost URLs",
+      "difficulty": "easy",
+      "questionMd": "If a NodeJS server is listening on port 3000 of your local machine, which URL would you use in a browser to access it?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "`node://localhost:3000`"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "`http://127.0.0.1/localhost:3000`"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "`http://localhost:3000`"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "`http://server:3000/local`"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "A local HTTP server running on port 3000 can be reached through `http://localhost:3000` in the browser.",
+      "tags": [
+        "nodejs",
+        "localhost",
+        "port-3000",
+        "server"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Quiz 6.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q6-009",
+      "type": "single_choice",
+      "topic": "Node.js",
+      "subtopic": "HTTP Server Objects",
+      "difficulty": "medium",
+      "questionMd": "In a basic NodeJS server, what does `http.createServer()` return?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "An active TCP connection to the operating system that immediately begins forwarding packets to the default HTTP port 80."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "A Promise object that resolves with the first HTTP request received after the server begins listening on the specified port."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "An Express application instance that provides routing methods such as `app.get()` and `app.post()`."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "A Server object that can listen for incoming HTTP requests and emit events when requests arrive."
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "`http.createServer()` creates and returns a Node.js HTTP Server object. That server can then listen on a port and respond to incoming requests.",
+      "tags": [
+        "nodejs",
+        "http",
+        "createServer",
+        "server-object"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Quiz 6.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q6-010",
+      "type": "single_choice",
+      "topic": "Node.js",
+      "subtopic": "Node REPL",
+      "difficulty": "easy",
+      "questionMd": "What happens when you run the `node` command in a terminal without specifying a filename?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "It starts an interactive REPL loop where you can type and execute JavaScript expressions one at a time, similar to the Chrome console."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "It automatically searches the current directory for a file named `index.js` and executes it as the default entry point."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "It prints the installed NodeJS version number and a list of available built-in modules, then exits immediately."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "It launches a local HTTP server on port 80 and waits for incoming browser connections without executing any JavaScript."
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Running `node` alone opens the Node.js REPL, an interactive prompt where JavaScript expressions can be entered and evaluated.",
+      "tags": [
+        "nodejs",
+        "repl",
+        "cli",
+        "terminal"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Quiz 6.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q6-011",
+      "type": "single_choice",
+      "topic": "Networking",
+      "subtopic": "Server Binding",
+      "difficulty": "medium",
+      "questionMd": "What is \"binding\" in the context of running a server process?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Telling the operating system which port number to associate with the server process so it can receive incoming messages."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Establishing a persistent TCP connection between two servers so they can exchange data without repeating the handshake."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Encrypting the server's IP address so that DNS queries return a hashed value instead of the actual numerical address."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Compiling JavaScript source code into native machine code before the NodeJS runtime begins accepting HTTP requests."
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Binding a server to a port associates that server process with the port, allowing the operating system to route incoming connections to it.",
+      "tags": [
+        "server",
+        "binding",
+        "port",
+        "networking"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Quiz 6.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q6-012",
+      "type": "single_choice",
+      "topic": "Node.js",
+      "subtopic": "Modules and require()",
+      "difficulty": "easy",
+      "questionMd": "What is the purpose of the `require()` statement in NodeJS?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "It instructs the V8 engine to pre-compile a JavaScript file into bytecode and cache it for faster future execution."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "It loads a module into the current file, similar to `import` in Java or `include` in C++."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "It sends an HTTP GET request to the npm registry to check whether a package is compatible with the current NodeJS version."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "It declares a global variable that is shared across all JavaScript files in the same NodeJS project directory."
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "`require()` imports a module into the current Node.js file so its exported functionality can be used.",
+      "tags": [
+        "nodejs",
+        "require",
+        "modules",
+        "commonjs"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Quiz 6.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q6-013",
+      "type": "single_choice",
+      "topic": "Web Programming",
+      "subtopic": "Server-Side Programming",
+      "difficulty": "easy",
+      "questionMd": "Which statement best describes server-side programming as opposed to client-side programming?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The code is compiled by the browser's JavaScript engine before being transmitted over TCP to the server for execution."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The code runs on a remote server that generates web pages and other web resources."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The code executes within a sandboxed environment provided by the operating system on the user's local machine."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The code runs inside the user's browser and is responsible for rendering HTML elements and handling DOM events directly."
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Server-side programming runs on a server and can generate pages, API responses, and other resources before sending them to clients.",
+      "tags": [
+        "server-side",
+        "client-side",
+        "web-programming"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Quiz 6.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q6-014",
+      "type": "single_choice",
+      "topic": "Networking",
+      "subtopic": "TCP",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture, what does TCP (Transmission Control Protocol) define?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The structure and syntax of HTTP request and response messages exchanged between a browser and a web server."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The mapping between domain names and IP addresses maintained by distributed name servers across the internet."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The data format used for sending information over the network wire, and it can be used for HTTP, FTP, and other protocols."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The encryption standard applied to HTTPS traffic to protect data transmitted between clients and servers."
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "In this lecture context, TCP is presented as the lower-level protocol used to carry data for higher-level protocols such as HTTP and FTP over the network.",
+      "tags": [
+        "tcp",
+        "networking",
+        "http",
+        "ftp"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Quiz 6.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q6-015",
+      "type": "single_choice",
+      "topic": "Node.js",
+      "subtopic": "Socket Abstraction",
+      "difficulty": "medium",
+      "questionMd": "How does NodeJS handle the complexity of network sockets when building a web server?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "NodeJS delegates all socket creation to the browser's DOM API, which then forwards messages to the server program."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "NodeJS uses the V8 engine's built-in socket library to open encrypted connections on all available network ports."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "NodeJS requires developers to manually create and bind sockets before attaching any HTTP request listeners."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "NodeJS abstracts socket management away so developers do not need to think about sockets directly."
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Node.js HTTP server APIs hide most low-level socket-management details, letting developers work with server and request/response abstractions instead.",
+      "tags": [
+        "nodejs",
+        "sockets",
+        "abstraction",
+        "http-server"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Quiz 6.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    }
+  ]
+}

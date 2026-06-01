@@ -1,0 +1,705 @@
+{
+  "meta": {
+    "id": "q5-merged",
+    "title": "Quiz 5 — Fetch API, REST & Async Patterns",
+    "description": "RESTful APIs, Fetch API, async/await, arrow functions, timers, and query parameters.",
+    "source": "DWP Past Exams (Merged)",
+    "course": "Dynamic Web Programming",
+    "topic": "Web APIs",
+    "topics": [
+      "Browser Architecture",
+      "HTML",
+      "JavaScript",
+      "Programming Concepts",
+      "Web APIs"
+    ],
+    "questionCount": 15,
+    "difficulty": "easy",
+    "estimatedMinutes": 23,
+    "tags": [
+      "q5",
+      "merged",
+      "past-exam"
+    ],
+    "fileName": "dwp/q5-merged.json"
+  },
+  "questions": [
+    {
+      "id": "q5-001",
+      "type": "single_choice",
+      "topic": "HTML",
+      "subtopic": "Forms and Submit Events",
+      "difficulty": "easy",
+      "questionMd": "To allow a form to submit when the user presses the Enter key, in addition to clicking a button, what must you do in your HTML?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Add a `keydown` event listener directly to the input element and manually check whether the key pressed has the code value of `Enter` each time a keystroke occurs"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Wrap the input elements inside a `<form>` element and listen for the `submit` event on that form"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Set the `autocomplete` attribute on the input element to `on` so that the browser automatically triggers submission when it detects a confirmed input value"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Use a `<button type=\"button\">` element paired with a global document-level `keypress` listener that checks for the Enter key on every page interaction"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Putting the inputs inside a `<form>` lets the browser trigger the form's `submit` event when the user presses Enter, so the same submit handler can handle both Enter and button submission.",
+      "tags": [
+        "html",
+        "form",
+        "submit",
+        "enter-key"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Quiz 5.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q5-002",
+      "type": "single_choice",
+      "topic": "Browser Architecture",
+      "subtopic": "Asynchronous Image Loading",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture, why can multiple images load in parallel even though JavaScript is single-threaded?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Image loading is handled entirely by the operating system's DNS resolver and network stack, which feeds completed image buffers directly into the browser's graphics memory"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The browser itself is multi-threaded and multi-process, so network requests and image decoding happen in browser threads outside the JavaScript runtime"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The browser batches all image requests into a single multiplexed HTTP/2 stream that the JavaScript engine processes sequentially but displays simultaneously after all bytes arrive"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "JavaScript uses Web Workers internally for all image element operations, with each image object spawning its own dedicated worker thread to manage the download lifecycle"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "JavaScript execution is single-threaded, but the browser has other threads and processes for networking, decoding, rendering, and resource loading. That is why several image downloads can progress in parallel.",
+      "tags": [
+        "javascript",
+        "browser",
+        "async",
+        "image-loading"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Quiz 5.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q5-003",
+      "type": "single_choice",
+      "topic": "Web APIs",
+      "subtopic": "URL Query Parameters",
+      "difficulty": "easy",
+      "questionMd": "In a URL query string, how are query parameter key-value pairs structured?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Each pair is formatted as `{param, value}` using curly-brace destructuring syntax borrowed from JavaScript ES6 to maintain consistency with the client-side code that builds the URL"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Each pair is formatted as `param:value` using a colon separator, consistent with the JSON object notation used in the response body returned by RESTful endpoints"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Each pair is formatted as `param=value`, where the parameter name and its value are separated by an equals sign"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Each pair is formatted as `param/value` using a slash separator, following the hierarchical path convention used in the base URL segment of RESTful API endpoints"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Query parameters use the `key=value` format, such as `?q=music` or `?type=album`.",
+      "tags": [
+        "url",
+        "query-string",
+        "parameters",
+        "api"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Quiz 5.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q5-004",
+      "type": "single_choice",
+      "topic": "Web APIs",
+      "subtopic": "Finding Public APIs",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, what is a simple way to check whether a particular company or product offers a publicly accessible developer API?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Search for `<product name> API` using a search engine to see if a developer API exists"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Send an HTTP OPTIONS request to the company's main domain and inspect the Allow header in the response to discover the supported API endpoints and methods"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Check the W3C's official registry of public REST APIs, which every company is required to register with before making its API available to third-party developers"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Use the browser's Network tab to inspect all requests made by the company's website, then reverse-engineer those endpoints to determine which ones accept external calls"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "A practical first step is to search for the product or company name together with `API`, which often leads to official developer documentation if one exists.",
+      "tags": [
+        "api",
+        "developer-api",
+        "documentation",
+        "search"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Quiz 5.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q5-005",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Timers and Event Loop",
+      "difficulty": "medium",
+      "questionMd": "Consider this code: `console.log('A'); setTimeout(fn, 3000); console.log('B');` In what order will the console outputs appear?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "`B`, then `A`, then the output from `fn`, because the JavaScript engine hoists `setTimeout` calls to the top of the execution context before running any other statements"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "`A`, then the output from `fn` after 3 seconds, then `B`, because `setTimeout` blocks the call stack for the specified duration before allowing subsequent synchronous code to run"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The output from `fn`, then `A`, then `B`, because `setTimeout` callbacks are placed in the Micro-task Queue which has higher priority than synchronous code on the call stack"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "`A`, then `B`, then whatever `fn` logs after approximately 3 seconds"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "`console.log('A')` runs first, `setTimeout` schedules `fn` for later, and `console.log('B')` runs immediately after. The callback runs later after the timer delay.",
+      "tags": [
+        "javascript",
+        "setTimeout",
+        "event-loop",
+        "async"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Quiz 5.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q5-006",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "DOM Input Values",
+      "difficulty": "easy",
+      "questionMd": "In JavaScript, how do you read the current text entered by a user in an `<input type=\"text\">` element?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "`inputElement.textContent`"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "`inputElement.innerHTML`"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "`inputElement.value`"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "`inputElement.data`"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "For form controls such as text inputs, the user's current typed value is stored in the element's `.value` property.",
+      "tags": [
+        "javascript",
+        "dom",
+        "input",
+        "value"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Quiz 5.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q5-007",
+      "type": "single_choice",
+      "topic": "Web APIs",
+      "subtopic": "Falcor",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, which company introduced Falcor as a REST alternative?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Amazon, which required a uniform data-access abstraction across its many distributed AWS services that had diverse underlying data formats"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Netflix"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Facebook, which needed a declarative data-fetching layer for its React-based front-end after experiencing performance problems with traditional REST endpoints"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Microsoft, which built it as an open-source project to simplify data binding between Azure cloud services and JavaScript single-page applications"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Falcor is associated with Netflix and was introduced as an alternative model for accessing remote data.",
+      "tags": [
+        "falcor",
+        "netflix",
+        "rest",
+        "api"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Quiz 5.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q5-008",
+      "type": "single_choice",
+      "topic": "Web APIs",
+      "subtopic": "GraphQL History",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, in which year did Facebook open-source GraphQL?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "2015"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "2012"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "2010"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "2018"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "The lecture marks 2015 as the year Facebook open-sourced GraphQL.",
+      "tags": [
+        "graphql",
+        "facebook",
+        "api",
+        "history"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Quiz 5.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q5-009",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Fetch API Defaults",
+      "difficulty": "easy",
+      "questionMd": "What HTTP method does the `fetch()` API use by default when no options object is provided?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "HEAD"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "POST"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "GET"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "OPTIONS"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "A basic `fetch(url)` request uses the HTTP `GET` method unless another method is specified in the options object.",
+      "tags": [
+        "fetch",
+        "http",
+        "get",
+        "default-method"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Quiz 5.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q5-010",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Arrow Functions and this",
+      "difficulty": "medium",
+      "questionMd": "What is the key advantage of using arrow functions (`=>`) as callbacks in `fetch().then()` chains compared to ordinary functions?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Arrow functions convert the Promise returned by `fetch()` into a plain value synchronously, eliminating the need for chained `.then()` calls in most use cases"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Arrow functions execute synchronously instead of asynchronously, which ensures that the callback completes before any subsequent line of code in the method runs"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Arrow functions bypass the browser's CORS policy because they use a different internal request mechanism that does not carry an Origin header in the HTTP request"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Arrow functions are automatically bound to the `this` value of their enclosing context, so they do not create their own `this` binding"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Arrow functions do not create their own `this`; they capture `this` lexically from the surrounding scope. This makes them useful inside class methods and Promise chains.",
+      "tags": [
+        "javascript",
+        "arrow-functions",
+        "this",
+        "fetch",
+        "promise"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Quiz 5.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q5-011",
+      "type": "single_choice",
+      "topic": "Programming Concepts",
+      "subtopic": "Gotchas",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture's definition, what is a “gotcha” in programming?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A valid construct that works as documented but is counter-intuitive and almost invites mistakes because it is easy to invoke and unexpected in its outcome"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "A security vulnerability in a programming language runtime that attackers can exploit to execute arbitrary code by supplying malformed input to a parsing function"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "A deprecated API function that still exists in the language specification for backward compatibility but produces incorrect results when called in strict mode environments"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "A deliberate bug intentionally left in a codebase by a developer to test whether automated testing pipelines are comprehensive enough to catch subtle logic errors"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "A programming gotcha is a valid language feature or behavior that is easy to use incorrectly because it produces surprising or counter-intuitive results.",
+      "tags": [
+        "programming",
+        "gotcha",
+        "bugs",
+        "javascript"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Quiz 5.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q5-012",
+      "type": "single_choice",
+      "topic": "Web APIs",
+      "subtopic": "URL Query Parameters",
+      "difficulty": "easy",
+      "questionMd": "In a URL query string, which character separates subsequent non-first query parameters from each other?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "`;` (semicolon)"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "`=` (equals sign)"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "`&`"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "`?`"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "After the first query parameter begins with `?`, additional query parameters are separated with `&`, for example `?q=test&page=2`.",
+      "tags": [
+        "url",
+        "query-string",
+        "ampersand",
+        "api"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Quiz 5.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q5-013",
+      "type": "single_choice",
+      "topic": "Web APIs",
+      "subtopic": "URL Query Parameters",
+      "difficulty": "easy",
+      "questionMd": "When constructing a URL with query parameters, which character is used to separate the first query parameter from the base URL path?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "`#`"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "`/`"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "`?`"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "`&`"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "The query string begins with `?`, such as `/search?q=javascript`. Additional parameters then use `&`.",
+      "tags": [
+        "url",
+        "query-string",
+        "question-mark",
+        "api"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Quiz 5.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q5-014",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Binding this in Callbacks",
+      "difficulty": "hard",
+      "questionMd": "When using ordinary non-arrow inner functions as `fetch()` callbacks inside a class method, how can you correctly fix the `this` binding problem?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Declare the inner functions using the `var` keyword instead of `const` or `let`, because var-scoped functions automatically inherit the `this` context of their parent scope"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Prefix the inner function declarations with the `static` keyword so that `this` inside the function always refers to the class constructor rather than an instance"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Call `.bind(this)` on each inner function when passing it to `.then()`, so the enclosing method's `this` is explicitly attached to the callback"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Assign the inner functions to class prototype properties before calling `fetch()`, so the JavaScript engine can look up the correct `this` through the prototype chain at call time"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Ordinary functions create their own `this` depending on how they are called. Using `.bind(this)` fixes the callback's `this` value to the surrounding class instance.",
+      "tags": [
+        "javascript",
+        "this",
+        "bind",
+        "fetch",
+        "callbacks"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Quiz 5.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "q5-015",
+      "type": "single_choice",
+      "topic": "Web APIs",
+      "subtopic": "RESTful APIs",
+      "difficulty": "medium",
+      "questionMd": "Which of the following best describes a RESTful API?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A server-side scripting interface where the browser executes remote functions directly by sending the function name and arguments as query parameters"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "A peer-to-peer data exchange protocol where client and server negotiate a shared schema before any data transfer can begin"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "A URL-based API where requests are sent as HTTP requests using methods such as GET, POST, PUT, and DELETE to a base URL known as an API endpoint"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "A binary protocol API where data is encoded in a compact proprietary format and transmitted over persistent TCP connections without any HTTP overhead"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "A RESTful API exposes resources through URLs and uses standard HTTP methods such as GET, POST, PUT, and DELETE to interact with those resources.",
+      "tags": [
+        "rest",
+        "restful-api",
+        "http",
+        "api"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Quiz 5.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    }
+  ]
+}
