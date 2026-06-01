@@ -150,6 +150,22 @@ const GROUPS = [
   },
 
   {
+    id:          'midterm-merged',
+    outputFile:  'dwp/midterm-merged.json',
+    idPrefix:    'midterm',
+    title:       'DWP Midterm — 60 Unique Questions',
+    description: 'Comprehensive midterm practice set covering Fetch API, REST, Node.js, browser architecture, and async JavaScript.',
+    course:      'Dynamic Web Programming',
+    source:      'DWP Midterm (2025-2026 Spring)',
+    topic:       'Mixed',
+    tags:        ['midterm', 'merged', 'past-exam'],
+    difficulty:  'medium',
+    sources: [
+      { file: 'incoming-json/Dynamic Web Programming - Midterm.json',          priority: 'v2' },
+    ],
+  },
+
+  {
     id:          'old-merged',
     outputFile:  'dwp/old-merged.json',
     idPrefix:    'old',
@@ -266,6 +282,38 @@ const GROUPS = [
     sources: [
       { file: 'incoming-retrieval-json/Q6-v2.json',  priority: 'v2' },
       { file: 'incoming-retrieval-json/Q6.json',     priority: 'v1' },
+    ],
+  },
+
+  {
+    id:          'irs-q7-merged',
+    outputFile:  'irs/irs-q7-merged.json',
+    idPrefix:    'irs-q7',
+    title:       '[IRS] Quiz 7 — Language Models & Query Expansion',
+    description: 'Dirichlet/JM smoothing, PRF, RM3, WordNet expansion, vocabulary mismatch.',
+    course:      'Information Retrieval Systems',
+    source:      'IRS Past Exams',
+    topic:       'Language Models',
+    tags:        ['irs', 'q7', 'merged'],
+    difficulty:  'medium',
+    sources: [
+      { file: 'incoming-retrieval-json/Q7.json',     priority: 'v2' },
+    ],
+  },
+
+  {
+    id:          'irs-midterm-merged',
+    outputFile:  'irs/irs-midterm-merged.json',
+    idPrefix:    'irs-midterm',
+    title:       '[IRS] Midterm — 60 Unique Questions',
+    description: 'Comprehensive midterm set covering evaluation, retrieval models, index compression, text processing, and OpenSearch.',
+    course:      'Information Retrieval Systems',
+    source:      'IRS Midterm (2025-2026 Spring)',
+    topic:       'Evaluation',
+    tags:        ['irs', 'midterm', 'merged'],
+    difficulty:  'medium',
+    sources: [
+      { file: 'incoming-retrieval-json/Midterm-Unique-60.json', priority: 'v2' },
     ],
   },
 

@@ -1,0 +1,699 @@
+{
+  "meta": {
+    "id": "irs-q7-merged",
+    "title": "[IRS] Quiz 7 — Language Models & Query Expansion",
+    "description": "Dirichlet/JM smoothing, PRF, RM3, WordNet expansion, vocabulary mismatch.",
+    "source": "IRS Past Exams",
+    "course": "Information Retrieval Systems",
+    "topic": "Language Models",
+    "topics": [
+      "Evaluation",
+      "Language Models",
+      "Pseudo-Relevance Feedback",
+      "Query Expansion",
+      "Vocabulary Mismatch"
+    ],
+    "questionCount": 15,
+    "difficulty": "medium",
+    "estimatedMinutes": 23,
+    "tags": [
+      "irs",
+      "q7",
+      "merged"
+    ],
+    "fileName": "irs/irs-q7-merged.json"
+  },
+  "questions": [
+    {
+      "id": "irs-q7-001",
+      "type": "single_choice",
+      "topic": "Pseudo-Relevance Feedback",
+      "subtopic": "Topic Drift",
+      "difficulty": "medium",
+      "questionMd": "According to Week 7, what is **topic drift** in the context of Pseudo-Relevance Feedback, and when is it most likely to occur?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Topic drift occurs when the Dirichlet smoothing parameter mu is set too high during the initial retrieval pass, making all document scores converge toward the collection model and causing the top-k results to be drawn from an unrelated region of the collection."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Topic drift occurs when the PRF expansion adds too many terms that already appear in the original query, causing the expanded query to retrieve the same documents as the original query without any improvement in precision or recall across the evaluation queries."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Topic drift occurs when the top-k retrieved documents cluster on a specific subtopic of the query, causing the extracted expansion terms to reinforce that subtopic rather than the broader information need, and is most likely for short, ambiguous queries with poor initial retrieval precision."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Topic drift occurs when the Rocchio beta parameter is set lower than 0.5, causing the expanded query to weight the original query terms more heavily than the pseudo-relevant centroid and thereby failing to incorporate any new concepts from the feedback documents."
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "In PRF, expansion terms are extracted from the initially retrieved top-k documents. If those documents represent only one sense or subtopic of an ambiguous query, the expansion can reinforce that wrong/narrow sense and move the query away from the original information need.",
+      "tags": [
+        "prf",
+        "topic-drift",
+        "query-expansion",
+        "information-retrieval"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q7.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-002",
+      "type": "single_choice",
+      "topic": "Query Expansion",
+      "subtopic": "Neural Embeddings",
+      "difficulty": "medium",
+      "questionMd": "The Week 7 lecture briefly previews neural query expansion using Word2Vec or GloVe embeddings. How do these embedding-based methods find expansion terms differently from co-occurrence-based MI expansion?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Word2Vec and GloVe find expansion terms by running a secondary BM25 retrieval pass over a large background corpus and selecting the terms with the highest BM25 scores across that background corpus as candidates to add to the original query."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Word2Vec and GloVe find expansion terms by consulting a pre-built WordNet synset dictionary in which each word's neighbors are its definitional synonyms, providing a curated lexical database that is independent of the document collection being searched."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Word2Vec and GloVe find expansion terms by computing the Rocchio centroid in embedding space rather than TF-IDF space, applying exactly the same geometric update formula but replacing the TF-IDF vectors of each document with their corresponding pre-trained embeddings."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Word2Vec and GloVe find expansion terms by identifying nearest neighbors in a dense vector embedding space, capturing semantic similarity based on distributional context without requiring explicit co-occurrence counts between the query term and candidate expansion terms in the same document."
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Embedding-based expansion uses vector-space semantic similarity. Terms close to the query term in a dense embedding space can be chosen as expansion terms even if they did not explicitly co-occur with the query term in the same retrieved documents.",
+      "tags": [
+        "word2vec",
+        "glove",
+        "embeddings",
+        "query-expansion"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q7.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-003",
+      "type": "single_choice",
+      "topic": "Vocabulary Mismatch",
+      "subtopic": "Solution Families",
+      "difficulty": "medium",
+      "questionMd": "The lecture identifies two broad solution families for the vocabulary mismatch problem. Which of the following correctly describes both families as presented in Week 7?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Inverted index compression, which reduces the cost of scanning many postings lists for synonym terms; and user query reformulation, which prompts users to rewrite their query in more document-like language."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "BM25 parameter tuning, which adjusts k1 and b so that documents containing near-synonyms are ranked higher; and neural reranking, which reorders BM25 results using a pretrained embedding model."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Document expansion, which rewrites stored documents to include synonyms at retrieval time; and stemming normalization, which reduces all query and document terms to a shared root form before matching."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Probabilistic LM which reframes document scoring so that unseen query terms receive small but non-zero probability; and query expansion, which adds related terms to the query before retrieval is performed."
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Week 7 frames vocabulary mismatch through two major approaches: language-model smoothing, which gives unseen terms small non-zero probabilities, and query expansion, which adds related terms before retrieval.",
+      "tags": [
+        "vocabulary-mismatch",
+        "language-model",
+        "query-expansion"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q7.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-004",
+      "type": "single_choice",
+      "topic": "Language Models",
+      "subtopic": "Dirichlet LM and BM25",
+      "difficulty": "medium",
+      "questionMd": "According to the Week 7 lecture, what is the practical relationship between the Dirichlet-smoothed language model and BM25 in terms of retrieval behavior?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "BM25 is strictly a special case of the Dirichlet language model, obtained by setting mu equal to k1 and setting the length normalization parameter b to the ratio of the average document length to the collection size."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The Dirichlet language model and BM25 are fundamentally incompatible scoring paradigms whose results can't be compared numerically because one produces probabilities while the other produces unnormalized heuristic scores."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The Dirichlet language model consistently and substantially outperforms BM25 across all standard retrieval benchmarks because it is derived from principled Bayesian probability theory rather than from empirical heuristics about term weighting."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The Dirichlet language model approximates BM25 under certain parameter settings, since both models reward term frequency and penalize document length, and their empirical retrieval performance on TREC benchmarks is typically very similar."
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Although BM25 and Dirichlet language modeling come from different formulations, both reward term frequency and include document-length normalization effects. In practice, their retrieval behavior can be similar under suitable parameter choices.",
+      "tags": [
+        "dirichlet-smoothing",
+        "bm25",
+        "language-models"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q7.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-005",
+      "type": "single_choice",
+      "topic": "Query Expansion",
+      "subtopic": "WordNet and Polysemy",
+      "difficulty": "medium",
+      "questionMd": "What is the polysemy problem in the context of WordNet-based global query expansion, as described in Week 7, and which mitigation strategy is mentioned in the lecture?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Polysemy means the WordNet thesaurus does not cover technical or domain-specific vocabulary, so expansion terms generated from the thesaurus are frequently absent from the document collection and contribute no additional retrieval signal."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Polysemy means that synonyms from the thesaurus are too general and frequently appear in almost every document in the collection, which reduces their discriminative power and causes expanded queries to retrieve many irrelevant documents."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Polysemy means a query term has multiple senses, so a thesaurus expansion may add synonyms for the wrong sense and hurt precision. A mitigation is to expand only low-frequency query terms or to skip terms that appear in too many synset groups."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Polysemy means two different query terms share the same synonym, causing the expansion to add duplicate terms to the query that inflate the weight of a single concept and introduce a bias toward documents that happen to contain that synonym."
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Polysemy means one word can have multiple meanings. If WordNet expansion picks synonyms for the wrong sense, precision can drop. The lecture's mitigation is to avoid risky/highly ambiguous terms, such as terms that appear in too many synsets.",
+      "tags": [
+        "wordnet",
+        "polysemy",
+        "global-query-expansion"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q7.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-006",
+      "type": "single_choice",
+      "topic": "Pseudo-Relevance Feedback",
+      "subtopic": "Topic Drift Example",
+      "difficulty": "medium",
+      "questionMd": "The Week 7 lecture uses the query **\"jaguar\"** to illustrate topic drift during PRF. Which scenario correctly describes how topic drift manifests for this query?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The Dirichlet smoothing parameter mu is set too low for the \"jaguar\" query, causing the initial retrieval to assign zero probability to many automotive-related terms and preventing the PRF system from finding any meaningful expansion terms at all."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "If the initial top-k results are dominated by automotive reviews, the expansion terms will be concepts like \"horsepower\", \"engine\", and \"sedan\", causing the re-retrieved results to further emphasize the car sense of \"jaguar\" and crowd out wildlife or other relevant concepts."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "If the initial top-k results are dominated by wildlife articles, the expansion terms will be concepts like \"prey\", \"habitat\", and \"feline\", which are highly specific synonyms that narrow the query to only wildlife documents and exclude many other relevant automotive sources."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The WordNet thesaurus assigns \"jaguar\" to a single unambiguous synset covering only the animal sense, so all expansion terms from the thesaurus refer to wildlife, and the RM3 model fails to find documents about Jaguar cars regardless of the initial retrieval results."
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "For an ambiguous query like `jaguar`, PRF can overfit to the sense represented in the initial top-k results. If those results are about cars, car-related terms are added and the next retrieval round drifts further toward the automotive sense.",
+      "tags": [
+        "prf",
+        "topic-drift",
+        "jaguar",
+        "ambiguity"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q7.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-007",
+      "type": "single_choice",
+      "topic": "Language Models",
+      "subtopic": "Jelinek-Mercer vs Dirichlet Smoothing",
+      "difficulty": "medium",
+      "questionMd": "Week 7 explains that Jelinek-Mercer smoothing has a specific weakness compared to Dirichlet smoothing for ad-hoc information retrieval. What is this weakness?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "JM smoothing cannot assign non-zero probability to terms that are absent from a document, because the linear interpolation formula reduces to zero for unseen terms when the collection model probability P(t|C) is itself zero for out-of-vocabulary terms."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "JM smoothing assigns higher probability to unseen terms in long documents than in short documents, creating an undesirable bias toward longer documents that inflates their scores for multi-term queries compared to shorter documents on the same topic."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "JM smoothing requires a separate optimization step to estimate the optimal lambda value for each individual document, making it computationally more expensive than Dirichlet smoothing, which uses a single shared mu parameter across all documents in the collection."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "JM smoothing uses a fixed lambda for all documents regardless of their length, so a short document and a long document receive the same degree of collection-model smoothing, whereas Dirichlet adapts the smoothing amount based on document length."
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Jelinek-Mercer uses a fixed interpolation parameter, so the smoothing amount is not automatically adjusted according to document length. Dirichlet smoothing adapts because document length and `mu` jointly determine the relative influence of the document model and collection model.",
+      "tags": [
+        "jelinek-mercer",
+        "dirichlet",
+        "smoothing",
+        "language-models"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q7.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-008",
+      "type": "single_choice",
+      "topic": "Query Expansion",
+      "subtopic": "Global vs Local Expansion",
+      "difficulty": "medium",
+      "questionMd": "The Week 7 lecture distinguishes between global and local query expansion strategies. Which of the following correctly characterizes the key difference between these two approaches?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Global expansion is applied to all terms in a query simultaneously using a single expansion dictionary, whereas local expansion is applied selectively to only those query terms that receive fewer than a minimum threshold number of matching documents."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Global expansion modifies the document index by adding synonyms at indexing time before queries arrive, whereas local expansion modifies the query at search time by adding terms derived only from the query string itself without consulting retrieved documents."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Global expansion uses fixed, collection-wide resources such as thesauri or co-occurrence statistics that are independent of any particular query, whereas local expansion derives expansion terms from the top-k retrieved results of the current query being processed."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Global expansion uses the full document collection as a retrieval source for expansion terms, whereas local expansion restricts the source of expansion terms to a small curated subset of documents manually selected by a domain expert."
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Global expansion relies on resources prepared independently of the specific query, such as thesauri or precomputed co-occurrence statistics. Local expansion uses the current query's retrieved results, typically the top-k documents, to select expansion terms.",
+      "tags": [
+        "global-query-expansion",
+        "local-query-expansion",
+        "prf"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q7.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-009",
+      "type": "single_choice",
+      "topic": "Language Models",
+      "subtopic": "Unigram Independence Assumption",
+      "difficulty": "medium",
+      "questionMd": "The unigram language model used in Week 7 rests on an independence assumption about how words in a document are generated. What is this assumption, and what is one consequence of making it?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Words are assumed to be drawn uniformly from the vocabulary, so every word in the document has the same probability and the model only needs the vocabulary size to compute any term's probability in any document."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Words are assumed to depend only on the immediately preceding word, so the joint probability of a word sequence is computed as a chain of bigram conditional probabilities. This is the same as assuming a first-order Markov model for language generation."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Words are assumed to be generated independently of each other, so the joint probability of a word sequence is the product of individual word probabilities. This makes the model computationally tractable but means word order is completely ignored."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Words are assumed to depend on all preceding words in the document, so the joint probability of a word sequence is computed as a product of full-history conditional probabilities, which is the most accurate but computationally intractable formulation."
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "A unigram language model treats words as independent draws from a document language model. This enables simple multiplication of term probabilities but ignores ordering and phrase structure.",
+      "tags": [
+        "unigram-language-model",
+        "independence-assumption",
+        "word-order"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q7.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-010",
+      "type": "single_choice",
+      "topic": "Language Models",
+      "subtopic": "DirichletLM Troubleshooting",
+      "difficulty": "hard",
+      "questionMd": "During the Week 7 lab, a student notices that all DirichletLM retrieval scores are nearly identical regardless of which document is being scored. According to the troubleshooting guide, what is the most likely cause of this problem?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The mu parameter is set too high, causing every document's term probabilities to collapse toward the collection model P(t|C). When mu greatly exceeds all document lengths, the denominator |d| + mu is dominated by mu and all documents produce essentially the same smoothed probabilities."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The stop word list was not applied to the TfidfVectorizer, causing high-frequency function words to dominate the expansion terms and produce centroids that are nearly identical across all documents regardless of their topic or category."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The doc_probs vector used in the RM3 computation has not been normalized by dividing by its sum, causing all document relevance weights to be inflated by a factor equal to the sum of raw BM25 scores and making the final P(t|R) values sum to much more than 1.0."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The expanded query from the PRF step is being passed back into the original unsmoothed MLE scorer rather than the DirichletLM scorer, so document-specific term frequencies are ignored and all documents receive a score proportional only to query term lengths."
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "If `mu` is much larger than document lengths, the collection model dominates the smoothed probability estimate for every document. As a result, scores become nearly identical because document-specific evidence has little influence.",
+      "tags": [
+        "dirichlet-lm",
+        "mu",
+        "troubleshooting",
+        "smoothing"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q7.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-011",
+      "type": "single_choice",
+      "topic": "Language Models",
+      "subtopic": "Document-Length Adaptive Smoothing",
+      "difficulty": "medium",
+      "questionMd": "One key advantage of Dirichlet smoothing over Jelinek-Mercer smoothing highlighted in Week 7 is that Dirichlet smoothing is adaptive to document length. What does this mean in practice?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Both short and long documents receive exactly the same degree of smoothing because the mu parameter appears in both the numerator and denominator and cancels out algebraically when computing the ratio."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Short documents receive heavier smoothing toward the collection model because |d| is much smaller than mu, so the denominator is dominated by mu and the collection prior has a large relative influence on the smoothed estimate."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Dirichlet smoothing adapts by increasing mu automatically for shorter documents and decreasing mu for longer documents, adjusting the pseudo-count at retrieval time based on the length of each individual document being scored."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Long documents receive heavier smoothing toward the collection model because a larger |d| in the denominator increases the proportion of mu relative to the document's own observed term frequencies in the numerator."
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "With Dirichlet smoothing, short documents have smaller `|d|`, so the `mu P(t|C)` prior has more relative influence. Longer documents rely more on their own observed term frequencies.",
+      "tags": [
+        "dirichlet-smoothing",
+        "document-length",
+        "collection-model"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q7.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-012",
+      "type": "single_choice",
+      "topic": "Language Models",
+      "subtopic": "Collection Language Model",
+      "difficulty": "easy",
+      "questionMd": "What does the Collection Language Model `P(t|C)` represent, and how is it computed according to the Week 7 lecture?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "P(t|C) is the average term frequency of t across all documents, computed by summing tf(t,d) over all documents d and dividing by the number of documents N in the collection."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "P(t|C) is the background probability of term t across the entire corpus, computed as cf(t) / |C|, where cf(t) is the total number of occurrences of t in the collection and |C| is the total token count of the collection."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "P(t|C) is the document frequency proportion of term t, computed as df(t) / N, where df(t) is the number of documents containing t and N is the total number of documents in the entire, whole collection."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "P(t|C) is the inverse document frequency weight for term t, computed as log(N / df(t)), which acts as a proxy for how informative term t is across the entire document collection."
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "`P(t|C)` is the collection-wide background probability of term `t`. It is computed from collection frequency divided by total token count, not document frequency or IDF.",
+      "tags": [
+        "collection-language-model",
+        "pct",
+        "collection-frequency"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q7.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-013",
+      "type": "single_choice",
+      "topic": "Evaluation",
+      "subtopic": "Week 7 Lab Comparison",
+      "difficulty": "medium",
+      "questionMd": "The Week 7 lab requires students to produce a three-way comparison table for multiple test queries. Which three retrieval configurations are compared, and which evaluation metrics are used?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The three configurations are MLE query likelihood, Dirichlet-smoothed query likelihood, and Jelinek-Mercer-smoothed query likelihood. Retrieval quality is measured using NDCG@10 and R-Precision on the 20 Newsgroups test queries."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The three configurations are BM25 baseline, BM25 with Rocchio PRF, and BM25 with RM3 expansion. Retrieval quality is measured using P@10 (precision at rank 10) and MAP (Mean Average Precision) from the Week 5 evaluation pipeline."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The three configurations are BM25 with WordNet expansion, BM25 with co-occurrence MI expansion, and BM25 with neural Word2Vec expansion. Retrieval quality is measured using P@5 and MRR over a set of 20 manually annotated test queries."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The three configurations are BM25 baseline, DirichletLM without PRF, and DirichletLM with RM3 expansion. Retrieval quality is measured using Recall@100 and F1@10 computed over the three selected 20 Newsgroups categories."
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "The lab comparison uses a BM25 baseline and two PRF-based variants: Rocchio PRF and RM3 expansion. The evaluation metrics are P@10 and MAP from the earlier evaluation pipeline.",
+      "tags": [
+        "bm25",
+        "rocchio",
+        "rm3",
+        "evaluation",
+        "map",
+        "p@10"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q7.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-014",
+      "type": "single_choice",
+      "topic": "Language Models",
+      "subtopic": "Smoothing Methods",
+      "difficulty": "medium",
+      "questionMd": "All three smoothing methods taught in Week 7 (Jelinek-Mercer, Dirichlet, and Absolute Discounting) share a common mechanism for preventing zero-probability scores. What is this shared mechanism?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "All three methods apply a logarithmic transformation to raw term frequencies before normalization, which compresses zero counts to a very small negative value rather than exactly zero, so the product of per-term scores never reaches the exact value of zero."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "All three methods add a fixed positive constant epsilon to every term's raw count before computing probabilities, ensuring that even terms with tf=0 in a document receive a non-zero numerator and can never produce a zero probability under any parameter settings."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "All three methods remove terms from the query that do not appear in any document in the collection, so the zero-probability problem is pre-empted by filtering the query before scoring, guaranteeing that all remaining query terms have positive document frequencies."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "All three methods mix the document-specific probability estimate with the collection language model P(t|C), which assigns a non-zero probability to every term in the vocabulary, ensuring that unseen query terms always receive a small but positive smoothed probability."
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "The shared idea behind these smoothing methods is interpolation/backoff to the collection language model. This gives unseen query terms a small non-zero probability as long as they exist in the collection vocabulary.",
+      "tags": [
+        "smoothing",
+        "jelinek-mercer",
+        "dirichlet",
+        "absolute-discounting",
+        "collection-model"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q7.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-015",
+      "type": "single_choice",
+      "topic": "Pseudo-Relevance Feedback",
+      "subtopic": "Failure Case Analysis",
+      "difficulty": "medium",
+      "questionMd": "The Week 7 lab explicitly requires students to find a query where PRF causes retrieval quality to decrease rather than improve. What three things must students document about this failure case, according to the lab instructions?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Students must identify (a) which specific expansion terms caused the topic drift, (b) why those particular terms appeared in the feedback, i.e. why the initial top-k led to that vocabulary, and (c) what mitigation strategy would reduce the negative impact of expansion for that query."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Students must document (a) the P@10 score before expansion, (b) the P@10 score after expansion, and (c) the exact expanded query string produced by the PRF algorithm, including all term weights assigned by the Rocchio or RM3 formula."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Students must document (a) the number of pseudo-relevant documents k used in the feedback step, (b) the number of expansion terms selected from the centroid, and (c) the revised k and m values that would prevent drift without eliminating the expansion benefit for other queries."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Students must document (a) the original query that caused the failure, (b) the mu value used in the DirichletLM initial retrieval, and (c) a revised mu value that would prevent the failure by reducing the influence of the collection model on the initial top-k result set."
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "For a PRF failure case, the important analysis is qualitative as well as quantitative: identify the drift terms, explain why the pseudo-relevant set produced them, and propose a mitigation strategy to reduce the negative effect.",
+      "tags": [
+        "prf",
+        "topic-drift",
+        "failure-analysis",
+        "lab"
+      ],
+      "sourceRefs": [
+        "incoming-retrieval-json/Q7.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    }
+  ]
+}

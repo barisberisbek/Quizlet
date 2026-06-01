@@ -1,0 +1,2689 @@
+{
+  "meta": {
+    "id": "midterm-merged",
+    "title": "DWP Midterm — 60 Unique Questions",
+    "description": "Comprehensive midterm practice set covering Fetch API, REST, Node.js, browser architecture, and async JavaScript.",
+    "source": "DWP Midterm (2025-2026 Spring)",
+    "course": "Dynamic Web Programming",
+    "topic": "Mixed",
+    "topics": [
+      "Browser Architecture",
+      "Course Information",
+      "Data Formats",
+      "ExpressJS",
+      "HTML Forms",
+      "HTTP",
+      "JavaScript",
+      "Networking",
+      "NodeJS",
+      "Programming Concepts",
+      "REST APIs",
+      "Server-Side Programming",
+      "URLs",
+      "Web Architecture",
+      "Web Development",
+      "Web History",
+      "Web Security"
+    ],
+    "questionCount": 60,
+    "difficulty": "easy",
+    "estimatedMinutes": 90,
+    "tags": [
+      "midterm",
+      "merged",
+      "past-exam"
+    ],
+    "fileName": "dwp/midterm-merged.json"
+  },
+  "questions": [
+    {
+      "id": "midterm-001",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "DOM Image Creation",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture's completed fetch example, which JavaScript expression creates a new image element equivalent to `document.createElement('img')`?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "`document.newImage()`"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "`image.create()`"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "`new Img()`"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "`new Image()`"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "`new Image()` creates an HTML image element, similar to creating an `<img>` element with `document.createElement('img')`.",
+      "tags": [
+        "javascript",
+        "dom",
+        "image"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-002",
+      "type": "single_choice",
+      "topic": "Web Development",
+      "subtopic": "Local Development Server",
+      "difficulty": "easy",
+      "questionMd": "Which command is used to serve local files over HTTP so that `fetch()` can access them during development?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "`python3 -m http.server`"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "`python3 -m fetch-server`"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "`npm start http`"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "`node server.js`"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "`python3 -m http.server` starts a simple local HTTP server, avoiding browser restrictions that can occur with `file://` URLs.",
+      "tags": [
+        "http-server",
+        "fetch",
+        "local-development"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-003",
+      "type": "single_choice",
+      "topic": "HTTP",
+      "subtopic": "HTTP Methods",
+      "difficulty": "easy",
+      "questionMd": "Which HTTP method does a browser send automatically whenever you navigate to a URL in the address bar?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "DELETE"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "PUT"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "POST"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "GET"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Normal browser navigation sends an HTTP `GET` request to retrieve the resource at the entered URL.",
+      "tags": [
+        "http",
+        "get",
+        "browser"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-004",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Fetch Response Parsing",
+      "difficulty": "medium",
+      "questionMd": "What is the key difference between calling `response.text()` and `response.json()` inside a `fetch()` response handler?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "`response.text()` returns a Promise while `response.json()` returns a value directly"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "`response.json()` automatically parses the response string into a JavaScript object"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "`response.text()` is faster because it skips validation"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "`response.json()` only works with REST APIs, not local files"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Both methods are asynchronous, but `response.json()` parses the body as JSON and resolves to the resulting JavaScript value.",
+      "tags": [
+        "fetch",
+        "response.json",
+        "response.text",
+        "json"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-005",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "XMLHttpRequest vs Fetch",
+      "difficulty": "easy",
+      "questionMd": "How does the lecture describe XMLHttpRequest (XHR) compared to the Fetch API?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Simpler but less flexible"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Clunky and harder to use"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "More secure and widely supported"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Faster and more reliable"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "XHR is the older request API and is usually considered more verbose and harder to use than the Promise-based Fetch API.",
+      "tags": [
+        "xhr",
+        "fetch",
+        "javascript"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-006",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "HTML Input Values",
+      "difficulty": "easy",
+      "questionMd": "In JavaScript, how do you read the current text entered by a user in an `<input type=\"text\">` element?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "`inputElement.innerHTML`"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "`inputElement.value`"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "`inputElement.textContent`"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "`inputElement.data`"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "For text input elements, the current user-entered value is stored in the element's `.value` property.",
+      "tags": [
+        "javascript",
+        "input",
+        "value"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-007",
+      "type": "single_choice",
+      "topic": "REST APIs",
+      "subtopic": "HTTP Methods",
+      "difficulty": "easy",
+      "questionMd": "Which of the following is listed in the lecture as one of the HTTP methods used in RESTful API requests?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "DELETE"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "QUERY"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "FETCH"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "STREAM"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "RESTful APIs commonly use HTTP methods such as GET, POST, PUT, PATCH, and DELETE.",
+      "tags": [
+        "rest",
+        "http-methods",
+        "delete"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-008",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "this Binding",
+      "difficulty": "hard",
+      "questionMd": "According to the lecture, what is the problem with using ordinary inner functions (closures) as callbacks in `fetch().then()` chains inside a class method?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Closures capture the value of `this` at the time the outer function is defined rather than at the time it is called, leading to a stale reference in long-lived operations"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Closures defined inside a method are garbage-collected before the `fetch()` promise resolves, causing a null reference error when the callback eventually fires"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Each function has its own `this` value, so closures do not automatically inherit the `this` binding of their enclosing class method"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The `fetch()` API enforces strict mode internally, which prevents closures from accessing any variable declared in the outer function scope with the `var` keyword"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Ordinary functions have their own `this`, so callbacks passed to `.then()` may not keep the class instance as `this` unless they are bound or arrow functions are used.",
+      "tags": [
+        "javascript",
+        "this",
+        "callbacks",
+        "closures"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-009",
+      "type": "single_choice",
+      "topic": "Browser Architecture",
+      "subtopic": "Chrome Runtime",
+      "difficulty": "medium",
+      "questionMd": "Which combination of components makes up the Chrome browser's architecture as described in the lecture?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The SpiderMonkey interpreter, the CSS rendering pipeline, and the WebAssembly execution environment for compiled code modules"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The TCP socket library, the DNS resolver module, and the ExpressJS routing engine embedded into the browser at compile time"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The V8 JavaScript engine (with parser, execution engine, and garbage collector), the JavaScript runtime, and the DOM API implementation"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The npm package manager, the NodeJS API implementation, and a built-in HTTP server for serving static web assets locally"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Chrome uses V8 to execute JavaScript, plus browser-provided runtime features and DOM APIs for interacting with web pages.",
+      "tags": [
+        "chrome",
+        "v8",
+        "dom",
+        "runtime"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-010",
+      "type": "single_choice",
+      "topic": "Programming Concepts",
+      "subtopic": "Gotchas",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture's definition, what is a “gotcha” in programming?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A valid construct that works as documented but is counter-intuitive and almost invites mistakes because it is easy to invoke and unexpected in its outcome"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "A deprecated API function that still exists in the language specification for backward compatibility but produces incorrect results when called in strict mode environments"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "A deliberate bug intentionally left in a codebase by a developer to test whether automated testing pipelines are comprehensive enough to catch subtle logic errors"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "A security vulnerability in a programming language runtime that attackers can exploit to execute arbitrary code by supplying malformed input to a parsing function"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "A gotcha is behavior that is technically valid but surprising enough that developers commonly make mistakes with it.",
+      "tags": [
+        "gotcha",
+        "programming",
+        "javascript"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-011",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Array Sorting",
+      "difficulty": "easy",
+      "questionMd": "Which built-in JavaScript array method is used in the lecture to reorder album objects by year?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "`.reduce()`"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "`.filter()`"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "`.sort()`"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "`.map()`"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "The `.sort()` method reorders array elements, typically using a comparator function for custom ordering.",
+      "tags": [
+        "javascript",
+        "array",
+        "sort"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-012",
+      "type": "single_choice",
+      "topic": "Web Security",
+      "subtopic": "CORS",
+      "difficulty": "easy",
+      "questionMd": "What does CORS stand for?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Client-Only Resource Serialization, a browser policy that restricts JavaScript from reading binary resources loaded from external CDN servers"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Cross-Origin Resource Sharing"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Controlled Object Request Standard, an HTTP extension that governs how request headers are validated before the server processes the payload"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Cross-Origin Response Security, an encryption layer added to HTTP responses that prevents man-in-the-middle interception of API data in transit"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "CORS stands for Cross-Origin Resource Sharing, a browser security mechanism for controlled cross-origin requests.",
+      "tags": [
+        "cors",
+        "web-security",
+        "cross-origin"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-013",
+      "type": "single_choice",
+      "topic": "REST APIs",
+      "subtopic": "RESTful API Definition",
+      "difficulty": "easy",
+      "questionMd": "Which of the following best describes a RESTful API?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A protocol for rendering HTML pages dynamically using query strings"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "An interface that exclusively uses the POST method to exchange data"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "An API that only works with browser-side JavaScript and cannot be accessed from a server"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "A URL-based API that uses HTTP methods and sends requests to a base endpoint"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "RESTful APIs expose resources through URLs and use HTTP methods such as GET, POST, PUT, and DELETE.",
+      "tags": [
+        "rest",
+        "api",
+        "http"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-014",
+      "type": "single_choice",
+      "topic": "Networking",
+      "subtopic": "TCP",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture, what does TCP (Transmission Control Protocol) define?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The mapping between domain names and IP addresses maintained by distributed name servers across the internet"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The structure and syntax of HTTP request and response messages exchanged between a browser and a web server"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The data format used for sending information over the network wire, and it can be used for HTTP, FTP, and other protocols"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The encryption standard applied to HTTPS traffic to protect data transmitted between clients and servers"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "In the lecture framing, TCP is the lower-level transport protocol used underneath application protocols such as HTTP and FTP.",
+      "tags": [
+        "tcp",
+        "networking",
+        "protocols"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-015",
+      "type": "single_choice",
+      "topic": "Server-Side Programming",
+      "subtopic": "HTTP Server Flow",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture summary, after the server software receives an HTTP request, what is the correct sequence of actions it takes?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The server software parses the message, creates an HTTP response, and then the server OS sends that response to the client over TCP"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The server software binds to a new port, sends an HTTP GET request back to the client to confirm receipt, then closes the connection"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The server software immediately sends an empty 200 OK response and then asynchronously processes the request body in the background"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The server software forwards the raw TCP packet to the DNS server, which translates it and routes the reply back to the client browser"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "A server program reads and parses the incoming request, prepares an HTTP response, and the operating system handles sending it over TCP.",
+      "tags": [
+        "http-server",
+        "server-flow",
+        "tcp"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-016",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Promises",
+      "difficulty": "easy",
+      "questionMd": "Which of the following best describes a JavaScript Promise?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A synchronous function that immediately returns a value"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "A built-in timer that delays code execution by a specified amount"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "An object that handles asynchronous operations"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "A special array type used to store multiple fetch results"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "A Promise represents the eventual result of an asynchronous operation, either fulfilled or rejected.",
+      "tags": [
+        "javascript",
+        "promise",
+        "async"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-017",
+      "type": "single_choice",
+      "topic": "Data Formats",
+      "subtopic": "JSON History",
+      "difficulty": "easy",
+      "questionMd": "Who created JSON?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Brendan Eich"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Tim Berners-Lee"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Douglas Crockford"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "James Gosling"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "JSON is commonly associated with Douglas Crockford, who popularized and specified the format.",
+      "tags": [
+        "json",
+        "douglas-crockford",
+        "history"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-018",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "JSON Parsing",
+      "difficulty": "easy",
+      "questionMd": "What does `JSON.parse()` accept as its argument?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A fetch response object"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "A Promise returned by `fetch()`"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "A JSON-formatted string"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "A JavaScript object to be serialized"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "`JSON.parse()` takes a JSON-formatted string and converts it into the corresponding JavaScript value.",
+      "tags": [
+        "json",
+        "JSON.parse",
+        "javascript"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-019",
+      "type": "single_choice",
+      "topic": "NodeJS",
+      "subtopic": "DOM API vs NodeJS API",
+      "difficulty": "medium",
+      "questionMd": "What is the key difference between the DOM API used in Chrome and the NodeJS API?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The DOM API handles TCP socket connections and port binding, while the NodeJS API handles HTML parsing and CSS rendering"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The DOM API uses the V8 engine for execution while the NodeJS API uses a different interpreter called SpiderMonkey for server tasks"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The DOM API is written in JavaScript and runs only on Linux servers, while the NodeJS API is written in C++ and runs inside browsers"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The DOM API provides JavaScript libraries to interact with a web page, while the NodeJS API provides libraries useful for creating server programs"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "The DOM API is browser-oriented for page interaction, while NodeJS provides APIs for server-side tasks such as files, networking, and HTTP servers.",
+      "tags": [
+        "dom",
+        "nodejs",
+        "api"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-020",
+      "type": "single_choice",
+      "topic": "Data Formats",
+      "subtopic": "JSON Serialization",
+      "difficulty": "easy",
+      "questionMd": "Which of the following data types is natively preserved when a JavaScript object is serialized to JSON using `JSON.stringify()`?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Date objects"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "`undefined` values"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Numbers"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Functions"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "JSON natively represents strings, numbers, booleans, arrays, objects, and null; functions and `undefined` are not preserved as normal values.",
+      "tags": [
+        "json",
+        "JSON.stringify",
+        "serialization"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-021",
+      "type": "single_choice",
+      "topic": "NodeJS",
+      "subtopic": "Sockets",
+      "difficulty": "medium",
+      "questionMd": "How does NodeJS handle the complexity of network sockets when building a web server?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "NodeJS uses the V8 engine's built-in socket library to open encrypted connections on all available network ports"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "NodeJS abstracts socket management away so developers do not need to think about sockets directly"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "NodeJS requires developers to manually create and bind sockets before attaching any HTTP request listeners"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "NodeJS delegates all socket creation to the browser's DOM API, which then forwards messages to the server program"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "NodeJS provides higher-level server APIs so developers can listen for requests without manually managing raw sockets in typical web-server code.",
+      "tags": [
+        "nodejs",
+        "sockets",
+        "http-server"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-022",
+      "type": "single_choice",
+      "topic": "NodeJS",
+      "subtopic": "General-Purpose Runtime",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture, can NodeJS be used for purposes other than building web servers?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Yes, NodeJS can be used to write general-purpose JavaScript scripts that are completely unrelated to web servers"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Yes, but only if the scripts use the DOM API, because NodeJS was designed as a bridge between browser JavaScript and server JavaScript"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "No, NodeJS requires an active internet connection at all times and cannot run JavaScript files that make no network requests"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "No, NodeJS is exclusively designed for server-side HTTP handling and cannot execute scripts that do not involve network connections"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "NodeJS is a JavaScript runtime that can run many kinds of scripts, not only web servers.",
+      "tags": [
+        "nodejs",
+        "runtime",
+        "javascript"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-023",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Form Submission",
+      "difficulty": "easy",
+      "questionMd": "When handling a form's `submit` event in JavaScript, what must you call to prevent the page from refreshing?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "`form.reset()`"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "`window.cancelSubmit()`"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "`event.stopPropagation()`"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "`event.preventDefault()`"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Calling `event.preventDefault()` stops the browser's default form submission behavior, which normally reloads or navigates the page.",
+      "tags": [
+        "javascript",
+        "forms",
+        "preventDefault"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-024",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Promise States",
+      "difficulty": "easy",
+      "questionMd": "Which of the following best describes the “fulfilled” state of a Promise?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The asynchronous operation completed successfully"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The operation encountered a network error"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The Promise has been created but not yet started"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The Promise is waiting for a `.then()` handler to be attached"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "A fulfilled Promise is one whose asynchronous operation completed successfully and produced a value.",
+      "tags": [
+        "promise",
+        "fulfilled",
+        "javascript"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-025",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Callbacks Between Classes",
+      "difficulty": "hard",
+      "questionMd": "In the discography page example, how does the `SortButton` class communicate a sort action back to the `App` class?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "It fires a built-in DOM click event that the `App` class listens for on the document"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "It dispatches a custom keyboard event that triggers the App's event listener"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "It directly modifies the `albumInfo` property of the `App` instance"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "It calls an `onClickCallback` function passed to it during construction"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "The `SortButton` receives a callback from the `App` and invokes that callback when a sort action is triggered.",
+      "tags": [
+        "javascript",
+        "callbacks",
+        "classes",
+        "sortbutton"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-026",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Fetch Promise Chain",
+      "difficulty": "easy",
+      "questionMd": "In a typical `fetch()` call chain, what does the first `.then()` callback receive as its parameter?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A Response object from the network request"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "An array of all fetched resources"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The final parsed data ready for use"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "A JSON string representation of the resource"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "The first fulfillment handler after `fetch()` receives the `Response` object returned by the network request.",
+      "tags": [
+        "fetch",
+        "promise",
+        "response"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-027",
+      "type": "single_choice",
+      "topic": "Web History",
+      "subtopic": "World Wide Web",
+      "difficulty": "easy",
+      "questionMd": "Who invented the World Wide Web in 1991 as a way to link research papers using hyperlinks?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Tim Berners-Lee"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Vint Cerf"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Steve Jobs"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Bill Gates"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Tim Berners-Lee invented the World Wide Web at CERN as a hypertext-based system for linking documents.",
+      "tags": [
+        "world-wide-web",
+        "tim-berners-lee",
+        "web-history"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-028",
+      "type": "single_choice",
+      "topic": "Browser Architecture",
+      "subtopic": "Parallel Loading",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture, why can multiple images load in parallel even though JavaScript is single-threaded?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "JavaScript uses Web Workers internally for all image element operations, with each Image object spawning its own dedicated worker thread to manage the download lifecycle"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The browser batches all image requests into a single multiplexed HTTP/2 stream that the JavaScript engine processes sequentially but displays simultaneously after all bytes arrive"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Image loading is handled entirely by the operating system's DNS resolver and network stack, which feeds completed image buffers directly into the browser's graphics memory"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The browser itself is multi-threaded and multi-process, so network requests and image decoding happen in browser threads outside the JavaScript runtime"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "JavaScript execution may be single-threaded, but browsers use separate internal threads and processes for networking, decoding, and rendering work.",
+      "tags": [
+        "browser",
+        "images",
+        "parallel-loading",
+        "javascript"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-029",
+      "type": "single_choice",
+      "topic": "Networking",
+      "subtopic": "Well-Known Ports",
+      "difficulty": "easy",
+      "questionMd": "According to the well-known ports listed in the lecture, which port number is used by the Secure Shell (SSH) protocol?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Port 23, which is the port number assigned to the Telnet remote login service for unencrypted terminal sessions"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Port 22, which is the standard port assigned to the Secure Shell protocol for encrypted remote access"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Port 21, which is the port number assigned to the File Transfer Protocol for uploading and downloading files remotely"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Port 443, which is the port number reserved for HTTPS and is sometimes mistaken for the SSH port by new developers"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "SSH uses TCP port 22 by default for encrypted remote shell access.",
+      "tags": [
+        "ssh",
+        "ports",
+        "networking"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-030",
+      "type": "single_choice",
+      "topic": "NodeJS",
+      "subtopic": "Localhost",
+      "difficulty": "easy",
+      "questionMd": "If a NodeJS server is listening on port 3000 of your local machine, which URL would you use in a browser to access it?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "`http://server:3000/local`"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "`node://localhost:3000`"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "`http://127.0.0.1/localhost:3000`"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "`http://localhost:3000`"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "A local web server on port 3000 is normally accessed with `http://localhost:3000`.",
+      "tags": [
+        "nodejs",
+        "localhost",
+        "port-3000"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-031",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Fetch API Purpose",
+      "difficulty": "easy",
+      "questionMd": "What is the primary purpose of the `fetch()` function in JavaScript?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "To parse HTML documents and manipulate the DOM"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "To synchronously read files from the local file system"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "To load resources asynchronously over a network using a Promise-based approach"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "To serialize JavaScript objects into JSON strings"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "`fetch()` is used to make asynchronous network requests and returns a Promise.",
+      "tags": [
+        "fetch",
+        "javascript",
+        "async"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-032",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "JSON Parsing",
+      "difficulty": "easy",
+      "questionMd": "A developer receives the string `{\"name\":\"Ice Bear\"}` from a server. Which function should they use to turn it into a usable JavaScript object?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "`JSON.decode()`"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "`JSON.parse()`"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "`JSON.stringify()`"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "`JSON.objectify()`"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "`JSON.parse()` converts a JSON-formatted string into a JavaScript object.",
+      "tags": [
+        "json",
+        "JSON.parse",
+        "javascript"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-033",
+      "type": "single_choice",
+      "topic": "NodeJS",
+      "subtopic": "Server Binding",
+      "difficulty": "medium",
+      "questionMd": "What is “binding” in the context of running a server process?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Compiling JavaScript source code into native machine code before the NodeJS runtime begins accepting HTTP requests"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Establishing a persistent TCP connection between two servers so they can exchange data without repeating the handshake"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Encrypting the server's IP address so that DNS queries return a hashed value instead of the actual numerical address"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Telling the operating system which port number to associate with the server process so it can receive incoming messages"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Binding associates a server process with a port so the operating system can deliver incoming network messages to it.",
+      "tags": [
+        "nodejs",
+        "binding",
+        "ports"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-034",
+      "type": "single_choice",
+      "topic": "NodeJS",
+      "subtopic": "Express Modules",
+      "difficulty": "medium",
+      "questionMd": "Why does using `require('express')` in a NodeJS file fail if Express has not been installed first?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Because the V8 engine blocks third-party module loading until the developer explicitly grants permission through a configuration file"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Because `require()` only works with browser-based modules and cannot load server-side libraries like Express into NodeJS"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Because Express is not part of the built-in NodeJS API; it must be downloaded separately using npm before it can be required"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Because Express requires a valid HTTPS certificate to be present in the project directory before the module can be loaded"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Express is a third-party package, so it must be installed with npm before NodeJS can load it using `require('express')`.",
+      "tags": [
+        "nodejs",
+        "express",
+        "npm",
+        "require"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-035",
+      "type": "single_choice",
+      "topic": "HTML Forms",
+      "subtopic": "Submit Event",
+      "difficulty": "easy",
+      "questionMd": "To allow a form to submit when a user presses the Enter key, which event should be listened for on the `<form>` element?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "keydown"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "click"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "submit"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "change"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "The form's `submit` event handles both button-based submission and Enter-key submission from form fields.",
+      "tags": [
+        "forms",
+        "submit",
+        "html",
+        "javascript"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-036",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "DOM Image Rendering",
+      "difficulty": "medium",
+      "questionMd": "In the completed fetch example, how is each image added to the web page after its URL is extracted?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A CSS background property is applied to an existing element"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The URL is passed to a separate fetch call to load the image data"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "A new `<img>` element is created and appended to `document.body`"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The image URL is written directly into the HTML using `innerHTML`"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "The example creates an image element, sets its URL, and appends it to the page.",
+      "tags": [
+        "javascript",
+        "dom",
+        "img",
+        "fetch"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-037",
+      "type": "single_choice",
+      "topic": "NodeJS",
+      "subtopic": "Console Output",
+      "difficulty": "easy",
+      "questionMd": "What happens when you call `console.log('nodejs')` inside the NodeJS runtime?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "It writes the text to a browser developer tools console by tunneling the output through the V8 engine's debug interface"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "It throws a ReferenceError because `console` is a DOM API object and is not defined in the NodeJS runtime environment"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "It executes successfully because the NodeJS API includes its own implementation of `console.log` that outputs to the terminal"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "It silently discards the output because NodeJS is designed for server use and does not support any form of console printing"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "NodeJS provides a `console` API, and `console.log()` writes output to the terminal or standard output.",
+      "tags": [
+        "nodejs",
+        "console.log",
+        "terminal"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-038",
+      "type": "single_choice",
+      "topic": "Web History",
+      "subtopic": "Internet Origins",
+      "difficulty": "easy",
+      "questionMd": "The Internet was originally developed in 1969 by which organization to connect computers at research facilities and universities?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Transmission Control Protocol Institute (TCPI)"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Defense Advanced Research Projects Agency (DARPA)"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "European Organization for Nuclear Research (CERN)"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "World Wide Web Consortium (W3C)"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "The early Internet grew from ARPANET, a DARPA-funded project connecting research institutions.",
+      "tags": [
+        "internet-history",
+        "darpa",
+        "arpanet"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-039",
+      "type": "single_choice",
+      "topic": "HTTP",
+      "subtopic": "Default Port",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, what is the default port number used for HTTP requests when no port is specified in a URL?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Port 443, which is commonly reserved for encrypted HTTPS communication between browsers and remote web servers"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Port 80, which is the well-known default port for Hypertext Transfer Protocol traffic on the World Wide Web"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Port 53, which is assigned to the Domain Name System service for resolving hostnames to IP addresses"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Port 3000, which is the standard development port used by NodeJS and ExpressJS applications running locally"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "HTTP uses port 80 by default when no explicit port is included in the URL.",
+      "tags": [
+        "http",
+        "port-80",
+        "networking"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-040",
+      "type": "single_choice",
+      "topic": "NodeJS",
+      "subtopic": "HTTP Server Events",
+      "difficulty": "medium",
+      "questionMd": "When is the `request` event emitted on a NodeJS HTTP server?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Whenever the operating system sends a DNS resolution result back to the server process running on the machine"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Only once, when the server first successfully binds to the specified port and begins accepting connections"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "After the server finishes sending an HTTP response and closes the TCP connection with the requesting client"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Each time a new HTTP request arrives for the NodeJS program to process"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "A NodeJS HTTP server emits a `request` event whenever an incoming HTTP request is received.",
+      "tags": [
+        "nodejs",
+        "http-server",
+        "request-event"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-041",
+      "type": "single_choice",
+      "topic": "URLs",
+      "subtopic": "Query Parameters",
+      "difficulty": "easy",
+      "questionMd": "When constructing a URL with multiple query parameters, which character is used to separate each parameter after the first one?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "?"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": ";"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "/"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "&"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "In query strings, `?` starts the query section and `&` separates additional key-value parameters.",
+      "tags": [
+        "url",
+        "query-string",
+        "parameters"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-042",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "HTML Input Values",
+      "difficulty": "easy",
+      "questionMd": "How does JavaScript read the current text entered by a user in an `<input type=\"text\">` element?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "By listening to the `input` event and reading `event.key`"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "By calling `getAttribute('text')` on the input element"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "By accessing the `.value` property of the input element"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "By reading the `.textContent` property of the input element"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "For text inputs, the live user-entered value is accessed with the element's `.value` property.",
+      "tags": [
+        "javascript",
+        "input",
+        "value"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-043",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Coding Conventions",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, what is the JavaScript coding convention for indicating that a method is intended to be private?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Using the `private` keyword before the method definition"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Declaring the method with `const` instead of inside the class body"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Wrapping the method body inside a closure immediately"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Prefixing the method name with an underscore, e.g. `_methodName()`"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "A leading underscore is a common convention indicating a method or property is intended for internal/private use.",
+      "tags": [
+        "javascript",
+        "private",
+        "conventions"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-044",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Arrow Functions",
+      "difficulty": "medium",
+      "questionMd": "When using the concise arrow function syntax, under what conditions can you omit the curly braces and the `return` keyword?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "When the function body contains only a single return statement"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "When the function is defined inside a class constructor"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "When the function takes more than two parameters"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "When the function is assigned to a variable declared with `var`"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Concise arrow functions allow implicit return when the body is a single expression.",
+      "tags": [
+        "javascript",
+        "arrow-functions",
+        "implicit-return"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-045",
+      "type": "single_choice",
+      "topic": "Data Formats",
+      "subtopic": "JSON Acronym",
+      "difficulty": "easy",
+      "questionMd": "What does JSON stand for?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "JavaScript Object Notation"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "JavaScript Ordered Node"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "JavaScript Syntax Object Notation"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Java Serialized Object Network"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "JSON stands for JavaScript Object Notation.",
+      "tags": [
+        "json",
+        "acronym",
+        "data-format"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-046",
+      "type": "single_choice",
+      "topic": "Course Information",
+      "subtopic": "Evaluation Structure",
+      "difficulty": "easy",
+      "questionMd": "According to the course evaluation structure, what percentage of the final grade is determined by the midterm component?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "50%"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "30%"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "60%"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "40%"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "The course evaluation structure marks the midterm component as 40% of the final grade.",
+      "tags": [
+        "course-evaluation",
+        "midterm"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-047",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Binding this",
+      "difficulty": "medium",
+      "questionMd": "When a method like `_onJsonReady` is passed as a callback to `.then()`, why must it be bound using `this._onJsonReady = this._onJsonReady.bind(this)` in the constructor?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "To prevent the method from being called more than once"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "To allow the method to accept multiple parameters from the Promise chain"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "To ensure that `this` inside the callback correctly refers to the class instance"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "To make the method execute synchronously instead of asynchronously"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Binding fixes the callback's `this` value so it still refers to the class instance when the method is invoked by the Promise chain.",
+      "tags": [
+        "javascript",
+        "bind",
+        "this",
+        "promises"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-048",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "CustomEvent API",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture, what is an important limitation of the CustomEvent API in JavaScript?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "CustomEvents can only be dispatched and listened to on HTML elements"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "CustomEvents can only be created inside ES6 class constructors"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "CustomEvents cannot carry any additional data in their event object"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "CustomEvents are not supported in any browser that uses the V8 engine"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "The lecture highlights that CustomEvents are tied to DOM elements/EventTarget-style usage rather than arbitrary class-instance communication.",
+      "tags": [
+        "javascript",
+        "customevent",
+        "dom-events"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-049",
+      "type": "single_choice",
+      "topic": "Web Architecture",
+      "subtopic": "Browser Request Flow",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture summary, what is the correct sequence of steps that occurs when you navigate to a URL in your browser?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The browser binds to a local port, then calls `http.createServer()` to intercept the server's response before rendering it"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The browser creates an HTTP GET request, then the operating system sends that request to the server over TCP"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The operating system sends a DNS query, then the browser directly opens a socket to the resolved IP address and fetches the page"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The browser parses the HTML response first, then sends an HTTP GET request to download any external CSS and JavaScript files"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "At a high level, browser navigation creates an HTTP GET request and the operating system/network stack sends it to the remote server over TCP.",
+      "tags": [
+        "browser",
+        "http",
+        "tcp",
+        "url"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-050",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Fetch Promise Chain",
+      "difficulty": "medium",
+      "questionMd": "In the lecture's chained fetch example, what is the correct order of asynchronous operations?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "`fetch` and `response.text()` run simultaneously before any handlers fire"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "`response.text()` runs before fetch completes"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "`onStreamProcessed` runs first, then fetch completes, then `onResponse` runs"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "fetch completes, then `onResponse` runs, then `onStreamProcessed` runs"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "The `fetch()` Promise resolves first with a response, `onResponse` runs, and then the Promise returned by `response.text()` resolves so the stream/text-processing handler runs.",
+      "tags": [
+        "fetch",
+        "promises",
+        "async-order"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-051",
+      "type": "single_choice",
+      "topic": "Web Security",
+      "subtopic": "CORS",
+      "difficulty": "medium",
+      "questionMd": "Why do all third-party REST APIs configure their servers to allow cross-origin `fetch()` requests?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Because without that server-side configuration, browsers would block cross-origin `fetch()` calls and external developers would not be able to access the API at all"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Because browser vendors require all commercial APIs to register their domains in a public CORS whitelist maintained by the W3C before allowing cross-origin access"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Because configuring CORS on the server encrypts all cross-origin traffic using TLS, which protects API keys transmitted in request headers from being intercepted"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Because CORS configuration is mandated by the HTTP/2 specification for any server that handles more than a certain number of simultaneous connections per second"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Browsers enforce CORS, so public APIs must send appropriate CORS headers if browser-based clients from other origins should access them.",
+      "tags": [
+        "cors",
+        "rest-api",
+        "browser-security"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-052",
+      "type": "single_choice",
+      "topic": "ExpressJS",
+      "subtopic": "HTTP Responses",
+      "difficulty": "medium",
+      "questionMd": "What content type does `res.send()` use by default when sending an HTTP response in ExpressJS?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "`text/html`, which treats the response body as an HTML document by default"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "`text/plain`, which sends the response as unformatted plain text without any HTML markup or content-type negotiation"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "`application/octet-stream`, which sends the response as raw binary data with no assumed encoding or character set"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "`application/json`, which serializes JavaScript objects into JSON format before transmitting them to the client browser"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "In the lecture example, `res.send()` is treated as sending HTML/text content suitable for browser rendering by default.",
+      "tags": [
+        "express",
+        "res.send",
+        "content-type"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-053",
+      "type": "single_choice",
+      "topic": "NodeJS",
+      "subtopic": "npm",
+      "difficulty": "easy",
+      "questionMd": "What is npm primarily used for in a NodeJS development workflow?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "It is a version control system integrated with NodeJS that tracks changes to JavaScript source files across a development team"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "It is a built-in NodeJS module that provides methods for creating HTTP servers and handling incoming TCP connections"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "It is a command-line tool that installs packages (libraries and tools) written in JavaScript and compatible with NodeJS"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "It is a browser extension that allows developers to inspect and modify the DOM of pages served from a NodeJS backend"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "npm is the Node package manager; it installs and manages JavaScript packages used in NodeJS projects.",
+      "tags": [
+        "nodejs",
+        "npm",
+        "packages"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-054",
+      "type": "single_choice",
+      "topic": "REST APIs",
+      "subtopic": "Base URL",
+      "difficulty": "easy",
+      "questionMd": "In REST API terminology, what is the “base URL”?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The fallback URL used when the primary endpoint is unavailable"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The root address of the API server to which all endpoint paths are appended"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The full URL including all query parameters for a specific request"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The URL of the web page that consumes the API"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "The base URL is the common root address of an API; specific endpoint paths are appended to it.",
+      "tags": [
+        "rest",
+        "api",
+        "base-url"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-055",
+      "type": "single_choice",
+      "topic": "URLs",
+      "subtopic": "Port Numbers",
+      "difficulty": "easy",
+      "questionMd": "In the URL `http://www.example.com:8080`, what does the value `8080` represent?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The TCP port on which the HTTP server is listening"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The subnet mask of the server's IP address"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The version number of the HTTP protocol being used"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The number of packets sent in the HTTP request"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "A number after the hostname and colon in a URL specifies the port used to contact the server.",
+      "tags": [
+        "url",
+        "port",
+        "http"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-056",
+      "type": "single_choice",
+      "topic": "HTTP",
+      "subtopic": "Browser Navigation",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, what type of HTTP request does a browser issue when you load a URL by typing it into the address bar?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "An HTTP POST request, because navigation events send the current page's form state to the server as part of the browser's session continuity mechanism"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "An HTTP OPTIONS request, so that the browser can first discover which methods and content types the destination server supports before committing to a full request"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "An HTTP HEAD request that retrieves only the response headers so the browser can determine the content type and size before deciding to download the full body"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "An HTTP GET request for the resource at that URL"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Typing a URL into the address bar causes the browser to request the resource with HTTP GET.",
+      "tags": [
+        "http",
+        "get",
+        "browser"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-057",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Fetch Promise Chain",
+      "difficulty": "medium",
+      "questionMd": "In a chained Promise pattern, what must `onResponse` return for the next `.then()` in the chain to receive the text data?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The response object itself"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "A resolved string from `response.status`"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "A JSON object created with `JSON.parse()`"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The Promise returned by `response.text()`"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Returning `response.text()` passes its resulting Promise into the chain; the next `.then()` receives the resolved text value.",
+      "tags": [
+        "fetch",
+        "response.text",
+        "promise-chain"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-058",
+      "type": "single_choice",
+      "topic": "Web Security",
+      "subtopic": "CORS Same-Origin Classification",
+      "difficulty": "medium",
+      "questionMd": "If a page at `abc.com/users` makes a `fetch()` request to `abc.com/search`, how is this request classified according to CORS rules?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "It is a same-origin request because both URLs share the same domain"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "It is a cross-origin request because the URL paths `/users` and `/search` are different, which triggers the browser's preflight OPTIONS mechanism"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "It is classified as a restricted request because it travels between two different endpoints on the server, which requires an explicit Access-Control-Allow-Path header"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "It is a cross-origin request because `fetch()` always performs an origin check against the `window.location.href` value at the time the call is initiated"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "CORS origin is based on scheme, host, and port, not the URL path. Two paths under the same origin are same-origin requests.",
+      "tags": [
+        "cors",
+        "same-origin",
+        "fetch"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-059",
+      "type": "single_choice",
+      "topic": "HTTP",
+      "subtopic": "POST Request Body",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, what is the recommended way to send data in a POST request rather than using query parameters in the URL?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Append data to the URL path as route segments instead of query parameters so Express can read them from `req.params`"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Send the data in the body of the HTTP request rather than appending it as query parameters to the URL"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Encode all data as Base64 and place it in the Authorization header so the server can decode it securely upon receipt"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Store data in the browser's local storage before making the POST request so the server can retrieve it on the next GET request"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "POST requests commonly send submitted data in the HTTP request body instead of exposing it as URL query parameters.",
+      "tags": [
+        "http",
+        "post",
+        "request-body"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-060",
+      "type": "single_choice",
+      "topic": "Data Formats",
+      "subtopic": "JSON History",
+      "difficulty": "easy",
+      "questionMd": "Who created JSON according to the lecture?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Ryan Dahl"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Tim Berners-Lee"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Douglas Crockford"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Brendan Eich"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "The lecture attributes JSON to Douglas Crockford.",
+      "tags": [
+        "json",
+        "douglas-crockford",
+        "history"
+      ],
+      "sourceRefs": [
+        "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    }
+  ]
+}

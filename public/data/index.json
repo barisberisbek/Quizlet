@@ -196,6 +196,42 @@
       "fileName": "dwp/q6-merged.json"
     },
     {
+      "id": "midterm-merged",
+      "title": "DWP Midterm — 60 Unique Questions",
+      "description": "Comprehensive midterm practice set covering Fetch API, REST, Node.js, browser architecture, and async JavaScript.",
+      "source": "DWP Midterm (2025-2026 Spring)",
+      "course": "Dynamic Web Programming",
+      "topic": "Mixed",
+      "topics": [
+        "Browser Architecture",
+        "Course Information",
+        "Data Formats",
+        "ExpressJS",
+        "HTML Forms",
+        "HTTP",
+        "JavaScript",
+        "Networking",
+        "NodeJS",
+        "Programming Concepts",
+        "REST APIs",
+        "Server-Side Programming",
+        "URLs",
+        "Web Architecture",
+        "Web Development",
+        "Web History",
+        "Web Security"
+      ],
+      "questionCount": 60,
+      "difficulty": "easy",
+      "estimatedMinutes": 90,
+      "tags": [
+        "midterm",
+        "merged",
+        "past-exam"
+      ],
+      "fileName": "dwp/midterm-merged.json"
+    },
+    {
       "id": "old-merged",
       "title": "Old Exam Examples",
       "description": "Mixed questions from past DWP exams including true/false, Express, Fetch API, and more.",
@@ -388,6 +424,72 @@
         "merged"
       ],
       "fileName": "irs/irs-q6-merged.json"
+    },
+    {
+      "id": "irs-q7-merged",
+      "title": "[IRS] Quiz 7 — Language Models & Query Expansion",
+      "description": "Dirichlet/JM smoothing, PRF, RM3, WordNet expansion, vocabulary mismatch.",
+      "source": "IRS Past Exams",
+      "course": "Information Retrieval Systems",
+      "topic": "Language Models",
+      "topics": [
+        "Evaluation",
+        "Language Models",
+        "Pseudo-Relevance Feedback",
+        "Query Expansion",
+        "Vocabulary Mismatch"
+      ],
+      "questionCount": 15,
+      "difficulty": "medium",
+      "estimatedMinutes": 23,
+      "tags": [
+        "irs",
+        "q7",
+        "merged"
+      ],
+      "fileName": "irs/irs-q7-merged.json"
+    },
+    {
+      "id": "irs-midterm-merged",
+      "title": "[IRS] Midterm — 60 Unique Questions",
+      "description": "Comprehensive midterm set covering evaluation, retrieval models, index compression, text processing, and OpenSearch.",
+      "source": "IRS Midterm (2025-2026 Spring)",
+      "course": "Information Retrieval Systems",
+      "topic": "Evaluation",
+      "topics": [
+        "Boolean Retrieval",
+        "Evaluation",
+        "Evaluation History",
+        "IR Fundamentals",
+        "IR System Design",
+        "Index Compression",
+        "Index Construction",
+        "Inverted Index",
+        "OpenSearch",
+        "Phonetic Retrieval",
+        "Phrase Search",
+        "Phrase and Proximity Search",
+        "Postings Processing",
+        "Ranking Models",
+        "Search Architecture",
+        "Spelling Correction",
+        "Term Distributions",
+        "Term Statistics",
+        "Term Weighting",
+        "Text Processing",
+        "Vector Space Model",
+        "Vocabulary Growth",
+        "Wildcard Queries"
+      ],
+      "questionCount": 60,
+      "difficulty": "medium",
+      "estimatedMinutes": 90,
+      "tags": [
+        "irs",
+        "midterm",
+        "merged"
+      ],
+      "fileName": "irs/irs-midterm-merged.json"
     },
     {
       "id": "irs-new-mix-merged",
