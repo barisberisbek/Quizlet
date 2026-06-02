@@ -458,9 +458,9 @@
         "Query Expansion",
         "Vocabulary Mismatch"
       ],
-      "questionCount": 15,
+      "questionCount": 59,
       "difficulty": "medium",
-      "estimatedMinutes": 23,
+      "estimatedMinutes": 89,
       "tags": [
         "irs",
         "q7",

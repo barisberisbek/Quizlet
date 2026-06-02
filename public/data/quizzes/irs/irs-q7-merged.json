@@ -7,15 +7,61 @@
     "course": "Information Retrieval Systems",
     "topic": "Language Models",
     "topics": [
+      "20 Newsgroups Dataset",
+      "Absolute Discounting smoothing",
+      "BM25 parameters",
+      "Bayesian Interpretation of Dirichlet Smoothing",
+      "Classical and Neural Language Models",
+      "Dirichlet Smoothing",
+      "Dirichlet Smoothing Behavior",
+      "Dirichlet smoothing formula",
+      "DirichletLM Troubleshooting",
       "Evaluation",
+      "Expansion Strategies",
+      "Failure Analysis and Topic Drift",
+      "Jelinek-Mercer Smoothing",
+      "Language Model Smoothing",
+      "Language Modeling",
       "Language Models",
+      "Language Models for IR",
+      "Maximum Likelihood Estimate",
+      "Mutual Information",
+      "PRF pipeline",
       "Pseudo-Relevance Feedback",
       "Query Expansion",
-      "Vocabulary Mismatch"
+      "Query Expansion vs Document Expansion",
+      "Query Likelihood Formula",
+      "Query Likelihood Ranking",
+      "RM1 Formula",
+      "RM1 Term Probability",
+      "RM3 Lambda Parameter",
+      "RM3 and Pyserini",
+      "RM3 interpolation",
+      "RM3 lambda behavior",
+      "Ranking Models",
+      "Real-world applications",
+      "Relevance Feedback",
+      "Relevance Models",
+      "Rocchio Algorithm",
+      "Rocchio Formula",
+      "Rocchio PRF parameters",
+      "Rocchio PRF update",
+      "Rocchio Vector Update",
+      "Rocchio calculation",
+      "Rocchio formula parameters",
+      "Rocchio geometric interpretation",
+      "Rocchio vs RM3",
+      "Selective Expansion with Thesauri",
+      "Topic Drift",
+      "Topic drift mitigation",
+      "Unsmoothed Query Likelihood",
+      "Vocabulary Mismatch",
+      "When PRF Helps or Hurts",
+      "WordNet and Polysemy"
     ],
-    "questionCount": 15,
+    "questionCount": 59,
     "difficulty": "medium",
-    "estimatedMinutes": 23,
+    "estimatedMinutes": 89,
     "tags": [
       "irs",
       "q7",
@@ -691,6 +737,2007 @@
       ],
       "sourceRefs": [
         "incoming-retrieval-json/Q7.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-016",
+      "type": "single_choice",
+      "topic": "Language Modeling",
+      "subtopic": "Dirichlet Smoothing",
+      "difficulty": "medium",
+      "questionMd": "Which of the following is the correct Dirichlet smoothing formula for `P(t|d)` as taught in Week 7, and what is the role of the parameter `μ` in the denominator?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "P_Dir(t|d) = (tf(t,d) + μ × P(t|C)) / (|d| + μ), where μ acts as a pseudo-count of imaginary collection-derived observations added to both the numerator and denominator before normalizing."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "P_Dir(t|d) = max(tf(t,d) - μ, 0) / |d| + μ × |unique_terms(d)| / |d| × P(t|C), where μ is the fixed per-term discount subtracted from all observed frequencies in the document."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "P_Dir(t|d) = tf(t,d) × μ / (|d| × cf(t)), where μ is a scaling factor that amplifies the document term frequency relative to the collection frequency of the same term across all documents."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "P_Dir(t|d) = (1 - μ) P_ML(t|d) + μ P(t|C), where μ in [0,1] linearly interpolates between the document-specific maximum likelihood estimate and the corpus-wide background probability of each term."
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Dirichlet smoothing estimates `P(t|d)` by adding `μ × P(t|C)` pseudo-counts from the collection language model and normalizing by `|d| + μ`. Thus, `μ` controls how strongly the document model is pulled toward the collection model.",
+      "tags": [
+        "language-model",
+        "dirichlet-smoothing",
+        "mu",
+        "collection-model"
+      ],
+      "sourceRefs": [
+        "Beg-Quiz-7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-017",
+      "type": "single_choice",
+      "topic": "Query Expansion",
+      "subtopic": "Rocchio Algorithm",
+      "difficulty": "medium",
+      "questionMd": "The Week 7 lecture describes a geometric interpretation for how the Rocchio algorithm modifies the original query vector. What is this geometric interpretation?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Rocchio scales the query vector by the average retrieval score of the top-k documents, lengthening the query vector in its original direction so that documents similar to the original query receive proportionally higher scores after re-retrieval."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Rocchio moves the query vector toward the centroid of the pseudo-relevant documents in TF-IDF vector space, so the expanded query q′ is displaced in the direction of the average location of the top-k retrieved documents."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Rocchio projects the query vector onto the subspace spanned by the pseudo-relevant documents, replacing the original query direction with the component that has the largest cosine similarity to the pseudo-relevant document set."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Rocchio rotates the query vector by a fixed angle in the direction of the highest-ranked individual document, so the expanded query points toward the single most relevant document rather than toward a centroid of all top-k documents."
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Rocchio feedback updates the query by combining the original query with the centroid of pseudo-relevant documents. Geometrically, the query vector moves toward the average position of the top retrieved documents.",
+      "tags": [
+        "rocchio",
+        "query-vector",
+        "centroid",
+        "pseudo-relevance-feedback"
+      ],
+      "sourceRefs": [
+        "Beg-Quiz-7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-018",
+      "type": "single_choice",
+      "topic": "Evaluation",
+      "subtopic": "20 Newsgroups Dataset",
+      "difficulty": "easy",
+      "questionMd": "Which dataset is used in the Week 7 lab, why was it selected, and how are relevance judgments for evaluation produced without manual annotation?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The TREC Robust04 newswire collection is used because it comes with official NIST relevance judgments that allow students to compute exact evaluation metrics without making any assumptions about which documents count as relevant to each test query."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The Reuters-21578 dataset from NLTK is used because its 90+ topic categories provide a rich multi-label relevance structure that allows students to evaluate retrieval across many different domain areas within a single standardized document collection."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The Wikipedia Simple English corpus is used because its short articles closely approximate the average document length that Dirichlet smoothing is optimized for, and its hyperlink structure provides automatic relevance signal for query-document pairs."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The 20 Newsgroups dataset is used because its category labels serve as pseudo-relevance ground truth: a document is considered relevant to a query if it belongs to the query's target newsgroup category, enabling quantitative P@10 and MAP computation."
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "The lab uses 20 Newsgroups because its labels can act as pseudo-relevance judgments. If a query is associated with a target category, documents from that category can be treated as relevant for metrics such as P@10 and MAP.",
+      "tags": [
+        "20-newsgroups",
+        "evaluation",
+        "pseudo-relevance",
+        "p@10",
+        "map"
+      ],
+      "sourceRefs": [
+        "Beg-Quiz-7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-019",
+      "type": "single_choice",
+      "topic": "Pseudo-Relevance Feedback",
+      "subtopic": "Failure Analysis and Topic Drift",
+      "difficulty": "medium",
+      "questionMd": "The Week 7 lab explicitly requires students to find a query where PRF causes retrieval quality to decrease rather than improve. What three things must students document about this failure case, according to the lab instructions?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Students must document (a) the P@10 score before expansion, (b) the P@10 score after expansion, and (c) the exact expanded query string produced by the PRF algorithm, including all term weights assigned by the Rocchio or RM3 formula."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Students must document (a) the original query that caused the failure, (b) the μ value used in the Dirichlet LM initial retrieval, and (c) a revised μ value that would prevent the failure by reducing the influence of the collection model on the initial top-k result set."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Students must document (a) the number of pseudo-relevant documents used in the feedback step, (b) the number of expansion terms m selected from the centroid, and (c) the revised k and m values that would prevent drift without eliminating the expansion benefit for other queries."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Students must identify (a) which specific expansion terms caused topic drift, (b) why those particular terms appeared in the feedback, i.e., why the initial top-k led to that vocabulary, and (c) what mitigation strategy would reduce the negative impact of expansion for that query."
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "The failure-case analysis focuses on diagnosing topic drift: identifying harmful expansion terms, explaining how the initial feedback set introduced them, and proposing a mitigation strategy.",
+      "tags": [
+        "prf",
+        "topic-drift",
+        "failure-analysis",
+        "query-expansion"
+      ],
+      "sourceRefs": [
+        "Beg-Quiz-7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-020",
+      "type": "single_choice",
+      "topic": "Query Expansion",
+      "subtopic": "Mutual Information",
+      "difficulty": "medium",
+      "questionMd": "Week 7 describes co-occurrence-based query expansion using Mutual Information (MI). What does a high MI value between a candidate term `t` and a query term `q` indicate?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A high MI value indicates that the document frequency of t is much lower than the document frequency of q, meaning t is a more specific term that can be added to the query to improve precision by restricting results to a narrower part of the collection."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "A high MI value indicates that t appears in a very large proportion of documents in the collection regardless of whether q is present, making t a high-recall expansion term that broadens the query to match many documents across many different topics."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "A high MI value indicates that t and q rarely co-occur in the same documents, suggesting that they refer to complementary aspects of the same topic and that adding t to the query will retrieve documents covering the part of the topic not addressed by q alone."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "A high MI value indicates that t and q co-occur in the collection much more frequently than would be expected by chance if they were independent, suggesting a strong semantic relationship that makes t a good candidate expansion term for queries containing q."
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Mutual Information measures association beyond chance. A high MI score means the candidate term and query term co-occur more often than expected under independence, so the candidate term is likely semantically related.",
+      "tags": [
+        "mutual-information",
+        "co-occurrence",
+        "query-expansion",
+        "term-association"
+      ],
+      "sourceRefs": [
+        "Beg-Quiz-7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-021",
+      "type": "single_choice",
+      "topic": "Query Expansion",
+      "subtopic": "Rocchio Vector Update",
+      "difficulty": "hard",
+      "questionMd": "A query vector is `q = [1, 0, 1.0]` in a 3-dimensional TF-IDF space. Two pseudo-relevant documents are `d1 = [1, 1, 1]` and `d2 = [0, 1, 1]`. Using Rocchio with `alpha = 1.0` and `beta = 0.75`, what is the expanded query vector `q′`?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Because the second dimension of q is zero, the Rocchio update ignores that dimension entirely and produces q′ = [1.75, 0, 1.75], treating zero-weighted dimensions in the original query as immutable and preventing any new expansion terms from being added."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The centroid of d1 and d2 is [0.5, 1.0, 1.0]. Applying the Rocchio formula: q′ = 1.0 × [1, 0, 1] + 0.75 × [0.5, 1.0, 1.0] = [1.375, 0.75, 1.75]. The second dimension becomes positive due to the contribution of 0.75 as a new expansion term."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The centroid of d1 and d2 is [1.0, 2.0, 2.0] (sum rather than average). Applying the Rocchio formula: q′ = 1.0 × [1, 0, 1] + 0.75 × [1.0, 2.0, 2.0] = [1.75, 1.5, 2.5], overestimating the centroid because the documents were summed instead of averaged."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The centroid of d1 and d2 is [0.5, 1.0, 1.0]. Applying the Rocchio formula: q′ = 0.75 × [1, 0, 1] + 1.0 × [0.5, 1.0, 1.0] = [1.25, 1.0, 1.75]. The alpha and beta roles are swapped, giving the centroid a higher weight than the original query vector."
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "The pseudo-relevant centroid is the average of `d1` and `d2`: `[0.5, 1.0, 1.0]`. Rocchio gives `q′ = αq + β centroid = [1,0,1] + 0.75[0.5,1,1] = [1.375,0.75,1.75]`.",
+      "tags": [
+        "rocchio",
+        "vector-space-model",
+        "centroid",
+        "tf-idf",
+        "calculation"
+      ],
+      "sourceRefs": [
+        "Beg-Quiz-7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-022",
+      "type": "single_choice",
+      "topic": "Relevance Models",
+      "subtopic": "RM1 Formula",
+      "difficulty": "medium",
+      "questionMd": "Two pseudo-relevant documents are retrieved for query `space`. Doc A with `P(A|q) = 0.6` has `P(\"shuttle\"|A) = 0.10`, and Doc B with `P(B|q) = 0.4` has `P(\"shuttle\"|B) = 0.04`. What is `P(\"shuttle\"|R)` according to the RM1 formula?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "P(\"shuttle\"|R) = 0.10 × 0.4 + 0.04 × 0.6 = 0.04 + 0.024 = 0.064. The relevance weights P(d|q) are swapped between the two documents, assigning the higher weight to the document that scores lower in the initial retrieval ranking."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "P(\"shuttle\"|R) = 0.10 × 0.6 + 0.04 × 0.4 = 0.06 + 0.016 = 0.076. Doc A contributes more because it both assigns a higher probability to \"shuttle\" and receives a higher relevance weight from the initial query scoring."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "P(\"shuttle\"|R) = max(0.10 × 0.6, 0.04 × 0.4) = max(0.06, 0.016) = 0.06. Only the contribution from the highest-ranked document is used, and the lower-ranked document's probability mass is completely discarded from the computation."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "P(\"shuttle\"|R) = (0.10 + 0.04) / 2 = 0.07. The two document probabilities are averaged with equal weight, ignoring the different query-conditioned relevance scores assigned to each document by the initial retrieval model."
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "RM1 estimates the relevance model by summing term probabilities weighted by each document's query-conditioned relevance. Therefore `0.10 × 0.6 + 0.04 × 0.4 = 0.076`.",
+      "tags": [
+        "rm1",
+        "relevance-model",
+        "pseudo-relevance-feedback",
+        "term-probability"
+      ],
+      "sourceRefs": [
+        "Beg-Quiz-7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-023",
+      "type": "single_choice",
+      "topic": "Query Expansion",
+      "subtopic": "WordNet and Polysemy",
+      "difficulty": "medium",
+      "questionMd": "What is the polysemy problem in the context of WordNet-based global query expansion, as described in Week 7, and which mitigation strategy is mentioned in the lecture?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Polysemy means that synonyms from the thesaurus are too general and frequently appear in almost every document in the collection, which reduces their discriminative power and causes expanded queries to retrieve many irrelevant documents."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Polysemy means a query term has multiple senses, so a thesaurus expansion may add synonyms for the wrong sense and hurt precision. A mitigation is to expand only low-frequency query terms or to skip terms that appear in too many synonym groups."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Polysemy means the WordNet thesaurus does not cover technical or domain-specific vocabulary, so expansion terms generated from the thesaurus are frequently absent from the document collection and contribute no additional retrieval signal."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Polysemy means two different query terms share the same synonym, causing the expansion to add duplicate terms to the query that inflate the weight of a single concept and introduce a bias toward documents that happen to contain that synonym."
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Polysemy occurs when one word has multiple meanings. Global thesaurus expansion may choose synonyms from the wrong sense, causing topic drift and reduced precision; filtering ambiguous or high-frequency terms is one mitigation.",
+      "tags": [
+        "wordnet",
+        "polysemy",
+        "global-query-expansion",
+        "precision"
+      ],
+      "sourceRefs": [
+        "Beg-Quiz-7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-024",
+      "type": "single_choice",
+      "topic": "Expansion Strategies",
+      "subtopic": "Query Expansion vs Document Expansion",
+      "difficulty": "medium",
+      "questionMd": "The Week 7 lecture contrasts document expansion with query expansion as strategies for addressing vocabulary mismatch. What is the primary practical reason that query expansion is generally preferred over document expansion in production retrieval systems?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Document expansion requires access to the original document authors to obtain approved synonyms for the content they wrote, whereas query expansion can be performed automatically without any involvement from the creators of the indexed documents."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Query expansion produces consistently higher precision and recall than document expansion on all known benchmark collections, because adding terms to the query is a mathematically optimal strategy that cannot be matched by the heuristic approach of modifying stored documents."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Query expansion adds terms at search time without modifying the index, making it much cheaper to deploy and update, whereas document expansion requires re-indexing the entire collection every time the expansion vocabulary or policy changes."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Query expansion allows the system to use a different set of expansion terms for every individual query term in every document, whereas document expansion must apply a single uniform synonym dictionary to all terms in all documents at the time of indexing."
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Query expansion is operationally easier because it changes only the query-processing step. Document expansion modifies stored documents or the index, so vocabulary-policy changes may require expensive re-indexing.",
+      "tags": [
+        "query-expansion",
+        "document-expansion",
+        "production-systems",
+        "indexing"
+      ],
+      "sourceRefs": [
+        "Beg-Quiz-7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-025",
+      "type": "single_choice",
+      "topic": "Language Modeling",
+      "subtopic": "Bayesian Interpretation of Dirichlet Smoothing",
+      "difficulty": "medium",
+      "questionMd": "What is the Bayesian interpretation of the `μ` parameter in Dirichlet smoothing, as explained in the Week 7 lecture?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "μ represents the maximum a posteriori estimate of the document length, used to normalize the smoothed term probabilities so that they sum to exactly one across all terms in the vocabulary of the collection."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "μ represents the number of pseudo-observations drawn from the collection model that are added to the document before observing the actual document tokens."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "μ represents the posterior variance of the collection language model, quantifying how uncertain the model is about the true term probabilities in the collection before any document-specific observations are incorporated."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "μ represents the number of documents in the collection that are assumed to be a priori relevant to any query, functioning as a relevance prior that up-weights collection-frequent terms before document scoring begins."
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Under a Bayesian interpretation, `μ` is the strength of the prior: it acts like a number of pseudo-observations sampled from the collection language model and mixed with the document's observed counts.",
+      "tags": [
+        "dirichlet",
+        "bayesian-interpretation",
+        "mu",
+        "pseudo-observations"
+      ],
+      "sourceRefs": [
+        "Beg-Quiz-7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-026",
+      "type": "single_choice",
+      "topic": "Language Models",
+      "subtopic": "Classical and Neural Language Models",
+      "difficulty": "medium",
+      "questionMd": "The Week 7 lecture draws a connection between the statistical language model framework and modern neural language models. Which statement correctly describes this connection as it is presented in the course materials?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The RM3 relevance model formula is the statistical predecessor to the cross-attention layer in BERT-based neural rerankers, since both methods compute a weighted combination of individual document term probabilities conditioned on an initial query representation."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The Rocchio algorithm in TF-IDF vector space is functionally identical to a single gradient descent update in a neural retrieval model, because both methods move a query representation in the direction of a pseudo-relevant centroid by a fixed learning rate."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The same n-gram language model framework introduced this week underpins GPT pretraining objectives and speech recognition systems, making the classical probabilistic formulation a direct conceptual precursor to modern language models."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The Dirichlet-smoothed language model is mathematically equivalent to the attention mechanism in transformer-based neural language models, because both compute a weighted sum over context tokens using a softmax-normalized distribution."
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Classical n-gram language models introduced the probabilistic idea of modeling sequences with term probabilities. Modern neural language models such as GPT use much richer architectures, but they still build on the language-modeling objective.",
+      "tags": [
+        "n-gram",
+        "gpt",
+        "speech-recognition",
+        "language-modeling"
+      ],
+      "sourceRefs": [
+        "Beg-Quiz-7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-027",
+      "type": "single_choice",
+      "topic": "Query Expansion",
+      "subtopic": "Selective Expansion with Thesauri",
+      "difficulty": "medium",
+      "questionMd": "The Week 7 lecture describes **selective expansion** as a strategy for global query expansion using thesauri. What does selective expansion mean in this context, and why is it used?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Selective expansion means choosing the single highest-MI expansion term from the co-occurrence statistics and adding only that one term to the query, rather than adding all candidate synonyms, to prevent the query from becoming so long that term independence assumptions break down."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Selective expansion means applying thesaurus-based expansion only to query terms where initial retrieval confidence is low, rather than expanding all query terms indiscriminately, to avoid degrading precision for terms that are already retrieving relevant documents effectively."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Selective expansion means expanding only queries that contain fewer than three terms, because short queries benefit most from additional vocabulary while long queries already contain sufficient discriminative terms to retrieve relevant documents without any expansion."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Selective expansion means expanding query terms only when the term appears in fewer than 1% of collection documents, because extremely rare terms are the ones most likely to suffer from vocabulary mismatch and therefore most in need of synonym-based support."
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Selective expansion avoids expanding every query term blindly. It applies expansion only where the original retrieval signal is weak, which helps reduce query drift and prevents precision loss for terms that already retrieve relevant documents well.",
+      "tags": [
+        "query-expansion",
+        "global-expansion",
+        "thesaurus",
+        "selective-expansion",
+        "precision"
+      ],
+      "sourceRefs": [
+        "Uploaded Documents - fa-q7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-028",
+      "type": "single_choice",
+      "topic": "Pseudo-Relevance Feedback",
+      "subtopic": "Rocchio vs RM3",
+      "difficulty": "medium",
+      "questionMd": "The Week 7 lecture compares the Rocchio algorithm to the RM3 relevance model. Which of the following correctly describes a key difference between the two PRF approaches?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Rocchio consistently outperforms RM3 on TREC benchmarks because TF-IDF vector space is a more accurate representation of term importance than probabilistic language model scores derived from Dirichlet-smoothed document models."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Rocchio is a probabilistic model that derives expansion terms by computing relevance language model probabilities, whereas RM3 is a geometric model that moves the query vector in TF-IDF space toward the centroid of pseudo-relevant documents."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Rocchio operates geometrically in TF-IDF vector space, moving the query toward the pseudo-relevant centroid, whereas RM3 is probabilistically grounded and weights each document's contribution by its query-conditioned relevance probability using language model scores."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Rocchio requires explicit relevance judgments from human assessors to compute the non-relevant document centroid, whereas RM3 is fully automatic and uses only the top-k retrieved documents without requiring any manual relevance assessment."
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Rocchio is a vector-space feedback method: it moves the query vector toward the centroid of pseudo-relevant documents. RM3 is a language-model-based PRF method that estimates expansion term probabilities using document language models weighted by query-conditioned relevance probabilities.",
+      "tags": [
+        "rocchio",
+        "rm3",
+        "pseudo-relevance-feedback",
+        "tf-idf",
+        "language-model"
+      ],
+      "sourceRefs": [
+        "Uploaded Documents - fa-q7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-029",
+      "type": "single_choice",
+      "topic": "Language Models",
+      "subtopic": "DirichletLM Troubleshooting",
+      "difficulty": "medium",
+      "questionMd": "A student's DirichletLM implementation produces a score of negative infinity (`-inf`) for certain queries against some documents. According to the Week 7 troubleshooting guide, what is the cause and the recommended fix?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The mu parameter is set to zero, collapsing the Dirichlet formula to the raw MLE estimate, which then assigns zero probability to unseen query terms and produces a log of zero error during the summation of log term probabilities in the scoring function."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The `bm25.search()` function is returning document objects rather than integer indices, causing an `IndexError` when the `pseudo_rel_ids` are used to slice the TF-IDF matrix `X`, and the `IndexError` is being incorrectly caught and converted to a `-inf` score by the exception handler."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "A query term has zero probability in the collection model, causing `log(0)` when computing the log-sum score. The fix is to add a small floor value such as `1e-10` to the `p_collection()` function so that no term ever returns an exact zero probability."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The Rocchio expansion terms are only stop words because `stop_words='english'` was not set in the `TfidfVectorizer`, causing the expanded query to contain only high-frequency function words that have near-zero IDF weights and produce trivially low log scores."
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "A `-inf` log-likelihood usually appears when a probability becomes exactly zero and the implementation computes `log(0)`. Adding a small floor to the collection probability avoids zero probabilities and keeps the log-score finite.",
+      "tags": [
+        "dirichlet-smoothing",
+        "language-model",
+        "log-zero",
+        "collection-model",
+        "troubleshooting"
+      ],
+      "sourceRefs": [
+        "Uploaded Documents - fa-q7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-030",
+      "type": "single_choice",
+      "topic": "Relevance Models",
+      "subtopic": "RM1 Term Probability",
+      "difficulty": "hard",
+      "questionMd": "The RM1 relevance model computes `P(t|R)`, the probability of term `t` given the pseudo-relevant set `R`. Which formula correctly describes this computation as taught in Week 7?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "`P(t|R) = (1/|R|) × sum` over all documents `d` in the top-k set of `P(t|d)`, where the term probability in each pseudo-relevant document is simply averaged with equal weight regardless of how relevant each document is to the query."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "`P(t|R) = sum` over all documents `d` in the top-k set of `[P(t|d) × P(d|q)]`, where each document's language model probability for term `t` is weighted by that document's query-conditioned relevance probability."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "`P(t|R) = max` over all documents `d` in the top-k set of `[P(t|d) × P(d|q)]`, where only the single most relevant document's contribution is used to assign an expansion term probability rather than aggregating across all pseudo-relevant documents."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "`P(t|R) = P(t|C) × sum` over all documents `d` in the top-k set of `P(d|q)`, where the collection-level term probability is scaled by the total probability mass assigned to the pseudo-relevant documents by the initial retrieval model."
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "RM1 estimates the relevance model by aggregating term probabilities from pseudo-relevant documents. Each document contributes according to `P(d|q)`, so documents that are more likely to be relevant to the query have greater influence on `P(t|R)`.",
+      "tags": [
+        "rm1",
+        "rm3",
+        "relevance-model",
+        "pseudo-relevance-feedback",
+        "probability"
+      ],
+      "sourceRefs": [
+        "Uploaded Documents - fa-q7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-031",
+      "type": "single_choice",
+      "topic": "Pseudo-Relevance Feedback",
+      "subtopic": "Rocchio Formula",
+      "difficulty": "medium",
+      "questionMd": "The Rocchio algorithm for Pseudo-Relevance Feedback uses a formula to compute the expanded query vector `q'`. In the PRF setting where no explicit non-relevant documents are available, which formula correctly represents the Rocchio update as taught in Week 7?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "`q' = alpha × q + beta × (1/|Rel|) × sum of d for all d in Rel`, where alpha and beta weight the original query and the pseudo-relevant document centroid respectively, and the gamma non-relevant term drops out."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "`q' = alpha × q - gamma × (1/|NR|) × sum of d for all d in NR`, where the original query is preserved at weight alpha and the centroid of non-relevant documents is subtracted with weight gamma to move the query away from off-topic content."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "`q' = (1 - lambda) × P_RM1(t) + lambda × P_ML(t|q)`, where lambda controls the balance between expansion terms derived from the top-k relevance model and the original maximum likelihood query term probabilities."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "`q' = sum over all d in Rel of [P(t|d) × P(d|q)]`, where each document's contribution to the new query vector is weighted by the posterior probability of relevance given the original query terms and document scores."
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "In the PRF version of Rocchio, the system has pseudo-relevant documents but no explicit non-relevant set. Therefore, the update keeps the original query vector and adds the centroid of pseudo-relevant documents, while the non-relevant subtraction term is omitted.",
+      "tags": [
+        "rocchio",
+        "pseudo-relevance-feedback",
+        "query-vector",
+        "centroid",
+        "formula"
+      ],
+      "sourceRefs": [
+        "Uploaded Documents - fa-q7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-032",
+      "type": "single_choice",
+      "topic": "Language Models",
+      "subtopic": "Unsmoothed Query Likelihood",
+      "difficulty": "medium",
+      "questionMd": "A two-term query `q = {\"orbit\", \"launch\"}` is scored against document `d`, which contains `\"orbit\"` three times but does not contain `\"launch\"` at all. Under the unsmoothed query likelihood model using MLE, what is the resulting score `P(q|d)`?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The score is very small but non-zero, because MLE automatically falls back to the collection probability `P(t|C)` whenever a term is absent from a document, preventing the score from reaching zero."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The score equals `P(\"orbit\"|d)`, because missing terms are simply ignored in the product formula and the non-zero term probabilities are multiplied together over the subset of terms that do appear in the document."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The score is exactly 0, because `P(\"launch\"|d) = 0` under MLE, and multiplying any non-zero probability by zero in the product `P(\"orbit\"|d) × P(\"launch\"|d)` forces the entire query likelihood to zero."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The score is undefined and the document is excluded from ranking entirely, because a document that is missing any query term is considered completely irrelevant by the query likelihood model."
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "With unsmoothed MLE, a term absent from a document has probability zero. Since query likelihood multiplies the probabilities of query terms, one missing term makes the whole product zero.",
+      "tags": [
+        "mle",
+        "query-likelihood",
+        "language-model",
+        "zero-probability",
+        "smoothing"
+      ],
+      "sourceRefs": [
+        "Uploaded Documents - fa-q7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-033",
+      "type": "single_choice",
+      "topic": "Language Models",
+      "subtopic": "Maximum Likelihood Estimate",
+      "difficulty": "easy",
+      "questionMd": "What is the Maximum Likelihood Estimate (MLE) for the probability of term `t` given document `d`, as defined in the Week 7 lectures?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "`P_ML(t|d) = cf(t) / |C|`, where `cf(t)` is the collection frequency of term `t` and `|C|` is the total number of tokens in the entire corpus collection."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "`P_ML(t|d) = tf(t,d) / |d|`, where `tf(t,d)` is the number of times term `t` appears in document `d` and `|d|` is the total number of tokens in document `d`."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "`P_ML(t|d) = tf(t,d) / df(t)`, where `tf(t,d)` is the term frequency in document `d` and `df(t)` is the number of documents in the collection that contain term `t`."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "`P_ML(t|d) = log(tf(t,d) + 1) / |d|`, where the logarithm is applied to dampen the effect of high-frequency terms before dividing by the document length."
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "The document MLE estimates a term's probability from its observed relative frequency inside that document: term count divided by total document length.",
+      "tags": [
+        "mle",
+        "language-model",
+        "term-frequency",
+        "document-length",
+        "probability"
+      ],
+      "sourceRefs": [
+        "Uploaded Documents - fa-q7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-034",
+      "type": "single_choice",
+      "topic": "Relevance Models",
+      "subtopic": "RM3 and Pyserini",
+      "difficulty": "medium",
+      "questionMd": "According to the Week 7 materials, what is the significance of RM3 in the context of academic IR evaluation systems, and which toolkit provides a standard RM3 implementation that students are suggested to use for the exercise course project?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "RM3 is the standard PRF baseline in academic IR evaluations, and Pyserini (the Python wrapper around Anserini/Lucene used in recent TREC evaluations) provides a production RM3 implementation that students use as the foundation for Project."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "RM3 is the historical precursor to BM25 that was replaced in TREC evaluations after 2004, and NLTK provides the only available open-source implementation of the original Abdul-Jaleel formulation that students use to replicate the original TREC 2004 results."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "RM3 is a proprietary algorithm developed by Google that has only recently been made available for academic use, and scikit-learn provides the standard open-source implementation that students use in the Week 7 lab and in their course project submissions."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "RM3 is the dominant reranking method in neural IR systems, and Hugging Face Transformers provides the standard RM3 implementation built on top of BERT-based cross-encoders that students use to rerank BM25 results in Project Phase 1."
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "RM3 is commonly used as a strong pseudo-relevance feedback baseline in academic IR evaluation. Pyserini, built around Anserini/Lucene, exposes a practical RM3 implementation suitable for experiments and course projects.",
+      "tags": [
+        "rm3",
+        "pyserini",
+        "anserini",
+        "lucene",
+        "trec",
+        "prf"
+      ],
+      "sourceRefs": [
+        "Uploaded Documents - fa-q7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-035",
+      "type": "single_choice",
+      "topic": "Relevance Models",
+      "subtopic": "RM3 Lambda Parameter",
+      "difficulty": "hard",
+      "questionMd": "In the RM3 formula `P_RM3(t) = (1 - lambda) × P_RM1(t) + lambda × P_ML(t|q)`, what happens to the expanded query when lambda is set close to 1.0, and when is this setting advisable?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "When lambda is close to 1.0, the RM3 model heavily emphasizes the original query term probabilities and gives very little weight to expansion terms from the relevance model. This setting is advisable when topic drift is a concern or when initial retrieval precision is low."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "When lambda is close to 1.0, the Dirichlet smoothing parameter mu is implicitly increased within the RM3 pipeline, causing the pseudo-relevant document language models to converge toward the collection model and reducing the distinctiveness of each document's expansion contribution."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "When lambda is close to 1.0, the RM3 formula becomes equivalent to the Rocchio formula, because both methods then assign equal weight to all documents in the pseudo-relevant set and compute an unweighted average of per-term probabilities across the top-k feedback documents."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "When lambda is close to 1.0, the RM3 model fully replaces the original query with the expansion terms from `P_RM1(t)` and ignores the original query entirely. This setting is advisable when the initial retrieval returns many highly relevant documents in the top-k positions."
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "In RM3, lambda controls interpolation with the original query model. Values near 1.0 keep the expanded query close to the original query, which can reduce topic drift when feedback documents may not be reliable.",
+      "tags": [
+        "rm3",
+        "lambda",
+        "interpolation",
+        "topic-drift",
+        "query-model"
+      ],
+      "sourceRefs": [
+        "Uploaded Documents - fa-q7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-036",
+      "type": "single_choice",
+      "topic": "Language Models",
+      "subtopic": "Dirichlet Smoothing Behavior",
+      "difficulty": "hard",
+      "questionMd": "A student claims: \"Setting mu to a very large value in Dirichlet smoothing reduces the influence of the collection model and makes the score rely more on the document's own term frequencies.\" Is this claim correct, and what actually happens as mu increases toward infinity?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The claim is correct. Larger mu amplifies the weight of the document's own term frequencies in the numerator, causing the smoothed estimate to move progressively closer to the raw MLE value and further from the collection model."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The claim is irrelevant because the optimal mu is a fixed universal constant of 1500 for all retrieval collections, so practitioners should never adjust it based on collection-specific properties or document length distributions and the net effect on ranking depends entirely on the average document length in the collection."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The claim is partially correct. Larger mu reduces smoothing only for long documents while simultaneously increasing smoothing for short documents, so the net effect on ranking depends entirely on the average document length in the collection."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The claim is incorrect. Larger mu means MORE smoothing toward the collection model. As mu approaches infinity, the document-specific term frequencies become negligible and all documents converge to the same collection-wide probability distribution, making ranking useless."
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Dirichlet smoothing interpolates document evidence with collection evidence. Increasing `mu` gives more weight to the collection model; in the limit, document-specific counts vanish and all documents look the same under the collection distribution.",
+      "tags": [
+        "dirichlet-smoothing",
+        "mu",
+        "collection-model",
+        "language-model",
+        "ranking"
+      ],
+      "sourceRefs": [
+        "Uploaded Documents - fa-q7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-037",
+      "type": "single_choice",
+      "topic": "Language Models for IR",
+      "subtopic": "Query Likelihood Ranking",
+      "difficulty": "medium",
+      "questionMd": "In the context of information retrieval as taught in Week 7, how is a language model used to rank documents in response to a query?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Each query is modelled as a probability distribution over vocabulary terms, and documents are ranked by the probability that the query's language model would generate the words found in each document."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Each document is modelled as a probability distribution over vocabulary terms, and documents are ranked by the probability that the document's language model would generate the observed query words."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Each document is modelled as a Markov chain over word sequences, and documents are ranked by the joint probability of generating the entire query sentence in the correct left-to-right word order."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "A single collection-wide language model is trained, and documents are ranked by how much their term frequencies deviate from the predictions made by that unified collection model."
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "In the query likelihood model, every document has its own language model. A document receives a high score if its model assigns high probability to the query terms.",
+      "tags": [
+        "language-model",
+        "query-likelihood",
+        "ranking",
+        "week-7"
+      ],
+      "sourceRefs": [
+        "galip-quiz7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-038",
+      "type": "single_choice",
+      "topic": "Language Models",
+      "subtopic": "Classical and Neural Language Models",
+      "difficulty": "medium",
+      "questionMd": "The Week 7 lecture draws a connection between the statistical language model framework and modern neural language models. Which statement correctly describes this connection as it is presented in the course materials?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The Dirichlet-smoothed language model is mathematically equivalent to the attention mechanism in transformer-based neural language models, because both compute a weighted sum over context tokens using a softmax-normalized distribution."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The same n-gram language model framework introduced this week underpins GPT pretraining objectives and speech recognition systems, making the classical probabilistic formulation a direct conceptual precursor to modern large language models."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The Rocchio algorithm in TF-IDF vector space is functionally identical to a single gradient descent update in a neural retrieval model, because both methods move a query representation in the direction of a pseudo-relevant centroid by a fixed learning rate."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The RM3 relevance model formula is the statistical predecessor to the cross-attention layer in BERT-based neural rerankers, since both methods compute a weighted combination of individual document term probabilities conditioned on an initial query representation."
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Classical n-gram language models introduced the idea of assigning probabilities to word sequences. Modern neural language models generalize this idea with neural representations and larger contexts.",
+      "tags": [
+        "n-gram",
+        "language-model",
+        "neural-language-model",
+        "gpt"
+      ],
+      "sourceRefs": [
+        "galip-quiz7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-039",
+      "type": "single_choice",
+      "topic": "Pseudo-Relevance Feedback",
+      "subtopic": "Topic Drift",
+      "difficulty": "medium",
+      "questionMd": "The Week 7 lecture uses the query `jaguar` to illustrate topic drift during PRF. Which scenario correctly describes how topic drift manifests for this query?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "If the initial top-k results are dominated by automotive reviews, the expansion terms will be concepts like `horsepower`, `engine`, and `sedan`, causing the re-retrieved results to further emphasize the car sense of `jaguar` and crowd out wildlife or other relevant documents."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The WordNet thesaurus assigns `jaguar` to a single unambiguous synset covering only the animal sense, so all expansion terms from the thesaurus refer to wildlife, and the RM3 model fails to find documents about Jaguar cars regardless of the initial retrieval results."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The Dirichlet smoothing parameter mu is set too low for the `jaguar` query, causing the initial retrieval to assign zero probability to any automotive-related terms and preventing the PRF system from finding any meaningful expansion terms at all."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "If the initial top-k results are dominated by wildlife articles, the expansion terms will be concepts like `prey`, `habitat`, and `feline`, which are highly specific synonyms that narrow the query to only wildlife documents and exclude many other relevant automotive sources."
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Topic drift happens when feedback terms reflect the dominant sense in the initial results instead of the user's intended sense. For `jaguar`, car-heavy results can push the expanded query further toward cars.",
+      "tags": [
+        "prf",
+        "topic-drift",
+        "jaguar",
+        "rm3"
+      ],
+      "sourceRefs": [
+        "galip-quiz7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-040",
+      "type": "single_choice",
+      "topic": "Pseudo-Relevance Feedback",
+      "subtopic": "Rocchio Algorithm",
+      "difficulty": "medium",
+      "questionMd": "A query vector is `q = [1.0, 0, 1.0]` in a 3-dimensional TF-IDF space. Two pseudo-relevant documents are `d1 = [1, 1, 1]` and `d2 = [0, 1, 1]`. Using Rocchio with `alpha = 1.0` and `beta = 0.75`, what is the expanded query vector `q'`?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The centroid of d1 and d2 is [1.0, 2.0, 2.0] rather than their average. Applying the Rocchio formula `q' = 1.0 × [1, 0, 1] + 0.75 × [1.0, 2.0, 2.0] = [1.75, 1.5, 2.5]`, overestimating the centroid because the documents were summed instead of averaged."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The centroid of d1 and d2 is [0.5, 1.0, 1.0]. Applying the Rocchio formula `q' = 1.0 × [1, 0, 1] + 0.75 × [0.5, 1.0, 1.0] = [1.375, 0.75, 1.75]`. The second dimension, previously zero, now has a positive weight of 0.75 as an expansion term."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The centroid of d1 and d2 is [0.5, 1.0, 1.0]. Applying the Rocchio formula `q' = 0.75 × [1, 0, 1] + 1.0 × [0.5, 1.0, 1.0] = [1.25, 1.0, 1.75]`. The alpha and beta values are swapped, giving the centroid a higher weight than the original query vector."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Because the second dimension of q is zero, Rocchio update ignores that dimension entirely and produces `q' = [1.375, 0, 1.75]`, treating zero-weighted dimensions in the original query as immutable and preventing any new expansion terms from being added."
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Rocchio uses `q' = alpha q + beta centroid(D_r)`. The centroid is `[0.5, 1.0, 1.0]`, so `q' = [1,0,1] + 0.75[0.5,1,1] = [1.375,0.75,1.75]`.",
+      "tags": [
+        "rocchio",
+        "tf-idf",
+        "vector-space-model",
+        "prf"
+      ],
+      "sourceRefs": [
+        "galip-quiz7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-041",
+      "type": "single_choice",
+      "topic": "Language Models for IR",
+      "subtopic": "Query Likelihood Formula",
+      "difficulty": "medium",
+      "questionMd": "The Query Likelihood Retrieval Model scores a document `d` for query `q`. Given that query term `t` appears `tf(t,q)` times in `q` and the model assigns probability `P(t|d)` to each term, which formula correctly expresses the query likelihood score in log form?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "`log P(q|d) = sum over all terms t in q of [log P(t|d) - log P(t|C)]`, which measures the divergence between the document model and the collection model as a sum of log-ratio terms over all query terms."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "`log P(q|d) = product over all terms t in q of [P(t|d) / P(t|C)]`, which normalizes each document-level probability by the baseline collection probability before multiplying the ratios together into a final score."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "`log P(q|d) = sum over all terms t in q of [tf(t,d) × log P(t|C)]`, which weights the collection-level probability of each term by how often that term appears in the document rather than in the query."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "`log P(q|d) = sum over all terms t in q of [tf(t,q) × log P(t|d)]`, which converts the product of per-term probabilities into a sum of log probabilities to avoid floating-point underflow during computation."
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "The query likelihood score multiplies document-model probabilities for the query terms. In log space, this becomes a weighted sum using query term frequencies.",
+      "tags": [
+        "query-likelihood",
+        "log-probability",
+        "language-model",
+        "underflow"
+      ],
+      "sourceRefs": [
+        "galip-quiz7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-042",
+      "type": "single_choice",
+      "topic": "Language Model Smoothing",
+      "subtopic": "Jelinek-Mercer Smoothing",
+      "difficulty": "medium",
+      "questionMd": "Which formula correctly describes Jelinek-Mercer (JM) smoothing as presented in the Week 7 lecture, and what does the parameter lambda control?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "`P_JM(t|d) = (tf(t,d) + lambda × P(t|C)) / (|d| + lambda)`, where lambda is a pseudo-count that adds imaginary collection-derived pseudo-observations to the document's own observed term counts before normalization."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "`P_JM(t|d) = (1 - lambda) × P_ML(t|d) + lambda × P(t|C)`, where `lambda` in `[0,1]` controls the linear interpolation balance between the document-specific MLE estimate and the collection-wide probability."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "`P_JM(t|d) = tf(t,d) / |d| + lambda × df(t)`, where lambda scales a document-frequency penalty that reduces the weight of terms appearing in many documents throughout the collection."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "`P_JM(t|d) = max(tf(t,d) - lambda, 0) / |d| + lambda × |unique_terms(d)| / |d| × P(t|C)`, where lambda is the fixed discount subtracted from every observed term count in the document."
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "JM smoothing linearly interpolates the document maximum-likelihood model with the collection model. Lambda determines how much probability mass is taken from the collection model.",
+      "tags": [
+        "jelinek-mercer",
+        "smoothing",
+        "lambda",
+        "collection-model"
+      ],
+      "sourceRefs": [
+        "galip-quiz7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-043",
+      "type": "single_choice",
+      "topic": "Pseudo-Relevance Feedback",
+      "subtopic": "When PRF Helps or Hurts",
+      "difficulty": "medium",
+      "questionMd": "According to Week 7, under what conditions does PRF reliably help retrieval, and under what conditions does it reliably hurt?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "PRF reliably helps when the initial retrieval precision is already above 0.5, meaning most top-k documents are genuinely on-topic; PRF reliably hurts for ambiguous short queries of one or two words and for queries in specialized domains poorly represented in the collection."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "PRF reliably helps when the query contains many rare terms that are absent from most documents in the collection; PRF reliably hurts when the query contains only common, high-frequency terms that already match a large proportion of the document collection."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "PRF reliably helps when the Dirichlet mu parameter is set above 2000, giving the initial retrieval a strong collection-level smoothing signal; PRF reliably hurts when mu is set below 500, causing the initial top-k to be dominated by short documents with inflated term frequencies."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "PRF reliably helps when the number of pseudo-relevant documents k is set above 50 so the centroid averages out noisy individual documents; PRF reliably hurts when k is set to fewer than 5, leaving the centroid dominated by a single document's idiosyncratic vocabulary."
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "PRF assumes the top results are mostly relevant. If that assumption is true, feedback terms help; if the query is ambiguous or the initial ranking is poor, feedback can drift away from the intended topic.",
+      "tags": [
+        "prf",
+        "pseudo-relevance-feedback",
+        "topic-drift",
+        "initial-precision"
+      ],
+      "sourceRefs": [
+        "galip-quiz7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-044",
+      "type": "single_choice",
+      "topic": "Relevance Models",
+      "subtopic": "RM3 and Pyserini",
+      "difficulty": "medium",
+      "questionMd": "According to the Week 7 materials, what is the significance of RM3 in the context of academic IR evaluation systems, and which toolkit provides a standard RM3 implementation that students are suggested to use for the exercise course project?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "RM3 is the historical precursor to BM25 that was replaced in TREC evaluations after 2004, and NLTK provides the only available open-source implementation of the original Abdul-Jaleel formulation that students use to replicate the original TREC 2004 results."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "RM3 is a proprietary algorithm developed by Google that has only recently been made available for academic use, and scikit-learn provides the standard open-source implementation that students use in the Week 7 lab and in their course project submissions."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "RM3 is the standard PRF baseline in academic IR evaluations, and Pyserini, the Python wrapper around Anserini/Lucene used in recent TREC evaluations, provides a production RM3 implementation that students use as the foundation for the project."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "RM3 is the dominant reranking method in neural IR systems, and Hugging Face Transformers provides the standard RM3 implementation built on top of BERT-based cross-encoders that students use to rerank BM25 results in Project Phase 1."
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "RM3 is a widely used pseudo-relevance feedback baseline. Pyserini provides a practical implementation built around Anserini/Lucene tooling used in IR evaluation workflows.",
+      "tags": [
+        "rm3",
+        "pyserini",
+        "anserini",
+        "trec",
+        "prf"
+      ],
+      "sourceRefs": [
+        "galip-quiz7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-045",
+      "type": "single_choice",
+      "topic": "Language Model Smoothing",
+      "subtopic": "Dirichlet Smoothing",
+      "difficulty": "medium",
+      "questionMd": "What is the Bayesian interpretation of the mu parameter in Dirichlet smoothing, as explained in the Week 7 lecture?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Mu represents the number of pseudo-observations drawn from the collection model that are added to the document before observing the actual document tokens."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Mu represents the posterior variance of the collection language model, quantifying how uncertain the model is about the true term probabilities in the collection before any document-specific observations are incorporated."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Mu represents the maximum a posteriori estimate of the document length, used to normalize the smoothed term probabilities so that they sum to exactly one across all terms in the vocabulary of the collection."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Mu represents the number of documents in the collection that are assumed to be a priori relevant to any query, functioning as a relevance prior that up-weights collection-frequent terms before document scoring begins."
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "In Dirichlet smoothing, mu acts like the strength of a prior. It can be interpreted as adding mu pseudo-counts from the collection model to the document model.",
+      "tags": [
+        "dirichlet-smoothing",
+        "mu",
+        "bayesian-prior",
+        "pseudo-counts"
+      ],
+      "sourceRefs": [
+        "galip-quiz7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-046",
+      "type": "single_choice",
+      "topic": "Relevance Feedback",
+      "subtopic": "Rocchio PRF parameters",
+      "difficulty": "medium",
+      "questionMd": "In the Rocchio PRF formula `q' = alpha x q + beta x centroid(Rel) - gamma x centroid(NR)`, what do the alpha and beta parameters control, and what are their typical values as stated in Week 7?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Alpha controls the Dirichlet smoothing pseudo-count applied to the pseudo-relevant document language models, while beta controls the interpolation weight lambda used in the final RM3 formula that combines RM1 expansion with the original query model."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Alpha controls the weight given to the original query vector in the update, while beta controls the weight given to the pseudo-relevant document centroid. Typical values are alpha = 1.0 and beta = 0.75, with gamma = 0.15 for the non-relevant term."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Alpha controls the TF-IDF normalization applied to the original query vector before the update, while beta controls the IDF weighting applied to the centroid vector so that low-IDF stop words in the feedback documents receive negligible expansion weight."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Alpha controls the number of expansion terms m selected from the centroid, while beta controls the number of pseudo-relevant documents k used to compute the centroid. Typical values are alpha = 15 expansion terms and beta = 10 feedback documents."
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "In Rocchio feedback, `alpha` preserves the original query vector and `beta` controls how strongly the pseudo-relevant centroid pulls the expanded query. In the stated setting, the usual weights are alpha = 1.0, beta = 0.75, and gamma = 0.15 for non-relevant feedback when available.",
+      "tags": [
+        "rocchio",
+        "pseudo-relevance-feedback",
+        "query-vector",
+        "centroid"
+      ],
+      "sourceRefs": [
+        "ibo_Q7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-047",
+      "type": "single_choice",
+      "topic": "Query Expansion",
+      "subtopic": "RM3 interpolation",
+      "difficulty": "medium",
+      "questionMd": "RM3 interpolates between the RM1 expansion model and the original query language model. Which formula correctly describes RM3, and what does the lambda parameter control?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "P_RM3(t) = alpha x P_ML(t|q) + beta x centroid(Rel), where alpha and beta are set to 1.0 and 0.75 respectively and the centroid of pseudo-relevant documents is used instead of the RM1 probabilistic relevance model estimate."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "P_RM3(t) = (1 - lambda) x P_RM1(t) + lambda x P_ML(t|q), where lambda controls how much weight is placed on the original query term probabilities versus the expansion terms derived from the pseudo-relevant document set."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "P_RM3(t) = (1 - lambda) x P(t|C) + lambda x P_RM1(t), where lambda controls how much weight is placed on the expansion terms from the relevance model versus the background collection probability for each vocabulary term."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "P_RM3(t) = P_RM1(t) x (1 - P_ML(t|q)) / lambda, where lambda normalizes the product of the expansion model and the complement of the original query model to ensure all term probabilities sum to one after interpolation."
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "RM3 linearly mixes the RM1 relevance model with the original query model. A larger `lambda` in this formula gives more weight to the original query terms, while a smaller value allows expansion terms from pseudo-relevant documents to have more influence.",
+      "tags": [
+        "rm3",
+        "rm1",
+        "language-model",
+        "query-expansion",
+        "lambda"
+      ],
+      "sourceRefs": [
+        "ibo_Q7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-048",
+      "type": "single_choice",
+      "topic": "Language Models",
+      "subtopic": "Absolute Discounting smoothing",
+      "difficulty": "medium",
+      "questionMd": "Which of the following best describes the core mechanism of Absolute Discounting smoothing as explained in Week 7, and what distinguishes it from Dirichlet smoothing?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Absolute Discounting multiplies each term's MLE probability by a discount factor that varies with the term's document frequency, giving rare terms a larger absolute reduction and common terms a smaller proportional reduction."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Absolute Discounting adds a fixed pseudo-count to every term's frequency before normalization, ensuring that both seen and unseen terms receive a uniform additive boost that is proportional to the size of the document being scored."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Absolute Discounting linearly interpolates between the raw MLE estimate and the collection model using a fixed mixing coefficient, applying the same interpolation weight to every document regardless of document length or term frequency. Unlike Dirichlet, the discount applied is different regardless of how frequent the seen term is."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Absolute Discounting subtracts a fixed constant delta from every observed term count and redistributes the pooled probability mass uniformly to unseen terms via the collection model. Unlike Dirichlet, the discount applied is the same regardless of how frequent the seen term is."
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Absolute Discounting reduces each observed count by a fixed discount and assigns the reserved probability mass to unseen or background terms. Dirichlet smoothing instead uses a collection-model pseudo-count controlled by `mu`.",
+      "tags": [
+        "absolute-discounting",
+        "smoothing",
+        "dirichlet",
+        "language-model"
+      ],
+      "sourceRefs": [
+        "ibo_Q7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-049",
+      "type": "single_choice",
+      "topic": "Language Models",
+      "subtopic": "Real-world applications",
+      "difficulty": "easy",
+      "questionMd": "Week 7 discusses several real-world applications of the statistical language model framework beyond web search ranking. Which of the following application areas is explicitly mentioned in the lecture as using smoothed language model principles?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Speech recognition, where language models assign probabilities to candidate transcription sequences, and mobile autocomplete, where n-gram language models with smoothing predict the next word based on the current input context."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Network intrusion detection and cybersecurity anomaly detection, where statistical language models assign probabilities to sequences of network packets and flag sequences whose log-probability falls below a threshold as potential security threats."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Database query optimization and SQL parsing, where collection language model statistics are used to estimate the selectivity of predicate terms in structured queries and improve join ordering decisions in relational query planning systems."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Image captioning and object detection, where unigram language models assign probabilities to visual feature sequences in the same way that document language models assign probabilities to word sequences in information retrieval tasks."
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Speech recognition and autocomplete are classic uses of language models: they estimate the probability of word sequences and rely on smoothing to handle unseen or rare n-grams.",
+      "tags": [
+        "language-model",
+        "smoothing",
+        "speech-recognition",
+        "autocomplete",
+        "n-gram"
+      ],
+      "sourceRefs": [
+        "ibo_Q7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-050",
+      "type": "single_choice",
+      "topic": "Relevance Feedback",
+      "subtopic": "Rocchio PRF update",
+      "difficulty": "medium",
+      "questionMd": "The Rocchio algorithm for Pseudo-Relevance Feedback uses a formula to compute the expanded query vector `q'`. In the PRF setting where no explicit non-relevant documents are available, which formula correctly represents the Rocchio update as taught in Week 7?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "q' = sum over all d in Rel of [ P(t|d) x P(d|q) ], where each document's contribution to the new query vector is weighted by the posterior probability of relevance given the original query terms and document scores."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "q' = alpha x q - gamma x (1/|NR|) x sum of d for all d in NR, where the original query is preserved at weight alpha and the centroid of non-relevant documents is subtracted with weight gamma to move the query away from off-topic content."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "q' = alpha x q + beta x (1/|Rel|) x sum of d for all d in Rel, where alpha and beta weight the original query and the pseudo-relevant document centroid respectively, and the gamma non-relevant term drops out."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "q' = (1 - lambda) x P_RM1(t) + lambda x P_ML(t|q), where lambda controls the balance between expansion terms derived from the top-k relevance model and the original maximum likelihood query term probabilities."
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "In pseudo-relevance feedback, the top-ranked documents are treated as relevant and no explicit non-relevant set is used. Therefore the update keeps the original query and adds the centroid of the pseudo-relevant documents; the negative gamma term is omitted.",
+      "tags": [
+        "rocchio",
+        "prf",
+        "centroid",
+        "query-expansion",
+        "tf-idf"
+      ],
+      "sourceRefs": [
+        "ibo_Q7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-051",
+      "type": "single_choice",
+      "topic": "Query Expansion",
+      "subtopic": "RM3 lambda behavior",
+      "difficulty": "medium",
+      "questionMd": "In the RM3 formula `P_RM3(t) = (1-lambda) x P_RM1(t) + lambda x P_ML(t|q)`, what happens to the expanded query when lambda is set close to 1.0, and when is this setting advisable?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "When lambda is close to 1.0, the Dirichlet smoothing parameter mu is implicitly increased within the RM3 pipeline, causing the pseudo-relevant document language models to converge toward the collection model and reducing the distinctiveness of each document's expansion contribution."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "When lambda is close to 1.0, the RM3 formula becomes equivalent to the Rocchio formula, because both methods then assign equal weight to all documents in the pseudo-relevant set and compute an unweighted average of per-term probabilities across the top-k feedback documents."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "When lambda is close to 1.0, the RM3 model heavily emphasizes the original query term probabilities and gives very little weight to expansion terms from the relevance model. This setting is advisable when topic drift is a concern or when initial retrieval precision is low."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "When lambda is close to 1.0, the RM3 model fully replaces the original query with the expansion terms from P_RM1(t) and ignores the original query entirely. This setting is advisable when the initial retrieval returns many highly relevant documents in the top-k positions."
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "In the stated RM3 equation, `lambda` multiplies the original query model. Values near 1.0 keep the query close to the user's original terms and reduce the risk of topic drift from noisy pseudo-relevant feedback.",
+      "tags": [
+        "rm3",
+        "lambda",
+        "topic-drift",
+        "query-model",
+        "pseudo-relevance-feedback"
+      ],
+      "sourceRefs": [
+        "ibo_Q7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-052",
+      "type": "single_choice",
+      "topic": "Ranking Models",
+      "subtopic": "BM25 parameters",
+      "difficulty": "medium",
+      "questionMd": "During the post-midterm review in Week 7, a common student error regarding BM25 parameters is addressed. What does the BM25 parameter `k1` actually control, and what is the most frequent misconception students hold about it?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "k1 controls document length normalization, scaling the term frequency contribution by the ratio of document length to average document length. Many students incorrectly believe that k1 controls how quickly repeated term occurrences saturate, which is actually the role of the b parameter."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "k1 controls TF saturation, determining how quickly additional occurrences of a term stop adding retrieval score. Many students incorrectly believe that k1 controls document length normalization, which is actually the role of the separate b parameter."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "k1 controls the number of pseudo-relevant documents used in the PRF feedback step that follows initial BM25 retrieval. Many students incorrectly believe that k1 is a term weighting exponent applied to raw term frequencies before the BM25 normalization formula is computed."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "k1 controls the IDF component of the BM25 score, scaling the inverse document frequency contribution of each query term. Many students incorrectly believe that k1 is the Dirichlet pseudo-count parameter that determines how strongly collection statistics influence document scoring."
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "In BM25, `k1` controls the saturation curve for term frequency: repeated occurrences help less and less after a point. The `b` parameter, not `k1`, controls document length normalization.",
+      "tags": [
+        "bm25",
+        "k1",
+        "tf-saturation",
+        "b-parameter",
+        "length-normalization"
+      ],
+      "sourceRefs": [
+        "ibo_Q7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-053",
+      "type": "single_choice",
+      "topic": "Language Models",
+      "subtopic": "Dirichlet smoothing formula",
+      "difficulty": "medium",
+      "questionMd": "Which of the following is the correct Dirichlet smoothing formula for `P(t|d)` as taught in Week 7, and what is the role of the parameter mu in the denominator?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "P_Dir(t|d) = (1 - mu) x P_ML(t|d) + mu x P(t|C), where mu in [0,1] linearly interpolates between the document-specific maximum likelihood estimate and the corpus-wide background probability of each term."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "P_Dir(t|d) = max(tf(t,d) - mu, 0) / |d| + mu x |unique_terms(d)| / |d| x P(t|C), where mu is the fixed per-term discount subtracted from all observed term frequencies in the document."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "P_Dir(t|d) = (tf(t,d) + mu x P(t|C)) / (|d| + mu), where mu acts as a pseudo-count of imaginary collection-derived observations added to both the numerator and denominator before normalizing."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "P_Dir(t|d) = tf(t,d) x mu / (|d| x cf(t)), where mu is a scaling factor that amplifies the document term frequency relative to the collection frequency of the same term across all documents."
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Dirichlet smoothing adds a collection prior to the document estimate. The numerator adds `mu x P(t|C)` as pseudo-count evidence, and the denominator `|d| + mu` normalizes document length plus the pseudo-count mass.",
+      "tags": [
+        "dirichlet",
+        "smoothing",
+        "mu",
+        "language-model",
+        "collection-model"
+      ],
+      "sourceRefs": [
+        "ibo_Q7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-054",
+      "type": "single_choice",
+      "topic": "Pseudo-Relevance Feedback",
+      "subtopic": "RM3 interpolation",
+      "difficulty": "medium",
+      "questionMd": "RM3 interpolates between the RM1 expansion model and the original query language model. Which formula correctly describes RM3, and what does the lambda parameter control?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "P_RM3(t) = P_RM1(t) × (1 - P_ML(t|q)) / lambda, where lambda normalizes the product of the expansion model and the complement of the original query model to ensure all term probabilities sum to one after interpolation."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "P_RM3(t) = alpha × P_ML(t|q) + beta × centroid(Rel), where alpha and beta are set to 1.0 and 0.75 respectively and the centroid of pseudo-relevant documents is used instead of the RM1 probabilistic relevance model estimate."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "P_RM3(t) = (1 - lambda) × P(t|C) + lambda × P_RM1(t), where lambda controls how much weight is placed on the expansion terms from the relevance model versus the background collection probability for each vocabulary term."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "P_RM3(t) = (1 - lambda) × P_RM1(t) + lambda × P_ML(t|q), where lambda controls how much weight is placed on the original query term probabilities versus the expansion terms derived from the pseudo-relevant document set."
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "RM3 is an interpolation of the RM1 relevance model and the original query model. With this convention, a larger lambda gives more weight to the original query model, while a smaller lambda gives more influence to expansion terms.",
+      "tags": [
+        "rm3",
+        "rm1",
+        "pseudo-relevance-feedback",
+        "language-model"
+      ],
+      "sourceRefs": [
+        "Uploaded PDF: IR_QUİZ7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-055",
+      "type": "single_choice",
+      "topic": "Pseudo-Relevance Feedback",
+      "subtopic": "Topic drift mitigation",
+      "difficulty": "medium",
+      "questionMd": "Week 7 describes several strategies for mitigating topic drift in PRF. Which of the following is a mitigation strategy explicitly mentioned in the lecture?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Replacing the TF-IDF vectorizer in Rocchio with a BM25 weighting scheme so that document length normalization prevents overly long documents in the top-k set from contributing a disproportionate share of the expansion vocabulary."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Removing stop words from the expansion term candidates after PRF is complete rather than before, ensuring that only content-bearing expansion terms survive and that the re-retrieved results are not influenced by high-frequency function words."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Limiting the number of expansion terms added to the query, so that only the most strongly supported new terms are incorporated, and increasing lambda in RM3 to preserve more of the original query signal relative to the expansion terms."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Increasing mu in the Dirichlet language model used for initial retrieval so that the top-k documents converge more closely to the collection model, thereby reducing the influence of any individual subtopic on the composition of the pseudo-relevant set."
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Topic drift happens when expansion terms move the query away from the user’s original intent. A common mitigation is to limit the number of expansion terms and keep a stronger original-query weight in RM3.",
+      "tags": [
+        "topic-drift",
+        "pseudo-relevance-feedback",
+        "rm3",
+        "query-expansion"
+      ],
+      "sourceRefs": [
+        "Uploaded PDF: IR_QUİZ7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-056",
+      "type": "single_choice",
+      "topic": "Pseudo-Relevance Feedback",
+      "subtopic": "PRF pipeline",
+      "difficulty": "easy",
+      "questionMd": "Pseudo-Relevance Feedback (PRF) is described in Week 7 as a four-step pipeline. Which of the following correctly describes all four steps in the correct order?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Step 1: Compute co-occurrence statistics for all pairs of terms in the collection. Step 2: Identify terms with high mutual information to each query term. Step 3: Add those high-MI terms to the query. Step 4: Run the single expanded query against the inverted index to retrieve ranked results."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Step 1: Remove stop words and stem all query terms. Step 2: Retrieve documents matching the preprocessed query. Step 3: Select the top-ranked document and extract all of its unique terms. Step 4: Add all extracted terms to the query and re-run retrieval once more."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Step 1: Run the initial query to retrieve the top-k documents. Step 2: Extract expansion terms from those top-k documents. Step 3: Reweight or add the expansion terms to the original query. Step 4: Re-run the expanded query to produce the final ranked results."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Step 1: Expand the query using a WordNet thesaurus before any retrieval. Step 2: Run the expanded query to retrieve the top-k documents. Step 3: Ask a human assessor to judge the relevance of each retrieved document. Step 4: Re-rank the top-k documents based on the assessor’s explicit relevance judgments."
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "PRF first retrieves an initial ranked list, assumes the top-k documents are pseudo-relevant, extracts expansion terms from them, updates the query, and then retrieves again using the expanded query.",
+      "tags": [
+        "prf",
+        "pseudo-relevance-feedback",
+        "top-k",
+        "query-expansion"
+      ],
+      "sourceRefs": [
+        "Uploaded PDF: IR_QUİZ7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-057",
+      "type": "single_choice",
+      "topic": "Pseudo-Relevance Feedback",
+      "subtopic": "Rocchio formula parameters",
+      "difficulty": "medium",
+      "questionMd": "In the Rocchio PRF formula q′ = alpha × q + beta × centroid(Rel) − gamma × centroid(NR), what do the alpha and beta parameters control, and what are their typical values as stated in Week 7?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Alpha controls the TF-IDF normalization applied to the original query vector before the update, while beta controls the IDF weighting applied to the centroid vector so that low-IDF stop words in the feedback documents receive negligible expansion weight."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Alpha controls the Dirichlet smoothing pseudo-count applied to the pseudo-relevant document language models, while beta controls the interpolation weight lambda used in the final RM3 formula that combines RM1 expansion with the original query model."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Alpha controls the number of expansion terms selected from the centroid, while beta controls the number of pseudo-relevant documents k used to compute the centroid. Typical values are alpha = 15 expansion terms and beta = 10 feedback documents."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Alpha controls the weight given to the original query vector in the update, while beta controls the weight given to the pseudo-relevant document centroid. Typical values are alpha = 1.0 and beta = 0.75, with gamma = 0.15 for the non-relevant term."
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Rocchio updates the query vector by combining the original query with a centroid of relevant or pseudo-relevant documents. Alpha controls how much of the original query remains, while beta controls how strongly the relevant-document centroid influences the new query.",
+      "tags": [
+        "rocchio",
+        "alpha",
+        "beta",
+        "centroid",
+        "tf-idf"
+      ],
+      "sourceRefs": [
+        "Uploaded PDF: IR_QUİZ7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-058",
+      "type": "single_choice",
+      "topic": "Pseudo-Relevance Feedback",
+      "subtopic": "Rocchio geometric interpretation",
+      "difficulty": "easy",
+      "questionMd": "The Week 7 lecture describes a geometric interpretation for how the Rocchio algorithm modifies the original query vector. What is this geometric interpretation?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Rocchio moves the query vector toward the centroid of the pseudo-relevant documents in TF-IDF vector space, so the expanded query is displaced in the direction of the average location of the top-k retrieved documents."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Rocchio scales the query vector by the average retrieval score of the top-k documents, lengthening the query vector in its original direction so that documents similar to the original query receive proportionally higher scores after re-retrieval."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Rocchio projects the query vector onto the subspace spanned by the pseudo-relevant documents, replacing the original query direction with the component that has the largest cosine similarity to the pseudo-relevant document set."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Rocchio rotates the query vector by a fixed angle in the direction of the highest-ranked individual document, so the expanded query points toward the single most relevant document rather than toward a centroid of all top-k documents."
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Rocchio is geometrically interpreted as shifting the query toward the centroid of relevant or pseudo-relevant documents. This makes the updated query better match the region of vector space where the top-k documents lie.",
+      "tags": [
+        "rocchio",
+        "centroid",
+        "vector-space",
+        "tf-idf"
+      ],
+      "sourceRefs": [
+        "Uploaded PDF: IR_QUİZ7.pdf"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "irs-q7-059",
+      "type": "single_choice",
+      "topic": "Pseudo-Relevance Feedback",
+      "subtopic": "Rocchio calculation",
+      "difficulty": "hard",
+      "questionMd": "A query vector is q = [1.0, 0, 1.0] in a 3-dimensional TF-IDF space. Two pseudo-relevant documents are d1 = [1, 1, 1] and d2 = [0, 1, 1]. Using Rocchio with alpha = 1.0 and beta = 0.75, what is the expanded query vector q′?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Because the second dimension of q is zero, the Rocchio update ignores that dimension entirely and produces q′ = [1.375, 0, 1.75], treating zero-weighted dimensions in the original query as immutable and preventing any new expansion terms from being added."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The centroid of d1 and d2 is [1.0, 2.0, 2.0] (sum rather than average). Applying the Rocchio formula: q′ = 1.0 × [1, 0, 1] + 0.75 × [1.0, 2.0, 2.0] = [1.75, 1.5, 2.5], overestimating the centroid because the document vectors are summed instead of averaged."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The centroid of d1 and d2 is [0.5, 1.0, 1.0]. Applying the Rocchio formula: q′ = 1.0 × [1, 0, 1] + 0.75 × [0.5, 1.0, 1.0] = [1.375, 0.75, 1.75]. The second dimension, previously zero, now has a positive weight of 0.75 as a new expansion term."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The centroid of d1 and d2 is [0.5, 1.0, 1.0]. Applying the Rocchio formula: q′ = 0.75 × [1, 0, 1] + 1.0 × [0.5, 1.0, 1.0] = [1.25, 1.0, 1.75]. The alpha and beta roles are swapped, giving the centroid a higher weight than the original query vector."
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "The pseudo-relevant centroid is the average of d1 and d2: [0.5, 1.0, 1.0]. Rocchio gives q′ = 1.0q + 0.75centroid = [1.0,0,1.0] + [0.375,0.75,0.75] = [1.375,0.75,1.75].",
+      "tags": [
+        "rocchio",
+        "centroid",
+        "vector-calculation",
+        "tf-idf"
+      ],
+      "sourceRefs": [
+        "Uploaded PDF: IR_QUİZ7.pdf"
       ],
       "mergedFromCount": 1,
       "needs_review": false
