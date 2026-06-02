@@ -1,0 +1,1994 @@
+{
+  "quizId": "Q-Midterm-1",
+  "title": "Information Retrieval System - Midterm Questions",
+  "course": "Information Retrieval System",
+  "language": "en",
+  "semester": "Unknown",
+  "source": "merve_midterm.pdf",
+  "durationMinutes": 30,
+  "shuffleQuestions": false,
+  "shuffleOptions": false,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "topic": "Similarity Measures",
+      "subtopic": "Jaccard Similarity",
+      "difficulty": "easy",
+      "questionMd": "Given two k-gram sets A and B, which expression correctly computes their Jaccard similarity?",
+      "options": [
+        {
+          "id": "A",
+          "text": "|A ∩ B| / |A ∪ B|"
+        },
+        {
+          "id": "B",
+          "text": "|A ∪ B| / |A ∩ B|"
+        },
+        {
+          "id": "C",
+          "text": "|A ∩ B| / |A|"
+        },
+        {
+          "id": "D",
+          "text": "(|A| + |B|) / |A ∩ B|"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Jaccard similarity is the size of the intersection divided by the size of the union of two sets.",
+      "tags": [
+        "jaccard",
+        "k-grams",
+        "similarity"
+      ]
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "topic": "Indexing",
+      "subtopic": "Skip Pointers",
+      "difficulty": "easy",
+      "questionMd": "What is the recommended skip pointer interval for a postings list of length 400?",
+      "options": [
+        {
+          "id": "A",
+          "text": "200"
+        },
+        {
+          "id": "B",
+          "text": "10"
+        },
+        {
+          "id": "C",
+          "text": "40"
+        },
+        {
+          "id": "D",
+          "text": "20"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "A common heuristic is to place about √P skips for a postings list of length P, so √400 = 20.",
+      "tags": [
+        "postings-list",
+        "skip-pointers",
+        "inverted-index"
+      ]
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "topic": "IR Evaluation",
+      "subtopic": "Cranfield Experiments",
+      "difficulty": "medium",
+      "questionMd": "Which 1960s development is credited as the first systematic, reproducible evaluation of IR systems, establishing the methodology of using test collections and relevance judgments?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The introduction of Luhn's automatic keyword extraction"
+        },
+        {
+          "id": "B",
+          "text": "The launch of MEDLARS at the National Library of Medicine"
+        },
+        {
+          "id": "C",
+          "text": "The SMART system developed by Salton at Cornell"
+        },
+        {
+          "id": "D",
+          "text": "The Cranfield experiments"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "The Cranfield experiments established reusable test collections with queries and relevance judgments for systematic IR evaluation.",
+      "tags": [
+        "cranfield",
+        "evaluation",
+        "test-collections"
+      ]
+    },
+    {
+      "id": "q4",
+      "type": "single_choice",
+      "topic": "Text Preprocessing",
+      "subtopic": "Stopwords",
+      "difficulty": "medium",
+      "questionMd": "The NLTK English stopword list contains approximately how many words, and what is the approximate size of Lucene's default stopword list?",
+      "options": [
+        {
+          "id": "A",
+          "text": "179 words in NLTK and approximately 179 in Lucene"
+        },
+        {
+          "id": "B",
+          "text": "500 words in NLTK and approximately 100 in Lucene"
+        },
+        {
+          "id": "C",
+          "text": "33 words in NLTK and approximately 179 in Lucene"
+        },
+        {
+          "id": "D",
+          "text": "179 words in NLTK and approximately 33 in Lucene"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "The lecture contrast is that NLTK's English stopword list is much larger than Lucene's default English stopword list.",
+      "tags": [
+        "stopwords",
+        "nltk",
+        "lucene"
+      ]
+    },
+    {
+      "id": "q5",
+      "type": "single_choice",
+      "topic": "IR Evaluation",
+      "subtopic": "Average Precision",
+      "difficulty": "medium",
+      "questionMd": "In the Average Precision formula `AP = (1/R) × Σ P@k`, what does the summation run over?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Only the rank positions k where the retrieved document is relevant"
+        },
+        {
+          "id": "B",
+          "text": "All rank positions from 1 to the total number of retrieved documents"
+        },
+        {
+          "id": "C",
+          "text": "All positions where the retrieved document is irrelevant, as a penalty term"
+        },
+        {
+          "id": "D",
+          "text": "The top-k positions specified by the evaluation cutoff"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Average Precision averages precision values only at the ranks where a relevant document is retrieved.",
+      "tags": [
+        "average-precision",
+        "precision-at-k",
+        "evaluation"
+      ]
+    },
+    {
+      "id": "q6",
+      "type": "single_choice",
+      "topic": "IR Evaluation",
+      "subtopic": "Metric Selection",
+      "difficulty": "medium",
+      "questionMd": "A medical literature search system is designed to ensure clinicians find every relevant study on a drug interaction. Which evaluation metric is most appropriate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "P@5, because clinicians typically only read the first five results returned"
+        },
+        {
+          "id": "B",
+          "text": "NDCG@10, because graded relevance most accurately reflects a clinician's document preferences"
+        },
+        {
+          "id": "C",
+          "text": "MAP, because it rewards retrieving all relevant documents and penalises any that are missed"
+        },
+        {
+          "id": "D",
+          "text": "MRR, because clinicians only need to find the single most authoritative study for each query"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "MAP evaluates performance across relevant documents and is suitable when recall of all relevant studies matters.",
+      "tags": [
+        "map",
+        "medical-search",
+        "evaluation"
+      ]
+    },
+    {
+      "id": "q7",
+      "type": "single_choice",
+      "topic": "IR Evaluation",
+      "subtopic": "Average Precision Calculation",
+      "difficulty": "medium",
+      "questionMd": "Given the ranked list `R, I, I, R, R` where R = relevant and I = irrelevant, what is the Average Precision (AP)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.333"
+        },
+        {
+          "id": "B",
+          "text": "0.500"
+        },
+        {
+          "id": "C",
+          "text": "0.700"
+        },
+        {
+          "id": "D",
+          "text": "0.600"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "Relevant documents occur at ranks 1, 4, and 5. AP = (1/3)(1/1 + 2/4 + 3/5) = 0.700.",
+      "tags": [
+        "average-precision",
+        "ranked-retrieval",
+        "calculation"
+      ]
+    },
+    {
+      "id": "q8",
+      "type": "single_choice",
+      "topic": "Vector Space Model",
+      "subtopic": "Sparse Vectors",
+      "difficulty": "easy",
+      "questionMd": "In the Vector Space Model, why are document vectors described as sparse?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Document vectors are sparse because only the top-k highest-weighted terms are stored to save memory"
+        },
+        {
+          "id": "B",
+          "text": "Vectors are sparse because cosine normalization sets most small weights to zero during L2 normalization"
+        },
+        {
+          "id": "C",
+          "text": "Sparsity arises because IDF values are rounded to zero for any term with document frequency above a threshold"
+        },
+        {
+          "id": "D",
+          "text": "Most vocabulary terms do not appear in any given document"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "A document usually contains only a small subset of the full vocabulary, so most vector dimensions are zero.",
+      "tags": [
+        "vector-space-model",
+        "sparse-vectors",
+        "vocabulary"
+      ]
+    },
+    {
+      "id": "q9",
+      "type": "single_choice",
+      "topic": "Search Engines",
+      "subtopic": "Lucene FST",
+      "difficulty": "hard",
+      "questionMd": "Lucene uses a Finite State Transducer (FST) as its term dictionary structure. What property makes the FST particularly well-suited for this role?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It is a hash map that maps each term to its document frequency, enabling O(1) IDF lookups during scoring."
+        },
+        {
+          "id": "B",
+          "text": "It is a compact, memory-efficient graph that supports O(len) prefix and suffix lookups on the sorted term list."
+        },
+        {
+          "id": "C",
+          "text": "It uses a B-tree structure to guarantee O(log n) insertion time when new terms are added to a mutable segment."
+        },
+        {
+          "id": "D",
+          "text": "It stores postings lists in columnar format so that aggregations can be computed without loading all term data into RAM."
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Lucene's FST compactly represents a sorted term dictionary and enables efficient term lookup and prefix-style traversal.",
+      "tags": [
+        "lucene",
+        "fst",
+        "term-dictionary"
+      ]
+    },
+    {
+      "id": "q10",
+      "type": "single_choice",
+      "topic": "Ranking Models",
+      "subtopic": "BM25 Scores",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture notes, which of the following statements about BM25 scores is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "BM25 scores are calibrated probabilities that sum to 1 across all documents for a given query"
+        },
+        {
+          "id": "B",
+          "text": "BM25 scores are symmetric, meaning the score for query Q against document D equals the score for D against Q"
+        },
+        {
+          "id": "C",
+          "text": "BM25 scores always fall within the range [0, 1] because the IDF component is bounded by log(N)"
+        },
+        {
+          "id": "D",
+          "text": "BM25 scores are ordinal relevance estimates and should not be compared across different queries"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "BM25 scores are ranking scores for a particular query; their absolute values are not calibrated probabilities and are not directly comparable across queries.",
+      "tags": [
+        "bm25",
+        "ranking",
+        "scores"
+      ]
+    },
+    {
+      "id": "q11",
+      "type": "single_choice",
+      "topic": "Query Processing",
+      "subtopic": "Wildcard Queries and K-grams",
+      "difficulty": "medium",
+      "questionMd": "After intersecting k-gram postings to resolve a wildcard query, why is a mandatory post-filtering step required?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The k-gram intersection can only retrieve terms from a single partition of the vocabulary at a time"
+        },
+        {
+          "id": "B",
+          "text": "K-gram matching is a necessary but not sufficient condition"
+        },
+        {
+          "id": "C",
+          "text": "K-gram postings lists are unsorted, so the intersection result contains duplicate terms"
+        },
+        {
+          "id": "D",
+          "text": "Post-filtering converts k-gram integer IDs back into human-readable vocabulary terms"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "A term may contain the required k-grams but still fail the original wildcard pattern, so candidates must be checked against the wildcard itself.",
+      "tags": [
+        "wildcard-query",
+        "k-gram-index",
+        "post-filtering"
+      ]
+    },
+    {
+      "id": "q12",
+      "type": "single_choice",
+      "topic": "Spelling Correction",
+      "subtopic": "Jaccard Filtering",
+      "difficulty": "medium",
+      "questionMd": "In the three-stage spelling correction pipeline, what is the primary purpose of the Jaccard similarity filtering stage?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To eliminate most implausible candidates cheaply before the expensive edit distance computation"
+        },
+        {
+          "id": "B",
+          "text": "To rank the final correction suggestions by their phonetic similarity to the misspelled word"
+        },
+        {
+          "id": "C",
+          "text": "To apply context-sensitive correction by comparing candidates against a bigram language model"
+        },
+        {
+          "id": "D",
+          "text": "To build the initial candidate set by finding all vocabulary terms sharing at least one k-gram"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Jaccard filtering is a cheap candidate-pruning step before more expensive edit-distance scoring.",
+      "tags": [
+        "spelling-correction",
+        "jaccard",
+        "edit-distance"
+      ]
+    },
+    {
+      "id": "q13",
+      "type": "single_choice",
+      "topic": "Boolean Retrieval",
+      "subtopic": "NOT Operator",
+      "difficulty": "medium",
+      "questionMd": "Which query structure correctly follows the best practice for using the NOT operator?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Replace every NOT operand with an equivalent OR over all other terms"
+        },
+        {
+          "id": "B",
+          "text": "Perform an AND merge first to reduce the candidate set, then apply NOT to the result"
+        },
+        {
+          "id": "C",
+          "text": "Lead the query with NOT to eliminate irrelevant documents before any AND merge"
+        },
+        {
+          "id": "D",
+          "text": "Apply NOT to the largest postings list to maximize the pruning effect"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "NOT is best applied after positive terms have restricted the candidate set; leading with NOT can require scanning a very large complement.",
+      "tags": [
+        "boolean-retrieval",
+        "not-operator",
+        "query-optimization"
+      ]
+    },
+    {
+      "id": "q14",
+      "type": "single_choice",
+      "topic": "Query Processing",
+      "subtopic": "Phrase Queries",
+      "difficulty": "medium",
+      "questionMd": "In the positional index approach to phrase queries, what is the role of the first phase?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It verifies that query terms appear at consecutive positions in each document"
+        },
+        {
+          "id": "B",
+          "text": "It uses an AND merge"
+        },
+        {
+          "id": "C",
+          "text": "It resolves wildcard patterns into concrete vocabulary terms using the k-gram index"
+        },
+        {
+          "id": "D",
+          "text": "It applies Jaccard similarity to rank candidate documents by term overlap"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Phrase query processing first finds candidate documents containing all terms, usually by an AND merge; positional checks come afterward.",
+      "tags": [
+        "positional-index",
+        "phrase-query",
+        "and-merge"
+      ]
+    },
+    {
+      "id": "q15",
+      "type": "single_choice",
+      "topic": "Term Weighting",
+      "subtopic": "Smoothed IDF",
+      "difficulty": "medium",
+      "questionMd": "Why does the smoothed IDF formula `log(N / (df + 1)) + 1` add 1 to the denominator?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To ensure that every term receives an IDF value greater than 1 regardless of collection size"
+        },
+        {
+          "id": "B",
+          "text": "To make very common terms receive a higher IDF than they would under the standard formula"
+        },
+        {
+          "id": "C",
+          "text": "To bring the IDF range into alignment with the range produced by log-TF"
+        },
+        {
+          "id": "D",
+          "text": "To prevent division by zero when a term has never appeared in any document in the collection"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "Adding 1 to df avoids division by zero for unseen terms and makes the formula numerically safe.",
+      "tags": [
+        "idf",
+        "smoothing",
+        "tf-idf"
+      ]
+    },
+    {
+      "id": "q16",
+      "type": "single_choice",
+      "topic": "IR Evaluation",
+      "subtopic": "F1 Score",
+      "difficulty": "easy",
+      "questionMd": "Which formula correctly defines the F1 score in terms of Precision (P) and Recall (R)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2(P + R) / (P × R)"
+        },
+        {
+          "id": "B",
+          "text": "PR / (P + R)"
+        },
+        {
+          "id": "C",
+          "text": "(P + R) / 2"
+        },
+        {
+          "id": "D",
+          "text": "2PR / (P + R)"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "F1 is the harmonic mean of precision and recall: `2PR / (P + R)`.",
+      "tags": [
+        "f1",
+        "precision",
+        "recall"
+      ]
+    },
+    {
+      "id": "q17",
+      "type": "single_choice",
+      "topic": "Distributed Search",
+      "subtopic": "OpenSearch Shards",
+      "difficulty": "medium",
+      "questionMd": "An OpenSearch index is created with 3 primary shards. After the index goes into production, the team finds that data has grown and they need more shards. What is the correct approach?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Use the Shard Split API to divide each existing primary shard into smaller shards without reindexing."
+        },
+        {
+          "id": "B",
+          "text": "Increase the replica count, which automatically redistributes documents across more shards."
+        },
+        {
+          "id": "C",
+          "text": "Create a new index with the desired shard count and reindex all documents into it."
+        },
+        {
+          "id": "D",
+          "text": "Update the index settings at runtime to increase the number of primary shards."
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "The number of primary shards is effectively fixed for an index; changing it typically requires creating a new index and reindexing data.",
+      "tags": [
+        "opensearch",
+        "shards",
+        "reindexing"
+      ]
+    },
+    {
+      "id": "q18",
+      "type": "single_choice",
+      "topic": "IR Evaluation",
+      "subtopic": "Discounted Cumulative Gain",
+      "difficulty": "medium",
+      "questionMd": "In Discounted Cumulative Gain (DCG), relevance scores are divided by the log base-2 of `(rank + 1)`. What user behavior does this logarithmic discount model?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Users prefer documents that are only marginally relevant at high ranks over highly relevant documents at low ranks"
+        },
+        {
+          "id": "B",
+          "text": "Users read results in random order, so position should have no effect on contribution"
+        },
+        {
+          "id": "C",
+          "text": "The discount penalizes systems that retrieve more than k documents, keeping result sets short"
+        },
+        {
+          "id": "D",
+          "text": "User attention diminishes at lower ranks, so a relevant document at rank 10 is worth less than one at rank 1"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "DCG discounts lower-ranked results because users are less likely to inspect or value results far down the ranking.",
+      "tags": [
+        "dcg",
+        "ranking",
+        "user-attention"
+      ]
+    },
+    {
+      "id": "q19",
+      "type": "single_choice",
+      "topic": "Term Weighting",
+      "subtopic": "SMART Notation",
+      "difficulty": "medium",
+      "questionMd": "According to SMART notation, which formula defines the logarithmic TF variant (symbol `l`) for a term with a non-zero count?",
+      "options": [
+        {
+          "id": "A",
+          "text": "tf / (1 + log(tf))"
+        },
+        {
+          "id": "B",
+          "text": "0.5 + 0.5 × tf"
+        },
+        {
+          "id": "C",
+          "text": "1 + log(tf)"
+        },
+        {
+          "id": "D",
+          "text": "log(tf) - 1"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "In SMART notation, logarithmic term frequency weighting is commonly defined as `1 + log(tf)` for tf > 0.",
+      "tags": [
+        "smart-notation",
+        "term-frequency",
+        "log-tf"
+      ]
+    },
+    {
+      "id": "q20",
+      "type": "single_choice",
+      "topic": "IR Evaluation",
+      "subtopic": "TREC",
+      "difficulty": "medium",
+      "questionMd": "Which organisation established TREC (Text REtrieval Conference) in 1992 to provide shared benchmarks for IR evaluation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "DARPA (Defense Advanced Research Projects Agency)"
+        },
+        {
+          "id": "B",
+          "text": "ACM (Association for Computing Machinery)"
+        },
+        {
+          "id": "C",
+          "text": "NIST (National Institute of Standards and Technology)"
+        },
+        {
+          "id": "D",
+          "text": "IEEE (Institute of Electrical and Electronics Engineers)"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "TREC is organized by NIST and provides shared evaluation tasks, datasets, and benchmarks for IR systems.",
+      "tags": [
+        "trec",
+        "nist",
+        "benchmarks"
+      ]
+    },
+    {
+      "id": "q21",
+      "type": "single_choice",
+      "topic": "Indexing",
+      "subtopic": "Positional Indexes",
+      "difficulty": "easy",
+      "questionMd": "In a positional index, what specific information is stored for each term-document pair that is absent from a basic inverted index?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The document frequency of the term across the entire corpus"
+        },
+        {
+          "id": "B",
+          "text": "The term frequency of each token normalized by document length"
+        },
+        {
+          "id": "C",
+          "text": "The positions (offsets) of each token occurrence within the document"
+        },
+        {
+          "id": "D",
+          "text": "The byte offset of the document in the original corpus file"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "A positional index stores the positions of term occurrences, enabling phrase and proximity queries.",
+      "tags": [
+        "positional-index",
+        "positions",
+        "phrase-query"
+      ]
+    },
+    {
+      "id": "q22",
+      "type": "single_choice",
+      "topic": "IR Systems",
+      "subtopic": "IR Pipeline",
+      "difficulty": "medium",
+      "questionMd": "Which sequence correctly represents the order of the seven stages in the standard IR pipeline introduced in Week 1?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Preprocess → Crawl → Index → Rank → Query Processing → Present → Evaluate"
+        },
+        {
+          "id": "B",
+          "text": "Crawl → Index → Preprocess → Query Processing → Evaluate → Rank → Present"
+        },
+        {
+          "id": "C",
+          "text": "Query Processing → Crawl → Preprocess → Index → Rank → Evaluate → Present"
+        },
+        {
+          "id": "D",
+          "text": "Crawl → Preprocess → Index → Query Processing → Rank → Present → Evaluate"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "The standard flow first gathers and prepares documents, builds the index, processes queries, ranks and presents results, then evaluates performance.",
+      "tags": [
+        "ir-pipeline",
+        "crawl",
+        "index",
+        "rank"
+      ]
+    },
+    {
+      "id": "q23",
+      "type": "single_choice",
+      "topic": "Text Preprocessing",
+      "subtopic": "Case Folding",
+      "difficulty": "medium",
+      "questionMd": "Case folding converts \"Apple\" to \"apple\" during normalization. According to the lecture, which specific example demonstrates that lowercasing is NOT always a safe operation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "\"Apple\" (company name) vs. \"apple\" (the fruit) carry different meanings"
+        },
+        {
+          "id": "B",
+          "text": "\"running\" and \"running\" should always be treated as the same term"
+        },
+        {
+          "id": "C",
+          "text": "Accent folding should always be performed before case folding"
+        },
+        {
+          "id": "D",
+          "text": "\"NASA\" should always be lowercased to \"nasa\" for consistency"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Lowercasing can erase meaningful distinctions, such as a proper noun brand name versus a common noun.",
+      "tags": [
+        "case-folding",
+        "normalization",
+        "ambiguity"
+      ]
+    },
+    {
+      "id": "q24",
+      "type": "single_choice",
+      "topic": "Term Weighting",
+      "subtopic": "IDF Calculation",
+      "difficulty": "easy",
+      "questionMd": "A corpus contains 1000 documents, and the term \"quasar\" appears in exactly 50 of them. Applying the formula `IDF(t) = log(N / df(t))`, what is the IDF of \"quasar\"?",
+      "options": [
+        {
+          "id": "A",
+          "text": "log(50) ≈ 3.9"
+        },
+        {
+          "id": "B",
+          "text": "log(1000) ≈ 6.9"
+        },
+        {
+          "id": "C",
+          "text": "log(20) ≈ 3.0"
+        },
+        {
+          "id": "D",
+          "text": "log(0.05) ≈ -3.0"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "N/df = 1000/50 = 20, so the IDF is `log(20)`, approximately 3.0 using natural log.",
+      "tags": [
+        "idf",
+        "tf-idf",
+        "calculation"
+      ]
+    },
+    {
+      "id": "q25",
+      "type": "single_choice",
+      "topic": "Ranking Models",
+      "subtopic": "BM25F",
+      "difficulty": "medium",
+      "questionMd": "Which specific problem motivated the development of the BM25F variant?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Standard BM25 cannot handle multi-word queries because it sums scores term by term, a limitation BM25F overcomes"
+        },
+        {
+          "id": "B",
+          "text": "Standard BM25 requires all documents in the collection to have the same length, which BM25F relaxes with per-document normalization"
+        },
+        {
+          "id": "C",
+          "text": "Standard BM25 treats a document as a single flat text field"
+        },
+        {
+          "id": "D",
+          "text": "Standard BM25 produces negative IDF values for terms with very high document frequency, which BM25F corrects"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "BM25F extends BM25 to handle multiple document fields, such as title, body, and anchor text, rather than treating the document as one flat field.",
+      "tags": [
+        "bm25f",
+        "bm25",
+        "fielded-search"
+      ]
+    },
+    {
+      "id": "q26",
+      "type": "single_choice",
+      "topic": "IR Systems",
+      "subtopic": "SQL LIKE vs IR Retrieval",
+      "difficulty": "medium",
+      "questionMd": "A developer uses `SELECT * FROM papers WHERE abstract LIKE '%heart attack%'` to find cardiology research. What is the most significant limitation of this approach compared to an IR system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It returns no results for documents using the synonym \"myocardial infarction\""
+        },
+        {
+          "id": "B",
+          "text": "It requires a separate full-text parser before the SQL engine can execute"
+        },
+        {
+          "id": "C",
+          "text": "It cannot filter results by publication date or author name"
+        },
+        {
+          "id": "D",
+          "text": "It is slower than an inverted index for corpora with fewer than one million rows"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "A literal substring search misses semantically related terms and synonyms that an IR system may handle through analysis, expansion, or ranking.",
+      "tags": [
+        "sql-like",
+        "synonyms",
+        "ir-system"
+      ]
+    },
+    {
+      "id": "q27",
+      "type": "single_choice",
+      "topic": "Index Compression",
+      "subtopic": "Gap and Variable-Byte Encoding",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture's compression data, combining gap encoding with VB encoding on a typical postings list achieves what overall compression factor compared to storing raw int32 doc IDs?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Exactly 8× compression because VB uses 7 data bits per byte instead of 8"
+        },
+        {
+          "id": "B",
+          "text": "Less than 1.5× compression"
+        },
+        {
+          "id": "C",
+          "text": "Approximately 3–5× compression"
+        },
+        {
+          "id": "D",
+          "text": "Approximately 10–20× compression"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "Gap encoding reduces the magnitude of numbers and variable-byte encoding stores small gaps compactly, often giving a few-fold compression improvement.",
+      "tags": [
+        "compression",
+        "gap-encoding",
+        "variable-byte"
+      ]
+    },
+    {
+      "id": "q28",
+      "type": "single_choice",
+      "topic": "Search Engines",
+      "subtopic": "Lucene Segment Architecture",
+      "difficulty": "medium",
+      "questionMd": "In Apache Lucene's segment-based architecture, what happens when a document is updated?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The existing segment is opened and the document's fields are overwritten in place."
+        },
+        {
+          "id": "B",
+          "text": "The old document is marked as deleted and the updated version is written as a new entry."
+        },
+        {
+          "id": "C",
+          "text": "The document is moved to a special update buffer that replaces the original segment during the next merge."
+        },
+        {
+          "id": "D",
+          "text": "All segments containing that document are merged immediately to apply the update atomically."
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Lucene segments are immutable, so updates are implemented by deleting the old document and adding the new version.",
+      "tags": [
+        "lucene",
+        "segments",
+        "document-update"
+      ]
+    },
+    {
+      "id": "q29",
+      "type": "single_choice",
+      "topic": "Ranking Models",
+      "subtopic": "BM25 Document Length",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture notes, when is the `avgdl` (average document length) statistic used by BM25 computed?",
+      "options": [
+        {
+          "id": "A",
+          "text": "At query time by averaging the lengths of all retrieved candidate documents"
+        },
+        {
+          "id": "B",
+          "text": "Each time a new document is added to the index, `avgdl` is recomputed from scratch"
+        },
+        {
+          "id": "C",
+          "text": "Once at index construction time and stored as a collection-level statistic"
+        },
+        {
+          "id": "D",
+          "text": "Only during evaluation when comparing BM25 against TF-IDF outputs"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "BM25 uses collection-level statistics such as average document length, which are computed from the indexed collection and reused during scoring.",
+      "tags": [
+        "bm25",
+        "avgdl",
+        "collection-statistics"
+      ]
+    },
+    {
+      "id": "q30",
+      "type": "single_choice",
+      "topic": "Text Preprocessing",
+      "subtopic": "Preprocessing Pipeline",
+      "difficulty": "easy",
+      "questionMd": "In the text preprocessing pipeline, what is the correct order of stages?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Remove Stopwords → Tokenize → Normalize → Stem/Lemmatize → Index Terms"
+        },
+        {
+          "id": "B",
+          "text": "Tokenize → Normalize → Remove Stopwords → Stem/Lemmatize → Index Terms"
+        },
+        {
+          "id": "C",
+          "text": "Tokenize → Stem/Lemmatize → Normalize → Remove Stopwords → Index Terms"
+        },
+        {
+          "id": "D",
+          "text": "Normalize → Tokenize → Stem/Lemmatize → Remove Stopwords → Index Terms"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "A typical pipeline first tokenizes text, normalizes tokens, removes stopwords, stems or lemmatizes terms, and then indexes them.",
+      "tags": [
+        "tokenization",
+        "normalization",
+        "stemming",
+        "stopwords"
+      ]
+    },
+    {
+      "id": "q31",
+      "type": "single_choice",
+      "topic": "Indexing",
+      "subtopic": "Postings List Merge",
+      "difficulty": "medium",
+      "questionMd": "The two-pointer AND merge achieves O(m + n) time complexity only because of one crucial property of postings lists. What is that property?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Postings lists contain positional information for each document"
+        },
+        {
+          "id": "B",
+          "text": "Postings lists are stored in order of decreasing term frequency"
+        },
+        {
+          "id": "C",
+          "text": "Postings lists are stored in sorted order of document ID"
+        },
+        {
+          "id": "D",
+          "text": "Postings lists use variable-byte encoded gaps between document IDs"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "Linear two-pointer intersection depends on both postings lists being sorted by document ID.",
+      "tags": [
+        "postings-list",
+        "and-merge",
+        "document-id"
+      ]
+    },
+    {
+      "id": "q32",
+      "type": "single_choice",
+      "topic": "Term Weighting",
+      "subtopic": "IDF Intuition",
+      "difficulty": "easy",
+      "questionMd": "What is the core intuition behind Inverse Document Frequency (IDF) as used in TF-IDF weighting?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Terms that appear in many documents are more likely to be relevant to any query"
+        },
+        {
+          "id": "B",
+          "text": "IDF penalizes terms based on how frequently they appear within a single document"
+        },
+        {
+          "id": "C",
+          "text": "IDF increases the weight of terms that co-occur with stopwords"
+        },
+        {
+          "id": "D",
+          "text": "Terms that appear in many documents carry little discriminating information and should receive lower weights"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "IDF downweights common terms because they are less useful for distinguishing relevant documents from non-relevant ones.",
+      "tags": [
+        "idf",
+        "tf-idf",
+        "term-weighting"
+      ]
+    },
+    {
+      "id": "q33",
+      "type": "single_choice",
+      "topic": "Term Weighting",
+      "subtopic": "TF-IDF Interpretation",
+      "difficulty": "medium",
+      "questionMd": "A term has high TF in a document but very low IDF across the collection. What does this combination indicate about the term's usefulness as a relevance signal?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The term is a strong relevance signal because high TF always dominates the combined TF-IDF weight"
+        },
+        {
+          "id": "B",
+          "text": "The term is highly informative because low IDF indicates it appears in very few documents"
+        },
+        {
+          "id": "C",
+          "text": "The term is a weak discriminator because it appears frequently in many documents"
+        },
+        {
+          "id": "D",
+          "text": "The term should be removed from the index because its combined TF-IDF weight will be exactly zero"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "Low IDF means the term is common across the collection, so even frequent occurrence in one document may not strongly distinguish relevance.",
+      "tags": [
+        "tf-idf",
+        "idf",
+        "discrimination"
+      ]
+    },
+    {
+      "id": "q34",
+      "type": "single_choice",
+      "topic": "Corpus Statistics",
+      "subtopic": "Zipf's Law",
+      "difficulty": "easy",
+      "questionMd": "On a log-log plot of term rank vs. term frequency, what shape does Zipf's Law predict?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A straight line with a slope of approximately -1"
+        },
+        {
+          "id": "B",
+          "text": "A concave curve that levels off as rank increases"
+        },
+        {
+          "id": "C",
+          "text": "An S-shaped logistic curve"
+        },
+        {
+          "id": "D",
+          "text": "A straight line with a positive slope"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Zipf's Law states frequency is roughly inversely proportional to rank, which appears as a line with slope about -1 on a log-log plot.",
+      "tags": [
+        "zipf-law",
+        "log-log",
+        "term-frequency"
+      ]
+    },
+    {
+      "id": "q35",
+      "type": "single_choice",
+      "topic": "Term Weighting",
+      "subtopic": "TF-IDF Conditions",
+      "difficulty": "easy",
+      "questionMd": "A term receives a high TF-IDF weight in a document when which condition holds?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The term appears rarely in that document but frequently across the overall collection"
+        },
+        {
+          "id": "B",
+          "text": "The term has a low IDF value and a high document frequency"
+        },
+        {
+          "id": "C",
+          "text": "The term appears in every document in the collection"
+        },
+        {
+          "id": "D",
+          "text": "The term appears frequently in that document but rarely across the overall collection"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "High TF-IDF requires both high term frequency in the document and high IDF, meaning the term is rare across the collection.",
+      "tags": [
+        "tf-idf",
+        "term-frequency",
+        "idf"
+      ]
+    },
+    {
+      "id": "q36",
+      "type": "single_choice",
+      "topic": "Index Compression",
+      "subtopic": "Gap Encoding",
+      "difficulty": "medium",
+      "questionMd": "In gap (delta) encoding of a postings list, how is the very first entry in the list stored?",
+      "options": [
+        {
+          "id": "A",
+          "text": "As the absolute document ID, not as a gap"
+        },
+        {
+          "id": "B",
+          "text": "As a special sentinel value indicating the beginning of the list"
+        },
+        {
+          "id": "C",
+          "text": "As a gap of zero to signal the start of the list"
+        },
+        {
+          "id": "D",
+          "text": "As the difference between the first and second document IDs"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Since there is no previous document ID before the first posting, the first entry is stored directly as the absolute document ID.",
+      "tags": [
+        "gap-encoding",
+        "delta-encoding",
+        "postings-list"
+      ]
+    },
+    {
+      "id": "q37",
+      "type": "single_choice",
+      "topic": "Query Processing",
+      "subtopic": "Proximity Queries",
+      "difficulty": "easy",
+      "questionMd": "A proximity query is written as `term1 /k term2`. Which condition must hold in a candidate document for it to be included in the result?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The positional difference between term1 and term2 must be at most k"
+        },
+        {
+          "id": "B",
+          "text": "The total count of term1 and term2 occurrences in the document must equal k"
+        },
+        {
+          "id": "C",
+          "text": "term1 must appear exactly k positions before term2 in every occurrence"
+        },
+        {
+          "id": "D",
+          "text": "The terms must appear in the same sentence and within k paragraphs of each other"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "A proximity operator requires the two terms to occur within a maximum positional distance k.",
+      "tags": [
+        "proximity-query",
+        "positional-index",
+        "query-processing"
+      ]
+    },
+    {
+      "id": "q38",
+      "type": "single_choice",
+      "topic": "IR Evaluation",
+      "subtopic": "NDCG Edge Cases",
+      "difficulty": "medium",
+      "questionMd": "What must a developer do in code when computing NDCG@k for a query that has no relevant documents in the collection?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Exclude that query from the evaluation and reduce Q by 1 in the MAP formula"
+        },
+        {
+          "id": "B",
+          "text": "Return 0.0 as a special-case guard, because IDCG = 0 makes the formula undefined"
+        },
+        {
+          "id": "C",
+          "text": "Return 1.0, because a system cannot be penalised for a query with no correct answers"
+        },
+        {
+          "id": "D",
+          "text": "Assign each retrieved document a relevance grade of 1 and recompute normally"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "NDCG divides DCG by IDCG. If there are no relevant documents, IDCG is zero, so code must handle the undefined case explicitly.",
+      "tags": [
+        "ndcg",
+        "idcg",
+        "evaluation-edge-case"
+      ]
+    },
+    {
+      "id": "q39",
+      "type": "single_choice",
+      "topic": "IR Evaluation",
+      "subtopic": "Interpolated Precision-Recall",
+      "difficulty": "medium",
+      "questionMd": "When constructing an 11-point interpolated Precision-Recall curve, how is interpolated Precision defined at a given recall level r?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The minimum Precision across all recall levels r' > r, to represent a pessimistic bound"
+        },
+        {
+          "id": "B",
+          "text": "The Precision value recorded the first time recall r is reached during retrieval"
+        },
+        {
+          "id": "C",
+          "text": "The arithmetic mean of Precision values immediately before and after recall level r"
+        },
+        {
+          "id": "D",
+          "text": "The maximum Precision achieved at any recall level r' that is greater than or equal to r"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "Interpolated precision at recall r is the maximum precision observed at any recall level r' ≥ r.",
+      "tags": [
+        "precision-recall",
+        "interpolation",
+        "evaluation"
+      ]
+    },
+    {
+      "id": "q40",
+      "type": "single_choice",
+      "topic": "Vocabulary and Semantics",
+      "subtopic": "Vocabulary Mismatch",
+      "difficulty": "medium",
+      "questionMd": "A user searches \"automobile fuel efficiency\" but the most relevant document uses only the phrases \"car gas mileage\" and \"vehicle consumption\". What problem does this scenario illustrate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The precision-recall tradeoff — retrieving more documents lowers average result quality"
+        },
+        {
+          "id": "B",
+          "text": "The vocabulary mismatch problem — lexical overlap is zero despite near-identical meaning"
+        },
+        {
+          "id": "C",
+          "text": "The corpus freshness problem — the index has not been updated to include recent terminology"
+        },
+        {
+          "id": "D",
+          "text": "The stopword problem — common function words are masking the discriminating content terms"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "The query and document use different words for the same concept, so exact lexical matching can fail despite semantic similarity.",
+      "tags": [
+        "vocabulary-mismatch",
+        "synonyms",
+        "semantic-search"
+      ]
+    },
+    {
+      "id": "q41",
+      "type": "single_choice",
+      "topic": "IR Evaluation",
+      "subtopic": "Statistical Significance Tests",
+      "difficulty": "medium",
+      "questionMd": "Why is the Wilcoxon signed-rank test generally preferred over the paired t-test for comparing per-query AP score distributions in IR experiments?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The paired t-test requires at least 1,000 queries to produce valid results, while Wilcoxon works on any sample size"
+        },
+        {
+          "id": "B",
+          "text": "Wilcoxon is non-parametric and does not assume that per-query score differences are normally distributed"
+        },
+        {
+          "id": "C",
+          "text": "Wilcoxon is always more statistically powerful than the t-test, producing lower p-values on the same data"
+        },
+        {
+          "id": "D",
+          "text": "Wilcoxon directly optimises NDCG, making it more aligned with the evaluation objective than the t-test"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Wilcoxon is a non-parametric paired test and is useful when score differences may not satisfy normality assumptions.",
+      "tags": [
+        "wilcoxon",
+        "paired-t-test",
+        "statistical-significance"
+      ]
+    },
+    {
+      "id": "q42",
+      "type": "single_choice",
+      "topic": "Text Preprocessing",
+      "subtopic": "Stemming Failure Modes",
+      "difficulty": "easy",
+      "questionMd": "A student runs a Porter stemmer and observes that both \"universe\" and \"university\" produce the stem \"univers\". This is an example of which failure mode?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Over-stemming, which reduces retrieval precision"
+        },
+        {
+          "id": "B",
+          "text": "Accent folding, which merges morphologically unrelated forms"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Over-stemming merges terms that should remain distinct, which can increase false matches and reduce precision.",
+      "tags": [
+        "porter-stemmer",
+        "over-stemming",
+        "precision"
+      ]
+    },
+    {
+      "id": "q43",
+      "type": "single_choice",
+      "topic": "IR Evaluation",
+      "subtopic": "Precision and Recall Calculation",
+      "difficulty": "easy",
+      "questionMd": "A retrieval system returns 10 documents in response to a query. Seven of them are relevant. The corpus contains 20 relevant documents in total. What are the precision and recall values?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Precision = 0.35, Recall = 0.35"
+        },
+        {
+          "id": "B",
+          "text": "Precision = 0.7, Recall = 0.35"
+        },
+        {
+          "id": "C",
+          "text": "Precision = 0.7, Recall = 0.7"
+        },
+        {
+          "id": "D",
+          "text": "Precision = 0.35, Recall = 0.7"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Precision = relevant retrieved / retrieved = 7/10 = 0.7. Recall = relevant retrieved / total relevant = 7/20 = 0.35.",
+      "tags": [
+        "precision",
+        "recall",
+        "calculation"
+      ]
+    },
+    {
+      "id": "q44",
+      "type": "single_choice",
+      "topic": "Corpus Statistics",
+      "subtopic": "Zipf's Law Calculation",
+      "difficulty": "easy",
+      "questionMd": "Zipf's Law states that the frequency of the r-th most common word is proportional to 1/r. If the most frequent term in a corpus appears 10,000 times, approximately how often does the 100th most frequent term appear?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Approximately 10 times"
+        },
+        {
+          "id": "B",
+          "text": "Approximately 1,000 times"
+        },
+        {
+          "id": "C",
+          "text": "Approximately 100 times"
+        },
+        {
+          "id": "D",
+          "text": "Approximately 5,000 times"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "Using frequency ≈ 10000 / r, the 100th term appears about 10000 / 100 = 100 times.",
+      "tags": [
+        "zipf-law",
+        "rank-frequency",
+        "calculation"
+      ]
+    },
+    {
+      "id": "q45",
+      "type": "single_choice",
+      "topic": "Text Preprocessing",
+      "subtopic": "Stemmers",
+      "difficulty": "medium",
+      "questionMd": "Which stemmer described in the lectures is characterized as the most aggressive, producing the smallest vocabulary but the highest over-stemming error rate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "WordNet lemmatizer"
+        },
+        {
+          "id": "B",
+          "text": "Porter"
+        },
+        {
+          "id": "C",
+          "text": "Lancaster"
+        },
+        {
+          "id": "D",
+          "text": "Snowball"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "The Lancaster stemmer is generally more aggressive than Porter or Snowball, often reducing vocabulary size but risking over-stemming.",
+      "tags": [
+        "lancaster",
+        "stemming",
+        "over-stemming"
+      ]
+    },
+    {
+      "id": "q46",
+      "type": "single_choice",
+      "topic": "Index Construction",
+      "subtopic": "BSBI vs SPIMI",
+      "difficulty": "hard",
+      "questionMd": "What is the key architectural difference between the BSBI and SPIMI index construction algorithms?",
+      "options": [
+        {
+          "id": "A",
+          "text": "BSBI writes sorted postings directly to disk, while SPIMI keeps all postings in RAM permanently"
+        },
+        {
+          "id": "B",
+          "text": "BSBI requires a global term-to-integer mapping across all blocks, while SPIMI does not"
+        },
+        {
+          "id": "C",
+          "text": "SPIMI sorts all term-document pairs before writing any block to disk, while BSBI does not"
+        },
+        {
+          "id": "D",
+          "text": "BSBI is designed for single-pass processing, while SPIMI requires multiple passes over the corpus"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "BSBI uses termID pairs and therefore needs a global term-to-ID mapping; SPIMI builds term dictionaries dynamically per block.",
+      "tags": [
+        "bsbi",
+        "spimi",
+        "index-construction"
+      ]
+    },
+    {
+      "id": "q47",
+      "type": "single_choice",
+      "topic": "IR Evaluation",
+      "subtopic": "Statistical Significance",
+      "difficulty": "medium",
+      "questionMd": "System A has MAP = 0.42 and System B has MAP = 0.43. A Wilcoxon signed-rank test yields p = 0.21. What is the correct conclusion?",
+      "options": [
+        {
+          "id": "A",
+          "text": "System A is preferred because p > 0.05 confirms its stability across queries"
+        },
+        {
+          "id": "B",
+          "text": "The difference is not statistically significant"
+        },
+        {
+          "id": "C",
+          "text": "The test is invalid because the MAP difference is smaller than the p-value"
+        },
+        {
+          "id": "D",
+          "text": "System B is statistically and practically superior because it has a higher MAP score"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "With p = 0.21, the difference does not meet a typical 0.05 significance threshold, so the observed MAP difference is not statistically significant.",
+      "tags": [
+        "wilcoxon",
+        "p-value",
+        "map"
+      ]
+    },
+    {
+      "id": "q48",
+      "type": "single_choice",
+      "topic": "Boolean Retrieval",
+      "subtopic": "Boolean Query Output",
+      "difficulty": "easy",
+      "questionMd": "In the Boolean retrieval model, what does a query return?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A ranked list of documents sorted by relevance score"
+        },
+        {
+          "id": "B",
+          "text": "A set of document IDs sorted by term frequency"
+        },
+        {
+          "id": "C",
+          "text": "A probability distribution over matching documents"
+        },
+        {
+          "id": "D",
+          "text": "A set of document IDs with no ordering or relevance scores"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "Boolean retrieval returns an unordered set of documents that satisfy the Boolean expression, not a ranked list.",
+      "tags": [
+        "boolean-retrieval",
+        "sets",
+        "unranked-results"
+      ]
+    },
+    {
+      "id": "q49",
+      "type": "single_choice",
+      "topic": "Boolean Retrieval",
+      "subtopic": "Limitations",
+      "difficulty": "medium",
+      "questionMd": "Which of the following is a fundamental limitation of Boolean retrieval that motivates the move to ranked retrieval?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Boolean retrieval requires all query terms to be stemmed before matching"
+        },
+        {
+          "id": "B",
+          "text": "Boolean retrieval is unable to handle OR operators between query terms"
+        },
+        {
+          "id": "C",
+          "text": "Boolean retrieval cannot use an inverted index to look up postings lists"
+        },
+        {
+          "id": "D",
+          "text": "A document matching 3 out of 4 query terms is assigned one matching 0 terms"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "Boolean retrieval has binary matching: documents either satisfy the query or not, so partial matches may receive no credit.",
+      "tags": [
+        "boolean-retrieval",
+        "ranked-retrieval",
+        "partial-matching"
+      ]
+    },
+    {
+      "id": "q50",
+      "type": "single_choice",
+      "topic": "IR Evaluation",
+      "subtopic": "DCG Calculation",
+      "difficulty": "medium",
+      "questionMd": "A ranked list has graded relevance scores `[3, 1, 0, 2, 1]` at ranks 1 through 5. What is the approximate DCG@5?",
+      "options": [
+        {
+          "id": "A",
+          "text": "7.00, computed by summing the raw relevance grades 3+1+0+2+1"
+        },
+        {
+          "id": "B",
+          "text": "2.50, computed as the arithmetic mean of the five relevance grades"
+        },
+        {
+          "id": "C",
+          "text": "3.00, because only the first rank contributes and its grade is 3"
+        },
+        {
+          "id": "D",
+          "text": "4.879, computed as 3/1.000 + 1/1.585 + 0/2.000 + 2/2.322 + 1/2.585"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "DCG discounts relevance by log2(rank+1): 3/1 + 1/log2(3) + 0/log2(4) + 2/log2(5) + 1/log2(6) ≈ 4.879.",
+      "tags": [
+        "dcg",
+        "graded-relevance",
+        "calculation"
+      ]
+    },
+    {
+      "id": "q51",
+      "type": "single_choice",
+      "topic": "Distributed Search",
+      "subtopic": "OpenSearch Refresh",
+      "difficulty": "medium",
+      "questionMd": "A developer indexes a document in OpenSearch and immediately issues a search query but does not find the new document. Which concept best explains this behavior?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Near-real-time search requires a refresh before newly indexed documents become searchable."
+        },
+        {
+          "id": "B",
+          "text": "The document must be replicated to all replica shards before it can appear in search results."
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "OpenSearch is near-real-time: newly indexed documents generally become searchable after a refresh exposes them to search.",
+      "tags": [
+        "opensearch",
+        "refresh",
+        "near-real-time-search"
+      ]
+    },
+    {
+      "id": "q52",
+      "type": "single_choice",
+      "topic": "Text Preprocessing",
+      "subtopic": "Over-stemming",
+      "difficulty": "medium",
+      "questionMd": "After applying the full preprocessing pipeline (tokenize → lowercase → stopword removal → Porter stemming) to the input \"The astronauts ORBITING the International Space Station\", which term in the output best illustrates a known over-stemming problem?",
+      "options": [
+        {
+          "id": "A",
+          "text": "\"space\" produced from \"Space\""
+        },
+        {
+          "id": "B",
+          "text": "\"intern\" produced from \"International\""
+        },
+        {
+          "id": "C",
+          "text": "\"station\" produced from \"Station\""
+        },
+        {
+          "id": "D",
+          "text": "\"astronaut\" produced from \"astronauts\""
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Stemming \"International\" to \"intern\" can merge it with unrelated concepts, illustrating over-stemming.",
+      "tags": [
+        "porter-stemmer",
+        "over-stemming",
+        "preprocessing"
+      ]
+    },
+    {
+      "id": "q53",
+      "type": "single_choice",
+      "topic": "IR Evaluation",
+      "subtopic": "Relevance Judging Agreement",
+      "difficulty": "medium",
+      "questionMd": "In TREC relevance judging, Cohen's κ values typically fall between 0.6 and 0.8. What does this imply about IR evaluation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Annotators disagree so frequently that per-query results are unreliable and should be discarded"
+        },
+        {
+          "id": "B",
+          "text": "Agreement is nearly perfect, so evaluation results can be treated as ground truth without reservation"
+        },
+        {
+          "id": "C",
+          "text": "The κ range shows that automated relevance labeling is more reliable than human judgment"
+        },
+        {
+          "id": "D",
+          "text": "There is substantial but imperfect agreement among assessors."
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "A κ range of about 0.6-0.8 is usually interpreted as substantial agreement, but not perfect agreement.",
+      "tags": [
+        "trec",
+        "cohens-kappa",
+        "relevance-judgments"
+      ]
+    },
+    {
+      "id": "q54",
+      "type": "single_choice",
+      "topic": "Text Preprocessing",
+      "subtopic": "Tokenization",
+      "difficulty": "medium",
+      "questionMd": "Which of the following best explains why simple whitespace tokenization is insufficient for production search systems?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It always produces more tokens than a regex-based tokenizer would for the same input"
+        },
+        {
+          "id": "B",
+          "text": "It requires an external dictionary to identify valid word boundaries"
+        },
+        {
+          "id": "C",
+          "text": "It is too slow for large corpora because it scans the entire text character by character"
+        },
+        {
+          "id": "D",
+          "text": "It fails to handle contractions, possessives, URLs, and hyphenated expressions correctly"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "Production tokenizers must handle punctuation, contractions, URLs, hyphenation, and other cases that simple whitespace splitting misses.",
+      "tags": [
+        "tokenization",
+        "whitespace-tokenization",
+        "text-analysis"
+      ]
+    },
+    {
+      "id": "q55",
+      "type": "single_choice",
+      "topic": "Index Compression",
+      "subtopic": "Variable-Byte Encoding",
+      "difficulty": "medium",
+      "questionMd": "Variable-byte (VB) encoding uses a continuation bit within each byte. What does a continuation bit value of 1 (the top bit set) indicate in VB encoding?",
+      "options": [
+        {
+          "id": "A",
+          "text": "This byte encodes a negative gap and should be subtracted"
+        },
+        {
+          "id": "B",
+          "text": "This byte marks the boundary between two separate encoded numbers"
+        },
+        {
+          "id": "C",
+          "text": "This is the last (terminal) byte of the current encoded number"
+        },
+        {
+          "id": "D",
+          "text": "This byte is a continuation byte and more bytes follow for the current number"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "In the convention used in the lecture, a top bit of 1 marks the final byte of the current variable-byte encoded number.",
+      "tags": [
+        "variable-byte",
+        "compression",
+        "postings-list"
+      ]
+    },
+    {
+      "id": "q56",
+      "type": "single_choice",
+      "topic": "Boolean Retrieval",
+      "subtopic": "NOT Query Cost",
+      "difficulty": "medium",
+      "questionMd": "Why is leading a query with a NOT operation alone considered poor practice?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It can only be applied after an OR merge has been completed"
+        },
+        {
+          "id": "B",
+          "text": "It requires building a secondary inverted index from scratch at query time"
+        },
+        {
+          "id": "C",
+          "text": "It requires scanning the entire corpus to find all document IDs not in the negated list"
+        },
+        {
+          "id": "D",
+          "text": "It produces the same result as an AND query but takes longer to parse"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "A leading NOT query requires computing the complement of a postings list, which can involve the full document universe.",
+      "tags": [
+        "boolean-retrieval",
+        "not-operator",
+        "query-cost"
+      ]
+    },
+    {
+      "id": "q57",
+      "type": "single_choice",
+      "topic": "Boolean Retrieval",
+      "subtopic": "OR Operator",
+      "difficulty": "easy",
+      "questionMd": "In Boolean retrieval, an OR query between two terms produces results by applying which set operation to their postings lists?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Set intersection — documents containing both terms simultaneously"
+        },
+        {
+          "id": "B",
+          "text": "Set difference — documents containing the first term but not the second"
+        },
+        {
+          "id": "C",
+          "text": "Set complement — all documents not containing either term"
+        },
+        {
+          "id": "D",
+          "text": "Set union — documents containing either term or both"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "Boolean OR corresponds to the union of postings lists: documents containing either term, including those containing both.",
+      "tags": [
+        "boolean-retrieval",
+        "or-operator",
+        "set-union"
+      ]
+    }
+  ]
+}

@@ -316,7 +316,13 @@ const GROUPS = [
     tags:        ['irs', 'midterm', 'merged'],
     difficulty:  'medium',
     sources: [
-      { file: 'incoming-retrieval-json/Midterm-Unique-60.json', priority: 'v2' },
+      { file: 'incoming-retrieval-json/Midterm-Unique-60.json',  priority: 'v2' },
+      { file: 'incoming-retrieval-json/IRS-Midterm-beg.json',    priority: 'v1' },
+      { file: 'incoming-retrieval-json/IRS-Midterm-berho.json',  priority: 'v1' },
+      { file: 'incoming-retrieval-json/IRS-Midterm-fa.json',     priority: 'v1' },
+      { file: 'incoming-retrieval-json/IRS-Midterm-infomid.json',priority: 'v1' },
+      { file: 'incoming-retrieval-json/IRS-Midterm-ibo.json',    priority: 'v1' },
+      { file: 'incoming-retrieval-json/IRS-Midterm-merve.json',  priority: 'v1' },
     ],
   },
 
