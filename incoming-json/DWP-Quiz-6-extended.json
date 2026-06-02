@@ -1,0 +1,552 @@
+{
+  "quizId": "Q-DWP-6",
+  "title": "Dynamic Web Programming - Quiz 6",
+  "course": "Dynamic Web Programming",
+  "language": "en",
+  "semester": "2023-2024 Spring",
+  "source": "Uploaded Documents - web_q6_a.pdf",
+  "durationMinutes": 30,
+  "shuffleQuestions": false,
+  "shuffleOptions": false,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "topic": "Computer Networking",
+      "subtopic": "Ports",
+      "difficulty": "easy",
+      "questionMd": "How does the lecture define a **port** in the context of computer networking?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A logical (as opposed to physical) connection point represented by a number ranging from 0 to 65535."
+        },
+        {
+          "id": "B",
+          "text": "The unique IP address assigned to a server machine that allows it to be identified on the public internet."
+        },
+        {
+          "id": "C",
+          "text": "An encrypted channel created by the operating system to secure all incoming TCP connections on a given server machine."
+        },
+        {
+          "id": "D",
+          "text": "A physical socket on a server's network card used to plug in Ethernet cables and establish wired network connections."
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "A network port is a logical endpoint identified by a number. It helps direct incoming network traffic to the correct service or process on a host.",
+      "tags": [
+        "networking",
+        "ports",
+        "tcp",
+        "server"
+      ]
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "topic": "NodeJS",
+      "subtopic": "Runtime Environment",
+      "difficulty": "easy",
+      "questionMd": "Which of the following best describes **NodeJS**?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A JavaScript runtime written in C++ that can interpret and execute JavaScript and includes support for the NodeJS API."
+        },
+        {
+          "id": "B",
+          "text": "A cloud-based execution environment that runs JavaScript on virtual machines and streams results back to the client browser."
+        },
+        {
+          "id": "C",
+          "text": "A browser extension written in Python that allows JavaScript code to be executed outside the standard web browser environment."
+        },
+        {
+          "id": "D",
+          "text": "A compiled language runtime that converts JavaScript source code into machine code and bundles it with DOM API libraries."
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "NodeJS is a JavaScript runtime built on the V8 engine. It lets JavaScript run outside the browser and provides APIs for server-side and general-purpose programming.",
+      "tags": [
+        "nodejs",
+        "javascript",
+        "runtime",
+        "v8"
+      ]
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "topic": "NodeJS",
+      "subtopic": "General-Purpose Scripts",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, can **NodeJS** be used for purposes other than building web servers?",
+      "options": [
+        {
+          "id": "A",
+          "text": "No, NodeJS requires an active internet connection at all times and cannot run JavaScript files that make no network requests."
+        },
+        {
+          "id": "B",
+          "text": "No, NodeJS is exclusively designed for server-side HTTP handling and cannot execute scripts that do not involve network connections."
+        },
+        {
+          "id": "C",
+          "text": "Yes, NodeJS can be used to write general-purpose JavaScript scripts that are completely unrelated to web servers."
+        },
+        {
+          "id": "D",
+          "text": "Yes, but only if the scripts use the DOM API, because NodeJS was designed as a bridge between browser JavaScript and server JavaScript."
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "NodeJS is not limited to web servers. It can run ordinary JavaScript programs, command-line tools, automation scripts, and other non-web-server code.",
+      "tags": [
+        "nodejs",
+        "scripts",
+        "server-side",
+        "javascript"
+      ]
+    },
+    {
+      "id": "q4",
+      "type": "single_choice",
+      "topic": "Web Architecture",
+      "subtopic": "Server Terminology",
+      "difficulty": "medium",
+      "questionMd": "The lecture notes describe the term **server** as overloaded. What does this mean?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The word \"server\" refers to both the DNS resolution step and the TCP handshake step that occur before any data is transferred."
+        },
+        {
+          "id": "B",
+          "text": "The word \"server\" can refer either to the physical machine running server software or to the software program itself, depending on context."
+        },
+        {
+          "id": "C",
+          "text": "The word \"server\" simultaneously describes the TCP protocol layer and the HTTP application layer in a network stack."
+        },
+        {
+          "id": "D",
+          "text": "The word \"server\" is used interchangeably with \"client\" in modern web development because both run JavaScript code."
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "An overloaded term has more than one related meaning. In web development, **server** may mean the hardware machine or the server software running on that machine.",
+      "tags": [
+        "server",
+        "web architecture",
+        "terminology"
+      ]
+    },
+    {
+      "id": "q5",
+      "type": "single_choice",
+      "topic": "NodeJS",
+      "subtopic": "HTTP Server Listening",
+      "difficulty": "medium",
+      "questionMd": "What does calling `server.listen(3000)` do in a NodeJS HTTP server program?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It creates a new TCP socket on port 3000, encrypts it with TLS, and then begins forwarding HTTPS traffic to the server handler."
+        },
+        {
+          "id": "B",
+          "text": "It makes the program start accepting incoming HTTP messages sent to port 3000, keeping the process running indefinitely."
+        },
+        {
+          "id": "C",
+          "text": "It imports the port 3000 configuration from the operating system's network settings and applies it to the current process."
+        },
+        {
+          "id": "D",
+          "text": "It sends a test HTTP request to port 3000 to verify that no other server process is already occupying that port number."
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "`server.listen(3000)` tells the NodeJS server to listen for incoming requests on port 3000. The process remains active so it can continue receiving requests.",
+      "tags": [
+        "nodejs",
+        "http server",
+        "listen",
+        "port 3000"
+      ]
+    },
+    {
+      "id": "q6",
+      "type": "single_choice",
+      "topic": "Computer Networking",
+      "subtopic": "Sockets",
+      "difficulty": "medium",
+      "questionMd": "In the context of networking, what is a **socket**?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A numbered logical endpoint, ranging from 0 to 65535, that identifies a specific service running on a host machine."
+        },
+        {
+          "id": "B",
+          "text": "A physical hardware port on a server machine used to connect network cables to the motherboard."
+        },
+        {
+          "id": "C",
+          "text": "The encrypted tunnel created by HTTPS to protect data exchanged between a client browser and a remote web server."
+        },
+        {
+          "id": "D",
+          "text": "One end of a communication channel through which data can be sent and received."
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "A socket represents one endpoint of a network communication channel. Data can be sent and received through that endpoint.",
+      "tags": [
+        "networking",
+        "socket",
+        "tcp",
+        "communication"
+      ]
+    },
+    {
+      "id": "q7",
+      "type": "single_choice",
+      "topic": "NodeJS",
+      "subtopic": "npm",
+      "difficulty": "easy",
+      "questionMd": "What is **npm** primarily used for in a NodeJS development workflow?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It is a command-line tool that installs packages (libraries and tools) written in JavaScript and compatible with NodeJS."
+        },
+        {
+          "id": "B",
+          "text": "It is a browser extension that allows developers to inspect and modify the DOM of pages served from a NodeJS backend."
+        },
+        {
+          "id": "C",
+          "text": "It is a version control system integrated with NodeJS that tracks changes to JavaScript source files across a development team."
+        },
+        {
+          "id": "D",
+          "text": "It is a built-in NodeJS module that provides methods for creating HTTP servers and handling incoming TCP connections."
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "npm is the Node package manager. It is commonly used from the command line to install and manage JavaScript packages for NodeJS projects.",
+      "tags": [
+        "nodejs",
+        "npm",
+        "packages",
+        "dependency management"
+      ]
+    },
+    {
+      "id": "q8",
+      "type": "single_choice",
+      "topic": "Computer Networking",
+      "subtopic": "TCP",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture, what does **TCP (Transmission Control Protocol)** define?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The encryption standard applied to HTTPS traffic to protect data transmitted between clients and servers."
+        },
+        {
+          "id": "B",
+          "text": "The structure and syntax of HTTP request and response messages exchanged between a browser and a web server."
+        },
+        {
+          "id": "C",
+          "text": "The mapping between domain names and IP addresses maintained by distributed name servers across the internet."
+        },
+        {
+          "id": "D",
+          "text": "The data format used for sending information over the network wire, and it can be used for HTTP, FTP, and other protocols."
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "TCP is a transport-layer protocol used to send data reliably between endpoints. Application protocols such as HTTP and FTP can run over TCP.",
+      "tags": [
+        "tcp",
+        "networking",
+        "http",
+        "ftp"
+      ]
+    },
+    {
+      "id": "q9",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Fetch API HTTP Methods",
+      "difficulty": "medium",
+      "questionMd": "When using the browser's `fetch()` API to send an HTTP **POST** request to `/hello`, which option correctly specifies the HTTP method?",
+      "options": [
+        {
+          "id": "A",
+          "text": "`fetch('/hello', 'POST')`, passing the HTTP method as the second positional argument directly to the fetch function call."
+        },
+        {
+          "id": "B",
+          "text": "`fetch('/hello', { method: 'POST' })`, passing an options object with the `method` property set to `'POST'`."
+        },
+        {
+          "id": "C",
+          "text": "`fetch.post('/hello')`, which is a shorthand helper method on the fetch object specifically designed for POST requests."
+        },
+        {
+          "id": "D",
+          "text": "`fetch('/hello', { type: 'POST' })`, where the `type` property in the options object overrides the default GET method."
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "The `fetch()` function accepts an options object as its second argument. Setting `method: 'POST'` changes the HTTP method from the default GET to POST.",
+      "tags": [
+        "javascript",
+        "fetch",
+        "post",
+        "http method"
+      ]
+    },
+    {
+      "id": "q10",
+      "type": "single_choice",
+      "topic": "NodeJS",
+      "subtopic": "HTTP Response Handling",
+      "difficulty": "medium",
+      "questionMd": "In a NodeJS HTTP request handler, what does calling `res.end()` do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It writes the final message to the response body and signals to the server that the response is complete."
+        },
+        {
+          "id": "B",
+          "text": "It terminates the NodeJS process and releases all bound ports back to the operating system's port pool."
+        },
+        {
+          "id": "C",
+          "text": "It sets the HTTP status code of the response to 200 and automatically adds the Content-Type header to the message."
+        },
+        {
+          "id": "D",
+          "text": "It closes the TCP connection and stops the server from listening for any further incoming HTTP requests on that port."
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "`res.end()` finishes the HTTP response. It can send the final response data and tells NodeJS that no more response body will be written.",
+      "tags": [
+        "nodejs",
+        "http",
+        "response",
+        "res.end"
+      ]
+    },
+    {
+      "id": "q11",
+      "type": "single_choice",
+      "topic": "NodeJS",
+      "subtopic": "Modules and require()",
+      "difficulty": "easy",
+      "questionMd": "What is the purpose of the `require()` statement in NodeJS?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It loads a module into the current file, similar to `import` in Java or `include` in C++."
+        },
+        {
+          "id": "B",
+          "text": "It instructs the V8 engine to pre-compile a JavaScript file into bytecode and cache it for faster future execution."
+        },
+        {
+          "id": "C",
+          "text": "It sends an HTTP GET request to the npm registry to check whether a package is compatible with the current NodeJS version."
+        },
+        {
+          "id": "D",
+          "text": "It declares a global variable that is shared across all JavaScript files in the same NodeJS project directory."
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "`require()` is used in CommonJS-style NodeJS code to load modules, libraries, or local files into the current file.",
+      "tags": [
+        "nodejs",
+        "require",
+        "modules",
+        "commonjs"
+      ]
+    },
+    {
+      "id": "q12",
+      "type": "single_choice",
+      "topic": "Computer Networking",
+      "subtopic": "Default HTTP Port",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, what is the default port number used for **HTTP** requests when no port is specified in a URL?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Port 3000, which is the standard development port used by NodeJS and ExpressJS applications running locally."
+        },
+        {
+          "id": "B",
+          "text": "Port 443, which is commonly reserved for encrypted HTTPS communication between browsers and remote web servers."
+        },
+        {
+          "id": "C",
+          "text": "Port 53, which is assigned to the Domain Name System service for resolving hostnames to IP addresses."
+        },
+        {
+          "id": "D",
+          "text": "Port 80, which is the well-known default port for Hypertext Transfer Protocol traffic on the World Wide Web."
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "The default port for ordinary HTTP traffic is port 80. HTTPS commonly uses port 443, while 3000 is often used for local development.",
+      "tags": [
+        "http",
+        "port 80",
+        "networking",
+        "url"
+      ]
+    },
+    {
+      "id": "q13",
+      "type": "single_choice",
+      "topic": "Web Architecture",
+      "subtopic": "HTTP Request-Response Flow",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture summary, after the server software receives an HTTP request, what is the correct sequence of actions it takes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The server software binds to a new port, sends an HTTP GET request back to the client to confirm receipt, then closes the connection."
+        },
+        {
+          "id": "B",
+          "text": "The server software parses the message, creates an HTTP response, and then the server OS sends that response to the client over TCP."
+        },
+        {
+          "id": "C",
+          "text": "The server software immediately sends an empty 200 OK response and then asynchronously processes the request body in the background."
+        },
+        {
+          "id": "D",
+          "text": "The server software forwards the raw TCP packet to the DNS server, which translates it and routes the reply back to the client browser."
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "A typical server receives and parses an HTTP request, creates the appropriate HTTP response, and sends that response back to the client using the underlying TCP connection.",
+      "tags": [
+        "http",
+        "server",
+        "request response",
+        "tcp"
+      ]
+    },
+    {
+      "id": "q14",
+      "type": "single_choice",
+      "topic": "ExpressJS",
+      "subtopic": "GET Routes",
+      "difficulty": "medium",
+      "questionMd": "In ExpressJS, what does the following code specify?\n\n```js\napp.get('/hello', function (req, res) {\n  res.send('GET hello!');\n});\n```",
+      "options": [
+        {
+          "id": "A",
+          "text": "When a GET request is made to the path `/hello`, the server responds with the text `GET hello!`."
+        },
+        {
+          "id": "B",
+          "text": "When any HTTP request arrives at the server, the response body is set to `GET hello!` regardless of the requested path."
+        },
+        {
+          "id": "C",
+          "text": "When a POST request is made to the path `/hello`, the server replies with `GET hello!` to acknowledge receipt of the data."
+        },
+        {
+          "id": "D",
+          "text": "When the server starts listening, it sends an HTTP GET request to the `/hello` endpoint to verify that the route is reachable."
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "`app.get('/hello', ...)` registers a route handler for GET requests to `/hello`. The handler sends the response text `GET hello!`.",
+      "tags": [
+        "expressjs",
+        "nodejs",
+        "routing",
+        "get"
+      ]
+    },
+    {
+      "id": "q15",
+      "type": "single_choice",
+      "topic": "ExpressJS",
+      "subtopic": "Raw NodeJS HTTP API vs ExpressJS",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture, why do developers prefer using **ExpressJS** over the raw NodeJS HTTP API for building servers?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The raw NodeJS HTTP APIs do not support JavaScript and instead require developers to write server logic in C++ directly."
+        },
+        {
+          "id": "B",
+          "text": "The raw NodeJS HTTP APIs are low-level, requiring developers to manually parse requests, write responses, and handle a lot of tedious processing code."
+        },
+        {
+          "id": "C",
+          "text": "The raw NodeJS HTTP APIs can only handle GET requests, so ExpressJS is required to support POST, PUT, and DELETE methods."
+        },
+        {
+          "id": "D",
+          "text": "The raw NodeJS HTTP APIs are deprecated and no longer maintained, making ExpressJS the only officially supported way to build servers."
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "ExpressJS provides higher-level routing and response helpers. This reduces the manual, low-level work required when using the raw NodeJS HTTP API directly.",
+      "tags": [
+        "expressjs",
+        "nodejs",
+        "http api",
+        "server"
+      ]
+    }
+  ]
+}

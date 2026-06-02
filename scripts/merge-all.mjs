@@ -129,6 +129,7 @@ const GROUPS = [
     tags:        ['q5', 'merged', 'past-exam'],
     difficulty:  'medium',
     sources: [
+      { file: 'incoming-json/DWP-Quiz-5-v2.json',                             priority: 'v2' },
       { file: 'incoming-json/Dynamic Web Programming - Quiz 5.json',          priority: 'v1' },
     ],
   },
@@ -138,13 +139,14 @@ const GROUPS = [
     outputFile:  'dwp/q6-merged.json',
     idPrefix:    'q6',
     title:       'Quiz 6 — Node.js & Server-Side Fundamentals',
-    description: 'Node.js runtime, npm, HTTP servers, sockets, modules, and server-side programming.',
+    description: 'Node.js runtime, npm, HTTP servers, sockets, modules, Express, and server-side programming.',
     course:      'Dynamic Web Programming',
     source:      'DWP Past Exams (Merged)',
     topic:       'Node.js',
     tags:        ['q6', 'merged', 'past-exam'],
     difficulty:  'medium',
     sources: [
+      { file: 'incoming-json/DWP-Quiz-6-extended.json',                       priority: 'v2' },
       { file: 'incoming-json/Dynamic Web Programming - Quiz 6.json',          priority: 'v1' },
     ],
   },
@@ -162,6 +164,7 @@ const GROUPS = [
     difficulty:  'medium',
     sources: [
       { file: 'incoming-json/Dynamic Web Programming - Midterm.json',          priority: 'v2' },
+      { file: 'incoming-json/DWP-Midterm-v2.json',                             priority: 'v1' },
     ],
   },
 

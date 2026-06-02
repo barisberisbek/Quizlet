@@ -1,39 +1,16 @@
 {
-  "meta": {
-    "id": "q5-merged",
-    "title": "Quiz 5 — Fetch API, REST & Async Patterns",
-    "description": "RESTful APIs, Fetch API, async/await, arrow functions, timers, and query parameters.",
-    "source": "DWP Past Exams (Merged)",
-    "course": "Dynamic Web Programming",
-    "topic": "Web APIs",
-    "topics": [
-      "Browser Architecture",
-      "Fetch API",
-      "GraphQL",
-      "HTML",
-      "HTML Forms",
-      "HTTP",
-      "JSON",
-      "JavaScript",
-      "Programming Concepts",
-      "REST APIs",
-      "URLs",
-      "Web APIs",
-      "Web Security"
-    ],
-    "questionCount": 38,
-    "difficulty": "easy",
-    "estimatedMinutes": 57,
-    "tags": [
-      "q5",
-      "merged",
-      "past-exam"
-    ],
-    "fileName": "dwp/q5-merged.json"
-  },
+  "quizId": "Q-DWP-Quiz-5",
+  "title": "Dynamic Web Programming - Quiz 5",
+  "course": "Dynamic Web Programming",
+  "language": "en",
+  "semester": "2023-2024 Spring",
+  "source": "Uploaded Documents - web_q5_m_s_a.pdf",
+  "durationMinutes": 30,
+  "shuffleQuestions": false,
+  "shuffleOptions": false,
   "questions": [
     {
-      "id": "q5-001",
+      "id": "q1",
       "type": "single_choice",
       "topic": "REST APIs",
       "subtopic": "Spotify Web API Endpoints",
@@ -41,28 +18,24 @@
       "questionMd": "Based on the Spotify API example in the lecture, which URL would you use to retrieve data for an album with the Spotify ID `7aDBFWp72Pz4NZEtVBANi9`?",
       "options": [
         {
-          "id": "a",
-          "label": "A",
+          "id": "A",
           "text": "https://api.spotify.com/v1/search?type=album&id=7aDBFWp72Pz4NZEtVBANi9"
         },
         {
-          "id": "b",
-          "label": "B",
+          "id": "B",
           "text": "https://api.spotify.com/v1/albums/7aDBFWp72Pz4NZEtVBANi9"
         },
         {
-          "id": "c",
-          "label": "C",
+          "id": "C",
           "text": "https://developer.spotify.com/v1/albums?album_id=7aDBFWp72Pz4NZEtVBANi9"
         },
         {
-          "id": "d",
-          "label": "D",
+          "id": "D",
           "text": "https://api.spotify.com/albums/7aDBFWp72Pz4NZEtVBANi9"
         }
       ],
       "correctAnswer": [
-        "b"
+        "B"
       ],
       "explanationMd": "Spotify album resources are retrieved from the Web API base URL using the `/v1/albums/{id}` endpoint. The correct URL includes both `/v1` and `/albums/` followed by the album ID.",
       "tags": [
@@ -70,15 +43,10 @@
         "rest-api",
         "endpoint",
         "url"
-      ],
-      "sourceRefs": [
-        "incoming-json/DWP-Quiz-5-v2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      ]
     },
     {
-      "id": "q5-002",
+      "id": "q2",
       "type": "single_choice",
       "topic": "REST APIs",
       "subtopic": "RESTful API Definition",
@@ -86,28 +54,24 @@
       "questionMd": "Which of the following best describes a RESTful API?",
       "options": [
         {
-          "id": "a",
-          "label": "A",
+          "id": "A",
           "text": "A URL-based API where requests are sent as HTTP requests using methods such as GET, POST, PUT, and DELETE to a base URL known as an API endpoint"
         },
         {
-          "id": "b",
-          "label": "B",
+          "id": "B",
           "text": "A binary protocol API where data is encoded in a compact proprietary format and transmitted over persistent TCP connections without any HTTP overhead"
         },
         {
-          "id": "c",
-          "label": "C",
+          "id": "C",
           "text": "A server-side scripting interface where the browser executes remote functions directly by sending the function name and arguments as query parameters"
         },
         {
-          "id": "d",
-          "label": "D",
+          "id": "D",
           "text": "A peer-to-peer data exchange protocol where client and server negotiate a shared schema before any data transfer can begin"
         }
       ],
       "correctAnswer": [
-        "a"
+        "A"
       ],
       "explanationMd": "A RESTful API exposes resources through URLs and uses HTTP methods such as GET, POST, PUT, and DELETE to operate on those resources.",
       "tags": [
@@ -115,16 +79,10 @@
         "http",
         "api",
         "endpoint"
-      ],
-      "sourceRefs": [
-        "incoming-json/DWP-Quiz-5-v2.json",
-        "incoming-json/Dynamic Web Programming - Quiz 5.json"
-      ],
-      "mergedFromCount": 2,
-      "needs_review": true
+      ]
     },
     {
-      "id": "q5-003",
+      "id": "q3",
       "type": "single_choice",
       "topic": "HTML Forms",
       "subtopic": "Submit Controls",
@@ -132,28 +90,24 @@
       "questionMd": "According to the lecture, why should you use `<input type=\"submit\">` instead of `<button>` inside a form?",
       "options": [
         {
-          "id": "a",
-          "label": "A",
+          "id": "A",
           "text": "Because the 'submit' event fires when `<input type=\"submit\">` is clicked but does not fire when a plain `<button>` element is clicked"
         },
         {
-          "id": "b",
-          "label": "B",
+          "id": "B",
           "text": "Because `<input type=\"submit\">` automatically calls `encodeURIComponent` on the input values before appending them to the request URL as query parameters"
         },
         {
-          "id": "c",
-          "label": "C",
+          "id": "C",
           "text": "Because `<input type=\"submit\">` is the only element that can be styled with CSS, whereas `<button>` elements inherit browser-specific default styles that cannot be overridden"
         },
         {
-          "id": "d",
-          "label": "D",
+          "id": "D",
           "text": "Because `<button>` elements cause the browser to make a synchronous HTTP GET request on click, which blocks the JavaScript event loop until the server responds"
         }
       ],
       "correctAnswer": [
-        "a"
+        "A"
       ],
       "explanationMd": "In the lecture's form-handling example, the submit control is used so the form's `submit` event is triggered and can be handled consistently by JavaScript.",
       "tags": [
@@ -161,15 +115,10 @@
         "forms",
         "submit",
         "events"
-      ],
-      "sourceRefs": [
-        "incoming-json/DWP-Quiz-5-v2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      ]
     },
     {
-      "id": "q5-004",
+      "id": "q4",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "`this` Binding in Callbacks",
@@ -177,28 +126,24 @@
       "questionMd": "According to the lecture, what is the problem with using ordinary inner functions (closures) as callbacks in `fetch().then()` chains inside a class method?",
       "options": [
         {
-          "id": "a",
-          "label": "A",
+          "id": "A",
           "text": "The `fetch()` API enforces strict mode internally, which prevents closures from accessing any variable declared in the outer function scope with the `var` keyword"
         },
         {
-          "id": "b",
-          "label": "B",
+          "id": "B",
           "text": "Closures capture the value of `this` at the time the outer function is defined rather than at the time it is called, leading to a stale reference in long-lived operations"
         },
         {
-          "id": "c",
-          "label": "C",
+          "id": "C",
           "text": "Closures defined inside a method are garbage-collected before the `fetch()` promise resolves, causing a null reference error when the callback eventually fires"
         },
         {
-          "id": "d",
-          "label": "D",
+          "id": "D",
           "text": "Each function has its own `this` value, so closures do not automatically inherit the `this` binding of their enclosing class method"
         }
       ],
       "correctAnswer": [
-        "d"
+        "D"
       ],
       "explanationMd": "Ordinary functions create their own `this` binding based on how they are called. Inside a Promise callback, that can break access to the class instance unless the callback is bound or written as an arrow function.",
       "tags": [
@@ -207,15 +152,10 @@
         "closures",
         "fetch",
         "promise"
-      ],
-      "sourceRefs": [
-        "incoming-json/DWP-Quiz-5-v2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      ]
     },
     {
-      "id": "q5-005",
+      "id": "q5",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Event Loop and Call Stack",
@@ -223,28 +163,24 @@
       "questionMd": "Is it possible for a `fetch()` callback, such as `onJsonReady`, to fire in the middle of another function that is currently executing on the call stack?",
       "options": [
         {
-          "id": "a",
-          "label": "A",
+          "id": "A",
           "text": "It depends on the browser; some modern browsers implement speculative callback execution that can inject a microtask between two consecutive synchronous statements"
         },
         {
-          "id": "b",
-          "label": "B",
+          "id": "B",
           "text": "Yes, because Promises use the Micro-task Queue which has higher priority and is allowed to interrupt currently running synchronous code at any safe yield point"
         },
         {
-          "id": "c",
-          "label": "C",
+          "id": "C",
           "text": "Yes, but only if the callback was registered with a timeout of zero milliseconds, which instructs the browser to fire it at the very next available CPU cycle"
         },
         {
-          "id": "d",
-          "label": "D",
+          "id": "D",
           "text": "No, because JavaScript is single-threaded; a callback can only be placed on the call stack when the stack is empty"
         }
       ],
       "correctAnswer": [
-        "d"
+        "D"
       ],
       "explanationMd": "JavaScript does not interrupt currently executing synchronous code. Asynchronous callbacks wait in a queue and are moved to the call stack only after the stack becomes empty.",
       "tags": [
@@ -253,15 +189,10 @@
         "call-stack",
         "fetch",
         "async"
-      ],
-      "sourceRefs": [
-        "incoming-json/DWP-Quiz-5-v2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      ]
     },
     {
-      "id": "q5-006",
+      "id": "q6",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Browser Internal Implementation",
@@ -269,28 +200,24 @@
       "questionMd": "In the JavaScript event loop model presented in the lecture, what is the role of the browser's internal implementation?",
       "options": [
         {
-          "id": "a",
-          "label": "A",
+          "id": "A",
           "text": "It is the JavaScript engine's JIT compiler that translates JavaScript source code into machine code instructions that the CPU can execute directly without any further interpretation"
         },
         {
-          "id": "b",
-          "label": "B",
+          "id": "B",
           "text": "It is the C++ code that executes in response to native JavaScript commands such as `setTimeout` and DOM manipulation methods"
         },
         {
-          "id": "c",
-          "label": "C",
+          "id": "C",
           "text": "It is a sandboxed WebAssembly runtime that handles all memory-intensive operations to prevent the JavaScript heap from growing beyond the browser's allocated memory limit"
         },
         {
-          "id": "d",
-          "label": "D",
+          "id": "D",
           "text": "It is the service worker layer that intercepts all network requests and decides whether to serve them from the cache or forward them to the actual remote server"
         }
       ],
       "correctAnswer": [
-        "b"
+        "B"
       ],
       "explanationMd": "The browser provides native internal implementations for features such as timers and DOM operations. JavaScript calls into those browser-provided systems, which later schedule callbacks back into the event loop.",
       "tags": [
@@ -299,15 +226,10 @@
         "event-loop",
         "settimeout",
         "dom"
-      ],
-      "sourceRefs": [
-        "incoming-json/DWP-Quiz-5-v2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      ]
     },
     {
-      "id": "q5-007",
+      "id": "q7",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Form Event Handling",
@@ -315,28 +237,24 @@
       "questionMd": "When handling a form's `submit` event in JavaScript, what must you call to prevent the page from refreshing?",
       "options": [
         {
-          "id": "a",
-          "label": "A",
+          "id": "A",
           "text": "window.cancelSubmit()"
         },
         {
-          "id": "b",
-          "label": "B",
+          "id": "B",
           "text": "form.reset()"
         },
         {
-          "id": "c",
-          "label": "C",
+          "id": "C",
           "text": "event.preventDefault()"
         },
         {
-          "id": "d",
-          "label": "D",
+          "id": "D",
           "text": "event.stopPropagation()"
         }
       ],
       "correctAnswer": [
-        "c"
+        "C"
       ],
       "explanationMd": "`event.preventDefault()` cancels the browser's default form submission behavior, preventing the page from reloading or navigating away.",
       "tags": [
@@ -344,15 +262,10 @@
         "forms",
         "events",
         "preventdefault"
-      ],
-      "sourceRefs": [
-        "incoming-json/DWP-Quiz-5-v2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      ]
     },
     {
-      "id": "q5-008",
+      "id": "q8",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Task Queue",
@@ -360,28 +273,24 @@
       "questionMd": "According to the lecture, when does the browser's internal implementation add a task to the Task Queue?",
       "options": [
         {
-          "id": "a",
-          "label": "A",
+          "id": "A",
           "text": "When it determines that a callback from something like `setTimeout` or `addEventListener` should be fired, it creates a Task and enqueues it in the Task Queue"
         },
         {
-          "id": "b",
-          "label": "B",
+          "id": "B",
           "text": "Whenever a variable assignment occurs inside an asynchronous callback, the assignment is deferred as a Task so that synchronous code always reads the previous value first"
         },
         {
-          "id": "c",
-          "label": "C",
+          "id": "C",
           "text": "After each rendered frame, all pending DOM mutations are bundled into a single Task that the event loop must process before the browser can paint the next frame"
         },
         {
-          "id": "d",
-          "label": "D",
+          "id": "D",
           "text": "Every time a new JavaScript function is declared anywhere in the code, whether as a named declaration or a function expression, a corresponding task entry is created immediately"
         }
       ],
       "correctAnswer": [
-        "a"
+        "A"
       ],
       "explanationMd": "Browser APIs such as timers and event listeners schedule callbacks by adding tasks to the Task Queue when the relevant event or timer is ready.",
       "tags": [
@@ -389,15 +298,10 @@
         "event-loop",
         "task-queue",
         "callbacks"
-      ],
-      "sourceRefs": [
-        "incoming-json/DWP-Quiz-5-v2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      ]
     },
     {
-      "id": "q5-009",
+      "id": "q9",
       "type": "single_choice",
       "topic": "URLs",
       "subtopic": "Query Parameters",
@@ -405,44 +309,34 @@
       "questionMd": "When constructing a URL with query parameters, which character is used to separate the first query parameter from the base URL path?",
       "options": [
         {
-          "id": "a",
-          "label": "A",
+          "id": "A",
           "text": "#"
         },
         {
-          "id": "b",
-          "label": "B",
+          "id": "B",
           "text": "?"
         },
         {
-          "id": "c",
-          "label": "C",
+          "id": "C",
           "text": "&"
         },
         {
-          "id": "d",
-          "label": "D",
+          "id": "D",
           "text": "/"
         }
       ],
       "correctAnswer": [
-        "b"
+        "B"
       ],
       "explanationMd": "The first query parameter starts after a question mark (`?`). Additional query parameters are then separated with ampersands (`&`).",
       "tags": [
         "url",
         "query-string",
         "parameters"
-      ],
-      "sourceRefs": [
-        "incoming-json/DWP-Quiz-5-v2.json",
-        "incoming-json/Dynamic Web Programming - Quiz 5.json"
-      ],
-      "mergedFromCount": 2,
-      "needs_review": true
+      ]
     },
     {
-      "id": "q5-010",
+      "id": "q10",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Timers and Execution Order",
@@ -450,28 +344,24 @@
       "questionMd": "Consider this code: `console.log('A'); setTimeout(fn, 3000); console.log('B');` In what order will the console outputs appear?",
       "options": [
         {
-          "id": "a",
-          "label": "A",
+          "id": "A",
           "text": "The output from `fn`, then A, then B, because `setTimeout` callbacks are placed in the Micro-task Queue which has higher priority than synchronous code on the call stack"
         },
         {
-          "id": "b",
-          "label": "B",
+          "id": "B",
           "text": "B, then A, then the output from `fn`, because the JavaScript engine hoists `setTimeout` calls to the top of the execution context before running any other statements"
         },
         {
-          "id": "c",
-          "label": "C",
+          "id": "C",
           "text": "A, then the output from `fn` after 3 seconds, then B, because `setTimeout` blocks the call stack for the specified duration before allowing subsequent synchronous code to run"
         },
         {
-          "id": "d",
-          "label": "D",
+          "id": "D",
           "text": "A, then B, then whatever `fn` logs after approximately 3 seconds"
         }
       ],
       "correctAnswer": [
-        "d"
+        "D"
       ],
       "explanationMd": "`console.log('A')` and `console.log('B')` run synchronously first. `setTimeout` schedules `fn` to run later, after the delay and after the call stack is clear.",
       "tags": [
@@ -479,16 +369,10 @@
         "settimeout",
         "event-loop",
         "async"
-      ],
-      "sourceRefs": [
-        "incoming-json/DWP-Quiz-5-v2.json",
-        "incoming-json/Dynamic Web Programming - Quiz 5.json"
-      ],
-      "mergedFromCount": 2,
-      "needs_review": true
+      ]
     },
     {
-      "id": "q5-011",
+      "id": "q11",
       "type": "single_choice",
       "topic": "REST APIs",
       "subtopic": "Spotify Web API Base URL",
@@ -496,28 +380,24 @@
       "questionMd": "According to the lecture's Spotify example, what is the base URL for the Spotify Web API?",
       "options": [
         {
-          "id": "a",
-          "label": "A",
+          "id": "A",
           "text": "https://developer.spotify.com"
         },
         {
-          "id": "b",
-          "label": "B",
+          "id": "B",
           "text": "https://data.spotify.com"
         },
         {
-          "id": "c",
-          "label": "C",
+          "id": "C",
           "text": "https://api.spotify.com"
         },
         {
-          "id": "d",
-          "label": "D",
+          "id": "D",
           "text": "https://music.spotify.com"
         }
       ],
       "correctAnswer": [
-        "c"
+        "C"
       ],
       "explanationMd": "The Spotify Web API uses `https://api.spotify.com` as its base host. Versioned endpoints such as `/v1/albums/{id}` are appended to it.",
       "tags": [
@@ -525,15 +405,10 @@
         "api",
         "base-url",
         "rest"
-      ],
-      "sourceRefs": [
-        "incoming-json/DWP-Quiz-5-v2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      ]
     },
     {
-      "id": "q5-012",
+      "id": "q12",
       "type": "single_choice",
       "topic": "JSON",
       "subtopic": "Deserialization",
@@ -541,43 +416,34 @@
       "questionMd": "In the context of JSON, what does it mean to deserialize a string?",
       "options": [
         {
-          "id": "a",
-          "label": "A",
+          "id": "A",
           "text": "To validate a JSON string against a predefined schema to ensure that all required fields are present and that their data types conform to the expected format"
         },
         {
-          "id": "b",
-          "label": "B",
+          "id": "B",
           "text": "To turn a serialized string back into a usable JavaScript object"
         },
         {
-          "id": "c",
-          "label": "C",
+          "id": "C",
           "text": "To strip whitespace and comments from a JSON string to reduce its size before transmitting it over a network connection with limited bandwidth"
         },
         {
-          "id": "d",
-          "label": "D",
+          "id": "D",
           "text": "To encode a JavaScript object into a compact binary representation that can be stored efficiently in a key-value cache like Redis or Memcached"
         }
       ],
       "correctAnswer": [
-        "b"
+        "B"
       ],
       "explanationMd": "Deserialization converts data from a string representation, such as JSON text, back into an object that code can use.",
       "tags": [
         "json",
         "deserialization",
         "javascript-object"
-      ],
-      "sourceRefs": [
-        "incoming-json/DWP-Quiz-5-v2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      ]
     },
     {
-      "id": "q5-013",
+      "id": "q13",
       "type": "single_choice",
       "topic": "REST APIs",
       "subtopic": "Content Types",
@@ -585,28 +451,24 @@
       "questionMd": "According to the lecture, RESTful API requests are sent with a specified MIME/content type. Which of the following is listed as a valid content type example?",
       "options": [
         {
-          "id": "a",
-          "label": "A",
+          "id": "A",
           "text": "YAML"
         },
         {
-          "id": "b",
-          "label": "B",
+          "id": "B",
           "text": "GraphQL"
         },
         {
-          "id": "c",
-          "label": "C",
+          "id": "C",
           "text": "JSON"
         },
         {
-          "id": "d",
-          "label": "D",
+          "id": "D",
           "text": "WASM"
         }
       ],
       "correctAnswer": [
-        "c"
+        "C"
       ],
       "explanationMd": "REST APIs commonly exchange data as JSON, typically represented by the MIME type `application/json`.",
       "tags": [
@@ -614,15 +476,10 @@
         "json",
         "content-type",
         "mime"
-      ],
-      "sourceRefs": [
-        "incoming-json/DWP-Quiz-5-v2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      ]
     },
     {
-      "id": "q5-014",
+      "id": "q14",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Binding `this`",
@@ -630,28 +487,24 @@
       "questionMd": "When using ordinary non-arrow inner functions as `fetch()` callbacks inside a class method, how can you correctly fix the `this` binding problem?",
       "options": [
         {
-          "id": "a",
-          "label": "A",
+          "id": "A",
           "text": "Assign the inner functions to class prototype properties before calling `fetch()`, so the JavaScript engine can look up the correct `this` through the prototype chain at call time"
         },
         {
-          "id": "b",
-          "label": "B",
+          "id": "B",
           "text": "Declare the inner functions using the `var` keyword instead of `const` or `let`, because var-scoped functions automatically inherit the `this` context of their parent scope"
         },
         {
-          "id": "c",
-          "label": "C",
+          "id": "C",
           "text": "Prefix the inner function declarations with the `static` keyword so that `this` inside the function always refers to the class constructor rather than an instance"
         },
         {
-          "id": "d",
-          "label": "D",
+          "id": "D",
           "text": "Call `.bind(this)` on each inner function when passing it to `.then()`, so the enclosing method's `this` is explicitly attached to the callback"
         }
       ],
       "correctAnswer": [
-        "d"
+        "D"
       ],
       "explanationMd": "`bind(this)` creates a new function whose `this` value is fixed to the current class instance, so the callback can safely access instance properties and methods.",
       "tags": [
@@ -660,16 +513,10 @@
         "this",
         "callbacks",
         "promise"
-      ],
-      "sourceRefs": [
-        "incoming-json/DWP-Quiz-5-v2.json",
-        "incoming-json/Dynamic Web Programming - Quiz 5.json"
-      ],
-      "mergedFromCount": 2,
-      "needs_review": true
+      ]
     },
     {
-      "id": "q5-015",
+      "id": "q15",
       "type": "single_choice",
       "topic": "Web Security",
       "subtopic": "CORS Policy",
@@ -677,28 +524,24 @@
       "questionMd": "By default, which type of request is blocked by the browser's CORS policy?",
       "options": [
         {
-          "id": "a",
-          "label": "A",
+          "id": "A",
           "text": "Same-origin requests made via `fetch()`, because the browser requires an explicit `Access-Control-Allow-Origin: self` header even for same-domain calls"
         },
         {
-          "id": "b",
-          "label": "B",
+          "id": "B",
           "text": "Cross-origin JavaScript files loaded with `<script src=\"...\">`, which require the server to echo back the requesting origin in a special response header"
         },
         {
-          "id": "c",
-          "label": "C",
+          "id": "C",
           "text": "Cross-origin CSS stylesheets loaded with `<link rel=\"stylesheet\">`, which always trigger a preflight request before the stylesheet is applied to the DOM"
         },
         {
-          "id": "d",
-          "label": "D",
+          "id": "D",
           "text": "Cross-origin requests made via `fetch()` or XHR"
         }
       ],
       "correctAnswer": [
-        "d"
+        "D"
       ],
       "explanationMd": "Browsers restrict cross-origin `fetch()` and XMLHttpRequest calls unless the server explicitly allows the requesting origin through CORS response headers.",
       "tags": [
@@ -706,15 +549,10 @@
         "fetch",
         "xhr",
         "same-origin-policy"
-      ],
-      "sourceRefs": [
-        "incoming-json/DWP-Quiz-5-v2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      ]
     },
     {
-      "id": "q5-016",
+      "id": "q16",
       "type": "single_choice",
       "topic": "Web Security",
       "subtopic": "CORS Configuration",
@@ -722,28 +560,24 @@
       "questionMd": "Why do all third-party REST APIs configure their servers to allow cross-origin `fetch()` requests?",
       "options": [
         {
-          "id": "a",
-          "label": "A",
+          "id": "A",
           "text": "Because CORS configuration is mandated by the HTTP/2 specification for any server that handles more than a certain number of simultaneous connections per second"
         },
         {
-          "id": "b",
-          "label": "B",
+          "id": "B",
           "text": "Because configuring CORS on the server encrypts all cross-origin traffic using TLS, which protects API keys transmitted in request headers from being intercepted"
         },
         {
-          "id": "c",
-          "label": "C",
+          "id": "C",
           "text": "Because browser vendors require all commercial APIs to register their domains in a public CORS whitelist maintained by the W3C before allowing cross-origin access"
         },
         {
-          "id": "d",
-          "label": "D",
+          "id": "D",
           "text": "Because without that server-side configuration, browsers would block cross-origin `fetch()` calls and external developers would not be able to access the API at all"
         }
       ],
       "correctAnswer": [
-        "d"
+        "D"
       ],
       "explanationMd": "CORS is enforced by browsers. Third-party APIs must send the right CORS headers so browser-based applications from other origins can call them.",
       "tags": [
@@ -751,15 +585,10 @@
         "rest-api",
         "fetch",
         "third-party-api"
-      ],
-      "sourceRefs": [
-        "incoming-json/DWP-Quiz-5-v2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      ]
     },
     {
-      "id": "q5-017",
+      "id": "q17",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Microtask Queue vs Task Queue",
@@ -767,28 +596,24 @@
       "questionMd": "According to the lecture, when comparing the priority of the Micro-task Queue and the Task Queue, which one does the Event Loop process first?",
       "options": [
         {
-          "id": "a",
-          "label": "A",
+          "id": "A",
           "text": "The Task Queue has higher priority because it handles user-visible interactions such as click and input events that must be processed before invisible background Promise callbacks"
         },
         {
-          "id": "b",
-          "label": "B",
+          "id": "B",
           "text": "Priority is determined dynamically based on the age of each queued task, so the oldest task regardless of which queue it belongs to is always processed next"
         },
         {
-          "id": "c",
-          "label": "C",
+          "id": "C",
           "text": "Both queues have equal priority and the Event Loop alternates between them in a strict round-robin fashion, taking one task from each queue per iteration of the loop"
         },
         {
-          "id": "d",
-          "label": "D",
+          "id": "D",
           "text": "The Micro-task Queue has higher priority than the Task Queue and is processed first"
         }
       ],
       "correctAnswer": [
-        "d"
+        "D"
       ],
       "explanationMd": "Promise callbacks are placed in the microtask queue, which is drained before the event loop moves on to the next regular task.",
       "tags": [
@@ -797,15 +622,10 @@
         "microtask",
         "task-queue",
         "promise"
-      ],
-      "sourceRefs": [
-        "incoming-json/DWP-Quiz-5-v2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      ]
     },
     {
-      "id": "q5-018",
+      "id": "q18",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Arrow Functions and `this`",
@@ -813,28 +633,24 @@
       "questionMd": "What is the key advantage of using arrow functions (`=>`) as callbacks in `fetch().then()` chains compared to ordinary functions?",
       "options": [
         {
-          "id": "a",
-          "label": "A",
+          "id": "A",
           "text": "Arrow functions bypass the browser's CORS policy because they use a different internal request mechanism that does not carry an Origin header in the HTTP request"
         },
         {
-          "id": "b",
-          "label": "B",
+          "id": "B",
           "text": "Arrow functions are automatically bound to the `this` value of their enclosing context, so they do not create their own `this` binding"
         },
         {
-          "id": "c",
-          "label": "C",
+          "id": "C",
           "text": "Arrow functions execute synchronously instead of asynchronously, which ensures that the callback completes before any subsequent line of code in the method runs"
         },
         {
-          "id": "d",
-          "label": "D",
+          "id": "D",
           "text": "Arrow functions convert the Promise returned by `fetch()` into a plain value synchronously, eliminating the need for chained `.then()` calls in most use cases"
         }
       ],
       "correctAnswer": [
-        "b"
+        "B"
       ],
       "explanationMd": "Arrow functions use lexical `this`, meaning they keep the `this` value from the surrounding scope instead of creating their own callback-specific binding.",
       "tags": [
@@ -843,16 +659,10 @@
         "this",
         "promise",
         "fetch"
-      ],
-      "sourceRefs": [
-        "incoming-json/DWP-Quiz-5-v2.json",
-        "incoming-json/Dynamic Web Programming - Quiz 5.json"
-      ],
-      "mergedFromCount": 2,
-      "needs_review": true
+      ]
     },
     {
-      "id": "q5-019",
+      "id": "q19",
       "type": "single_choice",
       "topic": "HTTP",
       "subtopic": "Browser Navigation Requests",
@@ -860,28 +670,24 @@
       "questionMd": "According to the lecture, what type of HTTP request does a browser issue when you load a URL by typing it into the address bar?",
       "options": [
         {
-          "id": "a",
-          "label": "A",
+          "id": "A",
           "text": "An HTTP POST request, because navigation events send the current page's form state to the server as part of the browser's session continuity mechanism"
         },
         {
-          "id": "b",
-          "label": "B",
+          "id": "B",
           "text": "An HTTP OPTIONS request, so that the browser can first discover which methods and content types the destination server supports before committing to a full request"
         },
         {
-          "id": "c",
-          "label": "C",
+          "id": "C",
           "text": "An HTTP GET request for the resource at that URL"
         },
         {
-          "id": "d",
-          "label": "D",
+          "id": "D",
           "text": "An HTTP HEAD request that retrieves only the response headers so the browser can determine the content type and size before deciding to download the full body"
         }
       ],
       "correctAnswer": [
-        "c"
+        "C"
       ],
       "explanationMd": "Typing a URL into the address bar requests the resource with the HTTP GET method, which asks the server to return the representation at that URL.",
       "tags": [
@@ -889,15 +695,10 @@
         "get",
         "browser",
         "url"
-      ],
-      "sourceRefs": [
-        "incoming-json/DWP-Quiz-5-v2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      ]
     },
     {
-      "id": "q5-020",
+      "id": "q20",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Race Conditions",
@@ -905,28 +706,24 @@
       "questionMd": "According to the lecture, what is the general problem referred to loosely as a 'race condition' in single-threaded JavaScript?",
       "options": [
         {
-          "id": "a",
-          "label": "A",
+          "id": "A",
           "text": "Multiple JavaScript threads execute the same callback simultaneously, each modifying shared memory in a way that produces an inconsistent final state"
         },
         {
-          "id": "b",
-          "label": "B",
+          "id": "B",
           "text": "Two `fetch()` calls are dispatched simultaneously and whichever response arrives first overwrites the state set by the slower response, producing corrupted UI data"
         },
         {
-          "id": "c",
-          "label": "C",
+          "id": "C",
           "text": "There are two or more events that can occur at unpredictable times and those events are dependent on each other in some way"
         },
         {
-          "id": "d",
-          "label": "D",
+          "id": "D",
           "text": "The browser's rendering engine and the JavaScript engine compete for CPU time, causing visible frame drops whenever a complex DOM update is triggered by a fetch callback"
         }
       ],
       "correctAnswer": [
-        "c"
+        "C"
       ],
       "explanationMd": "A race condition occurs when the result depends on the timing or ordering of events that are not fully predictable. Even single-threaded JavaScript can have this issue with asynchronous events.",
       "tags": [
@@ -934,15 +731,10 @@
         "race-condition",
         "async",
         "events"
-      ],
-      "sourceRefs": [
-        "incoming-json/DWP-Quiz-5-v2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      ]
     },
     {
-      "id": "q5-021",
+      "id": "q21",
       "type": "single_choice",
       "topic": "URLs",
       "subtopic": "Query String Structure",
@@ -950,28 +742,24 @@
       "questionMd": "In a URL query string, how are query parameter key-value pairs structured?",
       "options": [
         {
-          "id": "a",
-          "label": "A",
+          "id": "A",
           "text": "Each pair is formatted as `param/value` using a slash separator, following the hierarchical path convention used in the base URL segment of RESTful API endpoints"
         },
         {
-          "id": "b",
-          "label": "B",
+          "id": "B",
           "text": "Each pair is formatted as `{param, value}` using curly-brace destructuring syntax borrowed from JavaScript ES6 to maintain consistency with the client-side code that builds the URL"
         },
         {
-          "id": "c",
-          "label": "C",
+          "id": "C",
           "text": "Each pair is formatted as `param:value` using a colon separator, consistent with the JSON object notation used in the response body returned by RESTful endpoints"
         },
         {
-          "id": "d",
-          "label": "D",
+          "id": "D",
           "text": "Each pair is formatted as `param=value`, where the parameter name and its value are separated by an equals sign"
         }
       ],
       "correctAnswer": [
-        "d"
+        "D"
       ],
       "explanationMd": "Query strings represent each key-value pair as `name=value`. Multiple pairs are usually joined with `&`.",
       "tags": [
@@ -979,16 +767,10 @@
         "query-string",
         "parameters",
         "key-value"
-      ],
-      "sourceRefs": [
-        "incoming-json/DWP-Quiz-5-v2.json",
-        "incoming-json/Dynamic Web Programming - Quiz 5.json"
-      ],
-      "mergedFromCount": 2,
-      "needs_review": true
+      ]
     },
     {
-      "id": "q5-022",
+      "id": "q22",
       "type": "single_choice",
       "topic": "JSON",
       "subtopic": "Serialization",
@@ -996,43 +778,34 @@
       "questionMd": "In the context of JSON, what does it mean to serialize an object?",
       "options": [
         {
-          "id": "a",
-          "label": "A",
+          "id": "A",
           "text": "To send an object directly over a network socket without any intermediate text representation or encoding step"
         },
         {
-          "id": "b",
-          "label": "B",
+          "id": "B",
           "text": "To turn an object into a string that can later be deserialized"
         },
         {
-          "id": "c",
-          "label": "C",
+          "id": "C",
           "text": "To compress a JavaScript object into a binary format suitable for storage in a relational database column"
         },
         {
-          "id": "d",
-          "label": "D",
+          "id": "D",
           "text": "To convert a plain-text string into a fully constructed JavaScript object complete with methods and prototype chain"
         }
       ],
       "correctAnswer": [
-        "b"
+        "B"
       ],
       "explanationMd": "Serialization converts an object into a storable or transferable representation such as a JSON string. That string can later be deserialized back into data.",
       "tags": [
         "json",
         "serialization",
         "javascript-object"
-      ],
-      "sourceRefs": [
-        "incoming-json/DWP-Quiz-5-v2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      ]
     },
     {
-      "id": "q5-023",
+      "id": "q23",
       "type": "single_choice",
       "topic": "Programming Concepts",
       "subtopic": "Gotchas",
@@ -1040,28 +813,24 @@
       "questionMd": "According to the lecture's definition, what is a 'gotcha' in programming?",
       "options": [
         {
-          "id": "a",
-          "label": "A",
+          "id": "A",
           "text": "A security vulnerability in a programming language runtime that attackers can exploit to execute arbitrary code by supplying malformed input to a parsing function"
         },
         {
-          "id": "b",
-          "label": "B",
+          "id": "B",
           "text": "A deliberate bug intentionally left in a codebase by a developer to test whether automated testing pipelines are comprehensive enough to catch subtle logic errors"
         },
         {
-          "id": "c",
-          "label": "C",
+          "id": "C",
           "text": "A valid construct that works as documented but is counter-intuitive and almost invites mistakes because it is easy to invoke and unexpected in its outcome"
         },
         {
-          "id": "d",
-          "label": "D",
+          "id": "D",
           "text": "A deprecated API function that still exists in the language specification for backward compatibility but produces incorrect results when called in strict mode environments"
         }
       ],
       "correctAnswer": [
-        "c"
+        "C"
       ],
       "explanationMd": "A programming gotcha is not necessarily a bug in the language; it is behavior that is technically valid but surprising enough to cause mistakes.",
       "tags": [
@@ -1069,15 +838,10 @@
         "gotcha",
         "debugging",
         "concepts"
-      ],
-      "sourceRefs": [
-        "incoming-json/DWP-Quiz-5-v2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      ]
     },
     {
-      "id": "q5-024",
+      "id": "q24",
       "type": "single_choice",
       "topic": "Web Security",
       "subtopic": "CORS Exceptions",
@@ -1085,28 +849,24 @@
       "questionMd": "According to the lecture, which type of resource can be loaded cross-origin by default without triggering a CORS error?",
       "options": [
         {
-          "id": "a",
-          "label": "A",
+          "id": "A",
           "text": "JSON data fetched using the `fetch()` API from a different domain, provided the `Content-Type` response header is set to `application/json`"
         },
         {
-          "id": "b",
-          "label": "B",
+          "id": "B",
           "text": "Images loaded via an `<img>` tag"
         },
         {
-          "id": "c",
-          "label": "C",
+          "id": "C",
           "text": "XHR (`XMLHttpRequest`) responses from external servers, which were exempted from CORS restrictions in the original XMLHttpRequest Level 1 specification"
         },
         {
-          "id": "d",
-          "label": "D",
+          "id": "D",
           "text": "WebSocket connections to external domains, because WebSocket uses a different handshake protocol that bypasses the standard browser same-origin policy"
         }
       ],
       "correctAnswer": [
-        "b"
+        "B"
       ],
       "explanationMd": "Browsers generally allow resources such as images to be embedded from other origins with an `<img>` tag. Programmatic access to cross-origin data through `fetch()` or XHR is more restricted.",
       "tags": [
@@ -1114,15 +874,10 @@
         "cross-origin",
         "images",
         "img"
-      ],
-      "sourceRefs": [
-        "incoming-json/DWP-Quiz-5-v2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      ]
     },
     {
-      "id": "q5-025",
+      "id": "q25",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Single-threaded Execution",
@@ -1130,28 +885,24 @@
       "questionMd": "What does it mean that JavaScript is 'single-threaded'?",
       "options": [
         {
-          "id": "a",
-          "label": "A",
+          "id": "A",
           "text": "JavaScript processes only one file at a time, so all external script tags are loaded and executed in strict source-order before any user events are processed"
         },
         {
-          "id": "b",
-          "label": "B",
+          "id": "B",
           "text": "JavaScript can execute multiple functions simultaneously as long as they are declared as async, because the async keyword spawns a separate execution thread for each call"
         },
         {
-          "id": "c",
-          "label": "C",
+          "id": "C",
           "text": "JavaScript shares a single CPU core with the browser's rendering engine but uses time-slicing to interleave rendering and script execution within each frame budget"
         },
         {
-          "id": "d",
-          "label": "D",
+          "id": "D",
           "text": "There is one call stack, so JavaScript can only process one command at a time"
         }
       ],
       "correctAnswer": [
-        "d"
+        "D"
       ],
       "explanationMd": "Single-threaded JavaScript means the main JavaScript execution context uses one call stack and runs one piece of code at a time.",
       "tags": [
@@ -1159,15 +910,10 @@
         "single-threaded",
         "call-stack",
         "event-loop"
-      ],
-      "sourceRefs": [
-        "incoming-json/DWP-Quiz-5-v2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      ]
     },
     {
-      "id": "q5-026",
+      "id": "q26",
       "type": "single_choice",
       "topic": "Browser Architecture",
       "subtopic": "Parallel Resource Loading",
@@ -1175,28 +921,24 @@
       "questionMd": "According to the lecture, why can multiple images load in parallel even though JavaScript is single-threaded?",
       "options": [
         {
-          "id": "a",
-          "label": "A",
+          "id": "A",
           "text": "The browser batches all image requests into a single multiplexed HTTP/2 stream that the JavaScript engine processes sequentially but displays simultaneously after all bytes arrive"
         },
         {
-          "id": "b",
-          "label": "B",
+          "id": "B",
           "text": "JavaScript uses Web Workers internally for all image element operations, with each Image object spawning its own dedicated worker thread to manage the download lifecycle"
         },
         {
-          "id": "c",
-          "label": "C",
+          "id": "C",
           "text": "The browser itself is multi-threaded and multi-process, so network requests and image decoding happen in browser threads outside the JavaScript runtime"
         },
         {
-          "id": "d",
-          "label": "D",
+          "id": "D",
           "text": "Image loading is handled entirely by the operating system's DNS resolver and network stack, which feeds completed image buffers directly into the browser's graphics memory"
         }
       ],
       "correctAnswer": [
-        "c"
+        "C"
       ],
       "explanationMd": "JavaScript on the main thread runs one command at a time, but the browser has other threads and processes for networking, decoding, and rendering resources in parallel.",
       "tags": [
@@ -1205,16 +947,10 @@
         "parallelism",
         "javascript",
         "threads"
-      ],
-      "sourceRefs": [
-        "incoming-json/DWP-Quiz-5-v2.json",
-        "incoming-json/Dynamic Web Programming - Quiz 5.json"
-      ],
-      "mergedFromCount": 2,
-      "needs_review": true
+      ]
     },
     {
-      "id": "q5-027",
+      "id": "q27",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "DOM Input Values",
@@ -1222,28 +958,24 @@
       "questionMd": "In JavaScript, how do you read the current text entered by a user in an `<input type=\"text\">` element?",
       "options": [
         {
-          "id": "a",
-          "label": "A",
+          "id": "A",
           "text": "inputElement.innerHTML"
         },
         {
-          "id": "b",
-          "label": "B",
+          "id": "B",
           "text": "inputElement.textContent"
         },
         {
-          "id": "c",
-          "label": "C",
+          "id": "C",
           "text": "inputElement.data"
         },
         {
-          "id": "d",
-          "label": "D",
+          "id": "D",
           "text": "inputElement.value"
         }
       ],
       "correctAnswer": [
-        "d"
+        "D"
       ],
       "explanationMd": "For form input elements, the current user-entered value is stored in the element's `value` property.",
       "tags": [
@@ -1251,16 +983,10 @@
         "dom",
         "input",
         "value"
-      ],
-      "sourceRefs": [
-        "incoming-json/DWP-Quiz-5-v2.json",
-        "incoming-json/Dynamic Web Programming - Quiz 5.json"
-      ],
-      "mergedFromCount": 2,
-      "needs_review": true
+      ]
     },
     {
-      "id": "q5-028",
+      "id": "q28",
       "type": "single_choice",
       "topic": "Fetch API",
       "subtopic": "Parsing JSON Responses",
@@ -1268,28 +994,24 @@
       "questionMd": "When using the Fetch API, which method should you call on a response object to automatically parse the response body as JSON?",
       "options": [
         {
-          "id": "a",
-          "label": "A",
+          "id": "A",
           "text": "response.parse(), a built-in Fetch helper that detects the Content-Type header and chooses the appropriate parsing strategy automatically"
         },
         {
-          "id": "b",
-          "label": "B",
+          "id": "B",
           "text": "response.decode(), which handles base64-encoded JSON payloads by first decoding them and then running a standard JSON parser on the result"
         },
         {
-          "id": "c",
-          "label": "C",
+          "id": "C",
           "text": "response.json()"
         },
         {
-          "id": "d",
-          "label": "D",
+          "id": "D",
           "text": "response.text(), which returns the raw string and requires you to manually call `JSON.parse()` in a separate subsequent step"
         }
       ],
       "correctAnswer": [
-        "c"
+        "C"
       ],
       "explanationMd": "The Fetch API's `Response` object provides `response.json()`, which reads the response body and parses it as JSON, returning a Promise for the parsed value.",
       "tags": [
@@ -1297,15 +1019,10 @@
         "response",
         "json",
         "javascript"
-      ],
-      "sourceRefs": [
-        "incoming-json/DWP-Quiz-5-v2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      ]
     },
     {
-      "id": "q5-029",
+      "id": "q29",
       "type": "single_choice",
       "topic": "JSON",
       "subtopic": "Acronym",
@@ -1313,43 +1030,34 @@
       "questionMd": "What does the acronym JSON stand for?",
       "options": [
         {
-          "id": "a",
-          "label": "A",
+          "id": "A",
           "text": "JavaScript Oriented Networking"
         },
         {
-          "id": "b",
-          "label": "B",
+          "id": "B",
           "text": "Joint Serialization Of Nodes"
         },
         {
-          "id": "c",
-          "label": "C",
+          "id": "C",
           "text": "Java Standardized Object Notation"
         },
         {
-          "id": "d",
-          "label": "D",
+          "id": "D",
           "text": "JavaScript Object Notation"
         }
       ],
       "correctAnswer": [
-        "d"
+        "D"
       ],
       "explanationMd": "JSON stands for JavaScript Object Notation, a text-based data format commonly used for exchanging structured data.",
       "tags": [
         "json",
         "acronym",
         "data-format"
-      ],
-      "sourceRefs": [
-        "incoming-json/DWP-Quiz-5-v2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      ]
     },
     {
-      "id": "q5-030",
+      "id": "q30",
       "type": "single_choice",
       "topic": "Web Security",
       "subtopic": "Same-Origin Policy",
@@ -1357,28 +1065,24 @@
       "questionMd": "If a page at `abc.com/users` makes a `fetch()` request to `abc.com/search`, how is this request classified according to CORS rules?",
       "options": [
         {
-          "id": "a",
-          "label": "A",
+          "id": "A",
           "text": "It is a same-origin request because both URLs share the same domain"
         },
         {
-          "id": "b",
-          "label": "B",
+          "id": "B",
           "text": "It is a cross-origin request because the URL paths `/users` and `/search` are different, which triggers the browser's preflight OPTIONS mechanism"
         },
         {
-          "id": "c",
-          "label": "C",
+          "id": "C",
           "text": "It is a cross-origin request because `fetch()` always performs an origin check against the `window.location.href` value at the time the call is initiated"
         },
         {
-          "id": "d",
-          "label": "D",
+          "id": "D",
           "text": "It is classified as a restricted request because it travels between two different endpoints on the server, which requires an explicit `Access-Control-Allow-Path` header"
         }
       ],
       "correctAnswer": [
-        "a"
+        "A"
       ],
       "explanationMd": "CORS is based on origin, which is determined by scheme, host, and port. Different paths on the same domain are still considered same-origin, assuming the scheme and port are also the same.",
       "tags": [
@@ -1386,15 +1090,10 @@
         "same-origin",
         "url",
         "fetch"
-      ],
-      "sourceRefs": [
-        "incoming-json/DWP-Quiz-5-v2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      ]
     },
     {
-      "id": "q5-031",
+      "id": "q31",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Multi-threading Concepts",
@@ -1402,28 +1101,24 @@
       "questionMd": "According to the lecture, what characterizes a multi-threaded execution environment?",
       "options": [
         {
-          "id": "a",
-          "label": "A",
+          "id": "A",
           "text": "Multiple commands are processed simultaneously and there is one call stack per thread"
         },
         {
-          "id": "b",
-          "label": "B",
+          "id": "B",
           "text": "Commands are processed one at a time but each command runs inside its own isolated memory sandbox so that variable mutations in one command cannot affect another"
         },
         {
-          "id": "c",
-          "label": "C",
+          "id": "C",
           "text": "A single call stack is shared among all active execution contexts, with a scheduler deciding which context gets CPU time on each clock cycle"
         },
         {
-          "id": "d",
-          "label": "D",
+          "id": "D",
           "text": "The event loop distributes microtasks and macrotasks across a pool of worker processes, each of which maintains a separate heap but shares the same call stack"
         }
       ],
       "correctAnswer": [
-        "a"
+        "A"
       ],
       "explanationMd": "In a multi-threaded environment, multiple threads can execute commands at the same time, and each thread has its own call stack.",
       "tags": [
@@ -1431,15 +1126,10 @@
         "threads",
         "call-stack",
         "execution-model"
-      ],
-      "sourceRefs": [
-        "incoming-json/DWP-Quiz-5-v2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      ]
     },
     {
-      "id": "q5-032",
+      "id": "q32",
       "type": "single_choice",
       "topic": "GraphQL",
       "subtopic": "History",
@@ -1447,311 +1137,31 @@
       "questionMd": "According to the lecture, in which year did Facebook open-source GraphQL?",
       "options": [
         {
-          "id": "a",
-          "label": "A",
+          "id": "A",
           "text": "2012"
         },
         {
-          "id": "b",
-          "label": "B",
+          "id": "B",
           "text": "2010"
         },
         {
-          "id": "c",
-          "label": "C",
+          "id": "C",
           "text": "2018"
         },
         {
-          "id": "d",
-          "label": "D",
+          "id": "D",
           "text": "2015"
         }
       ],
       "correctAnswer": [
-        "d"
+        "D"
       ],
       "explanationMd": "According to the lecture material, Facebook open-sourced GraphQL in 2015.",
       "tags": [
         "graphql",
         "facebook",
         "history"
-      ],
-      "sourceRefs": [
-        "incoming-json/DWP-Quiz-5-v2.json",
-        "incoming-json/Dynamic Web Programming - Quiz 5.json"
-      ],
-      "mergedFromCount": 2,
-      "needs_review": true
-    },
-    {
-      "id": "q5-033",
-      "type": "single_choice",
-      "topic": "HTML",
-      "subtopic": "Forms and Submit Events",
-      "difficulty": "easy",
-      "questionMd": "To allow a form to submit when the user presses the Enter key, in addition to clicking a button, what must you do in your HTML?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "Add a `keydown` event listener directly to the input element and manually check whether the key pressed has the code value of `Enter` each time a keystroke occurs"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "Wrap the input elements inside a `<form>` element and listen for the `submit` event on that form"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "Set the `autocomplete` attribute on the input element to `on` so that the browser automatically triggers submission when it detects a confirmed input value"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "Use a `<button type=\"button\">` element paired with a global document-level `keypress` listener that checks for the Enter key on every page interaction"
-        }
-      ],
-      "correctAnswer": [
-        "b"
-      ],
-      "explanationMd": "Putting the inputs inside a `<form>` lets the browser trigger the form's `submit` event when the user presses Enter, so the same submit handler can handle both Enter and button submission.",
-      "tags": [
-        "html",
-        "form",
-        "submit",
-        "enter-key"
-      ],
-      "sourceRefs": [
-        "incoming-json/Dynamic Web Programming - Quiz 5.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "q5-034",
-      "type": "single_choice",
-      "topic": "Web APIs",
-      "subtopic": "Finding Public APIs",
-      "difficulty": "easy",
-      "questionMd": "According to the lecture, what is a simple way to check whether a particular company or product offers a publicly accessible developer API?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "Search for `<product name> API` using a search engine to see if a developer API exists"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "Send an HTTP OPTIONS request to the company's main domain and inspect the Allow header in the response to discover the supported API endpoints and methods"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "Check the W3C's official registry of public REST APIs, which every company is required to register with before making its API available to third-party developers"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "Use the browser's Network tab to inspect all requests made by the company's website, then reverse-engineer those endpoints to determine which ones accept external calls"
-        }
-      ],
-      "correctAnswer": [
-        "a"
-      ],
-      "explanationMd": "A practical first step is to search for the product or company name together with `API`, which often leads to official developer documentation if one exists.",
-      "tags": [
-        "api",
-        "developer-api",
-        "documentation",
-        "search"
-      ],
-      "sourceRefs": [
-        "incoming-json/Dynamic Web Programming - Quiz 5.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "q5-035",
-      "type": "single_choice",
-      "topic": "Web APIs",
-      "subtopic": "Falcor",
-      "difficulty": "easy",
-      "questionMd": "According to the lecture, which company introduced Falcor as a REST alternative?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "Amazon, which required a uniform data-access abstraction across its many distributed AWS services that had diverse underlying data formats"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "Netflix"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "Facebook, which needed a declarative data-fetching layer for its React-based front-end after experiencing performance problems with traditional REST endpoints"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "Microsoft, which built it as an open-source project to simplify data binding between Azure cloud services and JavaScript single-page applications"
-        }
-      ],
-      "correctAnswer": [
-        "b"
-      ],
-      "explanationMd": "Falcor is associated with Netflix and was introduced as an alternative model for accessing remote data.",
-      "tags": [
-        "falcor",
-        "netflix",
-        "rest",
-        "api"
-      ],
-      "sourceRefs": [
-        "incoming-json/Dynamic Web Programming - Quiz 5.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "q5-036",
-      "type": "single_choice",
-      "topic": "JavaScript",
-      "subtopic": "Fetch API Defaults",
-      "difficulty": "easy",
-      "questionMd": "What HTTP method does the `fetch()` API use by default when no options object is provided?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "HEAD"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "POST"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "GET"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "OPTIONS"
-        }
-      ],
-      "correctAnswer": [
-        "c"
-      ],
-      "explanationMd": "A basic `fetch(url)` request uses the HTTP `GET` method unless another method is specified in the options object.",
-      "tags": [
-        "fetch",
-        "http",
-        "get",
-        "default-method"
-      ],
-      "sourceRefs": [
-        "incoming-json/Dynamic Web Programming - Quiz 5.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "q5-037",
-      "type": "single_choice",
-      "topic": "Programming Concepts",
-      "subtopic": "Gotchas",
-      "difficulty": "medium",
-      "questionMd": "According to the lecture's definition, what is a “gotcha” in programming?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "A valid construct that works as documented but is counter-intuitive and almost invites mistakes because it is easy to invoke and unexpected in its outcome"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "A security vulnerability in a programming language runtime that attackers can exploit to execute arbitrary code by supplying malformed input to a parsing function"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "A deprecated API function that still exists in the language specification for backward compatibility but produces incorrect results when called in strict mode environments"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "A deliberate bug intentionally left in a codebase by a developer to test whether automated testing pipelines are comprehensive enough to catch subtle logic errors"
-        }
-      ],
-      "correctAnswer": [
-        "a"
-      ],
-      "explanationMd": "A programming gotcha is a valid language feature or behavior that is easy to use incorrectly because it produces surprising or counter-intuitive results.",
-      "tags": [
-        "programming",
-        "gotcha",
-        "bugs",
-        "javascript"
-      ],
-      "sourceRefs": [
-        "incoming-json/Dynamic Web Programming - Quiz 5.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "q5-038",
-      "type": "single_choice",
-      "topic": "Web APIs",
-      "subtopic": "URL Query Parameters",
-      "difficulty": "easy",
-      "questionMd": "In a URL query string, which character separates subsequent non-first query parameters from each other?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "`;` (semicolon)"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "`=` (equals sign)"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "`&`"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "`?`"
-        }
-      ],
-      "correctAnswer": [
-        "c"
-      ],
-      "explanationMd": "After the first query parameter begins with `?`, additional query parameters are separated with `&`, for example `?q=test&page=2`.",
-      "tags": [
-        "url",
-        "query-string",
-        "ampersand",
-        "api"
-      ],
-      "sourceRefs": [
-        "incoming-json/Dynamic Web Programming - Quiz 5.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      ]
     }
   ]
 }

@@ -7,7 +7,10 @@
     "course": "Dynamic Web Programming",
     "topic": "Mixed",
     "topics": [
+      "APIs",
+      "Back-End Development",
       "Browser Architecture",
+      "Browser Security",
       "Course Information",
       "Data Formats",
       "ExpressJS",
@@ -15,6 +18,7 @@
       "HTTP",
       "JavaScript",
       "Networking",
+      "Node.js",
       "NodeJS",
       "Programming Concepts",
       "REST APIs",
@@ -23,11 +27,13 @@
       "Web Architecture",
       "Web Development",
       "Web History",
-      "Web Security"
+      "Web Security",
+      "Web Servers",
+      "Web Standards"
     ],
-    "questionCount": 60,
+    "questionCount": 104,
     "difficulty": "easy",
-    "estimatedMinutes": 90,
+    "estimatedMinutes": 156,
     "tags": [
       "midterm",
       "merged",
@@ -119,10 +125,11 @@
         "local-development"
       ],
       "sourceRefs": [
-        "incoming-json/Dynamic Web Programming - Midterm.json"
+        "incoming-json/Dynamic Web Programming - Midterm.json",
+        "incoming-json/DWP-Midterm-v2.json"
       ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      "mergedFromCount": 2,
+      "needs_review": true
     },
     {
       "id": "midterm-003",
@@ -252,10 +259,11 @@
         "javascript"
       ],
       "sourceRefs": [
-        "incoming-json/Dynamic Web Programming - Midterm.json"
+        "incoming-json/Dynamic Web Programming - Midterm.json",
+        "incoming-json/DWP-Midterm-v2.json"
       ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      "mergedFromCount": 2,
+      "needs_review": true
     },
     {
       "id": "midterm-006",
@@ -385,10 +393,11 @@
         "closures"
       ],
       "sourceRefs": [
-        "incoming-json/Dynamic Web Programming - Midterm.json"
+        "incoming-json/Dynamic Web Programming - Midterm.json",
+        "incoming-json/DWP-Midterm-v2.json"
       ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      "mergedFromCount": 2,
+      "needs_review": true
     },
     {
       "id": "midterm-009",
@@ -606,10 +615,11 @@
         "http"
       ],
       "sourceRefs": [
-        "incoming-json/Dynamic Web Programming - Midterm.json"
+        "incoming-json/Dynamic Web Programming - Midterm.json",
+        "incoming-json/DWP-Midterm-v2.json"
       ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      "mergedFromCount": 2,
+      "needs_review": true
     },
     {
       "id": "midterm-014",
@@ -694,10 +704,11 @@
         "tcp"
       ],
       "sourceRefs": [
-        "incoming-json/Dynamic Web Programming - Midterm.json"
+        "incoming-json/Dynamic Web Programming - Midterm.json",
+        "incoming-json/DWP-Midterm-v2.json"
       ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      "mergedFromCount": 2,
+      "needs_review": true
     },
     {
       "id": "midterm-016",
@@ -958,10 +969,11 @@
         "http-server"
       ],
       "sourceRefs": [
-        "incoming-json/Dynamic Web Programming - Midterm.json"
+        "incoming-json/Dynamic Web Programming - Midterm.json",
+        "incoming-json/DWP-Midterm-v2.json"
       ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      "mergedFromCount": 2,
+      "needs_review": true
     },
     {
       "id": "midterm-022",
@@ -1046,10 +1058,11 @@
         "preventDefault"
       ],
       "sourceRefs": [
-        "incoming-json/Dynamic Web Programming - Midterm.json"
+        "incoming-json/Dynamic Web Programming - Midterm.json",
+        "incoming-json/DWP-Midterm-v2.json"
       ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      "mergedFromCount": 2,
+      "needs_review": true
     },
     {
       "id": "midterm-024",
@@ -1179,10 +1192,11 @@
         "response"
       ],
       "sourceRefs": [
-        "incoming-json/Dynamic Web Programming - Midterm.json"
+        "incoming-json/Dynamic Web Programming - Midterm.json",
+        "incoming-json/DWP-Midterm-v2.json"
       ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      "mergedFromCount": 2,
+      "needs_review": true
     },
     {
       "id": "midterm-027",
@@ -1223,10 +1237,11 @@
         "web-history"
       ],
       "sourceRefs": [
-        "incoming-json/Dynamic Web Programming - Midterm.json"
+        "incoming-json/Dynamic Web Programming - Midterm.json",
+        "incoming-json/DWP-Midterm-v2.json"
       ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      "mergedFromCount": 2,
+      "needs_review": true
     },
     {
       "id": "midterm-028",
@@ -1268,10 +1283,11 @@
         "javascript"
       ],
       "sourceRefs": [
-        "incoming-json/Dynamic Web Programming - Midterm.json"
+        "incoming-json/Dynamic Web Programming - Midterm.json",
+        "incoming-json/DWP-Midterm-v2.json"
       ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      "mergedFromCount": 2,
+      "needs_review": true
     },
     {
       "id": "midterm-029",
@@ -1400,10 +1416,11 @@
         "async"
       ],
       "sourceRefs": [
-        "incoming-json/Dynamic Web Programming - Midterm.json"
+        "incoming-json/Dynamic Web Programming - Midterm.json",
+        "incoming-json/DWP-Midterm-v2.json"
       ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      "mergedFromCount": 2,
+      "needs_review": true
     },
     {
       "id": "midterm-032",
@@ -1578,10 +1595,11 @@
         "javascript"
       ],
       "sourceRefs": [
-        "incoming-json/Dynamic Web Programming - Midterm.json"
+        "incoming-json/Dynamic Web Programming - Midterm.json",
+        "incoming-json/DWP-Midterm-v2.json"
       ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      "mergedFromCount": 2,
+      "needs_review": true
     },
     {
       "id": "midterm-036",
@@ -1755,10 +1773,11 @@
         "networking"
       ],
       "sourceRefs": [
-        "incoming-json/Dynamic Web Programming - Midterm.json"
+        "incoming-json/Dynamic Web Programming - Midterm.json",
+        "incoming-json/DWP-Midterm-v2.json"
       ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      "mergedFromCount": 2,
+      "needs_review": true
     },
     {
       "id": "midterm-040",
@@ -1887,10 +1906,11 @@
         "value"
       ],
       "sourceRefs": [
-        "incoming-json/Dynamic Web Programming - Midterm.json"
+        "incoming-json/Dynamic Web Programming - Midterm.json",
+        "incoming-json/DWP-Midterm-v2.json"
       ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      "mergedFromCount": 2,
+      "needs_review": true
     },
     {
       "id": "midterm-043",
@@ -2019,10 +2039,11 @@
         "data-format"
       ],
       "sourceRefs": [
-        "incoming-json/Dynamic Web Programming - Midterm.json"
+        "incoming-json/Dynamic Web Programming - Midterm.json",
+        "incoming-json/DWP-Midterm-v2.json"
       ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      "mergedFromCount": 2,
+      "needs_review": true
     },
     {
       "id": "midterm-046",
@@ -2372,10 +2393,11 @@
         "packages"
       ],
       "sourceRefs": [
-        "incoming-json/Dynamic Web Programming - Midterm.json"
+        "incoming-json/Dynamic Web Programming - Midterm.json",
+        "incoming-json/DWP-Midterm-v2.json"
       ],
-      "mergedFromCount": 1,
-      "needs_review": false
+      "mergedFromCount": 2,
+      "needs_review": true
     },
     {
       "id": "midterm-054",
@@ -2681,6 +2703,1973 @@
       ],
       "sourceRefs": [
         "incoming-json/Dynamic Web Programming - Midterm.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-061",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Fetch API and HTTP Methods",
+      "difficulty": "easy",
+      "questionMd": "When using the browser's `fetch()` API to send an HTTP POST request to `/hello`, which option correctly specifies the HTTP method?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "`fetch('/hello', { method: 'POST' })`, passing an options object with the `method` property set to `'POST'`."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "`fetch.post('/hello')`, which is a shorthand helper method on the fetch object specifically designed for POST requests."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "`fetch('/hello', { type: 'POST' })`, where the `type` property in the options object overrides the default GET method."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "`fetch('/hello', 'POST')`, passing the HTTP method as the second positional argument directly to the fetch function call."
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "The Fetch API receives request settings in an options object. The HTTP verb is selected with the `method` property, such as `{ method: 'POST' }`.",
+      "tags": [
+        "javascript",
+        "fetch",
+        "http",
+        "post"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-062",
+      "type": "single_choice",
+      "topic": "HTTP",
+      "subtopic": "HTTP/2",
+      "difficulty": "medium",
+      "questionMd": "Compared to HTTP/1.1, what is a key advantage of HTTP/2.0?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "HTTP/2.0 encrypts all data by default using SSL certificates"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "HTTP/2.0 keeps the connection open and allows multiple fetches"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "HTTP/2.0 eliminates the need for DNS lookups before connecting to a server"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "HTTP/2.0 only supports text-based content and not binary data"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "HTTP/2 improves performance by allowing multiple requests/responses to share a connection more efficiently instead of opening many independent connections.",
+      "tags": [
+        "http",
+        "http2",
+        "networking",
+        "multiplexing"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-063",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Promises",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture, which statement best captures the relationship between using and defining Promises?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Promises are equally straightforward to both define and use"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Promises must be fully understood internally before they can be used"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Promises are easier to define than to use"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Promises are easier to use than to define"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Promise consumers usually only call methods such as `.then()` or `.catch()`, while defining a Promise requires understanding resolution, rejection, and asynchronous flow.",
+      "tags": [
+        "javascript",
+        "promises",
+        "async"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-064",
+      "type": "single_choice",
+      "topic": "Node.js",
+      "subtopic": "HTTP Response Handling",
+      "difficulty": "easy",
+      "questionMd": "In a NodeJS HTTP request handler, what does calling `res.end()` do?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "It sets the HTTP status code of the response to 200 and automatically adds the Content-Type header to the message."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "It writes the final message to the response body and signals to the server that the response is complete."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "It closes the TCP connection and stops the server from listening for any further incoming HTTP requests on that port."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "It terminates the NodeJS process and releases all bound ports back to the operating system's port pool."
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "`res.end()` finishes the response. After it is called, Node considers the response body complete and can send it to the client.",
+      "tags": [
+        "nodejs",
+        "http",
+        "response",
+        "res.end"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-065",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Fetch Response Parsing",
+      "difficulty": "easy",
+      "questionMd": "When using the Fetch API, which method should you call on a response object to automatically parse the response body as JSON?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "`response.json()`"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "`response.parse()`, a built-in Fetch helper that detects the Content-Type header and chooses the appropriate parsing strategy automatically"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "`response.decode()`, which handles base64-encoded JSON payloads by first decoding them and then running a standard JSON parser on the result"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "`response.text()`, which returns the raw string and requires you to manually call `JSON.parse()` in a separate subsequent step"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "`response.json()` reads the response body and parses it as JSON, returning a Promise for the parsed JavaScript value.",
+      "tags": [
+        "javascript",
+        "fetch",
+        "json",
+        "response.json"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-066",
+      "type": "single_choice",
+      "topic": "Node.js",
+      "subtopic": "Server Binding",
+      "difficulty": "medium",
+      "questionMd": "What is \"binding\" in the context of running a server process?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Compiling JavaScript source code into native machine code before the NodeJS runtime begins accepting HTTP requests."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Telling the operating system which port number to associate with the server process so it can receive incoming messages."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Establishing a persistent TCP connection between two servers so they can exchange data without repeating the handshake."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Encrypting the server's IP address so that DNS queries return a hashed value instead of the actual numerical address."
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Binding associates a running server process with a port, so the operating system can deliver incoming network traffic on that port to the process.",
+      "tags": [
+        "nodejs",
+        "server",
+        "port",
+        "binding"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-067",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "JSON Parsing",
+      "difficulty": "easy",
+      "questionMd": "A developer receives the string `'{\"name\":\"Ice Bear\"}'` from a server. Which function should they use to turn it into a usable JavaScript object?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "`JSON.parse()`"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "`JSON.objectify()`"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "`JSON.decode()`"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "`JSON.stringify()`"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "`JSON.parse()` converts a JSON-formatted string into a JavaScript value or object.",
+      "tags": [
+        "javascript",
+        "json",
+        "json.parse",
+        "deserialization"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-068",
+      "type": "single_choice",
+      "topic": "HTML Forms",
+      "subtopic": "Submit Controls",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture, why should you use `<input type=\"submit\">` instead of `<button>` inside a form?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Because the `submit` event fires when `<input type=\"submit\">` is clicked but does not fire when a plain `<button>` element is clicked"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Because `<button>` elements cause the browser to make a synchronous HTTP GET request on click, which blocks the JavaScript event loop until the server responds"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Because `<input type=\"submit\">` automatically calls `encodeURIComponent` on the input values before appending them to the request URL as query parameters"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Because `<input type=\"submit\">` is the only element that can be styled with CSS, whereas `<button>` elements inherit browser-specific default styles that cannot be overridden"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "In the lecture framing, the submit control is tied to form submission behavior and causes the form's `submit` event to fire when activated.",
+      "tags": [
+        "html",
+        "forms",
+        "submit",
+        "button"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-069",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "ES6 Classes",
+      "difficulty": "easy",
+      "questionMd": "When defining methods inside an ES6 class body, which keyword must you omit?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "`const`"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "`class`"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "`return`"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "`function`"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Class method syntax omits the `function` keyword; methods are written directly as `methodName() { ... }`.",
+      "tags": [
+        "javascript",
+        "es6",
+        "classes",
+        "methods"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-070",
+      "type": "single_choice",
+      "topic": "Web History",
+      "subtopic": "SGML and HTML",
+      "difficulty": "easy",
+      "questionMd": "What is the role of SGML (Standard Generalized Markup Language) in relation to HTML?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "SGML is a scripting language that adds interactivity to static HTML pages"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "SGML is a stylesheet language used to define the visual presentation of XML documents"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "SGML is a transport protocol that HTTP was built upon"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "SGML is a standard for specifying markup languages like HTML"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "SGML is a meta-language for defining markup languages; HTML was originally specified using SGML concepts.",
+      "tags": [
+        "web-history",
+        "html",
+        "sgml",
+        "markup"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-071",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Synchronous I/O",
+      "difficulty": "easy",
+      "questionMd": "What is the primary reason a synchronous `loadFromFile()` function would be problematic in JavaScript?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "It does not support callback functions"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "It cannot handle JSON data formats"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "It requires a server to be running on port 8000"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "It blocks JavaScript execution while the file loads"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Synchronous file loading would block the single JavaScript thread and prevent other code or UI work from running until the load completes.",
+      "tags": [
+        "javascript",
+        "synchronous",
+        "blocking",
+        "event-loop"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-072",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Serialization",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, what does it mean to \"serialize\" an object?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "To convert a string into a JavaScript object"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "To turn an object into a string that can later be deserialized"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "To load an object from an external file using fetch"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "To send an object directly to a server over HTTP"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Serialization converts a structured object into a string or other transferable representation that can later be parsed back.",
+      "tags": [
+        "javascript",
+        "serialization",
+        "json"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-073",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "JSON Serialization",
+      "difficulty": "easy",
+      "questionMd": "In the context of JSON, what does it mean \"to serialize\" an object?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "To send an object directly over a network socket without any intermediate text representation or encoding step"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "To turn an object into a string that can later be deserialized"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "To convert a plain-text string into a fully constructed JavaScript object complete with methods and prototype chain"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "To compress a JavaScript object into a binary format suitable for storage in a relational database column"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "JSON serialization means converting a JavaScript value into a JSON string representation that can later be parsed.",
+      "tags": [
+        "json",
+        "serialization",
+        "javascript"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-074",
+      "type": "single_choice",
+      "topic": "Networking",
+      "subtopic": "Localhost",
+      "difficulty": "easy",
+      "questionMd": "What does the hostname `localhost` refer to when used in a URL?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "It refers to the nearest geographically local server node assigned by the internet service provider's routing infrastructure."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "It refers to a special Anthropic-hosted test server that developers use to validate their NodeJS applications before deployment."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "It refers to the current computer itself, allowing a browser to send HTTP requests to a server running on the same machine."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "It refers to a virtual machine environment where NodeJS applications are isolated from the host operating system's network stack."
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "`localhost` resolves to the local machine, commonly used to test servers running on the same computer.",
+      "tags": [
+        "localhost",
+        "networking",
+        "nodejs",
+        "development"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-075",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Array Sorting",
+      "difficulty": "medium",
+      "questionMd": "To sort an array of album objects by year in ascending order, which comparator function should be passed to `.sort()`?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "`function(a, b) { return a.year + b.year; }`"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "`function(a, b) { return b.year - a.year; }`"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "`function(a, b) { return a.year - b.year; }`"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "`function(a, b) { return a.year; }`"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "For numeric ascending order, the comparator should return a negative number when `a` should come before `b`, which is achieved by `a.year - b.year`.",
+      "tags": [
+        "javascript",
+        "arrays",
+        "sort",
+        "comparator"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-076",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Race Conditions",
+      "difficulty": "hard",
+      "questionMd": "According to the lecture, what is the general problem referred to (loosely) as a \"race condition\" in single-threaded JavaScript?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The browser's rendering engine and the JavaScript engine compete for CPU time, causing visible frame drops whenever a complex DOM update is triggered by a fetch callback"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "There are two or more events that can occur at unpredictable times and those events are dependent on each other in some way"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Multiple JavaScript threads execute the same callback simultaneously, each modifying shared memory in a way that produces an inconsistent final state"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Two `fetch()` calls are dispatched simultaneously and whichever response arrives first overwrites the state set by the slower response, producing corrupted UI data"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Even in single-threaded JavaScript, asynchronous events can complete in unpredictable order. Bugs happen when code incorrectly depends on their timing.",
+      "tags": [
+        "javascript",
+        "race-condition",
+        "async",
+        "events"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-077",
+      "type": "single_choice",
+      "topic": "Networking",
+      "subtopic": "Ports",
+      "difficulty": "easy",
+      "questionMd": "How does the lecture define a \"port\" in the context of computer networking?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A physical socket on a server's network card used to plug in Ethernet cables and establish wired network connections."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "An encrypted channel created by the operating system to secure all incoming TCP connections on a given server machine."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "A logical (as opposed to physical) connection point represented by a number ranging from 0 to 65535."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The unique IP address assigned to a server machine that allows it to be identified on the public internet."
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "A network port is a numeric logical endpoint used by the OS to route traffic to the correct process or service.",
+      "tags": [
+        "networking",
+        "ports",
+        "tcp",
+        "server"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-078",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Fetch Response Status",
+      "difficulty": "easy",
+      "questionMd": "What does `response.status` contain when used inside a fetch success handler?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A boolean indicating whether the request succeeded"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The HTTP status code of the request, such as 200"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The text content of the fetched resource"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The name of the file that was fetched"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "The `status` property of a Fetch `Response` stores the numeric HTTP status code, such as 200 or 404.",
+      "tags": [
+        "javascript",
+        "fetch",
+        "response.status",
+        "http-status"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-079",
+      "type": "single_choice",
+      "topic": "Browser Security",
+      "subtopic": "Fetch and Local Files",
+      "difficulty": "medium",
+      "questionMd": "Why does calling `fetch()` on a local file opened via `file://` protocol result in an error?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Loading files via the `file://` protocol is disallowed by the browser"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "JavaScript blocks all file I/O on the main thread"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Local files must be fetched using XMLHttpRequest instead"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The fetch API only supports JSON files, not text files"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Browsers restrict fetch access from `file://` pages for security reasons. Running a local HTTP server avoids this restriction.",
+      "tags": [
+        "browser",
+        "fetch",
+        "file-protocol",
+        "security"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-080",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Plain Text Data Parsing",
+      "difficulty": "medium",
+      "questionMd": "When loading album data from a custom plain-text file, which of the following is a disadvantage mentioned in the lecture?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Text files do not support arrays of items"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The file cannot be loaded using the `fetch()` API"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Numbers must be converted using functions like `parseInt()`"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Plain-text files cannot be served over HTTP"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Plain text data must be manually parsed. Numeric values arrive as strings and must be converted with functions like `parseInt()`.",
+      "tags": [
+        "javascript",
+        "text-files",
+        "parsing",
+        "parseint"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-081",
+      "type": "single_choice",
+      "topic": "HTTP",
+      "subtopic": "Default Ports",
+      "difficulty": "easy",
+      "questionMd": "On which TCP port does an HTTP server listen by default?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "25"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "80"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "53"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "161"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "The default TCP port for plain HTTP is 80.",
+      "tags": [
+        "http",
+        "tcp",
+        "ports"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-082",
+      "type": "single_choice",
+      "topic": "Web History",
+      "subtopic": "World Wide Web",
+      "difficulty": "easy",
+      "questionMd": "Which of the following best describes the World Wide Web (WWW)?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A physical cable network connecting all computers worldwide"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "A protocol for sending encrypted email between servers"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "A network of web servers that uses HTTP to transfer HTML pages to clients"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "A local area network used inside universities and companies"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "The Web is an information system of documents and resources delivered by web servers to clients, typically using HTTP and HTML.",
+      "tags": [
+        "www",
+        "web",
+        "http",
+        "html"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-083",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Fetch Data Processing",
+      "difficulty": "medium",
+      "questionMd": "In the completed fetch example from the lecture, what operation is performed on the text string received in `onStreamProcessed`?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "It is converted to an array using `JSON.parse()`"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "It is split by newline characters to extract individual image URLs"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "It is parsed as JSON and rendered as a table"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "It is sent back to the server using a POST request"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "The lecture example treats the received text as newline-separated data and splits it to get the individual image URLs.",
+      "tags": [
+        "javascript",
+        "fetch",
+        "text-processing",
+        "images"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-084",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Closures",
+      "difficulty": "easy",
+      "questionMd": "In JavaScript, what is a closure?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A technique for combining multiple event listeners into a single handler"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "A method that prevents other code from modifying an object's properties"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "A special syntax for defining private class fields in ES6"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "A function declared inside another function"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "A closure is commonly introduced as an inner function that retains access to variables from its outer function's scope.",
+      "tags": [
+        "javascript",
+        "closures",
+        "functions",
+        "scope"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-085",
+      "type": "single_choice",
+      "topic": "URLs",
+      "subtopic": "Query Strings",
+      "difficulty": "easy",
+      "questionMd": "In a URL query string, which character separates subsequent (non-first) query parameters from each other?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "`&`"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "`?`"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "`;` (semicolon)"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "`=` (equals sign)"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "In query strings, the first parameter begins after `?`; additional parameters are separated with `&`.",
+      "tags": [
+        "url",
+        "query-string",
+        "parameters"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-086",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "JSON Serialization",
+      "difficulty": "easy",
+      "questionMd": "Which function would you use to convert a JavaScript object into a JSON-formatted string?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "`JSON.deserialize()`"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "`JSON.parse()`"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "`JSON.encode()`"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "`JSON.stringify()`"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "`JSON.stringify()` serializes a JavaScript value into a JSON-formatted string.",
+      "tags": [
+        "javascript",
+        "json",
+        "json.stringify",
+        "serialization"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-087",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Promise `.then()`",
+      "difficulty": "medium",
+      "questionMd": "Which of the following statements about `.then()` is correct according to the lecture?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "It can only be called once per Promise object"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "It replaces the need for the `fetch()` function"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "It lets you control when a Promise succeeds or fails"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "It immediately executes the fetch request synchronously"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "In the lecture framing, `.then()` is used to define what happens when a Promise succeeds or fails, by attaching fulfillment and optional rejection handlers.",
+      "tags": [
+        "javascript",
+        "promises",
+        "then",
+        "async"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-088",
+      "type": "single_choice",
+      "topic": "Web Standards",
+      "subtopic": "W3C",
+      "difficulty": "easy",
+      "questionMd": "What is the primary purpose of the World Wide Web Consortium (W3C)?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "It is a university consortium that funds research into network security protocols"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "It is the main international standards organization for the World Wide Web"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "It is a government agency that registers and manages all domain names globally"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "It is a company that develops and maintains the Chrome and Firefox web browsers"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "The W3C develops and maintains standards and guidelines for the Web.",
+      "tags": [
+        "w3c",
+        "web-standards",
+        "www"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-089",
+      "type": "single_choice",
+      "topic": "APIs",
+      "subtopic": "GraphQL",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, which company originally developed and used GraphQL before open-sourcing it?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Facebook"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Spotify"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "GitHub"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Netflix"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "GraphQL was developed internally at Facebook and later open-sourced.",
+      "tags": [
+        "graphql",
+        "api",
+        "facebook"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-090",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Arrow Functions and `this`",
+      "difficulty": "medium",
+      "questionMd": "What is the key advantage of using arrow functions (`=>`) as callbacks in `fetch().then()` chains compared to ordinary functions?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Arrow functions bypass the browser's CORS policy because they use a different internal request mechanism that does not carry an Origin header in the HTTP request"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Arrow functions are automatically bound to the `this` value of their enclosing context, so they do not create their own `this` binding"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Arrow functions convert the Promise returned by `fetch()` into a plain value synchronously, eliminating the need for chained `.then()` calls in most use cases"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Arrow functions execute synchronously instead of asynchronously, which ensures that the callback completes before any subsequent line of code in the method runs"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Arrow functions do not define their own `this`; they use the lexical `this` from the surrounding scope, which is useful in class callbacks.",
+      "tags": [
+        "javascript",
+        "arrow-functions",
+        "this",
+        "callbacks"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-091",
+      "type": "single_choice",
+      "topic": "Web Development",
+      "subtopic": "Frameworks",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture, why are web frameworks so commonly used in web development?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "They make software architecture decisions ahead of time and provide starter code"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "They automatically generate HTML and CSS from back-end database schemas"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "They replace the need to learn HTML, CSS, and JavaScript entirely"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "They compile JavaScript into machine code for faster execution in the browser"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Frameworks package common decisions and starter structure, reducing the amount of boilerplate developers must design from scratch.",
+      "tags": [
+        "web-development",
+        "frameworks",
+        "architecture"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-092",
+      "type": "single_choice",
+      "topic": "Node.js",
+      "subtopic": "DOM Availability",
+      "difficulty": "easy",
+      "questionMd": "What happens if you try to call `document.querySelector('div')` inside the NodeJS runtime?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "It throws a ReferenceError because the `document` object is not defined in the NodeJS environment."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "It returns an empty NodeList because NodeJS has a minimal DOM implementation that supports only element selection by tag name."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "It executes correctly because NodeJS ships with a built-in polyfill for the DOM API that mirrors the browser implementation."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "It silently returns undefined because NodeJS ignores DOM calls that are not relevant to the server-side execution environment."
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Node.js does not provide the browser DOM by default, so `document` is not defined unless a DOM library is added.",
+      "tags": [
+        "nodejs",
+        "dom",
+        "document",
+        "queryselector"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-093",
+      "type": "single_choice",
+      "topic": "Back-End Development",
+      "subtopic": "Languages",
+      "difficulty": "easy",
+      "questionMd": "Which set of programming languages is primarily associated with back-end web development?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "XML, JSON, and MIME"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "HTTP, FTP, and SMTP"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Node.js, Python, and Java"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "HTML, CSS, and JavaScript"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Node.js, Python, and Java are commonly used to build server-side/back-end applications.",
+      "tags": [
+        "backend",
+        "nodejs",
+        "python",
+        "java"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-094",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Fetch Text Parsing",
+      "difficulty": "easy",
+      "questionMd": "What does `response.text()` return?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A JSON object parsed from the response body"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The HTTP status code as a text string"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The raw bytes of the response body as a string immediately"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "A Promise that resolves with the response body as a string"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "`response.text()` asynchronously reads the body and returns a Promise that resolves to the body text.",
+      "tags": [
+        "javascript",
+        "fetch",
+        "response.text",
+        "promises"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-095",
+      "type": "single_choice",
+      "topic": "Browser Architecture",
+      "subtopic": "Single-Threaded JavaScript",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture, while JavaScript itself is single-threaded, what is true about the browser that runs it?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The browser delegates all parallel work to the operating system's network stack, which operates entirely outside the browser process and reports results via OS signals"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The browser itself is multi-threaded and multi-process, which is why images and network requests can happen in parallel even though JavaScript cannot"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The browser uses the JavaScript engine's Web Worker API internally to spawn parallel threads for network requests, reusing the same JavaScript call stack on each thread"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The browser is also single-threaded, so it queues all image downloads and processes them one at a time in the order they appear in the HTML source"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "The JavaScript call stack is single-threaded, but browsers are larger multi-threaded/multi-process systems that perform loading and rendering work separately.",
+      "tags": [
+        "browser",
+        "javascript",
+        "single-threaded",
+        "parallelism"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-096",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Promise States",
+      "difficulty": "easy",
+      "questionMd": "A Promise object can be in one of three states. Which of the following is NOT one of those states?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Resolved"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Pending"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Fulfilled"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Rejected"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "The standard Promise states are pending, fulfilled, and rejected. 'Resolved' is related terminology, but it is not one of the three states listed in this question.",
+      "tags": [
+        "javascript",
+        "promises",
+        "states"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-097",
+      "type": "single_choice",
+      "topic": "Web Servers",
+      "subtopic": "Terminology",
+      "difficulty": "medium",
+      "questionMd": "The lecture notes describe the term \"server\" as overloaded. What does this mean?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "The word `server` can refer either to the physical machine running server software or to the software program itself, depending on context."
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "The word `server` simultaneously describes the TCP protocol layer and the HTTP application layer in a network stack."
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "The word `server` refers to both the DNS resolution step and the TCP handshake step that occur before any data is transferred."
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "The word `server` is used interchangeably with `client` in modern web development because both run JavaScript code."
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "In web development, 'server' may mean the machine on the network or the software process responding to requests.",
+      "tags": [
+        "server",
+        "terminology",
+        "web-development"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-098",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "URL Encoding",
+      "difficulty": "easy",
+      "questionMd": "Why is `encodeURIComponent()` used on a user's search query before appending it to a fetch URL?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "To ensure special characters are properly encoded"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "To encrypt the user's input before sending it to the server"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "To trim whitespace from the beginning and end of the search text"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "To convert the query string into a JSON-compatible format"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "`encodeURIComponent()` percent-encodes characters that would otherwise have special meaning or break the URL.",
+      "tags": [
+        "javascript",
+        "url",
+        "encoding",
+        "encodeuricomponent"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-099",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Anonymous Functions",
+      "difficulty": "easy",
+      "questionMd": "A function defined without a name or identifier is commonly called which of the following?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "A prototype function"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "A static function"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "A constructor function"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "An anonymous function"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "A function without a name is called an anonymous function.",
+      "tags": [
+        "javascript",
+        "functions",
+        "anonymous-functions"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-100",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Fetch API",
+      "difficulty": "easy",
+      "questionMd": "What is the primary purpose of the Fetch API in a web browser?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "To manipulate the DOM after a page has loaded"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "To define callback functions for user interface events"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "To load external resources such as text and JSON asynchronously"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "To serialize JavaScript objects into strings"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "The Fetch API is used to asynchronously request resources such as text, JSON, images, and other data over the network.",
+      "tags": [
+        "javascript",
+        "fetch",
+        "browser",
+        "async"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-101",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "JSON",
+      "difficulty": "easy",
+      "questionMd": "What does the acronym JSON stand for?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Java Serialized Object Notation"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "JavaScript Ordered Notation"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Java Standard Object Notation"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "JavaScript Object Notation"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "JSON stands for JavaScript Object Notation.",
+      "tags": [
+        "json",
+        "javascript",
+        "data-format"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-102",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Event Loop",
+      "difficulty": "medium",
+      "questionMd": "What does the JavaScript Event Loop do when the call stack is empty?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "It triggers a full garbage collection pass to reclaim memory from all objects that were created during the previous task before allowing any new tasks to begin"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "It pauses all browser rendering until the developer explicitly calls `requestAnimationFrame` to signal that the UI is ready to be repainted on the screen"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "It resets all global variables to their declared initial values so that the next task begins with a clean execution environment free of side effects from prior tasks"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "It pulls the next task from the task queues and places it on the call stack for execution"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "When the call stack is empty, the event loop can move the next queued task/callback onto the stack so it can run.",
+      "tags": [
+        "javascript",
+        "event-loop",
+        "call-stack",
+        "task-queue"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-103",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Single-Threaded Execution",
+      "difficulty": "easy",
+      "questionMd": "What does it mean that JavaScript is \"single-threaded\"?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "JavaScript shares a single CPU core with the browser's rendering engine but uses time-slicing to interleave rendering and script execution within each frame budget"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "There is one call stack, so JavaScript can only process one command at a time"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "JavaScript processes only one file at a time, so all external script tags are loaded and executed in strict source-order before any user events are processed"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "JavaScript can execute multiple functions simultaneously as long as they are declared as async, because the async keyword spawns a separate execution thread for each call"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Single-threaded JavaScript means one main call stack executes one piece of JavaScript at a time.",
+      "tags": [
+        "javascript",
+        "single-threaded",
+        "call-stack"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
+      ],
+      "mergedFromCount": 1,
+      "needs_review": false
+    },
+    {
+      "id": "midterm-104",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Fetch Response JSON",
+      "difficulty": "easy",
+      "questionMd": "Which method on a fetch `response` object provides built-in support for parsing JSON directly?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "`response.parse()`"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "`response.text()`"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "`response.json()`"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "`response.decode()`"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "`response.json()` reads the body and parses it as JSON, returning a Promise for the parsed result.",
+      "tags": [
+        "javascript",
+        "fetch",
+        "json",
+        "response.json"
+      ],
+      "sourceRefs": [
+        "incoming-json/DWP-Midterm-v2.json"
       ],
       "mergedFromCount": 1,
       "needs_review": false

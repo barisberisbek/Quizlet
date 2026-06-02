@@ -1,6 +1,6 @@
 {
   "version": "3.0.0",
-  "lastUpdated": "2026-06-01",
+  "lastUpdated": "2026-06-02",
   "quizzes": [
     {
       "id": "q1-merged",
@@ -156,14 +156,22 @@
       "topic": "Web APIs",
       "topics": [
         "Browser Architecture",
+        "Fetch API",
+        "GraphQL",
         "HTML",
+        "HTML Forms",
+        "HTTP",
+        "JSON",
         "JavaScript",
         "Programming Concepts",
-        "Web APIs"
+        "REST APIs",
+        "URLs",
+        "Web APIs",
+        "Web Security"
       ],
-      "questionCount": 15,
+      "questionCount": 38,
       "difficulty": "easy",
-      "estimatedMinutes": 23,
+      "estimatedMinutes": 57,
       "tags": [
         "q5",
         "merged",
@@ -174,20 +182,25 @@
     {
       "id": "q6-merged",
       "title": "Quiz 6 — Node.js & Server-Side Fundamentals",
-      "description": "Node.js runtime, npm, HTTP servers, sockets, modules, and server-side programming.",
+      "description": "Node.js runtime, npm, HTTP servers, sockets, modules, Express, and server-side programming.",
       "source": "DWP Past Exams (Merged)",
       "course": "Dynamic Web Programming",
       "topic": "Node.js",
       "topics": [
+        "Computer Networking",
+        "ExpressJS",
         "HTTP",
+        "JavaScript",
         "JavaScript Runtime",
         "Networking",
         "Node.js",
+        "NodeJS",
+        "Web Architecture",
         "Web Programming"
       ],
-      "questionCount": 15,
-      "difficulty": "easy",
-      "estimatedMinutes": 23,
+      "questionCount": 29,
+      "difficulty": "medium",
+      "estimatedMinutes": 44,
       "tags": [
         "q6",
         "merged",
@@ -203,7 +216,10 @@
       "course": "Dynamic Web Programming",
       "topic": "Mixed",
       "topics": [
+        "APIs",
+        "Back-End Development",
         "Browser Architecture",
+        "Browser Security",
         "Course Information",
         "Data Formats",
         "ExpressJS",
@@ -211,6 +227,7 @@
         "HTTP",
         "JavaScript",
         "Networking",
+        "Node.js",
         "NodeJS",
         "Programming Concepts",
         "REST APIs",
@@ -219,11 +236,13 @@
         "Web Architecture",
         "Web Development",
         "Web History",
-        "Web Security"
+        "Web Security",
+        "Web Servers",
+        "Web Standards"
       ],
-      "questionCount": 60,
+      "questionCount": 104,
       "difficulty": "easy",
-      "estimatedMinutes": 90,
+      "estimatedMinutes": 156,
       "tags": [
         "midterm",
         "merged",

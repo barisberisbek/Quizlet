@@ -1,0 +1,2160 @@
+{
+  "quizId": "MIDTERM-DWP-001",
+  "title": "Dynamic Web Programming - Midterm",
+  "course": "Dynamic Web Programming",
+  "language": "en",
+  "semester": "Unknown",
+  "source": "Uploaded Documents",
+  "durationMinutes": 60,
+  "shuffleQuestions": false,
+  "shuffleOptions": false,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Fetch API and HTTP Methods",
+      "difficulty": "easy",
+      "questionMd": "When using the browser's `fetch()` API to send an HTTP POST request to `/hello`, which option correctly specifies the HTTP method?",
+      "options": [
+        {
+          "id": "A",
+          "text": "`fetch('/hello', { method: 'POST' })`, passing an options object with the `method` property set to `'POST'`."
+        },
+        {
+          "id": "B",
+          "text": "`fetch.post('/hello')`, which is a shorthand helper method on the fetch object specifically designed for POST requests."
+        },
+        {
+          "id": "C",
+          "text": "`fetch('/hello', { type: 'POST' })`, where the `type` property in the options object overrides the default GET method."
+        },
+        {
+          "id": "D",
+          "text": "`fetch('/hello', 'POST')`, passing the HTTP method as the second positional argument directly to the fetch function call."
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "The Fetch API receives request settings in an options object. The HTTP verb is selected with the `method` property, such as `{ method: 'POST' }`.",
+      "tags": [
+        "javascript",
+        "fetch",
+        "http",
+        "post"
+      ]
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "topic": "HTTP",
+      "subtopic": "HTTP/2",
+      "difficulty": "medium",
+      "questionMd": "Compared to HTTP/1.1, what is a key advantage of HTTP/2.0?",
+      "options": [
+        {
+          "id": "A",
+          "text": "HTTP/2.0 encrypts all data by default using SSL certificates"
+        },
+        {
+          "id": "B",
+          "text": "HTTP/2.0 keeps the connection open and allows multiple fetches"
+        },
+        {
+          "id": "C",
+          "text": "HTTP/2.0 eliminates the need for DNS lookups before connecting to a server"
+        },
+        {
+          "id": "D",
+          "text": "HTTP/2.0 only supports text-based content and not binary data"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "HTTP/2 improves performance by allowing multiple requests/responses to share a connection more efficiently instead of opening many independent connections.",
+      "tags": [
+        "http",
+        "http2",
+        "networking",
+        "multiplexing"
+      ]
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "topic": "Node.js",
+      "subtopic": "HTTP Server Sockets",
+      "difficulty": "medium",
+      "questionMd": "How does NodeJS handle the complexity of network sockets when building a web server?",
+      "options": [
+        {
+          "id": "A",
+          "text": "NodeJS delegates all socket creation to the browser's DOM API, which then forwards messages to the server program."
+        },
+        {
+          "id": "B",
+          "text": "NodeJS uses the V8 engine's built-in socket library to open encrypted connections on all available network ports."
+        },
+        {
+          "id": "C",
+          "text": "NodeJS requires developers to manually create and bind sockets before attaching any HTTP request listeners."
+        },
+        {
+          "id": "D",
+          "text": "NodeJS abstracts socket management away so developers do not need to think about sockets directly."
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "Node's `http` module hides most low-level socket handling, so developers usually work with request and response objects instead of raw TCP sockets.",
+      "tags": [
+        "nodejs",
+        "sockets",
+        "http-server",
+        "abstraction"
+      ]
+    },
+    {
+      "id": "q4",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Promises",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture, which statement best captures the relationship between using and defining Promises?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Promises are equally straightforward to both define and use"
+        },
+        {
+          "id": "B",
+          "text": "Promises must be fully understood internally before they can be used"
+        },
+        {
+          "id": "C",
+          "text": "Promises are easier to define than to use"
+        },
+        {
+          "id": "D",
+          "text": "Promises are easier to use than to define"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "Promise consumers usually only call methods such as `.then()` or `.catch()`, while defining a Promise requires understanding resolution, rejection, and asynchronous flow.",
+      "tags": [
+        "javascript",
+        "promises",
+        "async"
+      ]
+    },
+    {
+      "id": "q5",
+      "type": "single_choice",
+      "topic": "Node.js",
+      "subtopic": "HTTP Response Handling",
+      "difficulty": "easy",
+      "questionMd": "In a NodeJS HTTP request handler, what does calling `res.end()` do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It sets the HTTP status code of the response to 200 and automatically adds the Content-Type header to the message."
+        },
+        {
+          "id": "B",
+          "text": "It writes the final message to the response body and signals to the server that the response is complete."
+        },
+        {
+          "id": "C",
+          "text": "It closes the TCP connection and stops the server from listening for any further incoming HTTP requests on that port."
+        },
+        {
+          "id": "D",
+          "text": "It terminates the NodeJS process and releases all bound ports back to the operating system's port pool."
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "`res.end()` finishes the response. After it is called, Node considers the response body complete and can send it to the client.",
+      "tags": [
+        "nodejs",
+        "http",
+        "response",
+        "res.end"
+      ]
+    },
+    {
+      "id": "q6",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Fetch Response Parsing",
+      "difficulty": "easy",
+      "questionMd": "When using the Fetch API, which method should you call on a response object to automatically parse the response body as JSON?",
+      "options": [
+        {
+          "id": "A",
+          "text": "`response.json()`"
+        },
+        {
+          "id": "B",
+          "text": "`response.parse()`, a built-in Fetch helper that detects the Content-Type header and chooses the appropriate parsing strategy automatically"
+        },
+        {
+          "id": "C",
+          "text": "`response.decode()`, which handles base64-encoded JSON payloads by first decoding them and then running a standard JSON parser on the result"
+        },
+        {
+          "id": "D",
+          "text": "`response.text()`, which returns the raw string and requires you to manually call `JSON.parse()` in a separate subsequent step"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "`response.json()` reads the response body and parses it as JSON, returning a Promise for the parsed JavaScript value.",
+      "tags": [
+        "javascript",
+        "fetch",
+        "json",
+        "response.json"
+      ]
+    },
+    {
+      "id": "q7",
+      "type": "single_choice",
+      "topic": "Node.js",
+      "subtopic": "Server Binding",
+      "difficulty": "medium",
+      "questionMd": "What is \"binding\" in the context of running a server process?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Compiling JavaScript source code into native machine code before the NodeJS runtime begins accepting HTTP requests."
+        },
+        {
+          "id": "B",
+          "text": "Telling the operating system which port number to associate with the server process so it can receive incoming messages."
+        },
+        {
+          "id": "C",
+          "text": "Establishing a persistent TCP connection between two servers so they can exchange data without repeating the handshake."
+        },
+        {
+          "id": "D",
+          "text": "Encrypting the server's IP address so that DNS queries return a hashed value instead of the actual numerical address."
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Binding associates a running server process with a port, so the operating system can deliver incoming network traffic on that port to the process.",
+      "tags": [
+        "nodejs",
+        "server",
+        "port",
+        "binding"
+      ]
+    },
+    {
+      "id": "q8",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "JSON Parsing",
+      "difficulty": "easy",
+      "questionMd": "A developer receives the string `'{\"name\":\"Ice Bear\"}'` from a server. Which function should they use to turn it into a usable JavaScript object?",
+      "options": [
+        {
+          "id": "A",
+          "text": "`JSON.parse()`"
+        },
+        {
+          "id": "B",
+          "text": "`JSON.objectify()`"
+        },
+        {
+          "id": "C",
+          "text": "`JSON.decode()`"
+        },
+        {
+          "id": "D",
+          "text": "`JSON.stringify()`"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "`JSON.parse()` converts a JSON-formatted string into a JavaScript value or object.",
+      "tags": [
+        "javascript",
+        "json",
+        "json.parse",
+        "deserialization"
+      ]
+    },
+    {
+      "id": "q9",
+      "type": "single_choice",
+      "topic": "Browser Architecture",
+      "subtopic": "JavaScript and Parallel Loading",
+      "difficulty": "hard",
+      "questionMd": "According to the lecture, why can multiple images load in parallel even though JavaScript is single-threaded?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The browser itself is multi-threaded and multi-process, so network requests and image decoding happen in browser threads outside the JavaScript runtime"
+        },
+        {
+          "id": "B",
+          "text": "JavaScript uses Web Workers internally for all image element operations, with each Image object spawning its own dedicated worker thread to manage the download lifecycle"
+        },
+        {
+          "id": "C",
+          "text": "Image loading is handled entirely by the operating system's DNS resolver and network stack, which feeds completed image buffers directly into the browser's graphics memory"
+        },
+        {
+          "id": "D",
+          "text": "The browser batches all image requests into a single multiplexed HTTP/2 stream that the JavaScript engine processes sequentially but displays simultaneously after all bytes arrive"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "JavaScript execution is single-threaded, but the browser includes other threads/processes for networking, rendering, and decoding, so resource loading can proceed in parallel.",
+      "tags": [
+        "browser",
+        "javascript",
+        "single-threaded",
+        "images",
+        "networking"
+      ]
+    },
+    {
+      "id": "q10",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "XHR vs Fetch",
+      "difficulty": "easy",
+      "questionMd": "How does the lecture describe XMLHttpRequest (XHR) compared to the Fetch API?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Simpler but less flexible"
+        },
+        {
+          "id": "B",
+          "text": "More secure and widely supported"
+        },
+        {
+          "id": "C",
+          "text": "Faster and more reliable"
+        },
+        {
+          "id": "D",
+          "text": "Clunky and harder to use"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "XHR is the older browser API for network requests. Fetch provides a cleaner Promise-based interface, so XHR is often described as clunkier.",
+      "tags": [
+        "javascript",
+        "xhr",
+        "fetch",
+        "ajax"
+      ]
+    },
+    {
+      "id": "q11",
+      "type": "single_choice",
+      "topic": "HTML Forms",
+      "subtopic": "Submit Controls",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture, why should you use `<input type=\"submit\">` instead of `<button>` inside a form?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because the `submit` event fires when `<input type=\"submit\">` is clicked but does not fire when a plain `<button>` element is clicked"
+        },
+        {
+          "id": "B",
+          "text": "Because `<button>` elements cause the browser to make a synchronous HTTP GET request on click, which blocks the JavaScript event loop until the server responds"
+        },
+        {
+          "id": "C",
+          "text": "Because `<input type=\"submit\">` automatically calls `encodeURIComponent` on the input values before appending them to the request URL as query parameters"
+        },
+        {
+          "id": "D",
+          "text": "Because `<input type=\"submit\">` is the only element that can be styled with CSS, whereas `<button>` elements inherit browser-specific default styles that cannot be overridden"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "In the lecture framing, the submit control is tied to form submission behavior and causes the form's `submit` event to fire when activated.",
+      "tags": [
+        "html",
+        "forms",
+        "submit",
+        "button"
+      ]
+    },
+    {
+      "id": "q12",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "ES6 Classes",
+      "difficulty": "easy",
+      "questionMd": "When defining methods inside an ES6 class body, which keyword must you omit?",
+      "options": [
+        {
+          "id": "A",
+          "text": "`const`"
+        },
+        {
+          "id": "B",
+          "text": "`class`"
+        },
+        {
+          "id": "C",
+          "text": "`return`"
+        },
+        {
+          "id": "D",
+          "text": "`function`"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "Class method syntax omits the `function` keyword; methods are written directly as `methodName() { ... }`.",
+      "tags": [
+        "javascript",
+        "es6",
+        "classes",
+        "methods"
+      ]
+    },
+    {
+      "id": "q13",
+      "type": "single_choice",
+      "topic": "Web History",
+      "subtopic": "SGML and HTML",
+      "difficulty": "easy",
+      "questionMd": "What is the role of SGML (Standard Generalized Markup Language) in relation to HTML?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SGML is a scripting language that adds interactivity to static HTML pages"
+        },
+        {
+          "id": "B",
+          "text": "SGML is a stylesheet language used to define the visual presentation of XML documents"
+        },
+        {
+          "id": "C",
+          "text": "SGML is a transport protocol that HTTP was built upon"
+        },
+        {
+          "id": "D",
+          "text": "SGML is a standard for specifying markup languages like HTML"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "SGML is a meta-language for defining markup languages; HTML was originally specified using SGML concepts.",
+      "tags": [
+        "web-history",
+        "html",
+        "sgml",
+        "markup"
+      ]
+    },
+    {
+      "id": "q14",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Synchronous I/O",
+      "difficulty": "easy",
+      "questionMd": "What is the primary reason a synchronous `loadFromFile()` function would be problematic in JavaScript?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It does not support callback functions"
+        },
+        {
+          "id": "B",
+          "text": "It cannot handle JSON data formats"
+        },
+        {
+          "id": "C",
+          "text": "It requires a server to be running on port 8000"
+        },
+        {
+          "id": "D",
+          "text": "It blocks JavaScript execution while the file loads"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "Synchronous file loading would block the single JavaScript thread and prevent other code or UI work from running until the load completes.",
+      "tags": [
+        "javascript",
+        "synchronous",
+        "blocking",
+        "event-loop"
+      ]
+    },
+    {
+      "id": "q15",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Serialization",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, what does it mean to \"serialize\" an object?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To convert a string into a JavaScript object"
+        },
+        {
+          "id": "B",
+          "text": "To turn an object into a string that can later be deserialized"
+        },
+        {
+          "id": "C",
+          "text": "To load an object from an external file using fetch"
+        },
+        {
+          "id": "D",
+          "text": "To send an object directly to a server over HTTP"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Serialization converts a structured object into a string or other transferable representation that can later be parsed back.",
+      "tags": [
+        "javascript",
+        "serialization",
+        "json"
+      ]
+    },
+    {
+      "id": "q16",
+      "type": "single_choice",
+      "topic": "APIs",
+      "subtopic": "REST",
+      "difficulty": "easy",
+      "questionMd": "Which of the following best describes a RESTful API?",
+      "options": [
+        {
+          "id": "A",
+          "text": "An interface that exclusively uses the POST method to exchange data"
+        },
+        {
+          "id": "B",
+          "text": "A protocol for rendering HTML pages dynamically using query strings"
+        },
+        {
+          "id": "C",
+          "text": "A URL-based API that uses HTTP methods and sends requests to a base endpoint"
+        },
+        {
+          "id": "D",
+          "text": "An API that only works with browser-side JavaScript and cannot be accessed from a server"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "REST APIs expose resources through URLs and use HTTP methods such as GET, POST, PUT, and DELETE to operate on them.",
+      "tags": [
+        "api",
+        "rest",
+        "http",
+        "url"
+      ]
+    },
+    {
+      "id": "q17",
+      "type": "single_choice",
+      "topic": "Node.js",
+      "subtopic": "HTTP Request Lifecycle",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture summary, after the server software receives an HTTP request, what is the correct sequence of actions it takes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The server software forwards the raw TCP packet to the DNS server, which translates it and routes the reply back to the client browser."
+        },
+        {
+          "id": "B",
+          "text": "The server software binds to a new port, sends an HTTP GET request back to the client to confirm receipt, then closes the connection."
+        },
+        {
+          "id": "C",
+          "text": "The server software immediately sends an empty 200 OK response and then asynchronously processes the request body in the background."
+        },
+        {
+          "id": "D",
+          "text": "The server software parses the message, creates an HTTP response, and then the server OS sends that response to the client over TCP."
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "After a request arrives, the server program parses it, creates a response, and the operating system/network stack sends that response back over TCP.",
+      "tags": [
+        "nodejs",
+        "http",
+        "server",
+        "tcp"
+      ]
+    },
+    {
+      "id": "q18",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "JSON Serialization",
+      "difficulty": "easy",
+      "questionMd": "In the context of JSON, what does it mean \"to serialize\" an object?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To send an object directly over a network socket without any intermediate text representation or encoding step"
+        },
+        {
+          "id": "B",
+          "text": "To turn an object into a string that can later be deserialized"
+        },
+        {
+          "id": "C",
+          "text": "To convert a plain-text string into a fully constructed JavaScript object complete with methods and prototype chain"
+        },
+        {
+          "id": "D",
+          "text": "To compress a JavaScript object into a binary format suitable for storage in a relational database column"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "JSON serialization means converting a JavaScript value into a JSON string representation that can later be parsed.",
+      "tags": [
+        "json",
+        "serialization",
+        "javascript"
+      ]
+    },
+    {
+      "id": "q19",
+      "type": "single_choice",
+      "topic": "HTTP",
+      "subtopic": "Default Ports",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, what is the default port number used for HTTP requests when no port is specified in a URL?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Port 443, which is commonly reserved for encrypted HTTPS communication between browsers and remote web servers."
+        },
+        {
+          "id": "B",
+          "text": "Port 53, which is assigned to the Domain Name System service for resolving hostnames to IP addresses."
+        },
+        {
+          "id": "C",
+          "text": "Port 80, which is the well-known default port for Hypertext Transfer Protocol traffic on the World Wide Web."
+        },
+        {
+          "id": "D",
+          "text": "Port 3000, which is the standard development port used by NodeJS and ExpressJS applications running locally."
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "Plain HTTP uses port 80 by default. HTTPS uses port 443.",
+      "tags": [
+        "http",
+        "ports",
+        "networking",
+        "url"
+      ]
+    },
+    {
+      "id": "q20",
+      "type": "single_choice",
+      "topic": "Networking",
+      "subtopic": "Localhost",
+      "difficulty": "easy",
+      "questionMd": "What does the hostname `localhost` refer to when used in a URL?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It refers to the nearest geographically local server node assigned by the internet service provider's routing infrastructure."
+        },
+        {
+          "id": "B",
+          "text": "It refers to a special Anthropic-hosted test server that developers use to validate their NodeJS applications before deployment."
+        },
+        {
+          "id": "C",
+          "text": "It refers to the current computer itself, allowing a browser to send HTTP requests to a server running on the same machine."
+        },
+        {
+          "id": "D",
+          "text": "It refers to a virtual machine environment where NodeJS applications are isolated from the host operating system's network stack."
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "`localhost` resolves to the local machine, commonly used to test servers running on the same computer.",
+      "tags": [
+        "localhost",
+        "networking",
+        "nodejs",
+        "development"
+      ]
+    },
+    {
+      "id": "q21",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Array Sorting",
+      "difficulty": "medium",
+      "questionMd": "To sort an array of album objects by year in ascending order, which comparator function should be passed to `.sort()`?",
+      "options": [
+        {
+          "id": "A",
+          "text": "`function(a, b) { return a.year + b.year; }`"
+        },
+        {
+          "id": "B",
+          "text": "`function(a, b) { return b.year - a.year; }`"
+        },
+        {
+          "id": "C",
+          "text": "`function(a, b) { return a.year - b.year; }`"
+        },
+        {
+          "id": "D",
+          "text": "`function(a, b) { return a.year; }`"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "For numeric ascending order, the comparator should return a negative number when `a` should come before `b`, which is achieved by `a.year - b.year`.",
+      "tags": [
+        "javascript",
+        "arrays",
+        "sort",
+        "comparator"
+      ]
+    },
+    {
+      "id": "q22",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Race Conditions",
+      "difficulty": "hard",
+      "questionMd": "According to the lecture, what is the general problem referred to (loosely) as a \"race condition\" in single-threaded JavaScript?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The browser's rendering engine and the JavaScript engine compete for CPU time, causing visible frame drops whenever a complex DOM update is triggered by a fetch callback"
+        },
+        {
+          "id": "B",
+          "text": "There are two or more events that can occur at unpredictable times and those events are dependent on each other in some way"
+        },
+        {
+          "id": "C",
+          "text": "Multiple JavaScript threads execute the same callback simultaneously, each modifying shared memory in a way that produces an inconsistent final state"
+        },
+        {
+          "id": "D",
+          "text": "Two `fetch()` calls are dispatched simultaneously and whichever response arrives first overwrites the state set by the slower response, producing corrupted UI data"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Even in single-threaded JavaScript, asynchronous events can complete in unpredictable order. Bugs happen when code incorrectly depends on their timing.",
+      "tags": [
+        "javascript",
+        "race-condition",
+        "async",
+        "events"
+      ]
+    },
+    {
+      "id": "q23",
+      "type": "single_choice",
+      "topic": "Networking",
+      "subtopic": "Ports",
+      "difficulty": "easy",
+      "questionMd": "How does the lecture define a \"port\" in the context of computer networking?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A physical socket on a server's network card used to plug in Ethernet cables and establish wired network connections."
+        },
+        {
+          "id": "B",
+          "text": "An encrypted channel created by the operating system to secure all incoming TCP connections on a given server machine."
+        },
+        {
+          "id": "C",
+          "text": "A logical (as opposed to physical) connection point represented by a number ranging from 0 to 65535."
+        },
+        {
+          "id": "D",
+          "text": "The unique IP address assigned to a server machine that allows it to be identified on the public internet."
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "A network port is a numeric logical endpoint used by the OS to route traffic to the correct process or service.",
+      "tags": [
+        "networking",
+        "ports",
+        "tcp",
+        "server"
+      ]
+    },
+    {
+      "id": "q24",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Fetch Response Status",
+      "difficulty": "easy",
+      "questionMd": "What does `response.status` contain when used inside a fetch success handler?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A boolean indicating whether the request succeeded"
+        },
+        {
+          "id": "B",
+          "text": "The HTTP status code of the request, such as 200"
+        },
+        {
+          "id": "C",
+          "text": "The text content of the fetched resource"
+        },
+        {
+          "id": "D",
+          "text": "The name of the file that was fetched"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "The `status` property of a Fetch `Response` stores the numeric HTTP status code, such as 200 or 404.",
+      "tags": [
+        "javascript",
+        "fetch",
+        "response.status",
+        "http-status"
+      ]
+    },
+    {
+      "id": "q25",
+      "type": "single_choice",
+      "topic": "Browser Security",
+      "subtopic": "Fetch and Local Files",
+      "difficulty": "medium",
+      "questionMd": "Why does calling `fetch()` on a local file opened via `file://` protocol result in an error?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Loading files via the `file://` protocol is disallowed by the browser"
+        },
+        {
+          "id": "B",
+          "text": "JavaScript blocks all file I/O on the main thread"
+        },
+        {
+          "id": "C",
+          "text": "Local files must be fetched using XMLHttpRequest instead"
+        },
+        {
+          "id": "D",
+          "text": "The fetch API only supports JSON files, not text files"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Browsers restrict fetch access from `file://` pages for security reasons. Running a local HTTP server avoids this restriction.",
+      "tags": [
+        "browser",
+        "fetch",
+        "file-protocol",
+        "security"
+      ]
+    },
+    {
+      "id": "q26",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Plain Text Data Parsing",
+      "difficulty": "medium",
+      "questionMd": "When loading album data from a custom plain-text file, which of the following is a disadvantage mentioned in the lecture?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Text files do not support arrays of items"
+        },
+        {
+          "id": "B",
+          "text": "The file cannot be loaded using the `fetch()` API"
+        },
+        {
+          "id": "C",
+          "text": "Numbers must be converted using functions like `parseInt()`"
+        },
+        {
+          "id": "D",
+          "text": "Plain-text files cannot be served over HTTP"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "Plain text data must be manually parsed. Numeric values arrive as strings and must be converted with functions like `parseInt()`.",
+      "tags": [
+        "javascript",
+        "text-files",
+        "parsing",
+        "parseint"
+      ]
+    },
+    {
+      "id": "q27",
+      "type": "single_choice",
+      "topic": "HTTP",
+      "subtopic": "Default Ports",
+      "difficulty": "easy",
+      "questionMd": "On which TCP port does an HTTP server listen by default?",
+      "options": [
+        {
+          "id": "A",
+          "text": "25"
+        },
+        {
+          "id": "B",
+          "text": "80"
+        },
+        {
+          "id": "C",
+          "text": "53"
+        },
+        {
+          "id": "D",
+          "text": "161"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "The default TCP port for plain HTTP is 80.",
+      "tags": [
+        "http",
+        "tcp",
+        "ports"
+      ]
+    },
+    {
+      "id": "q28",
+      "type": "single_choice",
+      "topic": "Web History",
+      "subtopic": "World Wide Web",
+      "difficulty": "easy",
+      "questionMd": "Which of the following best describes the World Wide Web (WWW)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A physical cable network connecting all computers worldwide"
+        },
+        {
+          "id": "B",
+          "text": "A protocol for sending encrypted email between servers"
+        },
+        {
+          "id": "C",
+          "text": "A network of web servers that uses HTTP to transfer HTML pages to clients"
+        },
+        {
+          "id": "D",
+          "text": "A local area network used inside universities and companies"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "The Web is an information system of documents and resources delivered by web servers to clients, typically using HTTP and HTML.",
+      "tags": [
+        "www",
+        "web",
+        "http",
+        "html"
+      ]
+    },
+    {
+      "id": "q29",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Fetch Data Processing",
+      "difficulty": "medium",
+      "questionMd": "In the completed fetch example from the lecture, what operation is performed on the text string received in `onStreamProcessed`?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It is converted to an array using `JSON.parse()`"
+        },
+        {
+          "id": "B",
+          "text": "It is split by newline characters to extract individual image URLs"
+        },
+        {
+          "id": "C",
+          "text": "It is parsed as JSON and rendered as a table"
+        },
+        {
+          "id": "D",
+          "text": "It is sent back to the server using a POST request"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "The lecture example treats the received text as newline-separated data and splits it to get the individual image URLs.",
+      "tags": [
+        "javascript",
+        "fetch",
+        "text-processing",
+        "images"
+      ]
+    },
+    {
+      "id": "q30",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Fetch API",
+      "difficulty": "easy",
+      "questionMd": "What is the primary purpose of the `fetch()` function in JavaScript?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To serialize JavaScript objects into JSON strings"
+        },
+        {
+          "id": "B",
+          "text": "To synchronously read files from the local file system"
+        },
+        {
+          "id": "C",
+          "text": "To parse HTML documents and manipulate the DOM"
+        },
+        {
+          "id": "D",
+          "text": "To load resources asynchronously over a network using a Promise-based approach"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "`fetch()` is a Promise-based API for making asynchronous HTTP/network requests from JavaScript.",
+      "tags": [
+        "javascript",
+        "fetch",
+        "async",
+        "promises"
+      ]
+    },
+    {
+      "id": "q31",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Closures",
+      "difficulty": "easy",
+      "questionMd": "In JavaScript, what is a closure?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A technique for combining multiple event listeners into a single handler"
+        },
+        {
+          "id": "B",
+          "text": "A method that prevents other code from modifying an object's properties"
+        },
+        {
+          "id": "C",
+          "text": "A special syntax for defining private class fields in ES6"
+        },
+        {
+          "id": "D",
+          "text": "A function declared inside another function"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "A closure is commonly introduced as an inner function that retains access to variables from its outer function's scope.",
+      "tags": [
+        "javascript",
+        "closures",
+        "functions",
+        "scope"
+      ]
+    },
+    {
+      "id": "q32",
+      "type": "single_choice",
+      "topic": "Node.js",
+      "subtopic": "npm",
+      "difficulty": "easy",
+      "questionMd": "What is npm primarily used for in a NodeJS development workflow?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It is a browser extension that allows developers to inspect and modify the DOM of pages served from a NodeJS backend."
+        },
+        {
+          "id": "B",
+          "text": "It is a built-in NodeJS module that provides methods for creating HTTP servers and handling incoming TCP connections."
+        },
+        {
+          "id": "C",
+          "text": "It is a command-line tool that installs packages (libraries and tools) written in JavaScript and compatible with NodeJS."
+        },
+        {
+          "id": "D",
+          "text": "It is a version control system integrated with NodeJS that tracks changes to JavaScript source files across a development team."
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "npm is the Node package manager used to install and manage JavaScript packages and development tools.",
+      "tags": [
+        "nodejs",
+        "npm",
+        "packages",
+        "tooling"
+      ]
+    },
+    {
+      "id": "q33",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "JSON",
+      "difficulty": "easy",
+      "questionMd": "What does JSON stand for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "JavaScript Syntax Object Notation"
+        },
+        {
+          "id": "B",
+          "text": "Java Serialized Object Network"
+        },
+        {
+          "id": "C",
+          "text": "JavaScript Ordered Node"
+        },
+        {
+          "id": "D",
+          "text": "JavaScript Object Notation"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "JSON stands for JavaScript Object Notation.",
+      "tags": [
+        "json",
+        "javascript",
+        "data-format"
+      ]
+    },
+    {
+      "id": "q34",
+      "type": "single_choice",
+      "topic": "URLs",
+      "subtopic": "Query Strings",
+      "difficulty": "easy",
+      "questionMd": "In a URL query string, which character separates subsequent (non-first) query parameters from each other?",
+      "options": [
+        {
+          "id": "A",
+          "text": "`&`"
+        },
+        {
+          "id": "B",
+          "text": "`?`"
+        },
+        {
+          "id": "C",
+          "text": "`;` (semicolon)"
+        },
+        {
+          "id": "D",
+          "text": "`=` (equals sign)"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "In query strings, the first parameter begins after `?`; additional parameters are separated with `&`.",
+      "tags": [
+        "url",
+        "query-string",
+        "parameters"
+      ]
+    },
+    {
+      "id": "q35",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "JSON Serialization",
+      "difficulty": "easy",
+      "questionMd": "Which function would you use to convert a JavaScript object into a JSON-formatted string?",
+      "options": [
+        {
+          "id": "A",
+          "text": "`JSON.deserialize()`"
+        },
+        {
+          "id": "B",
+          "text": "`JSON.parse()`"
+        },
+        {
+          "id": "C",
+          "text": "`JSON.encode()`"
+        },
+        {
+          "id": "D",
+          "text": "`JSON.stringify()`"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "`JSON.stringify()` serializes a JavaScript value into a JSON-formatted string.",
+      "tags": [
+        "javascript",
+        "json",
+        "json.stringify",
+        "serialization"
+      ]
+    },
+    {
+      "id": "q36",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Fetch Promise Chain",
+      "difficulty": "medium",
+      "questionMd": "In a typical `fetch()` call chain, what does the first `.then()` callback receive as its parameter?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A JSON string representation of the resource"
+        },
+        {
+          "id": "B",
+          "text": "An array of all fetched resources"
+        },
+        {
+          "id": "C",
+          "text": "A Response object from the network request"
+        },
+        {
+          "id": "D",
+          "text": "The final parsed data ready for use"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "`fetch()` resolves first to a `Response` object. A later step, such as `response.json()` or `response.text()`, reads the body.",
+      "tags": [
+        "javascript",
+        "fetch",
+        "then",
+        "response"
+      ]
+    },
+    {
+      "id": "q37",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Promise `.then()`",
+      "difficulty": "medium",
+      "questionMd": "Which of the following statements about `.then()` is correct according to the lecture?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It can only be called once per Promise object"
+        },
+        {
+          "id": "B",
+          "text": "It replaces the need for the `fetch()` function"
+        },
+        {
+          "id": "C",
+          "text": "It lets you control when a Promise succeeds or fails"
+        },
+        {
+          "id": "D",
+          "text": "It immediately executes the fetch request synchronously"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "In the lecture framing, `.then()` is used to define what happens when a Promise succeeds or fails, by attaching fulfillment and optional rejection handlers.",
+      "tags": [
+        "javascript",
+        "promises",
+        "then",
+        "async"
+      ]
+    },
+    {
+      "id": "q38",
+      "type": "single_choice",
+      "topic": "Web Standards",
+      "subtopic": "W3C",
+      "difficulty": "easy",
+      "questionMd": "What is the primary purpose of the World Wide Web Consortium (W3C)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It is a university consortium that funds research into network security protocols"
+        },
+        {
+          "id": "B",
+          "text": "It is the main international standards organization for the World Wide Web"
+        },
+        {
+          "id": "C",
+          "text": "It is a government agency that registers and manages all domain names globally"
+        },
+        {
+          "id": "D",
+          "text": "It is a company that develops and maintains the Chrome and Firefox web browsers"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "The W3C develops and maintains standards and guidelines for the Web.",
+      "tags": [
+        "w3c",
+        "web-standards",
+        "www"
+      ]
+    },
+    {
+      "id": "q39",
+      "type": "single_choice",
+      "topic": "APIs",
+      "subtopic": "GraphQL",
+      "difficulty": "easy",
+      "questionMd": "According to the lecture, which company originally developed and used GraphQL before open-sourcing it?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Facebook"
+        },
+        {
+          "id": "B",
+          "text": "Spotify"
+        },
+        {
+          "id": "C",
+          "text": "GitHub"
+        },
+        {
+          "id": "D",
+          "text": "Netflix"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "GraphQL was developed internally at Facebook and later open-sourced.",
+      "tags": [
+        "graphql",
+        "api",
+        "facebook"
+      ]
+    },
+    {
+      "id": "q40",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Arrow Functions and `this`",
+      "difficulty": "medium",
+      "questionMd": "What is the key advantage of using arrow functions (`=>`) as callbacks in `fetch().then()` chains compared to ordinary functions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Arrow functions bypass the browser's CORS policy because they use a different internal request mechanism that does not carry an Origin header in the HTTP request"
+        },
+        {
+          "id": "B",
+          "text": "Arrow functions are automatically bound to the `this` value of their enclosing context, so they do not create their own `this` binding"
+        },
+        {
+          "id": "C",
+          "text": "Arrow functions convert the Promise returned by `fetch()` into a plain value synchronously, eliminating the need for chained `.then()` calls in most use cases"
+        },
+        {
+          "id": "D",
+          "text": "Arrow functions execute synchronously instead of asynchronously, which ensures that the callback completes before any subsequent line of code in the method runs"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Arrow functions do not define their own `this`; they use the lexical `this` from the surrounding scope, which is useful in class callbacks.",
+      "tags": [
+        "javascript",
+        "arrow-functions",
+        "this",
+        "callbacks"
+      ]
+    },
+    {
+      "id": "q41",
+      "type": "single_choice",
+      "topic": "Web Development",
+      "subtopic": "Frameworks",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture, why are web frameworks so commonly used in web development?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They make software architecture decisions ahead of time and provide starter code"
+        },
+        {
+          "id": "B",
+          "text": "They automatically generate HTML and CSS from back-end database schemas"
+        },
+        {
+          "id": "C",
+          "text": "They replace the need to learn HTML, CSS, and JavaScript entirely"
+        },
+        {
+          "id": "D",
+          "text": "They compile JavaScript into machine code for faster execution in the browser"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Frameworks package common decisions and starter structure, reducing the amount of boilerplate developers must design from scratch.",
+      "tags": [
+        "web-development",
+        "frameworks",
+        "architecture"
+      ]
+    },
+    {
+      "id": "q42",
+      "type": "single_choice",
+      "topic": "Node.js",
+      "subtopic": "DOM Availability",
+      "difficulty": "easy",
+      "questionMd": "What happens if you try to call `document.querySelector('div')` inside the NodeJS runtime?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It throws a ReferenceError because the `document` object is not defined in the NodeJS environment."
+        },
+        {
+          "id": "B",
+          "text": "It returns an empty NodeList because NodeJS has a minimal DOM implementation that supports only element selection by tag name."
+        },
+        {
+          "id": "C",
+          "text": "It executes correctly because NodeJS ships with a built-in polyfill for the DOM API that mirrors the browser implementation."
+        },
+        {
+          "id": "D",
+          "text": "It silently returns undefined because NodeJS ignores DOM calls that are not relevant to the server-side execution environment."
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Node.js does not provide the browser DOM by default, so `document` is not defined unless a DOM library is added.",
+      "tags": [
+        "nodejs",
+        "dom",
+        "document",
+        "queryselector"
+      ]
+    },
+    {
+      "id": "q43",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Form Submit Events",
+      "difficulty": "easy",
+      "questionMd": "When handling a form's `submit` event in JavaScript, what must you call to prevent the page from refreshing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "`event.stopPropagation()`"
+        },
+        {
+          "id": "B",
+          "text": "`window.cancelSubmit()`"
+        },
+        {
+          "id": "C",
+          "text": "`event.preventDefault()`"
+        },
+        {
+          "id": "D",
+          "text": "`form.reset()`"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "Calling `event.preventDefault()` stops the browser's default form submission behavior, which would otherwise refresh or navigate the page.",
+      "tags": [
+        "javascript",
+        "forms",
+        "preventdefault",
+        "events"
+      ]
+    },
+    {
+      "id": "q44",
+      "type": "single_choice",
+      "topic": "Back-End Development",
+      "subtopic": "Languages",
+      "difficulty": "easy",
+      "questionMd": "Which set of programming languages is primarily associated with back-end web development?",
+      "options": [
+        {
+          "id": "A",
+          "text": "XML, JSON, and MIME"
+        },
+        {
+          "id": "B",
+          "text": "HTTP, FTP, and SMTP"
+        },
+        {
+          "id": "C",
+          "text": "Node.js, Python, and Java"
+        },
+        {
+          "id": "D",
+          "text": "HTML, CSS, and JavaScript"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "Node.js, Python, and Java are commonly used to build server-side/back-end applications.",
+      "tags": [
+        "backend",
+        "nodejs",
+        "python",
+        "java"
+      ]
+    },
+    {
+      "id": "q45",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Closures and `this` in Classes",
+      "difficulty": "hard",
+      "questionMd": "According to the lecture, what is the problem with using ordinary inner functions (closures) as callbacks in `fetch().then()` chains inside a class method?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Closures defined inside a method are garbage-collected before the `fetch()` promise resolves, causing a null reference error when the callback eventually fires"
+        },
+        {
+          "id": "B",
+          "text": "Closures capture the value of `this` at the time the outer function is defined rather than at the time it is called, leading to a stale reference in long-lived operations"
+        },
+        {
+          "id": "C",
+          "text": "The `fetch()` API enforces strict mode internally, which prevents closures from accessing any variable declared in the outer function scope with the `var` keyword"
+        },
+        {
+          "id": "D",
+          "text": "Each function has its own `this` value, so closures do not automatically inherit the `this` binding of their enclosing class method"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "Ordinary functions have their own dynamic `this` binding. In class callbacks, this can lose the instance context unless bound or replaced with an arrow function.",
+      "tags": [
+        "javascript",
+        "closures",
+        "this",
+        "classes",
+        "callbacks"
+      ]
+    },
+    {
+      "id": "q46",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Fetch Text Parsing",
+      "difficulty": "easy",
+      "questionMd": "What does `response.text()` return?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A JSON object parsed from the response body"
+        },
+        {
+          "id": "B",
+          "text": "The HTTP status code as a text string"
+        },
+        {
+          "id": "C",
+          "text": "The raw bytes of the response body as a string immediately"
+        },
+        {
+          "id": "D",
+          "text": "A Promise that resolves with the response body as a string"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "`response.text()` asynchronously reads the body and returns a Promise that resolves to the body text.",
+      "tags": [
+        "javascript",
+        "fetch",
+        "response.text",
+        "promises"
+      ]
+    },
+    {
+      "id": "q47",
+      "type": "single_choice",
+      "topic": "Browser Architecture",
+      "subtopic": "Single-Threaded JavaScript",
+      "difficulty": "medium",
+      "questionMd": "According to the lecture, while JavaScript itself is single-threaded, what is true about the browser that runs it?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The browser delegates all parallel work to the operating system's network stack, which operates entirely outside the browser process and reports results via OS signals"
+        },
+        {
+          "id": "B",
+          "text": "The browser itself is multi-threaded and multi-process, which is why images and network requests can happen in parallel even though JavaScript cannot"
+        },
+        {
+          "id": "C",
+          "text": "The browser uses the JavaScript engine's Web Worker API internally to spawn parallel threads for network requests, reusing the same JavaScript call stack on each thread"
+        },
+        {
+          "id": "D",
+          "text": "The browser is also single-threaded, so it queues all image downloads and processes them one at a time in the order they appear in the HTML source"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "The JavaScript call stack is single-threaded, but browsers are larger multi-threaded/multi-process systems that perform loading and rendering work separately.",
+      "tags": [
+        "browser",
+        "javascript",
+        "single-threaded",
+        "parallelism"
+      ]
+    },
+    {
+      "id": "q48",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Promise States",
+      "difficulty": "easy",
+      "questionMd": "A Promise object can be in one of three states. Which of the following is NOT one of those states?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Resolved"
+        },
+        {
+          "id": "B",
+          "text": "Pending"
+        },
+        {
+          "id": "C",
+          "text": "Fulfilled"
+        },
+        {
+          "id": "D",
+          "text": "Rejected"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "The standard Promise states are pending, fulfilled, and rejected. 'Resolved' is related terminology, but it is not one of the three states listed in this question.",
+      "tags": [
+        "javascript",
+        "promises",
+        "states"
+      ]
+    },
+    {
+      "id": "q49",
+      "type": "single_choice",
+      "topic": "Web Servers",
+      "subtopic": "Terminology",
+      "difficulty": "medium",
+      "questionMd": "The lecture notes describe the term \"server\" as overloaded. What does this mean?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The word `server` can refer either to the physical machine running server software or to the software program itself, depending on context."
+        },
+        {
+          "id": "B",
+          "text": "The word `server` simultaneously describes the TCP protocol layer and the HTTP application layer in a network stack."
+        },
+        {
+          "id": "C",
+          "text": "The word `server` refers to both the DNS resolution step and the TCP handshake step that occur before any data is transferred."
+        },
+        {
+          "id": "D",
+          "text": "The word `server` is used interchangeably with `client` in modern web development because both run JavaScript code."
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "In web development, 'server' may mean the machine on the network or the software process responding to requests.",
+      "tags": [
+        "server",
+        "terminology",
+        "web-development"
+      ]
+    },
+    {
+      "id": "q50",
+      "type": "single_choice",
+      "topic": "Development Tools",
+      "subtopic": "Local HTTP Server",
+      "difficulty": "easy",
+      "questionMd": "Which command is used to serve local files over HTTP so that `fetch()` can access them during development?",
+      "options": [
+        {
+          "id": "A",
+          "text": "`python3 -m fetch.server`"
+        },
+        {
+          "id": "B",
+          "text": "`node server.js`"
+        },
+        {
+          "id": "C",
+          "text": "`python3 -m http.server`"
+        },
+        {
+          "id": "D",
+          "text": "`npm start http`"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "Python's built-in `http.server` module can quickly serve the current directory over HTTP for local testing.",
+      "tags": [
+        "development",
+        "http-server",
+        "python",
+        "fetch"
+      ]
+    },
+    {
+      "id": "q51",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "URL Encoding",
+      "difficulty": "easy",
+      "questionMd": "Why is `encodeURIComponent()` used on a user's search query before appending it to a fetch URL?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To ensure special characters are properly encoded"
+        },
+        {
+          "id": "B",
+          "text": "To encrypt the user's input before sending it to the server"
+        },
+        {
+          "id": "C",
+          "text": "To trim whitespace from the beginning and end of the search text"
+        },
+        {
+          "id": "D",
+          "text": "To convert the query string into a JSON-compatible format"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "`encodeURIComponent()` percent-encodes characters that would otherwise have special meaning or break the URL.",
+      "tags": [
+        "javascript",
+        "url",
+        "encoding",
+        "encodeuricomponent"
+      ]
+    },
+    {
+      "id": "q52",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Anonymous Functions",
+      "difficulty": "easy",
+      "questionMd": "A function defined without a name or identifier is commonly called which of the following?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A prototype function"
+        },
+        {
+          "id": "B",
+          "text": "A static function"
+        },
+        {
+          "id": "C",
+          "text": "A constructor function"
+        },
+        {
+          "id": "D",
+          "text": "An anonymous function"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "A function without a name is called an anonymous function.",
+      "tags": [
+        "javascript",
+        "functions",
+        "anonymous-functions"
+      ]
+    },
+    {
+      "id": "q53",
+      "type": "single_choice",
+      "topic": "HTML Forms",
+      "subtopic": "Input Values",
+      "difficulty": "easy",
+      "questionMd": "How does JavaScript read the current text entered by a user in an `<input type=\"text\">` element?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By accessing the `.value` property of the input element"
+        },
+        {
+          "id": "B",
+          "text": "By reading the `.textContent` property of the input element"
+        },
+        {
+          "id": "C",
+          "text": "By listening to the `input` event and reading `event.key`"
+        },
+        {
+          "id": "D",
+          "text": "By calling `getAttribute('text')` on the input element"
+        }
+      ],
+      "correctAnswer": [
+        "A"
+      ],
+      "explanationMd": "Text input elements expose their current user-entered content through the `.value` property.",
+      "tags": [
+        "javascript",
+        "dom",
+        "input",
+        "value"
+      ]
+    },
+    {
+      "id": "q54",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Fetch API",
+      "difficulty": "easy",
+      "questionMd": "What is the primary purpose of the Fetch API in a web browser?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To manipulate the DOM after a page has loaded"
+        },
+        {
+          "id": "B",
+          "text": "To define callback functions for user interface events"
+        },
+        {
+          "id": "C",
+          "text": "To load external resources such as text and JSON asynchronously"
+        },
+        {
+          "id": "D",
+          "text": "To serialize JavaScript objects into strings"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "The Fetch API is used to asynchronously request resources such as text, JSON, images, and other data over the network.",
+      "tags": [
+        "javascript",
+        "fetch",
+        "browser",
+        "async"
+      ]
+    },
+    {
+      "id": "q55",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "JSON",
+      "difficulty": "easy",
+      "questionMd": "What does the acronym JSON stand for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Java Serialized Object Notation"
+        },
+        {
+          "id": "B",
+          "text": "JavaScript Ordered Notation"
+        },
+        {
+          "id": "C",
+          "text": "Java Standard Object Notation"
+        },
+        {
+          "id": "D",
+          "text": "JavaScript Object Notation"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "JSON stands for JavaScript Object Notation.",
+      "tags": [
+        "json",
+        "javascript",
+        "data-format"
+      ]
+    },
+    {
+      "id": "q56",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Event Loop",
+      "difficulty": "medium",
+      "questionMd": "What does the JavaScript Event Loop do when the call stack is empty?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It triggers a full garbage collection pass to reclaim memory from all objects that were created during the previous task before allowing any new tasks to begin"
+        },
+        {
+          "id": "B",
+          "text": "It pauses all browser rendering until the developer explicitly calls `requestAnimationFrame` to signal that the UI is ready to be repainted on the screen"
+        },
+        {
+          "id": "C",
+          "text": "It resets all global variables to their declared initial values so that the next task begins with a clean execution environment free of side effects from prior tasks"
+        },
+        {
+          "id": "D",
+          "text": "It pulls the next task from the task queues and places it on the call stack for execution"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "When the call stack is empty, the event loop can move the next queued task/callback onto the stack so it can run.",
+      "tags": [
+        "javascript",
+        "event-loop",
+        "call-stack",
+        "task-queue"
+      ]
+    },
+    {
+      "id": "q57",
+      "type": "single_choice",
+      "topic": "Web History",
+      "subtopic": "World Wide Web",
+      "difficulty": "easy",
+      "questionMd": "Who invented the World Wide Web in 1991 as a way to link research papers using hyperlinks?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Vint Cerf"
+        },
+        {
+          "id": "B",
+          "text": "Steve Jobs"
+        },
+        {
+          "id": "C",
+          "text": "Bill Gates"
+        },
+        {
+          "id": "D",
+          "text": "Tim Berners-Lee"
+        }
+      ],
+      "correctAnswer": [
+        "D"
+      ],
+      "explanationMd": "Tim Berners-Lee invented the World Wide Web while working at CERN.",
+      "tags": [
+        "web-history",
+        "www",
+        "tim-berners-lee"
+      ]
+    },
+    {
+      "id": "q58",
+      "type": "single_choice",
+      "topic": "HTML Forms",
+      "subtopic": "Submit Event",
+      "difficulty": "easy",
+      "questionMd": "To allow a form to submit when a user presses the Enter key, which event should be listened for on the `<form>` element?",
+      "options": [
+        {
+          "id": "A",
+          "text": "`keydown`"
+        },
+        {
+          "id": "B",
+          "text": "`change`"
+        },
+        {
+          "id": "C",
+          "text": "`submit`"
+        },
+        {
+          "id": "D",
+          "text": "`click`"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "The form-level `submit` event fires for form submission, including Enter-key submission in text fields.",
+      "tags": [
+        "html",
+        "forms",
+        "submit",
+        "events"
+      ]
+    },
+    {
+      "id": "q59",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Single-Threaded Execution",
+      "difficulty": "easy",
+      "questionMd": "What does it mean that JavaScript is \"single-threaded\"?",
+      "options": [
+        {
+          "id": "A",
+          "text": "JavaScript shares a single CPU core with the browser's rendering engine but uses time-slicing to interleave rendering and script execution within each frame budget"
+        },
+        {
+          "id": "B",
+          "text": "There is one call stack, so JavaScript can only process one command at a time"
+        },
+        {
+          "id": "C",
+          "text": "JavaScript processes only one file at a time, so all external script tags are loaded and executed in strict source-order before any user events are processed"
+        },
+        {
+          "id": "D",
+          "text": "JavaScript can execute multiple functions simultaneously as long as they are declared as async, because the async keyword spawns a separate execution thread for each call"
+        }
+      ],
+      "correctAnswer": [
+        "B"
+      ],
+      "explanationMd": "Single-threaded JavaScript means one main call stack executes one piece of JavaScript at a time.",
+      "tags": [
+        "javascript",
+        "single-threaded",
+        "call-stack"
+      ]
+    },
+    {
+      "id": "q60",
+      "type": "single_choice",
+      "topic": "JavaScript",
+      "subtopic": "Fetch Response JSON",
+      "difficulty": "easy",
+      "questionMd": "Which method on a fetch `response` object provides built-in support for parsing JSON directly?",
+      "options": [
+        {
+          "id": "A",
+          "text": "`response.parse()`"
+        },
+        {
+          "id": "B",
+          "text": "`response.text()`"
+        },
+        {
+          "id": "C",
+          "text": "`response.json()`"
+        },
+        {
+          "id": "D",
+          "text": "`response.decode()`"
+        }
+      ],
+      "correctAnswer": [
+        "C"
+      ],
+      "explanationMd": "`response.json()` reads the body and parses it as JSON, returning a Promise for the parsed result.",
+      "tags": [
+        "javascript",
+        "fetch",
+        "json",
+        "response.json"
+      ]
+    }
+  ]
+}
