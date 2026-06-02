@@ -285,7 +285,7 @@
       "correctAnswer": [
         "d"
       ],
-      "explanationMd": "A socket represents one endpoint of a network communication channel. Data can be sent and received through that endpoint.",
+      "explanationMd": "A socket represents one endpoint of a network communication channel. It is used by software to send and receive data over a network.",
       "tags": [
         "networking",
         "socket",
@@ -293,9 +293,10 @@
         "communication"
       ],
       "sourceRefs": [
-        "incoming-json/DWP-Quiz-6-extended.json"
+        "incoming-json/DWP-Quiz-6-extended.json",
+        "incoming-json/Dynamic Web Programming - Quiz 6.json"
       ],
-      "mergedFromCount": 1,
+      "mergedFromCount": 2,
       "needs_review": false
     },
     {
@@ -338,9 +339,10 @@
         "dependency management"
       ],
       "sourceRefs": [
-        "incoming-json/DWP-Quiz-6-extended.json"
+        "incoming-json/DWP-Quiz-6-extended.json",
+        "incoming-json/Dynamic Web Programming - Quiz 6.json"
       ],
-      "mergedFromCount": 1,
+      "mergedFromCount": 2,
       "needs_review": false
     },
     {
@@ -375,7 +377,7 @@
       "correctAnswer": [
         "d"
       ],
-      "explanationMd": "TCP is a transport-layer protocol used to send data reliably between endpoints. Application protocols such as HTTP and FTP can run over TCP.",
+      "explanationMd": "In this lecture context, TCP is presented as the lower-level protocol used to carry data for higher-level protocols such as HTTP and FTP over the network.",
       "tags": [
         "tcp",
         "networking",
@@ -383,9 +385,10 @@
         "ftp"
       ],
       "sourceRefs": [
-        "incoming-json/DWP-Quiz-6-extended.json"
+        "incoming-json/DWP-Quiz-6-extended.json",
+        "incoming-json/Dynamic Web Programming - Quiz 6.json"
       ],
-      "mergedFromCount": 1,
+      "mergedFromCount": 2,
       "needs_review": false
     },
     {
@@ -752,96 +755,6 @@
     {
       "id": "q6-017",
       "type": "single_choice",
-      "topic": "Networking",
-      "subtopic": "Sockets",
-      "difficulty": "medium",
-      "questionMd": "In the context of networking, what is a socket?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "A numbered logical endpoint, ranging from 0 to 65535, that identifies a specific service running on a host machine."
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "The encrypted tunnel created by HTTPS to protect data exchanged between a client browser and a remote web server."
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "One end of a communication channel through which data can be sent and received."
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "A physical hardware port on a server machine used to connect network cables to the motherboard."
-        }
-      ],
-      "correctAnswer": [
-        "c"
-      ],
-      "explanationMd": "A socket represents one endpoint of a network communication channel. It is used by software to send and receive data over a network.",
-      "tags": [
-        "networking",
-        "socket",
-        "tcp",
-        "server"
-      ],
-      "sourceRefs": [
-        "incoming-json/Dynamic Web Programming - Quiz 6.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "q6-018",
-      "type": "single_choice",
-      "topic": "Node.js",
-      "subtopic": "npm",
-      "difficulty": "easy",
-      "questionMd": "What is npm primarily used for in a NodeJS development workflow?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "It is a version control system integrated with NodeJS that tracks changes to JavaScript source files across a development team."
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "It is a command-line tool that installs packages, libraries, and tools written in JavaScript and compatible with NodeJS."
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "It is a built-in NodeJS module that provides methods for creating HTTP servers and handling incoming TCP connections."
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "It is a browser extension that allows developers to inspect and modify the DOM of pages served from a NodeJS backend."
-        }
-      ],
-      "correctAnswer": [
-        "b"
-      ],
-      "explanationMd": "npm is the Node package manager. It is mainly used to install and manage JavaScript packages and development tools.",
-      "tags": [
-        "nodejs",
-        "npm",
-        "packages",
-        "package-manager"
-      ],
-      "sourceRefs": [
-        "incoming-json/Dynamic Web Programming - Quiz 6.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "q6-019",
-      "type": "single_choice",
       "topic": "JavaScript Runtime",
       "subtopic": "V8 Engine",
       "difficulty": "easy",
@@ -885,7 +798,7 @@
       "needs_review": false
     },
     {
-      "id": "q6-020",
+      "id": "q6-018",
       "type": "single_choice",
       "topic": "HTTP",
       "subtopic": "curl PUT Requests",
@@ -930,7 +843,7 @@
       "needs_review": false
     },
     {
-      "id": "q6-021",
+      "id": "q6-019",
       "type": "single_choice",
       "topic": "HTTP",
       "subtopic": "POST Request Body",
@@ -975,7 +888,7 @@
       "needs_review": false
     },
     {
-      "id": "q6-022",
+      "id": "q6-020",
       "type": "single_choice",
       "topic": "Node.js",
       "subtopic": "Event Handling",
@@ -1020,7 +933,7 @@
       "needs_review": false
     },
     {
-      "id": "q6-023",
+      "id": "q6-021",
       "type": "single_choice",
       "topic": "Node.js",
       "subtopic": "Localhost URLs",
@@ -1065,7 +978,7 @@
       "needs_review": false
     },
     {
-      "id": "q6-024",
+      "id": "q6-022",
       "type": "single_choice",
       "topic": "Node.js",
       "subtopic": "HTTP Server Objects",
@@ -1110,7 +1023,7 @@
       "needs_review": false
     },
     {
-      "id": "q6-025",
+      "id": "q6-023",
       "type": "single_choice",
       "topic": "Node.js",
       "subtopic": "Node REPL",
@@ -1155,7 +1068,7 @@
       "needs_review": false
     },
     {
-      "id": "q6-026",
+      "id": "q6-024",
       "type": "single_choice",
       "topic": "Networking",
       "subtopic": "Server Binding",
@@ -1200,7 +1113,7 @@
       "needs_review": false
     },
     {
-      "id": "q6-027",
+      "id": "q6-025",
       "type": "single_choice",
       "topic": "Web Programming",
       "subtopic": "Server-Side Programming",
@@ -1244,52 +1157,7 @@
       "needs_review": false
     },
     {
-      "id": "q6-028",
-      "type": "single_choice",
-      "topic": "Networking",
-      "subtopic": "TCP",
-      "difficulty": "medium",
-      "questionMd": "According to the lecture, what does TCP (Transmission Control Protocol) define?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "The structure and syntax of HTTP request and response messages exchanged between a browser and a web server."
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "The mapping between domain names and IP addresses maintained by distributed name servers across the internet."
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "The data format used for sending information over the network wire, and it can be used for HTTP, FTP, and other protocols."
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "The encryption standard applied to HTTPS traffic to protect data transmitted between clients and servers."
-        }
-      ],
-      "correctAnswer": [
-        "c"
-      ],
-      "explanationMd": "In this lecture context, TCP is presented as the lower-level protocol used to carry data for higher-level protocols such as HTTP and FTP over the network.",
-      "tags": [
-        "tcp",
-        "networking",
-        "http",
-        "ftp"
-      ],
-      "sourceRefs": [
-        "incoming-json/Dynamic Web Programming - Quiz 6.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "q6-029",
+      "id": "q6-026",
       "type": "single_choice",
       "topic": "Node.js",
       "subtopic": "Socket Abstraction",

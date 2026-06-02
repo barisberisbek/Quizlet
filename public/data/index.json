@@ -1,6 +1,6 @@
 {
   "version": "3.0.0",
-  "lastUpdated": "2026-06-02",
+  "lastUpdated": "2026-06-02T20:16:00Z",
   "quizzes": [
     {
       "id": "q1-merged",
@@ -22,9 +22,9 @@
         "Web Development",
         "Web History"
       ],
-      "questionCount": 37,
+      "questionCount": 36,
       "difficulty": "easy",
-      "estimatedMinutes": 56,
+      "estimatedMinutes": 54,
       "tags": [
         "q1",
         "merged",
@@ -61,9 +61,9 @@
         "Web History",
         "Web Standards"
       ],
-      "questionCount": 75,
+      "questionCount": 73,
       "difficulty": "easy",
-      "estimatedMinutes": 113,
+      "estimatedMinutes": 110,
       "tags": [
         "q2",
         "merged",
@@ -137,9 +137,9 @@
         "Web Concepts",
         "Web History"
       ],
-      "questionCount": 73,
+      "questionCount": 69,
       "difficulty": "easy",
-      "estimatedMinutes": 110,
+      "estimatedMinutes": 104,
       "tags": [
         "q4",
         "merged",
@@ -169,9 +169,9 @@
         "Web APIs",
         "Web Security"
       ],
-      "questionCount": 38,
+      "questionCount": 37,
       "difficulty": "easy",
-      "estimatedMinutes": 57,
+      "estimatedMinutes": 56,
       "tags": [
         "q5",
         "merged",
@@ -198,9 +198,9 @@
         "Web Architecture",
         "Web Programming"
       ],
-      "questionCount": 29,
+      "questionCount": 26,
       "difficulty": "medium",
-      "estimatedMinutes": 44,
+      "estimatedMinutes": 39,
       "tags": [
         "q6",
         "merged",
@@ -210,7 +210,7 @@
     },
     {
       "id": "midterm-merged",
-      "title": "DWP Midterm — 60 Unique Questions",
+      "title": "DWP Midterm — Comprehensive Practice Set",
       "description": "Comprehensive midterm practice set covering Fetch API, REST, Node.js, browser architecture, and async JavaScript.",
       "source": "DWP Midterm (2025-2026 Spring)",
       "course": "Dynamic Web Programming",
@@ -240,9 +240,9 @@
         "Web Servers",
         "Web Standards"
       ],
-      "questionCount": 104,
+      "questionCount": 102,
       "difficulty": "easy",
-      "estimatedMinutes": 156,
+      "estimatedMinutes": 153,
       "tags": [
         "midterm",
         "merged",
@@ -298,9 +298,9 @@
         "Term Weighting",
         "User Queries"
       ],
-      "questionCount": 21,
+      "questionCount": 20,
       "difficulty": "medium",
-      "estimatedMinutes": 32,
+      "estimatedMinutes": 30,
       "tags": [
         "irs",
         "q1",
@@ -325,9 +325,9 @@
         "Text Preprocessing",
         "Text Statistics"
       ],
-      "questionCount": 40,
+      "questionCount": 39,
       "difficulty": "easy",
-      "estimatedMinutes": 60,
+      "estimatedMinutes": 59,
       "tags": [
         "irs",
         "q2",
@@ -352,9 +352,9 @@
         "Term Frequencies",
         "Wildcard Queries"
       ],
-      "questionCount": 43,
+      "questionCount": 41,
       "difficulty": "medium",
-      "estimatedMinutes": 65,
+      "estimatedMinutes": 62,
       "tags": [
         "irs",
         "q3",
@@ -384,9 +384,9 @@
         "Term Weighting",
         "Vector Space Model"
       ],
-      "questionCount": 42,
+      "questionCount": 41,
       "difficulty": "medium",
-      "estimatedMinutes": 63,
+      "estimatedMinutes": 62,
       "tags": [
         "irs",
         "q4",
@@ -406,9 +406,9 @@
         "Evaluation Metrics",
         "Significance Testing"
       ],
-      "questionCount": 42,
+      "questionCount": 41,
       "difficulty": "medium",
-      "estimatedMinutes": 63,
+      "estimatedMinutes": 62,
       "tags": [
         "irs",
         "q5",
@@ -470,7 +470,7 @@
     },
     {
       "id": "irs-midterm-merged",
-      "title": "[IRS] Midterm — 60 Unique Questions",
+      "title": "[IRS] Midterm — Comprehensive Practice Set",
       "description": "Comprehensive midterm set covering evaluation, retrieval models, index compression, text processing, and OpenSearch.",
       "source": "IRS Midterm (2025-2026 Spring)",
       "course": "Information Retrieval Systems",
@@ -535,9 +535,9 @@
         "Wildcard Retrieval",
         "Wildcard Search"
       ],
-      "questionCount": 230,
+      "questionCount": 201,
       "difficulty": "medium",
-      "estimatedMinutes": 345,
+      "estimatedMinutes": 302,
       "tags": [
         "irs",
         "midterm",

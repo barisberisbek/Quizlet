@@ -76,9 +76,11 @@
         "promises"
       ],
       "sourceRefs": [
-        "incomingv2-json/dwp_quiz4_merged.json"
+        "incomingv2-json/dwp_quiz4_merged.json",
+        "incoming-json/Q4-Web2.json",
+        "incoming-json/Dynamic Web Programming - Quiz 4 Sema.json"
       ],
-      "mergedFromCount": 1,
+      "mergedFromCount": 2,
       "needs_review": false
     },
     {
@@ -204,14 +206,17 @@
       "correctAnswer": [
         "b"
       ],
-      "explanationMd": "The correct answer is \"`JSON.parse()`\" based on the lecture/examples in the provided quiz sources.",
+      "explanationMd": "`JSON.parse()` reads a JSON string and translates it directly to standard JS properties and objects.",
       "tags": [
         "json"
       ],
       "sourceRefs": [
-        "incomingv2-json/dwp_quiz4_merged.json"
+        "incomingv2-json/dwp_quiz4_merged.json",
+        "incoming-json/Q4-Web2.json",
+        "incoming-json/Dynamic Web Programming - Quiz 4 Sema.json",
+        "incoming-json/Dynamic Web Programming - Emir Quiz 4.json"
       ],
-      "mergedFromCount": 1,
+      "mergedFromCount": 3,
       "needs_review": true
     },
     {
@@ -384,9 +389,12 @@
         "javascript"
       ],
       "sourceRefs": [
-        "incomingv2-json/dwp_quiz4_merged.json"
+        "incomingv2-json/dwp_quiz4_merged.json",
+        "incoming-json/Q4-Web2.json",
+        "incoming-json/Dynamic Web Programming - Quiz 4 Sema.json",
+        "incoming-json/Dynamic Web Programming - Emir Quiz 4.json"
       ],
-      "mergedFromCount": 1,
+      "mergedFromCount": 2,
       "needs_review": false
     },
     {
@@ -1884,179 +1892,6 @@
     {
       "id": "q4-044",
       "type": "single_choice",
-      "topic": "JSON",
-      "subtopic": "Parsing",
-      "difficulty": "easy",
-      "questionMd": "A developer receives the string `'{\"name\":\"Ice Bear\"}'` from a server. Which function should they use to turn it into a usable JavaScript object?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "JSON.objectify()"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "JSON.decode()"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "JSON.parse()"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "JSON.stringify()"
-        }
-      ],
-      "correctAnswer": [
-        "c"
-      ],
-      "explanationMd": "No explanation provided.",
-      "tags": [],
-      "sourceRefs": [
-        "incoming-json/Dynamic Web Programming - Emir Quiz 4.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "q4-045",
-      "type": "single_choice",
-      "topic": "Architecture",
-      "subtopic": "Classes",
-      "difficulty": "medium",
-      "questionMd": "The lecture recommends implementing the `Album` class before the `App` class. What is the stated reason for this order?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "The fetch() call can only be tested after the Album class exists"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "The App class depends on the Album class, whereas the Album class has no dependencies"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "JavaScript requires dependent classes to be declared first in the file"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "The Album class is simpler and requires fewer lines of code"
-        }
-      ],
-      "correctAnswer": [
-        "b"
-      ],
-      "explanationMd": "Good architectural practice typically implements self-contained, dependency-free models (`Album`) before wiring up higher-level coordination logic (`App`).",
-      "tags": [
-        "architecture",
-        "classes"
-      ],
-      "sourceRefs": [
-        "incoming-json/Q4-Web2.json",
-        "incoming-json/Dynamic Web Programming - Quiz 4 Sema.json",
-        "incoming-json/Dynamic Web Programming - Emir Quiz 4.json"
-      ],
-      "mergedFromCount": 3,
-      "needs_review": true
-    },
-    {
-      "id": "q4-046",
-      "type": "single_choice",
-      "topic": "Promises",
-      "subtopic": "Chaining",
-      "difficulty": "medium",
-      "questionMd": "In a Promise chain such as `fetch(url).then(a).then(b)`, what value does function `b` receive as its argument?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "The original URL string passed to fetch()"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "The value returned by function a"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "The HTTP status code of the response"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "The raw HTTP response object"
-        }
-      ],
-      "correctAnswer": [
-        "b"
-      ],
-      "explanationMd": "The return value of a preceding `.then()` block is passed as the argument to the subsequent `.then()` block.",
-      "tags": [
-        "promise",
-        "javascript"
-      ],
-      "sourceRefs": [
-        "incoming-json/Q4-Web2.json",
-        "incoming-json/Dynamic Web Programming - Quiz 4 Sema.json"
-      ],
-      "mergedFromCount": 2,
-      "needs_review": false
-    },
-    {
-      "id": "q4-047",
-      "type": "single_choice",
-      "topic": "JSON",
-      "subtopic": "Parsing",
-      "difficulty": "easy",
-      "questionMd": "A developer receives the string `'{\"name\": \"Ice Bear\"}'` from a server. Which function should they use to turn it into a usable JavaScript object?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "JSON.objectify()"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "JSON.parse()"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "JSON.decode()"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "JSON.stringify()"
-        }
-      ],
-      "correctAnswer": [
-        "b"
-      ],
-      "explanationMd": "`JSON.parse()` reads a JSON string and translates it directly to standard JS properties and objects.",
-      "tags": [
-        "json",
-        "javascript"
-      ],
-      "sourceRefs": [
-        "incoming-json/Q4-Web2.json",
-        "incoming-json/Dynamic Web Programming - Quiz 4 Sema.json"
-      ],
-      "mergedFromCount": 2,
-      "needs_review": false
-    },
-    {
-      "id": "q4-048",
-      "type": "single_choice",
       "topic": "Web History",
       "subtopic": "W3C",
       "difficulty": "easy",
@@ -2099,7 +1934,7 @@
       "needs_review": false
     },
     {
-      "id": "q4-049",
+      "id": "q4-045",
       "type": "single_choice",
       "topic": "Web Concepts",
       "subtopic": "Hypertext",
@@ -2143,7 +1978,7 @@
       "needs_review": false
     },
     {
-      "id": "q4-050",
+      "id": "q4-046",
       "type": "single_choice",
       "topic": "Markup Languages",
       "subtopic": "SGML",
@@ -2187,7 +2022,7 @@
       "needs_review": false
     },
     {
-      "id": "q4-051",
+      "id": "q4-047",
       "type": "single_choice",
       "topic": "HTML",
       "subtopic": "Structure",
@@ -2230,7 +2065,7 @@
       "needs_review": false
     },
     {
-      "id": "q4-052",
+      "id": "q4-048",
       "type": "single_choice",
       "topic": "Networking",
       "subtopic": "LAN vs WAN",
@@ -2274,7 +2109,7 @@
       "needs_review": false
     },
     {
-      "id": "q4-053",
+      "id": "q4-049",
       "type": "single_choice",
       "topic": "HTTP",
       "subtopic": "History",
@@ -2318,7 +2153,7 @@
       "needs_review": false
     },
     {
-      "id": "q4-054",
+      "id": "q4-050",
       "type": "single_choice",
       "topic": "Web History",
       "subtopic": "ARPANET",
@@ -2361,7 +2196,7 @@
       "needs_review": false
     },
     {
-      "id": "q4-055",
+      "id": "q4-051",
       "type": "single_choice",
       "topic": "Web History",
       "subtopic": "Inventors",
@@ -2404,7 +2239,7 @@
       "needs_review": false
     },
     {
-      "id": "q4-056",
+      "id": "q4-052",
       "type": "single_choice",
       "topic": "CSS",
       "subtopic": "Purpose",
@@ -2448,7 +2283,7 @@
       "needs_review": false
     },
     {
-      "id": "q4-057",
+      "id": "q4-053",
       "type": "single_choice",
       "topic": "HTTP",
       "subtopic": "Methods",
@@ -2492,7 +2327,7 @@
       "needs_review": false
     },
     {
-      "id": "q4-058",
+      "id": "q4-054",
       "type": "single_choice",
       "topic": "Networking",
       "subtopic": "Ports",
@@ -2536,7 +2371,7 @@
       "needs_review": false
     },
     {
-      "id": "q4-059",
+      "id": "q4-055",
       "type": "single_choice",
       "topic": "URLs",
       "subtopic": "Structure",
@@ -2580,7 +2415,7 @@
       "needs_review": false
     },
     {
-      "id": "q4-060",
+      "id": "q4-056",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Classes",
@@ -2624,7 +2459,7 @@
       "needs_review": false
     },
     {
-      "id": "q4-061",
+      "id": "q4-057",
       "type": "single_choice",
       "topic": "HTML5",
       "subtopic": "Canvas",
@@ -2668,7 +2503,7 @@
       "needs_review": false
     },
     {
-      "id": "q4-062",
+      "id": "q4-058",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Memory Management",
@@ -2712,7 +2547,7 @@
       "needs_review": false
     },
     {
-      "id": "q4-063",
+      "id": "q4-059",
       "type": "single_choice",
       "topic": "URLs",
       "subtopic": "Query Parameters",
@@ -2756,7 +2591,7 @@
       "needs_review": false
     },
     {
-      "id": "q4-064",
+      "id": "q4-060",
       "type": "single_choice",
       "topic": "Architecture",
       "subtopic": "SPA vs MPA",
@@ -2800,7 +2635,7 @@
       "needs_review": false
     },
     {
-      "id": "q4-065",
+      "id": "q4-061",
       "type": "single_choice",
       "topic": "HTTP",
       "subtopic": "Headers",
@@ -2843,7 +2678,7 @@
       "needs_review": false
     },
     {
-      "id": "q4-066",
+      "id": "q4-062",
       "type": "single_choice",
       "topic": "DOM Manipulation",
       "subtopic": "Forms",
@@ -2887,7 +2722,7 @@
       "needs_review": false
     },
     {
-      "id": "q4-067",
+      "id": "q4-063",
       "type": "single_choice",
       "topic": "JSON",
       "subtopic": "Advantages",
@@ -2931,7 +2766,7 @@
       "needs_review": false
     },
     {
-      "id": "q4-068",
+      "id": "q4-064",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Objects",
@@ -2974,7 +2809,7 @@
       "needs_review": false
     },
     {
-      "id": "q4-069",
+      "id": "q4-065",
       "type": "single_choice",
       "topic": "DOM Events",
       "subtopic": "Inputs",
@@ -3018,7 +2853,7 @@
       "needs_review": false
     },
     {
-      "id": "q4-070",
+      "id": "q4-066",
       "type": "single_choice",
       "topic": "Promises",
       "subtopic": "Chaining",
@@ -3061,7 +2896,7 @@
       "needs_review": false
     },
     {
-      "id": "q4-071",
+      "id": "q4-067",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Classes",
@@ -3105,7 +2940,7 @@
       "needs_review": false
     },
     {
-      "id": "q4-072",
+      "id": "q4-068",
       "type": "single_choice",
       "topic": "DOM Events",
       "subtopic": "Methods",
@@ -3149,7 +2984,7 @@
       "needs_review": false
     },
     {
-      "id": "q4-073",
+      "id": "q4-069",
       "type": "single_choice",
       "topic": "Fetch API",
       "subtopic": "Return Values",

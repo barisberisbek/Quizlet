@@ -210,9 +210,11 @@
       ],
       "sourceRefs": [
         "incoming-retrieval-json/Midterm-Unique-60.json",
-        "incoming-retrieval-json/IRS-Midterm-ibo.json"
+        "incoming-retrieval-json/IRS-Midterm-ibo.json",
+        "incoming-retrieval-json/IRS-Midterm-berho.json",
+        "incoming-retrieval-json/IRS-Midterm-infomid.json"
       ],
-      "mergedFromCount": 2,
+      "mergedFromCount": 3,
       "needs_review": true
     },
     {
@@ -433,16 +435,17 @@
       "correctAnswer": [
         "b"
       ],
-      "explanationMd": "The first postings entry has no previous document ID to subtract from, so it is stored as the absolute first document ID.",
+      "explanationMd": "Since there is no previous document ID before the first posting, the first entry is stored directly as the absolute document ID.",
       "tags": [
         "gap-encoding",
         "delta-encoding",
         "postings-list"
       ],
       "sourceRefs": [
-        "incoming-retrieval-json/Midterm-Unique-60.json"
+        "incoming-retrieval-json/Midterm-Unique-60.json",
+        "incoming-retrieval-json/IRS-Midterm-merve.json"
       ],
-      "mergedFromCount": 1,
+      "mergedFromCount": 2,
       "needs_review": false
     },
     {
@@ -532,9 +535,10 @@
       "sourceRefs": [
         "incoming-retrieval-json/Midterm-Unique-60.json",
         "incoming-retrieval-json/IRS-Midterm-infomid.json",
-        "incoming-retrieval-json/IRS-Midterm-ibo.json"
+        "incoming-retrieval-json/IRS-Midterm-ibo.json",
+        "incoming-retrieval-json/IRS-Midterm-merve.json"
       ],
-      "mergedFromCount": 3,
+      "mergedFromCount": 4,
       "needs_review": true
     },
     {
@@ -1224,7 +1228,7 @@
       "correctAnswer": [
         "d"
       ],
-      "explanationMd": "There are six token occurrences, but `the` appears twice after case folding, so there are five unique types.",
+      "explanationMd": "There are 6 word occurrences: The, cat, sat, on, the, mat. Treating **The/the** as the same normalized word gives 5 distinct types.",
       "tags": [
         "tokens",
         "types",
@@ -1232,9 +1236,10 @@
       ],
       "sourceRefs": [
         "incoming-retrieval-json/Midterm-Unique-60.json",
-        "incoming-retrieval-json/IRS-Midterm-infomid.json"
+        "incoming-retrieval-json/IRS-Midterm-infomid.json",
+        "incoming-retrieval-json/IRS-Midterm-ibo.json"
       ],
-      "mergedFromCount": 2,
+      "mergedFromCount": 3,
       "needs_review": true
     },
     {
@@ -1324,9 +1329,10 @@
       "sourceRefs": [
         "incoming-retrieval-json/Midterm-Unique-60.json",
         "incoming-retrieval-json/IRS-Midterm-beg.json",
-        "incoming-retrieval-json/IRS-Midterm-infomid.json"
+        "incoming-retrieval-json/IRS-Midterm-infomid.json",
+        "incoming-retrieval-json/IRS-Midterm-merve.json"
       ],
-      "mergedFromCount": 3,
+      "mergedFromCount": 4,
       "needs_review": true
     },
     {
@@ -1497,7 +1503,7 @@
       "correctAnswer": [
         "b"
       ],
-      "explanationMd": "A p-value of `0.21` is above common significance thresholds such as `0.05`, so the observed difference is not statistically significant.",
+      "explanationMd": "With p = 0.21, the difference does not meet a typical 0.05 significance threshold, so the observed MAP difference is not statistically significant.",
       "tags": [
         "wilcoxon",
         "map",
@@ -1505,9 +1511,10 @@
       ],
       "sourceRefs": [
         "incoming-retrieval-json/Midterm-Unique-60.json",
-        "incoming-retrieval-json/IRS-Midterm-ibo.json"
+        "incoming-retrieval-json/IRS-Midterm-ibo.json",
+        "incoming-retrieval-json/IRS-Midterm-merve.json"
       ],
-      "mergedFromCount": 2,
+      "mergedFromCount": 3,
       "needs_review": true
     },
     {
@@ -1542,7 +1549,7 @@
       "correctAnswer": [
         "b"
       ],
-      "explanationMd": "Over-stemming occurs when different concepts are reduced to the same stem, potentially increasing false matches and reducing precision.",
+      "explanationMd": "Porter stemming has merged two semantically different words into the same stem. This is over-stemming and it can reduce precision by matching unrelated documents.",
       "tags": [
         "porter-stemmer",
         "over-stemming",
@@ -1550,9 +1557,12 @@
       ],
       "sourceRefs": [
         "incoming-retrieval-json/Midterm-Unique-60.json",
-        "incoming-retrieval-json/IRS-Midterm-infomid.json"
+        "incoming-retrieval-json/IRS-Midterm-infomid.json",
+        "incoming-retrieval-json/IRS-Midterm-fa.json",
+        "incoming-retrieval-json/IRS-Midterm-beg.json",
+        "incoming-retrieval-json/IRS-Midterm-merve.json"
       ],
-      "mergedFromCount": 2,
+      "mergedFromCount": 5,
       "needs_review": true
     },
     {
@@ -1690,9 +1700,10 @@
         "term-matching"
       ],
       "sourceRefs": [
-        "incoming-retrieval-json/Midterm-Unique-60.json"
+        "incoming-retrieval-json/Midterm-Unique-60.json",
+        "incoming-retrieval-json/IRS-Midterm-infomid.json"
       ],
-      "mergedFromCount": 1,
+      "mergedFromCount": 2,
       "needs_review": false
     },
     {
@@ -1820,7 +1831,7 @@
       "correctAnswer": [
         "d"
       ],
-      "explanationMd": "In the lecture's VB convention, the top bit set to `1` marks the final byte of the current encoded number.",
+      "explanationMd": "In the lecture convention for VB encoding, a top bit of 1 marks the final byte of the current encoded integer.",
       "tags": [
         "variable-byte",
         "compression",
@@ -1828,9 +1839,11 @@
       ],
       "sourceRefs": [
         "incoming-retrieval-json/Midterm-Unique-60.json",
-        "incoming-retrieval-json/IRS-Midterm-merve.json"
+        "incoming-retrieval-json/IRS-Midterm-merve.json",
+        "incoming-retrieval-json/IRS-Midterm-beg.json",
+        "incoming-retrieval-json/IRS-Midterm-infomid.json"
       ],
-      "mergedFromCount": 2,
+      "mergedFromCount": 3,
       "needs_review": true
     },
     {
@@ -1865,16 +1878,21 @@
       "correctAnswer": [
         "b"
       ],
-      "explanationMd": "Document frequency is the number of documents in which a term occurs.",
+      "explanationMd": "Document frequency counts how many documents contain the term at least once, not how many total occurrences the term has.",
       "tags": [
         "document-frequency",
         "df",
         "term-statistics"
       ],
       "sourceRefs": [
-        "incoming-retrieval-json/Midterm-Unique-60.json"
+        "incoming-retrieval-json/Midterm-Unique-60.json",
+        "incoming-retrieval-json/IRS-Midterm-beg.json",
+        "incoming-retrieval-json/IRS-Midterm-berho.json",
+        "incoming-retrieval-json/IRS-Midterm-fa.json",
+        "incoming-retrieval-json/IRS-Midterm-infomid.json",
+        "incoming-retrieval-json/IRS-Midterm-ibo.json"
       ],
-      "mergedFromCount": 1,
+      "mergedFromCount": 3,
       "needs_review": false
     },
     {
@@ -2101,9 +2119,10 @@
         "incoming-retrieval-json/Midterm-Unique-60.json",
         "incoming-retrieval-json/IRS-Midterm-beg.json",
         "incoming-retrieval-json/IRS-Midterm-fa.json",
-        "incoming-retrieval-json/IRS-Midterm-infomid.json"
+        "incoming-retrieval-json/IRS-Midterm-infomid.json",
+        "incoming-retrieval-json/IRS-Midterm-berho.json"
       ],
-      "mergedFromCount": 4,
+      "mergedFromCount": 5,
       "needs_review": true
     },
     {
@@ -2283,9 +2302,10 @@
         "recall"
       ],
       "sourceRefs": [
-        "incoming-retrieval-json/Midterm-Unique-60.json"
+        "incoming-retrieval-json/Midterm-Unique-60.json",
+        "incoming-retrieval-json/IRS-Midterm-merve.json"
       ],
-      "mergedFromCount": 1,
+      "mergedFromCount": 2,
       "needs_review": false
     },
     {
@@ -2467,9 +2487,11 @@
         "rank-frequency"
       ],
       "sourceRefs": [
-        "incoming-retrieval-json/Midterm-Unique-60.json"
+        "incoming-retrieval-json/Midterm-Unique-60.json",
+        "incoming-retrieval-json/IRS-Midterm-infomid.json",
+        "incoming-retrieval-json/IRS-Midterm-merve.json"
       ],
-      "mergedFromCount": 1,
+      "mergedFromCount": 2,
       "needs_review": false
     },
     {
@@ -2642,7 +2664,7 @@
       "correctAnswer": [
         "c"
       ],
-      "explanationMd": "Case can carry semantic information; `Apple` as a company and `apple` as a fruit are not always interchangeable.",
+      "explanationMd": "Lowercasing can remove meaningful distinctions. `Apple` as a company and `apple` as a fruit are different entities even though their lowercase forms match.",
       "tags": [
         "case-folding",
         "normalization",
@@ -2650,9 +2672,11 @@
       ],
       "sourceRefs": [
         "incoming-retrieval-json/Midterm-Unique-60.json",
-        "incoming-retrieval-json/IRS-Midterm-infomid.json"
+        "incoming-retrieval-json/IRS-Midterm-infomid.json",
+        "incoming-retrieval-json/IRS-Midterm-fa.json",
+        "incoming-retrieval-json/IRS-Midterm-merve.json"
       ],
-      "mergedFromCount": 2,
+      "mergedFromCount": 3,
       "needs_review": true
     },
     {
@@ -2973,9 +2997,10 @@
       ],
       "sourceRefs": [
         "incoming-retrieval-json/IRS-Midterm-beg.json",
-        "incoming-retrieval-json/IRS-Midterm-infomid.json"
+        "incoming-retrieval-json/IRS-Midterm-infomid.json",
+        "incoming-retrieval-json/IRS-Midterm-ibo.json"
       ],
-      "mergedFromCount": 2,
+      "mergedFromCount": 3,
       "needs_review": true
     },
     {
@@ -3017,9 +3042,10 @@
         "dictionary"
       ],
       "sourceRefs": [
-        "incoming-retrieval-json/IRS-Midterm-beg.json"
+        "incoming-retrieval-json/IRS-Midterm-beg.json",
+        "incoming-retrieval-json/IRS-Midterm-infomid.json"
       ],
-      "mergedFromCount": 1,
+      "mergedFromCount": 2,
       "needs_review": false
     },
     {
@@ -3286,16 +3312,17 @@
       "correctAnswer": [
         "d"
       ],
-      "explanationMd": "Users often express a richer information need as a short query, so the query loses context and intent.",
+      "explanationMd": "A short query is only an imperfect expression of a broader information need. It often omits context, intent, and desired explanation.",
       "tags": [
         "information-need",
         "query",
         "user-intent"
       ],
       "sourceRefs": [
-        "incoming-retrieval-json/IRS-Midterm-beg.json"
+        "incoming-retrieval-json/IRS-Midterm-beg.json",
+        "incoming-retrieval-json/IRS-Midterm-fa.json"
       ],
-      "mergedFromCount": 1,
+      "mergedFromCount": 2,
       "needs_review": false
     },
     {
@@ -3531,51 +3558,6 @@
     {
       "id": "irs-midterm-076",
       "type": "single_choice",
-      "topic": "Index Compression",
-      "subtopic": "Variable-byte encoding",
-      "difficulty": "medium",
-      "questionMd": "Variable-byte (VB) encoding uses a continuation bit within each byte. What does a continuation bit value of 1, the top bit set, indicate in VB encoding?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "This byte encodes a negative gap and should be subtracted"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "This byte is a continuation byte and more bytes follow for the current number"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "This byte marks the boundary between two separate encoded numbers"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "This is the last (terminal) byte of the current encoded number"
-        }
-      ],
-      "correctAnswer": [
-        "d"
-      ],
-      "explanationMd": "In the lecture convention for VB encoding, a top bit of 1 marks the final byte of the current encoded integer.",
-      "tags": [
-        "variable-byte",
-        "compression",
-        "postings"
-      ],
-      "sourceRefs": [
-        "incoming-retrieval-json/IRS-Midterm-beg.json",
-        "incoming-retrieval-json/IRS-Midterm-infomid.json"
-      ],
-      "mergedFromCount": 2,
-      "needs_review": true
-    },
-    {
-      "id": "irs-midterm-077",
-      "type": "single_choice",
       "topic": "Phrase Retrieval",
       "subtopic": "Biword index",
       "difficulty": "medium",
@@ -3605,7 +3587,7 @@
       "correctAnswer": [
         "a"
       ],
-      "explanationMd": "A biword index represents adjacent term pairs. A three-word phrase becomes two overlapping biwords that must both match.",
+      "explanationMd": "A biword index represents adjacent term pairs. A three-word phrase is converted into overlapping biwords, then both biword postings are intersected.",
       "tags": [
         "biword-index",
         "phrase-query",
@@ -3613,60 +3595,14 @@
       ],
       "sourceRefs": [
         "incoming-retrieval-json/IRS-Midterm-beg.json",
-        "incoming-retrieval-json/IRS-Midterm-infomid.json"
+        "incoming-retrieval-json/IRS-Midterm-infomid.json",
+        "incoming-retrieval-json/IRS-Midterm-ibo.json"
       ],
-      "mergedFromCount": 2,
+      "mergedFromCount": 3,
       "needs_review": true
     },
     {
-      "id": "irs-midterm-078",
-      "type": "single_choice",
-      "topic": "Indexing",
-      "subtopic": "Document frequency",
-      "difficulty": "easy",
-      "questionMd": "A term has a document frequency (DF) of 500 and a term frequency (TF) of 12 in one particular document. What does the DF value of 500 indicate?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "The term appears 500 times across all documents combined"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "The term's postings list contains 500 position entries"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "The term appears in documents with an average length of 500 tokens"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "The term appears in 500 different documents in the corpus"
-        }
-      ],
-      "correctAnswer": [
-        "d"
-      ],
-      "explanationMd": "Document frequency counts the number of distinct documents containing the term, not the total number of occurrences.",
-      "tags": [
-        "document-frequency",
-        "term-frequency",
-        "postings"
-      ],
-      "sourceRefs": [
-        "incoming-retrieval-json/IRS-Midterm-beg.json",
-        "incoming-retrieval-json/IRS-Midterm-berho.json",
-        "incoming-retrieval-json/IRS-Midterm-fa.json",
-        "incoming-retrieval-json/IRS-Midterm-infomid.json"
-      ],
-      "mergedFromCount": 4,
-      "needs_review": true
-    },
-    {
-      "id": "irs-midterm-079",
+      "id": "irs-midterm-077",
       "type": "single_choice",
       "topic": "Ranking",
       "subtopic": "BM25 statistics",
@@ -3711,7 +3647,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-080",
+      "id": "irs-midterm-078",
       "type": "single_choice",
       "topic": "Index Compression",
       "subtopic": "Variable-byte encoding",
@@ -3758,7 +3694,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-081",
+      "id": "irs-midterm-079",
       "type": "single_choice",
       "topic": "Ranking",
       "subtopic": "BM25 length normalization",
@@ -3802,7 +3738,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-082",
+      "id": "irs-midterm-080",
       "type": "single_choice",
       "topic": "Ranking",
       "subtopic": "BM25 variants",
@@ -3847,7 +3783,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-083",
+      "id": "irs-midterm-081",
       "type": "single_choice",
       "topic": "Vocabulary Growth",
       "subtopic": "Heap's Law",
@@ -3893,7 +3829,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-084",
+      "id": "irs-midterm-082",
       "type": "single_choice",
       "topic": "OpenSearch",
       "subtopic": "Mappings",
@@ -3939,7 +3875,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-085",
+      "id": "irs-midterm-083",
       "type": "single_choice",
       "topic": "OpenSearch",
       "subtopic": "Text analysis pipeline",
@@ -3985,7 +3921,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-086",
+      "id": "irs-midterm-084",
       "type": "single_choice",
       "topic": "OpenSearch",
       "subtopic": "Near-real-time search",
@@ -4030,7 +3966,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-087",
+      "id": "irs-midterm-085",
       "type": "single_choice",
       "topic": "Evaluation",
       "subtopic": "NDCG edge cases",
@@ -4079,7 +4015,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-088",
+      "id": "irs-midterm-086",
       "type": "single_choice",
       "topic": "Ranking",
       "subtopic": "BM25 vs TF-IDF",
@@ -4126,7 +4062,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-089",
+      "id": "irs-midterm-087",
       "type": "single_choice",
       "topic": "Indexing",
       "subtopic": "K-gram indexes",
@@ -4171,7 +4107,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-090",
+      "id": "irs-midterm-088",
       "type": "single_choice",
       "topic": "Scalable Indexing",
       "subtopic": "BSBI",
@@ -4216,7 +4152,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-091",
+      "id": "irs-midterm-089",
       "type": "single_choice",
       "topic": "Retrieval Algorithms",
       "subtopic": "Traversal strategy",
@@ -4261,7 +4197,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-092",
+      "id": "irs-midterm-090",
       "type": "single_choice",
       "topic": "Scalable Indexing",
       "subtopic": "BSBI vs SPIMI",
@@ -4306,7 +4242,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-093",
+      "id": "irs-midterm-091",
       "type": "single_choice",
       "topic": "Wildcard Retrieval",
       "subtopic": "Permuterm index",
@@ -4352,51 +4288,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-094",
-      "type": "single_choice",
-      "topic": "Text Processing",
-      "subtopic": "Stemming errors",
-      "difficulty": "easy",
-      "questionMd": "A student runs a Porter stemmer and observes that both `\"universe\"` and `\"university\"` produce the stem `\"univers\"`. This is an example of which failure mode?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "Under-stemming, which reduces retrieval recall"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "Accent folding, which merges morphologically unrelated forms"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "Incorrect case folding applied before stemming"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "Over-stemming, which reduces retrieval precision"
-        }
-      ],
-      "correctAnswer": [
-        "d"
-      ],
-      "explanationMd": "Over-stemming incorrectly merges distinct terms, which can retrieve irrelevant documents and reduce precision.",
-      "tags": [
-        "porter-stemmer",
-        "over-stemming",
-        "precision"
-      ],
-      "sourceRefs": [
-        "incoming-retrieval-json/IRS-Midterm-beg.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "irs-midterm-095",
+      "id": "irs-midterm-092",
       "type": "single_choice",
       "topic": "Text Processing",
       "subtopic": "WordNet lemmatization",
@@ -4441,7 +4333,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-096",
+      "id": "irs-midterm-093",
       "type": "single_choice",
       "topic": "Vector Space Model",
       "subtopic": "Term frequency",
@@ -4487,7 +4379,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-097",
+      "id": "irs-midterm-094",
       "type": "single_choice",
       "topic": "Text Processing",
       "subtopic": "Porter stemming",
@@ -4528,13 +4420,14 @@
         "incoming-retrieval-json/IRS-Midterm-beg.json",
         "incoming-retrieval-json/IRS-Midterm-fa.json",
         "incoming-retrieval-json/IRS-Midterm-ibo.json",
-        "incoming-retrieval-json/IRS-Midterm-merve.json"
+        "incoming-retrieval-json/IRS-Midterm-merve.json",
+        "incoming-retrieval-json/IRS-Midterm-berho.json"
       ],
-      "mergedFromCount": 4,
+      "mergedFromCount": 5,
       "needs_review": true
     },
     {
-      "id": "irs-midterm-098",
+      "id": "irs-midterm-095",
       "type": "single_choice",
       "topic": "Ranking",
       "subtopic": "Document frequency source",
@@ -4581,7 +4474,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-099",
+      "id": "irs-midterm-096",
       "type": "single_choice",
       "topic": "Text Processing",
       "subtopic": "Token, type, and term",
@@ -4630,7 +4523,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-100",
+      "id": "irs-midterm-097",
       "type": "single_choice",
       "topic": "Vector Space Model",
       "subtopic": "SMART notation",
@@ -4675,7 +4568,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-101",
+      "id": "irs-midterm-098",
       "type": "single_choice",
       "topic": "Evaluation",
       "subtopic": "NDCG",
@@ -4722,7 +4615,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-102",
+      "id": "irs-midterm-099",
       "type": "single_choice",
       "topic": "Ranking",
       "subtopic": "BM25 TF saturation",
@@ -4770,7 +4663,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-103",
+      "id": "irs-midterm-100",
       "type": "single_choice",
       "topic": "Representation",
       "subtopic": "Bag-of-Words assumption",
@@ -4815,7 +4708,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-104",
+      "id": "irs-midterm-101",
       "type": "single_choice",
       "topic": "Spelling Correction",
       "subtopic": "Correction pipeline",
@@ -4863,7 +4756,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-105",
+      "id": "irs-midterm-102",
       "type": "single_choice",
       "topic": "Vocabulary Statistics",
       "subtopic": "Heap's Law",
@@ -4910,7 +4803,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-106",
+      "id": "irs-midterm-103",
       "type": "single_choice",
       "topic": "Indexing",
       "subtopic": "Lucene segments",
@@ -4957,7 +4850,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-107",
+      "id": "irs-midterm-104",
       "type": "single_choice",
       "topic": "Vector Space Model",
       "subtopic": "Cosine similarity",
@@ -5002,52 +4895,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-108",
-      "type": "single_choice",
-      "topic": "Evaluation",
-      "subtopic": "MAP",
-      "difficulty": "easy",
-      "questionMd": "Three queries yield Average Precision scores of 0.72, 0.45, and 0.38 for a system. What is the MAP?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "0.517, computed as `(0.72 + 0.45 + 0.38) / 3`."
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "1.550, because MAP sums the AP values without dividing by the number of queries."
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "0.720, because MAP reports the highest AP score across all queries."
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "0.550, computed as the median of the three AP values."
-        }
-      ],
-      "correctAnswer": [
-        "a"
-      ],
-      "explanationMd": "MAP is the arithmetic mean of Average Precision values across queries: `(0.72 + 0.45 + 0.38) / 3 = 0.517`.",
-      "tags": [
-        "map",
-        "average-precision",
-        "evaluation"
-      ],
-      "sourceRefs": [
-        "incoming-retrieval-json/IRS-Midterm-berho.json",
-        "incoming-retrieval-json/IRS-Midterm-infomid.json"
-      ],
-      "mergedFromCount": 2,
-      "needs_review": true
-    },
-    {
-      "id": "irs-midterm-109",
+      "id": "irs-midterm-105",
       "type": "single_choice",
       "topic": "Tokenization",
       "subtopic": "Whitespace tokenization",
@@ -5093,7 +4941,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-110",
+      "id": "irs-midterm-106",
       "type": "single_choice",
       "topic": "Query Processing",
       "subtopic": "Wildcard queries",
@@ -5140,7 +4988,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-111",
+      "id": "irs-midterm-107",
       "type": "single_choice",
       "topic": "Term Weighting",
       "subtopic": "Term frequency",
@@ -5185,7 +5033,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-112",
+      "id": "irs-midterm-108",
       "type": "single_choice",
       "topic": "OpenSearch and Lucene",
       "subtopic": "Finite State Transducer",
@@ -5232,7 +5080,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-113",
+      "id": "irs-midterm-109",
       "type": "single_choice",
       "topic": "Term Weighting",
       "subtopic": "Probabilistic IDF",
@@ -5277,7 +5125,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-114",
+      "id": "irs-midterm-110",
       "type": "single_choice",
       "topic": "Ranking Models",
       "subtopic": "BM25",
@@ -5322,7 +5170,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-115",
+      "id": "irs-midterm-111",
       "type": "single_choice",
       "topic": "Boolean Retrieval",
       "subtopic": "Postings merge",
@@ -5367,7 +5215,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-116",
+      "id": "irs-midterm-112",
       "type": "single_choice",
       "topic": "Information Retrieval Problems",
       "subtopic": "Vocabulary mismatch",
@@ -5406,57 +5254,15 @@
       ],
       "sourceRefs": [
         "incoming-retrieval-json/IRS-Midterm-berho.json",
-        "incoming-retrieval-json/IRS-Midterm-infomid.json"
+        "incoming-retrieval-json/IRS-Midterm-infomid.json",
+        "incoming-retrieval-json/IRS-Midterm-merve.json",
+        "incoming-retrieval-json/IRS-Midterm-ibo.json"
       ],
-      "mergedFromCount": 2,
+      "mergedFromCount": 4,
       "needs_review": true
     },
     {
-      "id": "irs-midterm-117",
-      "type": "single_choice",
-      "topic": "OpenSearch",
-      "subtopic": "Field boosting",
-      "difficulty": "medium",
-      "questionMd": "An OpenSearch query uses `fields`: [`title^3`, `body^1`] inside a `multi_match` clause. What does the `^3` notation mean for the `title` field?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "A match in the title field contributes three times more to the relevance score than an equivalent match in the body field."
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "OpenSearch searches the title field three times before falling back to the body field."
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "The title field is indexed three times to increase recall for title matches."
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "The query requires at least three matching terms in the title field before the document is considered a candidate."
-        }
-      ],
-      "correctAnswer": [
-        "a"
-      ],
-      "explanationMd": "The caret notation applies a boost; `title^3` weights title matches three times more than the unboosted field.",
-      "tags": [
-        "opensearch",
-        "multi_match",
-        "field-boosting"
-      ],
-      "sourceRefs": [
-        "incoming-retrieval-json/IRS-Midterm-berho.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "irs-midterm-118",
+      "id": "irs-midterm-113",
       "type": "single_choice",
       "topic": "Term Weighting",
       "subtopic": "SMART notation",
@@ -5487,20 +5293,23 @@
       "correctAnswer": [
         "b"
       ],
-      "explanationMd": "In SMART notation, the logarithmic TF weighting uses `1 + log(tf)` for non-zero term frequency.",
+      "explanationMd": "In SMART notation, logarithmic term frequency weighting is commonly `1 + log(tf)` for non-zero term counts.",
       "tags": [
         "smart-notation",
         "tf",
         "logarithmic-tf"
       ],
       "sourceRefs": [
-        "incoming-retrieval-json/IRS-Midterm-berho.json"
+        "incoming-retrieval-json/IRS-Midterm-berho.json",
+        "incoming-retrieval-json/IRS-Midterm-infomid.json",
+        "incoming-retrieval-json/IRS-Midterm-merve.json",
+        "incoming-retrieval-json/IRS-Midterm-ibo.json"
       ],
-      "mergedFromCount": 1,
+      "mergedFromCount": 3,
       "needs_review": false
     },
     {
-      "id": "irs-midterm-119",
+      "id": "irs-midterm-114",
       "type": "single_choice",
       "topic": "Indexing",
       "subtopic": "Term definition",
@@ -5547,7 +5356,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-120",
+      "id": "irs-midterm-115",
       "type": "single_choice",
       "topic": "Indexing",
       "subtopic": "Skip pointers",
@@ -5591,7 +5400,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-121",
+      "id": "irs-midterm-116",
       "type": "single_choice",
       "topic": "Term Weighting",
       "subtopic": "IDF",
@@ -5636,7 +5445,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-122",
+      "id": "irs-midterm-117",
       "type": "single_choice",
       "topic": "Vector Space Model",
       "subtopic": "Sparse vectors",
@@ -5682,7 +5491,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-123",
+      "id": "irs-midterm-118",
       "type": "single_choice",
       "topic": "Evaluation",
       "subtopic": "Precision",
@@ -5727,7 +5536,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-124",
+      "id": "irs-midterm-119",
       "type": "single_choice",
       "topic": "Text Processing",
       "subtopic": "Lemmatization",
@@ -5771,7 +5580,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-125",
+      "id": "irs-midterm-120",
       "type": "single_choice",
       "topic": "OpenSearch and Lucene",
       "subtopic": "Segment merging",
@@ -5815,7 +5624,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-126",
+      "id": "irs-midterm-121",
       "type": "single_choice",
       "topic": "Indexing",
       "subtopic": "Skip pointers",
@@ -5860,7 +5669,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-127",
+      "id": "irs-midterm-122",
       "type": "single_choice",
       "topic": "Evaluation",
       "subtopic": "MAP",
@@ -5905,7 +5714,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-128",
+      "id": "irs-midterm-123",
       "type": "single_choice",
       "topic": "Spelling Correction",
       "subtopic": "Jaccard Filtering",
@@ -5952,7 +5761,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-129",
+      "id": "irs-midterm-124",
       "type": "single_choice",
       "topic": "Vector Space Model",
       "subtopic": "Cosine vs Euclidean distance",
@@ -5999,7 +5808,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-130",
+      "id": "irs-midterm-125",
       "type": "single_choice",
       "topic": "Query Processing",
       "subtopic": "Positional index",
@@ -6046,7 +5855,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-131",
+      "id": "irs-midterm-126",
       "type": "single_choice",
       "topic": "OpenSearch",
       "subtopic": "Analyzer mismatch",
@@ -6091,7 +5900,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-132",
+      "id": "irs-midterm-127",
       "type": "single_choice",
       "topic": "Evaluation",
       "subtopic": "Average Precision",
@@ -6136,51 +5945,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-133",
-      "type": "single_choice",
-      "topic": "Text Processing",
-      "subtopic": "Over-stemming",
-      "difficulty": "medium",
-      "questionMd": "After applying the full preprocessing pipeline, tokenize → lowercase → stopword removal → Porter stemming, to the input `The astronauts ORBITING the International Space Station`, which term in the output best illustrates a known over-stemming problem?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "`station` produced from `Station`."
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "`astronaut` produced from `astronauts`."
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "`intern` produced from `International`."
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "`space` produced from `Space`."
-        }
-      ],
-      "correctAnswer": [
-        "c"
-      ],
-      "explanationMd": "Porter stemming may reduce `international` to `intern`, which can conflate terms too aggressively and cause over-stemming.",
-      "tags": [
-        "porter-stemmer",
-        "over-stemming",
-        "preprocessing"
-      ],
-      "sourceRefs": [
-        "incoming-retrieval-json/IRS-Midterm-berho.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "irs-midterm-134",
+      "id": "irs-midterm-128",
       "type": "single_choice",
       "topic": "OpenSearch",
       "subtopic": "DocValues",
@@ -6227,7 +5992,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-135",
+      "id": "irs-midterm-129",
       "type": "single_choice",
       "topic": "IR History",
       "subtopic": "Cranfield experiments",
@@ -6272,7 +6037,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-136",
+      "id": "irs-midterm-130",
       "type": "single_choice",
       "topic": "Evaluation",
       "subtopic": "NDCG",
@@ -6318,52 +6083,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-137",
-      "type": "single_choice",
-      "topic": "Stemming",
-      "subtopic": "Over-stemming",
-      "difficulty": "medium",
-      "questionMd": "A student runs a Porter stemmer and observes that both **universe** and **university** produce the stem **univers**. This is an example of which failure mode?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "Incorrect case folding applied before stemming"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "Over-stemming, which reduces retrieval precision"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "Under-stemming, which reduces retrieval recall"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "Accent folding, which merges morphologically unrelated forms"
-        }
-      ],
-      "correctAnswer": [
-        "b"
-      ],
-      "explanationMd": "Porter stemming has merged two semantically different words into the same stem. This is over-stemming and it can reduce precision by matching unrelated documents.",
-      "tags": [
-        "stemming",
-        "porter",
-        "over-stemming",
-        "precision"
-      ],
-      "sourceRefs": [
-        "incoming-retrieval-json/IRS-Midterm-fa.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "irs-midterm-138",
+      "id": "irs-midterm-131",
       "type": "single_choice",
       "topic": "IR vs Databases",
       "subtopic": "Synonymy and full-text search",
@@ -6410,7 +6130,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-139",
+      "id": "irs-midterm-132",
       "type": "single_choice",
       "topic": "Ranking Models",
       "subtopic": "TF saturation",
@@ -6456,7 +6176,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-140",
+      "id": "irs-midterm-133",
       "type": "single_choice",
       "topic": "Wildcard Queries",
       "subtopic": "Dictionary lookup",
@@ -6501,7 +6221,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-141",
+      "id": "irs-midterm-134",
       "type": "single_choice",
       "topic": "Vector Space Model",
       "subtopic": "Vector representation",
@@ -6547,7 +6267,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-142",
+      "id": "irs-midterm-135",
       "type": "single_choice",
       "topic": "Postings Lists",
       "subtopic": "Skip pointers",
@@ -6593,7 +6313,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-143",
+      "id": "irs-midterm-136",
       "type": "single_choice",
       "topic": "Spelling Correction",
       "subtopic": "K-gram Jaccard filtering",
@@ -6639,7 +6359,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-144",
+      "id": "irs-midterm-137",
       "type": "single_choice",
       "topic": "Boolean Retrieval",
       "subtopic": "NOT queries",
@@ -6685,7 +6405,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-145",
+      "id": "irs-midterm-138",
       "type": "single_choice",
       "topic": "Evaluation",
       "subtopic": "TREC",
@@ -6732,7 +6452,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-146",
+      "id": "irs-midterm-139",
       "type": "single_choice",
       "topic": "BM25",
       "subtopic": "BM25F",
@@ -6778,7 +6498,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-147",
+      "id": "irs-midterm-140",
       "type": "single_choice",
       "topic": "Evaluation",
       "subtopic": "Average Precision",
@@ -6823,7 +6543,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-148",
+      "id": "irs-midterm-141",
       "type": "single_choice",
       "topic": "Probabilistic IR",
       "subtopic": "Probability Ranking Principle",
@@ -6869,7 +6589,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-149",
+      "id": "irs-midterm-142",
       "type": "single_choice",
       "topic": "OpenSearch",
       "subtopic": "Fuzzy query",
@@ -6915,7 +6635,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-150",
+      "id": "irs-midterm-143",
       "type": "single_choice",
       "topic": "Evaluation",
       "subtopic": "MAP limitations",
@@ -6961,7 +6681,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-151",
+      "id": "irs-midterm-144",
       "type": "single_choice",
       "topic": "Similarity",
       "subtopic": "Jaccard similarity",
@@ -7008,7 +6728,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-152",
+      "id": "irs-midterm-145",
       "type": "single_choice",
       "topic": "Boolean Retrieval",
       "subtopic": "Operator precedence",
@@ -7054,7 +6774,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-153",
+      "id": "irs-midterm-146",
       "type": "single_choice",
       "topic": "Evaluation",
       "subtopic": "Precision-recall tradeoff",
@@ -7100,7 +6820,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-154",
+      "id": "irs-midterm-147",
       "type": "single_choice",
       "topic": "Query Processing",
       "subtopic": "AND optimization",
@@ -7147,7 +6867,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-155",
+      "id": "irs-midterm-148",
       "type": "single_choice",
       "topic": "Evaluation",
       "subtopic": "Average Precision formula",
@@ -7194,7 +6914,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-156",
+      "id": "irs-midterm-149",
       "type": "single_choice",
       "topic": "IR Concepts",
       "subtopic": "IR triangle",
@@ -7240,52 +6960,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-157",
-      "type": "single_choice",
-      "topic": "Querying",
-      "subtopic": "Information need",
-      "difficulty": "easy",
-      "questionMd": "A student searches for **flight delays snow**. Their actual need is to understand why winter weather disrupts air travel. What does this example best illustrate?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "Queries and information needs are equivalent when the user is precise"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "A query is always a lossy compression of the underlying information need"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "Search engines require queries to match document text exactly"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "Information needs can be fully captured in two or three words"
-        }
-      ],
-      "correctAnswer": [
-        "b"
-      ],
-      "explanationMd": "A short query is only an imperfect expression of a broader information need. It often omits context, intent, and desired explanation.",
-      "tags": [
-        "query",
-        "information-need",
-        "vocabulary-mismatch",
-        "user-intent"
-      ],
-      "sourceRefs": [
-        "incoming-retrieval-json/IRS-Midterm-fa.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "irs-midterm-158",
+      "id": "irs-midterm-150",
       "type": "single_choice",
       "topic": "OpenSearch",
       "subtopic": "Keyword fields and aggregations",
@@ -7330,100 +7005,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-159",
-      "type": "single_choice",
-      "topic": "Normalization",
-      "subtopic": "Case folding",
-      "difficulty": "easy",
-      "questionMd": "Case folding converts **Apple** to **apple** during normalization. According to the lecture, which specific example demonstrates that lowercasing is NOT always a safe operation?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "\"Apple\" (company name) vs. \"apple\" (the fruit) carry different meanings"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "\"NASA\" should always be lowercased to \"nasa\" for consistency"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "\"Running\" and \"running\" should always be treated as the same term"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "Accent folding should always be performed before case folding"
-        }
-      ],
-      "correctAnswer": [
-        "a"
-      ],
-      "explanationMd": "Lowercasing can remove meaningful distinctions. `Apple` as a company and `apple` as a fruit are different entities even though their lowercase forms match.",
-      "tags": [
-        "case-folding",
-        "normalization",
-        "named-entity",
-        "ambiguity"
-      ],
-      "sourceRefs": [
-        "incoming-retrieval-json/IRS-Midterm-fa.json",
-        "incoming-retrieval-json/IRS-Midterm-merve.json"
-      ],
-      "mergedFromCount": 2,
-      "needs_review": true
-    },
-    {
-      "id": "irs-midterm-160",
-      "type": "single_choice",
-      "topic": "Vector Space Model",
-      "subtopic": "SMART notation",
-      "difficulty": "medium",
-      "questionMd": "According to SMART notation, which formula defines the logarithmic TF variant (symbol `l`) for a term with a non-zero count?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "`1 + log(tf)`"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "`tf / (1 + log(tf))`"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "`0.5 + 0.5 * tf`"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "`log(tf) - 1`"
-        }
-      ],
-      "correctAnswer": [
-        "a"
-      ],
-      "explanationMd": "In SMART notation, the logarithmic TF variant `l` is defined as `1 + log(tf)` for non-zero term frequency.",
-      "tags": [
-        "vector",
-        "space",
-        "model",
-        "smart",
-        "notation"
-      ],
-      "sourceRefs": [
-        "incoming-retrieval-json/IRS-Midterm-infomid.json",
-        "incoming-retrieval-json/IRS-Midterm-merve.json"
-      ],
-      "mergedFromCount": 2,
-      "needs_review": true
-    },
-    {
-      "id": "irs-midterm-161",
+      "id": "irs-midterm-151",
       "type": "single_choice",
       "topic": "Evaluation",
       "subtopic": "R-Precision",
@@ -7467,7 +7049,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-162",
+      "id": "irs-midterm-152",
       "type": "single_choice",
       "topic": "OpenSearch",
       "subtopic": "Mappings and aggregations",
@@ -7511,7 +7093,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-163",
+      "id": "irs-midterm-153",
       "type": "single_choice",
       "topic": "Evaluation",
       "subtopic": "DCG",
@@ -7555,7 +7137,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-164",
+      "id": "irs-midterm-154",
       "type": "single_choice",
       "topic": "Evaluation",
       "subtopic": "TREC qrels",
@@ -7600,7 +7182,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-165",
+      "id": "irs-midterm-155",
       "type": "single_choice",
       "topic": "Evaluation",
       "subtopic": "Precision-recall tradeoff",
@@ -7645,7 +7227,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-166",
+      "id": "irs-midterm-156",
       "type": "single_choice",
       "topic": "Vector Space Model",
       "subtopic": "IDF",
@@ -7676,7 +7258,7 @@
       "correctAnswer": [
         "c"
       ],
-      "explanationMd": "`N/df = 1000/50 = 20`, so the IDF is `log(20)`, approximately 3.0 with natural log.",
+      "explanationMd": "`N / df(t) = 1000 / 50 = 20`, so the IDF is `log(20)`, approximately `3.0` with natural logarithm.",
       "tags": [
         "vector",
         "space",
@@ -7684,13 +7266,15 @@
         "idf"
       ],
       "sourceRefs": [
-        "incoming-retrieval-json/IRS-Midterm-infomid.json"
+        "incoming-retrieval-json/IRS-Midterm-infomid.json",
+        "incoming-retrieval-json/IRS-Midterm-merve.json",
+        "incoming-retrieval-json/IRS-Midterm-ibo.json"
       ],
-      "mergedFromCount": 1,
+      "mergedFromCount": 3,
       "needs_review": false
     },
     {
-      "id": "irs-midterm-167",
+      "id": "irs-midterm-157",
       "type": "single_choice",
       "topic": "Boolean Retrieval",
       "subtopic": "Postings merge",
@@ -7735,7 +7319,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-168",
+      "id": "irs-midterm-158",
       "type": "single_choice",
       "topic": "Evaluation",
       "subtopic": "Average Precision",
@@ -7779,7 +7363,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-169",
+      "id": "irs-midterm-159",
       "type": "single_choice",
       "topic": "Evaluation",
       "subtopic": "TREC pooling",
@@ -7823,7 +7407,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-170",
+      "id": "irs-midterm-160",
       "type": "single_choice",
       "topic": "OpenSearch",
       "subtopic": "Bool query",
@@ -7868,7 +7452,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-171",
+      "id": "irs-midterm-161",
       "type": "single_choice",
       "topic": "Boolean Retrieval",
       "subtopic": "Inverted index",
@@ -7913,7 +7497,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-172",
+      "id": "irs-midterm-162",
       "type": "single_choice",
       "topic": "Boolean Retrieval",
       "subtopic": "AND merge",
@@ -7957,7 +7541,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-173",
+      "id": "irs-midterm-163",
       "type": "single_choice",
       "topic": "Ranking Models",
       "subtopic": "BM25 defaults",
@@ -8003,7 +7587,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-174",
+      "id": "irs-midterm-164",
       "type": "single_choice",
       "topic": "Evaluation Methodology",
       "subtopic": "Offline Evaluation Limitations",
@@ -8048,7 +7632,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-175",
+      "id": "irs-midterm-165",
       "type": "single_choice",
       "topic": "Index Compression",
       "subtopic": "Gap Encoding and VB Encoding",
@@ -8095,7 +7679,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-176",
+      "id": "irs-midterm-166",
       "type": "single_choice",
       "topic": "Vector Space Model",
       "subtopic": "SMART notation",
@@ -8141,7 +7725,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-177",
+      "id": "irs-midterm-167",
       "type": "single_choice",
       "topic": "Boolean Retrieval",
       "subtopic": "NOT queries",
@@ -8186,53 +7770,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-178",
-      "type": "single_choice",
-      "topic": "Spelling Correction",
-      "subtopic": "K-gram index",
-      "difficulty": "easy",
-      "questionMd": "What is the correct set of 3-grams with boundary markers for the vocabulary term `query`?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "`$qu, que, uer, ery`"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "`qu$, que, uer, ery, ry$`"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "`$qu, que, uer, ery, ry$`"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "`$qu, que, uer, ry$`"
-        }
-      ],
-      "correctAnswer": [
-        "c"
-      ],
-      "explanationMd": "Adding boundary markers gives `$query$`; its 3-grams are `$qu`, `que`, `uer`, `ery`, and `ry$`.",
-      "tags": [
-        "spelling",
-        "correction",
-        "k",
-        "gram",
-        "index"
-      ],
-      "sourceRefs": [
-        "incoming-retrieval-json/IRS-Midterm-infomid.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "irs-midterm-179",
+      "id": "irs-midterm-168",
       "type": "single_choice",
       "topic": "Index Construction",
       "subtopic": "BSBI complexity",
@@ -8277,7 +7815,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-180",
+      "id": "irs-midterm-169",
       "type": "single_choice",
       "topic": "Vector Space Model",
       "subtopic": "IDF",
@@ -8322,52 +7860,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-181",
-      "type": "single_choice",
-      "topic": "Boolean Retrieval",
-      "subtopic": "Postings list",
-      "difficulty": "easy",
-      "questionMd": "Given the documents below, which postings list is correct for the term `cat`?\n\nDoc 0: `the cat sat on the mat`\n\nDoc 1: `the cat ate the rat`\n\nDoc 2: `the rat sat and ate`",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "Doc 0 and Doc 1"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "Doc 1 and Doc 2"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "Doc 0 and Doc 2"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "Doc 0, Doc 1, and Doc 2"
-        }
-      ],
-      "correctAnswer": [
-        "a"
-      ],
-      "explanationMd": "The term `cat` appears in Doc 0 and Doc 1 only.",
-      "tags": [
-        "boolean",
-        "retrieval",
-        "postings",
-        "list"
-      ],
-      "sourceRefs": [
-        "incoming-retrieval-json/IRS-Midterm-infomid.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "irs-midterm-182",
+      "id": "irs-midterm-170",
       "type": "single_choice",
       "topic": "Indexing",
       "subtopic": "Positional index",
@@ -8411,7 +7904,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-183",
+      "id": "irs-midterm-171",
       "type": "single_choice",
       "topic": "Index Compression",
       "subtopic": "Gap encoding",
@@ -8456,7 +7949,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-184",
+      "id": "irs-midterm-172",
       "type": "single_choice",
       "topic": "Text Processing",
       "subtopic": "Stopwords",
@@ -8500,7 +7993,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-185",
+      "id": "irs-midterm-173",
       "type": "single_choice",
       "topic": "OpenSearch",
       "subtopic": "Shard routing",
@@ -8544,7 +8037,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-186",
+      "id": "irs-midterm-174",
       "type": "single_choice",
       "topic": "Indexing",
       "subtopic": "Skip pointers",
@@ -8588,7 +8081,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-187",
+      "id": "irs-midterm-175",
       "type": "single_choice",
       "topic": "Boolean Retrieval",
       "subtopic": "OR merge",
@@ -8632,7 +8125,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-188",
+      "id": "irs-midterm-176",
       "type": "single_choice",
       "topic": "Evaluation",
       "subtopic": "Precision and recall",
@@ -8678,53 +8171,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-189",
-      "type": "single_choice",
-      "topic": "Corpus Statistics",
-      "subtopic": "Zipf's Law",
-      "difficulty": "easy",
-      "questionMd": "Zipf's Law states that the frequency of the `r`-th most common word is proportional to `1/r`. If the most frequent term in a corpus appears 10,000 times, approximately how often does the 100th most frequent term appear?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "Approximately 1,000 times"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "Approximately 10 times"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "Approximately 100 times"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "Approximately 5,000 times"
-        }
-      ],
-      "correctAnswer": [
-        "c"
-      ],
-      "explanationMd": "Zipf's Law gives `10000 / 100 = 100`.",
-      "tags": [
-        "corpus",
-        "statistics",
-        "zipf",
-        "s",
-        "law"
-      ],
-      "sourceRefs": [
-        "incoming-retrieval-json/IRS-Midterm-infomid.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "irs-midterm-190",
+      "id": "irs-midterm-177",
       "type": "single_choice",
       "topic": "Term Weighting",
       "subtopic": "Raw Term Frequency Bias",
@@ -8769,7 +8216,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-191",
+      "id": "irs-midterm-178",
       "type": "single_choice",
       "topic": "Ranking Models",
       "subtopic": "BM25 parameter b",
@@ -8815,7 +8262,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-192",
+      "id": "irs-midterm-179",
       "type": "single_choice",
       "topic": "Spelling Correction",
       "subtopic": "Levenshtein distance",
@@ -8860,7 +8307,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-193",
+      "id": "irs-midterm-180",
       "type": "single_choice",
       "topic": "Indexing",
       "subtopic": "Proximity queries",
@@ -8904,7 +8351,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-194",
+      "id": "irs-midterm-181",
       "type": "single_choice",
       "topic": "Evaluation",
       "subtopic": "Relevance judgments",
@@ -8949,7 +8396,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-195",
+      "id": "irs-midterm-182",
       "type": "single_choice",
       "topic": "Index Compression",
       "subtopic": "Gap encoding",
@@ -8994,7 +8441,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-196",
+      "id": "irs-midterm-183",
       "type": "single_choice",
       "topic": "OpenSearch",
       "subtopic": "Filter context",
@@ -9038,7 +8485,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-197",
+      "id": "irs-midterm-184",
       "type": "single_choice",
       "topic": "Evaluation",
       "subtopic": "Graded relevance",
@@ -9082,7 +8529,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-198",
+      "id": "irs-midterm-185",
       "type": "single_choice",
       "topic": "Evaluation",
       "subtopic": "Recall",
@@ -9125,7 +8572,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-199",
+      "id": "irs-midterm-186",
       "type": "single_choice",
       "topic": "Wildcard Search",
       "subtopic": "K-gram index",
@@ -9172,7 +8619,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-200",
+      "id": "irs-midterm-187",
       "type": "single_choice",
       "topic": "Text Processing",
       "subtopic": "Stemming",
@@ -9217,7 +8664,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-201",
+      "id": "irs-midterm-188",
       "type": "single_choice",
       "topic": "Vector Space Model",
       "subtopic": "SMART notation",
@@ -9263,7 +8710,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-202",
+      "id": "irs-midterm-189",
       "type": "single_choice",
       "topic": "Evaluation",
       "subtopic": "Test collections",
@@ -9307,7 +8754,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-203",
+      "id": "irs-midterm-190",
       "type": "single_choice",
       "topic": "Vector Space Model",
       "subtopic": "TF-IDF keyword extraction",
@@ -9353,7 +8800,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-204",
+      "id": "irs-midterm-191",
       "type": "single_choice",
       "topic": "Evaluation Metrics",
       "subtopic": "MAP and Recall-Oriented Evaluation",
@@ -9400,7 +8847,7 @@
       "needs_review": true
     },
     {
-      "id": "irs-midterm-205",
+      "id": "irs-midterm-192",
       "type": "single_choice",
       "topic": "Evaluation",
       "subtopic": "Bootstrap",
@@ -9443,7 +8890,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-206",
+      "id": "irs-midterm-193",
       "type": "single_choice",
       "topic": "Boolean Retrieval",
       "subtopic": "OR query",
@@ -9488,7 +8935,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-207",
+      "id": "irs-midterm-194",
       "type": "single_choice",
       "topic": "Evaluation",
       "subtopic": "MRR",
@@ -9531,7 +8978,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-208",
+      "id": "irs-midterm-195",
       "type": "single_choice",
       "topic": "Evaluation",
       "subtopic": "AUC-PR",
@@ -9575,95 +9022,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-209",
-      "type": "single_choice",
-      "topic": "Term Weighting",
-      "subtopic": "IDF",
-      "difficulty": "easy",
-      "questionMd": "A corpus contains 1000 documents, and the term **quasar** appears in exactly 50 of them. Applying the formula `IDF(t) = log(N / df(t))`, what is the IDF of **quasar**?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "log(1000) ≈ 6.9"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "log(50) ≈ 3.9"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "log(0.05) ≈ -3.0"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "log(20) ≈ 3.0"
-        }
-      ],
-      "correctAnswer": [
-        "d"
-      ],
-      "explanationMd": "`N / df(t) = 1000 / 50 = 20`, so the IDF is `log(20)`, approximately `3.0` with natural logarithm.",
-      "tags": [
-        "idf",
-        "tf-idf",
-        "document-frequency"
-      ],
-      "sourceRefs": [
-        "incoming-retrieval-json/IRS-Midterm-ibo.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "irs-midterm-210",
-      "type": "single_choice",
-      "topic": "Text Preprocessing",
-      "subtopic": "Tokens and Types",
-      "difficulty": "easy",
-      "questionMd": "The sentence **The cat sat on the mat** contains how many tokens and how many types respectively?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "6 tokens and 6 types"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "5 tokens and 5 types"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "5 tokens and 6 types"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "6 tokens and 5 types"
-        }
-      ],
-      "correctAnswer": [
-        "d"
-      ],
-      "explanationMd": "There are 6 word occurrences: The, cat, sat, on, the, mat. Treating **The/the** as the same normalized word gives 5 distinct types.",
-      "tags": [
-        "tokens",
-        "types",
-        "normalization"
-      ],
-      "sourceRefs": [
-        "incoming-retrieval-json/IRS-Midterm-ibo.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "irs-midterm-211",
+      "id": "irs-midterm-196",
       "type": "single_choice",
       "topic": "Relevance",
       "subtopic": "IR Relevance Judgments",
@@ -9707,7 +9066,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-212",
+      "id": "irs-midterm-197",
       "type": "single_choice",
       "topic": "Evaluation Metrics",
       "subtopic": "IDCG",
@@ -9752,227 +9111,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-213",
-      "type": "single_choice",
-      "topic": "Indexing Statistics",
-      "subtopic": "Document Frequency and Term Frequency",
-      "difficulty": "easy",
-      "questionMd": "A term has a document frequency (`DF`) of 500 and a term frequency (`TF`) of 12 in one particular document. What does the DF value of 500 indicate?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "The term appears in 500 different documents in the corpus"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "The term appears in documents with an average length of 500 tokens"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "The term appears 500 times across all documents combined"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "The term's postings list contains 500 position entries"
-        }
-      ],
-      "correctAnswer": [
-        "a"
-      ],
-      "explanationMd": "Document frequency counts how many documents contain the term at least once, not how many total occurrences the term has.",
-      "tags": [
-        "document-frequency",
-        "term-frequency",
-        "index-statistics"
-      ],
-      "sourceRefs": [
-        "incoming-retrieval-json/IRS-Midterm-ibo.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "irs-midterm-214",
-      "type": "single_choice",
-      "topic": "Term Weighting",
-      "subtopic": "SMART Notation",
-      "difficulty": "medium",
-      "questionMd": "According to SMART notation, which formula defines the logarithmic TF variant symbol `l` for a term with a non-zero count?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "tf / (1 + log(tf))"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "log(tf) - 1"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "1 + log(tf)"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "0.5 + 0.5 * tf"
-        }
-      ],
-      "correctAnswer": [
-        "c"
-      ],
-      "explanationMd": "In SMART notation, logarithmic term frequency weighting is commonly `1 + log(tf)` for non-zero term counts.",
-      "tags": [
-        "smart-notation",
-        "log-tf",
-        "term-weighting"
-      ],
-      "sourceRefs": [
-        "incoming-retrieval-json/IRS-Midterm-ibo.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "irs-midterm-215",
-      "type": "single_choice",
-      "topic": "Phrase Retrieval",
-      "subtopic": "Phrase Query vs Boolean AND",
-      "difficulty": "easy",
-      "questionMd": "Why does the phrase query **\"machine learning\"** return fewer results than the Boolean query `machine AND learning`?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "The phrase query additionally requires the two terms to appear consecutively in the correct order"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "The phrase query applies a Jaccard similarity threshold that the Boolean AND does not use"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "The phrase query restricts matching to document titles, whereas the Boolean AND searches the full text"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "The phrase query automatically removes stop words, reducing the candidate set before merging"
-        }
-      ],
-      "correctAnswer": [
-        "a"
-      ],
-      "explanationMd": "A phrase query is stricter than Boolean AND because it requires adjacency and order, not just the presence of both terms anywhere in the document.",
-      "tags": [
-        "phrase-query",
-        "boolean-and",
-        "positional-index"
-      ],
-      "sourceRefs": [
-        "incoming-retrieval-json/IRS-Midterm-ibo.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "irs-midterm-216",
-      "type": "single_choice",
-      "topic": "Retrieval Challenges",
-      "subtopic": "Vocabulary Mismatch",
-      "difficulty": "easy",
-      "questionMd": "A user searches **automobile fuel efficiency** but the most relevant document uses only the phrases **car gas mileage** and **vehicle consumption**. What problem does this scenario illustrate?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "The precision-recall tradeoff — retrieving more documents lowers average result quality"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "The stopword problem — common function words are masking the discriminating content terms"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "The vocabulary mismatch problem — lexical overlap is zero despite near-identical meaning"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "The corpus freshness problem — the index has not been updated to include recent terminology"
-        }
-      ],
-      "correctAnswer": [
-        "c"
-      ],
-      "explanationMd": "The query and document use different words for the same concept, so lexical matching may fail even though the meaning is similar.",
-      "tags": [
-        "vocabulary-mismatch",
-        "synonyms",
-        "semantic-search"
-      ],
-      "sourceRefs": [
-        "incoming-retrieval-json/IRS-Midterm-ibo.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "irs-midterm-217",
-      "type": "single_choice",
-      "topic": "Phrase Retrieval",
-      "subtopic": "Biword Index",
-      "difficulty": "medium",
-      "questionMd": "How does a biword index handle a three-word phrase query such as **\"machine learning model\"**?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "It decomposes the phrase into overlapping biwords and executes an AND query over machine_learning and learning_model"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "It falls back to a standard Boolean AND query over the three individual terms"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "It stores the entire three-word phrase as a single compound dictionary entry"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "It uses the positional index for any phrase longer than two words"
-        }
-      ],
-      "correctAnswer": [
-        "a"
-      ],
-      "explanationMd": "A biword index represents adjacent term pairs. A three-word phrase is converted into overlapping biwords, then both biword postings are intersected.",
-      "tags": [
-        "biword-index",
-        "phrase-query",
-        "and-query"
-      ],
-      "sourceRefs": [
-        "incoming-retrieval-json/IRS-Midterm-ibo.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "irs-midterm-218",
+      "id": "irs-midterm-198",
       "type": "single_choice",
       "topic": "IR Evaluation",
       "subtopic": "Average Precision Calculation",
@@ -10016,7 +9155,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-219",
+      "id": "irs-midterm-199",
       "type": "single_choice",
       "topic": "Boolean Retrieval",
       "subtopic": "NOT Operator",
@@ -10060,95 +9199,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-220",
-      "type": "single_choice",
-      "topic": "IR Evaluation",
-      "subtopic": "F1 Score",
-      "difficulty": "easy",
-      "questionMd": "Which formula correctly defines the F1 score in terms of Precision (P) and Recall (R)?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "2(P + R) / (P × R)"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "PR / (P + R)"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "(P + R) / 2"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "2PR / (P + R)"
-        }
-      ],
-      "correctAnswer": [
-        "d"
-      ],
-      "explanationMd": "F1 is the harmonic mean of precision and recall: `2PR / (P + R)`.",
-      "tags": [
-        "f1",
-        "precision",
-        "recall"
-      ],
-      "sourceRefs": [
-        "incoming-retrieval-json/IRS-Midterm-merve.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "irs-midterm-221",
-      "type": "single_choice",
-      "topic": "Term Weighting",
-      "subtopic": "IDF Calculation",
-      "difficulty": "easy",
-      "questionMd": "A corpus contains 1000 documents, and the term \"quasar\" appears in exactly 50 of them. Applying the formula `IDF(t) = log(N / df(t))`, what is the IDF of \"quasar\"?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "log(50) ≈ 3.9"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "log(1000) ≈ 6.9"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "log(20) ≈ 3.0"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "log(0.05) ≈ -3.0"
-        }
-      ],
-      "correctAnswer": [
-        "c"
-      ],
-      "explanationMd": "N/df = 1000/50 = 20, so the IDF is `log(20)`, approximately 3.0 using natural log.",
-      "tags": [
-        "idf",
-        "tf-idf",
-        "calculation"
-      ],
-      "sourceRefs": [
-        "incoming-retrieval-json/IRS-Midterm-merve.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "irs-midterm-222",
+      "id": "irs-midterm-200",
       "type": "single_choice",
       "topic": "Text Preprocessing",
       "subtopic": "Preprocessing Pipeline",
@@ -10193,51 +9244,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-midterm-223",
-      "type": "single_choice",
-      "topic": "Indexing",
-      "subtopic": "Postings List Merge",
-      "difficulty": "medium",
-      "questionMd": "The two-pointer AND merge achieves O(m + n) time complexity only because of one crucial property of postings lists. What is that property?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "Postings lists contain positional information for each document"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "Postings lists are stored in order of decreasing term frequency"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "Postings lists are stored in sorted order of document ID"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "Postings lists use variable-byte encoded gaps between document IDs"
-        }
-      ],
-      "correctAnswer": [
-        "c"
-      ],
-      "explanationMd": "Linear two-pointer intersection depends on both postings lists being sorted by document ID.",
-      "tags": [
-        "postings-list",
-        "and-merge",
-        "document-id"
-      ],
-      "sourceRefs": [
-        "incoming-retrieval-json/IRS-Midterm-merve.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "irs-midterm-224",
+      "id": "irs-midterm-201",
       "type": "single_choice",
       "topic": "Term Weighting",
       "subtopic": "TF-IDF Conditions",
@@ -10273,260 +9280,6 @@
         "tf-idf",
         "term-frequency",
         "idf"
-      ],
-      "sourceRefs": [
-        "incoming-retrieval-json/IRS-Midterm-merve.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "irs-midterm-225",
-      "type": "single_choice",
-      "topic": "Index Compression",
-      "subtopic": "Gap Encoding",
-      "difficulty": "medium",
-      "questionMd": "In gap (delta) encoding of a postings list, how is the very first entry in the list stored?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "As the absolute document ID, not as a gap"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "As a special sentinel value indicating the beginning of the list"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "As a gap of zero to signal the start of the list"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "As the difference between the first and second document IDs"
-        }
-      ],
-      "correctAnswer": [
-        "a"
-      ],
-      "explanationMd": "Since there is no previous document ID before the first posting, the first entry is stored directly as the absolute document ID.",
-      "tags": [
-        "gap-encoding",
-        "delta-encoding",
-        "postings-list"
-      ],
-      "sourceRefs": [
-        "incoming-retrieval-json/IRS-Midterm-merve.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "irs-midterm-226",
-      "type": "single_choice",
-      "topic": "Vocabulary and Semantics",
-      "subtopic": "Vocabulary Mismatch",
-      "difficulty": "medium",
-      "questionMd": "A user searches \"automobile fuel efficiency\" but the most relevant document uses only the phrases \"car gas mileage\" and \"vehicle consumption\". What problem does this scenario illustrate?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "The precision-recall tradeoff — retrieving more documents lowers average result quality"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "The vocabulary mismatch problem — lexical overlap is zero despite near-identical meaning"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "The corpus freshness problem — the index has not been updated to include recent terminology"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "The stopword problem — common function words are masking the discriminating content terms"
-        }
-      ],
-      "correctAnswer": [
-        "b"
-      ],
-      "explanationMd": "The query and document use different words for the same concept, so exact lexical matching can fail despite semantic similarity.",
-      "tags": [
-        "vocabulary-mismatch",
-        "synonyms",
-        "semantic-search"
-      ],
-      "sourceRefs": [
-        "incoming-retrieval-json/IRS-Midterm-merve.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "irs-midterm-227",
-      "type": "single_choice",
-      "topic": "Text Preprocessing",
-      "subtopic": "Stemming Failure Modes",
-      "difficulty": "easy",
-      "questionMd": "A student runs a Porter stemmer and observes that both \"universe\" and \"university\" produce the stem \"univers\". This is an example of which failure mode?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "Over-stemming, which reduces retrieval precision"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "Accent folding, which merges morphologically unrelated forms"
-        }
-      ],
-      "correctAnswer": [
-        "a"
-      ],
-      "explanationMd": "Over-stemming merges terms that should remain distinct, which can increase false matches and reduce precision.",
-      "tags": [
-        "porter-stemmer",
-        "over-stemming",
-        "precision"
-      ],
-      "sourceRefs": [
-        "incoming-retrieval-json/IRS-Midterm-merve.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "irs-midterm-228",
-      "type": "single_choice",
-      "topic": "Corpus Statistics",
-      "subtopic": "Zipf's Law Calculation",
-      "difficulty": "easy",
-      "questionMd": "Zipf's Law states that the frequency of the r-th most common word is proportional to 1/r. If the most frequent term in a corpus appears 10,000 times, approximately how often does the 100th most frequent term appear?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "Approximately 10 times"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "Approximately 1,000 times"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "Approximately 100 times"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "Approximately 5,000 times"
-        }
-      ],
-      "correctAnswer": [
-        "c"
-      ],
-      "explanationMd": "Using frequency ≈ 10000 / r, the 100th term appears about 10000 / 100 = 100 times.",
-      "tags": [
-        "zipf-law",
-        "rank-frequency",
-        "calculation"
-      ],
-      "sourceRefs": [
-        "incoming-retrieval-json/IRS-Midterm-merve.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "irs-midterm-229",
-      "type": "single_choice",
-      "topic": "IR Evaluation",
-      "subtopic": "Statistical Significance",
-      "difficulty": "medium",
-      "questionMd": "System A has MAP = 0.42 and System B has MAP = 0.43. A Wilcoxon signed-rank test yields p = 0.21. What is the correct conclusion?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "System A is preferred because p > 0.05 confirms its stability across queries"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "The difference is not statistically significant"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "The test is invalid because the MAP difference is smaller than the p-value"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "System B is statistically and practically superior because it has a higher MAP score"
-        }
-      ],
-      "correctAnswer": [
-        "b"
-      ],
-      "explanationMd": "With p = 0.21, the difference does not meet a typical 0.05 significance threshold, so the observed MAP difference is not statistically significant.",
-      "tags": [
-        "wilcoxon",
-        "p-value",
-        "map"
-      ],
-      "sourceRefs": [
-        "incoming-retrieval-json/IRS-Midterm-merve.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "irs-midterm-230",
-      "type": "single_choice",
-      "topic": "IR Evaluation",
-      "subtopic": "DCG Calculation",
-      "difficulty": "medium",
-      "questionMd": "A ranked list has graded relevance scores `[3, 1, 0, 2, 1]` at ranks 1 through 5. What is the approximate DCG@5?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "7.00, computed by summing the raw relevance grades 3+1+0+2+1"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "2.50, computed as the arithmetic mean of the five relevance grades"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "3.00, because only the first rank contributes and its grade is 3"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "4.879, computed as 3/1.000 + 1/1.585 + 0/2.000 + 2/2.322 + 1/2.585"
-        }
-      ],
-      "correctAnswer": [
-        "d"
-      ],
-      "explanationMd": "DCG discounts relevance by log2(rank+1): 3/1 + 1/log2(3) + 0/log2(4) + 2/log2(5) + 1/log2(6) ≈ 4.879.",
-      "tags": [
-        "dcg",
-        "graded-relevance",
-        "calculation"
       ],
       "sourceRefs": [
         "incoming-retrieval-json/IRS-Midterm-merve.json"

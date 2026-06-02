@@ -336,9 +336,10 @@
         "string-manipulation"
       ],
       "sourceRefs": [
-        "incoming-retrieval-json/Q3-v2.json"
+        "incoming-retrieval-json/Q3-v2.json",
+        "incoming-retrieval-json/Q3.json"
       ],
-      "mergedFromCount": 1,
+      "mergedFromCount": 2,
       "needs_review": false
     },
     {
@@ -1097,9 +1098,10 @@
         "levenshtein"
       ],
       "sourceRefs": [
-        "incoming-retrieval-json/Q3-v2.json"
+        "incoming-retrieval-json/Q3-v2.json",
+        "incoming-retrieval-json/Q3.json"
       ],
-      "mergedFromCount": 1,
+      "mergedFromCount": 2,
       "needs_review": false
     },
     {
@@ -1548,50 +1550,6 @@
     {
       "id": "irs-q3-035",
       "type": "single_choice",
-      "topic": "Wildcard Queries",
-      "subtopic": "k-gram Calculation",
-      "difficulty": "hard",
-      "questionMd": "What is the correct set of 3-grams (with boundary markers) for the vocabulary term \"query\"?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "($qu, que, uer, ery)"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "($qu, que, uer, ery, ry$)"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "($qu, que, uer, ry$)"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "(qu, que, uer, ery, ry)"
-        }
-      ],
-      "correctAnswer": [
-        "b"
-      ],
-      "explanationMd": "First, append boundary markers: `$query$`. Then extract sliding sequences of 3 characters: `$qu`, `que`, `uer`, `ery`, `ry$`.",
-      "tags": [
-        "k-gram",
-        "wildcards",
-        "string-manipulation"
-      ],
-      "sourceRefs": [
-        "incoming-retrieval-json/Q3.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "irs-q3-036",
-      "type": "single_choice",
       "topic": "Query Optimization",
       "subtopic": "Skip Pointers",
       "difficulty": "easy",
@@ -1634,7 +1592,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-q3-037",
+      "id": "irs-q3-036",
       "type": "single_choice",
       "topic": "Wildcard Queries",
       "subtopic": "k-gram Index",
@@ -1678,7 +1636,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-q3-038",
+      "id": "irs-q3-037",
       "type": "single_choice",
       "topic": "Retrieval Models",
       "subtopic": "Boolean Limitations",
@@ -1722,7 +1680,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-q3-039",
+      "id": "irs-q3-038",
       "type": "single_choice",
       "topic": "Phrase Queries",
       "subtopic": "Positional Relationships",
@@ -1765,7 +1723,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-q3-040",
+      "id": "irs-q3-039",
       "type": "single_choice",
       "topic": "Phrase Queries",
       "subtopic": "Proximity",
@@ -1809,51 +1767,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-q3-041",
-      "type": "single_choice",
-      "topic": "Spelling Correction",
-      "subtopic": "Edit Distance",
-      "difficulty": "easy",
-      "questionMd": "What is the Levenshtein edit distance between \"information\" and \"informtion\"?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "0"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "1"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "2"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "3"
-        }
-      ],
-      "correctAnswer": [
-        "b"
-      ],
-      "explanationMd": "The string \"informtion\" is missing the letter 'a'. It requires exactly one operation (an insertion of 'a') to transform it back to \"information\". Therefore, the edit distance is 1.",
-      "tags": [
-        "edit-distance",
-        "levenshtein",
-        "spelling-correction"
-      ],
-      "sourceRefs": [
-        "incoming-retrieval-json/Q3.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "irs-q3-042",
+      "id": "irs-q3-040",
       "type": "single_choice",
       "topic": "Wildcard Queries",
       "subtopic": "Post-Filtering",
@@ -1897,7 +1811,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-q3-043",
+      "id": "irs-q3-041",
       "type": "single_choice",
       "topic": "Query Optimization",
       "subtopic": "Skip Pointers",

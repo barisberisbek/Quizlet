@@ -1063,7 +1063,7 @@
       "correctAnswer": [
         "c"
       ],
-      "explanationMd": "A programming gotcha is not necessarily a bug in the language; it is behavior that is technically valid but surprising enough to cause mistakes.",
+      "explanationMd": "A programming gotcha is a valid language feature or behavior that is easy to use incorrectly because it produces surprising or counter-intuitive results.",
       "tags": [
         "programming",
         "gotcha",
@@ -1071,9 +1071,10 @@
         "concepts"
       ],
       "sourceRefs": [
-        "incoming-json/DWP-Quiz-5-v2.json"
+        "incoming-json/DWP-Quiz-5-v2.json",
+        "incoming-json/Dynamic Web Programming - Quiz 5.json"
       ],
-      "mergedFromCount": 1,
+      "mergedFromCount": 2,
       "needs_review": false
     },
     {
@@ -1665,51 +1666,6 @@
     },
     {
       "id": "q5-037",
-      "type": "single_choice",
-      "topic": "Programming Concepts",
-      "subtopic": "Gotchas",
-      "difficulty": "medium",
-      "questionMd": "According to the lecture's definition, what is a “gotcha” in programming?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "A valid construct that works as documented but is counter-intuitive and almost invites mistakes because it is easy to invoke and unexpected in its outcome"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "A security vulnerability in a programming language runtime that attackers can exploit to execute arbitrary code by supplying malformed input to a parsing function"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "A deprecated API function that still exists in the language specification for backward compatibility but produces incorrect results when called in strict mode environments"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "A deliberate bug intentionally left in a codebase by a developer to test whether automated testing pipelines are comprehensive enough to catch subtle logic errors"
-        }
-      ],
-      "correctAnswer": [
-        "a"
-      ],
-      "explanationMd": "A programming gotcha is a valid language feature or behavior that is easy to use incorrectly because it produces surprising or counter-intuitive results.",
-      "tags": [
-        "programming",
-        "gotcha",
-        "bugs",
-        "javascript"
-      ],
-      "sourceRefs": [
-        "incoming-json/Dynamic Web Programming - Quiz 5.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "q5-038",
       "type": "single_choice",
       "topic": "Web APIs",
       "subtopic": "URL Query Parameters",

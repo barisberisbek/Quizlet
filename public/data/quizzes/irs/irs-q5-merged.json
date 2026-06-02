@@ -151,9 +151,10 @@
         "user-behavior"
       ],
       "sourceRefs": [
-        "incoming-retrieval-json/Q5-v2.json"
+        "incoming-retrieval-json/Q5-v2.json",
+        "incoming-retrieval-json/Q5.json"
       ],
-      "mergedFromCount": 1,
+      "mergedFromCount": 2,
       "needs_review": false
     },
     {
@@ -1507,50 +1508,6 @@
       "id": "irs-q5-034",
       "type": "single_choice",
       "topic": "Evaluation Metrics",
-      "subtopic": "DCG",
-      "difficulty": "medium",
-      "questionMd": "In Discounted Cumulative Gain (DCG), relevance scores are divided by the log base-2 of `(rank + 1)`. What user behavior does this logarithmic discount model?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "Users read results in random order, so position should have no effect on contribution"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "Users prefer documents that are only marginally relevant at high ranks over highly relevant documents at low ranks"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "User attention diminishes at lower ranks, so a relevant document at rank 10 is worth less than one at rank 1"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "The discount penalizes systems that retrieve more than k documents, keeping result sets short"
-        }
-      ],
-      "correctAnswer": [
-        "c"
-      ],
-      "explanationMd": "The position discount function `1 / log2(rank+1)` simulates the reality that users are highly impatient. A user's probability of inspecting a document degrades logarithmically as they scroll further down the SERP (Search Engine Results Page).",
-      "tags": [
-        "evaluation",
-        "dcg",
-        "user-behavior"
-      ],
-      "sourceRefs": [
-        "incoming-retrieval-json/Q5.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "irs-q5-035",
-      "type": "single_choice",
-      "topic": "Evaluation Metrics",
       "subtopic": "NDCG Edge Cases",
       "difficulty": "hard",
       "questionMd": "What must a developer do in code when computing NDCG@k for a query that has no relevant documents in the collection?",
@@ -1592,7 +1549,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-q5-036",
+      "id": "irs-q5-035",
       "type": "single_choice",
       "topic": "Evaluation Campaigns",
       "subtopic": "Pooling Bias",
@@ -1637,7 +1594,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-q5-037",
+      "id": "irs-q5-036",
       "type": "single_choice",
       "topic": "Evaluation Metrics",
       "subtopic": "DCG Calculation",
@@ -1681,7 +1638,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-q5-038",
+      "id": "irs-q5-037",
       "type": "single_choice",
       "topic": "Evaluation Metrics",
       "subtopic": "NDCG",
@@ -1725,7 +1682,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-q5-039",
+      "id": "irs-q5-038",
       "type": "single_choice",
       "topic": "Evaluation Metrics",
       "subtopic": "Average Precision Formula",
@@ -1769,7 +1726,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-q5-040",
+      "id": "irs-q5-039",
       "type": "single_choice",
       "topic": "Significance Testing",
       "subtopic": "Interpretation",
@@ -1813,7 +1770,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-q5-041",
+      "id": "irs-q5-040",
       "type": "single_choice",
       "topic": "Evaluation Metrics",
       "subtopic": "AP Calculation",
@@ -1857,7 +1814,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-q5-042",
+      "id": "irs-q5-041",
       "type": "single_choice",
       "topic": "Evaluation Metrics",
       "subtopic": "DCG Formula",

@@ -824,16 +824,17 @@
       "correctAnswer": [
         "d"
       ],
-      "explanationMd": "Lowercasing can erase meaningful distinctions. **`Apple`** the company and **`apple`** the fruit are not the same concept, so case folding is not always semantically safe.",
+      "explanationMd": "Lowercasing conflates proper nouns and common nouns that differ only in capitalization. For example, 'Apple' (the company) and 'apple' (the fruit) are distinct entities, but case folding merges them into 'apple', potentially causing ambiguity in search results.",
       "tags": [
         "case folding",
         "normalization",
         "ambiguity"
       ],
       "sourceRefs": [
-        "incoming-retrieval-json/Q2-v2.json"
+        "incoming-retrieval-json/Q2-v2.json",
+        "incoming-retrieval-json/Q2.json"
       ],
-      "mergedFromCount": 1,
+      "mergedFromCount": 2,
       "needs_review": false
     },
     {
@@ -1554,50 +1555,6 @@
     {
       "id": "irs-q2-035",
       "type": "single_choice",
-      "topic": "Text Preprocessing",
-      "subtopic": "Case Folding Issues",
-      "difficulty": "easy",
-      "questionMd": "Case folding converts 'Apple' to 'apple' during normalization. According to the lecture, which specific example demonstrates that lowercasing is NOT always a safe operation?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "'Apple' (company name) vs. 'apple' (the fruit) carry different meanings."
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "Accent folding should always be performed before case folding."
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "'Running' and 'running' should always be treated as the same term."
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "'NASA' should always be lowercased to 'nasa' for consistency."
-        }
-      ],
-      "correctAnswer": [
-        "a"
-      ],
-      "explanationMd": "Lowercasing conflates proper nouns and common nouns that differ only in capitalization. For example, 'Apple' (the company) and 'apple' (the fruit) are distinct entities, but case folding merges them into 'apple', potentially causing ambiguity in search results.",
-      "tags": [
-        "case folding",
-        "normalization",
-        "ambiguity"
-      ],
-      "sourceRefs": [
-        "incoming-retrieval-json/Q2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "irs-q2-036",
-      "type": "single_choice",
       "topic": "Index Construction",
       "subtopic": "BSBI Time Complexity",
       "difficulty": "medium",
@@ -1640,7 +1597,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-q2-037",
+      "id": "irs-q2-036",
       "type": "single_choice",
       "topic": "Index Compression",
       "subtopic": "VB Continuation Bit",
@@ -1684,7 +1641,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-q2-038",
+      "id": "irs-q2-037",
       "type": "single_choice",
       "topic": "Index Compression",
       "subtopic": "Gap Encoding First Entry",
@@ -1728,7 +1685,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-q2-039",
+      "id": "irs-q2-038",
       "type": "single_choice",
       "topic": "Index Construction",
       "subtopic": "Biword Index Drawback",
@@ -1773,7 +1730,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-q2-040",
+      "id": "irs-q2-039",
       "type": "single_choice",
       "topic": "Stemming and Lemmatization",
       "subtopic": "Overstemming Example (astronaut)",

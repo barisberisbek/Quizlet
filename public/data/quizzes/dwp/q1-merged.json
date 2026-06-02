@@ -242,7 +242,7 @@
       "correctAnswer": [
         "a"
       ],
-      "explanationMd": "A LAN typically represents a local private network, while WAN connections link many networks over large geographic areas, enabling the broader Internet.",
+      "explanationMd": "Local Area Networks (LANs) typically make up private corporate Intranets, while Wide Area Networks (WANs) connect these smaller networks globally to form the Internet.",
       "tags": [
         "networking",
         "lan",
@@ -250,9 +250,10 @@
         "internet"
       ],
       "sourceRefs": [
-        "incomingv2-json/dwp_quiz1_merged.json"
+        "incomingv2-json/dwp_quiz1_merged.json",
+        "incoming-json/Q1-Berhudan.json"
       ],
-      "mergedFromCount": 1,
+      "mergedFromCount": 2,
       "needs_review": false
     },
     {
@@ -1191,50 +1192,6 @@
     {
       "id": "q1-027",
       "type": "single_choice",
-      "topic": "Networking",
-      "subtopic": "LAN vs WAN",
-      "difficulty": "medium",
-      "questionMd": "How do LANs and WANs relate to the concepts of Intranet and Internet, respectively?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "LANs form private internal networks (Intranets), while WANs connect these networks together to form the Internet"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "LANs are strictly used for the Internet, while WANs are strictly used for Intranets"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "LANs operate over wireless networks, while WANs operate over wired networks"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "Both LANs and WANs are entirely isolated from the global internet"
-        }
-      ],
-      "correctAnswer": [
-        "a"
-      ],
-      "explanationMd": "Local Area Networks (LANs) typically make up private corporate Intranets, while Wide Area Networks (WANs) connect these smaller networks globally to form the Internet.",
-      "tags": [
-        "networking",
-        "lan",
-        "wan"
-      ],
-      "sourceRefs": [
-        "incoming-json/Q1-Berhudan.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "q1-028",
-      "type": "single_choice",
       "topic": "HTTP",
       "subtopic": "History",
       "difficulty": "medium",
@@ -1277,7 +1234,7 @@
       "needs_review": false
     },
     {
-      "id": "q1-029",
+      "id": "q1-028",
       "type": "single_choice",
       "topic": "Web History",
       "subtopic": "ARPANET",
@@ -1320,7 +1277,7 @@
       "needs_review": false
     },
     {
-      "id": "q1-030",
+      "id": "q1-029",
       "type": "single_choice",
       "topic": "Web History",
       "subtopic": "Inventors",
@@ -1363,7 +1320,7 @@
       "needs_review": false
     },
     {
-      "id": "q1-031",
+      "id": "q1-030",
       "type": "single_choice",
       "topic": "CSS",
       "subtopic": "Purpose",
@@ -1407,7 +1364,7 @@
       "needs_review": false
     },
     {
-      "id": "q1-032",
+      "id": "q1-031",
       "type": "single_choice",
       "topic": "HTTP",
       "subtopic": "Methods",
@@ -1451,7 +1408,7 @@
       "needs_review": false
     },
     {
-      "id": "q1-033",
+      "id": "q1-032",
       "type": "single_choice",
       "topic": "Networking",
       "subtopic": "Ports",
@@ -1495,7 +1452,7 @@
       "needs_review": false
     },
     {
-      "id": "q1-034",
+      "id": "q1-033",
       "type": "single_choice",
       "topic": "URLs",
       "subtopic": "Structure",
@@ -1539,7 +1496,7 @@
       "needs_review": false
     },
     {
-      "id": "q1-035",
+      "id": "q1-034",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Classes",
@@ -1583,7 +1540,7 @@
       "needs_review": false
     },
     {
-      "id": "q1-036",
+      "id": "q1-035",
       "type": "single_choice",
       "topic": "HTML5",
       "subtopic": "Canvas",
@@ -1627,7 +1584,7 @@
       "needs_review": false
     },
     {
-      "id": "q1-037",
+      "id": "q1-036",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Memory Management",

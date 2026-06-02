@@ -340,9 +340,10 @@
         "math"
       ],
       "sourceRefs": [
-        "incoming-retrieval-json/Q4-v2.json"
+        "incoming-retrieval-json/Q4-v2.json",
+        "incoming-retrieval-json/Q4.json"
       ],
-      "mergedFromCount": 1,
+      "mergedFromCount": 2,
       "needs_review": false
     },
     {
@@ -1467,50 +1468,6 @@
     {
       "id": "irs-q4-033",
       "type": "single_choice",
-      "topic": "IDF",
-      "subtopic": "Probabilistic IDF Limitation",
-      "difficulty": "medium",
-      "questionMd": "Which of the following is a known limitation of the probabilistic IDF formula `log((N - df) / df)` as noted in the lecture?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "The formula cannot be computed when the document frequency is greater than 1"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "The formula doubles the IDF value of any term whose document frequency exceeds N/2"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "The formula always returns the same value regardless of the collection size N"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "The formula can produce negative values, requiring careful handling in implementations"
-        }
-      ],
-      "correctAnswer": [
-        "d"
-      ],
-      "explanationMd": "If `df > N/2`, then `(N - df) / df < 1`, and the logarithm becomes **negative**. That is a known practical issue with this probabilistic form of IDF and motivates smoothing or clipping strategies in implementations.",
-      "tags": [
-        "idf",
-        "probabilistic idf",
-        "log weighting"
-      ],
-      "sourceRefs": [
-        "incoming-retrieval-json/Q4.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "irs-q4-034",
-      "type": "single_choice",
       "topic": "Vector Space Model",
       "subtopic": "L2 Normalization",
       "difficulty": "easy",
@@ -1553,7 +1510,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-q4-035",
+      "id": "irs-q4-034",
       "type": "single_choice",
       "topic": "SMART Notation",
       "subtopic": "Augmented TF",
@@ -1597,7 +1554,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-q4-036",
+      "id": "irs-q4-035",
       "type": "single_choice",
       "topic": "BM25 and TF Weighting",
       "subtopic": "TF Saturation",
@@ -1641,7 +1598,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-q4-037",
+      "id": "irs-q4-036",
       "type": "single_choice",
       "topic": "BM25",
       "subtopic": "TF Saturation Function",
@@ -1685,7 +1642,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-q4-038",
+      "id": "irs-q4-037",
       "type": "single_choice",
       "topic": "Term Frequency",
       "subtopic": "Length Bias",
@@ -1729,7 +1686,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-q4-039",
+      "id": "irs-q4-038",
       "type": "single_choice",
       "topic": "IDF",
       "subtopic": "Standard Formula",
@@ -1773,7 +1730,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-q4-040",
+      "id": "irs-q4-039",
       "type": "single_choice",
       "topic": "Boolean Retrieval",
       "subtopic": "Motivation for Ranked Retrieval",
@@ -1817,7 +1774,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-q4-041",
+      "id": "irs-q4-040",
       "type": "single_choice",
       "topic": "Vector Space Model",
       "subtopic": "Cosine Formula",
@@ -1861,7 +1818,7 @@
       "needs_review": false
     },
     {
-      "id": "irs-q4-042",
+      "id": "irs-q4-041",
       "type": "single_choice",
       "topic": "BM25",
       "subtopic": "Length Normalization Example",

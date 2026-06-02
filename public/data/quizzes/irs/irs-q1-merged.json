@@ -743,9 +743,10 @@
         "tfidf"
       ],
       "sourceRefs": [
-        "incoming-retrieval-json/Q1-v2.json"
+        "incoming-retrieval-json/Q1-v2.json",
+        "incoming-retrieval-json/Q1.json"
       ],
-      "mergedFromCount": 1,
+      "mergedFromCount": 2,
       "needs_review": false
     },
     {
@@ -926,50 +927,6 @@
       ],
       "mergedFromCount": 2,
       "needs_review": true
-    },
-    {
-      "id": "irs-q1-021",
-      "type": "single_choice",
-      "topic": "Ranking and Scoring",
-      "subtopic": "Inverse Document Frequency",
-      "difficulty": "medium",
-      "questionMd": "A corpus contains 1000 documents, and the term \"quasar\" appears in exactly 50 of them. Applying the formula `IDF(t) = log(N / df(t))`, what is the IDF of \"quasar\"?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "log(1000) ≈ 6.9"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "log(20) ≈ 3.0"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "log(0.05) ≈ -3.0"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "log(50) ≈ 3.9"
-        }
-      ],
-      "correctAnswer": [
-        "b"
-      ],
-      "explanationMd": "Substitute into the formula: `N / df = 1000 / 50 = 20`. Therefore `IDF = log(20)`, which is approximately **3.0** when using the natural logarithm. The key step is computing the ratio `N / df`, not `df / N`.",
-      "tags": [
-        "idf",
-        "logarithm",
-        "tf-idf"
-      ],
-      "sourceRefs": [
-        "incoming-retrieval-json/Q1.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
     }
   ]
 }

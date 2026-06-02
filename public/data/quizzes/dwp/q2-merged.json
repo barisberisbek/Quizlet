@@ -1607,15 +1607,16 @@
       "correctAnswer": [
         "a"
       ],
-      "explanationMd": "The lecture treats `fetch()` as the single core function of the Fetch API.",
+      "explanationMd": "The core of the Fetch API relies on a single global function: `fetch()`. The rest of the API consists of objects like `Response`, `Request`, and `Headers`.",
       "tags": [
         "fetch",
         "api"
       ],
       "sourceRefs": [
-        "incomingv2-json/dwp_quiz2_merged.json"
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Q2-Berhudan.json"
       ],
-      "mergedFromCount": 1,
+      "mergedFromCount": 2,
       "needs_review": false
     },
     {
@@ -2322,9 +2323,10 @@
         "arrays"
       ],
       "sourceRefs": [
-        "incomingv2-json/dwp_quiz2_merged.json"
+        "incomingv2-json/dwp_quiz2_merged.json",
+        "incoming-json/Dynamic Web Programming - Quiz 2.json"
       ],
-      "mergedFromCount": 1,
+      "mergedFromCount": 2,
       "needs_review": false
     },
     {
@@ -2682,46 +2684,6 @@
     {
       "id": "q2-061",
       "type": "single_choice",
-      "topic": "JSON",
-      "subtopic": "Data Access",
-      "difficulty": "medium",
-      "questionMd": "Given the JSON object `{ \"albums\": [ { \"name\": \"Daydream\", \"year\": 1995 } ] }` parsed into a variable called `data`, how would you access the year of the first album?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "data[\"year\"][\"albums\"][0]"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "data[0].albums.year"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "data.albums[0].year"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "data.albums.year[0]"
-        }
-      ],
-      "correctAnswer": [
-        "c"
-      ],
-      "explanationMd": "No explanation provided.",
-      "tags": [],
-      "sourceRefs": [
-        "incoming-json/Dynamic Web Programming - Quiz 2.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "q2-062",
-      "type": "single_choice",
       "topic": "Fetch API",
       "subtopic": "Response Handling",
       "difficulty": "easy",
@@ -2764,7 +2726,7 @@
       "needs_review": false
     },
     {
-      "id": "q2-063",
+      "id": "q2-062",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Variables",
@@ -2808,7 +2770,7 @@
       "needs_review": false
     },
     {
-      "id": "q2-064",
+      "id": "q2-063",
       "type": "single_choice",
       "topic": "Networking",
       "subtopic": "Protocols",
@@ -2852,7 +2814,7 @@
       "needs_review": false
     },
     {
-      "id": "q2-065",
+      "id": "q2-064",
       "type": "single_choice",
       "topic": "Architecture",
       "subtopic": "Dependencies",
@@ -2896,7 +2858,7 @@
       "needs_review": false
     },
     {
-      "id": "q2-066",
+      "id": "q2-065",
       "type": "single_choice",
       "topic": "Promises",
       "subtopic": "States",
@@ -2939,7 +2901,7 @@
       "needs_review": false
     },
     {
-      "id": "q2-067",
+      "id": "q2-066",
       "type": "single_choice",
       "topic": "Node.js",
       "subtopic": "Core Modules",
@@ -2983,50 +2945,7 @@
       "needs_review": false
     },
     {
-      "id": "q2-068",
-      "type": "single_choice",
-      "topic": "Fetch API",
-      "subtopic": "Structure",
-      "difficulty": "easy",
-      "questionMd": "According to the lecture, the `fetch` API is made up of how many functions?",
-      "options": [
-        {
-          "id": "a",
-          "label": "A",
-          "text": "One"
-        },
-        {
-          "id": "b",
-          "label": "B",
-          "text": "Two"
-        },
-        {
-          "id": "c",
-          "label": "C",
-          "text": "Three"
-        },
-        {
-          "id": "d",
-          "label": "D",
-          "text": "Many"
-        }
-      ],
-      "correctAnswer": [
-        "a"
-      ],
-      "explanationMd": "The core of the Fetch API relies on a single global function: `fetch()`. The rest of the API consists of objects like `Response`, `Request`, and `Headers`.",
-      "tags": [
-        "fetch",
-        "javascript"
-      ],
-      "sourceRefs": [
-        "incoming-json/Q2-Berhudan.json"
-      ],
-      "mergedFromCount": 1,
-      "needs_review": false
-    },
-    {
-      "id": "q2-069",
+      "id": "q2-067",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Classes",
@@ -3070,7 +2989,7 @@
       "needs_review": false
     },
     {
-      "id": "q2-070",
+      "id": "q2-068",
       "type": "single_choice",
       "topic": "Web APIs",
       "subtopic": "Fetch vs XHR",
@@ -3114,7 +3033,7 @@
       "needs_review": false
     },
     {
-      "id": "q2-071",
+      "id": "q2-069",
       "type": "single_choice",
       "topic": "HTTP",
       "subtopic": "Methods",
@@ -3158,7 +3077,7 @@
       "needs_review": false
     },
     {
-      "id": "q2-072",
+      "id": "q2-070",
       "type": "single_choice",
       "topic": "DOM Manipulation",
       "subtopic": "Images",
@@ -3201,7 +3120,7 @@
       "needs_review": false
     },
     {
-      "id": "q2-073",
+      "id": "q2-071",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Methods",
@@ -3245,7 +3164,7 @@
       "needs_review": false
     },
     {
-      "id": "q2-074",
+      "id": "q2-072",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Context (this)",
@@ -3290,7 +3209,7 @@
       "needs_review": false
     },
     {
-      "id": "q2-075",
+      "id": "q2-073",
       "type": "single_choice",
       "topic": "JavaScript",
       "subtopic": "Arrow Functions",
