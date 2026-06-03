@@ -382,7 +382,11 @@ export function QuizPage() {
             question={currentQuestion}
             index={effectiveIndex}
             quizId={activeQuiz.meta.id}
-            existingAnswer={session?.answers[currentQuestion.id]}
+            existingAnswer={
+              practiceMode === 'wrong_only'
+                ? undefined
+                : session?.answers[currentQuestion.id]
+            }
           />
 
           {/* Navigation */}
@@ -460,7 +464,11 @@ export function QuizPage() {
                 question={q}
                 index={qIdx}
                 quizId={activeQuiz.meta.id}
-                existingAnswer={session?.answers[q.id]}
+                existingAnswer={
+                  practiceMode === 'wrong_only'
+                    ? undefined
+                    : session?.answers[q.id]
+                }
               />
             );
           })}
