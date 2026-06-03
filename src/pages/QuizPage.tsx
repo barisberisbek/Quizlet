@@ -12,6 +12,8 @@ import {
   ChevronLeft,
   ChevronRight,
   CheckCircle2,
+  Eye,
+  EyeOff,
 } from 'lucide-react';
 import { useQuizStore } from '../store/quizStore';
 import { useBookmarkStore } from '../store/bookmarkStore';
@@ -19,7 +21,7 @@ import { QuestionCard } from '../components/question/QuestionCard';
 import { cn, shuffle, getDifficultyColor, getDifficultyLabel } from '../lib/utils';
 import { storage } from '../services/storage/localStorage';
 import type { PracticeMode, ViewMode } from '../types/quiz.types';
-import type { WrongAnswer } from '../types/progress.types';
+import type { UserAnswer, WrongAnswer } from '../types/progress.types';
 
 export function QuizPage() {
   const { quizId } = useParams<{ quizId: string }>();
@@ -47,6 +49,7 @@ export function QuizPage() {
   const [practiceMode, setPracticeMode] = useState<PracticeMode>('normal');
   const [shuffledIndices, setShuffledIndices] = useState<number[]>([]);
   const [confirmReset, setConfirmReset] = useState(false);
+  const [showAllAnswers, setShowAllAnswers] = useState(false);
 
   // viewMode değişince kaydet
   useEffect(() => {
@@ -186,6 +189,15 @@ export function QuizPage() {
   const effectiveIndex  = questionIndices[currentQuestionIndex] ?? 0;
   const currentQuestion = activeQuiz.questions[effectiveIndex];
 
+  // Tüm cevapları göster modunda doğru cevabı seçilmiş gibi döndür
+  const resolveExistingAnswer = (questionId: string, correctAnswer: string[]): UserAnswer | undefined => {
+    if (showAllAnswers) {
+      return { questionId, selectedOptionIds: correctAnswer, isCorrect: true, answeredAt: 0, revealed: true };
+    }
+    if (practiceMode === 'wrong_only') return undefined;
+    return session?.answers[questionId];
+  };
+
   const PRACTICE_MODES: { mode: PracticeMode; label: string; icon: typeof Shuffle }[] = [
     { mode: 'normal',          label: 'Normal',      icon: LayoutGrid },
     { mode: 'shuffled',        label: 'Karıştır',    icon: Shuffle },
@@ -272,6 +284,21 @@ export function QuizPage() {
                 </button>
               ))}
             </div>
+
+            {/* Tüm cevapları göster */}
+            <button
+              onClick={() => setShowAllAnswers((prev) => !prev)}
+              className={cn(
+                'flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium border transition-colors whitespace-nowrap',
+                showAllAnswers
+                  ? 'bg-amber-500/20 text-amber-300 border-amber-500/30'
+                  : 'bg-white/5 text-slate-500 border-white/5 hover:text-slate-300 hover:border-white/10'
+              )}
+              title={showAllAnswers ? 'Cevapları gizle' : 'Tüm doğru cevapları göster'}
+            >
+              {showAllAnswers ? <EyeOff size={12} /> : <Eye size={12} />}
+              {showAllAnswers ? 'Gizle' : 'Cevaplar'}
+            </button>
 
             {/* Reset */}
             <div className="flex items-center gap-1 ml-auto">
@@ -378,15 +405,11 @@ export function QuizPage() {
       {viewMode === 'card' && totalInView > 0 && currentQuestion && (
         <div className="space-y-4">
           <QuestionCard
-            key={`${currentQuestion.id}-${practiceMode}`}
+            key={`${currentQuestion.id}-${practiceMode}-${showAllAnswers}`}
             question={currentQuestion}
             index={effectiveIndex}
             quizId={activeQuiz.meta.id}
-            existingAnswer={
-              practiceMode === 'wrong_only'
-                ? undefined
-                : session?.answers[currentQuestion.id]
-            }
+            existingAnswer={resolveExistingAnswer(currentQuestion.id, currentQuestion.correctAnswer)}
           />
 
           {/* Navigation */}
@@ -460,15 +483,11 @@ export function QuizPage() {
             const q = activeQuiz.questions[qIdx];
             return (
               <QuestionCard
-                key={`${q.id}-${practiceMode}`}
+                key={`${q.id}-${practiceMode}-${showAllAnswers}`}
                 question={q}
                 index={qIdx}
                 quizId={activeQuiz.meta.id}
-                existingAnswer={
-                  practiceMode === 'wrong_only'
-                    ? undefined
-                    : session?.answers[q.id]
-                }
+                existingAnswer={resolveExistingAnswer(q.id, q.correctAnswer)}
               />
             );
           })}
