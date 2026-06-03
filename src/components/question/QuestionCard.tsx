@@ -71,12 +71,12 @@ export function QuestionCard({
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3, delay: 0.05 }}
-      className="glass-card overflow-hidden"
+      className="question-card overflow-hidden"
     >
       {/* Card header */}
-      <div className="flex items-center justify-between px-5 py-3 border-b border-white/5">
+      <div className="flex items-center justify-between px-5 py-3 border-b border-teal-700/20">
         <div className="flex items-center gap-2 flex-wrap">
-          <span className="flex items-center gap-1 text-xs font-mono text-slate-500">
+          <span className="flex items-center gap-1 text-xs font-mono text-teal-700/60">
             <Hash size={12} />
             {index + 1}
           </span>
@@ -86,9 +86,9 @@ export function QuestionCard({
           )}>
             {getDifficultyLabel(question.difficulty)}
           </span>
-          <span className="text-[10px] text-slate-500 font-medium">{question.topic}</span>
+          <span className="text-[10px] text-teal-800/70 font-medium">{question.topic}</span>
           {question.type === 'multiple_choice' && (
-            <span className="text-[10px] text-amber-400 font-semibold bg-amber-400/10 px-2 py-0.5 rounded-full border border-amber-400/20">
+            <span className="text-[10px] text-amber-700 font-semibold bg-amber-400/20 px-2 py-0.5 rounded-full border border-amber-500/30">
               Hepsini seç
             </span>
           )}
@@ -98,8 +98,8 @@ export function QuestionCard({
           className={cn(
             'p-1.5 rounded-lg transition-colors min-h-[36px] min-w-[36px] flex items-center justify-center',
             bookmarked
-              ? 'text-amber-400 hover:text-amber-300'
-              : 'text-slate-600 hover:text-slate-400'
+              ? 'text-amber-600 hover:text-amber-500'
+              : 'text-teal-700/50 hover:text-teal-700'
           )}
           aria-label={bookmarked ? 'Yer imini kaldır' : 'Yer imle'}
         >
@@ -109,7 +109,7 @@ export function QuestionCard({
 
       {/* Question body */}
       <div className="px-5 py-5 space-y-5">
-        <div className="markdown-content text-base font-medium text-slate-100 leading-relaxed">
+        <div className="markdown-content text-base font-medium text-slate-800 leading-relaxed">
           <QuestionMarkdown content={question.questionMd} />
         </div>
 
@@ -121,7 +121,7 @@ export function QuestionCard({
         )}
 
         {/* Answer options */}
-        <div className="space-y-2.5 pt-2 border-t border-white/5">
+        <div className="space-y-2.5 pt-2 border-t border-teal-700/15">
           {question.options.map((option) => (
             <AnswerOption
               key={option.id}
@@ -144,8 +144,8 @@ export function QuestionCard({
               className={cn(
                 'px-5 py-2.5 text-sm font-semibold rounded-xl transition-all duration-200 min-h-[44px]',
                 selectedOptions.length === 0
-                  ? 'bg-white/5 text-slate-600 cursor-not-allowed'
-                  : 'bg-indigo-500 text-white hover:bg-indigo-400 shadow-lg shadow-indigo-500/20'
+                  ? 'bg-teal-700/10 text-teal-700/40 cursor-not-allowed'
+                  : 'bg-indigo-600 text-white hover:bg-indigo-500 shadow-lg shadow-indigo-600/25'
               )}
             >
               Cevabı Kontrol Et
@@ -164,7 +164,7 @@ export function QuestionCard({
               {!showExplanation && (
                 <button
                   onClick={handleReveal}
-                  className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-400 hover:text-slate-200 bg-white/5 hover:bg-white/10 rounded-lg transition-colors min-h-[36px]"
+                  className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-teal-700 hover:text-teal-900 bg-teal-700/10 hover:bg-teal-700/20 rounded-lg transition-colors min-h-[36px]"
                 >
                   <ChevronDown size={14} />
                   Açıklamayı Gör

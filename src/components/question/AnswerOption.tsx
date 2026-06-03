@@ -25,51 +25,51 @@ export function AnswerOption({
   const getStateClasses = () => {
     if (!isAnswered) {
       return isSelected
-        ? 'border-indigo-400 bg-indigo-500/15 text-slate-100 shadow-[0_0_15px_rgba(99,102,241,0.15)] scale-[1.01]'
-        : 'border-white/[0.08] bg-white/[0.03] text-slate-300 hover:border-indigo-500/30 hover:bg-white/[0.06]';
+        ? 'border-indigo-500 bg-indigo-100/80 text-indigo-900 shadow-[0_0_12px_rgba(99,102,241,0.18)] scale-[1.01]'
+        : 'border-teal-700/25 bg-white/30 text-slate-700 hover:border-indigo-400/50 hover:bg-white/50';
     }
 
     // Answered state
     if (isCorrectOption && isSelected) {
-      return 'border-emerald-500 bg-emerald-500/15 text-emerald-300 shadow-[0_0_20px_rgba(16,185,129,0.15)] ring-1 ring-emerald-500/50 z-10 scale-[1.02]';
+      return 'border-emerald-600 bg-emerald-100/90 text-emerald-900 shadow-[0_0_16px_rgba(16,185,129,0.18)] ring-1 ring-emerald-500/50 z-10 scale-[1.02]';
     }
     if (isCorrectOption) {
-      return 'border-emerald-500/50 bg-emerald-500/10 text-emerald-400 font-medium z-10';
+      return 'border-emerald-500/60 bg-emerald-100/70 text-emerald-800 font-medium z-10';
     }
     if (isSelected && !isCorrectOption) {
-      return 'border-rose-500/60 bg-rose-500/15 text-rose-300 opacity-90 scale-[0.99]';
+      return 'border-rose-500/60 bg-rose-100/80 text-rose-800 opacity-90 scale-[0.99]';
     }
-    return 'border-white/5 bg-transparent text-slate-500 opacity-40';
+    return 'border-teal-700/10 bg-white/10 text-slate-500 opacity-40';
   };
 
   const renderIcon = () => {
     if (!isAnswered) {
       if (isMultiple) {
         return isSelected ? (
-          <CheckSquare size={16} className="text-indigo-400" />
+          <CheckSquare size={16} className="text-indigo-600" />
         ) : (
-          <Square size={16} className="text-slate-600" />
+          <Square size={16} className="text-teal-700/50" />
         );
       }
       return (
         <Circle
           size={16}
-          className={isSelected ? 'text-indigo-400' : 'text-slate-600'}
+          className={isSelected ? 'text-indigo-600' : 'text-teal-700/50'}
           fill={isSelected ? 'currentColor' : 'none'}
         />
       );
     }
 
     if (isCorrectOption) {
-      return <Check size={16} className="text-emerald-400" />;
+      return <Check size={16} className="text-emerald-600" />;
     }
     if (isSelected && !isCorrectOption) {
-      return <X size={16} className="text-rose-400" />;
+      return <X size={16} className="text-rose-600" />;
     }
     return isMultiple ? (
-      <Square size={16} className="text-slate-600" />
+      <Square size={16} className="text-teal-700/40" />
     ) : (
-      <Circle size={16} className="text-slate-600" />
+      <Circle size={16} className="text-teal-700/40" />
     );
   };
 
@@ -87,7 +87,7 @@ export function AnswerOption({
     >
       <span className="mt-0.5 shrink-0">{renderIcon()}</span>
       <span className="flex-1">
-        <span className="text-xs font-bold mr-2 opacity-50">{option.label}.</span>
+        <span className="text-xs font-bold mr-2 text-teal-800/60">{option.label}.</span>
         <span className="text-sm">{option.text}</span>
       </span>
     </motion.button>
