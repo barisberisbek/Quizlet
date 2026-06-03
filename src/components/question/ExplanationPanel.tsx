@@ -33,14 +33,14 @@ export function ExplanationPanel({
           transition={{ duration: 0.3, ease: 'easeInOut' }}
           className="overflow-hidden"
         >
-          <div className="mt-2 p-4 rounded-xl bg-indigo-500/5 border border-indigo-500/10">
+          <div className="mt-2 p-4 rounded-xl" style={{background:'rgb(255 255 255 / 0.55)', border:'1px solid #a8d0d5'}}>
             <div className="flex items-center gap-2 mb-3">
-              <Lightbulb size={14} className="text-indigo-400" />
-              <span className="text-xs font-semibold text-indigo-300">
+              <Lightbulb size={14} className="text-teal-700" />
+              <span className="text-xs font-semibold text-teal-800">
                 Correct Answer: {correctLabels}
               </span>
             </div>
-            <div className="markdown-content text-sm text-slate-300 leading-relaxed">
+            <div className="markdown-content text-sm text-slate-700 leading-relaxed">
               <ReactMarkdown
                 remarkPlugins={[remarkGfm]}
                 components={{

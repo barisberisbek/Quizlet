@@ -87,7 +87,7 @@ export function AnswerOption({
     >
       <span className="mt-0.5 shrink-0">{renderIcon()}</span>
       <span className="flex-1">
-        <span className="text-xs font-bold mr-2 text-teal-800/60">{option.label}.</span>
+        <span className="text-xs font-bold mr-2" style={{color:'#4a8a92'}}>{option.label}.</span>
         <span className="text-sm">{option.text}</span>
       </span>
     </motion.button>

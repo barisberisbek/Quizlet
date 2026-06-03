@@ -83,17 +83,17 @@ body {
   box-shadow: 0 0 20px oklch(0.40 0.10 250 / 0.1);
 }
 
-/* ── Question Card — light teal style ─────────────────────── */
+/* ── Question Card — #cce6ea teal style ───────────────────── */
 .question-card {
-  background: oklch(0.84 0.045 196);
-  border: 1px solid oklch(0.74 0.06 196);
+  background: #cce6ea;          /* HEX #cce6ea — HSL 188°,41.7%,85.9% */
+  border: 1px solid #a8d0d5;
   border-radius: 1rem;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .question-card:hover {
-  border-color: oklch(0.64 0.08 196);
-  box-shadow: 0 4px 24px oklch(0.64 0.08 196 / 0.20);
+  border-color: #85b8bf;
+  box-shadow: 0 4px 24px rgb(136 184 192 / 0.30);
 }
 
 .no-scrollbar {
@@ -134,8 +134,14 @@ body {
 
 /* Inside teal question cards, inline code needs dark styling */
 .question-card .markdown-content code {
-  background: oklch(0.72 0.06 196 / 0.35);
-  color: oklch(0.20 0.04 196);
+  background: rgb(0 80 90 / 0.12);
+  color: #1a4a50;
+}
+
+/* Explanation panel code inside teal card */
+.question-card .markdown-content pre {
+  background: rgb(0 60 70 / 0.10) !important;
+  border-color: #a8d0d5;
 }
 
 .markdown-content pre {
