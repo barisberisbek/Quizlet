@@ -7,6 +7,7 @@ import type { Question } from '../../types/quiz.types';
 import type { UserAnswer } from '../../types/progress.types';
 import { AnswerOption } from './AnswerOption';
 import { ExplanationPanel } from './ExplanationPanel';
+import { ExplanationModal } from './ExplanationModal';
 import { CodeBlock } from './CodeBlock';
 import { useQuizStore } from '../../store/quizStore';
 import { useBookmarkStore } from '../../store/bookmarkStore';
@@ -17,6 +18,8 @@ interface QuestionCardProps {
   index: number;
   quizId: string;
   existingAnswer?: UserAnswer;
+  autoExplanationPopup?: boolean;
+  onExplanationConfirmed?: () => void;
 }
 
 export function QuestionCard({
@@ -24,6 +27,8 @@ export function QuestionCard({
   index,
   quizId,
   existingAnswer,
+  autoExplanationPopup = false,
+  onExplanationConfirmed,
 }: QuestionCardProps) {
   const { answerQuestion, revealExplanation } = useQuizStore();
   const { isBookmarked, toggleBookmark } = useBookmarkStore();
@@ -34,6 +39,7 @@ export function QuestionCard({
   const [isAnswered, setIsAnswered]     = useState(!!existingAnswer);
   const [isCorrect, setIsCorrect]       = useState(existingAnswer?.isCorrect ?? false);
   const [showExplanation, setShowExplanation] = useState(existingAnswer?.revealed ?? false);
+  const [showModal, setShowModal]       = useState(false);
 
   const bookmarked = isBookmarked(question.id);
 
@@ -59,12 +65,22 @@ export function QuestionCard({
     setIsCorrect(correct);
     setIsAnswered(true);
     answerQuestion(question.id, selectedOptions, correct);
-  }, [selectedOptions, question, answerQuestion]);
+    if (autoExplanationPopup && question.explanationMd) {
+      setShowModal(true);
+    }
+  }, [selectedOptions, question, answerQuestion, autoExplanationPopup]);
 
   const handleReveal = useCallback(() => {
     setShowExplanation(true);
     revealExplanation(question.id);
   }, [question.id, revealExplanation]);
+
+  const handleModalClose = useCallback(() => {
+    setShowModal(false);
+    setShowExplanation(true);
+    revealExplanation(question.id);
+    onExplanationConfirmed?.();
+  }, [question.id, revealExplanation, onExplanationConfirmed]);
 
   return (
     <motion.div
@@ -182,6 +198,15 @@ export function QuestionCard({
           options={question.options}
         />
       </div>
+
+      <ExplanationModal
+        isOpen={showModal}
+        isCorrect={isCorrect}
+        correctAnswer={question.correctAnswer}
+        options={question.options}
+        explanationMd={question.explanationMd}
+        onClose={handleModalClose}
+      />
     </motion.div>
   );
 }

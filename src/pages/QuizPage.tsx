@@ -410,6 +410,16 @@ export function QuizPage() {
             index={effectiveIndex}
             quizId={activeQuiz.meta.id}
             existingAnswer={resolveExistingAnswer(currentQuestion.id, currentQuestion.correctAnswer)}
+            autoExplanationPopup={!!activeQuiz.meta.autoExplanationPopup}
+            onExplanationConfirmed={
+              activeQuiz.meta.autoExplanationPopup
+                ? () => {
+                    if (currentQuestionIndex < totalInView - 1) {
+                      setCurrentQuestion(currentQuestionIndex + 1);
+                    }
+                  }
+                : undefined
+            }
           />
 
           {/* Navigation */}

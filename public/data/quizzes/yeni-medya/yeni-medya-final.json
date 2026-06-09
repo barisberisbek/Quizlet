@@ -1,0 +1,4446 @@
+{
+  "meta": {
+    "id": "yeni-medya-final",
+    "title": "Yeni Medya — Final Hazırlık (100 Soru)",
+    "description": "Dijital medya, algoritmalar, sosyal medya psikolojisi, yapay zeka ve internet kültürü üzerine 100 soru.",
+    "source": "Yeni Medya Final Hazırlık",
+    "course": "Yeni Medya",
+    "topic": "Dijital Medya",
+    "topics": [
+      "Algoritmalar",
+      "Bilgi Kirliliği",
+      "Dijital Aktivizm",
+      "Dijital Eşitsizlik",
+      "Dijital İletişim",
+      "Dijital Kimlik",
+      "Dijital Okuyazarlık",
+      "Dijital Oyunlar",
+      "Dijital Riskler",
+      "Gözetim Kapitalizmi",
+      "Katılımcı Kültür",
+      "Mahremiyet",
+      "Medya Psikolojisi",
+      "Medya Tarihi",
+      "Medya Teorileri",
+      "Platform Ekonomisi",
+      "Platform Yönetimi",
+      "Siber Güvenlik",
+      "Siber Kültür",
+      "Sosyal Medya",
+      "Yapay Zeka",
+      "Yeni Medya"
+    ],
+    "questionCount": 100,
+    "difficulty": "medium",
+    "estimatedMinutes": 150,
+    "tags": [
+      "yeni-medya",
+      "final",
+      "dijital"
+    ],
+    "fileName": "yeni-medya/yeni-medya-final.json",
+    "autoExplanationPopup": true
+  },
+  "questions": [
+    {
+      "id": "ym-001",
+      "type": "single_choice",
+      "topic": "Dijital Riskler",
+      "difficulty": "medium",
+      "questionMd": "\"Beceri ve Risk Paradoksu\"na göre, bir gencin dijital becerileri arttıkça neden daha fazla riskle karşılaşma olasılığı da artar?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Dijital becerileri artan gençlerin siber güvenlik önlemlerini tamamen gereksiz görmeye başlaması"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "İnternet okuryazarlığı yüksek olan gençlerin çevrim içi çekinmeme etkisinden hiçbir şekilde etkilenmemesi"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Bu gençlerin internette daha aktif, görünür ve araştırmacı olmaları nedeniyle doğal olarak daha fazla riskli duruma da maruz kalmaları"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Dijital becerisi yüksek gençlerin yalnızca catfishing ve online grooming gibi manipülatif risklere ilgi duyması"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Ailelerin çocuklarının dijital becerilerine fazla güvenip tüm denetimi tamamen bırakması"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Beceri ve Risk Paradoksu, dijital beceri arttıkça riskin otomatik olarak azalmadığını; aksine gençlerin çevrim içi alanda daha aktif ve keşif odaklı hale gelmeleri nedeniyle daha fazla fırsatla birlikte daha fazla riskli karşılaşmaya da açık hale geldiklerini belirtir.\n\n---\n\n**Beceri-Risk Paradoksu**, dijital yetkinlik ile dijital risk arasındaki ilişkinin basit bir 'daha becerili = daha güvende' formülüne uymadığını gösterir. Becerili bireyler internette çok daha fazla alan keşfeder; dolayısıyla risk olasılıkları da doğal olarak artar.",
+      "tags": [
+        "dijital-riskler"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-002",
+      "type": "single_choice",
+      "topic": "Gözetim Kapitalizmi",
+      "difficulty": "medium",
+      "questionMd": "Akıllı cihazların biyometrik ve davranışsal verileri sürekli işlemesi, bireyin özgür iradesi üzerinde nasıl bir etki yaratmaktadır?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Algoritmaların verileri kullanarak birey adına \"en uygun\" kararı almaya başlamasıyla özgür iradeyi manipüle edip sınırlandırması"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Bireyin karşısına yalnızca ilgi alanlarına yönelik içerikler çıkararak bilgi kirliliğini tamamen ortadan kaldırması"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Bu cihazların yalnızca kullanıcı bilinçli olarak onay verdiğinde devreye girmesi nedeniyle bireyin hakimiyetini pekiştirmesi"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Gözetim mekanizmalarının yalnızca ticari markaların pazarlama stratejileriyle sınırlı kalması"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Kullanıcının dijital ayak izini şeffaf şekilde yönetmesine olanak tanıyarak mahremiyet ihlallerini otomatik engellemesi"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Dijital gözetim mekanizmaları ve algoritmalar, bireylerin nabız, ses tonu, arama geçmişi gibi verilerini kullanarak davranışlarını şekillendirir; bu durum bireyin kendi hayatı üzerindeki karar alma yetisini algoritmik bir manipülasyona teslim etmesine neden olur (Gözetim Kapitalizmi).\n\n---\n\n**Gözetim Kapitalizmi** kavramıyla anılan bu süreçte algoritmalar, biyometrik ve davranışsal verilerle bireyin tercihlerini ve kararlarını şekillendirir. Birey seçim yaptığını sanır; aslında önceden profillenen bir kullanıcı olarak yönlendirilmektedir.",
+      "tags": [
+        "gözetim-kapitalizmi"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-003",
+      "type": "single_choice",
+      "topic": "Algoritmalar",
+      "difficulty": "medium",
+      "questionMd": "Sosyal medya algoritmalarının (TikTok, Instagram vb.) içerik akışını belirlerken kullandığı temel mantık ve bunun toplumsal sonucu hakkında hangisi doğrudur?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Algoritmalar yalnızca kullanıcının eğitimine bakar; toplumsal düzeyde herkesin tamamen aynı içeriklerle karşılaşmasını sağlar"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Geleneksel medyadaki kapı tutuculuk mekanizması algoritmik yapılarla birebir aynı şekilde işler"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Kullanıcıların \"üre-tüketici\" haline gelmesi algoritmaların ticari kar odaklı yapısını tamamen ortadan kaldırmıştır"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Platformlar etkileşimi maksimize etmek için benzer içerikleri sürekli gösterir; bu durum filtre balonları ve kutuplaşmaya neden olabilir"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Algoritmik sistemler içeriklerin doğruluğunu denetledikten sonra viral hale getirdiği için dezenformasyonu tamamen engeller"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Platform kapitalizminin temel amacı kullanıcının süresini platformda tutmaktır; algoritma bu doğrultuda benzer içerikleri sunarak bireyi \"yankı odasına\" hapseder ve toplumsal kutuplaşmayı besler.\n\n---\n\n**Filtre Balonu** ve **Yankı Odası**, platform algoritmalarının etkileşimi artırmak amacıyla kullanıcıya sürekli benzer içerik göstermesinden doğar. Bu durum bireysel kutuplaşmayı besler ve toplumsal diyaloğu zayıflatır.",
+      "tags": [
+        "algoritmalar"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-004",
+      "type": "single_choice",
+      "topic": "Medya Teorileri",
+      "difficulty": "medium",
+      "questionMd": "Walter J. Ong'un \"Sözlülük ve Yazılılık\" çalışması bağlamında; dijital çağda internet, sosyal medya ve anlık mesajlaşma üzerinden kurulan etkileşimler hangi kavramla en doğru şekilde açıklanır?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Birincil Sözlülük (Primary Orality)"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Süper Gerçeklik (Super-reality)"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Lineer (Düz Çizgisel) Düşünme"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Hiper-Gerçeklik (Hyper-reality)"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "İkincil Sözlülük (Secondary Orality)"
+        }
+      ],
+      "correctAnswer": [
+        "e"
+      ],
+      "explanationMd": "Walter J. Ong'a göre \"ikincil sözlülük\", yazılı kültürün teknolojik altyapısından beslenen ancak tıpkı yazı öncesi dönemdeki gibi samimi, anlık ve katılım odaklı bir sözlü iletişim havasını yeniden üreten yeni bir etkileşim biçimidir.\n\n---\n\n**İkincil Sözlülük** (secondary orality), Walter J. Ong'un tanımıyla yazı kültürünün teknolojik altyapısından beslenen ama sözlü kültürün anlık, katılımcı ve topluluk odaklı niteliklerini dijital ortamda yeniden üreten iletişim biçimidir. Emojiler, sesli mesajlar ve anlık paylaşımlar buna tipik örnektir.",
+      "tags": [
+        "medya-teorileri"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-005",
+      "type": "single_choice",
+      "topic": "Yapay Zeka",
+      "difficulty": "medium",
+      "questionMd": "Deepfake teknolojisinin temelindeki GAN (Generative Adversarial Networks) yapısında \"Discriminator\" (Ayırt Edici) ağın birincil görevi nedir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Görüntüdeki yüz hatlarını veri setindeki başka bir yüzle otomatik olarak yer değiştirmek"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Üretilen içeriğin sahte mi yoksa gerçek mi olduğunu tespit etmeye çalışarak sistemi eğitmek"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Videonun kare hızını artırarak yapay zeka kaynaklı titremeleri ortadan kaldırmak"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Gerçek görüntülerden yola çıkarak mümkün olduğunca kusursuz sahte içerikler üretmek"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Eğitim veri setindeki görsel gürültüleri filtreleyerek kaynak videonun piksel yoğunluğunu optimize etmek"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "GAN mimarisinde Ayırt Edici (Discriminator) ağın birincil işlevi, sunulan verinin orijinal eğitim setine mi ait olduğunu yoksa Üretici (Generator) ağ tarafından mı üretildiğini sınıflandırmaktır. Bu çekişmeli öğrenme sürecinde hesaplanan hata payı, üretici ağa geri bildirim olarak iletilerek modelin eğitimini optimize eder.\n\n---\n\n**GAN** mimarisinde iki ağ yarışır: Üretici (Generator) sahte içerik üretir, Ayırt Edici (Discriminator) ise gerçeği sahteden ayırt etmeye çalışır. Bu çekişmeli öğrenme döngüsü modeli giderek daha ikna edici deepfake içerikler üretir hale getirir.",
+      "tags": [
+        "yapay-zeka"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-006",
+      "type": "single_choice",
+      "topic": "Bilgi Kirliliği",
+      "difficulty": "medium",
+      "questionMd": "Fact-checking süreçlerinde temel bir kavram olan \"Bağlamsal Suistimal\" (Contextual Abuse) nasıl tanımlanır?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Tamamen uydurulmuş haberlerin kasıtlı olarak yayılması"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Parodi ve mizah amacıyla üretilen içeriklerin gerçekmiş gibi sunulması"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Gerçek bilginin zarar vermek amacıyla bağlamından koparılarak kullanılması"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Yapay zeka ile üretilmiş sahte içeriklerin sosyal medyada yayılması"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "İstatistiksel verilerin seçici biçimde sunularak yanıltıcı izlenim oluşturulması"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Bağlamsal suistimal, gerçek bilginin zarar vermek amacıyla bağlamından koparılarak kullanılmasıdır. Diğer seçenekler ise yanlış bilginin farklı biçimsel türlerini (deepfake, parodi, dezenformasyon) tanımlar.\n\n---\n\n**Bağlamsal Suistimal**, gerçek bir bilginin içeriği değiştirilmeden ama bağlamından koparılarak başka bir anlam yüklenmesiyle yapılan yanıltıcı bir enformasyon türüdür. 'Gerçek ama bağlamından koparılmış' bilgi olarak özetlenebilir.",
+      "tags": [
+        "bilgi-kirliliği"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-007",
+      "type": "single_choice",
+      "topic": "Gözetim Kapitalizmi",
+      "difficulty": "medium",
+      "questionMd": "Shoshana Zuboff'un \"Gözetim Kapitalizmi\" teorisine göre, sosyal medyada ücretsiz içerik üreten ve tüketen bir kullanıcının konumu hangisiyle en doğru biçimde tanımlanır?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Platformların altyapısını tamamen ücretsiz kullanan ve yalnızca kişisel fayda sağlayan bağımsız dijital girişimci"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Ürettiği içerikler ve dijital davranışları \"davranışsal artık\" olarak toplanan ve platformlar tarafından ham maddeye dönüştürülen kaynak"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Geleneksel medya tekellerini yıkarak medyanın mülkiyet yapısını demokratikleştiren ortak"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Algoritmaların görünürlük kurallarını kendi lehine manipüle ederek platform kapitalizmini sekteye uğratan dijital aktivist"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Dijital uçurumu ortadan kaldırarak küresel ölçekte fırsat eşitliği yakalayan ve gözetim mekanizmalarından muaf tutulan tüketici"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Zuboff'un Gözetim Kapitalizmi kuramına göre kullanıcıların her türlü dijital pratiği (paylaşımlar, beğeniler, arama geçmişleri) birer \"davranışsal artık\" (behavioral surplus) olarak değerlendirilir. Kullanıcı içerik üreterek eğlendiğini düşünürken, platform bu verileri toplar, işler ve reklam verenlere satar.\n\n---\n\n**Gözetim Kapitalizmi** kuramında (Zuboff) kullanıcının dijital faaliyetleri 'davranışsal artık' adı verilen ham maddeye dönüşür. Platform bu veriyi reklam verenlere satar; kullanıcı parasız kullandığını sanırken verisiyle ödeme yapar.",
+      "tags": [
+        "gözetim-kapitalizmi"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-008",
+      "type": "single_choice",
+      "topic": "Medya Psikolojisi",
+      "difficulty": "medium",
+      "questionMd": "\"Bir kişinin yaptığı işe tamamen daldığı, zaman ve mekân algısını yitirdiği optimal deneyim durumu; sosyal medyada gezinirken de yaşanır.\" Bu ifadede hangi teoriden söz edilmektedir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Akış Teorisi (Flow Theory)"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Simülasyon Teorisi"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Ağ Toplumu Teorisi"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Kamusal Alan Teorisi"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Edimsel Koşullanma"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Bahsedilen optimal deneyim \"Akış Teorisi\" (Flow Theory) olarak bilinir. Sonsuz gezinme (scrolling), akış durumuna girmeyi kolaylaştırır; beyin yeni ve ilgi çekici içerikleri ardı ardına gördükçe bu sürece odaklanır ve kullanıcı zamanın nasıl geçtiğini anlamaz.\n\n---\n\n**Akış Teorisi** (Flow Theory, Csikszentmihalyi), kişinin yaptığı işe tamamen daldığı, zaman ve mekân algısını yitirdiği optimal deneyim durumunu tanımlar. Sosyal medyadaki sonsuz kaydırma (infinite scroll) bu zihin durumunu kolayca tetikler.",
+      "tags": [
+        "medya-psikolojisi"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-009",
+      "type": "single_choice",
+      "topic": "Bilgi Kirliliği",
+      "difficulty": "medium",
+      "questionMd": "Geçmiş yıllara ait bir doğal afet fotoğrafını, bugün yaşanmış gibi iyi niyetle paylaşan bir kullanıcının durumu \"Yanlış Bilgi Türleri\" sınıflandırmasına göre hangisidir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Dezenformasyon"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Hiperformasyon"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Siberformasyon"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Malenformasyon"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Mizenformasyon"
+        }
+      ],
+      "correctAnswer": [
+        "e"
+      ],
+      "explanationMd": "Kötü niyet olmadan, yanlışlıkla veya bilmeden yayılan yanlış bilgilere \"Mizenformasyon\" denir. Dezenformasyon kasıtlı aldatmayı, malenformasyon ise gerçek bir bilginin zarar verme amacıyla kullanılmasını ifade eder.\n\n---\n\nYanlış bilgi türleri arasında **Mizenformasyon** (misinformation), kötü niyet olmaksızın yanlışlıkla yayılan bilgiyi ifade eder. Eski bir felaket fotoğrafını güncel sanarak paylaşmak buna klasik örnektir.",
+      "tags": [
+        "bilgi-kirliliği"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-010",
+      "type": "single_choice",
+      "topic": "Siber Kültür",
+      "difficulty": "medium",
+      "questionMd": "Siber kültürün örneklerinden biri olarak hangisi değerlendirilebilir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Yalnızca basılı gazetelerin okunması ve okuyucular arasında hiçbir etkileşim olmaması"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Reddit topluluklarının kendine özgü kurallar oluşturması, Discord sunucularında grup normlarının gelişmesi ve TikTok trendlerinin hızla yayılması"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Televizyon yayınlarının izleyiciden hiçbir geri bildirim almadan tek yönlü devam etmesi"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Dijital platformlarda kullanıcıların hiçbir kimlik, sembol veya jargon kullanmaması"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "İnternetin yalnızca teknik altyapıdan ibaret olması ve kültürel davranışları etkilememesi"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Siber kültür, dijital ortamda oluşan topluluk kurallarını, sembolleri, jargonları, trendleri ve etkileşim biçimlerini kapsar. Reddit, Discord ve TikTok örnekleri internetin yalnızca teknik bir araç olmadığını; kültürel pratikler üreten bir alan olduğunu gösterir.\n\n---\n\n**Siber Kültür**, dijital ortamda kendiliğinden oluşan topluluk normlarını, jargonları, ritüelleri ve kimlik pratiklerini kapsar. Reddit kuralları, Discord sunucu normları ve TikTok trendleri internetin yalnızca teknik bir altyapı olmadığının kanıtıdır.",
+      "tags": [
+        "siber-kültür"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-011",
+      "type": "single_choice",
+      "topic": "Medya Teorileri",
+      "difficulty": "medium",
+      "questionMd": "Frankfurt Okulu düşünürleri Adorno ve Horkheimer tarafından ortaya atılan, kitle iletişim araçlarının kültürü standartlaştırılmış birer meta haline getirerek toplumu pasifleştirdiğini savunan kavram hangisidir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Gözetim Toplumu"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Kültür Endüstrisi"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Siber-Gerçeklik"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Kamusal Alan"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Küresel Köy"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Kültür Endüstrisi kavramı, popüler kültürün fabrikasyon yöntemlerle üretilmesini ve kitlelerin eleştirel düşünme yetisini elinden alarak manipüle edilmesini açıklar. Diğer seçenekler Foucault, Baudrillard, Habermas ve McLuhan'a ait kavramlardır.\n\n---\n\nAdorno ve Horkheimer'ın **Kültür Endüstrisi** kavramı, kitle iletişim araçlarının kültürü seri üretimle standartlaştırarak eleştirel düşünceyi körelttiğini savunur. Popüler kültür 'fabrikasyon' yöntemiyle üretilmekte ve kitleleri pasifleştirmektedir.",
+      "tags": [
+        "medya-teorileri"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-012",
+      "type": "single_choice",
+      "topic": "Medya Psikolojisi",
+      "difficulty": "medium",
+      "questionMd": "\"Problemli Medya Kullanımı Müdahale Planı\"nın bir adımı olmayan hangisidir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Motivasyonel Görüşme"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Yeniden Yapılandırma"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Klinik Tarama"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Davranışsal Sınırlama"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Sürdürülebilirlik"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Planın dört adımı şunlardır: Klinik Tarama (risk faktörlerinin belirlenmesi), Yeniden Yapılandırma (inançların değiştirilmesi), Davranışsal Sınırlama (dijital mimarinin kişiselleştirilmesi) ve Sürdürülebilirlik (yüz yüze ilişkilerin güçlendirilmesi). Motivasyonel Görüşme gerçek bir terapötik yöntem olmakla birlikte bu planın dışındadır.\n\n---\n\n**Problemli Medya Kullanımı Müdahale Planı**'nın dört adımı: Klinik Tarama, Yeniden Yapılandırma, Davranışsal Sınırlama ve Sürdürülebilirlik. Motivasyonel Görüşme geçerli bir terapötik yöntemdir ama bu planın dışındadır.",
+      "tags": [
+        "medya-psikolojisi"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-013",
+      "type": "single_choice",
+      "topic": "Yapay Zeka",
+      "difficulty": "medium",
+      "questionMd": "OpenAI Orion veya Google Gemini 2.0 gibi devasa sunucularda (bulutta) çalışan ve yüksek enerji tüketen büyük yapay zeka modelleri hangi isimle adlandırılmaktadır?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Nano AI"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Ajan Sürüleri"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Co-Pilot"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Macro AI"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Edge AI"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Bulutta çalışan ve devasa enerji tüketen büyük yapay zeka sistemlerine \"Macro AI\" denmektedir. Nano AI ve Edge AI cihazlarda çalışan küçük modelleri, Ajan Sürüleri birbiriyle iletişim kuran otonom botları, Co-Pilot ise insana yardımcı sistemleri temsil eder.\n\n---\n\n**Macro AI**, OpenAI GPT-5 veya Google Gemini 2.0 gibi bulut sunucularında çalışan, devasa enerji tüketen büyük dil modellerini tanımlar. Buna karşın **Nano/Edge AI**, cihaz üzerinde çalışan, internet gerektirmeyen küçük modellerdir.",
+      "tags": [
+        "yapay-zeka"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-014",
+      "type": "single_choice",
+      "topic": "Medya Teorileri",
+      "difficulty": "medium",
+      "questionMd": "Mark Deuze'nin \"medya yaşamı\" anlayışını en iyi açıklayan ifade hangisidir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "İnsanlar medyayı yalnızca belirli saatlerde, bilinçli olarak kullandıkları için medya gündelik yaşamdan ayrıdır"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Medya, yalnızca gazeteciler ve televizyon yayıncıları tarafından kullanılan profesyonel bir araçtır"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Medya hayatın dışındadır; bireyler medya olmadan da aynı sosyal ve kültürel pratikleri sürdürebilir"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Medya o kadar gündelik hayatın içine işlemiştir ki insanlar çoğu zaman medya kullandıklarının farkında bile olmadan onun içinde yaşarlar"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Yeni medya, yalnızca eğlence amacıyla kullanılan geçici bir teknolojidir"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Deuze'ye göre medya artık yalnızca ihtiyaç duyulduğunda kullanılan bir araç değil, gündelik hayatın doğal bir parçasıdır. Telefon alarmından sosyal medyaya kadar medya görünmez biçimde hayatın içine yerleşmiş; \"kullanılan\" bir şeyden \"içinde yaşanılan\" bir ortam haline gelmiştir.\n\n---\n\nMark Deuze'nin **'Medya Yaşamı'** anlayışına göre medya artık bir araç değil içinde yaşanılan bir ortamdır. Sabah alarm uygulamasından gece podcast'e kadar medya görünmez biçimde gündelik deneyimin dokusuna işlemiştir.",
+      "tags": [
+        "medya-teorileri"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-015",
+      "type": "single_choice",
+      "topic": "Yeni Medya",
+      "difficulty": "medium",
+      "questionMd": "Geleneksel medyanın \"tek yönlü\" yayıncılık anlayışından farklı olarak, internet ve yeni medyanın bireylere sunduğu en temel özellik hangisidir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Bilginin tamamen gizli kalması"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Etkileşimlilik (İnteraktivite)"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Ses ve görüntünün birbirinden ayrılması"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Bilgi otoritelerinin daha da güçlenmesi"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Kamuoyunun tamamen ortadan kaldırılması"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Geleneksel medyada izleyici sadece mesajı alan pasif konumdadır. \"Etkileşimlilik\" sayesinde kullanıcılar artık sadece içerik tüketmiyor; yorum yapıyor, paylaşıyor ve kendi içeriklerini üreterek sürecin aktif bir parçası haline geliyor.\n\n---\n\n**Etkileşimlilik** (interactivity), yeni medyanın geleneksel yayıncılıktan en temel farkıdır. Kullanıcılar artık yalnızca alıcı değil; yorum yapan, paylaşan, içerik üreten aktif bireylerdir.",
+      "tags": [
+        "yeni-medya"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-016",
+      "type": "single_choice",
+      "topic": "Dijital Eşitsizlik",
+      "difficulty": "medium",
+      "questionMd": "Yeni medya çalışmalarında \"dijital uçurum\" kavramı aşağıdakilerden hangisini ifade eder?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Sosyal medya platformları arasındaki rekabeti"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "İnternet ortamında kimlik gizleme durumunu"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Yapay zeka araçlarının yaygınlaşması ile yeni medyanın risk alanı olduğunu"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Dijital oyunların bireyler üzerindeki psikolojik etkisini"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Teknolojiye ve bilgiye erişim imkânlarındaki eşitsizliği"
+        }
+      ],
+      "correctAnswer": [
+        "e"
+      ],
+      "explanationMd": "Dijital uçurum, bireylerin veya toplumların internet, teknoloji ve dijital bilgiye erişim imkânlarındaki farklılıkları ifade eder. Bu durum eğitim, ekonomi ve sosyal yaşamda eşitsizliklere yol açabilir.\n\n---\n\n**Dijital Uçurum** (digital divide), bireylerin ve toplumların internet, teknoloji ve dijital becerilere erişimdeki eşitsizlikleri ifade eder. Yalnızca fiziksel erişim değil, kullanım kalitesi ve beceri düzeyi de bu uçurumun boyutlarıdır.",
+      "tags": [
+        "dijital-eşitsizlik"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-017",
+      "type": "single_choice",
+      "topic": "Algoritmalar",
+      "difficulty": "medium",
+      "questionMd": "Eli Pariser'in \"Filtre Balonu\" kavramının psikolojik temelini oluşturan, bireyin kendi inançlarını destekleyen bilgileri arama ve aksini kanıtlayan verileri görmezden gelme eğilimi hangi kavramla ifade edilir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Onaylama Önyargısı (Confirmation Bias)"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Sosyal Kolaylaştırma (Social Facilitation)"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Bilişsel Çelişki (Cognitive Dissonance)"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "İşlevsel Takılılık (Functional Fixedness)"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "İzlenim Yönetimi (Impression Management)"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Onaylama önyargısı (confirmation bias), insanın kendi fikrini haklı çıkaran şeylere odaklanmasıdır. Filtre balonları, yapay zeka algoritmaları aracılığıyla bu psikolojik zaafı besler ve kullanıcıya sadece görmek istediği içerikleri sunar.\n\n---\n\n**Onaylama Önyargısı** (confirmation bias), insanın kendi dünya görüşünü destekleyen bilgilere yönelip çelişenleri görmezden gelme eğilimidir. Filtre balonları bu psikolojik zaafı algoritmik olarak pekiştirir.",
+      "tags": [
+        "algoritmalar"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-018",
+      "type": "single_choice",
+      "topic": "Platform Ekonomisi",
+      "difficulty": "medium",
+      "questionMd": "Van Dijck'in \"verileştirme\" (datafication) kavramına göre sosyal medya platformlarının temel çalışma mantığını en iyi açıklayan ifade hangisidir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Platformlar yalnızca kullanıcıların arkadaşlarıyla iletişim kurmasını sağlayan tarafsız araçlardır"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Yeni medya ortamlarında kullanıcılar sadece içerik tüketir, platforma herhangi bir veri üretm"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Sosyal medya platformları kullanıcı verilerini yalnızca güvenlik amacıyla toplar ve ticari amaçla kullanmaz"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Kullanıcıların beğeni, tıklama, izleme süresi ve konum gibi davranışları ölçülerek ekonomik değere dönüştürülür ez"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Algoritmalar içerikleri rastgele gösterir; kullanıcı davranışlarından etkilenmez"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Verileştirme, kullanıcıların dijital ortamdaki her hareketinin veriye dönüştürülmesidir. Beğeniler, yorumlar, kaydırma süresi, konum, takip edilen hesaplar platformlar için değerli bilgilerdir. Kullanıcı platformu \"bedava\" kullanıyor gibi görünse de aslında verisiyle ödeme yapar.\n\n---\n\nJosé van Dijck'in **Verileştirme** (datafication) kavramı, her beğeninin, her kaydırmanın ve her konumun ekonomik değere dönüştürülebilir veriye çevrilmesini ifade eder. 'Bedava' platform aslında verisiyle ödeme yapan kullanıcı sayesinde ayakta durur.",
+      "tags": [
+        "platform-ekonomisi"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-019",
+      "type": "single_choice",
+      "topic": "Bilgi Kirliliği",
+      "difficulty": "medium",
+      "questionMd": "Hangisi \"malenformasyon\" kavramına en uygun örnektir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Tamamen uydurulmuş bir haberin insanları kandırmak amacıyla sosyal medyada yayılması"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Bir kişinin doğru sandığı ama aslında yanlış olan bir bilgiyi kasıtsız şekilde paylaşması"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Gerçek bir bilginin bir kişiye zarar vermek amacıyla bağlamından koparılarak paylaşılması"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Mizah amacıyla hazırlanmış parodi haberin bazı kullanıcılar tarafından gerçek sanılması"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Yapay zeka ile üretilmiş sahte bir videonun gerçekmiş gibi sunulması"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Malenformasyon, bilginin tamamen sahte olması değil; gerçek bir bilginin kötü niyetle, bağlamından koparılarak veya zarar verme amacıyla kullanılmasıdır. A şıkkı dezenformasyon, B şıkkı mizenformasyon, D şıkkı parodi, E şıkkı deepfake örneğidir.\n\n---\n\n**Malenformasyon**, bilginin sahte değil gerçek olması ama kötü niyetle bağlamından koparılarak zarar vermek amacıyla kullanılmasıdır. 'Gerçek bilgi, yanlış amaç' olarak özetlenebilir.",
+      "tags": [
+        "bilgi-kirliliği"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-020",
+      "type": "single_choice",
+      "topic": "Platform Ekonomisi",
+      "difficulty": "medium",
+      "questionMd": "Van Dijck'in çalışmalarında vurgulanan; insan deneyiminin ve nitel davranışların algoritmalar tarafından ölçülebilir, analiz edilebilir ve ticari değere sahip formlara dönüştürülmesi sürecini ifade eden kavram hangisidir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Verileştirme (Datafication)"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Bağlam Çökmesi (Context Collapse)"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "İzlenim Yönetimi (Impression Management)"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Yankı Fanusu (Echo Chamber)"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Gözetim Kapitalizmi (Surveillance Capitalism)"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Verileştirme (Datafication), insanların normalde görünmez olan davranışlarının ve sosyal süreçlerinin dijital platformlar aracılığıyla takip edilebilir verilere dönüştürülmesidir. Gözetim Kapitalizmi (E) ise bu verilerin nasıl ticari bir sömürü aracına dönüştüğünü açıklar.\n\n---\n\n**Verileştirme** (Datafication), Van Dijck'e göre insan davranışlarının ölçülebilir ve ticarileştirilebilir veri formlarına dönüştürülmesidir. Gözetim Kapitalizmi ise bu verinin nasıl sömürüldüğünü açıklar.",
+      "tags": [
+        "platform-ekonomisi"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-021",
+      "type": "single_choice",
+      "topic": "Yapay Zeka",
+      "difficulty": "medium",
+      "questionMd": "\"Sonsuz hafıza\" ve \"çok düşük işlemci gücü\" vaadiyle büyük dil modellerinin tıkanıklığını aşmak amacıyla geliştirilen yeni nesil alternatif yapay zeka mimarileri hangi seçenekte doğru verilmiştir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Token Mantığı – Transformer Mimarisi"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Mamba – Liquid Neural Networks (Sıvı Yapay Sinir Ağları)"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Replika – Üretken Yapay Zeka (GenAI)"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "NotebookLM – Agentic Workflow"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Deterministik Ağlar – Olasılıksal Modeller"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Eski modellerin uzun metinlerde yaşadığı yavaşlama ve yüksek enerji tüketimi sorunlarına çözüm olarak Mamba ve Liquid Neural Networks geliştirilmiştir. Bu sistemler, çok düşük işlemci gücüyle adeta sonsuz bir hafıza performansı sunabilmektedir.\n\n---\n\nTransformer mimarisinin uzun metin işlemedeki sorunlarına yanıt olarak geliştirilen **Mamba** ve **Liquid Neural Networks**, çok düşük işlem gücüyle verimli çalışmayı hedefler. Bu modeller 'sonsuz hafıza' vaadi taşıyan yeni nesil alternatiflerdir.",
+      "tags": [
+        "yapay-zeka"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-022",
+      "type": "single_choice",
+      "topic": "Yapay Zeka",
+      "difficulty": "medium",
+      "questionMd": "Bir haber ajansında farklı yapay zekaların sırasıyla taslak yazma, fact-checking, görsel üretme ve SEO işlemleri yapması gibi; belirli bir hedefe ulaşmak için birbirini denetleyen yapay zekaların kolektif çalışma yöntemine ne ad verilir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Sonsuz Hafıza Model Yönetimi"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Statik Veri Analizi"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Deterministik Kelime Tahmini"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Halüsinasyon Protokolü"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Ajan Sürüleri"
+        }
+      ],
+      "correctAnswer": [
+        "e"
+      ],
+      "explanationMd": "Klasik yapay zekalarla yalnızca tekil sohbetler edilirken, Agentic Workflow'da belirli bir amaca yönelik olarak birden fazla yapay zeka bir arada çalışır. Görev paylaşımı yaparak birbirini denetleyen bu yapay zeka gruplarına \"Ajan Sürüleri\" (Agent Swarms) adı verilir.\n\n---\n\n**Ajan Sürüleri** (Agent Swarms), belirli bir hedefe ulaşmak için birden fazla yapay zekanın iş bölümü yaparak birbirini denetlediği Agentic Workflow mantığını ifade eder. Haber pipeline'ı bunun somut örneğidir.",
+      "tags": [
+        "yapay-zeka"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-023",
+      "type": "single_choice",
+      "topic": "Medya Teorileri",
+      "difficulty": "medium",
+      "questionMd": "Elizabeth Noelle-Neumann'ın \"Suskunluk Sarmalı\" kuramı aşağıdakilerden hangisini açıklamaktadır?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Medyanın ekonomik yapısının baskı unsuru olarak kullanılmasını"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "İletişimde kanal çeşitliliğinin demokrasiyi güçlendirmesi"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Bireylerin çoğunluk görüşüne aykırı düşüncelerini ifade etmekten kaçınması ve sessiz kalmasını"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Kitle iletişim araçlarının tarihsel gelişiminin kamusal alanı genişletmesini"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Yüz yüze iletişimde beden dilinin öneminin ortadan kalkışını"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Suskunluk Sarmalı kuramına göre insanlar, toplumda azınlıkta kaldıklarını düşündüklerinde dışlanma korkusuyla fikirlerini açıkça ifade etmekten kaçınırlar. Bu durum, baskın görüşün daha güçlü görünmesine yol açar.\n\n---\n\nElizabeth Noelle-Neumann'ın **Suskunluk Sarmalı** kuramı, bireylerin azınlıkta kaldıklarını düşündüklerinde dışlanma korkusuyla fikirlerini ifade etmekten kaçındığını açıklar. Bu sessizleşme, baskın görüşü olduğundan daha güçlü gösterir.",
+      "tags": [
+        "medya-teorileri"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-024",
+      "type": "single_choice",
+      "topic": "Medya Teorileri",
+      "difficulty": "medium",
+      "questionMd": "McLuhan'ın teorik çerçevesinde, basılı metinlerin harfleri ve kelimeleri sayfa üzerinde sıralama biçiminin insan zihninde geliştirdiği ve modern bilimin, felsefenin temelini oluşturan düşünme biçimi hangisidir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Döngüsel ve ritmik düşünme"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Doğrusal (Lineer) ve düz çizgisel düşünme"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Bireysellikten uzak, kolektif ve işitsel düşünme"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Anlık, eş zamanlı ve mekânsız düşünme"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Simüle edilmiş hiper-gerçekçi düşünme"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Basılı metinler harfleri ve kelimeleri sayfa üzerinde düz bir çizgi halinde sıralar. McLuhan'a göre bu format insan düşüncesini doğrudan etkilemiş; olayları lineer, mantıklı ve sıralı algılamamıza yol açmıştır. Rönesans'tan sanayi devrimine kadar görülen rasyonel, sıralı ve nedensel düşünme biçimi matbaanın bu yapısından beslenir.\n\n---\n\nMcLuhan'a göre matbaanın harfleri düz bir çizgide sıralaması **Lineer Düşünce**'yi doğurmuştur. Neden-sonuç zinciri, sıralı mantık ve analitik akıl yürütme bu basılı kültürün zihinsel mirasıdır.",
+      "tags": [
+        "medya-teorileri"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-025",
+      "type": "single_choice",
+      "topic": "Dijital Kimlik",
+      "difficulty": "medium",
+      "questionMd": "Marc Prensky'ye göre dijital yerlilerin (Digital Natives) temel özelliklerinden biri hangisidir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Dijital teknolojilere sonradan uyum sağlamaları"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Teknolojiyi öğrenirken analog alışkanlıklarını sürdürmeleri"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Teknolojiyi sezgisel ve doğal bir şekilde kullanmaları"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Dijital araçları yalnızca profesyonel amaçlarla kullanmaları"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Dijital dünyaya karşı mesafeli olmaları"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Prensky'ye göre dijital yerliler, internet ve dijital teknolojilerle büyüyen nesildir. Teknolojiyi doğal ve sezgisel biçimde kullanırlar. Dijital göçmenlerden farklı olarak dijital dünyaya sonradan adapte olmazlar.\n\n---\n\nMarc Prensky'nin **Dijital Yerliler** (Digital Natives) kavramı, teknolojiyle büyüyen nesillerin onu sezgisel ve doğal biçimde kullandığını savunur. Dijital Göçmenler ise teknolojiyi sonradan öğrenenlerdir.",
+      "tags": [
+        "dijital-kimlik"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-026",
+      "type": "single_choice",
+      "topic": "Medya Teorileri",
+      "difficulty": "medium",
+      "questionMd": "Ong'un \"ikincil sözlülük\", Jenkins'in \"katılımcı kültür\" ve van Dijck'in \"platform mantığı\"nı aynı anda yansıtan örnek hangisidir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Basılı gazetelerin internet ortamına PDF olarak yüklenmesi"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Bir televizyon kanalının haberlerini YouTube'a yüklemesi ancak yorum özelliğini kapatması"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "TikTok kullanıcılarının bir olayı remix videolar ve yorumlarla yeniden üretmesi; platformun en fazla etkileşim alan içerikleri öne çıkarması"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Üniversite öğrencilerinin ders notlarını yalnızca WhatsApp grubunda paylaşması"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Bir radyonun hem FM yayını hem de internet sitesi üzerinden yayın akışı paylaşması"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "TikTok canlı yayınları ve remix kültürü Ong'un ikincil sözlülüğüne (dijital ama konuşma benzeri etkileşim); kullanıcı üretimi Jenkins'in katılımcı kültürüne; algoritmanın görünürlüğü belirlemesi ise van Dijck'in platform mantığına karşılık gelir. Diğer seçenekler yalnızca bir kavramı içerir.\n\n---\n\nOng'un ikincil sözlülüğü, Jenkins'in katılımcı kültürü ve Van Dijck'in platform mantığının aynı anda göründüğü en güçlü örnek **TikTok remix kültürü**dür: anlık sözlü etkileşim + kullanıcı üretimi + algoritmanın görünürlüğü bir arada.",
+      "tags": [
+        "medya-teorileri"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-027",
+      "type": "single_choice",
+      "topic": "Katılımcı Kültür",
+      "difficulty": "medium",
+      "questionMd": "\"Etkileşimsizlikten etkileşimselliğe geçiş\" durumunu en iyi açıklayan ifade hangisidir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Kullanıcının pasif tüketen konumdan içeriği üreten, değiştiren ve anında geri bildirim veren \"prosumer\" konumuna geçmesi"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Yeni medyanın daha yüksek çözünürlüklü görsel sunması"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Geleneksel medyanın devlet kontrolünde olması, yeni medyanın ise tamamen denetimsiz olması"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Yeni medya araçlarının daha taşınabilir ve erişilebilir olması"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Dijital araçların zamanla eğlence aracından toplumun her alanına yansıyan bir ihtiyaca dönüşmesi"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Bu soru Alvin Toffler'ın \"prosumer\" (üretici-tüketici) kavramına dayanır. Yeni medyanın en temel farkı, kullanıcının pasif alıcı konumundan içerik üreten, paylaşan ve geri bildirim veren aktif bir özneye dönüşmesidir.\n\n---\n\nAlvin Toffler'ın **Prosumer** (üretici-tüketici) kavramı, yeni medyada kullanıcının pasif alıcı konumundan çıkıp içerik üreten, paylaşan ve geri bildirim veren aktif bir özneye dönüştüğünü ifade eder.",
+      "tags": [
+        "katılımcı-kültür"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-028",
+      "type": "single_choice",
+      "topic": "Yapay Zeka",
+      "difficulty": "medium",
+      "questionMd": "\"Bulutta çalışan, nükleer enerji tüketen dev zekalar (Macro AI)\" ile \"telefonda çalışan, internet istemeyen, gizlilik odaklı cep Herkülesi (Nano/Edge AI)\" ayrımına uymayan eşleşme hangisidir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "OpenAI Orion (GPT-5) – Nano Banana"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Google Gemini 2.0 – Llama 4-Edge"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "OpenAI Orion (GPT-5) – Apple Intelligence Pro"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Google Gemini 2.0 – Claude 4 Opus"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Grok – Llama 4-Edge"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "D şıkkında yer alan hem Google Gemini 2.0 hem de Claude 4 Opus, bulut üzerinde çalışan devasa sistemlerdir. Bu nedenle \"Macro AI – Nano AI\" karşılaştırmasına uygun bir örnek oluşturmaz; her ikisi de Macro AI kategorisindedir.\n\n---\n\nHem Google Gemini 2.0 hem de Claude 4 Opus bulut tabanlı **Macro AI** sistemleridir; dolayısıyla 'Macro AI vs Nano AI' karşıtlığına uygun bir eşleşme oluşturmazlar. Nano AI, cihazda çalışan modelleri ifade eder.",
+      "tags": [
+        "yapay-zeka"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-029",
+      "type": "single_choice",
+      "topic": "Dijital Eşitsizlik",
+      "difficulty": "medium",
+      "questionMd": "Dijital eşitsizlik kavramını en iyi açıklayan ifade hangisidir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Herkesin aynı marka teknolojik cihaz kullanması"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Bireylerin dijital teknolojilere ve internete erişim, kullanım ve beceri açısından farklı imkânlara sahip olması"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "İnternet hızının tüm ülkelerde aynı olması"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Sosyal medyada eşit sayıda takipçiye sahip olunması"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Manuel fotoğraf makinelerinin yerine cep telefonlarının geçmesi"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Dijital eşitsizlik, bireylerin veya toplumların internet, bilgisayar, akıllı cihazlar ve dijital becerilere erişim açısından farklı fırsatlara sahip olması durumudur.\n\n---\n\n**Dijital Eşitsizlik**, bireylerin internet, bilgisayar ve dijital becerilere erişim açısından farklı fırsatlara sahip olmasıdır. Yalnızca internet bağlantısı değil; kullanım kalitesi ve beceri kapasitesi de bu eşitsizliğin boyutlarındandır.",
+      "tags": [
+        "dijital-eşitsizlik"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-030",
+      "type": "single_choice",
+      "topic": "Dijital İletişim",
+      "difficulty": "medium",
+      "questionMd": "Dijital çağda kurumların dış dünyayla kurduğu iletişimi şekillendiren \"beş yapısal sabit\" arasında yer almayan kavram hangisidir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Etkileşimlilik"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Şeffaflık Baskısı"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Editoryal Denetim"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Ölçülebilirlik"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Süreklilik"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Dijital çağda iletişimin beş yapısal sabiti; etkileşimlilik, şeffaflık baskısı, hız, süreklilik (7/24 kesintisiz akış) ve ölçülebilirliktir. \"Editoryal denetim\" ise geleneksel medyanın kuralları arasında yer almaktadır.\n\n---\n\nDijital iletişimin **beş yapısal sabiti**: etkileşimlilik, şeffaflık baskısı, hız, süreklilik (7/24) ve ölçülebilirlik. 'Editoryal denetim' ise geleneksel medyanın özelliğidir; dijital çağda yerini algoritmalara bırakmıştır.",
+      "tags": [
+        "dijital-i̇letişim"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-031",
+      "type": "single_choice",
+      "topic": "Platform Ekonomisi",
+      "difficulty": "medium",
+      "questionMd": "Yanis Varoufakis'in \"teknofeodalizm\" kavramına göre, Amazon gibi büyük dijital platformların geleneksel kapitalist şirketlerden temel farkı nedir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Daha fazla çalışan istihdam etmeleri"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Kâr yerine rant modeliyle işlemeleri; altyapının sahibi olarak kullanıcıdan komisyon almaları"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Devlet destekli üretim yapmaları"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Ürünlerini doğrudan üretip satmaları"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Kâr amacı gütmemeleri"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Varoufakis'e göre kapitalizm kâr üretimi üzerine kuruluyken, teknofeodalizm zeminin (platformun) sahibi olarak rant almaya dayanır. Amazon ürün üretmez; \"dijital derebeylik\" gibi kapıyı tuttuğu için komisyon alır.\n\n---\n\nYanis Varoufakis'in **Teknofeodalizm** kavramına göre Amazon, Google gibi platformlar ürün üretmez; 'dijital derebeylik' gibi altyapıyı kontrol ederek komisyon alır. Bu, kapitalizmin kâr mantığından rant mantığına geçişidir.",
+      "tags": [
+        "platform-ekonomisi"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-032",
+      "type": "single_choice",
+      "topic": "Bilgi Kirliliği",
+      "difficulty": "medium",
+      "questionMd": "Bir siyasetçinin söylemediği sözleri söylüyormuş gibi gösteren deepfake video seçimler öncesinde yayılmıştır. Bu durum hangi yanlış bilgi türüne ve alt kategorisine girer?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Kasıtsız Hata – Yanıltıcı İçerik"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Bağlamsal Suistimal – Sahte Bağlam"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Kasıtlı Aldatma – Uydurma İçerik"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Kasıtlı Aldatma – Manipüle Edilmiş"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Kasıtsız Hata – Parodi / Hiciv"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Video bilinçli yanıltma amacı taşıdığı için ana kategori \"Kasıtlı Aldatma\" (Dezenformasyon). Deepfake teknolojisiyle oluşturulduğu için alt kategori \"Manipüle Edilmiş\"tir. C şıkkındaki \"Uydurma İçerik\" ise tamamen sahte bir olay veya kişiyle ilgili üretilen içerik için kullanılır.\n\n---\n\nSiyasetçinin söylemediği şeyleri söylüyormuş gibi gösteren deepfake, **Kasıtlı Aldatma – Manipüle Edilmiş** içerik kategorisine girer. 'Uydurma İçerik' tamamen hayali bir olay için kullanılır; burada gerçek kişi varsa 'manipüle' doğru terimdir.",
+      "tags": [
+        "bilgi-kirliliği"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-033",
+      "type": "single_choice",
+      "topic": "Katılımcı Kültür",
+      "difficulty": "medium",
+      "questionMd": "\"Katılımcı kültür\" kavramı aşağıdakilerden hangisini ifade eder?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Medya tüketicilerinin pasif bilgi alıcıları olması"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Kullanıcıların içerik üretimine, paylaşımına ve yeniden dolaşıma aktif katılması"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Devletin medya üretimini kontrol etmesi"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Profesyonel gazetecilerin içerik üretimindeki tekeli"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Geleneksel medya kurumlarının dijital platformlara taşınması"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Henry Jenkins tarafından kavramsallaştırılan \"katılımcı kültür\", kullanıcıların yalnızca içerik tüketmekle kalmayıp aynı zamanda içerik ürettiği, yeniden ürettiği ve dolaşıma soktuğu medya ortamını ifade eder. Bu yaklaşım, geleneksel pasif alıcı modelinin karşısına kullanıcı merkezli üretim anlayışını koyar.\n\n---\n\nHenry Jenkins'in **Katılımcı Kültür** (participatory culture) kavramı, kullanıcıların pasif tüketici olmak yerine içerik üreten, yeniden üreten ve dolaşıma sokan aktif katılımcılara dönüştüğü medya ortamını tanımlar.",
+      "tags": [
+        "katılımcı-kültür"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-034",
+      "type": "single_choice",
+      "topic": "Yeni Medya",
+      "difficulty": "medium",
+      "questionMd": "Yeni medya teknolojilerinin bir özelliği olmayan hangisidir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Sayısallık (Dijitallik)"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Etkileşimsizlik"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Ağa bağlılık"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Hipermetinsellik"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Çoklu ortam (Multimedya)"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Yeni medyanın temel özellikleri arasında sayısallık, etkileşimlilik, ağa bağlılık, hipermetinsellik ve çoklu ortam yer alır. \"Etkileşimsizlik\" bu özelliklerin tam tersini ifade eder ve geleneksel (tek yönlü) medyaya özgüdür.\n\n---\n\nYeni medyanın temel özellikleri: sayısallık, **etkileşimlilik**, ağa bağlılık, hipermetinsellik ve çoklu ortam. 'Etkileşimsizlik' bunların tam tersidir ve geleneksel (tek yönlü) yayıncılığa aittir.",
+      "tags": [
+        "yeni-medya"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-035",
+      "type": "single_choice",
+      "topic": "Medya Teorileri",
+      "difficulty": "medium",
+      "questionMd": "Manuel Castells'in \"ağ toplumu\" kavramı en çok hangi özelliğe vurgu yapar?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Televizyonun kitleleri şekillendirmesi"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Bireylerin yüz yüze iletişimi"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Bilginin ağlar üzerinden dolaşımı ve toplumun ağ yapısı kazanması"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Medya tekellerinin yaygınlaşması"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Devletin yayıncılık tekeli"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Castells'e göre enformasyon çağında iktidar ve servet, hiyerarşik örgütlenmelerden değil, ağ yapılarından akar. Toplumun ağ tabanlı örgütlenmesi, siyasetten ekonomiye her alanda belirleyici bir güç haline gelmiştir.\n\n---\n\nManuel Castells'in **Ağ Toplumu** kavramı, bilgi çağında iktidar ve servetin hiyerarşik değil ağ yapıları üzerinden aktığını vurgular. İnternetin siyasetten ekonomiye her alanda bu ağ mantığını yerleştirdiğini savunur.",
+      "tags": [
+        "medya-teorileri"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-036",
+      "type": "single_choice",
+      "topic": "Algoritmalar",
+      "difficulty": "medium",
+      "questionMd": "Algoritmaların sosyal medya ortamlarındaki en belirgin etkisi nedir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Rastgele içerik gösterimi sağlaması"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "İçerik üretimini yasaklaması"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Görünürlük ve erişim dinamiklerini şekillendirmesi"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "İçeriklerin manuel sıralanması"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Kullanıcı verilerinin tamamen şifrelenmesi"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Algoritmalar, hangi içeriğin kime, ne zaman ve ne sıklıkla gösterileceğini belirleyerek dijital kamusal alanda görünürlük ekonomisini yönetir. Bu durum içerik üreticileri açısından büyük fırsatlar ve riskler barındırır.\n\n---\n\n**Algoritmik görünürlük**, hangi içeriğin kime, ne zaman ve hangi sıklıkla gösterileceğini belirler. Dijital kamusal alanda yeni bir 'kapı tutucu' (gatekeeper) rolü üstlenen algoritmalar, içerik üreticileri için en kritik faktördür.",
+      "tags": [
+        "algoritmalar"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-037",
+      "type": "single_choice",
+      "topic": "Algoritmalar",
+      "difficulty": "medium",
+      "questionMd": "Yeni medyada \"görünürlük ekonomisi\"ne örnek olan durum hangisidir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "TikTok'ta keşfet sayfasına çıkmak için içerik optimizasyonu yapmak"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Online Gazete tıklanmalarına göre reklam alması"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "TV reytinglerine göre dizi içerikleri belirlemesi"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Radyo yayın saatleri"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Dergi abonelik sayısı"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Görünürlük ekonomisi, platformlardaki algoritmaların belirlediği kurallara göre içeriklerin ne kadar izleyiciye ulaşabileceğini ifade eder. TikTok'ta keşfet sayfası için SEO ve içerik optimizasyonu, bu ekonominin en somut örneğidir.\n\n---\n\n**Görünürlük Ekonomisi**, algoritmaların belirlediği kurallara göre içeriklerin ne kadar izleyiciye ulaşabileceğini ifade eder. TikTok'ta keşfet sayfasına çıkmak için yapılan içerik optimizasyonu bu ekonominin en somut örneğidir.",
+      "tags": [
+        "algoritmalar"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-038",
+      "type": "single_choice",
+      "topic": "Medya Teorileri",
+      "difficulty": "medium",
+      "questionMd": "McLuhan'ın \"medium is the message\" (araç mesajdır) ifadesi aşağıdakilerden hangisini vurgular?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Mesajın içeriğinin her zaman aracın önünde geldiğini"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Mesajın öneminin yalnızca alıcıya bağlı olduğunu"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "İletişim araçlarının tarafsız olduğunu"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Teknolojinin toplumsal etkisinin sınırlı olduğunu"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "İletişim araçlarının toplumsal ve kültürel yapıları biçimlendirdiğini"
+        }
+      ],
+      "correctAnswer": [
+        "e"
+      ],
+      "explanationMd": "McLuhan'a göre önemli olan iletişim aracının taşıdığı içerik değil, aracın kendisidir. Matbaa, radyo, televizyon ve internet gibi her araç kendi toplumsal dönüşümünü beraberinde getirmiştir; içerik değil, aracın yapısı belirleyicidir.\n\n---\n\nMcLuhan'ın **'Araç Mesajdır'** (medium is the message) formülü, önemli olanın içerik değil aracın kendisi olduğunu savunur. Matbaa, radyo, televizyon ve internet her biri kendi toplumsal dönüşümünü getirmiştir.",
+      "tags": [
+        "medya-teorileri"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-039",
+      "type": "single_choice",
+      "topic": "Medya Teorileri",
+      "difficulty": "medium",
+      "questionMd": "McLuhan'ın \"küresel köy\" kavramı neyi anlatır?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Medyanın yalnızca yerel topluluklara hizmet ettiğini"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Ulus devletlerin medya üzerindeki mutlak kontrolünü"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Televizyonun iletişimi yok etmesini"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Dijital ağların dünyayı mekânsal sınırların ötesinde birbirine bağlamasını"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "İnternetin yalnızca ticari amaçla kullanılmasını"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "McLuhan, elektronik medyanın yarattığı anlık ve küresel iletişim ortamını \"küresel köy\" metaforuyla tanımlar. Bu kavram, coğrafi uzaklıkların ortadan kalktığı ve tüm insanlığın elektronik olarak birbirine bağlandığı bir dünyayı ifade eder.\n\n---\n\nMcLuhan'ın **Küresel Köy** (global village) metaforu, elektronik medyanın coğrafi sınırları ortadan kaldırarak insanlığı tek bir anlık iletişim ortamında buluşturduğunu ifade eder. İnternet bu metaforun en somut gerçekleşmesidir.",
+      "tags": [
+        "medya-teorileri"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-040",
+      "type": "single_choice",
+      "topic": "Siber Kültür",
+      "difficulty": "medium",
+      "questionMd": "Pierre Lévy'nin \"siber kültür\" yaklaşımına göre hangisi doğru DEĞİLDİR?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Medya teknolojilerini yalnızca tek yönlü iletişim araçları olarak görür"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Kullanıcıların etkileşimli bir ağda bilgi paylaşımını vurgular"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Bilginin kolektif biçimde üretilebildiğini savunur"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Sanal toplulukların oluşumuna dikkat çeker"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Kolektif zekânın dijital ağlar üzerinden oluşabileceğini öngörür"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Lévy, siber kültürü çoğulcu, etkileşimli ve kolektif bir alan olarak tanımlar. Medya teknolojilerini tek yönlü iletişim araçları olarak görmek, geleneksel kitle iletişim anlayışına ait bir yaklaşımdır ve Lévy'nin tezinin tam tersidir.\n\n---\n\nPierre Lévy, siber kültürü çoğulcu, etkileşimli ve kolektif bir alan olarak tanımlar; **tek yönlü iletişim** fikrinden uzaktır. Geleneksel kitle iletişim anlayışı Lévy'nin tam karşısındadır.",
+      "tags": [
+        "siber-kültür"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-041",
+      "type": "single_choice",
+      "topic": "Dijital Aktivizm",
+      "difficulty": "medium",
+      "questionMd": "Dijital aktivizme örnek olan durum hangisidir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Televizyon reklam kampanyası yürütmek"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Arkadaşlar arası Bir etkinlik için WhatsApp grubu oluşturmak"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Online bir gazetede köşe yazısı yayımlamak"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Mobil telefonla Vlog çekmek"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Sosyal medya üzerinden hashtag kullanarak farkındalık yaratmak"
+        }
+      ],
+      "correctAnswer": [
+        "e"
+      ],
+      "explanationMd": "Dijital aktivizm, internet ve sosyal medya platformları üzerinden gerçekleştirilen toplumsal eylem biçimlerini kapsar. Hashtag kampanyaları bu aktivizmin en yaygın ve tanımlanabilir örneğidir.\n\n---\n\n**Dijital Aktivizm**, internet ve sosyal medya üzerinden yürütülen toplumsal eylem biçimlerini kapsar. Hashtag kampanyaları bu aktivizmin en tanınan ve yaygın örneğidir.",
+      "tags": [
+        "dijital-aktivizm"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-042",
+      "type": "single_choice",
+      "topic": "Siber Kültür",
+      "difficulty": "medium",
+      "questionMd": "Pierre Lévy'nin \"kolektif zekâ\" kavramına göre bilgi üretimi nasıl gerçekleşir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Merkezi bir otorite tarafından tek yönlü üretilir"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Bireylerin dijital ağlar üzerinden katkıda bulunmasıyla kolektif şekilde oluşur"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Yalnızca akademik kurumlarda gerçekleşir"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Geleneksel medya kurumları aracılığıyla belirlenir"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Devlet tekelinde tutulur ve kontrol altında dağıtılır"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Lévy'ye göre \"kimse her şeyi bilmez ama birlikte herkes her şeyi bilir.\" Kolektif zekâ, bireylerin dijital ağlar üzerinden katkıda bulunmasıyla merkezi bir otorite olmaksızın ortaklaşa oluşur.\n\n---\n\nLévy'nin **Kolektif Zekâ** (collective intelligence) kavramına göre 'kimse her şeyi bilmez ama birlikte herkes her şeyi bilir.' Bilgi, merkezi otoriteden değil dijital ağlardaki bireysel katkıların toplamından doğar.",
+      "tags": [
+        "siber-kültür"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-043",
+      "type": "single_choice",
+      "topic": "Medya Teorileri",
+      "difficulty": "medium",
+      "questionMd": "Yeni medyanın toplumsal yapılar üzerindeki etkilerinden biri hangisidir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Kitle iletişiminin tamamen tek yönlü hâle gelmesi"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Kamusal alanın yalnızca devlet kontrolüne geçmesi"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Ağ toplumu yapısının güçlenmesi"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Basılı gazetelerin tirajlarının artması"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Hiyerarşik yapıların dijital ortamda da değişmeden devam etmesi"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Yeni medya ile birlikte toplumlar, Castells'in öngördüğü biçimde ağ yapılarına kavuşmuştur. Bireyler ve kurumlar, hiyerarşik değil; ağ tabanlı ilişkilerle bilgiye, sermayeye ve siyasi etkiye erişir.\n\n---\n\nCastells'in **Ağ Toplumu** teorisinde yeni medya, bireylerin ve kurumların hiyerarşik değil ağ tabanlı ilişkilerle bilgiye ve etkiye erişmesini sağlar. Bu yapı toplumun örgütlenme biçimini kökten dönüştürmüştür.",
+      "tags": [
+        "medya-teorileri"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-044",
+      "type": "single_choice",
+      "topic": "Algoritmalar",
+      "difficulty": "medium",
+      "questionMd": "\"Algoritmik görünürlük\" kavramı neyi ifade eder?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "İçeriğin yalnızca kullanıcı tarafından seçilmesini"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Platformların hangi içeriği kime göstereceğine karar veren sistemleri"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Gazetecilerin editoryal tercihlerini"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "İnternetin fiziksel altyapısını"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Arama motorlarının indeksleme biçimini"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Algoritmik görünürlük, bir platformun içeriklerin kimlere ulaşacağını, hangi sırayla gösterileceğini ve ne kadar süre görüntüleneceğini belirleyen otomatik sistemleri ifade eder. Bu sistemler, modern dijital iletişimde yeni bir \"kapı tutucu\" (gatekeeper) rolü üstlenmiştir.\n\n---\n\n**Algoritmik Görünürlük**, platformun hangi içeriğin kime ve ne sırayla gösterileceğine karar veren otomatik sistemleri ifade eder. Geleneksel editörün yerini algoritmik 'kapı tutucu' almıştır.",
+      "tags": [
+        "algoritmalar"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-045",
+      "type": "single_choice",
+      "topic": "Medya Teorileri",
+      "difficulty": "medium",
+      "questionMd": "Walter Ong'un \"ikincil sözlü kültür\" kavramına yeni medya bağlamında örnek olan durum hangisidir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Matbaa icadı"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Sesli mesajlar, canlı yayınlar ve emojiler yoluyla sözlü özelliklerin dijitalde canlanması"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Yazının tamamen ortadan kalkması"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Televizyon yayınlarının yaygınlaşması"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Basılı kitapların e-kitap formatına dönüştürülmesi"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "İkincil sözlü kültür, yazılı kültürün altyapısını kullanarak sözlü iletişimin özelliklerini (anlık, etkileşimli, topluluk odaklı) dijital ortamda yeniden üretir. Sesli mesajlar, canlı yayınlar ve emojilerin iletişimdeki yeri bu kavramın en güncel örneklerindendir.\n\n---\n\n**İkincil Sözlü Kültür**, yazılı teknolojinin altyapısını kullanarak sözlü kültürün anlık ve topluluk odaklı özelliklerini dijitalde yeniden üretir. Sesli mesajlar, canlı yayınlar ve emojiler bu kavramın günümüzdeki karşılıklarıdır.",
+      "tags": [
+        "medya-teorileri"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-046",
+      "type": "single_choice",
+      "topic": "Yeni Medya",
+      "difficulty": "medium",
+      "questionMd": "Yeni medyanın kültürel pratikler üzerindeki etkilerinden olmayan durum hangisidir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Kimlik sunumunun platformlarda performatif bir hâl alması"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Kolektif bilgi üretiminin artması"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Profesyonel ve amatör üretimin melezleşmesi"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "İletişimin tamamen tek merkezli hâle gelmesi"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Kültürel sınırların ve yerel kimlik pratiklerinin dönüşüme uğraması"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Yeni medya, iletişimi tek merkezli ve tek yönlü hâle getirmez; aksine merkezsizleştirir, dağıtır ve kullanıcı odaklı kılar. \"Tek merkezli iletişim\" geleneksel yayıncılığın özelliğidir.\n\n---\n\nYeni medya iletişimi tek merkezli hale getirmez; aksine **merkezsizleştirir** ve kullanıcı odaklı kılar. 'Tek merkezlilik' geleneksel yayıncılığın özelliğidir, yeni medyanın değil.",
+      "tags": [
+        "yeni-medya"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-047",
+      "type": "single_choice",
+      "topic": "Dijital Aktivizm",
+      "difficulty": "medium",
+      "questionMd": "Dijital aktivizmin yükselmesiyle aşağıdakilerden hangisi gerçekleşmiştir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Siyasal katılım biçimleri çeşitlenmiştir"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Medya üzerindeki kamusal denetim ortadan kalkmıştır"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Yurttaşlar siyasal süreçlerden tamamen çekilmiştir"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Kamusal alan yalnızca devlet kanallarıyla şekillenmiştir"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Geleneksel siyasi partilerin etkisi artmıştır"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Dijital aktivizm, geleneksel sokak eylemlerinin yerini almaktan çok siyasal katılımı çeşitlendirmiştir. Hashtag kampanyaları, online dilekçeler, viral videolar ve anlık örgütlenme gibi yeni biçimler özellikle gençlerin siyasete katılımında belirleyici olmuştur.\n\n---\n\n**Dijital Aktivizm**, geleneksel siyasal katılımın yerini almaz; onu çeşitlendirir. Online dilekçeler, hashtag kampanyaları ve anlık örgütlenme biçimleri özellikle gençlerin siyasete katılımında belirleyici rol oynamaktadır.",
+      "tags": [
+        "dijital-aktivizm"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-048",
+      "type": "single_choice",
+      "topic": "Medya Tarihi",
+      "difficulty": "medium",
+      "questionMd": "Medya tarihindeki evrimsel aşamaların doğru sıralaması hangisidir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Yeni medya → Yazılı medya → Elektronik medya → Sözlü kültür"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Yazılı medya → Sözlü kültür → Elektronik medya → Yeni medya"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Sözlü kültür → Elektronik medya → Yazılı medya → Yeni medya"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Elektronik medya → Yazılı medya → Sözlü kültür → Yeni medya"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Sözlü kültür → Yazılı medya → Elektronik medya → Yeni medya"
+        }
+      ],
+      "correctAnswer": [
+        "e"
+      ],
+      "explanationMd": "İnsanlık iletişim tarihinde şu sırayla ilerlemiştir: Sözlü kültür (yazı öncesi dönem) → Yazılı medya (matbaa dahil) → Elektronik medya (radyo, TV, telegraf) → Yeni medya (internet, sosyal medya). Bu sıralama hem tarihsel hem de teknolojik açıdan doğrudur.\n\n---\n\nİletişim tarihinin kronolojik sırası: **Sözlü Kültür → Yazılı Medya → Elektronik Medya → Yeni Medya**. Bu sıralama hem tarihsel hem teknolojik açıdan tutarlıdır.",
+      "tags": [
+        "medya-tarihi"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-049",
+      "type": "single_choice",
+      "topic": "Medya Tarihi",
+      "difficulty": "medium",
+      "questionMd": "Walter Ong'a göre sözlü kültürden yazılı kültüre geçişin en önemli sonucu nedir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Anlık iletişimin güçlenmesi"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Bilginin kalıcılığının artması ve belleğe bağımlılığın azalması"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Kültürel aktarımın tamamen yok olması"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Toplumların iletişim kurmaması"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Topluluk bağlarının güçlenmesi"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Ong'a göre yazı, bilginin kalıcı ve aktarılabilir bir biçim kazanmasını sağlamış; bu sayede insan toplulukları bilgilerini artık yalnızca ezber yoluyla değil, yazılı metinler aracılığıyla saklayabilir ve kuşaklara aktarabilir hale gelmiştir.\n\n---\n\nOng'a göre yazının icadı, bilginin artık ezber yerine **kalıcı metinlere** aktarılabilmesini sağlamıştır. Bu devrim bilgi birikimini ve medeniyet inşasını olanaklı kılmıştır.",
+      "tags": [
+        "medya-tarihi"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-050",
+      "type": "single_choice",
+      "topic": "Medya Tarihi",
+      "difficulty": "medium",
+      "questionMd": "Elektronik medya dönemini en iyi açıklayan ifade hangisidir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Bilginin yalnızca sözlü aktarımı"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Matbaa öncesi sözlü hikâye anlatımı"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "İnternet ağları üzerinden karşılıklı etkileşimli iletişim"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Telegraf, radyo ve televizyon gibi araçlarla kitlesel iletişim"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Akıllı cihazlar aracılığıyla kişiselleştirilmiş içerik tüketimi"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Elektronik medya dönemi; telegraf, radyo, televizyon ve telefon gibi araçların iletişimi kitlesel ölçekte mümkün kıldığı dönemi ifade eder. Bu dönem hâlâ çoğunlukla tek yönlü yayıncılık ile karakterizedir ve internet öncesi iletişim dönemine karşılık gelir.\n\n---\n\n**Elektronik Medya Dönemi**; telegraf, radyo, televizyon ve telefon gibi araçların kitlesel iletişimi mümkün kıldığı, ancak büyük ölçüde tek yönlü yayıncılığın sürdüğü internet öncesi dönemdir.",
+      "tags": [
+        "medya-tarihi"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-051",
+      "type": "single_choice",
+      "topic": "Yeni Medya",
+      "difficulty": "medium",
+      "questionMd": "Yeni medya dönemini önceki medya biçimlerinden ayıran temel özellik hangisidir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Etkileşimsizlik"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Merkezi yayıncılık"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Kullanıcıların üretici ve dağıtıcı hâline gelmesi"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Yalnızca ulusal ölçekte yayın yapılması"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Tek tip içerik üretimi"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Yeni medyanın en belirgin farkı, içerik üretiminin ve dağıtımının artık yalnızca profesyonellerin değil, her kullanıcının yapabileceği bir eylem haline gelmesidir. Bu \"prosumer\" (üretici-tüketici) dönüşümü, medya tarihinin en köklü değişimlerinden biridir.\n\n---\n\nYeni medyanın en belirgin farkı, içerik üretiminin ve dağıtımının artık herkesin yapabileceği bir eylem olmasıdır. **Prosumer** dönüşümü — pasif alıcıdan üretici-tüketiciye geçiş — medya tarihinin en köklü değişimlerinden biridir.",
+      "tags": [
+        "yeni-medya"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-052",
+      "type": "single_choice",
+      "topic": "Medya Tarihi",
+      "difficulty": "medium",
+      "questionMd": "Medyanın evrim sürecinde yazının ortaya çıkışının bir kırılma noktası olarak kabul edilmesinin temel nedeni nedir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Sesli iletişimi ortadan kaldırdığı için"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Bilginin depolanmasını ve kuşaklar arası aktarımı mümkün kıldığı için"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Teknolojik gelişmeleri durdurduğu için"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Kitle iletişimini yasakladığı için"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Toplumsal hiyerarşiyi ortadan kaldırdığı için"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Yazı, bilginin mekân ve zamana bağlı kalmaksızın depolanmasına ve kuşaklar arasında aktarılmasına olanak tanıdı. Bu özellik, bilgi birikimini hızlandırdı ve medeniyetlerin temelini oluşturdu.\n\n---\n\nYazının ortaya çıkışı, bilginin mekân ve zamana bağlı kalmaksızın **depolanmasına ve kuşaklara aktarılmasına** olanak tanıdı. Bu özellik medya tarihinin en kritik kırılma noktasıdır.",
+      "tags": [
+        "medya-tarihi"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-053",
+      "type": "single_choice",
+      "topic": "Sosyal Medya",
+      "difficulty": "medium",
+      "questionMd": "Sosyal ağların tarihsel gelişiminde doğru kronolojik sıralama hangisidir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "MySpace → SixDegrees → Facebook → Twitter"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "SixDegrees → MySpace → Facebook → Twitter"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Facebook → SixDegrees → MySpace → Twitter"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Twitter → Facebook → MySpace → SixDegrees"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "SixDegrees → Facebook → MySpace → Twitter"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Sosyal ağların tarihi: SixDegrees (1997) → MySpace (2003) → Facebook (2004) → Twitter (2006). SixDegrees, kullanıcıların profil oluşturup arkadaş ekleyebildiği ilk platform olarak kabul edilir.\n\n---\n\nSosyal ağların kronolojisi: **SixDegrees (1997) → MySpace (2003) → Facebook (2004) → Twitter (2006)**. SixDegrees, profil ve arkadaş listesi sunan ilk modern sosyal ağ olarak kabul edilir.",
+      "tags": [
+        "sosyal-medya"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-054",
+      "type": "single_choice",
+      "topic": "Sosyal Medya",
+      "difficulty": "medium",
+      "questionMd": "İlk modern sosyal ağ sitesi olarak kabul edilen, kullanıcıların profil oluşturmasına ve arkadaş eklemesine olanak tanıyan platform hangisidir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Friendster"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "MySpace"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "SixDegrees"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Orkut"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Bebo"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "SixDegrees.com (1997), profil oluşturma ve arkadaş listesi gibi temel sosyal ağ işlevlerini sunan ilk platform olduğu için modern sosyal ağ tarihinin başlangıç noktası olarak kabul edilir.\n\n---\n\n**SixDegrees.com** (1997), profil oluşturma ve arkadaş ekleme gibi temel sosyal ağ işlevlerini sunan ilk platform olarak modern sosyal ağ tarihinin başlangıç noktasıdır.",
+      "tags": [
+        "sosyal-medya"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-055",
+      "type": "single_choice",
+      "topic": "Sosyal Medya",
+      "difficulty": "medium",
+      "questionMd": "Facebook'un ortaya çıkışı sosyal ağların tarihine hangi yeniliği getirmiştir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Anonim hesapların yaygınlaşması"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Gerçek isim politikası ve ağ tabanlı bağlantılar"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Blog tabanlı içerik üretimi"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Salt e-posta temelli üyelik sistemi"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Yalnızca fotoğraf paylaşımına odaklanma"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Facebook, gerçek kimlikle kayıt zorunluluğu ve gerçek hayattaki sosyal ağları dijital ortama taşıma odaklı yapısıyla önceki platformlardan ayrılmıştır. Bu yaklaşım, sosyal medyanın anonim forumlardan kişisel kimlik platformlarına dönüşümünde belirleyici olmuştur.\n\n---\n\nFacebook, gerçek isim politikası ve gerçek hayattaki sosyal ağları dijitale taşıma odaklı yapısıyla önceki platformlardan ayrılmıştır. Bu yaklaşım, sosyal medyanın **anonim forumlardan kişisel kimlik platformlarına** dönüşümünde belirleyici olmuştur.",
+      "tags": [
+        "sosyal-medya"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-056",
+      "type": "single_choice",
+      "topic": "Dijital Oyunlar",
+      "difficulty": "medium",
+      "questionMd": "MMORPG'lerde Huizinga'nın \"Özgür ve Gönüllü\" oyun ilkesini sorgulanır hale getiren en temel psikolojik mekanizma hangisidir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "FOMO (Kaçırma Korkusu)"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Oyun içi satın alma seçenekleri (Microtransactions)"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Geniş karakter özelleştirme seçenekleri"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Rakiplerle adil eşleşme sistemi (Matchmaking)"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Grafik kalitesinin sürekli artması"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "FOMO, oyuncuları etkinlikleri veya günlük görevleri kaçırma endişesiyle oynamaya iterek, oyunu özgür seçim olmaktan çıkarıp bir zorunluluğa dönüştüren güçlü bir psikolojik tetikleyicidir.\n\n---\n\n**FOMO** (Fear of Missing Out / Kaçırma Korkusu), oyuncuları etkinlikleri kaçırma endişesiyle oynamaya iterek oyunu özgür seçimden zorunluluğa dönüştürür. Huizinga'nın 'özgür ve gönüllü' ilkesini doğrudan sorgular.",
+      "tags": [
+        "dijital-oyunlar"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-057",
+      "type": "single_choice",
+      "topic": "Dijital Oyunlar",
+      "difficulty": "medium",
+      "questionMd": "Modern dijital oyunların \"Magic Circle (Büyülü Çember)\" ilkesini bulanıklaştırmasına kanıt olarak gösterilebilecek örneklerden biri değildir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Oyun içi eşyaların gerçek parayla satılması (RMT)"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Fortnite'da sanal konser veya etkinlik izlemek"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "E-sporun profesyonel bir kariyer yolu haline gelmesi"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Koltuk co-op (aynı odada çok oyunculu) deneyimlerinin artması"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Oyun içi ekonomilerin gerçek döviz kuru etkileşimine girmesi"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Koltuk co-op, fiziksel mekânda gerçekleşen ve oyunun kapandığında sona eren, klasik Magic Circle ilkesine daha uygun bir deneyimdir; bu nedenle oyun ile gerçeklik arasındaki sınırı bulanıklaştırmaz.\n\n---\n\n**Koltuk Co-op** (aynı odada çok oyunculu oyun), fiziksel mekânda başlayıp biten ve oyun kapandığında sona eren deneyimiyle Magic Circle ilkesine en uygun biçimdir. Gerçek ile oyun arasındaki sınırı bulanıklaştırmaz.",
+      "tags": [
+        "dijital-oyunlar"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-058",
+      "type": "single_choice",
+      "topic": "Dijital Oyunlar",
+      "difficulty": "medium",
+      "questionMd": "Dijital oyunlarda Huizinga'nın \"Kurallar Açık ve Şeffaf\" ilkesinin yerini alan ve oyuncuların işleyişi anlamasını zorlaştıran temel mekanizma hangisidir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Oyun kurallarının topluluk tarafından modifiye edilebilmesi"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Hikâye tabanlı oyunlarda kilitli sonlar (multiple endings)"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Kuralların gizli algoritmalarla belirlenmesi"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Karakterin görünüşünün para ile satılması"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Takım bazlı oynayış modlarının eklenmesi"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Drop rate'ler, matchmaking ve dinamik zorluk ayarlamaları gibi kuralların kodun arkasına gizlenmesi, oyuncunun kuralların tam şeffaflığına erişmesini engeller. Bu durum \"Kod = Gizli Yasa\" olarak da ifade edilir.\n\n---\n\nMatchmaking, drop rate ve dinamik zorluk gibi mekanizmaların **gizli algoritmalarla** belirlenmesi, oyuncunun kurallara tam şeffaf erişimini engeller. 'Kod = Gizli Yasa' olarak ifade edilir.",
+      "tags": [
+        "dijital-oyunlar"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-059",
+      "type": "single_choice",
+      "topic": "Dijital Oyunlar",
+      "difficulty": "medium",
+      "questionMd": "Dijital oyunların evrimi ile ortaya çıkan \"Oyun = Yaşam Alanı\" paradigması, oyunu aşağıdaki işlevlerden hangisiyle ilişkilendirmez?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Kimlik alanı (avatar aracılığıyla rol oynama)"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Kariyer alanı (e-spor ve yayıncılık yoluyla meslek)"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Ekonomik alan (sanal ticaret ve RMT)"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Yalnızca bireysel tüketim ve kısa süreli eğlence alanı"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Sosyal alan (topluluk kurma ve arkadaşlık)"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "\"Yaşam alanı\" paradigması, oyunun sosyal, ekonomik ve kimlik gibi çok boyutlu roller üstlendiği anlamına gelir. Yalnızca bireysel tüketim ve kısa süreli eğlenceye indirgemek bu paradigmayı reddeden eski bir anlayıştır.\n\n---\n\n**'Oyun = Yaşam Alanı'** paradigması, oyunun kimlik, kariyer, ekonomi ve sosyal alan gibi çok boyutlu roller üstlendiğini savunur. 'Yalnızca bireysel tüketim' tanımı bu paradigmayı reddeden eski anlayışa aittir.",
+      "tags": [
+        "dijital-oyunlar"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-060",
+      "type": "single_choice",
+      "topic": "Dijital Oyunlar",
+      "difficulty": "medium",
+      "questionMd": "MMORPG'lerin \"Kalıcı Dünyalar\" (Persistent Worlds) özelliğinin sosyal etkileşime olan en büyük katkısı nedir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Oyunun grafik kalitesini sürekli artırma zorunluluğu"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Oyunun yalnızca abonelik modeliyle sunulması"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Oyun içi paranın hızla değer kaybetmesi (enflasyon)"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Tek oyunculu hikâye modlarının tamamen ortadan kalkması"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Oyuncunun oyunu bir \"aktivite\"den ziyade, sürekli bir \"sosyal çevre\" olarak algılaması"
+        }
+      ],
+      "correctAnswer": [
+        "e"
+      ],
+      "explanationMd": "Dünyanın sürekli var olması, oyuncudan bağımsız biçimde işlemesi, oyunu sosyal sorumluluk ve aidiyet hissinin yüksek olduğu kalıcı bir yaşam alanına dönüştürür.\n\n---\n\n**Kalıcı Dünyalar** özelliği, oyunun oyuncudan bağımsız var olmaya devam etmesini sağlar. Bu durum oyuncunun oyuna sosyal sorumluluk ve aidiyet hissiyle bağlanmasına, onu 'aktivite' yerine 'sosyal çevre' olarak algılamasına yol açar.",
+      "tags": [
+        "dijital-oyunlar"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-061",
+      "type": "single_choice",
+      "topic": "Dijital Kimlik",
+      "difficulty": "medium",
+      "questionMd": "Sosyal medyada \"bağlam çökmesi\" (context collapse) kavramı neyi ifade eder?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Algoritmaların içerik akışını bozmasını"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Farklı sosyal bağlamlara hitap eden mesajların tek bir izleyici kitlesiyle karşılaşmasını"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Platform sunucularının çökmesinden kaynaklanan teknik hataları"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Kullanıcı profillerinin gizlilik ayarlarının bozulmasını"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Viral içeriklerin yorumları kontrol dışına çıkmasını"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Bağlam çökmesi (context collapse), sosyal medyada normalde farklı ortamlarda (iş, aile, arkadaş) farklı biçimde sunulan kimlik ve mesajların tek bir karma izleyici kitlesiyle buluşması durumudur. Goffman'ın sahne teorisiyle de ilişkilidir.\n\n---\n\n**Bağlam Çökmesi** (context collapse), sosyal medyada normalde farklı ortamlarda farklı sunulan kimliklerin tek bir karma izleyici kitlesiyle buluşması durumudur. Goffman'ın sahne teorisiyle doğrudan ilişkilidir.",
+      "tags": [
+        "dijital-kimlik"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-062",
+      "type": "single_choice",
+      "topic": "Dijital Kimlik",
+      "difficulty": "medium",
+      "questionMd": "Erving Goffman'ın \"dramatürjik yaklaşımı\" sosyal medya bağlamında en doğru biçimde nasıl uygulanır?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Instagram'daki fotoğraflar \"ön sahne\" performansını, gönderim öncesi silinen denemeler ise \"arka sahne\" sürecini temsil eder"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Kullanıcılar her paylaşımda gerçek kimliklerini tam olarak yansıtırlar"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Dijital platformlar kimlik inşasına imkân tanımadığı için Goffman'ın teorisi geçersizdir"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Sosyal medya kullanıcıları performans sergilemez, yalnızca bilgi tüketir"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Arka sahne davranışlar her zaman ön sahneden daha otantik ve değerlidir"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Goffman'ın dramatürjik yaklaşımında ön sahne, izleyiciler önündeki kontrollü performansı; arka sahne ise performansın hazırlandığı, normların gevşediği alanı ifade eder. Instagram'daki özenle seçilmiş fotoğraflar ön sahneye, bunların hazırlanma sürecindeki denemeler arka sahneye karşılık gelir.\n\n---\n\nGoffman'ın **Dramatürjik Yaklaşımı**'nda 'ön sahne' izleyiciler önündeki kontrollü performansı, 'arka sahne' ise hazırlanma sürecini ifade eder. Instagram'daki özenle seçilmiş paylaşımlar ön sahne, bunların hazırlanma süreci arka sahnedir.",
+      "tags": [
+        "dijital-kimlik"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-063",
+      "type": "single_choice",
+      "topic": "Dijital Aktivizm",
+      "difficulty": "medium",
+      "questionMd": "\"Slaktivizm\" (tembel-Aktivizm) kavramı dijital aktivizmle ilgili hangi eleştiriyi ifade eder?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Dijital aktivizmin aşırı şiddet içermesini ve linç kültürünü yaymasını"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Sosyal medya platformlarının aktivistleri fişlemesini"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Dijital aktivizmin yalnızca oyun oynayan gençlere hitap etmesini"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Devletlerin dijital aktivizmi yasal olarak yasaklamasının önünü açmasını"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Düşük çaba gerektiren çevrimiçi eylemlerin gerçek değişim yaratmak yerine katılım yanılsaması oluşturmasını"
+        }
+      ],
+      "correctAnswer": [
+        "e"
+      ],
+      "explanationMd": "Slaktivizm, insanların beğeni veya paylaşım gibi minimum çaba gerektiren eylemlerle aktivist kimliği edindiğini ancak gerçek değişim için gerekli olan derin eylemi gerçekleştirmediğini vurgulayan eleştirel bir kavramdır.\n\n---\n\n**Slaktivizm**, beğeni ve paylaşım gibi minimum çabayla aktivist kimlik edinildiği ama gerçek değişim için gereken derinliğin oluşmadığı durumu eleştirir. Katılım yanılsaması yaratır; gerçek dönüşüm sağlamaz.",
+      "tags": [
+        "dijital-aktivizm"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-064",
+      "type": "single_choice",
+      "topic": "Sosyal Medya",
+      "difficulty": "medium",
+      "questionMd": "Web 2.0 ile birlikte sosyal ağların en temel dönüşümü hangisidir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Yalnızca metin tabanlı iletişimden görsel iletişime geçiş"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Statik sayfalardan kullanıcı katılımlı, etkileşimli ve içerik üretimine açık dinamik platformlara geçiş"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Ücretli üyelik modellerinden ücretsiz modellere geçiş"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Yerel ağlardan küresel ağlara geçiş"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Masaüstü bilgisayarlardan mobil cihazlara geçiş"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Web 2.0 teknolojisiyle sosyal ağlar, yalnızca içerik tüketilen platformlar olmaktan çıkıp kullanıcıların içerik üretebildiği etkileşimli alanlara dönüştü. Bu dönüşüm, \"read-only\" web anlayışından \"read-write\" web anlayışına geçişi ifade eder.\n\n---\n\n**Web 2.0**, statik web sayfalarından kullanıcı katılımlı dinamik platformlara geçişi temsil eder. Bu 'read-only'den 'read-write' web anlayışına geçiş, sosyal ağların temelini oluşturur.",
+      "tags": [
+        "sosyal-medya"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-065",
+      "type": "single_choice",
+      "topic": "Yeni Medya",
+      "difficulty": "medium",
+      "questionMd": "\"Hipermetinsellik\" özelliğinin en iyi tanımı hangisidir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Metnin doğrusal bir düzende, baştan sona okunmasını zorunlu kılması"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Farklı bilgi birimlerinin bağlantılar aracılığıyla birbirine bağlı, doğrusal olmayan bir yapı oluşturması"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Yalnızca görsel içeriklere dayalı iletişimi ifade etmesi"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Metinlerin birden fazla dile çevrilmesiyle oluşan yapı"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Metinlerin yalnızca sesli biçimde deneyimlenmesi"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Hipermetinsellik, metin, görüntü, ses ve video gibi farklı bilgi birimlerinin, doğrusal bir sırayı takip etmek yerine, bağlantılar (linkler) aracılığıyla birbirine bağlı, etkileşimli bir yapı oluşturmasıdır. Geleneksel lineer okuma anlayışının karşısında yer alır.\n\n---\n\n**Hipermetinsellik**, farklı bilgi birimlerinin linklerle birbirine bağlı, doğrusal olmayan bir yapı oluşturmasıdır. Kullanıcının kendi yolunu çizdiği bu yapı, geleneksel baştan sona okuma anlayışının tam karşısındadır.",
+      "tags": [
+        "yeni-medya"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-066",
+      "type": "single_choice",
+      "topic": "Dijital Okuryazarlık",
+      "difficulty": "medium",
+      "questionMd": "Dijital okuryazarlık kavramı en doğru biçimde nasıl tanımlanır?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Yalnızca bilgisayar kullanabilme becerisi"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Yalnızca sosyal medya platformlarını aktif kullanma yetkinliği"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Dijital araç ve ortamlarda bilgiye erişme, değerlendirme, üretme ve iletme becerileri bütünü"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "İnternet bağlantısına ve akıllı cihaza sahip olma durumu"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Yazılım geliştirme ve programlama yetkinliği"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Dijital okuryazarlık; dijital ortamlarda bilgiyi bulma, eleştirel biçimde değerlendirme, üretme ve etik olarak paylaşma becerilerini kapsar. Yalnızca araç kullanımıyla sınırlı değil, eleştirel ve yaratıcı boyutları da içerir.\n\n---\n\n**Dijital Okuryazarlık**, dijital araçları kullanmanın ötesinde; bilgiyi bulma, eleştirel değerlendirme, üretme ve etik paylaşma becerilerini kapsar. Yalnızca teknik beceri değil, eleştirel ve yaratıcı boyutları da içerir.",
+      "tags": [
+        "dijital-okuryazarlık"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-067",
+      "type": "single_choice",
+      "topic": "Algoritmalar",
+      "difficulty": "medium",
+      "questionMd": "Sosyal medyada \"yankı odası\" (echo chamber) etkisi neyi ifade eder?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Sesli içeriklerin kalitesini artıran akustik algoritmalar"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Bireylerin yalnızca kendi görüşleriyle uyumlu içerik ve insanlarla etkileşime geçmesi sonucu oluşan kapalı bilgi döngüsü"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Platform sunucularında oluşan ses yankısı sorununu"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Canlı yayımlarda izleyicinin aktif geri bildirim vermesi"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Sesli iletişim kanallarında veri şifreleme yöntemini"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Yankı odası etkisi, algoritmaların ve kullanıcının tercihleri doğrultusunda bireyselleşen içerik ortamının, kişinin yalnızca kendi fikirlerini destekleyen bilgi ve kişilerle karşılaşmasına yol açması sonucu oluşan kapalı bilgi döngüsüdür.\n\n---\n\n**Yankı Odası** (echo chamber), algoritmaların ve kullanıcı tercihlerinin bireyi yalnızca kendi görüşleriyle uyumlu içerik ve insanlarla buluşturması sonucu oluşan kapalı bilgi döngüsüdür. Farklı görüşlerle karşılaşma olasılığını sistematik olarak azaltır.",
+      "tags": [
+        "algoritmalar"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-068",
+      "type": "single_choice",
+      "topic": "Mahremiyet",
+      "difficulty": "medium",
+      "questionMd": "\"Dijital iz\" (digital footprint) kavramı ne anlama gelir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "İnternette gezinirken oluşan ve kişisel bilgileri içerebilen veri izleri bütünü"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Bir web sitesinin tarayıcı geçmişindeki görsel önbelleği"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Kullanıcının dijital ortamda yalnızca fotoğraflarını depolaması"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Sosyal medya platformlarının bant genişliği tüketimi"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Siber saldırı sonrası bırakılan izler"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Dijital iz, bir bireyin internet kullanımı sırasında —arama geçmişi, beğeniler, konum verileri, form doldurmalar, yorum ve paylaşımlar gibi— bıraktığı veri izlerinin tümüdür. Bu veriler üçüncü taraflarca toplanabilir ve analiz edilebilir.\n\n---\n\n**Dijital İz** (digital footprint), arama geçmişi, beğeniler, konum verileri ve paylaşımlar gibi internet kullanımı sırasında bırakılan veri izleridir. Bu izler üçüncü taraflarca toplanabilir ve kullanıcıyı profilelemek için kullanılabilir.",
+      "tags": [
+        "mahremiyet"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-069",
+      "type": "single_choice",
+      "topic": "Platform Ekonomisi",
+      "difficulty": "medium",
+      "questionMd": "Platformların \"ağ dışsallıkları\" (network externalities) açısından güçlenmesi ne anlama gelir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Platformların kâr oranlarının ağ genişlemesiyle orantılı biçimde düşmesi"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Platforma erişimin belirli coğrafi bölgelerle sınırlandırılmasının yarattığı dijital eşitsizlik"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Platformun dış kaynaklara bağımlılığının azalmasının demokrasiyi geliştirmesi"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Küçük platformların büyük platformları dışarıda bırakmasının yarattığı adaletsizlik"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Bir platforma katılan kullanıcı sayısı arttıkça platformun diğer kullanıcılar için daha değerli hâle gelmesi"
+        }
+      ],
+      "correctAnswer": [
+        "e"
+      ],
+      "explanationMd": "Ağ dışsallıkları, bir platforma katılan her yeni kullanıcının mevcut tüm kullanıcılar için platformun değerini artırması anlamına gelir. Bu dinamik, Facebook, WhatsApp ve YouTube gibi devlerin tekelleşmesini açıklayan temel mekanizmalardan biridir.\n\n---\n\n**Ağ Dışsallıkları** (network externalities), platforma katılan her yeni kullanıcının mevcut tüm kullanıcılar için platformu daha değerli kılmasıdır. Bu dinamik, Facebook ve WhatsApp gibi devlerin tekelleşmesini açıklayan temel mekanizmadır.",
+      "tags": [
+        "platform-ekonomisi"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-070",
+      "type": "single_choice",
+      "topic": "Bilgi Kirliliği",
+      "difficulty": "medium",
+      "questionMd": "\"Post-truth\" (hakikat sonrası) kavramının medya ortamıyla ilişkisi nasıl açıklanır?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Gerçek olayların medyada hiç yer bulmaması"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Nesnel gerçekler yerine duygusal çağrılar ve kişisel inançların kamuoyunu daha fazla etkilemesi"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Gazetecilikte tüm haberlerin olgulara dayalı hale gelmesi"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Sosyal medyada yalnızca doğrulanmış bilgilerin paylaşılması"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Geleneksel medyanın tekrar güvenilirliğini kazanması"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Post-truth, nesnel gerçeklerin insanları kendi duygularına ve inançlarına hitap eden iddialara kıyasla kamuoyunu daha az etkilediği ortamı ifade eder. Bu kavram, dezenformasyonun ve duygusal manipülasyonun yayıldığı dijital medya ortamıyla doğrudan ilişkilidir.\n\n---\n\n**Post-Truth** (hakikat sonrası), nesnel gerçeklerin duygusal çağrılar ve kişisel inançlarla şekillenen iddiaların gerisinde kaldığı medya ortamını tanımlar. Dezenformasyonun ve duygusal manipülasyonun zemin bulduğu dijital çağla doğrudan bağlantılıdır.",
+      "tags": [
+        "bilgi-kirliliği"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-071",
+      "type": "single_choice",
+      "topic": "Medya Teorileri",
+      "difficulty": "medium",
+      "questionMd": "Yeni medya ortamında \"gatekeeping\" (geçit bekçiliği) işlevinde ne tür bir dönüşüm yaşanmıştır?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Geçit bekçiliği denilen editöryal sürecin işlevi tamamen ortadan kalkmıştır"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Geçit bekçiliği rolü artık yalnızca hükümetler tarafından yürütülmektedir"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Kullanıcılar artık herhangi bir denetimden geçmeden, istedikleri her içeriğe ulaşabilmektedir"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Geleneksel editöryal geçit bekçiliği, yerini kısmen algoritmik ve platform bazlı filtreler almıştır"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Geçit bekçiliği yalnızca yazılı basına özgü bir kavramdır ve online basında bundan söz edilemez"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Geleneksel medyada editörler ve yayın kurulları geçit bekçiliği işlevini üstlenirken, yeni medyada bu rol büyük ölçüde platform algoritmalarına ve içerik moderasyon sistemlerine kaymıştır. Ancak bu değişim, geçit bekçiliği ortadan kalktığı anlamına gelmez.\n\n---\n\nYeni medyada **Geçit Bekçiliği** (gatekeeping) rolü, geleneksel editörlerden platform algoritmalarına ve içerik moderasyon sistemlerine kaymıştır. Ancak bu değişim geçit bekçiliğinin ortadan kalktığı anlamına gelmez.",
+      "tags": [
+        "medya-teorileri"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-072",
+      "type": "single_choice",
+      "topic": "Siber Güvenlik",
+      "difficulty": "medium",
+      "questionMd": "Siber zorbalık (cyberbullying) ile geleneksel zorbalığın en temel farkı nedir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Siber zorbalık yalnızca okul ortamında gerçekleşir"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Siber zorbalıkta fiziksel temas her zaman söz konusudur"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Siber zorbalık 7/24 takip edebilme, anonim olabilme ve içeriklerin kalıcı/viral olabilmesi nedeniyle mağdurun kaçabileceği \"güvenli alan\" bırakmaz"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Geleneksel zorbalık siber zorbalığa göre daha ciddi psikolojik hasar bırakır"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Siber zorbalık yalnızca yetişkinler arasında görülür"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Siber zorbalığın en belirgin farkı, mağdurun okul ya da ev gibi geleneksel \"güvenli alanlarda\" bile rahat olamamasıdır. Zorbalık 7/24 devam edebilir, anonim olarak gerçekleştirilebilir ve içerikler kitlesel biçimde yayılabilir.\n\n---\n\n**Siber Zorbalık**'ın geleneksel zorbalıktan temel farkı, mağdurun ev veya okul gibi 'güvenli alanlarda' bile rahat olamamasıdır. 7/24 süren, anonim yapılabilen ve kitlesel yayılabilen içerikler bu farkı keskinleştirir.",
+      "tags": [
+        "siber-güvenlik"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-073",
+      "type": "single_choice",
+      "topic": "Siber Güvenlik",
+      "difficulty": "medium",
+      "questionMd": "\"Online grooming\" (çevrimiçi tuzağa düşürme) en doğru biçimde nasıl tanımlanır?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Sosyal medya profillerini estetik açıdan iyileştirme süreci"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Kötü niyetli kişilerin özellikle çocuk veya gençleri güven oluşturma, manipülasyon ve istismar amacıyla çevrimiçi ortamda hedef alması"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Ticari markaların dijital pazarlama stratejilerini optimize etmesi"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Yapay zeka ile kullanıcı davranışlarının tahmin edilmesi"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Siber güvenlik uzmanlarının ağ açıklarını test etmesi"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Online grooming, kötü niyetli kişilerin —genellikle pedofil veya sömürücülerin— çevrimiçi ortamda bir çocuk veya genç ile güven ilişkisi kurarak zamanla onları duygusal, cinsel veya maddi istismar için manipüle ettiği süreçtir.\n\n---\n\n**Online Grooming**, kötü niyetli kişilerin çevrimiçi ortamda güven ilişkisi kurarak çocuk veya gençleri istismar amacıyla manipüle ettiği süreçtir. Dijital platformlardaki en ciddi güvenlik risklerinden biridir.",
+      "tags": [
+        "siber-güvenlik"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-074",
+      "type": "single_choice",
+      "topic": "Siber Güvenlik",
+      "difficulty": "medium",
+      "questionMd": "Dijital radicalization (çevrimiçi radikalleşme) sürecinin başlangıç aşamasında hangi mekanizma en belirleyici rol oynar?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Gençlerin fiziksel ortamlarda radikal gruplarla doğrudan temas kurması"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Algoritmaların merak veya marjinal içerik tüketiminden yola çıkarak bireyi giderek daha aşırı içeriklere yönlendirmesi"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Devletlerin kasıtlı olarak radikalize edici içerikleri yaygınlaştırması"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Ebeveynlerin çocuklarını dijital ortamdan tamamen uzak tutması"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Okul müfredatının radikalizm konusunu hiç ele almaması"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Platformların etkileşim maksimizasyon mantığı, bireyi giderek daha aşırı ve duygusal içeriklere yönlendiren bir \"öneri kanalı\" oluşturabilir. Bu süreç, özellikle savunmasız bireylerde çevrimiçi radikalleşmenin tetikleyicisi olabilir.\n\n---\n\nÇevrimiçi radikalleşmede **algoritmaların öneri kanalı** belirleyici rol oynar: merak veya marjinal içerik tüketimi başlangıç noktasından giderek daha aşırı içeriklere yönlendirme yapılır. Platformların etkileşim maksimizasyonu bu süreci hızlandırır.",
+      "tags": [
+        "siber-güvenlik"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-075",
+      "type": "single_choice",
+      "topic": "Siber Güvenlik",
+      "difficulty": "medium",
+      "questionMd": "\"Phishing\" (oltalama saldırısı) nasıl gerçekleşir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Bir ağa yetkisiz erişim sağlamak için şifrelerin kaba kuvvetle denenmesi"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Birden fazla ağ protokolünü aynı anda bozarak hizmet dışı bırakma"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Cihazın işlemci kapasitesini aşmak için aşırı veri gönderme"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Kullanıcının cihazına gizlice kripto para madencisi yükleme"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Gerçekmiş gibi görünen sahte e-posta, site veya mesajlar aracılığıyla kullanıcının hassas bilgilerini ele geçirmeye çalışma"
+        }
+      ],
+      "correctAnswer": [
+        "e"
+      ],
+      "explanationMd": "Phishing, saldırganların banka, kurum veya hizmet gibi güvenilir kaynakları taklit eden sahte iletişimler yoluyla kullanıcının parola, kredi kartı bilgisi veya kişisel verilerini ele geçirmeye çalışması sürecidir.\n\n---\n\n**Phishing** (oltalama), gerçek gibi görünen sahte e-posta, site veya mesajlar aracılığıyla kullanıcının parola, kredi kartı veya kişisel verilerini ele geçirmeyi hedefler. Sosyal mühendislik tabanlı en yaygın siber saldırı türüdür.",
+      "tags": [
+        "siber-güvenlik"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-076",
+      "type": "single_choice",
+      "topic": "Mahremiyet",
+      "difficulty": "medium",
+      "questionMd": "Kişisel verilerin korunması açısından \"veri minimizasyonu\" ilkesi ne anlama gelir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Kullanıcıların kişisel verilerini en büyük platforma aktarması"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Kullanıcıların veri depolama araçlarını minimize etmesi"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Verilerin en küçük dosya formatında saklanması"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Kurumların yalnızca belirli amaçlar için gerekli olan minimum veriyi toplaması ve saklaması"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Küçük şirketlerin büyük veri toplama faaliyetlerinden muaf tutulması"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "GDPR ve diğer veri koruma düzenlemelerinde yer alan veri minimizasyonu ilkesi, kurumların yalnızca belirli, açık ve meşru amaçlar için gerekli olan asgari miktarda veriyi toplamasını ve bu verileri gerekenden uzun süre saklamamasını öngörür.\n\n---\n\n**Veri Minimizasyonu** (data minimization), GDPR kapsamında kurumların yalnızca belirli amaçlar için gerekli olan asgari miktarda veri toplamasını ve gerekenden uzun süre saklamamasını öngören bir ilkedir.",
+      "tags": [
+        "mahremiyet"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-077",
+      "type": "single_choice",
+      "topic": "Siber Güvenlik",
+      "difficulty": "medium",
+      "questionMd": "\"Siber nefret söylemi\" (cyberhate) ile sıradan hakaret arasındaki temel fark nedir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Siber nefret söylemi hedefi bireyin şahsına değil; ırk, din, etnisite, cinsiyet, cinsel yönelim gibi kimlik özelliklerine dayanır"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Siber nefret söylemi yalnızca özel mesajlaşma kanallarında gerçekleşir"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Siber hakaret hukuken suç sayılırken siber nefret söylemi sayılmaz"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Siber nefret söylemi yalnızca yüz yüze gerçekleştirilen eylemlerle birlikte anlam taşır"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Siber nefret söylemi daima devlet destekli organizasyonlar tarafından üretilir"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Nefret söylemi, bir kişiyi bireysel özelliklerinden değil, ait olduğu gruptan (ırk, din, etnisite, cinsiyet, cinsel yönelim vb.) dolayı hedef alır. Bu grupsal hedefleme, onu sıradan hakaretten kavramsal olarak ayıran temel unsurdur.\n\n---\n\n**Siber Nefret Söylemi**, kişiyi bireysel özellikleri nedeniyle değil, ait olduğu gruptan (ırk, din, cinsiyet vb.) dolayı hedef alır. Grupsal hedefleme, onu sıradan hakaretten kavramsal olarak ayıran temel unsurdur.",
+      "tags": [
+        "siber-güvenlik"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-078",
+      "type": "single_choice",
+      "topic": "Dijital Riskler",
+      "difficulty": "medium",
+      "questionMd": "EU Kids Online araştırmaları gençlerin çevrimiçi risklerini sınıflandırırken hangi boyutları temel alır?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "İçerik, temas, davranış ve sözleşme (contract) boyutlarını"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Yalnızca ekonomik ve hukuki boyutları"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Sadece psikolojik ve fiziksel zararları"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Yalnızca platformlara özgü teknik güvenlik açıklarını"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Coğrafi ve demografik dağılım boyutlarını"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "EU Kids Online çerçevesi gençlerin çevrimiçi risklerini; zararlı içerikle karşılaşma (content), uygunsuz iletişim (contact), zararlı davranışlar (conduct) ve veri/mahremiyet ihlalleri (contract) boyutlarıyla ele alır. Bu çerçeve araştırmanın kavramsal temellerinden biridir.\n\n---\n\n**EU Kids Online** çerçevesi gençlerin çevrimiçi risklerini dört boyutta inceler: **İçerik** (content), **Temas** (contact), **Davranış** (conduct) ve **Sözleşme/Mahremiyet** (contract). Bu model araştırmanın temel kavramsal çerçevesini oluşturur.",
+      "tags": [
+        "dijital-riskler"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-079",
+      "type": "single_choice",
+      "topic": "Medya Psikolojisi",
+      "difficulty": "medium",
+      "questionMd": "Sosyal medya bağımlılığının psikolojik temelinde en sık gösterilen ödül mekanizması hangisidir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Klasik koşullanma (Pavlovian conditioning)"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Değişken oranlı pekiştirme (variable ratio reinforcement schedule)"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Edimsel söndürme (operant extinction)"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Negatif ceza (response cost)"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Sosyal kolaylaştırma (social facilitation)"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Değişken oranlı pekiştirme, ödülün tahmin edilemez aralıklarla gelmesi anlamına gelir —tıpkı kumar makinelerinde olduğu gibi. Sosyal medyada beğeni, yorum veya bildirim gelip gelmeyeceğinin belirsizliği, bu mekanizmanın dijital karşılığıdır ve bağımlılık eğilimini en güçlü biçimde tetikleyen ödül şemasıdır.\n\n---\n\n**Değişken Oranlı Pekiştirme**, ödülün tahmin edilemez aralıklarla gelmesiyle oluşur — tıpkı kumar makinelerinde olduğu gibi. Sosyal medyada bildirim gelip gelmeyeceğinin belirsizliği bu mekanizmanın dijital karşılığıdır ve bağımlılığı en güçlü tetikleyen ödül şemasıdır.",
+      "tags": [
+        "medya-psikolojisi"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-080",
+      "type": "single_choice",
+      "topic": "Medya Psikolojisi",
+      "difficulty": "medium",
+      "questionMd": "Medya psikolojisi açısından \"parasosyal ilişki\" kavramı ne anlama gelir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Anonim sosyal medya hesapları arasındaki gerçek arkadaşlıklar"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "İzleyicinin televizyon sunucusu, YouTuber veya influencer gibi medya figürleriyle gerçek bir etkileşim olmaksızın geliştirdiği tek taraflı yakınlık hissi"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Kişinin kendi avatarıyla kurduğu kimlik ilişkisi"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Terapist ile danışan arasındaki dijital ortamda kurulan destek ilişkisi"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Kullanıcıların yapay zeka chatbot'larıyla geliştirdiği arkadaşlık"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Parasosyal ilişki, izleyicinin medya figürüne (sunucu, YouTuber, influencer) gerçek bir sosyal etkileşim olmaksızın, adeta gerçek bir arkadaşlık veya yakınlık ilişkisi yaşar gibi hissetmesidir. Bu ilişki tek yönlüdür; medya figürü izleyiciyi tanımaz.\n\n---\n\n**Parasosyal İlişki**, izleyicinin bir medya figürüyle (YouTuber, influencer) gerçek etkileşim olmaksızın sanki gerçek bir arkadaşmış gibi hissettiği tek yönlü yakınlıktır. Medya figürü izleyiciyi tanımaz; ilişki yalnızca izleyicide vardır.",
+      "tags": [
+        "medya-psikolojisi"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-081",
+      "type": "single_choice",
+      "topic": "Medya Psikolojisi",
+      "difficulty": "medium",
+      "questionMd": "\"Doomscrolling (sonsuz kaydırma)\" kavramı hangi davranışı ifade eder?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Oyun dünyasında ölüm sahnesini izlemeyi geciktirme"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "İçerik moderatörlerinin zararlı içerikleri incelemedeki tükenmişlik hissi ve dijital detoks ihtiyacı"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Özellikle gece saatlerinde telefon ekranını aşırı parlaklıkta kullanma"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Kullanıcının olumsuz haberler karşısında duramayarak sonsuz biçimde kaydırmayı sürdürmesi"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Kullanıcının yanlışlıkla kötü niyetli bir bağlantıya tıklaması"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Doomscrolling, özellikle kriz dönemlerinde kullanıcıların olumsuz haberler karşısında kendini durduramayarak sosyal medyada kaydırmayı sürdürmesi davranışıdır. Anksiyete ve bilişsel yük ile güçlü bir ilişkisi olan bu davranış, psikolojik açıdan \"kaçınmayı sürdürme paradoksu\" ile açıklanır.\n\n---\n\n**Doomscrolling**, özellikle kriz dönemlerinde kullanıcıların olumsuz haberler karşısında kendini durduramayarak kaydırmayı sürdürmesidir. 'Kaçınmayı sürdürme paradoksu' olarak tanımlanan bu davranış anksiyete ve bilişsel yük ile güçlü ilişki taşır.",
+      "tags": [
+        "medya-psikolojisi"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-082",
+      "type": "single_choice",
+      "topic": "Yapay Zeka",
+      "difficulty": "medium",
+      "questionMd": "Yapay zekanın gazetecilik alanındaki kullanımına yönelik temel etik kaygılardan biri hangisidir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Yapay zeka modellerinin ön yargılı eğitim verisi nedeniyle sistematik olarak belirli grupları ayrımcı biçimde temsil edebilmesi"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Yapay zekanın haberleri çok hızlı yazması ve dil bilgisini iyi kullanması"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Yapay zekanın yalnızca İngilizce içerik üretebilmesi"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Yapay zekanın internet bağlantısı gerektirmesi"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Yapay zekanın çok yüksek abonelik ücretiyle sunulması"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Yapay zeka modelleri, eğitildikleri verideki önyargıları ve ayrımcı kalıpları öğrenebilir. Bu durum, haberlerde belirli grupların sistematik olarak eksik, yanlış veya önyargılı biçimde temsil edilmesine yol açabilecek ciddi bir etik sorundur.\n\n---\n\nYapay zekanın gazetecilik alanında kullanımındaki en temel etik kaygı, **önyargılı eğitim verisi** nedeniyle belirli grupların sistematik olarak eksik veya yanlış temsil edilmesidir. Bu, YZ tabanlı haber üretiminde ayrımcılığa zemin hazırlayabilir.",
+      "tags": [
+        "yapay-zeka"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-083",
+      "type": "single_choice",
+      "topic": "Yapay Zeka",
+      "difficulty": "medium",
+      "questionMd": "\"Yapay zeka halüsinasyonu\" (AI hallucination) kavramı ne anlama gelir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Yapay zekanın sesli komutlara hatalı tepki vermesi"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Büyük dil modellerinin gerçek olmayan, uydurma ama tutarlı görünen bilgiler üretmesi"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Yapay zekanın görüntü tanıma sürecinde renk algısını yanlış yapması"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Kullanıcıların yapay zekaya aşırı güven duyması"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Yapay zekanın insan duygularını taklit etmesi"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Yapay zeka halüsinasyonu, büyük dil modellerinin (GPT, Claude vb.) var olmayan alıntılar, uydurma istatistikler veya yanlış olgular gibi gerçek değil ama son derece güvenilir görünen içerikler üretme eğilimidir. Bu durum, YZ tabanlı araçların eleştirel biçimde kullanılmasını zorunlu kılar.\n\n---\n\n**YZ Halüsinasyonu**, büyük dil modellerinin var olmayan alıntılar, uydurma istatistikler veya yanlış olgular gibi son derece güvenilir görünen ama gerçek olmayan içerikler üretmesidir. Bu nedenle YZ araçlarının eleştirel kullanımı zorunludur.",
+      "tags": [
+        "yapay-zeka"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-084",
+      "type": "single_choice",
+      "topic": "Platform Ekonomisi",
+      "difficulty": "medium",
+      "questionMd": "\"Platform kapitalizmi\" kavramı en doğru biçimde nasıl tanımlanır?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Dijital oyun şirketlerinin oyun içi mikro ödeme sistemleriyle gelir elde etmesi"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Devletin dijital platformları kamulaştırması"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Dijital platformların altyapı, veri ve ağ etkilerinden yararlanarak egemen ekonomik aktörler haline gelmesi"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Küçük girişimcilerin e-ticaret aracılığıyla pazara girişi"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Dijital ürünlerin fiziksel ürünlerin yerini alması"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Platform kapitalizmi, Amazon, Google, Meta ve Apple gibi dijital platformların altyapıyı kontrol ederek, kullanıcı verilerinden ve ağ dışsallıklarından yararlanarak geleneksel sektörleri dönüştürdüğü ve egemen ekonomik güç haline geldiği kapitalizm biçimini ifade eder.\n\n---\n\n**Platform Kapitalizmi**, Amazon, Google, Meta ve Apple gibi dijital platformların altyapıyı kontrol ederek veri ve ağ etkilerinden yararlandığı ve egemen ekonomik güç haline geldiği kapitalizm biçimini ifade eder. ⚠️ PDF'te D yazsa da doğru cevap **C** şıkkıdır.",
+      "tags": [
+        "platform-ekonomisi"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-085",
+      "type": "single_choice",
+      "topic": "Medya Psikolojisi",
+      "difficulty": "medium",
+      "questionMd": "\"Dijital detoks\" kavramı ve bunun medya psikolojisindeki önemi nedir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Dijital cihazların bakım ve temizleme süreci"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Bireyin belirli bir süre için dijital araçlardan bilinçli olarak uzaklaşarak zihinsel ve duygusal yeniden dengelenmeyi hedeflemesi"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Zararlı yazılımların cihazdan temizlenmesi"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Sosyal medya hesaplarının geçici olarak kapatılması zorunluluğu"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Veri güvenliği için parolaların periyodik olarak değiştirilmesi"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Dijital detoks, bireyin belirli bir süre için ekran ve dijital araçlardan bilinçli olarak uzaklaşması sürecidir. Medya psikolojisi açısından aşırı medya kullanımının neden olduğu bilişsel yük, uyku bozukluğu, anksiyete ve dikkat dağınıklığını gidermede olumlu etkileri olduğu düşünülmektedir.\n\n---\n\n**Dijital Detoks**, bireyin ekran ve dijital araçlardan bilinçli olarak uzaklaştığı süreçtir. Aşırı medya kullanımının neden olduğu bilişsel yük, uyku bozukluğu ve anksiyeteyi gidermeye yardımcı olduğu düşünülmektedir.",
+      "tags": [
+        "medya-psikolojisi"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-086",
+      "type": "single_choice",
+      "topic": "Sosyal Medya",
+      "difficulty": "medium",
+      "questionMd": "Sosyal medyada \"influencer\" (etki gücü sahibi kişi) fenomeni, reklam iletişimi açısından geleneksel reklamcılıktan nasıl ayrılır?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Influencer'lar yalnızca ürün eleştirisi yapar, tanıtım yapmaz"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Influencer iletişimi, parasosyal ilişkilerden beslenen kişisel güven ve özgünlük algısı üzerine kurulu bir ikna biçimini kullanır"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Influencer'ların içerikleri reklam kurullarının denetimine tabidir"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Influencer iletişiminde mesajlar yalnızca geniş kitlelere değil belirli bir kişiye özel olarak iletilir"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Influencer'lar geleneksel reklam ajanslarının doğrudan çalışanlarıdır"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Influencer pazarlaması, geleneksel reklam mesajlarının aksine izleyicinin influencer ile kurduğu parasosyal ilişkiden ve ona duyduğu özgünlük algısından beslenir. Bu nedenle, tanıtım içeriklerinin \"samimi öneri\" gibi algılanması daha yüksek ikna kapasitesi yaratır.\n\n---\n\n**Influencer Pazarlaması**, geleneksel reklam mantığından farklı olarak izleyicinin influencer ile kurduğu parasosyal ilişkiye ve ona atfettiği özgünlük algısına dayanır. Tanıtım içerikleri 'samimi öneri' gibi algılanınca ikna kapasitesi artar.",
+      "tags": [
+        "sosyal-medya"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-087",
+      "type": "single_choice",
+      "topic": "Dijital Okuryazarlık",
+      "difficulty": "medium",
+      "questionMd": "\"Dijital vatandaşlık\" kavramı kapsamında bireylerden beklenen temel yetkinlik hangisidir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Tüm dijital platformlarda birer hesap açmak"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Sosyal medya takipçi sayısını artırma becerisi"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Yalnızca siber güvenlik araçlarını etkin kullanmak"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Çevrimiçi ortamda yabancılarla düzenli iletişim kurmak"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Dijital ortamda bilinçli, etik, güvenli ve sorumlu biçimde davranma becerisi"
+        }
+      ],
+      "correctAnswer": [
+        "e"
+      ],
+      "explanationMd": "Dijital vatandaşlık, bireylerin çevrimiçi ortamda haklarını ve sorumluluklarını bilerek, etik ve güvenli biçimde davranmasını ifade eder. Bu kavram; dijital okuryazarlık, mahremiyet, siber etik ve eleştirel düşünce gibi birden fazla yetkinliği kapsar.\n\n---\n\n**Dijital Vatandaşlık**, bireylerin çevrimiçi ortamda haklarını ve sorumluluklarını bilerek, etik ve güvenli biçimde davranmasını ifade eder. Dijital okuryazarlık, mahremiyet, siber etik ve eleştirel düşünce gibi birden fazla yetkinliği kapsar.",
+      "tags": [
+        "dijital-okuryazarlık"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-088",
+      "type": "single_choice",
+      "topic": "Bilgi Kirliliği",
+      "difficulty": "medium",
+      "questionMd": "\"Kaynak doğrulama\" (fact-checking) adımlarını atlayan bir kullanıcının paylaşımı hangi risk kategorisine yol açabilir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Mizenformasyon yayılmasına katkıda bulunabilir"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Yalnızca teknik bir sorun yaratır, içerik açısından zararsızdır"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Kullanıcının hesabının otomatik silinmesine neden olur"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Yalnızca dezenformasyon üretim sürecini başlatır"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Platformun algoritmasını bozar"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Kaynak doğrulamadan vazgeçerek paylaşım yapan biri, kasıtlı olmasa da yanlış bilgileri yayabilir. Bu durum, kasıtsız ve iyi niyetle gerçekleşen yanlış bilgi yayılımı olan mizenformasyon kategorisine girer.\n\n---\n\nKaynak doğrulamadan yapılan paylaşımlar kasıtsız da olsa yanlış bilgi yaymaya yol açabilir. Bu durum, kötü niyet olmadan gerçekleşen yanlış bilgi yayılımı olan **Mizenformasyon** kategorisine girer.",
+      "tags": [
+        "bilgi-kirliliği"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-089",
+      "type": "single_choice",
+      "topic": "Platform Yönetimi",
+      "difficulty": "medium",
+      "questionMd": "Sosyal medya platformlarında içerik moderasyonunun (content moderation) temel amacı nedir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Platformun reklam gelirlerini artırmak"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Kullanıcıların kişisel verilerini üçüncü şirketlerle paylaşmak"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Kullanıcıların haber kaynağı seçimini yönlendirmek ve izleyiciyi kaydırmaya yönlendirmek"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Platformun günlük aktif kullanıcı sayısını ve popüleritesini artırmak"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Nefret söylemi gibi zararlı içerikleri tespit edip platformdan kaldırmak veya kısıtlamak"
+        }
+      ],
+      "correctAnswer": [
+        "e"
+      ],
+      "explanationMd": "İçerik moderasyonu, platformların kullanıcı güvenliğini sağlamak, nefret söylemi ve şiddeti azaltmak, dezenformasyonu sınırlamak amacıyla içerikleri incelediği, kaldırdığı veya kısıtladığı süreçtir. Ancak bu süreç ifade özgürlüğü ile güvenli platform ilkesi arasındaki dengeyi tartışmalı biçimde etkiler.\n\n---\n\n**İçerik Moderasyonu**, nefret söylemi ve şiddet gibi zararlı içerikleri tespit edip kaldıran veya kısıtlayan süreçtir. İfade özgürlüğü ile güvenli platform dengesi arasındaki gerilim bu sürecin tartışmalı boyutunu oluşturur.",
+      "tags": [
+        "platform-yönetimi"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-090",
+      "type": "single_choice",
+      "topic": "Yapay Zeka",
+      "difficulty": "medium",
+      "questionMd": "Yapay zekanın ürettiği sahte ses veya video içerikleri (deepfake, voice cloning) sosyal açıdan en ciddi hangi riski barındırır?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Bu içeriklerin üretim maliyetinin yüksek olması"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Gerçek kişilerin söylemediği şeyleri söylüyormuş gibi göstererek itibar zedeleme, seçim müdahalesi ve güven erozyonu yaratması"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Bu içeriklerin yalnızca teknik uzmanlara erişilebilir olması"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "İnsan sesini tam olarak taklit edememesi"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Yalnızca ticari markaların itibarını zedelemesi"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Deepfake ve ses klonlama teknolojileri, gerçek kişilerin hiçbir zaman söylemediği söylev veya görüntülerin üretilmesine olanak tanır. Bu durum; bireysel itibar zedeleme, siyasi manipülasyon, sextortion ve genel olarak \"neye inanacağımızı bilmeme\" şeklinde tezahür eden kurumsal güven erozyonu gibi ciddi toplumsal riskleri beraberinde getirir.\n\n---\n\n**Deepfake ve Ses Klonlama**, gerçek kişilerin söylemediği konuşmaların üretilmesine olanak tanır. Bireysel itibar zedeleme, siyasi manipülasyon ve kurumsal güven erozyonu bu teknolojilerin en ciddi toplumsal riskleridir.",
+      "tags": [
+        "yapay-zeka"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-091",
+      "type": "single_choice",
+      "topic": "Dijital Kimlik",
+      "difficulty": "medium",
+      "questionMd": "\"Dijital kimlik\" kavramı sosyal medya bağlamında nasıl tanımlanır?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Kişinin yasal kimlik belgesinin dijital kopyası"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Bireyin çevrimiçi platformlarda kurgulayarak sunduğu, platformlar arası farklılık gösterebilen kimlik temsili"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Kullanıcı adı ve şifreden oluşan hesap bilgileri"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Devlet tarafından verilen e-imza sertifikası"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Yapay zeka tarafından oluşturulan sanal karakter"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Dijital kimlik, bireyin çevrimiçi ortamda kendini nasıl kurguladığını, sunduğunu ve temsil ettiğini ifade eder. Goffman'ın dramatürjik teorisiyle doğrudan ilişkili olan bu kavram; profil fotoğrafı, paylaşım içerikleri, kullanılan dil ve platform tercihleri gibi unsurlar aracılığıyla şekillenir.\n\n---\n\n**Dijital Kimlik**, bireyin çevrimiçi platformlarda nasıl kurgulandığını ve sunulduğunu ifade eder. Goffman'ın dramatürjik teorisiyle bağlantılı bu kavram; profil fotoğrafı, paylaşım içerikleri ve dil tercihleri gibi unsurlarla şekillenir.",
+      "tags": [
+        "dijital-kimlik"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-092",
+      "type": "single_choice",
+      "topic": "Platform Ekonomisi",
+      "difficulty": "medium",
+      "questionMd": "Yeni medyada \"uzun kuyruk ekonomisi\" (long tail economy) kavramı ne anlama gelir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Uzun videolar izlemenin kısa videolara kıyasla daha fazla gelir getirmesi"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Algoritmaların her zaman en popüler içerikleri öne çıkarması"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Yalnızca mega influencer'ların platform gelirinin büyük bölümünü elde etmesi"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Az talep gören içeriklerin dijital dağıtım sayesinde büyük popüler içeriklere rakip olabilecek pazar payına ulaşması"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Sosyal medya platformlarının abone kaybını uzun vadede telafi etmesi"
+        }
+      ],
+      "correctAnswer": [
+        "d"
+      ],
+      "explanationMd": "Chris Anderson'ın öne sürdüğü uzun kuyruk teorisine göre, dijital dağıtım kanalları coğrafi ve raf alanı kısıtlamalarını ortadan kaldırarak niş ürünlerin ve içeriklerin toplamda \"başarılı\" birkaç içerikle rekabet edebilecek bir kitle bulmasını mümkün kılar.\n\n---\n\n**Uzun Kuyruk Ekonomisi** (long tail), dijital dağıtımın coğrafi ve raf alanı kısıtlamalarını ortadan kaldırarak niş ürün ve içeriklerin geniş izleyiciye ulaşmasını mümkün kıldığını savunur. Chris Anderson'ın geliştirdiği bu teori dijital pazar yapısını kökten değiştirmiştir.",
+      "tags": [
+        "platform-ekonomisi"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-093",
+      "type": "single_choice",
+      "topic": "Yapay Zeka",
+      "difficulty": "medium",
+      "questionMd": "\"Deepfake\" kavramı teknolojik açıdan nasıl üretilir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Fotoğraf editörlerinin manuel olarak yüz kesiştirme işlemi yapması"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "GAN (Generative Adversarial Networks) gibi derin öğrenme mimarilerinin gerçek video ve ses verisiyle eğitilerek sentetik içerik üretmesi"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Kullanıcıların bir kameraya karşı yüzlerini başka birine benzetecek makyaj uygulaması"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Ses kayıtlarının frekans manipülasyonu ile farklı bir kişinin sesine dönüştürülmesi"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Oyun motorlarının gerçek zamanlı yüz değiştirme efekti uygulaması"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Deepfake'ler, GAN (Üretken Çekişmeli Ağlar) gibi derin öğrenme mimarilerinin büyük miktarda gerçek görüntü ve ses verisiyle eğitilmesi yoluyla üretilir. Üretici ağ sahte içerik üretir, Ayırt Edici ağ ise gerçeği sahtesinden ayırt etmeye çalışarak modeli sürekli iyileştirir.\n\n---\n\n**Deepfake** teknolojisi, GAN mimarisinde Üretici ağ ile Ayırt Edici ağın çekişmeli öğrenmesi yoluyla gerçek görüntü ve ses verilerinden sentetik içerik üretir. Bu süreç giderek daha ikna edici ve tespit edilmesi güç içerikler oluşturur.",
+      "tags": [
+        "yapay-zeka"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-094",
+      "type": "single_choice",
+      "topic": "Dijital Okuryazarlık",
+      "difficulty": "medium",
+      "questionMd": "Medya okuryazarlığı eğitiminde \"eleştirel tüketim\" (critical consumption) yaklaşımı hangi beceriyi önceliklendirir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Medya içeriklerinin kim tarafından, hangi amaçla, ne zaman ve hangi çıkarlar gözetilerek üretildiğini sorgulamak"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "İçerikleri hızlı ve fazla miktarda tüketme becerisinin network elde etmede avantajı sağlaması"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Dezenformasyona karşı yalnızca geleneksel medya kaynaklarına güvenmeyi öğrenmek"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Sosyal medyayı tamamen kullanmaktan kaçınmak ve yasaklanmasını sağlamak"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "İçerikleri anonim kaynaklardan tüketmek ve yasal sorunlarla karşılaşmamak"
+        }
+      ],
+      "correctAnswer": [
+        "a"
+      ],
+      "explanationMd": "Eleştirel tüketim, bireyin karşılaştığı her medya içeriğini \"kim ürettı, neden ürettı, hangi mesajı içeriyor, hangi perspektifi dışlıyor?\" sorularıyla analiz edebilmesidir. Bu beceri, hem dezenformasyona hem de manipülasyona karşı temel koruma mekanizmasıdır.\n\n---\n\n**Eleştirel Tüketim** (critical consumption), medya içeriklerini 'kim ürettı, neden ürettı, hangi mesajı taşıyor, hangi perspektifi dışlıyor?' sorularıyla analiz etme becerisidir. Dezenformasyona ve manipülasyona karşı temel koruma mekanizmasıdır.",
+      "tags": [
+        "dijital-okuryazarlık"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-095",
+      "type": "single_choice",
+      "topic": "Sosyal Medya",
+      "difficulty": "medium",
+      "questionMd": "Sosyal medyada \"trend\" ve \"viral kültürü\"nün en belirgin özelliği hangisidir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Trendler yalnızca haber ve siyaset alanında oluşur"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "İçeriklerin kısa sürede geniş kitlelere ulaşması, platform algoritmalarıyla hızlanan taklit ve katılım döngüsü yaratması"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Viral içeriklerin her zaman yüksek sanatsal değere sahip olması"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Trendlerin kalıcı ve uzun ömürlü bir etki bırakması"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Viral içeriklerin yalnızca profesyonel üreticiler tarafından yaratılabilmesi"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Viral kültüründe içerikler, platform algoritmalarının etkileşim bazlı yükseltme mekanizmaları sayesinde kısa sürede milyonlarca kullanıcıya ulaşabilir. Taklit (challenge, meme formatları), remix ve katılım zincirleri bu yayılımın temel dinamiklerini oluşturur.\n\n---\n\n**Viral Kültür**, platform algoritmalarının etkileşim bazlı yükseltme mekanizmaları sayesinde içeriklerin kısa sürede milyonlara ulaşabilmesidir. Taklit, remix ve challenge zincirleri bu yayılımın temel dinamiklerini oluşturur.",
+      "tags": [
+        "sosyal-medya"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-096",
+      "type": "single_choice",
+      "topic": "Platform Yönetimi",
+      "difficulty": "medium",
+      "questionMd": "\"Nötr platform\" ile \"yayıncı\" (publisher) arasındaki hukuki ayrım dijital ortamda neden önem taşır?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Nötr platformlar kullanıcılardan ücret alamaz"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Yayıncılar yalnızca yazılı içerik üretebilir"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Bu ayrım yalnızca basın özgürlüğü konularıyla ilgilidir"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Nötr platformlar reklam yayınlayamaz"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Nötr platformlar içerikten yasal sorumluluk taşımazken yayıncılar yayımladıklarından sorumludur; büyük platformların içerik moderasyonu bu sınırı tartışmalı kılmaktadır"
+        }
+      ],
+      "correctAnswer": [
+        "e"
+      ],
+      "explanationMd": "ABD'de Section 230 ve benzeri yasal düzenlemeler, platformların kullanıcı tarafından üretilen içerikten yasal sorumluluğu bertaraf etmesine olanak tanır. Ancak platformların aktif içerik moderasyonu yapması, onları giderek \"editöryal karar alan yayıncılara\" dönüştürdüğü gerekçesiyle bu muafiyet tartışılmaktadır.\n\n---\n\n**Nötr Platform** içerikten yasal sorumluluk taşımazken **Yayıncı** yayımladığından sorumludur. Büyük platformların aktif içerik moderasyonu yapması onları giderek editöryal karar alan yayıncılara yaklaştırmakta ve bu muafiyeti tartışmalı kılmaktadır.",
+      "tags": [
+        "platform-yönetimi"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-097",
+      "type": "single_choice",
+      "topic": "Dijital Okuryazarlık",
+      "difficulty": "medium",
+      "questionMd": "\"Yapay zeka okuryazarlığı\" (AI literacy) kavramı ne anlama gelir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Yalnızca yapay zeka programı yazabilme becerisi"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Yapay zekanın nasıl çalıştığını, sınırlılıklarını, önyargılarını ve toplumsal etkilerini anlayarak bu araçları eleştirel ve etik biçimde kullanabilme becerisi"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Yapay zeka ürünlerine abone olmak"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Yapay zeka donanımı hakkında teknik bilgiye sahip olmak"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Yapay zekanın insan zekasından üstün olduğunu kabul etmek"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Yapay zeka okuryazarlığı; YZ araçlarının temel çalışma prensiplerini kavramayı, ürettikleri içerikleri eleştirel biçimde değerlendirmeyi, olası önyargı ve hataları fark etmeyi ve bu araçları etik biçimde kullanmayı kapsar. Dijital okuryazarlığın 21. yüzyıl uzantısı olarak değerlendirilir.\n\n---\n\n**YZ Okuryazarlığı**, yapay zekanın nasıl çalıştığını, sınırlılıklarını ve önyargılarını anlayarak araçları eleştirel ve etik biçimde kullanabilme becerisidir. Dijital okuryazarlığın 21. yüzyıl uzantısı olarak değerlendirilir.",
+      "tags": [
+        "dijital-okuryazarlık"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-098",
+      "type": "single_choice",
+      "topic": "Algoritmalar",
+      "difficulty": "medium",
+      "questionMd": "Yeni medya ortamında \"kutuplaşma\" (polarization) sürecini hızlandıran ana mekanizma hangisidir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Geleneksel gazeteciliğin çöküşü"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Sosyal medya kullanıcılarının çoğunluğunun kasıtlı olarak ayrımcı içerik üretmesi"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Filtre balonları ve yankı odaları aracılığıyla algoritmaların bireylerin yalnızca kendi görüşleriyle uyumlu içeriklere maruz kalmasına yol açması"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Dijital okuryazarlık düzeyinin artmasıyla oluşan görüş farklılığı"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "İnternetin hız sorunlarından kaynaklanan iletişim kesintileri"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Algoritmalar, kullanıcının geçmiş etkileşimlerine dayanarak onay önyargısını besleyen içerikler sunar. Filtre balonları ve yankı odaları, bireylerin farklı görüşlerle karşılaşma olasılığını azaltır ve toplumsal kutuplaşmayı derinleştirir.\n\n---\n\n**Kutuplaşma**, filtre balonları ve yankı odaları aracılığıyla algoritmaların bireyleri yalnızca kendi görüşleriyle uyumlu içeriklere maruz bırakmasından kaynaklanır. Onaylama önyargısını besleyen bu dinamik toplumsal ayrışmayı derinleştirir.",
+      "tags": [
+        "algoritmalar"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-099",
+      "type": "single_choice",
+      "topic": "Bilgi Kirliliği",
+      "difficulty": "medium",
+      "questionMd": "Dijital medyanın \"asimetrik bilgi\" sorununu artırmasının temel nedeni nedir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Dijital medyada yalnızca uzmanların içerik üretebilmesi"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Platformların içerik miktarını sınırlaması"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "İçerik üretiminin demokratikleşmesiyle birlikte bilgi kalitesinin değerlendirilmesinin güçleşmesi ve algoritmaların güvenilirliği değil etkileşimi ön plana çıkarması"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "İnternet bant genişliğinin tüm kullanıcılara eşit dağılmaması"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Sosyal medyada yalnızca geleneksel medya kuruluşlarının güvenilir bulunması"
+        }
+      ],
+      "correctAnswer": [
+        "c"
+      ],
+      "explanationMd": "Yeni medyada herkes içerik üretebilirken, algoritmaların içeriği güvenilirliğine değil etkileşim potansiyeline göre öne çıkarması, nitelikli ve niteliksiz içeriklerin aynı görünürlük alanında rekabet etmesine yol açar. Bu durum, kullanıcılar için bilgi kalitesini değerlendirmeyi zorlaştırır.\n\n---\n\n**Asimetrik Bilgi** sorunu, içerik üretiminin demokratikleşmesiyle birlikte kalite değerlendirmesinin güçleşmesi ve algoritmaların güvenilirliği değil etkileşimi ön plana çıkarmasıyla büyür. Nitelikli ve niteliksiz içerikler aynı görünürlük alanında rekabet eder.",
+      "tags": [
+        "bilgi-kirliliği"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    },
+    {
+      "id": "ym-100",
+      "type": "single_choice",
+      "topic": "Katılımcı Kültür",
+      "difficulty": "medium",
+      "questionMd": "Dijital medya ve yeni iletişim teknolojileri bağlamında \"yakınsama kültürü\" (convergence culture) kavramı Henry Jenkins'e göre ne anlama gelir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A",
+          "text": "Tüm teknolojik cihazların tek bir cihazda birleşmesi"
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "text": "Kullanıcıların medya içeriklerini platformlar arası geçirerek aktif biçimde dönüştürdüğü, kurgusal evrenlerle etkileşime girdiği ve kolektif zekânın bilgi ürettiği kültürel ortam"
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "text": "Farklı medya şirketlerinin birleşerek tekel oluşturması"
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "text": "Küresel medya standartlarına uyum sağlamak amacıyla yerel içeriklerin değiştirilmesi"
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "text": "Yapay zekanın farklı dil ve kültürlerden içerikleri tek bir dile çevirmesi"
+        }
+      ],
+      "correctAnswer": [
+        "b"
+      ],
+      "explanationMd": "Jenkins'in yakınsama kültürü; medya içeriklerinin birden fazla platform üzerinden dolaştığı, kullanıcıların pasif tüketiciden aktif katılımcıya dönüştüğü ve kolektif zekânın bilgi üretimine katkıda bulunduğu kültürel ortamı ifade eder. Bu kavram, katılımcı kültür anlayışının genişletilmiş biçimidir.\n\n---\n\nHenry Jenkins'in **Yakınsama Kültürü** (convergence culture), medya içeriklerinin birden fazla platformda dolaştığı, kullanıcıların pasif tüketiciden aktif katılımcıya dönüştüğü ve kolektif zekanın bilgi üretimine katkıda bulunduğu kültürel ortamı ifade eder.",
+      "tags": [
+        "katılımcı-kültür"
+      ],
+      "sourceRefs": [
+        "final_hazirlik_sorulari_100.pdf"
+      ]
+    }
+  ]
+}

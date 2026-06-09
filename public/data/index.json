@@ -1,7 +1,28 @@
 {
   "version": "3.0.0",
-  "lastUpdated": "2026-06-02T20:16:00Z",
+  "lastUpdated": "2026-06-09T00:00:00Z",
   "quizzes": [
+    {
+      "id": "yeni-medya-final",
+      "title": "Yeni Medya — Final Hazırlık (100 Soru)",
+      "description": "Dijital medya, algoritmalar, sosyal medya psikolojisi, yapay zeka ve internet kültürü üzerine 100 soru.",
+      "source": "Yeni Medya Final Hazırlık",
+      "course": "Yeni Medya",
+      "topic": "Dijital Medya",
+      "topics": [
+        "Algoritmalar", "Bilgi Kirliliği", "Dijital Aktivizm", "Dijital Eşitsizlik",
+        "Dijital İletişim", "Dijital Kimlik", "Dijital Okuryazarlık", "Dijital Oyunlar",
+        "Dijital Riskler", "Gözetim Kapitalizmi", "Katılımcı Kültür", "Mahremiyet",
+        "Medya Psikolojisi", "Medya Tarihi", "Medya Teorileri", "Platform Ekonomisi",
+        "Platform Yönetimi", "Siber Güvenlik", "Siber Kültür", "Sosyal Medya",
+        "Yapay Zeka", "Yeni Medya"
+      ],
+      "questionCount": 100,
+      "difficulty": "medium",
+      "estimatedMinutes": 150,
+      "tags": ["yeni-medya", "final", "dijital"],
+      "fileName": "yeni-medya/yeni-medya-final.json"
+    },
     {
       "id": "q1-merged",
       "title": "Quiz 1 — Web Fundamentals & JavaScript Basics",

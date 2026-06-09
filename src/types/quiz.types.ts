@@ -48,6 +48,7 @@ export interface QuizMeta {
   estimatedMinutes?: number;
   tags: string[];
   fileName: string;            // JSON file name for loading
+  autoExplanationPopup?: boolean;
 }
 
 // ── Full Quiz (loaded) ────────────────────────────────────────
@@ -114,6 +115,7 @@ export const QuizMetaSchema = z.object({
   estimatedMinutes: z.number().optional(),
   tags: z.array(z.string()),
   fileName: z.string(),
+  autoExplanationPopup: z.boolean().optional(),
 });
 
 export const QuizSchema = z.object({
